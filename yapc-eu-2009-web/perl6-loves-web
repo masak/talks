@@ -1,0 +1,15 @@
+[Introduction to the Web]
+
+The Web was invented by Tim Berners-Lee in the early 90's. The Web consisted of HTML, marked-up text with hyperlinks in it, and HTTP, a protocol for transmitting pages of content between server and client. In retrospect, it's the thing that provided the Internet with a face: it's text and pictures, and people respond well to that.
+
+The number of pages making up the Web grew exponentially. Not only that, but people found ways to generate their HTML, both statically and dynamically. From this, simple applications started to emerge. CGI was born.
+
+CGI is [...]
+
+[Introduction to Perl 6]
+
+Perl 6 is 9 years old now. That's a long time for a language project, but it's a large project, and we're making nice progress. Perl 6 is a clean break from the lineage of code leading up to Perl 5. It's also a clean break from many 
+
+Classes are built in, Schwarzian transform, Data::Dumper, routine parameters, user-defined operators, Unicode support, enums, subtypes, parsers and junctions.
+
+Basically, we take a lot of lessons from the past 20 years, package them directly into the language, and provide them as natural components.

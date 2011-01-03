@@ -1,0 +1,1171 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61308: rule&#39;s capture ws</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61308">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61308: rule&#39;s capture ws</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61308">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61308</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61308">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+baest
+&lt;martin [at] martinkjeldsen.dk&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61308">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+parser_test.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/506892/238454/parser_test.p6">
+Fri Dec 12 04:52:12 2008 (620b) by baest
+</a>
+</font></li>
+</ul>
+
+
+NG.txt<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/507884/238972/NG.txt">
+Mon Dec 15 13:41:47 2008 (787b) by pmichaud
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61308">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-506892" href="/rt3/Ticket/Display.html?id=61308#txn-506892">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;12&nbsp;04:52:12&nbsp;2008</td>
+    <td class="description">
+      baest -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">rule&#39;s capture ws</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 12 Dec 2008 13:51:49 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Martin Kjeldsen &lt;martin <!-- x --> at martinkjeldsen.dk&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/506892/238452/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 166b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+When using rules at least with &lt;ws&gt; overwritten, the rule also captures <br />
+whitespace. Please see attached file for example.<br />
+<br />
+It is tested with revision 33823.<br />
+<br />
+Martin<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/506892/238454/parser_test.p6">Download parser_test.p6</a>
+<span class="downloadcontenttype">
+[text/plain 620b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507420" href="/rt3/Ticket/Display.html?id=61308#txn-507420">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;14&nbsp;09:23:26&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61308] rule&#39;s capture ws</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 13 Dec 2008 10:44:17 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507420/238716/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 705b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Martin Kjeldsen &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Martin Kjeldsen <br />
+&gt; # Please include the string:  [perl #61308]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61308 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; When using rules at least with &lt;ws&gt; overwritten, the rule also captures <br />
+&gt; whitespace. Please see attached file for example.<br />
+</div>
+<br />
+You&#39;re right that there&#39;s a bug, but the real issue is that &#39;token ws {<br />
+... }&#39; isn&#39;t used by implicit &lt;.ws&gt; in rules yet:<br />
+<br />
+grammar A {<br />
+    token ws { &#39;a&#39; };<br />
+    rule b {x y};<br />
+};<br />
+<br />
+if &#39;xab&#39; ~~ m/ ^ &lt;A::b&gt; $/ {<br />
+    say &#34;match&#34;;<br />
+} else {<br />
+    say &#34;no match&#34;;<br />
+}<br />
+<div class="message-stanza-depth-1">
+# output: no match\n<br />
+</div>
+<br />
+Thank you for your report,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507424" href="/rt3/Ticket/Display.html?id=61308#txn-507424">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;14&nbsp;09:23:28&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507442" href="/rt3/Ticket/Display.html?id=61308#txn-507442">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;14&nbsp;11:23:54&nbsp;2008</td>
+    <td class="description">
+      chris <!-- x --> at chrisdolan.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61308] rule&#39;s capture ws</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 14 Dec 2008 13:23:21 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Dolan &lt;chris <!-- x --> at chrisdolan.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507442/238724/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 946b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Dec 13, 2008, at 3:44 AM, Moritz Lenz wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Martin Kjeldsen &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  Martin Kjeldsen<br />
+&gt;&gt; # Please include the string:  [perl #61308]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61308 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; When using rules at least with &lt;ws&gt; overwritten, the rule also  <br />
+&gt;&gt; captures<br />
+&gt;&gt; whitespace. Please see attached file for example.<br />
+</div>
+&gt;<br />
+&gt; You&#39;re right that there&#39;s a bug, but the real issue is that &#39;token  <br />
+&gt; ws {<br />
+&gt; ... }&#39; isn&#39;t used by implicit &lt;.ws&gt; in rules yet:<br />
+&gt;<br />
+&gt; grammar A {<br />
+&gt;     token ws { &#39;a&#39; };<br />
+&gt;     rule b {x y};<br />
+&gt; };<br />
+&gt;<br />
+&gt; if &#39;xab&#39; ~~ m/ ^ &lt;A::b&gt; $/ {<br />
+&gt;     say &#34;match&#34;;<br />
+&gt; } else {<br />
+&gt;     say &#34;no match&#34;;<br />
+&gt; }<br />
+<div class="message-stanza-depth-2">
+&gt; # output: no match\n<br />
+</div>
+&gt;<br />
+&gt; Thank you for your report,<br />
+&gt; Moritz<br />
+</div>
+<br />
+<br />
+In which case, the root cause may be the same as<br />
+   [perl #57864] Calling a token &#34;text&#34;, &#34;null&#34; or &#34;ws&#34; in Rakudo  <br />
+makes matching fail<br />
+<br />
+Chris<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507528" href="/rt3/Ticket/Display.html?id=61308#txn-507528">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;02:08:12&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61308] rule&#39;s capture ws</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 15 Dec 2008 00:29:54 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507528/238760/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 961b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Martin Kjeldsen &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  Martin Kjeldsen <br />
+&gt;&gt; # Please include the string:  [perl #61308]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61308 &gt;<br />
+</div>
+&gt;&gt; <br />
+&gt;&gt; <br />
+&gt;&gt; When using rules at least with &lt;ws&gt; overwritten, the rule also captures <br />
+&gt;&gt; whitespace. Please see attached file for example.<br />
+</div>
+&gt; <br />
+&gt; You&#39;re right that there&#39;s a bug, but the real issue is that &#39;token ws {<br />
+&gt; ... }&#39; isn&#39;t used by implicit &lt;.ws&gt; in rules yet:<br />
+&gt; <br />
+&gt; grammar A {<br />
+&gt;     token ws { &#39;a&#39; };<br />
+&gt;     rule b {x y};<br />
+&gt; };<br />
+&gt; <br />
+&gt; if &#39;xab&#39; ~~ m/ ^ &lt;A::b&gt; $/ {<br />
+&gt;     say &#34;match&#34;;<br />
+&gt; } else {<br />
+&gt;     say &#34;no match&#34;;<br />
+&gt; }<br />
+<div class="message-stanza-depth-2">
+&gt; # output: no match\n<br />
+</div>
+</div>
+<br />
+The output is still &#34;no match&#34; for me, but the tests I&#39;ve added to<br />
+t/spec/S05-grammar/ws.t all pass, and they seem to test for exactly the<br />
+same thing. Or maybe I&#39;m too tired to figure it out right now... any ideas?<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507532" href="/rt3/Ticket/Display.html?id=61308#txn-507532">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;03:43:26&nbsp;2008</td>
+    <td class="description">
+      baest -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61308] rule&#39;s capture ws</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 15 Dec 2008 11:12:55 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Martin Kjeldsen &lt;martin <!-- x --> at martinkjeldsen.dk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507532/238764/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz Lenz via RT &#40;09:23 2008-12-14&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; Martin Kjeldsen &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; # New Ticket Created by  Martin Kjeldsen <br />
+&gt; &gt; # Please include the string:  [perl #61308]<br />
+&gt; &gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; &gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61308 &gt;<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; <br />
+&gt; &gt; When using rules at least with &lt;ws&gt; overwritten, the rule also captures <br />
+&gt; &gt; whitespace. Please see attached file for example.<br />
+</div>
+&gt; <br />
+&gt; You&#39;re right that there&#39;s a bug, but the real issue is that &#39;token ws {<br />
+&gt; ... }&#39; isn&#39;t used by implicit &lt;.ws&gt; in rules yet:<br />
+&gt; <br />
+&gt; grammar A {<br />
+&gt;     token ws { &#39;a&#39; };<br />
+&gt;     rule b {x y};<br />
+&gt; };<br />
+&gt; <br />
+&gt; if &#39;xab&#39; ~~ m/ ^ &lt;A::b&gt; $/ {<br />
+&gt;     say &#34;match&#34;;<br />
+&gt; } else {<br />
+&gt;     say &#34;no match&#34;;<br />
+&gt; }<br />
+<div class="message-stanza-depth-2">
+&gt; # output: no match\n<br />
+</div>
+&gt; <br />
+&gt; Thank you for your report,<br />
+&gt; Moritz<br />
+&gt; <br />
+</div>
+<br />
+Hi Moritz,<br />
+<br />
+you&#39;re right, I can&#39;t get your example to work. But I think you meant<br />
+<br />
+if &#39;xay&#39; ~~ m/ ^ &lt;A::b&gt; $/ { # y instead of b in string<br />
+<br />
+and shouldn&#39;t it be rule b {&#39;x&#39; &#39;y&#39;}; or doesn&#39;t that matter &#40;I don&#39;t know&#41;.<br />
+<br />
+But no matter it still doesn&#39;t work for some reason.<br />
+<br />
+But more importantly if the whole problem is the &lt;ws&gt; is not overwritten I don&#39;t <br />
+understand why my example matches, but doesn&#39;t match if I remove the &lt;ws&gt; token.  <br />
+Surely &lt;ws&gt; shouldn&#39;t default match C style comments.<br />
+<br />
+Martin<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507878" href="/rt3/Ticket/Display.html?id=61308#txn-507878">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;13:37:42&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507878/238958/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Dec 15 03:43:26 2008, baest wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Moritz Lenz via RT &#40;09:23 2008-12-14&#41;:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Martin Kjeldsen &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; # New Ticket Created by  Martin Kjeldsen<br />
+&gt; &gt; &gt; # Please include the string:  [perl #61308]<br />
+&gt; &gt; &gt; # in the subject line of all future correspondence about this<br />
+</div>
+</div>
+&gt; issue.<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61308 &gt;<br />
+</div>
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; When using rules at least with &lt;ws&gt; overwritten, the rule also<br />
+</div>
+</div>
+&gt; captures<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; whitespace. Please see attached file for example.<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt; You&#39;re right that there&#39;s a bug, but the real issue is that &#39;token<br />
+</div>
+&gt; ws {<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; ... }&#39; isn&#39;t used by implicit &lt;.ws&gt; in rules yet:<br />
+&gt; &gt;<br />
+&gt; &gt; grammar A {<br />
+&gt; &gt;     token ws { &#39;a&#39; };<br />
+&gt; &gt;     rule b {x y};<br />
+&gt; &gt; };<br />
+&gt; &gt;<br />
+&gt; &gt; if &#39;xab&#39; ~~ m/ ^ &lt;A::b&gt; $/ {<br />
+&gt; &gt;     say &#34;match&#34;;<br />
+&gt; &gt; } else {<br />
+&gt; &gt;     say &#34;no match&#34;;<br />
+&gt; &gt; }<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; # output: no match\n<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt; Thank you for your report,<br />
+&gt; &gt; Moritz<br />
+&gt; &gt;<br />
+</div>
+&gt; <br />
+&gt; Hi Moritz,<br />
+&gt; <br />
+&gt; you&#39;re right, I can&#39;t get your example to work. But I think you meant<br />
+&gt; <br />
+&gt; if &#39;xay&#39; ~~ m/ ^ &lt;A::b&gt; $/ { # y instead of b in string<br />
+&gt; <br />
+&gt; and shouldn&#39;t it be rule b {&#39;x&#39; &#39;y&#39;}; or doesn&#39;t that matter &#40;I don&#39;t<br />
+&gt; know&#41;.<br />
+&gt; <br />
+&gt; But no matter it still doesn&#39;t work for some reason.<br />
+</div>
+<br />
+The following version works fine for me:<br />
+<br />
+$ cat x<br />
+grammar A {<br />
+    token ws { &#39;a&#39; };<br />
+    rule b {x y};<br />
+};<br />
+<br />
+if &#39;xay&#39; ~~ m/^ &lt;A::b&gt; $/ { say &#39;match&#39;; }<br />
+else { say &#39;nomatch&#39;; }<br />
+<br />
+$ ./parrot perl6.pbc x<br />
+match<br />
+$<br />
+<br />
+<br />
+So, clearly the &lt;ws&gt; rule is being called.<br />
+<br />
+See next reply for the other example.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507884" href="/rt3/Ticket/Display.html?id=61308#txn-507884">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;13:41:47&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507884/238966/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 429b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Dec 12 04:52:12 2008, baest wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; When using rules at least with &lt;ws&gt; overwritten, the rule also captures <br />
+&gt; whitespace. Please see attached file for example.<br />
+</div>
+<br />
+<br />
+The problem is with trying to invoke the rule using &#34;$str ~~ NG::TOP&#34; --<br />
+that&#39;s not a valid syntax for invoking a rule in a grammar.<br />
+<br />
+Using &#34;$str ~~ /&lt;NG::TOP&gt;/&#34; instead gets the correct match -- see<br />
+attached example.<br />
+<br />
+Marking ticket as resolved, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507884/238972/NG.txt">Download NG.txt</a>
+<span class="downloadcontenttype">
+[text/plain 787b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+$ cat NG.pl<br />
+grammar NG {<br />
+    rule TOP { ^ &lt;line&gt;+ $ };<br />
+<br />
+    #whitespace rules is borrowed from pipp<br />
+<div class="message-stanza-depth-1">
+    # Whitespace and comments<br />
+</div>
+    token ws_char           { \h | \v }<br />
+<br />
+<div class="message-stanza-depth-1">
+    # end of line comment like Unix shell and C++<br />
+</div>
+    token singlelinecomment { [ &#39;#&#39; || &#39;//&#39; ] \N* }<br />
+<br />
+<div class="message-stanza-depth-1">
+    # C-like multiline comment<br />
+</div>
+    token multilinecomment  { &#39;/*&#39; .*?  &#39;*/&#39; }<br />
+<br />
+    token ws_all {<br />
+          &lt;.ws_char&gt;<br />
+<div class="message-stanza-depth-1">
+        | &lt;.singlelinecomment&gt;<br />
+        | &lt;.multilinecomment&gt;<br />
+</div>
+    }<br />
+<br />
+    token ws { &lt;.ws_all&gt;* }<br />
+<br />
+    rule line {<br />
+        &#39;default&#39; \w+<br />
+    }<br />
+};<br />
+<br />
+my $str = &#39;default testtesttest<br />
+// this is a comment shouldn\&#39;t be outputted&#39;;<br />
+<br />
+$str ~~ /&lt;NG::TOP&gt;/;<br />
+<br />
+die&#40;&#34;No match&#34;&#41; unless ~$/;<br />
+<br />
+say $&lt;NG::TOP&gt;&lt;line&gt;[0];<br />
+<br />
+$ ./parrot perl6.pbc NG.pl<br />
+default testtesttest<br />
+// this is a comment shouldn&#39;t be outputted<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507890" href="/rt3/Ticket/Display.html?id=61308#txn-507890">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;13:45:19&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.079517</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

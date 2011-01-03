@@ -1,0 +1,813 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#56640: [BUG] The return value of an an empty block, when evaluated, produces an error</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D56640">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#56640: [BUG] The return value of an an empty block, when evaluated, produces an error</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56640">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">56640</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=56640">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56640">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+empty-block.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/439648/201434/empty-block.patch">
+Sat Jul 05 22:13:13 2008 (614b) by masak
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=56640">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439648" href="/rt3/Ticket/Display.html?id=56640#txn-439648">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;22:13:13&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">The return value of an an empty block, when evaluated, produces an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 6 Jul 2008 07:12:51 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439648/201432/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 985b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+A &#34;Null PMC access&#34; is produced when evaluating the return value from<br />
+an empty block. The attached patch fixes the problem.<br />
+<br />
+$ cat undef.pl<br />
+sub f { undef }<br />
+say f<br />
+$ ./perl6 undef.pl<br />
+<br />
+$ cat nothing.pl<br />
+sub f { }<br />
+say f<br />
+$ ./perl6 nothing.pl<br />
+Null PMC access in get_string&#40;&#41;<br />
+current instr.: &#39;print&#39; pc 11069 &#40;src/gen_builtins.pir:7223&#41;<br />
+called from Sub &#39;say&#39; pc 11091 &#40;src/gen_builtins.pir:7233&#41;<br />
+called from Sub &#39;_block11&#39; pc 28 &#40;EVAL_13:11&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;evalfiles&#39; pc 1088<br />
+&#40;src/PCT/HLLCompiler.pir:610&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1267<br />
+&#40;src/PCT/HLLCompiler.pir:699&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 13257 &#40;perl6.pir:172&#41;<br />
+perl6&#40;73490&#41; malloc: *** error for object 0x28909d0: double free<br />
+*** set a breakpoint in malloc_error_break to debug<br />
+Segmentation fault<br />
+<br />
+$ patch -p0 &lt; empty-block.patch ; make perl6<br />
+[...]<br />
+<br />
+$ ./perl6 nothing.pl<br />
+<br />
+$<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439648/201434/empty-block.patch">Download empty-block.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 614b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439806" href="/rt3/Ticket/Display.html?id=56640#txn-439806">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;13:31:48&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Subject changed from &#39;The return value of an an empty block, when evaluated, produces an error&#39; to &#39;[BUG] The return value of an an empty block, when evaluated, produces an error&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439808" href="/rt3/Ticket/Display.html?id=56640#txn-439808">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;13:31:48&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440008" href="/rt3/Ticket/Display.html?id=56640#txn-440008">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;01:29:51&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56640] The return value of an an empty block, when evaluated, produces an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 07 Jul 2008 10:47:40 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/440008/201654/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl MXXsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+&gt; # Please include the string:  [perl #56640]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=56640 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; A &#34;Null PMC access&#34; is produced when evaluating the return value from<br />
+&gt; an empty block. The attached patch fixes the problem.<br />
+&gt; <br />
+&gt; $ cat undef.pl<br />
+&gt; sub f { undef }<br />
+&gt; say f<br />
+&gt; $ ./perl6 undef.pl<br />
+&gt; <br />
+&gt; $ cat nothing.pl<br />
+&gt; sub f { }<br />
+&gt; say f<br />
+&gt; $ ./perl6 nothing.pl<br />
+&gt; Null PMC access in get_string&#40;&#41;<br />
+&gt; current instr.: &#39;print&#39; pc 11069 &#40;src/gen_builtins.pir:7223&#41;<br />
+&gt; called from Sub &#39;say&#39; pc 11091 &#40;src/gen_builtins.pir:7233&#41;<br />
+&gt; called from Sub &#39;_block11&#39; pc 28 &#40;EVAL_13:11&#41;<br />
+&gt; called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&gt; &#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+&gt; called from Sub &#39;parrot;PCT::HLLCompiler;evalfiles&#39; pc 1088<br />
+&gt; &#40;src/PCT/HLLCompiler.pir:610&#41;<br />
+&gt; called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1267<br />
+&gt; &#40;src/PCT/HLLCompiler.pir:699&#41;<br />
+&gt; called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 13257 &#40;perl6.pir:172&#41;<br />
+&gt; perl6&#40;73490&#41; malloc: *** error for object 0x28909d0: double free<br />
+&gt; *** set a breakpoint in malloc_error_break to debug<br />
+&gt; Segmentation fault<br />
+&gt; <br />
+&gt; $ patch -p0 &lt; empty-block.patch ; make perl6<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; $ ./perl6 nothing.pl<br />
+&gt; <br />
+&gt; $<br />
+</div>
+<br />
+Thank you for your patch, but it produces a lot of test failures<br />
+spectest_regression.<br />
+<br />
+So the patch needs more work, but I don&#39;t feel competent enough for that<br />
+right now.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440076" href="/rt3/Ticket/Display.html?id=56640#txn-440076">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;05:19:00&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/440076/201752/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 906b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This patch is slightly better, but it still causes problem with code<br />
+like &#39;role C3 {}&#39;.<br />
+<br />
+diff --git a/languages/perl6/src/parser/actions.pm<br />
+b/languages/perl6/src/parser/<br />
+index e518c70..5d83002 100644<br />
+--- a/languages/perl6/src/parser/actions.pm<br />
++++ b/languages/perl6/src/parser/actions.pm<br />
+@@ -58,6 +58,18 @@ method statement_block&#40;$/, $key&#41; {<br />
+         my $past := @?BLOCK.shift&#40;&#41;;<br />
+         $?BLOCK := @?BLOCK[0];<br />
+         $past.push&#40;$&#40;$&lt;statementlist&gt;&#41;&#41;;<br />
++        my $num_statements := +@&#40;$&#40;$&lt;statementlist&gt;&#41;&#41;;<br />
++        if $num_statements == 0 {<br />
++            $past.push&#40; PAST::Op.new&#40;<br />
++                    :pasttype&#40;&#39;callmethod&#39;&#41;,<br />
++                    :name&#40;&#39;new&#39;&#41;,<br />
++                    :node&#40;$/&#41;,<br />
++                    PAST::Var.new&#40;<br />
++                        :name&#40;&#39;Failure&#39;&#41;,<br />
++                        :scope&#40;&#39;package&#39;&#41;<br />
++                    &#41;<br />
++                &#41;&#41;;<br />
++        }<br />
+         make $past;<br />
+     }<br />
+ }<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440312" href="/rt3/Ticket/Display.html?id=56640#txn-440312">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;18:17:12&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/440312/201882/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 754b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Now fixed in r29135.<br />
+<br />
+The patches contributed in the ticket put the logic at &#34;too low a level&#34;<br />
+in the actions -- not every block &#40;parsed by &lt;statement_block&gt;&#41; is a<br />
+routine that requires a return value -- some &#34;blocks&#34; are actually hash<br />
+composers.  <br />
+<br />
+The r29135 patch adds a return value as part of &lt;routine_declarator&gt;,<br />
+which makes a bit more sense.  There may be other places where we need<br />
+to provide an undef return, but this works for now.<br />
+<br />
+Also, we should probably start avoiding the C&lt;&lt; new &#34;Failure&#34; &gt;&gt; meme<br />
+for generating Failure objects -- this patch makes a call to the global<br />
+&#39;undef&#39; function.  Note that we&#39;ll also be adding a couple of &#34;fail&#34;<br />
+function definitions for other routines to use as well.<br />
+<br />
+Thanks for the bug report and patches!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440314" href="/rt3/Ticket/Display.html?id=56640#txn-440314">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;18:17:13&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440318" href="/rt3/Ticket/Display.html?id=56640#txn-440318">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;18:17:18&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.254945</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

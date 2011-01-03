@@ -1,0 +1,639 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#51658: [PATCH] to support lexical self, some pair parsing and printing, preceded by test file</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D51658">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#51658: [PATCH] to support lexical self, some pair parsing and printing, preceded by test file</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=51658">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">51658</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=51658">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+jnthn [at] jnthn.net
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cognominal
+&lt;cognominal [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=51658">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=51658">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-369908" href="/rt3/Ticket/Display.html?id=51658#txn-369908">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;12&nbsp;09:57:53&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] to support lexical self, some pair parsing and printing, preceded by test file</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 12 Mar 2008 17:57:16 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stéphane Payrard&#34; &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/369908/166782/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 14.4k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-369914" href="/rt3/Ticket/Display.html?id=51658#txn-369914">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;12&nbsp;09:57:54&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-375388" href="/rt3/Ticket/Display.html?id=51658#txn-375388">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;23&nbsp;07:35:20&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-375452" href="/rt3/Ticket/Display.html?id=51658#txn-375452">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;23&nbsp;15:08:49&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #51658] [PATCH] to support lexical self, some pair parsing and printing, preceded by test file</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 23 Mar 2008 23:08:22 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, cognominal &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/375452/169896/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+<br />
+OK, finally I have time to look through this patch. Thanks for your <br />
+patience while I did $REAL_LIFE for a bit.<br />
+<br />
+First a general hint for future patches: please try and keep them at one <br />
+feature per patch. This one targets a couple of distinct things as well <br />
+as doing some clean-ups against some Perl 5-isms, which makes it a <br />
+little harder to deal with. But I know it&#39;d be a huge pain to get you to <br />
+do that now, so I&#39;ll just work from this one as it is. :-&#41;<br />
+<br />
+Digging into the patch itself. I note you did some re-organizing of the <br />
+grammar rules relating to parsing of routines and so forth. While I can <br />
+see that this maybe simplifies the code, we are working towards <br />
+converging on:<br />
+http://svn.pugscode.org/pugs/src/perl6/STD.pm<br />
+And your changes look to me to represent a step away from that in a <br />
+chunk of the Rakudo grammar that currently matches STD.pm reasonably <br />
+well. Therefore, I&#39;m going to reject those changes. It may be that <br />
+STD.pm could formulate these constructs more neatly, but I think it has <br />
+reasons for doing it the way it has. The changes to the colonpair rule <br />
+look to to be in the same boat too - I&#39;m not sure why the | was changed <br />
+to a ||, and the &lt;variable&gt; rule allows things that are not allowable in <br />
+colonpair form.<br />
+<br />
+Next I went through and manually applied all of the paren clean-ups. <br />
+They all looked correct to me, so they all went in as r26519.<br />
+<br />
+The scoping and name fixes for the colonpair method went in as r26524. <br />
+I&#39;m not quite sure what I was smoking when I wrote those &#40;exhaustion is <br />
+a more likely culprit&#41;. It&#39;d be nice if the postcircumfix stuff was as <br />
+simple as this patch attempts, but it doesn&#39;t appear to work, so I&#39;ve <br />
+skipped that bit. And I&#39;m going to redo the variable variant of it to <br />
+use desigilname, rather than variable, so it&#39;s inline with STD.pm.<br />
+<br />
+For the lexical self stuff, it&#39;s very much needed. However, the <br />
+implementation is a little tangled up in the moving of grammar rules. <br />
+I&#39;m not sure it supports nested methods properly, though I see a comment <br />
+in there that suggests it should - I just can&#39;t see how at the moment <br />
+&#40;but I&#39;m tired, so sorry if it does and I&#39;m missing it&#41;. If you&#39;d be <br />
+willing to have another crack at this while leaving the grammar rules <br />
+intact, I&#39;d be happy to see that patch &#40;don&#39;t worry about nesting for <br />
+now, if you like - we can resolve that later...I&#39;m happy to have <br />
+improvements rather than stuff that&#39;s perfect right off; it&#39;s not like <br />
+the stuff I commit is...&#41;.<br />
+<br />
+Thanks for the patch, and please don&#39;t be discouraged from working on <br />
+more because I didn&#39;t apply all of this. I&#39;m happy to answer any <br />
+questions about anything I mentioned, on IRC or in mail if I can&#39;t be <br />
+found there.<br />
+<br />
+Take care,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-375458" href="/rt3/Ticket/Display.html?id=51658#txn-375458">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;23&nbsp;15:08:51&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-398840" href="/rt3/Ticket/Display.html?id=51658#txn-398840">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;06&nbsp;01:59:40&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/398840/180944/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 173b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Closing this; extracted what was possible from the patch and applied it,<br />
+and the ticket hasn&#39;t been replied to for a while. Any new &#39;self&#39; patch<br />
+can be sent as a new ticket.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-398842" href="/rt3/Ticket/Display.html?id=51658#txn-398842">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;06&nbsp;01:59:41&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.731942</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

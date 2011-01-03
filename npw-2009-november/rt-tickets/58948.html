@@ -1,0 +1,762 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58948: [BUG] multi subs compile but cause segfault</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58948">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58948: [BUG] multi subs compile but cause segfault</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58948">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58948</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58948">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+stifynsemons
+&lt;stifynsemons [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58948">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+max3.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/472250/219648/max3.p6">
+Tue Sep 16 21:01:06 2008 (286b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58948">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472250" href="/rt3/Ticket/Display.html?id=58948#txn-472250">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;16&nbsp;21:01:06&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] multi subs compile but cause segfault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 16 Sep 2008 22:00:44 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472250/219648/max3.p6">Download max3.p6</a>
+<span class="downloadcontenttype">
+[application/octet-stream 286b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472250/219644/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Using the more elaborate version of the testcase behind #58294, which has a<br />
+two and a three argument version of max, what use to compile and execute<br />
+incorrectly before the bug fix now compiles and segfaults.  I suspect this<br />
+has nothing to do with the changes that fixed #58294, and everything to do<br />
+with recent MMD changes.  But that&#39;s speculation<br />
+I&#39;ve stripped it down to the max&#40;a,b&#41; and max&#40;a,b,c&#41; definitions and one<br />
+three-arg call, though a two-arg call produces a similar result.  The result<br />
+is:<br />
+<br />
+sully:perl6 stephensimmons$ perl6 experiment/max3.p6<br />
+Null PMC access in invoke&#40;&#41;<br />
+current instr.: &#39;_block11&#39; pc 44 &#40;EVAL_14:19&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;evalfiles&#39; pc 1078<br />
+&#40;src/PCT/HLLCompiler.pir:610&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1257<br />
+&#40;src/PCT/HLLCompiler.pir:699&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 16414 &#40;perl6.pir:172&#41;<br />
+perl6&#40;22765&#41; malloc: *** error for object 0x343ea10: double free<br />
+*** set a breakpoint in malloc_error_break to debug<br />
+Segmentation fault<br />
+<br />
+sysinfo:<br />
+sully:perl6 stephensimmons$ perl6 -v<br />
+This is Rakudo Perl 6, revision 31194 built on parrot 0.7.0-devel<br />
+for darwin-thread-multi-2level.<br />
+<br />
+Copyright 2006-2008, The Perl Foundation.<br />
+<br />
+sully:perl6 stephensimmons$ uname -a<br />
+Darwin sully.local 9.4.0 Darwin Kernel Version 9.4.0: Mon Jun  9 19:30:53<br />
+PDT 2008; root:xnu-1228.5.20~1/RELEASE_I386 i386<br />
+<br />
+Note that this does not segfault in r30669, though it does not handle<br />
+defined correctly.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472250/219646/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472256" href="/rt3/Ticket/Display.html?id=58948#txn-472256">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;16&nbsp;21:01:08&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472470" href="/rt3/Ticket/Display.html?id=58948#txn-472470">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;17&nbsp;08:01:38&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58948] [BUG] multi subs compile but cause segfault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 17 Sep 2008 10:01:12 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472470/219768/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Sep 16, 2008 at 09:01:06PM -0700, Stephen Simmons wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Using the more elaborate version of the testcase behind #58294, which has a<br />
+&gt; two and a three argument version of max, what use to compile and execute<br />
+&gt; incorrectly before the bug fix now compiles and segfaults.  I suspect this<br />
+&gt; has nothing to do with the changes that fixed #58294, and everything to do<br />
+&gt; with recent MMD changes.  But that&#39;s speculation<br />
+&gt; I&#39;ve stripped it down to the max&#40;a,b&#41; and max&#40;a,b,c&#41; definitions and one<br />
+&gt; three-arg call, though a two-arg call produces a similar result.  The result<br />
+&gt; is:<br />
+&gt; <br />
+&gt; sully:perl6 stephensimmons$ perl6 experiment/max3.p6<br />
+&gt; Null PMC access in invoke&#40;&#41;<br />
+&gt; current instr.: &#39;_block11&#39; pc 44 &#40;EVAL_14:19&#41;<br />
+</div>
+<br />
+I think there&#39;s something wrong with Rakudo&#39;s code generation<br />
+here; see the --target=pir output for max3.p6.  The code generated <br />
+for the 2-arg and 3-arg forms of max are coming out as:<br />
+<br />
+<div class="message-stanza-depth-1">
+    ## 2 argument form<br />
+</div>
+    .sub &#34;max&#34;  :multi&#40;&#41; :lexid&#40;&#34;25&#34;&#41; :outer&#40;&#34;23&#34;&#41;<br />
+        .param pmc param_16<br />
+        .param pmc param_19<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+    ## 3 argument form<br />
+</div>
+    .sub &#34;max&#34;  :multi&#40;&#41; :lexid&#40;&#34;33&#34;&#41; :outer&#40;&#34;23&#34;&#41;<br />
+        .param pmc param_101<br />
+        .param pmc param_104<br />
+        .param pmc param_107<br />
+<br />
+Those two empty :multi&#40;&#41; declarations look very suspicious to me,<br />
+but I&#39;m not familiar enough with the new MMD implementation to know<br />
+how it&#39;s supposed to work.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472474" href="/rt3/Ticket/Display.html?id=58948#txn-472474">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;17&nbsp;08:01:40&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472508" href="/rt3/Ticket/Display.html?id=58948#txn-472508">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;17&nbsp;08:35:08&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58948] [BUG] multi subs compile but cause segfault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 17 Sep 2008 10:34:36 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472508/219784/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Sep 17, 2008 at 10:01:12AM -0500, Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue, Sep 16, 2008 at 09:01:06PM -0700, Stephen Simmons wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Using the more elaborate version of the testcase behind #58294, which has a<br />
+&gt; &gt; two and a three argument version of max, what use to compile and execute<br />
+&gt; &gt; incorrectly before the bug fix now compiles and segfaults.  I suspect this<br />
+&gt; &gt; has nothing to do with the changes that fixed #58294, and everything to do<br />
+&gt; &gt; with recent MMD changes.  But that&#39;s speculation<br />
+&gt; &gt; I&#39;ve stripped it down to the max&#40;a,b&#41; and max&#40;a,b,c&#41; definitions and one<br />
+&gt; &gt; three-arg call, though a two-arg call produces a similar result.  The result<br />
+&gt; &gt; is:<br />
+&gt; &gt; <br />
+&gt; &gt; sully:perl6 stephensimmons$ perl6 experiment/max3.p6<br />
+&gt; &gt; Null PMC access in invoke&#40;&#41;<br />
+&gt; &gt; current instr.: &#39;_block11&#39; pc 44 &#40;EVAL_14:19&#41;<br />
+</div>
+&gt; <br />
+&gt; I think there&#39;s something wrong with Rakudo&#39;s code generation<br />
+&gt; here; see the --target=pir output for max3.p6.  [...]<br />
+<div class="message-stanza-depth-2">
+&gt;     ## 2 argument form<br />
+</div>
+&gt;     .sub &#34;max&#34;  :multi&#40;&#41; :lexid&#40;&#34;25&#34;&#41; :outer&#40;&#34;23&#34;&#41;<br />
+<div class="message-stanza-depth-2">
+&gt;     ## 3 argument form<br />
+</div>
+&gt;     .sub &#34;max&#34;  :multi&#40;&#41; :lexid&#40;&#34;33&#34;&#41; :outer&#40;&#34;23&#34;&#41;<br />
+&gt; <br />
+&gt; Those two empty :multi&#40;&#41; declarations look very suspicious to me,<br />
+&gt; but I&#39;m not familiar enough with the new MMD implementation to know<br />
+&gt; how it&#39;s supposed to work.<br />
+</div>
+<br />
+I just checked with Jonathan on IRC, and he says the empty :multi&#40;&#41;<br />
+declarations are correct here.  So that&#39;s not the problem.<br />
+<br />
+Actually, I suspect the problem may be that &#39;max&#39; is already a<br />
+builtin function in Perl, and that the conflict comes because<br />
+the builtins &#40;written in PIR&#41; are still using Parrot&#39;s MultiSub<br />
+while the ones written in Perl 6 are using the new Perl6MultiSub<br />
+implementation.  If I change the function name in max3.p6 to<br />
+be something other than &#39;max&#39;, it appears to work:<br />
+<br />
+    $ cat max3.p6<br />
+    multi sub max3&#40;$a, $b&#41; {<br />
+            if defined $a &#38;&#38; defined $b {<br />
+                    if $a &gt;= $b { return $a } else { return $b }<br />
+            }<br />
+            elsif defined $a { return $a }<br />
+            elsif defined $b { return $b }<br />
+            else { return undef }<br />
+    }<br />
+    <br />
+    multi sub max3&#40;$a, $b, $c&#41; {<br />
+            return max3&#40;max3&#40;$a, $b&#41;, $c&#41;;<br />
+    }<br />
+    <br />
+    say &#34;6 &lt;&#34; ~ max3&#40;9,2,1&#41; ~ &#34;&gt;&#34;;<br />
+    $ ./parrot perl6.pbc max3.p6<br />
+    6 &lt;9&gt;<br />
+    $<br />
+<br />
+So, this problem should be &#34;fixed&#34; when we get the builtins to be<br />
+written in Perl 6 &#40;or at least using Perl6MultiSubs&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.492592</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

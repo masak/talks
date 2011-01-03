@@ -1,0 +1,510 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64104: make&#40;&#41;ing a range 1..$/ leads to segmentation fault</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64104">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64104: make&#40;&#41;ing a range 1..$/ leads to segmentation fault</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64104">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64104</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64104">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz
+&lt;moritz [at] faui2k3.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64104">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64104">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-544256" href="/rt3/Ticket/Display.html?id=64104#txn-544256">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;22&nbsp;11:51:22&nbsp;2009</td>
+    <td class="description">
+      moritz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">make&#40;&#41;ing a range 1..$/ leads to segmentation fault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 22 Mar 2009 19:50:39 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/544256/258468/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+Rakudo 8207372ae394ca87667e974a2be2cd547def1f9c<br />
+on parrot r37565 &#40;amd64 linux&#41;<br />
+<br />
+grammar Math {<br />
+    token TOP { ^ &lt;value&gt; $ {*} }<br />
+    token value { \d+      {*} }<br />
+}<br />
+class Actions {<br />
+    method value&#40;$/&#41; { say &#39;in value&#40;&#41;&#39;; make  1..$/};<br />
+    method TOP&#40;$/&#41; { say &#39;in TOP&#40;&#41;&#39;; make  1 + $/&lt;value&gt;};<br />
+}<br />
+<br />
+my $x := Math.parse&#40;&#39;234&#39;, :action&#40;Actions.new&#41;&#41;;<br />
+<br />
+say $x ?? &#39;matched&#39; !! &#39;no match&#39;;<br />
+<br />
+<div class="message-stanza-depth-1">
+# Output:<br />
+</div>
+in value&#40;&#41;<br />
+in TOP&#40;&#41;<br />
+Segmentation fault<br />
+<br />
+in gdb:<br />
+Program received signal SIGSEGV, Segmentation fault.<br />
+[Switching to Thread 0x7f869d59c6f0 &#40;LWP 10687&#41;]<br />
+0x00007f869cd7bcac in Parrot_pcc_invoke_from_sig_object &#40;interp=Cannot<br />
+access memory at address 0x7fffa4dc5828<br />
+&#41;<br />
+    at src/call/pcc.c:2917<br />
+2917    {<br />
+&#40;gdb&#41; bt<br />
+#0  0x00007f869cd7bcac in Parrot_pcc_invoke_from_sig_object<br />
+&#40;interp=Cannot acces<br />
+s memory at address 0x7fffa4dc5828<br />
+&#41;<br />
+    at src/call/pcc.c:2917<br />
+#1  0x00007f869cd80102 in Parrot_pcc_invoke_sub_from_c_args<br />
+&#40;interp=0x23ec010,<br />
+    sub_obj=0x25b4490, sig=0x7f869d0645b2 &#34;P-&gt;I&#34;&#41; at src/call/pcc.c:2629<br />
+#2  0x00007f869cf72e3e in Parrot_Object_get_integer &#40;interp=0x23ec010,<br />
+    pmc=0x7f86986105d0&#41; at ./src/pmc/object.pmc:415<br />
+#3  0x00007f869cd7973b in convert_arg_from_pmc &#40;interp=0x23ec010,<br />
+    st=0x7fffa4dc9bf0&#41; at src/call/pcc.c:1113<br />
+#4  0x00007f869cd7d475 in Parrot_convert_arg &#40;interp=0x23ec010,<br />
+    st=0x7fffa4dc9bf0&#41; at src/call/pcc.c:1828<br />
+#5  0x00007f869cd7e2c0 in Parrot_process_args &#40;interp=0x23ec010,<br />
+    st=0x7fffa4dc9bf0, param_or_result=PARROT_PASS_RESULTS&#41;<br />
+    at src/call/pcc.c:1694<br />
+#6  0x00007f869cd7e87b in parrot_pass_args &#40;interp=0x23ec010,<br />
+    src_ctx=0x2db0750, dest_ctx=0x308e8d0, src_indexes=0x7f8698b6de48,<br />
+    dest_indexes=0x7f8698b6e218, param_or_result=PARROT_PASS_RESULTS&#41;<br />
+    at src/call/pcc.c:1884<br />
+#7  0x00007f869cd1f0f4 in Parrot_set_returns_pc &#40;cur_opcode=0x7f8698b6de48,<br />
+    interp=0x23ec010&#41; at src/ops/core.ops:656<br />
+#8  0x00007f869cdd5ad5 in runops_slow_core &#40;interp=0x23ec010,<br />
+    pc=0x7f8698b6de48&#41; at src/runops_cores.c:461<br />
+#9  0x00007f869cd83765 in runops_int &#40;interp=0x23ec010, offset=527&#41;<br />
+    at src/interpreter.c:980<br />
+#10 0x00007f869cd8426a in runops &#40;interp=0x23ec010, offs=527&#41;<br />
+    at src/call/ops.c:107<br />
+#11 0x00007f869cd7c05e in Parrot_pcc_invoke_from_sig_object<br />
+&#40;interp=0x23ec010,<br />
+    sub_obj=0x7f8698fcf3a0, sig_obj=0x7f8698f87280&#41; at src/call/pcc.c:2994<br />
+#12 0x00007f869cd80102 in Parrot_pcc_invoke_sub_from_c_args<br />
+&#40;interp=0x23ec010,<br />
+    sub_obj=0x7f8698fcf3a0, sig=0x7f869d0645b2 &#34;P-&gt;I&#34;&#41; at<br />
+src/call/pcc.c:2629<br />
+#13 0x00007f869cf72e3e in Parrot_Object_get_integer &#40;interp=0x23ec010,<br />
+    pmc=0x7f869861bbb0&#41; at ./src/pmc/object.pmc:415<br />
+#14 0x00007f869a3ba82d in Parrot_ObjectRef_get_integer &#40;interp=0x23ec010,<br />
+    pmc=0x7f8698f88120&#41; at ./objectref.pmc:74<br />
+#15 0x00007f869cec417a in Parrot_Integer_multi_cmp_DEFAULT<br />
+&#40;interp=0x23ec010,<br />
+    pmc=0x7f8698f881b0, value=0x7f8698f88120&#41; at ./src/pmc/integer.pmc:1209<br />
+#16 0x00007f869cda01a6 in pcf_I_JPP &#40;interp=0x23ec010, self=0x24cbf90&#41;<br />
+    at src/nci.c:695<br />
+#17 0x00007f869ceba617 in Parrot_NCI_invoke &#40;interp=0x23ec010,<br />
+pmc=0x24cbf90,<br />
+    next=0x0&#41; at ./src/pmc/nci.pmc:330<br />
+#18 0x00007f869cd7bf8a in Parrot_pcc_invoke_from_sig_object<br />
+&#40;interp=0x23ec010,<br />
+    sub_obj=0x24cbf90, sig_obj=0x7f8698f87610&#41; at src/call/pcc.c:2980<br />
+#19 0x00007f869cd91670 in Parrot_mmd_multi_dispatch_from_c_args &#40;<br />
+    interp=0x23ec010, name=0x7f869d01161f &#34;cmp&#34;, sig=0x7f869d0112e9 &#34;PP-&gt;I&#34;&#41;<br />
+    at src/multidispatch.c:340<br />
+#20 0x00007f869ce847b6 in Parrot_default_cmp &#40;interp=0x23ec010,<br />
+    pmc=0x7f8698f881b0, value=0x7f8698f88120&#41; at ./src/pmc/default.pmc:2439<br />
+#21 0x00007f869cf75d0e in Parrot_Object_cmp &#40;interp=0x23ec010,<br />
+    pmc=0x7f8698f88270, value=0x7f8698f88120&#41; at ./src/pmc/object.c:1290<br />
+#22 0x00007f869ccf1023 in Parrot_isle_i_p_p &#40;cur_opcode=0x7f869d3ece38,<br />
+    interp=0x23ec010&#41; at src/ops/cmp.ops:793<br />
+#23 0x00007f869cdd5ad5 in runops_slow_core &#40;interp=0x23ec010,<br />
+    pc=0x7f869d3ece38&#41; at src/runops_cores.c:461<br />
+#24 0x00007f869cd83765 in runops_int &#40;interp=0x23ec010, offset=8394&#41;<br />
+    at src/interpreter.c:980<br />
+#25 0x00007f869cd8426a in runops &#40;interp=0x23ec010, offs=8394&#41;<br />
+    at src/call/ops.c:107<br />
+#26 0x00007f869cd84646 in runops_args &#40;interp=0x23ec010, sub=0x25b5390,<br />
+    obj=0x7f8698f883f0, meth_unused=0x23fadd0, sig=0x7f869d0644a7 &#34;I&#34;,<br />
+    ap=0x7fffa4dd27a0&#41; at src/call/ops.c:254<br />
+#27 0x00007f869cd8500d in Parrot_run_meth_fromc_args_reti<br />
+&#40;interp=0x23ec010,<br />
+    sub=0x25b5390, obj=0x7f8698f883f0, meth=0x23fadd0,<br />
+sig=0x7f869d0644a7 &#34;I&#34;&#41;<br />
+    at src/call/ops.c:492<br />
+#28 0x00007f869cf72feb in Parrot_Object_get_bool &#40;interp=0x23ec010,<br />
+    pmc=0x7f8698f883f0&#41; at ./src/pmc/object.c:2305<br />
+#29 0x00007f869cce7be3 in Parrot_unless_p_ic &#40;cur_opcode=0x7f869d3ebdf0,<br />
+    interp=0x23ec010&#41; at src/ops/core.ops:433<br />
+#30 0x00007f869cdd5ad5 in runops_slow_core &#40;interp=0x23ec010,<br />
+    pc=0x7f869d3ebdf0&#41; at src/runops_cores.c:461<br />
+#31 0x00007f869cd83765 in runops_int &#40;interp=0x23ec010, offset=8661&#41;<br />
+...<br />
+<br />
+Looks like an infinite loop, the backtrace goes on quite long...<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.43029</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

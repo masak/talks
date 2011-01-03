@@ -1,0 +1,733 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61990: [BUG] setset .WHAT returns incorrect value</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61990">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61990: [BUG] setset .WHAT returns incorrect value</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61990">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61990</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61990">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+publiustemp-perl6internals2 [at] yahoo.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61990">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61990">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515826" href="/rt3/Ticket/Display.html?id=61990#txn-515826">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;12:50:55&nbsp;2009</td>
+    <td class="description">
+      publiustemp-perl6internals2 <!-- x --> at yahoo.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] setset .WHAT returns incorrect value</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 5 Jan 2009 12:49:27 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/515826/243290/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 404b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+For r35004:<br />
+<br />
+  subset Even of Int where { not $_ % 2 };<br />
+  my Even $num = 2;<br />
+  say $num;<br />
+  say $num.WHAT;<br />
+<br />
+<br />
+Output:<br />
+<br />
+  2<br />
+  Int<br />
+ <br />
+I&#39;m expecting:<br />
+<br />
+  2<br />
+  Even<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515832" href="/rt3/Ticket/Display.html?id=61990#txn-515832">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;12:50:58&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515876" href="/rt3/Ticket/Display.html?id=61990#txn-515876">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;17:23:17&nbsp;2009</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61990] [BUG] setset .WHAT returns incorrect value</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 06 Jan 2009 02:22:34 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/515876/243320/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 824b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+publiustemp-perl6internals2 <!-- x --> at yahoo.com &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; For r35004:<br />
+&gt;<br />
+&gt;   subset Even of Int where { not $_ % 2 };<br />
+&gt;   my Even $num = 2;<br />
+&gt;   say $num;<br />
+&gt;   say $num.WHAT;<br />
+&gt;<br />
+&gt;<br />
+&gt; Output:<br />
+&gt;<br />
+&gt;   2<br />
+&gt;   Int<br />
+&gt;  <br />
+&gt; I&#39;m expecting:<br />
+&gt;<br />
+&gt;   2<br />
+&gt;   Even<br />
+&gt;<br />
+&gt;   <br />
+</div>
+I think the current behaviour is correct &#40;or at least, implemented to <br />
+match my understanding of the Perl 6 type system&#41;. You&#39;re asking for the <br />
+type of the value stored in $x, which is an Int.<br />
+<br />
+Even is not a &#34;real type&#34;, but rather a refinement type. It is set as a <br />
+constraint on what may be held by the container. To get hold of that <br />
+&#40;though I don&#39;t think we implement any way right now&#41; you probably would <br />
+write $x.VAR.type or some such &#40;I&#39;m not sure exactly what the name of <br />
+the method on the container that hands this back should be&#41;.<br />
+<br />
+Hope this makes sense,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515878" href="/rt3/Ticket/Display.html?id=61990#txn-515878">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;17:23:18&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515990" href="/rt3/Ticket/Display.html?id=61990#txn-515990">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;03:27:00&nbsp;2009</td>
+    <td class="description">
+      publiustemp-perl6compiler2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61990] [BUG] setset .WHAT returns incorrect value</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 6 Jan 2009 03:26:27 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6compiler2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/515990/243372/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+----- Original Message ----<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; From: Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt;   subset Even of Int where { not $_ % 2 };<br />
+&gt; &gt;   my Even $num = 2;<br />
+&gt; &gt;   say $num;<br />
+&gt; &gt;   say $num.WHAT;<br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+&gt; &gt; Output:<br />
+&gt; &gt; <br />
+&gt; &gt;   2<br />
+&gt; &gt;   Int<br />
+&gt; &gt;  I&#39;m expecting:<br />
+&gt; &gt; <br />
+&gt; &gt;   2<br />
+&gt; &gt;   Even<br />
+&gt; &gt; <br />
+&gt; &gt;  <br />
+</div>
+&gt; I think the current behaviour is correct &#40;or at least, implemented to match my <br />
+&gt; understanding of the Perl 6 type system&#41;. You&#39;re asking for the type of the <br />
+&gt; value stored in $x, which is an Int.<br />
+&gt; <br />
+&gt; Even is not a &#34;real type&#34;, but rather a refinement type. It is set as a <br />
+&gt; constraint on what may be held by the container. To get hold of that &#40;though I <br />
+&gt; don&#39;t think we implement any way right now&#41; you probably would write $x.VAR.type <br />
+&gt; or some such &#40;I&#39;m not sure exactly what the name of the method on the container <br />
+&gt; that hands this back should be&#41;.<br />
+</div>
+<br />
+Really?  It subset looks to me like a new type definition, built on an existing type.  If that was the case, then this would look normal:<br />
+<br />
+  my Int $foo; say $foo.WHAT;  # Int<br />
+  my Odd $bar; say $bar.WHAT;  # Odd<br />
+<br />
+ <br />
+That *looks* right to me, particularly since what comes after the &#34;my&#34; seems like a type declaration.  By your logic, .WHAT refers to the value, not the container, which seems odd.  That being said:<br />
+<br />
+  my $foo = 3; say $foo; # Int<br />
+  $foo = &#39;stuff&#39;; say $foo; # Str<br />
+<br />
+So that&#39;s probably bad coding &#40;reusing a variable for different types&#41; but it&#39;s legal.  So maybe this is the correct behavior, but I expect it&#39;s going to confuse people.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518516" href="/rt3/Ticket/Display.html?id=61990#txn-518516">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;08:38:19&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518516/244672/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 101b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Marking ticket as resolved.  Reopen &#40;and point to relevant spectest or<br />
+synopsis&#41; if not resolved.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518518" href="/rt3/Ticket/Display.html?id=61990#txn-518518">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;08:38:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.014289</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61610: Something is inconsistent with the undef warnings of .reduce</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61610">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61610: Something is inconsistent with the undef warnings of .reduce</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61610">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61610</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61610">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61610">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+list_reduce.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511210/240888/list_reduce.patch">
+Mon Dec 22 15:21:23 2008 (816b) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61610">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510946" href="/rt3/Ticket/Display.html?id=61610#txn-510946">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;07:11:15&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Something is inconsistent with the undef warnings of .reduce</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2008 16:10:35 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/510946/240752/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;moritz_&gt; rakudo: say &#40;1..10&#41;.reduce&#40;{$^a + $^b + $^c}&#41;<br />
+&lt;p6eval&gt; rakudo 34244: OUTPUT[Use of uninitialized value␤55␤]<br />
+&lt;PerlJam&gt; that&#39;s interesting<br />
+* PerlJam is looking at the code now<br />
+&lt;masak&gt; PerlJam: are you also submitting a rakudobug? otherwise I am.<br />
+&lt;PerlJam&gt; go ahead<br />
+* masak submits rakudobug<br />
+&lt;eric256&gt; whats the bug?<br />
+&lt;masak&gt; eric256: the &#34;Use of uninitialized value&#34; warning above.<br />
+&lt;moritz_&gt; masak: maybe that&#39;s because it just doesn&#39;t work to reduce a<br />
+list of every possible size with a three-arg function?<br />
+&lt;eric256&gt; but it was unitiliazed<br />
+&lt;masak&gt; moritz_: yes, now that I look at it, I think so too.<br />
+&lt;masak&gt; eric256: what was?<br />
+&lt;PerlJam&gt; still a bug though<br />
+&lt;PerlJam&gt; &#40;IMHO&#41;<br />
+&lt;eric256&gt; $^b and $^c for the last run<br />
+&lt;masak&gt; PerlJam: aye, it shouldn&#39;t warn, methinks<br />
+&lt;masak&gt; eric256: you&#39;re right.<br />
+&lt;PerlJam&gt; yeah, it pushes an appropriate number of undef to fill out<br />
+the arity of the sub.<br />
+&lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a.say; $^b.say;}&#41;;<br />
+&lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&lt;rjh-&gt; how else would you handle it?<br />
+&lt;eric256&gt; ohh but that should have the same error then<br />
+&lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a + $^b;}&#41;;<br />
+&lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a + $^b + $^c;}&#41;;<br />
+&lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&lt;eric256&gt; rakudo: list&#40;1,2&#41;.reduce&#40; { $^a + $^b + $^c;}&#41;;<br />
+&lt;p6eval&gt; rakudo 34244: OUTPUT[Use of uninitialized value␤]<br />
+&lt;eric256&gt; okay thats a bit weird<br />
+&lt;masak&gt; something inconsistent is going on.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511108" href="/rt3/Ticket/Display.html?id=61610#txn-511108">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;12:32:38&nbsp;2008</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61610] Something is inconsistent with the undef warnings of .reduce</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2008 15:32:16 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511108/240844/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Arity 2 and a 1-elem list seems to be special-cased; otherwise, it<br />
+consistently warns once per undefined value in the expansion:<br />
+<br />
+&#40;1..4&#41;.reduce&#40;{$^a+$^b+$^c+$^d}&#41;    # no warnings<br />
+&#40;1..5&#41;.reduce&#40;{$^a+$^b+$^c+$^d}&#41;    # two warnings: &#40;1+2+3+4&#41;+5+undef+undef<br />
+&#40;1..6&#41;.reduce&#40;{$^a+$^b+$^c+$^d}&#41;    # one warning:  &#40;1+2+3+4&#41;+5+6+undef<br />
+&#40;1..7&#41;.reduce&#40;{$^a+$^b+$^c+$^d}&#41;    # no warnings: &#40;1+2+3+4&#41;+5+6+7<br />
+&#40;1..8&#41;.reduce&#40;{$^a+$^b+$^c+$^d}&#41;    # two warnings:<br />
+&#40;&#40;1+2+3+4&#41;+5+6+7&#41;+8+undef+undef<br />
+<br />
+<br />
+On Mon, Dec 22, 2008 at 10:11 AM, via RT Carl Mäsak<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34;<br />
+&gt; # Please include the string:  [perl #61610]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61610 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; &lt;moritz_&gt; rakudo: say &#40;1..10&#41;.reduce&#40;{$^a + $^b + $^c}&#41;<br />
+&gt; &lt;p6eval&gt; rakudo 34244: OUTPUT[Use of uninitialized value␤55␤]<br />
+&gt; &lt;PerlJam&gt; that&#39;s interesting<br />
+&gt; * PerlJam is looking at the code now<br />
+&gt; &lt;masak&gt; PerlJam: are you also submitting a rakudobug? otherwise I am.<br />
+&gt; &lt;PerlJam&gt; go ahead<br />
+&gt; * masak submits rakudobug<br />
+&gt; &lt;eric256&gt; whats the bug?<br />
+&gt; &lt;masak&gt; eric256: the &#34;Use of uninitialized value&#34; warning above.<br />
+&gt; &lt;moritz_&gt; masak: maybe that&#39;s because it just doesn&#39;t work to reduce a<br />
+&gt; list of every possible size with a three-arg function?<br />
+&gt; &lt;eric256&gt; but it was unitiliazed<br />
+&gt; &lt;masak&gt; moritz_: yes, now that I look at it, I think so too.<br />
+&gt; &lt;masak&gt; eric256: what was?<br />
+&gt; &lt;PerlJam&gt; still a bug though<br />
+&gt; &lt;PerlJam&gt; &#40;IMHO&#41;<br />
+&gt; &lt;eric256&gt; $^b and $^c for the last run<br />
+&gt; &lt;masak&gt; PerlJam: aye, it shouldn&#39;t warn, methinks<br />
+&gt; &lt;masak&gt; eric256: you&#39;re right.<br />
+&gt; &lt;PerlJam&gt; yeah, it pushes an appropriate number of undef to fill out<br />
+&gt; the arity of the sub.<br />
+&gt; &lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a.say; $^b.say;}&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&gt; &lt;rjh-&gt; how else would you handle it?<br />
+&gt; &lt;eric256&gt; ohh but that should have the same error then<br />
+&gt; &lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a + $^b;}&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&gt; &lt;eric256&gt; rakudo: list&#40;1&#41;.reduce&#40; { $^a + $^b + $^c;}&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 34244: RESULT[1]<br />
+&gt; &lt;eric256&gt; rakudo: list&#40;1,2&#41;.reduce&#40; { $^a + $^b + $^c;}&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 34244: OUTPUT[Use of uninitialized value␤]<br />
+&gt; &lt;eric256&gt; okay thats a bit weird<br />
+&gt; &lt;masak&gt; something inconsistent is going on.<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511112" href="/rt3/Ticket/Display.html?id=61610#txn-511112">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;12:32:42&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511184" href="/rt3/Ticket/Display.html?id=61610#txn-511184">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;14:10:26&nbsp;2008</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61610] Something is inconsistent with the undef warnings of .reduce</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2008 17:09:53 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Vasily Chekalkin&#34; &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511184/240860/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 680b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ok, so with that patch,  the case of a 1-element list and a binary sub<br />
+now behaves the same as any other combination of arity n with a list<br />
+whose length is not k&#40;n-1&#41;+1.  I guess that&#39;s progress. :&#41;  Thanks,<br />
+Vasily.<br />
+<br />
+I&#39;d still like to see the undef warnings reduced to one, rather than<br />
+one for every undef in the expansion.<br />
+<br />
+On Mon, Dec 22, 2008 at 4:17 PM, Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Mark J. Reed wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt;<br />
+&gt;&gt; Arity 2 and a 1-elem list seems to be special-cased; otherwise, it<br />
+&gt;&gt; consistently warns once per undefined value in the expansion:<br />
+</div>
+&gt;<br />
+&gt; 1-elem List reduce patch attached. Test added in r24567<br />
+&gt;<br />
+&gt; --<br />
+&gt; Bacek<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511210" href="/rt3/Ticket/Display.html?id=61610#txn-511210">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;15:21:23&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61610] Something is inconsistent with the undef warnings of .reduce</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Dec 2008 08:17:10 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, &#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511210/240886/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 221b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Mark J. Reed wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Arity 2 and a 1-elem list seems to be special-cased; otherwise, it<br />
+&gt; consistently warns once per undefined value in the expansion:<br />
+</div>
+<br />
+1-elem List reduce patch attached. Test added in r24567<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511210/240888/list_reduce.patch">Download list_reduce.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 816b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit 9c1a3058064067dacab4c5f623a59ae768f19182<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Tue Dec 23 08:12:19 2008 +1100<br />
+<br />
+    Fix one element List reduce<br />
+<br />
+diff --git a/languages/perl6/src/builtins/any-list.pir b/languages/perl6/src/builtins/any-list.pir<br />
+index eaa43c8..8761297 100644<br />
+--- a/languages/perl6/src/builtins/any-list.pir<br />
++++ b/languages/perl6/src/builtins/any-list.pir<br />
+@@ -410,7 +410,6 @@ the size of that file down and to emphasize their generic,<br />
+     unless iter goto empty<br />
+     retv = shift iter<br />
+   loop:<br />
+-    unless iter goto done<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # Create arguments for closure<br />
+</div>
+     args = new &#39;ResizablePMCArray&#39;<br />
+@@ -432,6 +431,7 @@ the size of that file down and to emphasize their generic,<br />
+ <br />
+   invoke:<br />
+     retv = expression&#40;retv, args :flat&#41;<br />
++    unless iter goto done<br />
+     goto loop<br />
+ <br />
+   empty:<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-524748" href="/rt3/Ticket/Display.html?id=61610#txn-524748">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;25&nbsp;15:00:24&nbsp;2009</td>
+    <td class="description">
+      moritz -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.243547</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

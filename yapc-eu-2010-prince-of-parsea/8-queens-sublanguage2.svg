@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2816">
+  <defs
+     id="defs2818" />
+  <g
+     id="layer1">
+    <rect
+       width="821.66663"
+       height="630"
+       x="-10.833313"
+       y="-15"
+       id="rect2826"
+       style="fill:#dddddd;fill-opacity:1;stroke:none" />
+    <text
+       x="29.08856"
+       y="140.46371"
+       id="text3600"
+       xml:space="preserve"
+       style="font-size:27.12467957px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="29.08856"
+         y="140.46371"
+         id="tspan3602">my 1..8 $pos1;</tspan><tspan
+         x="29.08856"
+         y="174.36957"
+         id="tspan3604">my 1..8 $pos2 where {    $pos2     != $pos1</tspan><tspan
+         x="29.08856"
+         y="208.27542"
+         id="tspan3660">                      &amp;&amp; $pos2 - 1 != $pos1</tspan><tspan
+         x="29.08856"
+         y="242.18126"
+         id="tspan3664">                      &amp;&amp; $pos2 + 1 != $pos1 };</tspan><tspan
+         x="29.08856"
+         y="276.0871"
+         id="tspan3606">my 1..8 $pos3 where {    $pos3     != $pos1</tspan><tspan
+         x="29.08856"
+         y="309.99295"
+         id="tspan3668">                      &amp;&amp; $pos3 - 2 != $pos1</tspan><tspan
+         x="29.08856"
+         y="343.8988"
+         id="tspan3670">                      &amp;&amp; $pos3 + 2 != $pos2</tspan><tspan
+         x="29.08856"
+         y="377.80466"
+         id="tspan3672">                      &amp;&amp; $pos3     != $pos2</tspan><tspan
+         x="29.08856"
+         y="411.71051"
+         id="tspan3674">                      &amp;&amp; $pos3 - 1 != $pos2</tspan><tspan
+         x="29.08856"
+         y="445.61636"
+         id="tspan3616">                      &amp;&amp; $pos3 + 1 != $pos2 };</tspan><tspan
+         x="29.08856"
+         y="479.52222"
+         id="tspan3696"># ...</tspan></text>
+  </g>
+</svg>

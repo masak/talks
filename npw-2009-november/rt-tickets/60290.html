@@ -1,0 +1,970 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60290: [TODO] Implement Bool.pick in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60290">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60290: [TODO] Implement Bool.pick in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60290">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60290</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60290">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60290">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Todo    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+bool_pick.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492872/230494/bool_pick.patch">
+Sat Nov 08 19:35:55 2008 (664b) by bacek
+</a>
+</font></li>
+</ul>
+
+
+bool_pick2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/493316/230738/bool_pick2.patch">
+Mon Nov 10 02:48:20 2008 (901b) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60290">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490480" href="/rt3/Ticket/Display.html?id=60290#txn-490480">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;01&nbsp;09:41:41&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] Implement Bool.pick in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 1 Nov 2008 17:41:17 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/490480/229088/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 187b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+...or, if easier, .pick on all enum types.<br />
+<br />
+Rakudo r32267 recognizes &#39;Bool.pick&#39; as a valid program, but hangs<br />
+when running it. It also hangs for all other defined classes except<br />
+&#39;Bool&#39;.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490486" href="/rt3/Ticket/Display.html?id=60290#txn-490486">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;01&nbsp;09:41:44&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Todo added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490612" href="/rt3/Ticket/Display.html?id=60290#txn-490612">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;02&nbsp;03:43:27&nbsp;2008</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/490612/229130/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 376b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo r32267 recognizes &#39;Bool.pick&#39; as a valid program, but hangs<br />
+&gt; when running it. It also hangs for all other defined classes except<br />
+&gt; &#39;Bool&#39;.<br />
+</div>
+<br />
+Found and fixed the hanging problem in r32280, with the help of jonathan++.<br />
+<br />
+The core issue of this ticket still remains, though: to implement<br />
+Bool.pick in such a way that it returns either Bool::True or Bool::False.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490614" href="/rt3/Ticket/Display.html?id=60290#txn-490614">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;02&nbsp;03:43:28&nbsp;2008</td>
+    <td class="description">
+      masak -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492872" href="/rt3/Ticket/Display.html?id=60290#txn-492872">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;19:35:55&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492872/230488/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 272b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Nov 02 03:43:27 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; The core issue of this ticket still remains, though: to implement<br />
+&gt; Bool.pick in such a way that it returns either Bool::True or Bool::False.<br />
+</div>
+<br />
+Ad-hoc implementation attached. I still trying to implement Enum.pick.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492872/230494/bool_pick.patch">Download bool_pick.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 664b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Bool.pir b/languages/perl6/src/classes/Bool.pir<br />
+index bcdcffb..6fd8ce8 100644<br />
+--- a/languages/perl6/src/classes/Bool.pir<br />
++++ b/languages/perl6/src/classes/Bool.pir<br />
+@@ -63,6 +63,24 @@ This is a value type, so just returns itself.<br />
+     self = 0<br />
+ .end<br />
+ <br />
++=item<br />
++<br />
++Bool.pick - returns True or False<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;pick&#39; :method<br />
++    .local pmc rand<br />
++    rand = get_hll_global [&#39;Any&#39;], &#39;$!random&#39;<br />
++    $N0 = rand<br />
++    if $N0 &lt; 0.5 goto ret_true<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
++<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492976" href="/rt3/Ticket/Display.html?id=60290#txn-492976">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;07:17:06&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60290] [TODO] Implement Bool.pick in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 9 Nov 2008 09:16:41 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Vasily Chekalkin via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492976/230564/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 501b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Nov 08, 2008 at 07:35:57PM -0800, Vasily Chekalkin via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sun Nov 02 03:43:27 2008, masak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+&gt; &gt; The core issue of this ticket still remains, though: to implement<br />
+&gt; &gt; Bool.pick in such a way that it returns either Bool::True or Bool::False.<br />
+</div>
+&gt; <br />
+&gt; Ad-hoc implementation attached. I still trying to implement Enum.pick.<br />
+</div>
+<br />
+Note that according to the current S29, .pick returns a List.<br />
+&#40;There has been some discussion on #perl6 that .pick should return<br />
+a Capture instead.&#41;<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493222" href="/rt3/Ticket/Display.html?id=60290#txn-493222">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;20:48:02&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493222/230682/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 56b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied &#40;with minor improvements&#41; in r32477, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493226" href="/rt3/Ticket/Display.html?id=60290#txn-493226">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;20:48:04&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493230" href="/rt3/Ticket/Display.html?id=60290#txn-493230">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;20:48:11&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493316" href="/rt3/Ticket/Display.html?id=60290#txn-493316">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Nov&nbsp;10&nbsp;02:48:19&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Vasily Chekalkin via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60290] [TODO] Implement Bool.pick in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 10 Nov 2008 13:04:33 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493316/230736/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 570b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat, Nov 08, 2008 at 07:35:57PM -0800, Vasily Chekalkin via RT wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; On Sun Nov 02 03:43:27 2008, masak wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; The core issue of this ticket still remains, though: to implement<br />
+&gt;&gt;&gt; Bool.pick in such a way that it returns either Bool::True or Bool::False.<br />
+</div>
+&gt;&gt; Ad-hoc implementation attached. I still trying to implement Enum.pick.<br />
+</div>
+&gt; <br />
+&gt; Note that according to the current S29, .pick returns a List.<br />
+&gt; &#40;There has been some discussion on #perl6 that .pick should return<br />
+&gt; a Capture instead.&#41;<br />
+</div>
+<br />
+Ah, ok. Revised patch attached.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493316/230738/bool_pick2.patch">Download bool_pick2.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 901b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit da5c54927e251a7f99045c9b5c1f60faa4e29dd4<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at com.au&gt;<br />
+Date:   Mon Nov 10 13:03:11 2008 +1100<br />
+<br />
+    Bool.pick<br />
+<br />
+diff --git a/languages/perl6/src/classes/Bool.pir b/languages/perl6/src/classes/Bool.pir<br />
+index 129466a..44c2b37 100644<br />
+--- a/languages/perl6/src/classes/Bool.pir<br />
++++ b/languages/perl6/src/classes/Bool.pir<br />
+@@ -52,6 +52,29 @@ symbols for C&lt;Bool::True&gt; and C&lt;Bool::False&gt;.<br />
+     self = 0<br />
+ .end<br />
+ <br />
++=item<br />
++<br />
++Bool.pick - returns True or False<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;pick&#39; :method<br />
++    .local pmc rand<br />
++    rand = get_hll_global [&#39;Any&#39;], &#39;$!random&#39;<br />
++    $N0 = rand<br />
++    if $N0 &lt; 0.5 goto ret_true<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    goto done<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++<br />
++  done:<br />
++    .local pmc result<br />
++    result = &#39;list&#39;&#40;&#41;<br />
++    push result, $P0<br />
++    .return&#40;result&#41;<br />
++.end<br />
++<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.068918</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

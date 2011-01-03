@@ -1,0 +1,1331 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58338: [BUG] primes.p6 segfaults after 6000+ primes</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58338">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58338: [BUG] primes.p6 segfaults after 6000+ primes</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58338">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58338</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58338">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+stifynsemons
+&lt;stifynsemons [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58338">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+primes.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463188/214328/primes.p6">
+Sun Aug 24 18:07:11 2008 (221b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+primes.p5<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463188/214330/primes.p5">
+Sun Aug 24 18:07:11 2008 (245b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+random_primes.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/464822/215306/random_primes.p6">
+Sat Aug 30 08:25:17 2008 (1k) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58338">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463188" href="/rt3/Ticket/Display.html?id=58338#txn-463188">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;18:07:11&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] primes.p6 segfaults after 6000+ primes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 24 Aug 2008 19:06:44 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463188/214328/primes.p6">Download primes.p6</a>
+<span class="downloadcontenttype">
+[application/octet-stream 221b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463188/214330/primes.p5">Download primes.p5</a>
+<span class="downloadcontenttype">
+[application/octet-stream 245b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463188/214324/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The attached program, primes.p6 seems to work correctly, except that after<br />
+processing the numbers from 1-6000+, it segfaults<br />
+Here are the last few lines.  Note that it had already output the first two<br />
+chunks, and so it was between 6400 and 10000 when it segfaulted.<br />
+<br />
+7 5939 5953 5981 5987 6007 6011 6029 6037 6043 6047 6053 6067 6073 6079 6089<br />
+6091 6101 6113 6121 6131 6133 6143 6151 6163 6173 6197 6199 6203 6211 6217<br />
+6221 6229 6241 6247 6257 6263 6269 6271 6277 6287 6299 6301 6311 6317 6323<br />
+6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449 6451<br />
+6469 6473 6481Segmentation fault<br />
+<br />
+real 0m12.937s<br />
+user 0m9.519s<br />
+sys 0m0.213s<br />
+<br />
+It was hard to capture the exact moment of failure with top, but it was<br />
+using 98% cpu and about 80MB of memory.<br />
+<br />
+The primes.p5 attached was written and tested for comparison, and it<br />
+completes with a real time of 0.045s, for completing 10000 numbers.<br />
+<br />
+Stephen Simmons<br />
+<br />
+System information:<br />
+sully:experiment stephensimmons$ uname -a<br />
+Darwin sully.local 9.4.0 Darwin Kernel Version 9.4.0: Mon Jun  9 19:30:53<br />
+PDT 2008; root:xnu-1228.5.20~1/RELEASE_I386 i386<br />
+sully:experiment stephensimmons$ perl6 -v<br />
+This is Rakudo Perl 6, revision 30524 built on parrot 0.7.0-devel<br />
+for darwin-thread-multi-2level.<br />
+<br />
+Copyright 2006-2008, The Perl Foundation.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463188/214326/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463194" href="/rt3/Ticket/Display.html?id=58338#txn-463194">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;18:07:14&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463394" href="/rt3/Ticket/Display.html?id=58338#txn-463394">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;07:11:01&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58338] [BUG] primes.p6 segfaults after 6000+ primes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 25 Aug 2008 16:10:28 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463394/214456/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Stephen Simmons &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Stephen Simmons&#34; <br />
+&gt; # Please include the string:  [perl #58338]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=58338 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; The attached program, primes.p6 seems to work correctly, except that after<br />
+&gt; processing the numbers from 1-6000+, it segfaults<br />
+&gt; Here are the last few lines.  Note that it had already output the first two<br />
+&gt; chunks, and so it was between 6400 and 10000 when it segfaulted.<br />
+&gt; <br />
+&gt; 7 5939 5953 5981 5987 6007 6011 6029 6037 6043 6047 6053 6067 6073 6079 6089<br />
+&gt; 6091 6101 6113 6121 6131 6133 6143 6151 6163 6173 6197 6199 6203 6211 6217<br />
+&gt; 6221 6229 6241 6247 6257 6263 6269 6271 6277 6287 6299 6301 6311 6317 6323<br />
+&gt; 6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449 6451<br />
+&gt; 6469 6473 6481Segmentation fault<br />
+</div>
+<br />
+When you s/print/say/ you see that it gets as far as 9949 &#40;no line<br />
+buffering any more&#41; before the segfault, at least on my machine.<br />
+Interestingly enough this is no garbage collection problem, because it&#39;s<br />
+reproducible with the -G option to parrot as well.<br />
+<br />
+The fault is also reproducible when you move sub is_prime to a separate<br />
+package and precompile it with<br />
+../../parrot perl6.pbc --target=pir Prime.pm &gt; Prime.pir<br />
+and then &#39;use Prime;&#39; in the script.<br />
+<br />
+Maybe that motivates some brave debugging soul...<br />
+<br />
+<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463400" href="/rt3/Ticket/Display.html?id=58338#txn-463400">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;07:12:25&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463416" href="/rt3/Ticket/Display.html?id=58338#txn-463416">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;07:57:30&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58338] [BUG] primes.p6 segfaults after 6000+ primes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 25 Aug 2008 09:57:03 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463416/214468/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Aug 25, 2008 at 04:10:28PM +0200, Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; The attached program, primes.p6 seems to work correctly, except that after<br />
+&gt; &gt; processing the numbers from 1-6000+, it segfaults<br />
+&gt; &gt; Here are the last few lines.  Note that it had already output the first two<br />
+&gt; &gt; chunks, and so it was between 6400 and 10000 when it segfaulted.<br />
+&gt; &gt; [...]<br />
+&gt; &gt; 6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449 6451<br />
+&gt; &gt; 6469 6473 6481Segmentation fault<br />
+</div>
+&gt; <br />
+&gt; When you s/print/say/ you see that it gets as far as 9949 &#40;no line<br />
+&gt; buffering any more&#41; before the segfault, at least on my machine.<br />
+</div>
+<br />
+I get the same results on my machine.  If you also change the outer<br />
+loop to start at 5000 instead of 1, then it gets all the way through<br />
+to the end with no difficulty:<br />
+<br />
+    $ cat primes.p6<br />
+    sub prime&#40;Int $n&#41; {<br />
+            return 0 if $n % 2 == 0;<br />
+            my $limit = sqrt&#40;$n&#41;;<br />
+            loop &#40;my $i=3; $i&lt;$limit; $i+=2&#41; {<br />
+                    if $n % $i == 0 { return 0; }<br />
+            }<br />
+            return 1;<br />
+    }<br />
+    <br />
+    loop&#40;my $n=5000; $n&lt;=10000; $n++&#41; {<br />
+            if prime&#40;$n&#41; { say $n; }<br />
+    }<br />
+    say &#34;done&#34;;<br />
+    $ ./parrot perl6.pbc primes.p6<br />
+    5003<br />
+    5009<br />
+    5011<br />
+    ...<br />
+    9931<br />
+    9941<br />
+    9949<br />
+    9967<br />
+    9973<br />
+    done<br />
+    $<br />
+<br />
+So, I suspect that the difficulty is internal to Parrot somehow,<br />
+and not specific to Rakudo.<br />
+<br />
+I&#39;m hoping to get the options in place to have Rakudo generate<br />
+standalone PIR in the next day or so -- perhaps that will help<br />
+with Parrot debugging.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463644" href="/rt3/Ticket/Display.html?id=58338#txn-463644">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;26&nbsp;05:57:43&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58338] [BUG] primes.p6 segfaults after 6000+ primes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 25 Aug 2008 20:06:21 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463644/214596/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I was wondering ... for problems like these, is there a way to debug what is<br />
+going on internally?  Is standalone PIR the best way?<br />
+Stephen Simmons<br />
+<br />
+On Mon, Aug 25, 2008 at 8:11 AM, Moritz Lenz via RT &lt;<br />
+perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Stephen Simmons &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; # New Ticket Created by  &#34;Stephen Simmons&#34;<br />
+&gt; &gt; # Please include the string:  [perl #58338]<br />
+&gt; &gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; &gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=58338 &gt;<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt; The attached program, primes.p6 seems to work correctly, except that<br />
+</div>
+&gt; after<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; processing the numbers from 1-6000+, it segfaults<br />
+&gt; &gt; Here are the last few lines.  Note that it had already output the first<br />
+</div>
+&gt; two<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; chunks, and so it was between 6400 and 10000 when it segfaulted.<br />
+&gt; &gt;<br />
+&gt; &gt; 7 5939 5953 5981 5987 6007 6011 6029 6037 6043 6047 6053 6067 6073 6079<br />
+</div>
+&gt; 6089<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 6091 6101 6113 6121 6131 6133 6143 6151 6163 6173 6197 6199 6203 6211<br />
+</div>
+&gt; 6217<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 6221 6229 6241 6247 6257 6263 6269 6271 6277 6287 6299 6301 6311 6317<br />
+</div>
+&gt; 6323<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449<br />
+</div>
+&gt; 6451<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 6469 6473 6481Segmentation fault<br />
+</div>
+&gt;<br />
+&gt; When you s/print/say/ you see that it gets as far as 9949 &#40;no line<br />
+&gt; buffering any more&#41; before the segfault, at least on my machine.<br />
+&gt; Interestingly enough this is no garbage collection problem, because it&#39;s<br />
+&gt; reproducible with the -G option to parrot as well.<br />
+&gt;<br />
+&gt; The fault is also reproducible when you move sub is_prime to a separate<br />
+&gt; package and precompile it with<br />
+&gt; ../../parrot perl6.pbc --target=pir Prime.pm &gt; Prime.pir<br />
+&gt; and then &#39;use Prime;&#39; in the script.<br />
+&gt;<br />
+&gt; Maybe that motivates some brave debugging soul...<br />
+&gt;<br />
+&gt;<br />
+&gt; Moritz<br />
+&gt;<br />
+&gt; --<br />
+&gt; Moritz Lenz<br />
+&gt; http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463662" href="/rt3/Ticket/Display.html?id=58338#txn-463662">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;26&nbsp;07:48:50&nbsp;2008</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58338] [BUG] primes.p6 segfaults after 6000+ primes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 26 Aug 2008 10:48:11 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Will Coleda&#34; &lt;will <!-- x --> at coleda.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463662/214616/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Aug 25, 2008 at 10:06 PM, Stephen Simmons<br />
+&lt;stifynsemons <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I was wondering ... for problems like these, is there a way to debug what is<br />
+&gt; going on internally?  Is standalone PIR the best way?<br />
+&gt; Stephen Simmons<br />
+&gt;<br />
+&gt; On Mon, Aug 25, 2008 at 8:11 AM, Moritz Lenz via RT &lt;<br />
+&gt; perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Stephen Simmons &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-3">
+<div class="message-stanza-depth-4">
+&gt;&gt; &gt; # New Ticket Created by  &#34;Stephen Simmons&#34;<br />
+&gt;&gt; &gt; # Please include the string:  [perl #58338]<br />
+&gt;&gt; &gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; &gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=58338 &gt;<br />
+</div>
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt; The attached program, primes.p6 seems to work correctly, except that<br />
+</div>
+&gt;&gt; after<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; processing the numbers from 1-6000+, it segfaults<br />
+&gt;&gt; &gt; Here are the last few lines.  Note that it had already output the first<br />
+</div>
+&gt;&gt; two<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; chunks, and so it was between 6400 and 10000 when it segfaulted.<br />
+&gt;&gt; &gt;<br />
+&gt;&gt; &gt; 7 5939 5953 5981 5987 6007 6011 6029 6037 6043 6047 6053 6067 6073 6079<br />
+</div>
+&gt;&gt; 6089<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; 6091 6101 6113 6121 6131 6133 6143 6151 6163 6173 6197 6199 6203 6211<br />
+</div>
+&gt;&gt; 6217<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; 6221 6229 6241 6247 6257 6263 6269 6271 6277 6287 6299 6301 6311 6317<br />
+</div>
+&gt;&gt; 6323<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; 6329 6337 6343 6353 6359 6361 6367 6373 6379 6389 6397 6421 6427 6449<br />
+</div>
+&gt;&gt; 6451<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; 6469 6473 6481Segmentation fault<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; When you s/print/say/ you see that it gets as far as 9949 &#40;no line<br />
+&gt;&gt; buffering any more&#41; before the segfault, at least on my machine.<br />
+&gt;&gt; Interestingly enough this is no garbage collection problem, because it&#39;s<br />
+&gt;&gt; reproducible with the -G option to parrot as well.<br />
+&gt;&gt;<br />
+&gt;&gt; The fault is also reproducible when you move sub is_prime to a separate<br />
+&gt;&gt; package and precompile it with<br />
+&gt;&gt; ../../parrot perl6.pbc --target=pir Prime.pm &gt; Prime.pir<br />
+&gt;&gt; and then &#39;use Prime;&#39; in the script.<br />
+&gt;&gt;<br />
+&gt;&gt; Maybe that motivates some brave debugging soul...<br />
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; Moritz<br />
+&gt;&gt;<br />
+&gt;&gt; --<br />
+&gt;&gt; Moritz Lenz<br />
+&gt;&gt; http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+</div>
+<br />
+If we&#39;re getting segfaults, yes, standalone PIR makes it much easier<br />
+for core developers to determine where in the parrot core the segfault<br />
+is occurring. In general, the smaller the PIR, the easier it is to<br />
+track.<br />
+<br />
+Also, if you can duplicate the error with pure PIR, that can help rule<br />
+out a segfault in any C code in languages/perl6.<br />
+<br />
+Finally, the smaller the test case, the more likely it is to get added<br />
+as a regression test.<br />
+<br />
+Regards.<br />
+<br />
+<br />
+<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-464086" href="/rt3/Ticket/Display.html?id=58338#txn-464086">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Aug&nbsp;27&nbsp;20:35:32&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/464086/214894/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;m not knowledgeable enough to brave the parrot debugger &#40;yet&#41; nor do I know how to make <br />
+a standalone PIR for this program &#40;yet&#41;, so I tested a few variants of this program, hoping <br />
+that by changing aspects of the program, the behavior would change and this would trigger <br />
+an aha moment.  It was a little disappointing, but here is a summary of the results &#40;the <br />
+number shown is the last prime displayed before crashing&#41;.  Empirical conclusions are at the <br />
+end.<br />
+<br />
+original - 8933<br />
+<br />
+nosqrt - 8933 &#40;derived from original&#41; - removed the sqrt function, used $n for the limit.  <br />
+This vastly increases the number of modulo tests and inner loop iterations, though it <br />
+eliminates the sqrt function call.<br />
+<br />
+eventests - 8933 &#40;derived from original&#41; - tests even numbers in inner loop as well as odd <br />
+numbers -- doubles the number of inner loop iterations.<br />
+<br />
+nosubs - 3319 &#40;derived from eventests&#41; - flattened the subroutine call; like eventests it tests <br />
+all numbers and not just odd ones &#40;an accident&#41;; because I couldn&#39;t get next working, it <br />
+stores state in a new lexically scoped variable, $prime.  This results in the inner loop not <br />
+exiting early, probably tripling the number of inner loop iterations.<br />
+<br />
+nosub_rstlim - 4463 &#40;derived from nosubs&#41; - eliminates the $prime variable and changes <br />
+limit instead so that the loop exits the way it does in the original.<br />
+<br />
+more_mys - 4463 &#40;derived from nosub_rstlim&#41; - adds two additional lexically scoped <br />
+variables each of which contains a derived calculation that is not used.<br />
+<br />
+outer_my - 4463 &#40;derived from nosub_rstlim&#41; - moves the scope of the limit variable to <br />
+outside the outer loop from inside the outer loop.<br />
+<br />
+noevens - 4463 &#40;derived from outer_my&#41; - skips primality calculation for all even numbers <br />
+&#40;thus it doesn&#39;t output 2 like it should&#41;<br />
+<br />
+Conclusions: use of sqrt&#40;&#41; has no effect; extra inner loop iterations don&#39;t matter unless the <br />
+loop is not exited early; subroutine calls limit the problem &#40;i.e. one loop inside the routine <br />
+and one outside is better than two outside&#41;.<br />
+<br />
+All results are based on r30583.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-464822" href="/rt3/Ticket/Display.html?id=58338#txn-464822">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;30&nbsp;08:25:17&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/464822/215300/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 969b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I randomized the selection of numbers to check for primality, and for a variety of different <br />
+maximum numbers counted the number of primes that it found before crashing.  This <br />
+number roughly parallels pi&#40;x&#41;/x/10000, which is a measure of the density of primes<br />
+<br />
+<div class="message-stanza-depth-1">
+# for reference, simple loop finds the first 1133 primes<br />
+# 4469 primes found, when max prime is &lt;= 10; pi&#40;10&#41;/10 = 0.4;<br />
+# 2497 primes found, when max prime is &lt;= 100; pi&#40;100&#41;/100 = 0.25;<br />
+# 1520 primes found, when max prime is &lt;= 1000; pi&#40;1000&#41;/1000 = 0.17;<br />
+# 1111 primes found, when max prime is &lt;= 10000; pi&#40;10000&#41;/10000 = 0.12;<br />
+# 871 primes found, when max prime is &lt;= 100000; pi&#40;100000&#41;/100000 = 0.096;<br />
+# 690 primes found, when max prime is &lt;= 1000000; pi&#40;1000000&#41;/100000 = 0.078;<br />
+</div>
+<br />
+The number found, is of course random to some extent, because the numbers to test are <br />
+random.  But this indicates that the length of time is proportional to the outer loop, not the <br />
+inner loop, I think.<br />
+<br />
+Stephen Simmons<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/464822/215306/random_primes.p6">Download random_primes.p6</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+sub prime&#40;Int $n&#41; {<br />
+        return 0 if $n % 2 == 0;<br />
+        my $limit = sqrt&#40;$n&#41;;<br />
+        loop &#40;my $i=3; $i&lt;$limit; $i+=2&#41; {<br />
+                if $n % $i == 0 { return 0; }<br />
+        }<br />
+        return 1;<br />
+}<br />
+<br />
+my $max_size=1000000;<br />
+my $prime_cnt=0;<br />
+my $said_already=0;<br />
+loop&#40;my $i=0; $i&lt;10000; $i++&#41; {<br />
+        my $n = int&#40;rand*$max_size&#41;;<br />
+        if prime&#40;$n&#41; { $prime_cnt++; say $prime_cnt; }<br />
+}<br />
+<br />
+<div class="message-stanza-depth-1">
+# for reference, simple loop finds the first 1133 primes<br />
+# 3580 primes found, when max prime is &lt;= 22;      #<br />
+# 2260 primes found, when max prime is &lt;= 202;<br />
+# 1425 primes found, when max prime is &lt;= 2002;<br />
+# 1010 primes found, when max prime is &lt;= 20002;<br />
+# 834 primes found, when max prime is &lt;= 200002;<br />
+# 709 primes found, when max prime is &lt;= 1000002;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+# 4469 primes found, when max prime is &lt;= 10; pi&#40;10&#41;/10 = 0.4;<br />
+# 2497 primes found, when max prime is &lt;= 100; pi&#40;100&#41;/100 = 0.25;<br />
+# 1520 primes found, when max prime is &lt;= 1000; pi&#40;1000&#41;/1000 = 0.17;<br />
+# 1111 primes found, when max prime is &lt;= 10000; pi&#40;10000&#41;/10000 = 0.12;<br />
+# 871 primes found, when max prime is &lt;= 100000; pi&#40;100000&#41;/100000 = 0.096;<br />
+# 690 primes found, when max prime is &lt;= 1000000; pi&#40;1000000&#41;/100000 = 0.078;<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472258" href="/rt3/Ticket/Display.html?id=58338#txn-472258">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;16&nbsp;21:35:44&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/472258/219654/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 170b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+As of perl6 r31194, this program now successfully finds primes through 99991 without <br />
+segfaulting, though it is still &gt; 100x slower than perl5.<br />
+<br />
+Thanks,<br />
+Stephen Simmons<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-472260" href="/rt3/Ticket/Display.html?id=58338#txn-472260">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;16&nbsp;21:35:44&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.005397</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

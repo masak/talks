@@ -1,0 +1,1319 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59596: [PATCH] Proper implementation of &#39;succ&#39;/&#39;pred&#39; handling.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59596">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59596: [PATCH] Proper implementation of &#39;succ&#39;/&#39;pred&#39; handling.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59596">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59596</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59596">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59596">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+succ_pred.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492064/229974/succ_pred.patch">
+Thu Nov 06 22:05:42 2008 (1.9k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+succ_pred3.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492376/230172/succ_pred3.patch">
+Fri Nov 07 17:47:48 2008 (1.6k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+succ_pred2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492298/230126/succ_pred2.patch">
+Fri Nov 07 14:28:28 2008 (1.6k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59596">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-479366" href="/rt3/Ticket/Display.html?id=59596#txn-479366">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Oct&nbsp;03&nbsp;07:39:35&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Declaring a succ method in a class does not affect ++ in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 3 Oct 2008 16:39:14 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/479366/223220/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 382b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r31589 does not follow S03 in deferring ++ to a user-defined<br />
+.succ method.<br />
+<br />
+$ ./perl6 -e &#39;class A { method succ { say &#34;OH HAI&#34; } }; my $a = A.new; $a++&#39;<br />
+increment&#40;&#41; not implemented in class &#39;A&#39;<br />
+[...]<br />
+Segmentation fault<br />
+<br />
+This is mostly a question of a TODO, but it&#39;s also interesting to note<br />
+that this error produces another segmentation fault due to a double<br />
+free in Parrot.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-482662" href="/rt3/Ticket/Display.html?id=59596#txn-482662">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Oct&nbsp;11&nbsp;05:44:22&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/482662/224686/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 251b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Oct 03 07:39:35 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo r31589 does not follow S03 in deferring ++ to a user-defined<br />
+&gt; .succ method.<br />
+</div>
+<br />
+Fixed as r31877. Also added four tests to<br />
+t/spec/S03-operators/autoincrement.t which succeed on the implemented<br />
+behaviour.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-482666" href="/rt3/Ticket/Display.html?id=59596#txn-482666">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Oct&nbsp;11&nbsp;05:44:26&nbsp;2008</td>
+    <td class="description">
+      masak -  Status changed from &#39;new&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486954" href="/rt3/Ticket/Display.html?id=59596#txn-486954">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;15:05:34&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486960" href="/rt3/Ticket/Display.html?id=59596#txn-486960">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;15:07:56&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486960/227128/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 664b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Reopening ticket because the patch applied isn&#39;t a correct implementation.<br />
+<br />
+What should happen instead is that we<br />
+define the &#39;increment&#39; and &#39;decrement&#39; vtable functions in Object<br />
+to make use of the &#39;.succ&#39; and &#39;.pred&#39; methods.<br />
+<br />
+Also, this patch relies on &#39;succ&#39; and &#39;pred&#39; being inplace<br />
+modifiers, but they are not defined that way in the Synopses.<br />
+$foo.succ should return the successor to $foo without modifying $foo.<br />
+<br />
+Lastly, I&#39;m not a fan of the exception handling approach being<br />
+used with find_method here.  If the method doesn&#39;t exist,<br />
+that&#39;s the exception that should be thrown, not some other<br />
+exception or oddity that might occur from the &#39;inc&#39; opcode.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492064" href="/rt3/Ticket/Display.html?id=59596#txn-492064">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;22:05:42&nbsp;2008</td>
+    <td class="description">
+      bacek - Ticket 60390:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Proper implementation of &#39;succ&#39;/&#39;pred&#39; handling.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 07 Nov 2008 17:05:08 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492064/229972/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 80b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+There is MMD based implementation of &#39;succ&#39;/&#39;pred&#39; handling.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492064/229974/succ_pred.patch">Download succ_pred.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit a47517ca10be429faabf3383b453c9c93262ab04<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at com.au&gt;<br />
+Date:   Fri Nov 7 15:55:49 2008 +1100<br />
+<br />
+    Revert &#34;[rakudo] prefix/postfix ++ and -- now delegate to succ and pred, respectively&#34;<br />
+    <br />
+    This reverts commit 48058ab367d5086e98d63edea4ce1a25c784ba25.<br />
+    <br />
+    Conflicts:<br />
+<br />
+diff --git a/languages/perl6/src/builtins/op.pir b/languages/perl6/src/builtins/op.pir<br />
+index e256b6a..92c4eb7 100644<br />
+--- a/languages/perl6/src/builtins/op.pir<br />
++++ b/languages/perl6/src/builtins/op.pir<br />
+@@ -31,47 +31,28 @@ src/builtins/op.pir - Perl6 builtin operators<br />
+ .sub &#39;postfix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:++&#39;&#40;a&#41;<br />
++    inc a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;postfix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:--&#39;&#40;a&#41;<br />
++    dec a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_inc<br />
+-    $P1 = find_method a, &#34;succ&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_inc:<br />
+-    pop_eh<br />
+     inc a<br />
+-<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_dec<br />
+-    $P1 = find_method a, &#34;pred&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_dec:<br />
+-    pop_eh<br />
+     dec a<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+diff --git a/languages/perl6/src/classes/Object.pir b/languages/perl6/src/classes/Object.pir<br />
+index fea74bc..6a57c0c 100644<br />
+--- a/languages/perl6/src/classes/Object.pir<br />
++++ b/languages/perl6/src/classes/Object.pir<br />
+@@ -167,6 +167,29 @@ Return a string representation of the object<br />
+ .end<br />
+ <br />
+ <br />
++=item increment<br />
++<br />
++Override increment in Objects to use &#39;succ&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;increment&#39;&#41;<br />
++    self = self.&#39;succ&#39;&#40;&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++=item decrement<br />
++<br />
++Override decrement in Objects to use &#39;pred&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;decrement&#39;&#41;<br />
++    self = self.&#39;pred&#39;&#40;&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++<br />
+ =item new&#40;&#41;<br />
+ <br />
+ Create a new object having the same class as the invocant.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492070" href="/rt3/Ticket/Display.html?id=59596#txn-492070">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;22:05:44&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60390:  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492298" href="/rt3/Ticket/Display.html?id=59596#txn-492298">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:28:28&nbsp;2008</td>
+    <td class="description">
+      bacek - Ticket 60390:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492298/230120/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 61b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+Revised version after pmichaud&#39;s comments.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492298/230126/succ_pred2.patch">Download succ_pred2.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/builtins/op.pir b/languages/perl6/src/builtins/op.pir<br />
+index e256b6a..92c4eb7 100644<br />
+--- a/languages/perl6/src/builtins/op.pir<br />
++++ b/languages/perl6/src/builtins/op.pir<br />
+@@ -31,47 +31,28 @@ src/builtins/op.pir - Perl6 builtin operators<br />
+ .sub &#39;postfix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:++&#39;&#40;a&#41;<br />
++    inc a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;postfix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:--&#39;&#40;a&#41;<br />
++    dec a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_inc<br />
+-    $P1 = find_method a, &#34;succ&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_inc:<br />
+-    pop_eh<br />
+     inc a<br />
+-<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_dec<br />
+-    $P1 = find_method a, &#34;pred&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_dec:<br />
+-    pop_eh<br />
+     dec a<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+diff --git a/languages/perl6/src/classes/Object.pir b/languages/perl6/src/classes/Object.pir<br />
+index b2724b8..4b09b56 100644<br />
+--- a/languages/perl6/src/classes/Object.pir<br />
++++ b/languages/perl6/src/classes/Object.pir<br />
+@@ -145,6 +145,31 @@ Return true if the object is defined.<br />
+ .end<br />
+ <br />
+ <br />
++=item increment<br />
++<br />
++Override increment in Objects to use &#39;succ&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;increment&#39;&#41;<br />
++    $P0 = self.&#39;succ&#39;&#40;&#41;<br />
++    self.&#39;infix:=&#39;&#40;$P0&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++=item decrement<br />
++<br />
++Override decrement in Objects to use &#39;pred&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;decrement&#39;&#41;<br />
++    $P0 = self.&#39;pred&#39;&#40;&#41;<br />
++    self.&#39;infix:=&#39;&#40;$P0&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++<br />
+ =item new&#40;&#41;<br />
+ <br />
+ Create a new object having the same class as the invocant.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492308" href="/rt3/Ticket/Display.html?id=59596#txn-492308">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:28:30&nbsp;2008</td>
+    <td class="description">
+      bacek - Ticket 60390:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492320" href="/rt3/Ticket/Display.html?id=59596#txn-492320">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:35:58&nbsp;2008</td>
+    <td class="description">
+      bacek - Ticket 60390:  Merged into ticket #59596
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492322" href="/rt3/Ticket/Display.html?id=59596#txn-492322">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:35:58&nbsp;2008</td>
+    <td class="description">
+      bacek -  Merged into ticket #59596
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492324" href="/rt3/Ticket/Display.html?id=59596#txn-492324">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:35:59&nbsp;2008</td>
+    <td class="description">
+      bacek -  Subject changed from &#39;Declaring a succ method in a class does not affect ++ in Rakudo&#39; to &#39;[PATCH] Proper implementation of &#39;succ&#39;/&#39;pred&#39; handling.&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492376" href="/rt3/Ticket/Display.html?id=59596#txn-492376">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;17:47:48&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492376/230166/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 14b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+And again...<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492376/230172/succ_pred3.patch">Download succ_pred3.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/builtins/op.pir b/languages/perl6/src/builtins/op.pir<br />
+index e256b6a..92c4eb7 100644<br />
+--- a/languages/perl6/src/builtins/op.pir<br />
++++ b/languages/perl6/src/builtins/op.pir<br />
+@@ -31,47 +31,28 @@ src/builtins/op.pir - Perl6 builtin operators<br />
+ .sub &#39;postfix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:++&#39;&#40;a&#41;<br />
++    inc a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;postfix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+     $P0 = clone a<br />
+-    &#39;prefix:--&#39;&#40;a&#41;<br />
++    dec a<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:++&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_inc<br />
+-    $P1 = find_method a, &#34;succ&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_inc:<br />
+-    pop_eh<br />
+     inc a<br />
+-<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+ <br />
+ .sub &#39;prefix:--&#39; :multi&#40;_&#41;<br />
+     .param pmc a<br />
+-    push_eh do_dec<br />
+-    $P1 = find_method a, &#34;pred&#34;<br />
+-    pop_eh<br />
+-    a.$P1&#40;&#41;<br />
+-    goto done<br />
+-<br />
+-  do_dec:<br />
+-    pop_eh<br />
+     dec a<br />
+-  done:<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
+diff --git a/languages/perl6/src/classes/Object.pir b/languages/perl6/src/classes/Object.pir<br />
+index b2724b8..4b09b56 100644<br />
+--- a/languages/perl6/src/classes/Object.pir<br />
++++ b/languages/perl6/src/classes/Object.pir<br />
+@@ -145,6 +145,31 @@ Return true if the object is defined.<br />
+ .end<br />
+ <br />
+ <br />
++=item increment<br />
++<br />
++Override increment in Objects to use &#39;succ&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;increment&#39;&#41;<br />
++    $P0 = self.&#39;succ&#39;&#40;&#41;<br />
++    &#39;infix:=&#39;&#40;self, $P0&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++=item decrement<br />
++<br />
++Override decrement in Objects to use &#39;pred&#39; method.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;decrement&#39;&#41;<br />
++    $P0 = self.&#39;pred&#39;&#40;&#41;<br />
++    &#39;infix:=&#39;&#40;self, $P0&#41;<br />
++    .return&#40;self&#41;<br />
++.end<br />
++<br />
++<br />
+ =item new&#40;&#41;<br />
+ <br />
+ Create a new object having the same class as the invocant.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493096" href="/rt3/Ticket/Display.html?id=59596#txn-493096">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;12:12:52&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493096/230620/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 95b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Nov 07 17:47:48 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; And again...<br />
+&gt; <br />
+</div>
+<br />
+Applied as r32473, thanks.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493100" href="/rt3/Ticket/Display.html?id=59596#txn-493100">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;12:12:56&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.601541</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

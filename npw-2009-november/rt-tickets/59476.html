@@ -1,0 +1,653 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59476: [TODO] Refactor Str.capitalize.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59476">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59476: [TODO] Refactor Str.capitalize.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59476">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59476</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59476">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59476">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Todo    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59476">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477876" href="/rt3/Ticket/Display.html?id=59476#txn-477876">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;30&nbsp;05:01:31&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] Refactor Str.capitalize.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 30 Sep 2008 21:59:18 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477876/222450/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 759b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+There is suggestion from Pm for Str.capitalize<br />
+<br />
+<div class="message-stanza-depth-1">
+ &gt; +<br />
+<div class="message-stanza-depth-2">
+ &gt; &gt; +=item capitalize<br />
+ &gt; &gt; + [...]<br />
+ &gt; &gt; +=cut<br />
+ &gt; &gt; +<br />
+ &gt; &gt; +    .local int pos, is_ws, is_lc<br />
+ &gt; &gt; +    pos = 0<br />
+ &gt; &gt; +    goto first_char<br />
+ &gt; &gt; +  next_grapheme:<br />
+ &gt; &gt; +    if pos == len goto done<br />
+ &gt; &gt; +    is_ws = is_cclass .CCLASS_WHITESPACE, tmps, pos<br />
+ &gt; &gt; +    if is_ws goto ws<br />
+ &gt; &gt; +  advance:<br />
+ &gt; &gt; +    pos += 1<br />
+ &gt; &gt; +    goto next_grapheme<br />
+ &gt; &gt; +  ws:<br />
+ &gt; &gt; +    pos += 1<br />
+ &gt; &gt; +  first_char:<br />
+ &gt; &gt; +    is_lc = is_cclass .CCLASS_LOWERCASE, tmps, pos<br />
+ &gt; &gt; +    unless is_lc goto advance<br />
+ &gt; &gt; ...<br />
+</div>
+</div>
+<br />
+This section of code would be much simpler &#40;and more efficient&#41;<br />
+by using the C&lt;find_cclass&gt; and C&lt;find_not_cclass opcodes&gt; instead of<br />
+individually examining each character one-at-a-time.<br />
+<br />
+<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477882" href="/rt3/Ticket/Display.html?id=59476#txn-477882">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;30&nbsp;05:01:34&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Todo added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478500" href="/rt3/Ticket/Display.html?id=59476#txn-478500">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;11:25:25&nbsp;2008</td>
+    <td class="description">
+      ahmadz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478500/222716/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+<br />
+Here is a re-factored version that passes t/spec tests.<br />
+To test, please use:<br />
+./perl6 t/spec/S29-str/capitalize.rakudo<br />
+<br />
+./ahmadz &#38;<br />
+<br />
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 31549&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -42,7 +42,6 @@<br />
+<br />
+ .sub &#39;capitalize&#39; :method :multi&#40;_&#41;<br />
+     .local string tmps<br />
+-    .local string fchr<br />
+     .local pmc retv<br />
+     .local int len<br />
+<br />
+@@ -54,27 +53,21 @@<br />
+<br />
+     downcase tmps<br />
+<br />
+-    .local int pos, is_ws, is_lc<br />
++    .local int pos<br />
++    .local string s1<br />
+     pos = 0<br />
+-    goto first_char<br />
+-  next_grapheme:<br />
+-    if pos == len goto done<br />
+-    is_ws = is_cclass .CCLASS_WHITESPACE, tmps, pos<br />
+-    if is_ws goto ws<br />
+-  advance:<br />
+-    pos += 1<br />
+-    goto next_grapheme<br />
+-  ws:<br />
+-    pos += 1<br />
+-  first_char:<br />
+-    is_lc = is_cclass .CCLASS_LOWERCASE, tmps, pos<br />
+-    unless is_lc goto advance<br />
+-    $S1 = substr tmps, pos, 1<br />
+-    upcase $S1<br />
+-    substr tmps, pos, 1, $S1<br />
+-    ## the length may have changed after replacement, so measure it <br />
+again<br />
++  next_word:<br />
++    pos = find_cclass .CCLASS_LOWERCASE, tmps, pos, len<br />
++    s1 = substr tmps, pos, 1<br />
++    upcase s1<br />
++    substr tmps, pos, 1, s1<br />
+     len = length tmps<br />
+-    goto advance<br />
++    pos+=1<br />
++    if pos == len goto done<br />
++    pos = find_not_cclass .CCLASS_LOWERCASE, tmps, pos, len<br />
++    if pos == len goto done<br />
++    goto next_word<br />
++<br />
+   done:<br />
+     retv = tmps<br />
+     .return &#40;retv&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478504" href="/rt3/Ticket/Display.html?id=59476#txn-478504">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;11:25:26&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478534" href="/rt3/Ticket/Display.html?id=59476#txn-478534">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;13:53:29&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478534/222736/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 163b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Oct 01 11:25:25 2008, ahmadz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi,<br />
+&gt; <br />
+&gt; Here is a re-factored version that passes t/spec tests.<br />
+</div>
+<br />
+Thanks, applied as r22479 &#40;and closing ticket now&#41;.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478538" href="/rt3/Ticket/Display.html?id=59476#txn-478538">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;13:53:31&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.474807</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

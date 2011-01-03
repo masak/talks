@@ -1,0 +1,722 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#53016: [PATCH] hash&#40;&#41; composer function as perl S04</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D53016">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#53016: [PATCH] hash&#40;&#41; composer function as perl S04</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=53016">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">53016</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=53016">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cognominal
+&lt;cognominal [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=53016">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=53016">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-388192" href="/rt3/Ticket/Display.html?id=53016#txn-388192">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;17&nbsp;09:11:03&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] hash&#40;&#41; composer function as perl S04</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 17 Apr 2008 18:10:40 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stéphane Payrard&#34; &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/388192/176002/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+rakudo/hash_composer.t                        # new file and folder<br />
+languages/perl6/config/makefiles/root.in  # add hash.pir to the file<br />
+to be compiler<br />
+languages/perl6/src/builtins/hash.pir       # hash&#40;&#41; implementation<br />
+<br />
+<br />
+<br />
+<br />
+$  diff -u /dev/null languages/perl6/t/rakudo/hash_composer.t<br />
+--- /dev/null   2008-04-17 13:12:21.000000000 +0200<br />
++++ /Users/stef/svn/parrot/payrard/junk/languages/perl6/t/rakudo/hash_composer.t        2008-04-17<br />
+18:00:01.000000000 +0200<br />
+@@ -0,0 +1,19 @@<br />
++use v6-alpha;<br />
++use Test;<br />
++<br />
++plan 1<br />
++<br />
++<br />
++my @a = &#40;1, 2&#41;;<br />
++my %a = &#40;3, 4&#41;;<br />
++my %h = hash&#40; @a, %a, 5, 6&#41;;<br />
++my $s = %h{1} ~ %h{3} ~  %h{5};<br />
++ok $s == &#34;246&#34;, &#34;hash&#40; @a, %a, 5, 6&#41; works&#34;;<br />
++<br />
++# dies_ok is not yet implemented<br />
++<br />
++# dies_ok { my %h = hash&#40;1&#41;; }, &#39;malformed hash composer: odd<br />
+sequence of scalar items at index 0&#39;;<br />
++# dies_ok { &#39;my @a = &#40;1&#41;; hash&#40; @a&#41;&#39; }, &#39;malformed hash composer:<br />
+list of odd size at index 0&#39;;       #  triggers &#34;list of odd size<br />
+why????&#34;<br />
++# dies_ok { &#39;my @a = &#40; 1, 2, 3&#41;; hash&#40; @a&#41;&#39; }, &#39;malformed hash<br />
+composer: list of odd size at index 0&#39;;<br />
++<br />
++<br />
+$<br />
+$ svn diff languages/perl6/config/makefiles/root.in<br />
+Index: languages/perl6/config/makefiles/root.in<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/config/makefiles/root.in    &#40;revision 27018&#41;<br />
++++ languages/perl6/config/makefiles/root.in    &#40;working copy&#41;<br />
+@@ -60,6 +60,7 @@<br />
+   src/builtins/cmp.pir \<br />
+   src/builtins/control.pir \<br />
+   src/builtins/guts.pir \<br />
++  src/builtins/hash.pir \<br />
+   src/builtins/io.pir \<br />
+   src/builtins/match.pir \<br />
+   src/builtins/math.pir \<br />
+$ diff -u  /dev/null languages/perl6/src/builtins/hash.pir<br />
+--- /dev/null   2008-04-17 13:12:21.000000000 +0200<br />
++++ languages/perl6/src/builtins/hash.pir       2008-04-17 17:42:53.000000000 +0200<br />
+@@ -0,0 +1,95 @@<br />
++# Copyright &#40;C&#41; 2008, The Perl Foundation.<br />
++<br />
++<br />
++.include &#34;iterator.pasm&#34;<br />
++.namespace<br />
++<br />
++=pod<br />
++<br />
++The C&lt;hash&gt; list operator is a hash composer as defined in S04<br />
++It creates a Hash and  iterates on the list to fill the hash<br />
++<br />
++=cut<br />
++<br />
++.sub hash<br />
++.param pmc list :slurpy<br />
++.local pmc aiter   # list iterator<br />
++.local pmc item    # list item<br />
++.local pmc iiter   # item iterator<br />
++.local pmc hash    # hash to be returned<br />
++.local pmc key, value<br />
++.local int  bool, size, position<br />
++.local string errstr, s<br />
++    hash = new  &#39;Hash&#39;<br />
++    position = -1<br />
++    aiter = new  &#39;Iterator&#39;, list<br />
++    aiter  = .ITERATE_FROM_START<br />
++nextitem:  # iterate on the list<br />
++    unless aiter goto done<br />
++    item = shift aiter<br />
++    position = position + 1<br />
++    bool = isa item, &#39;Pair&#39;<br />
++    unless bool  goto notpair<br />
++    # the list item is a Pair<br />
++    key = item.&#39;key&#39;&#40;&#41;<br />
++    value = item.&#39;value&#39;&#40;&#41;<br />
++    hash[key] = value<br />
++    goto nextitem<br />
++notpair:<br />
++    bool =  does item, &#39;hash&#39;<br />
++    unless bool goto nothash<br />
++   # the list item is a hash. Iterate on it.<br />
++    iiter = new  &#39;Iterator&#39;, item<br />
++iterhash:<br />
++    iiter  = .ITERATE_FROM_START<br />
++    unless iiter goto nextitem<br />
++    key = shift iiter<br />
++    value = item[key]<br />
++    hash[key] = value<br />
++   goto  iterhash<br />
++nothash:       <br />
++   bool = does item, &#39;array&#39;<br />
++   unless bool goto notarray<br />
++   # The list item is an array. Checks its size is even  then iterate.<br />
++   size = item<br />
++   size = size % 2<br />
++   if size goto arrayerr<br />
++   iiter =  new Iterator, item<br />
++   iiter  = .ITERATE_FROM_START<br />
++iterarray:<br />
++    unless iiter goto nextitem<br />
++    key = shift iiter<br />
++    value = shift iiter<br />
++    hash[key] = value<br />
++    goto iterarray<br />
++notarray:<br />
++    # the list item &#39;does&#39; neither list or hash. It must be scalar<br />
++    # ## is there a scalar role to check?<br />
++    unless  aiter goto nrscalerr<br />
++    position = position + 1<br />
++    value = shift aiter<br />
++    hash[item] = value<br />
++    goto nextitem<br />
++nrscalerr:<br />
++    errstr = &#34;odd sequence of scalar items&#34;<br />
++    goto err<br />
++arrayerr:<br />
++    errstr = &#34;list of odd size&#34;<br />
++err:<br />
++    errstr = concat &#34;malformed hash composer: &#34;,  errstr<br />
++    errstr = concat errstr, &#34; at index &#34;<br />
++    s = position<br />
++    errstr = concat errstr, s<br />
++    die errstr<br />
++done:  <br />
++    .return &#40;hash&#41;<br />
++<br />
++.end<br />
++<br />
++<br />
++# Local Variables:<br />
++#   mode: pir<br />
++#   cperl-indent-level: 4<br />
++#   fill-column: 100<br />
++# End:<br />
++# vim: expandtab shiftwidth=4:<br />
+$<br />
+<br />
+-- <br />
+cognominal stef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-388198" href="/rt3/Ticket/Display.html?id=53016#txn-388198">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;17&nbsp;09:11:08&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-390088" href="/rt3/Ticket/Display.html?id=53016#txn-390088">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;21&nbsp;09:31:18&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-406446" href="/rt3/Ticket/Display.html?id=53016#txn-406446">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;May&nbsp;16&nbsp;17:26:14&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/406446/184432/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 352b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; +   # the list item is a hash. Iterate on it.<br />
+&gt; +    iiter = new  &#39;Iterator&#39;, item<br />
+&gt; +iterhash:<br />
+&gt; +    iiter  = .ITERATE_FROM_START<br />
+&gt; +    unless iiter goto nextitem<br />
+&gt; +    key = shift iiter<br />
+&gt; +    value = item[key]<br />
+&gt; +    hash[key] = value<br />
+&gt; +   goto  iterhash<br />
+</div>
+<br />
+Looks like a typo for me. Is it should be<br />
+<br />
+    iiter = .ITERATE_FROM_START<br />
+iterhash:<br />
+<br />
+?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415942" href="/rt3/Ticket/Display.html?id=53016#txn-415942">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;29&nbsp;13:27:27&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415942/189126/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 63b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hash composer and hash assignment added in r27928.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415944" href="/rt3/Ticket/Display.html?id=53016#txn-415944">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;29&nbsp;13:27:28&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;new&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.360547</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg2994">
+  <defs
+     id="defs2996" />
+  <g
+     id="layer1">
+    <text
+       x="87.08963"
+       y="150.16185"
+       id="text3005"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="87.08963"
+         y="150.16185"
+         id="tspan3007">stack</tspan></text>
+    <text
+       x="480.0509"
+       y="150.16185"
+       id="text3037"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="480.0509"
+         y="150.16185"
+         id="tspan3039">current token</tspan></text>
+    <g
+       transform="translate(0,3.0517578e-5)"
+       id="g3453">
+      <text
+         x="222.54219"
+         y="214.1669"
+         id="text3041"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="222.54219"
+           y="214.1669"
+           id="tspan3043">close</tspan></text>
+      <text
+         x="349.54684"
+         y="214.1669"
+         id="text3045"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="349.54684"
+           y="214.1669"
+           id="tspan3047">infix</tspan></text>
+      <text
+         x="478.88358"
+         y="214.1669"
+         id="text3049"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="478.88358"
+           y="214.1669"
+           id="tspan3051">prefix</tspan></text>
+      <text
+         x="607.28271"
+         y="214.1669"
+         id="text3053"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="607.28271"
+           y="214.1669"
+           id="tspan3055">postfix</tspan></text>
+      <text
+         x="736.13898"
+         y="214.1669"
+         id="text3057"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="736.13898"
+           y="214.1669"
+           id="tspan3059">circfix</tspan></text>
+      <text
+         x="864.08112"
+         y="214.1669"
+         id="text3061"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="864.08112"
+           y="214.1669"
+           id="tspan3063">postcir</tspan></text>
+    </g>
+    <path
+       d="m 205.41157,642.87719 0,-407.84617 768.06065,0"
+       id="path3122"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="M 205.41157,235.03102 151.82594,72.78565"
+       id="path3124"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       transform="translate(0,5.9521468)"
+       id="g3341">
+      <text
+         x="87.827911"
+         y="284.15118"
+         id="text3009"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.827911"
+           y="284.15118"
+           id="tspan3011">empty</tspan></text>
+      <text
+         x="251.18282"
+         y="284.15118"
+         id="text3126"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="251.18282"
+           y="284.15118"
+           id="tspan3128">E</tspan></text>
+      <text
+         x="378.91989"
+         y="284.15118"
+         id="text3130"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.91989"
+           y="284.15118"
+           id="tspan3132">S</tspan></text>
+      <text
+         x="514.98315"
+         y="284.15118"
+         id="text3134"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="284.15118"
+           id="tspan3136">S</tspan></text>
+      <text
+         x="650.57764"
+         y="284.15118"
+         id="text3138"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.57764"
+           y="284.15118"
+           id="tspan3140">S</tspan></text>
+      <text
+         x="779.20538"
+         y="284.15118"
+         id="text3142"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="284.15118"
+           id="tspan3144">S</tspan></text>
+      <text
+         x="907.25299"
+         y="284.15118"
+         id="text3146"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="907.25299"
+           y="284.15118"
+           id="tspan3148">S</tspan></text>
+    </g>
+    <g
+       transform="translate(0,21.629973)"
+       id="g3357">
+      <text
+         x="87.757599"
+         y="326.54788"
+         id="text3033"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.757599"
+           y="326.54788"
+           id="tspan3035">close</tspan></text>
+      <text
+         x="250.39766"
+         y="326.54788"
+         id="text3150"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="250.39766"
+           y="326.54788"
+           id="tspan3152">R</tspan></text>
+      <text
+         x="378.52145"
+         y="326.54788"
+         id="text3154"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.52145"
+           y="326.54788"
+           id="tspan3156">P</tspan></text>
+      <text
+         x="514.98315"
+         y="326.54788"
+         id="text3158"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="326.54788"
+           id="tspan3160">S</tspan></text>
+      <text
+         x="650.1792"
+         y="326.54788"
+         id="text3162"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.1792"
+           y="326.54788"
+           id="tspan3164">P</tspan></text>
+      <text
+         x="906.85455"
+         y="326.54788"
+         id="text3170"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="906.85455"
+           y="326.54788"
+           id="tspan3172">P</tspan></text>
+      <text
+         x="779.20538"
+         y="326.54788"
+         id="text3174"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="326.54788"
+           id="tspan3176">X</tspan></text>
+    </g>
+    <g
+       transform="translate(0,19.374419)"
+       id="g3373">
+      <text
+         x="86.363068"
+         y="382.36624"
+         id="text3013"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="86.363068"
+           y="382.36624"
+           id="tspan3015">infix</tspan></text>
+      <text
+         x="250.39766"
+         y="382.36624"
+         id="text3178"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="250.39766"
+           y="382.36624"
+           id="tspan3180">R</tspan></text>
+      <text
+         x="363.457"
+         y="382.36624"
+         id="text3182"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="363.457"
+           y="382.36624"
+           id="tspan3184">P/A</tspan></text>
+      <text
+         x="514.98315"
+         y="382.36624"
+         id="text3186"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="382.36624"
+           id="tspan3188">S</tspan></text>
+      <text
+         x="650.1792"
+         y="382.36624"
+         id="text3190"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.1792"
+           y="382.36624"
+           id="tspan3192">P</tspan></text>
+      <text
+         x="779.20538"
+         y="382.36624"
+         id="text3194"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="382.36624"
+           id="tspan3196">S</tspan></text>
+      <text
+         x="906.85455"
+         y="382.36624"
+         id="text3198"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="906.85455"
+           y="382.36624"
+           id="tspan3200">P</tspan></text>
+    </g>
+    <g
+       transform="translate(0,11.88391)"
+       id="g3389">
+      <text
+         x="87.300568"
+         y="443.41956"
+         id="text3017"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.300568"
+           y="443.41956"
+           id="tspan3019">prefix</tspan></text>
+      <text
+         x="250.39766"
+         y="443.41956"
+         id="text3202"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="250.39766"
+           y="443.41956"
+           id="tspan3204">R</tspan></text>
+      <text
+         x="378.52145"
+         y="443.41956"
+         id="text3218"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.52145"
+           y="443.41956"
+           id="tspan3220">P</tspan></text>
+      <text
+         x="514.98315"
+         y="443.41956"
+         id="text3222"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="443.41956"
+           id="tspan3224">S</tspan></text>
+      <text
+         x="650.1792"
+         y="443.41956"
+         id="text3226"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.1792"
+           y="443.41956"
+           id="tspan3228">P</tspan></text>
+      <text
+         x="779.20538"
+         y="443.41956"
+         id="text3230"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="443.41956"
+           id="tspan3232">S</tspan></text>
+      <text
+         x="906.85455"
+         y="443.41956"
+         id="text3234"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="906.85455"
+           y="443.41956"
+           id="tspan3236">P</tspan></text>
+    </g>
+    <g
+       transform="translate(0,19.375029)"
+       id="g3405">
+      <text
+         x="87.300568"
+         y="494.00296"
+         id="text3021"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.300568"
+           y="494.00296"
+           id="tspan3023">postfix</tspan></text>
+      <text
+         x="250.39766"
+         y="494.00296"
+         id="text3206"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="250.39766"
+           y="494.00296"
+           id="tspan3208">R</tspan></text>
+      <text
+         x="378.13474"
+         y="494.00296"
+         id="text3238"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.13474"
+           y="494.00296"
+           id="tspan3240">R</tspan></text>
+      <text
+         x="514.98315"
+         y="494.00296"
+         id="text3242"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="494.00296"
+           id="tspan3244">X</tspan></text>
+      <text
+         x="649.79248"
+         y="494.00296"
+         id="text3246"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="649.79248"
+           y="494.00296"
+           id="tspan3248">R</tspan></text>
+      <text
+         x="779.20538"
+         y="494.00296"
+         id="text3250"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="494.00296"
+           id="tspan3252">S</tspan></text>
+      <text
+         x="907.25299"
+         y="494.00296"
+         id="text3254"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="907.25299"
+           y="494.00296"
+           id="tspan3256">S</tspan></text>
+    </g>
+    <g
+       transform="translate(0,21.631224)"
+       id="g3421">
+      <text
+         x="87.757599"
+         y="549.82129"
+         id="text3025"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.757599"
+           y="549.82129"
+           id="tspan3027">circfix</tspan></text>
+      <text
+         x="251.18282"
+         y="549.82129"
+         id="text3210"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="251.18282"
+           y="549.82129"
+           id="tspan3212">S</tspan></text>
+      <text
+         x="378.91989"
+         y="549.82129"
+         id="text3258"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.91989"
+           y="549.82129"
+           id="tspan3260">S</tspan></text>
+      <text
+         x="514.98315"
+         y="549.82129"
+         id="text3262"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="549.82129"
+           id="tspan3264">S</tspan></text>
+      <text
+         x="650.57764"
+         y="549.82129"
+         id="text3266"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.57764"
+           y="549.82129"
+           id="tspan3268">S</tspan></text>
+      <text
+         x="779.20538"
+         y="549.82129"
+         id="text3270"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="549.82129"
+           id="tspan3272">S</tspan></text>
+      <text
+         x="907.25299"
+         y="549.82129"
+         id="text3274"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="907.25299"
+           y="549.82129"
+           id="tspan3276">S</tspan></text>
+    </g>
+    <g
+       transform="translate(0,17.861876)"
+       id="g3437">
+      <text
+         x="87.300568"
+         y="607.15344"
+         id="text3029"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="87.300568"
+           y="607.15344"
+           id="tspan3031">postcir</tspan></text>
+      <text
+         x="251.18282"
+         y="607.15344"
+         id="text3214"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="251.18282"
+           y="607.15344"
+           id="tspan3216">S</tspan></text>
+      <text
+         x="378.91989"
+         y="607.15344"
+         id="text3278"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.91989"
+           y="607.15344"
+           id="tspan3280">S</tspan></text>
+      <text
+         x="514.98315"
+         y="607.15344"
+         id="text3282"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="514.98315"
+           y="607.15344"
+           id="tspan3284">S</tspan></text>
+      <text
+         x="650.57764"
+         y="607.15344"
+         id="text3286"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="650.57764"
+           y="607.15344"
+           id="tspan3288">S</tspan></text>
+      <text
+         x="779.20538"
+         y="607.15344"
+         id="text3290"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="779.20538"
+           y="607.15344"
+           id="tspan3292">S</tspan></text>
+      <text
+         x="907.25299"
+         y="607.15344"
+         id="text3294"
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="907.25299"
+           y="607.15344"
+           id="tspan3296">S</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1085 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#55594: Modify parser to allow empty semicolon &#39;;&#39; terminated statement</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D55594">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#55594: Modify parser to allow empty semicolon &#39;;&#39; terminated statement</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55594">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">55594</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=55594">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ronaldxs
+&lt;ronaldxs [at] software-path.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55594">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+terminator.t<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/426294/194494/terminator.t">
+Fri Jun 13 12:27:15 2008 (656b) by ronaldxs
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/424080/193322/terminator.t">
+Tue Jun 10 13:07:45 2008 (656b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+empty_stmt_r2.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/426294/194492/empty_stmt_r2.diff">
+Fri Jun 13 12:27:15 2008 (1.4k) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+empty_stmt.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/424080/193320/empty_stmt.diff">
+Tue Jun 10 13:07:45 2008 (963b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=55594">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-424080" href="/rt3/Ticket/Display.html?id=55594#txn-424080">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;10&nbsp;13:07:45&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Modify parser to allow empty semicolon &#39;;&#39; terminated statement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 10 Jun 2008 16:07:23 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/424080/193318/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 807b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Perl 5 allows empty semicolon terminated statements.  perl6 currently <br />
+allows for empty closures but treats a semicolon that follows nothing or <br />
+whitespace as a syntax error.  The attached patch to grammar.pg provides <br />
+a fix for this discrepancy between perl 5 and perl 6.  Also attached is <br />
+an attempt at a test suite for some statement termination cases.<br />
+<br />
+The patch is small and passes &#34;make fulltest&#34; under ubuntu and &#34;make <br />
+spectest&#34;, as well as the parts of &#34;make test&#34; in the perl6 directory, <br />
+under cygwin.  Modifying statementlist this way does not appear to be <br />
+the most elegant solution to the problem but approaches like <br />
+[&lt;statement&gt;?&lt;.eat_terminator&gt; ]* seemed to fail with relatively serious <br />
+errors.<br />
+<br />
+The terminator.t test file is vaguely intended for the <br />
+t/spec/S04-statements/ directory.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/424080/193320/empty_stmt.diff">Download empty_stmt.diff</a>
+<span class="downloadcontenttype">
+[text/plain 963b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/spectest_regression.data<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spectest_regression.data  &#40;revision 28227&#41;<br />
++++ t/spectest_regression.data  &#40;working copy&#41;<br />
+@@ -15,6 +15,7 @@<br />
+ S03-operators/not.t                             # pure<br />
+ S03-operators/relational.t                      # pure<br />
+ S03-operators/true.t                            # pure<br />
++S04-statements/terminator.t                     # pure<br />
+ S04-statements/try.t<br />
+ S04-statements/until.t                          # pure<br />
+ S04-statements/while.t<br />
+Index: src/parser/grammar.pg<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/parser/grammar.pg       &#40;revision 28227&#41;<br />
++++ src/parser/grammar.pg       &#40;working copy&#41;<br />
+@@ -151,8 +151,10 @@<br />
+ <br />
+ <br />
+ rule statementlist {<br />
+-    [&lt;statement&gt;&lt;.eat_terminator&gt; ]*<br />
+-    {*}<br />
++    | [<br />
++        ||   &#39;;&#39;<br />
++        ||   &lt;statement&gt;&lt;.eat_terminator&gt;<br />
++    ]*    {*}    <br />
+ }<br />
+ <br />
+<div class="message-stanza-depth-1">
+ ##  The eat_terminator detects when we&#39;re at a valid<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/424080/193322/terminator.t">Download terminator.t</a>
+<span class="downloadcontenttype">
+[text/plain 656b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+use v6;<br />
+<br />
+use Test;<br />
+<br />
+plan 9;<br />
+<br />
+<div class="message-stanza-depth-1">
+# L&lt;S04/&#34;Statement parsing&#34;/&#34;statement termination&#34;&gt;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+# the &#39;empty statement&#39; case responsible for the creation of this test file<br />
+</div>
+eval_lives_ok&#40;&#39;;&#39;, &#39;empty statement&#39;&#41;;<br />
+<br />
+eval_lives_ok&#40;&#39;my $x = 2&#39;, &#39;simple statement no semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;my $x =<br />
+9&#39;, &#39;simple statement on two lines no semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;my $x = 2;&#39;, &#39;simple statement with semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;{my $x = 2}&#39;, &#39;end of closure terminator&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;{my $x =<br />
+2;}&#39;, &#39;double terminator&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;;my $x = 2;{my $x = 2;;};&#39;, &#39;extra terminators&#39;&#41;;<br />
+<br />
+eval_dies_ok&#40;&#39;{my $x = 2;&#39;, &#39;open closure&#39;&#41;;<br />
+eval_dies_ok&#40;&#39;my $x = &#39;, &#39;incomplete expression&#39;&#41;;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-424410" href="/rt3/Ticket/Display.html?id=55594#txn-424410">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;11&nbsp;07:31:52&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55594] Modify parser to allow empty semicolon &#39;;&#39; terminated statement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 11 Jun 2008 09:31:25 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/424410/193526/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Jun 10, 2008 at 01:07:45PM -0700, Ron Schmidt wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Perl 5 allows empty semicolon terminated statements.  perl6 currently <br />
+&gt; allows for empty closures but treats a semicolon that follows nothing or <br />
+&gt; whitespace as a syntax error.  The attached patch to grammar.pg provides <br />
+&gt; a fix for this discrepancy between perl 5 and perl 6.  Also attached is <br />
+&gt; an attempt at a test suite for some statement termination cases.<br />
+&gt; <br />
+&gt; The patch is small and passes &#34;make fulltest&#34; under ubuntu and &#34;make <br />
+&gt; spectest&#34;, as well as the parts of &#34;make test&#34; in the perl6 directory, <br />
+&gt; under cygwin.  Modifying statementlist this way does not appear to be <br />
+&gt; the most elegant solution to the problem but approaches like <br />
+&gt; [&lt;statement&gt;?&lt;.eat_terminator&gt; ]* seemed to fail with relatively serious <br />
+&gt; errors.<br />
+</div>
+<br />
+Thanks for the patch.  In cases of changes to the grammar, however,<br />
+we&#39;re trying to keep Rakudo&#39;s grammar as closely aligned to STD.pm<br />
+as we can -- here&#39;s STD.pm&#39;s definition for statementlist &#40;line ~570&#41;:<br />
+<br />
+    rule statementlist {<br />
+        :my StrPos $endstmt is context&lt;rw&gt; = -1;<br />
+        [&lt;statement&gt;&lt;.eat_terminator&gt; ]*<br />
+        {*}<br />
+    }<br />
+<br />
+So, since Rakudo&#39;s current grammar pretty much matches what STD.pm <br />
+has here, I&#39;d prefer that we figure out how STD.pm is handling <br />
+empty statements and do that.<br />
+<br />
+Thanks again!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-424414" href="/rt3/Ticket/Display.html?id=55594#txn-424414">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;11&nbsp;07:31:54&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-424432" href="/rt3/Ticket/Display.html?id=55594#txn-424432">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;11&nbsp;07:39:02&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-426290" href="/rt3/Ticket/Display.html?id=55594#txn-426290">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;13&nbsp;12:23:56&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Reference to ticket #55588 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-426294" href="/rt3/Ticket/Display.html?id=55594#txn-426294">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;13&nbsp;12:27:14&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55594] Modify parser to allow empty semicolon &#39;;&#39; terminated statement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 13 Jun 2008 15:26:46 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/426294/194490/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 633b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<div class="message-stanza-depth-1">
+&gt; So, since Rakudo&#39;s current grammar pretty much matches what STD.pm <br />
+&gt; has here, I&#39;d prefer that we figure out how STD.pm is handling <br />
+&gt; empty statements and do that.<br />
+&gt;<br />
+&gt; Thanks again!<br />
+&gt;<br />
+&gt; Pm<br />
+&gt;   <br />
+</div>
+<br />
+As far as I can tell, STD.pm handles this problem in &#34;token statement&#34;, <br />
+as shown below.  If you modify the statement rule in grammar.pg the same <br />
+way and make a small change to actions.pm, parrot/perl6 seems to handle <br />
+empty ; statements fine and passes the small, included, test suite.  The <br />
+revised patches are attached.<br />
+<br />
+token statement {<br />
+    ...<br />
+<div class="message-stanza-depth-1">
+    | &lt;?before &#39;;&#39;&gt; {*}                                         #= null<br />
+</div>
+    ...<br />
+}<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/426294/194492/empty_stmt_r2.diff">Download empty_stmt_r2.diff</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/parser/grammar.pg<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/parser/grammar.pg       &#40;revision 28329&#41;<br />
++++ src/parser/grammar.pg       &#40;working copy&#41;<br />
+@@ -203,6 +203,7 @@<br />
+             {*}                                  #= statement_mod_cond<br />
+<div class="message-stanza-depth-1">
+         || {*}                                   #= expr<br />
+</div>
+         ]<br />
++    | &lt;?before &#39;;&#39;&gt; {*}                          #= null<br />
+ }<br />
+ <br />
+ rule statement_control {<br />
+Index: src/parser/actions.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/parser/actions.pm       &#40;revision 28329&#41;<br />
++++ src/parser/actions.pm       &#40;working copy&#41;<br />
+@@ -111,6 +111,9 @@<br />
+     if $key eq &#39;statement_control&#39; {<br />
+         $past := $&#40; $&lt;statement_control&gt; &#41;;<br />
+     }<br />
++    elsif $key eq &#39;null&#39; {<br />
++        $past := PAST::Stmts.new&#40;&#41;;  # empty stmts seem eliminated by TGE<br />
++    }    <br />
+     else {<br />
+         my $expr := $&#40; $&lt;expr&gt; &#41;;<br />
+         if $expr.WHAT&#40;&#41; eq &#39;Block&#39; &#38;&#38; !$expr.blocktype&#40;&#41; {<br />
+Index: t/spectest_regression.data<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spectest_regression.data  &#40;revision 28329&#41;<br />
++++ t/spectest_regression.data  &#40;working copy&#41;<br />
+@@ -15,6 +15,7 @@<br />
+ S03-operators/not.t                             # pure<br />
+ S03-operators/relational.t                      # pure<br />
+ S03-operators/true.t                            # pure<br />
++S04-statements/terminator.t                     # pure<br />
+ S04-statements/try.t<br />
+ S04-statements/until.t                          # pure<br />
+ S04-statements/while.t<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/426294/194494/terminator.t">Download terminator.t</a>
+<span class="downloadcontenttype">
+[text/plain 656b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+use v6;<br />
+<br />
+use Test;<br />
+<br />
+plan 9;<br />
+<br />
+<div class="message-stanza-depth-1">
+# L&lt;S04/&#34;Statement parsing&#34;/&#34;statement termination&#34;&gt;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+# the &#39;empty statement&#39; case responsible for the creation of this test file<br />
+</div>
+eval_lives_ok&#40;&#39;;&#39;, &#39;empty statement&#39;&#41;;<br />
+<br />
+eval_lives_ok&#40;&#39;my $x = 2&#39;, &#39;simple statement no semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;my $x =<br />
+9&#39;, &#39;simple statement on two lines no semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;my $x = 2;&#39;, &#39;simple statement with semi&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;{my $x = 2}&#39;, &#39;end of closure terminator&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;{my $x =<br />
+2;}&#39;, &#39;double terminator&#39;&#41;;<br />
+eval_lives_ok&#40;&#39;;my $x = 2;{my $x = 2;;};&#39;, &#39;extra terminators&#39;&#41;;<br />
+<br />
+eval_dies_ok&#40;&#39;{my $x = 2;&#39;, &#39;open closure&#39;&#41;;<br />
+eval_dies_ok&#40;&#39;my $x = &#39;, &#39;incomplete expression&#39;&#41;;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-427562" href="/rt3/Ticket/Display.html?id=55594#txn-427562">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;15&nbsp;09:08:54&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Reference to ticket #55588 deleted
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-427590" href="/rt3/Ticket/Display.html?id=55594#txn-427590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;15&nbsp;09:08:56&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Membership in ticket #55588 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-430950" href="/rt3/Ticket/Display.html?id=55594#txn-430950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;19&nbsp;10:44:06&nbsp;2008</td>
+    <td class="description">
+      coke -  Membership in ticket #55588 deleted
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-430958" href="/rt3/Ticket/Display.html?id=55594#txn-430958">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;19&nbsp;10:44:06&nbsp;2008</td>
+    <td class="description">
+      coke -  Reference by ticket #55588 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432168" href="/rt3/Ticket/Display.html?id=55594#txn-432168">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;07:56:15&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432168/197376/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 30b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied in r28597, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432172" href="/rt3/Ticket/Display.html?id=55594#txn-432172">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;07:56:16&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.991045</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

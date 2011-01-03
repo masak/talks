@@ -1,0 +1,8 @@
+cd ../november;
+git log |
+    grep ^Author |
+    perl6n -e 'BEGIN { $*h = {} };
+        $_ ~~ /Author\:\s(\w+[\s+\w+]*)/ or next;
+        ++$*h{$0};
+        END { say .value, "\t", .key for $*h.pairs }' |
+    sort -rn

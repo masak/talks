@@ -1,0 +1,1533 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#54742: [PATCH] Implementation of map for List</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D54742">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#54742: [PATCH] Implementation of map for List</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54742">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">54742</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=54742">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54742">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+map.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/413800/188114/map.diff">
+Mon May 26 23:45:12 2008 (1.3k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/413258/187848/map.diff">
+Mon May 26 06:42:13 2008 (1.3k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/413256/187838/map.diff">
+Mon May 26 06:42:03 2008 (1.3k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/413082/187710/map.diff">
+Sun May 25 18:49:39 2008 (1.4k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/412440/187368/map.diff">
+Sat May 24 17:18:41 2008 (1.2k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/411950/187098/map.diff">
+Fri May 23 15:28:32 2008 (1k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=54742">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-411950" href="/rt3/Ticket/Display.html?id=54742#txn-411950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;May&nbsp;23&nbsp;15:28:32&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Implementation of map for List</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 24 May 2008 08:27:48 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/411950/187096/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 52b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+Reworked implementation of &#39;map&#39;<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/411950/187098/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27774&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -709,6 +709,31 @@<br />
+     .return &#39;list&#39;&#40;arr&#41;<br />
+ .end<br />
+ <br />
++=item map&#40;&#41;<br />
++<br />
++Map.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :method<br />
++    .param pmc expression<br />
++    .local pmc res, elem, block, mapres, iter<br />
++<br />
++    res = new &#39;List&#39;<br />
++    iter = new &#39;Iterator&#39;, self<br />
++  loop:<br />
++    unless iter goto done<br />
++    elem = shift iter<br />
++    newclosure block, expression<br />
++    mapres = block&#40;elem&#41;<br />
++<br />
++    res.&#39;push&#39;&#40;mapres&#41;<br />
++    goto loop<br />
++<br />
++  done:<br />
++    .return&#40;res&#41;<br />
++.end<br />
++<br />
+ =back<br />
+ <br />
+ =head1 Functions<br />
+@@ -768,6 +793,20 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;map&gt;<br />
++<br />
++Operator form of C&lt;map&gt;. Delegates map to passed list.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :multi&#40;_,List&#41;<br />
++    .param pmc expression <br />
++    .param pmc list<br />
++<br />
++    .return list.&#39;map&#39;&#40;expression&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+@@ -1118,8 +1157,9 @@<br />
+     .return list.&#39;uniq&#39;&#40;&#41;<br />
+ .end<br />
+ <br />
+-## TODO: join map reduce sort zip<br />
+ <br />
++## TODO: zip<br />
++<br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-411956" href="/rt3/Ticket/Display.html?id=54742#txn-411956">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;May&nbsp;23&nbsp;15:28:34&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412440" href="/rt3/Ticket/Display.html?id=54742#txn-412440">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;17:18:41&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/412440/187362/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 52b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Reworked version which supports multiple arguments.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/412440/187368/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27780&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -709,6 +709,55 @@<br />
+     .return &#39;list&#39;&#40;arr&#41;<br />
+ .end<br />
+ <br />
++=item map&#40;&#41;<br />
++<br />
++Map.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :method<br />
++    .param pmc expression<br />
++    .local pmc res, elem, block, mapres, iter, args<br />
++       .local int i, arity<br />
++<br />
++       arity = expression.&#39;arity&#39;&#40;&#41;<br />
++<br />
++    res = new &#39;List&#39;<br />
++    iter = new &#39;Iterator&#39;, self<br />
++  loop:<br />
++    unless iter goto done<br />
++<br />
++       # Creates arguments for closure<br />
++       args = new &#39;ResizablePMCArray&#39;<br />
++<br />
++       i = 0<br />
++  args_loop:<br />
++       if i == arity goto invoke<br />
++       unless iter goto create_undef<br />
++<br />
++    elem = shift iter<br />
++       if elem goto push_elem<br />
++  create_undef:        <br />
++       elem = new &#39;Undef&#39;<br />
++<br />
++  push_elem:<br />
++       push args, elem<br />
++       inc i<br />
++       goto args_loop<br />
++<br />
++  invoke:<br />
++    newclosure block, expression<br />
++    mapres = block&#40;args :flat&#41;<br />
++<br />
++    res.&#39;push&#39;&#40;mapres&#41;<br />
++    goto loop<br />
++<br />
++  done:<br />
++    .return&#40;res&#41;<br />
++.end<br />
++<br />
++<br />
++<br />
+ =back<br />
+ <br />
+ =head1 Functions<br />
+@@ -768,6 +817,20 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;map&gt;<br />
++<br />
++Operator form of C&lt;map&gt;. Delegates map to passed list.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :multi&#40;_,List&#41;<br />
++    .param pmc expression <br />
++    .param pmc list<br />
++<br />
++    .return list.&#39;map&#39;&#40;expression&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412442" href="/rt3/Ticket/Display.html?id=54742#txn-412442">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;17:18:42&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412450" href="/rt3/Ticket/Display.html?id=54742#txn-412450">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;21:27:16&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54742] [PATCH] Implementation of map for List</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 24 May 2008 23:26:43 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/412450/187372/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 850b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, May 23, 2008 at 03:28:32PM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hello.<br />
+&gt; <br />
+&gt; Reworked implementation of &#39;map&#39;<br />
+</div>
+<br />
+Excellent.  A couple of notes:<br />
+<br />
+1.  Calling &#39;newclosure&#39; from within &#39;map&#39; is almost certainly wrong.<br />
+    The newclosure op can only be called for closures that have the<br />
+    current sub set as their &#39;:outer&#39;, and that will never be the<br />
+    case here.  Until tonight PCT had some issues with generating<br />
+    newclosures at the right points, but I think that&#39;s now resolved.<br />
+<br />
+    I notice that &#39;grep&#39; is also calling &#39;newclosure&#39;, and we probably<br />
+    need to eliminate it there as well.<br />
+<br />
+2.  The patch file has quite a few tab characters and trailing spaces<br />
+    in it, which causes some of Parrot&#39;s codingstd tests to fail.<br />
+<br />
+If you can resubmit the patch to address the above items, I<br />
+&#40;or someone else&#41; can quickly apply it.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412470" href="/rt3/Ticket/Display.html?id=54742#txn-412470">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;23:13:01&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/412470/187380/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat May 24 21:27:16 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, May 23, 2008 at 03:28:32PM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hello.<br />
+&gt; &gt; <br />
+&gt; &gt; Reworked implementation of &#39;map&#39;<br />
+</div>
+&gt; <br />
+&gt; Excellent.  A couple of notes:<br />
+&gt; <br />
+&gt; 1.  Calling &#39;newclosure&#39; from within &#39;map&#39; is almost certainly wrong.<br />
+&gt;     The newclosure op can only be called for closures that have the<br />
+&gt;     current sub set as their &#39;:outer&#39;, and that will never be the<br />
+&gt;     case here.  Until tonight PCT had some issues with generating<br />
+&gt;     newclosures at the right points, but I think that&#39;s now resolved.<br />
+</div>
+<br />
+Yes. Already updated to latest SVN and checked that without newclosure<br />
+everything works.<br />
+ <br />
+<div class="message-stanza-depth-1">
+&gt;     I notice that &#39;grep&#39; is also calling &#39;newclosure&#39;, and we probably<br />
+&gt;     need to eliminate it there as well.<br />
+</div>
+<br />
+I&#39;ll made same changes for grep, reduce, etc.<br />
+<br />
+May be we should also use Iterators instead of keyed access?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; 2.  The patch file has quite a few tab characters and trailing spaces<br />
+&gt;     in it, which causes some of Parrot&#39;s codingstd tests to fail.<br />
+</div>
+<br />
+My bad. Sorry. I&#39;&#39;l remade patch.<br />
+<br />
+ <br />
+<div class="message-stanza-depth-1">
+&gt; If you can resubmit the patch to address the above items, I<br />
+&gt; &#40;or someone else&#41; can quickly apply it.<br />
+&gt; <br />
+&gt; Thanks!<br />
+&gt; <br />
+&gt; Pm<br />
+&gt; <br />
+</div>
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-413082" href="/rt3/Ticket/Display.html?id=54742#txn-413082">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;25&nbsp;18:49:39&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413082/187704/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 983b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat May 24 21:27:16 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, May 23, 2008 at 03:28:32PM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hello.<br />
+&gt; &gt; <br />
+&gt; &gt; Reworked implementation of &#39;map&#39;<br />
+</div>
+&gt; <br />
+&gt; Excellent.  A couple of notes:<br />
+&gt; <br />
+&gt; 1.  Calling &#39;newclosure&#39; from within &#39;map&#39; is almost certainly wrong.<br />
+&gt;     The newclosure op can only be called for closures that have the<br />
+&gt;     current sub set as their &#39;:outer&#39;, and that will never be the<br />
+&gt;     case here.  Until tonight PCT had some issues with generating<br />
+&gt;     newclosures at the right points, but I think that&#39;s now resolved.<br />
+&gt; <br />
+&gt;     I notice that &#39;grep&#39; is also calling &#39;newclosure&#39;, and we probably<br />
+&gt;     need to eliminate it there as well.<br />
+&gt; <br />
+&gt; 2.  The patch file has quite a few tab characters and trailing spaces<br />
+&gt;     in it, which causes some of Parrot&#39;s codingstd tests to fail.<br />
+&gt; <br />
+&gt; If you can resubmit the patch to address the above items, I<br />
+&gt; &#40;or someone else&#41; can quickly apply it.<br />
+&gt; <br />
+&gt; Thanks!<br />
+&gt; <br />
+&gt; Pm<br />
+&gt; <br />
+</div>
+<br />
+New version attached.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413082/187710/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-413256" href="/rt3/Ticket/Display.html?id=54742#txn-413256">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;26&nbsp;06:42:03&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413256/187832/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 118b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun May 25 18:49:39 2008, bacek wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; New version attached.<br />
+</div>
+<br />
+And again. I found couple of bugs.<br />
+<br />
+-- <br />
+Bacek. <br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413256/187838/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27812&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -709,6 +706,60 @@<br />
+     .return &#39;list&#39;&#40;arr&#41;<br />
+ .end<br />
+ <br />
++=item map&#40;&#41;<br />
++<br />
++Map.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :method<br />
++    .param pmc expression<br />
++    .local pmc res, elem, block, mapres, iter, args<br />
++       .local int i, arity<br />
++<br />
++       arity = expression.&#39;arity&#39;&#40;&#41;<br />
++       if arity &gt; 0 goto body<br />
++       arity = 1<br />
++<br />
++  body:<br />
++    res = new &#39;List&#39;<br />
++    iter = new &#39;Iterator&#39;, self<br />
++  loop:<br />
++    unless iter goto done<br />
++<br />
++       # Creates arguments for closure<br />
++       args = new &#39;ResizablePMCArray&#39;<br />
++<br />
++       i = 0<br />
++  args_loop:<br />
++       if i == arity goto invoke<br />
++       unless iter goto create_undef<br />
++<br />
++    elem = shift iter<br />
++       if elem goto push_elem<br />
++  create_undef:        <br />
++       elem = new &#39;Undef&#39;<br />
++<br />
++  push_elem:<br />
++       push args, elem<br />
++       inc i<br />
++       goto args_loop<br />
++<br />
++  invoke:<br />
++    mapres = expression&#40;args :flat&#41;<br />
++       if null mapres goto loop<br />
++<br />
++  push_res:<br />
++    res.&#39;push&#39;&#40;mapres&#41;<br />
++    goto loop<br />
++<br />
++  done:<br />
++    .return&#40;res&#41;<br />
++.end<br />
++<br />
++<br />
++<br />
+ =back<br />
+ <br />
+ =head1 Functions<br />
+@@ -768,6 +819,20 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;map&gt;<br />
++<br />
++Operator form of C&lt;map&gt;. Delegates map to passed list.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :multi&#40;_,List&#41;<br />
++    .param pmc expression <br />
++    .param pmc list<br />
++<br />
++    .return list.&#39;map&#39;&#40;expression&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-413258" href="/rt3/Ticket/Display.html?id=54742#txn-413258">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;26&nbsp;06:42:13&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413258/187842/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 118b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun May 25 18:49:39 2008, bacek wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; New version attached.<br />
+</div>
+<br />
+And again. I found couple of bugs.<br />
+<br />
+-- <br />
+Bacek. <br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413258/187848/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27812&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -709,6 +706,60 @@<br />
+     .return &#39;list&#39;&#40;arr&#41;<br />
+ .end<br />
+ <br />
++=item map&#40;&#41;<br />
++<br />
++Map.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :method<br />
++    .param pmc expression<br />
++    .local pmc res, elem, block, mapres, iter, args<br />
++       .local int i, arity<br />
++<br />
++       arity = expression.&#39;arity&#39;&#40;&#41;<br />
++       if arity &gt; 0 goto body<br />
++       arity = 1<br />
++<br />
++  body:<br />
++    res = new &#39;List&#39;<br />
++    iter = new &#39;Iterator&#39;, self<br />
++  loop:<br />
++    unless iter goto done<br />
++<br />
++       # Creates arguments for closure<br />
++       args = new &#39;ResizablePMCArray&#39;<br />
++<br />
++       i = 0<br />
++  args_loop:<br />
++       if i == arity goto invoke<br />
++       unless iter goto create_undef<br />
++<br />
++    elem = shift iter<br />
++       if elem goto push_elem<br />
++  create_undef:        <br />
++       elem = new &#39;Undef&#39;<br />
++<br />
++  push_elem:<br />
++       push args, elem<br />
++       inc i<br />
++       goto args_loop<br />
++<br />
++  invoke:<br />
++    mapres = expression&#40;args :flat&#41;<br />
++       if null mapres goto loop<br />
++<br />
++  push_res:<br />
++    res.&#39;push&#39;&#40;mapres&#41;<br />
++    goto loop<br />
++<br />
++  done:<br />
++    .return&#40;res&#41;<br />
++.end<br />
++<br />
++<br />
++<br />
+ =back<br />
+ <br />
+ =head1 Functions<br />
+@@ -768,6 +819,20 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;map&gt;<br />
++<br />
++Operator form of C&lt;map&gt;. Delegates map to passed list.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;map&#39; :multi&#40;_,List&#41;<br />
++    .param pmc expression <br />
++    .param pmc list<br />
++<br />
++    .return list.&#39;map&#39;&#40;expression&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-413800" href="/rt3/Ticket/Display.html?id=54742#txn-413800">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;26&nbsp;23:45:12&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413800/188108/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 194b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon May 26 06:42:13 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sun May 25 18:49:39 2008, bacek wrote:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; New version attached.<br />
+</div>
+&gt; <br />
+&gt; And again. I found couple of bugs.<br />
+&gt; <br />
+</div>
+<br />
+And again :&#41; Previous was broken.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/413800/188114/map.diff">Download map.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-414948" href="/rt3/Ticket/Display.html?id=54742#txn-414948">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;07:24:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/414948/188662/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 30b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied in r27877, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-414950" href="/rt3/Ticket/Display.html?id=54742#txn-414950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;07:24:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-414954" href="/rt3/Ticket/Display.html?id=54742#txn-414954">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;07:24:22&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.519087</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

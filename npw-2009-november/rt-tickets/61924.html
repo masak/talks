@@ -1,0 +1,772 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61924: Incrementing an untyped, undefined variable makes Rakudo dump core</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61924">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61924: Incrementing an untyped, undefined variable makes Rakudo dump core</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61924">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61924</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time worked">Worked:</td>
+    <td class="value time worked">1 min
+</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61924">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+markusl
+&lt;markus [at] mnslaker.f9.co.uk&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61924">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61924">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515132" href="/rt3/Ticket/Display.html?id=61924#txn-515132">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;02&nbsp;13:14:16&nbsp;2009</td>
+    <td class="description">
+      markusl -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Incrementing an untyped, undefined variable makes Rakudo dump core</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 2 Jan 2009 21:13:49 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Rakudo Bugs &lt;rakudobug <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Markus Laker &lt;markus <!-- x --> at co.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/515132/243018/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 9.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Two things are unexpected here: the fact that Rakudo thinks $x is<br />
+an instance of class Timer, and the corrupted double-linked list.<br />
+<br />
+Please let me know if there&#39;s more I can do to help characterise the<br />
+bug, or if I can report it in some more useful form.<br />
+<br />
+Best regards,<br />
+<br />
+Markus<br />
+<br />
+<br />
+<br />
+msl@edward:~/perl/6$ ~/bin/perl6 -e &#39;my Any $x; ++$x; $x.say&#39;<br />
+1<br />
+msl@edward:~/perl/6$ ~/bin/perl6 -e &#39;my $x = 0; ++$x; $x.say&#39;<br />
+1<br />
+msl@edward:~/perl/6$ ~/bin/perl6 -e &#39;my $x; ++$x; $x.say&#39;<br />
+increment&#40;&#41; not implemented in class &#39;Timer&#39;<br />
+current instr.: &#39;prefix:++&#39; pc 17895 &#40;src/builtins/op.pir:60&#41;<br />
+called from Sub &#39;_block14&#39; pc 69 &#40;EVAL_9:43&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 892 &#40;src/PCT/HLLCompiler.pir:508&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1436 &#40;src/PCT/HLLCompiler.pir:768&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 19057 &#40;perl6.pir:162&#41;<br />
+*** glibc detected *** /home/msl/bin/perl6: corrupted double-linked list: 0x08702000 ***<br />
+<div class="message-stanza-depth-1">
+======= Backtrace: =========<br />
+</div>
+/lib/tls/i686/cmov/libc.so.6[0xb77e268e]<br />
+/lib/tls/i686/cmov/libc.so.6&#40;cfree+0x90&#41;[0xb77e5e30]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;mem_sys_free+0x23&#41;[0xb7b9d343]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b9de3d]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bab23f]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_exit+0x70&#41;[0xb7b933e0]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92d46]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_ex_throw_from_c+0x61&#41;[0xb7b92db1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92fb1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7cf3e26]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_default_increment+0x23&#41;[0xb7cf4a23]<br />
+[0xb7653801]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_inc_p+0x4b&#41;[0xb7b3081b]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bdb535]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7badc09]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae723]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae95c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_runops_fromc_args+0x43&#41;[0xb7baf0b3]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_ex_throw_from_c+0x1cc&#41;[0xb7b92f1c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92fb1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bceb1a]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7db0824]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_Class_init_pmc+0x21f&#41;[0xb7db141f]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;pmc_new_init+0x107&#41;[0xb7bda1b7]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_newclass_p_p+0x58&#41;[0xb7b4c7f8]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bdb535]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7badc09]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae723]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae95c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_runops_fromc_args+0x43&#41;[0xb7baf0b3]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_ex_throw_from_c+0x1cc&#41;[0xb7b92f1c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92fb1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bceb1a]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7db0824]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_Class_init_pmc+0x21f&#41;[0xb7db141f]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;pmc_new_init+0x107&#41;[0xb7bda1b7]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_newclass_p_p+0x58&#41;[0xb7b4c7f8]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bdb535]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7badc09]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae723]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae95c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_runops_fromc_args+0x43&#41;[0xb7baf0b3]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_ex_throw_from_c+0x1cc&#41;[0xb7b92f1c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92fb1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bceb1a]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7db0824]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_Class_init_pmc+0x21f&#41;[0xb7db141f]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;pmc_new_init+0x107&#41;[0xb7bda1b7]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_newclass_p_p+0x58&#41;[0xb7b4c7f8]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bdb535]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7badc09]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae723]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bae95c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_runops_fromc_args+0x43&#41;[0xb7baf0b3]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_ex_throw_from_c+0x1cc&#41;[0xb7b92f1c]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7b92fb1]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bceb1a]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7db0824]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_Class_init_pmc+0x21f&#41;[0xb7db141f]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;pmc_new_init+0x107&#41;[0xb7bda1b7]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2&#40;Parrot_newclass_p_p+0x58&#41;[0xb7b4c7f8]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7bdb535]<br />
+/home/msl/parrot/blib/lib/libparrot.so.0.8.2[0xb7badc09]<br />
+<div class="message-stanza-depth-1">
+======= Memory map: ========<br />
+</div>
+08048000-08263000 r-xp 00000000 08:01 8586467    /home/msl/parrot/languages/perl6/perl6<br />
+08263000-08264000 rw-p 0021a000 08:01 8586467    /home/msl/parrot/languages/perl6/perl6<br />
+08264000-0872c000 rw-p 08264000 00:00 0          [heap]<br />
+b6511000-b6516000 r--s 00000000 08:01 8539484    /home/msl/parrot/runtime/parrot/library/P6object.pbc<br />
+b6617000-b6644000 r--s 00000000 08:01 8539304    /home/msl/parrot/runtime/parrot/library/PGE.pbc<br />
+b6644000-b6646000 r--s 00000000 08:01 8539591    /home/msl/parrot/runtime/parrot/library/PCT/Grammar.pbc<br />
+b6646000-b6647000 r--s 00000000 08:01 8539589    /home/msl/parrot/runtime/parrot/library/PCT.pbc<br />
+b7026000-b702b000 r--s 00000000 08:01 8539478    /home/msl/parrot/runtime/parrot/library/Getopt/Obj.pbc<br />
+b702b000-b704e000 r--s 00000000 08:01 8539590    /home/msl/parrot/runtime/parrot/library/PCT/PAST.pbc<br />
+b704e000-b7055000 r-xp 00000000 08:01 8981757    /lib/tls/i686/cmov/librt-2.5.so<br />
+b7055000-b7057000 rw-p 00006000 08:01 8981757    /lib/tls/i686/cmov/librt-2.5.so<br />
+b7600000-b7621000 rw-p b7600000 00:00 0<br />
+b7621000-b7700000 ---p b7621000 00:00 0<br />
+b7716000-b7721000 r-xp 00000000 08:01 8978494    /lib/libgcc_s.so.1<br />
+b7721000-b7722000 rw-p 0000a000 08:01 8978494    /lib/libgcc_s.so.1<br />
+b7736000-b7737000 rw-p b7736000 00:00 0<br />
+b7737000-b7771000 r-xp 00000000 08:01 8978504    /lib/libncurses.so.5.5<br />
+b7771000-b777a000 rw-p 00039000 08:01 8978504    /lib/libncurses.so.5.5<br />
+b777a000-b777b000 rw-p b777a000 00:00 0<br />
+b777b000-b78b6000 r-xp 00000000 08:01 8981727    /lib/tls/i686/cmov/libc-2.5.so<br />
+b78b6000-b78b7000 r--p 0013b000 08:01 8981727    /lib/tls/i686/cmov/libc-2.5.so<br />
+b78b7000-b78b9000 rw-p 0013c000 08:01 8981727    /lib/tls/i686/cmov/libc-2.5.so<br />
+b78b9000-b78bc000 rw-p b78b9000 00:00 0<br />
+b78bc000-b78e8000 r-xp 00000000 08:01 8978542    /lib/libreadline.so.5.2<br />
+b78e8000-b78ec000 rw-p 0002c000 08:01 8978542    /lib/libreadline.so.5.2<br />
+b78ec000-b78ed000 rw-p b78ec000 00:00 0<br />
+b78ed000-b7931000 r-xp 00000000 08:01 6883224    /usr/lib/libgmp.so.3.4.1<br />
+b7931000-b7932000 rw-p 00044000 08:01 6883224    /usr/lib/libgmp.so.3.4.1<br />
+b7932000-b7937000 r-xp 00000000 08:01 8981731    /lib/tls/i686/cmov/libcrypt-2.5.so<br />
+b7937000-b7939000 rw-p 00004000 08:01 8981731    /lib/tls/i686/cmov/libcrypt-2.5.so<br />
+b7939000-b7960000 rw-p b7939000 00:00 0<br />
+b7960000-b7973000 r-xp 00000000 08:01 8981753    /lib/tls/i686/cmov/libpthread-2.5.so<br />
+b7973000-b7975000 rw-p 00013000 08:01 8981753    /lib/tls/i686/cmov/libpthread-2.5.so<br />
+b7975000-b7977000 rw-p b7975000 00:00 0<br />
+b7977000-b799c000 r-xp 00000000 08:01 8981735    /lib/tls/i686/cmov/libm-2.5.so<br />
+b799c000-b799e000 rw-p 00024000 08:01 8981735    /lib/tls/i686/cmov/libm-2.5.so<br />
+b799e000-b799f000 rw-p b799e000 00:00 0<br />
+b799f000-b79a1000 r-xp 00000000 08:01 8981733    /lib/tls/i686/cmov/libdl-2.5.so<br />
+b79a1000-b79a3000 rw-p 00001000 08:01 8981733    /lib/tls/i686/cmov/libdl-2.5.so<br />
+b79a6000-b79a8000 r--s 00000000 08:01 8539476    /home/msl/parrot/runtime/parrot/library/dumper.pbc<br />
+b79a8000-b79a9000 r--s 00000000 08:01 8539488    /home/msl/parrot/runtime/parrot/library/Parrot/Exception.pbc<br />
+b79a9000-b79b1000 r--s 00000000 08:01 8539592    /home/msl/parrot/runtime/parrot/library/PCT/HLLCompiler.pbc<br />
+b79b1000-b79b3000 r--s 00000000 08:01 8539493    /home/msl/parrot/runtime/parrot/library/PGE/Util.pbc<br />
+b79b7000-b7f49000 r-xp 00000000 08:01 8538694    /home/msl/parrot/blib/lib/libparrot.so.0.8.2<br />
+b7f49000-b7f93000 rw-p 00591000 08:01 8538694    /home/msl/parrot/blib/lib/libparrot.so.0.8.2<br />
+b7f93000-b7f95000 rw-p b7f93000 00:00 0<br />
+b7f95000-b7fae000 r-xp 00000000 08:01 8978453    /lib/ld-2.5.so<br />
+b7fae000-b7fb0000 rw-p 00019000 08:01 8978453    /lib/ld-2.5.so<br />
+bfeb4000-bfee5000 rw-p bfeb4000 00:00 0          [stack]<br />
+ffffe000-fffff000 r-xp 00000000 00:00 0          [vdso]<br />
+Aborted &#40;core dumped&#41;<br />
+msl@edward:~/perl/6$ uname -a<br />
+Linux edward 2.6.20-17-generic #2 SMP Wed Aug 20 16:47:34 UTC 2008 i686 GNU/Linux<br />
+msl@edward:~/perl/6$ gcc --version<br />
+gcc &#40;GCC&#41; 4.1.2 &#40;Ubuntu 4.1.2-0ubuntu4&#41;<br />
+Copyright &#40;C&#41; 2006 Free Software Foundation, Inc.<br />
+This is free software; see the source for copying conditions.  There is NO<br />
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.<br />
+<br />
+msl@edward:~/perl/6$<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516708" href="/rt3/Ticket/Display.html?id=61924#txn-516708">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;07&nbsp;23:25:54&nbsp;2009</td>
+    <td class="description">
+      initself -  Correspondence added
+    </td>
+    <td class="time-taken">1 min</td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516708/243770/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 171b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I just ran all three examples using Parrot 0.8.2<br />
+ and did not experience this bug:<br />
+<br />
+my Any $x; ++$x; $x.say;<br />
+my $x = 0; ++$x; $x.say;<br />
+my $x; ++$x; $x.say;<br />
+<br />
+Output:<br />
+1<br />
+1<br />
+2<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516712" href="/rt3/Ticket/Display.html?id=61924#txn-516712">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;07&nbsp;23:25:56&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517714" href="/rt3/Ticket/Display.html?id=61924#txn-517714">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;05:11:58&nbsp;2009</td>
+    <td class="description">
+      markusl -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517714/244242/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jan 07 23:25:54 2009, initself wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I just ran all three examples using Parrot 0.8.2<br />
+&gt;  and did not experience this bug:<br />
+&gt; <br />
+&gt; my Any $x; ++$x; $x.say;<br />
+&gt; my $x = 0; ++$x; $x.say;<br />
+&gt; my $x; ++$x; $x.say;<br />
+&gt; <br />
+&gt; Output:<br />
+&gt; 1<br />
+&gt; 1<br />
+&gt; 2<br />
+</div>
+<br />
+Shouldn&#39;t that last command have printed 1, rather than 2?<br />
+<br />
+In any case, with this morning&#39;s code, the problem seems to have been<br />
+solved:<br />
+<br />
+msl@edward:~/parrot/languages/perl6$ ~/bin/perl6 -v<br />
+This is Rakudo Perl 6, revision 35333 built on parrot 0.8.2-devel<br />
+for i486-linux-gnu-thread-multi.<br />
+<br />
+Copyright 2006-2008, The Perl Foundation.<br />
+<br />
+msl@edward:~/parrot/languages/perl6$ ~/bin/perl6 -e &#39;my $x; ++$x; $x.say&#39;<br />
+1<br />
+msl@edward:~/parrot/languages/perl6$ ~/bin/perl6 -e &#39;my Int $x; ++$x;<br />
+$x.say&#39;<br />
+1<br />
+msl@edward:~/parrot/languages/perl6$ ~/bin/perl6 -e &#39;my Any $x; ++$x;<br />
+$x.say&#39;<br />
+1<br />
+msl@edward:~/parrot/languages/perl6$ ~/bin/perl6 -e &#39;my $x = 0; ++$x;<br />
+$x.say&#39;<br />
+1<br />
+msl@edward:~/parrot/languages/perl6$<br />
+<br />
+I think this bug is fixed.  I&#39;m not sure what the correct procedure is,<br />
+so I won&#39;t set the status to Resolved, but I&#39;ll be happy if someone else<br />
+does so.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518140" href="/rt3/Ticket/Display.html?id=61924#txn-518140">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;00:49:44&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518140/244486/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 13b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Resolved.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518142" href="/rt3/Ticket/Display.html?id=61924#txn-518142">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;00:49:45&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.969431</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

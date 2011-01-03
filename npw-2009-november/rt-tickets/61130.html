@@ -1,0 +1,658 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61130: :nth&#40;&#41; does not work with :x&#40;&#41; or :g in .subst in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61130">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61130: :nth&#40;&#41; does not work with :x&#40;&#41; or :g in .subst in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61130">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61130</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61130">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61130">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61130">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-504816" href="/rt3/Ticket/Display.html?id=61130#txn-504816">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;07&nbsp;07:24:07&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">:nth&#40;&#41; does not work with :x&#40;&#41; or :g in .subst in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 7 Dec 2008 16:23:45 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/504816/237358/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 854b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The .subst method in Rakudo r33599 can understand :x&#40;&#41;...<br />
+<br />
+$ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;2&#41;&#41;&#39; # yes<br />
+bar1bar2foo3foo4<br />
+<br />
+...and :nth&#40;&#41;...<br />
+<br />
+$ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :nth&#40;2&#41;&#41;&#39; # yes<br />
+foo1bar2foo3foo4<br />
+<br />
+...and :g...<br />
+<br />
+$ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :g&#41;&#39; # yes<br />
+bar1bar2bar3bar4<br />
+<br />
+...but not :x&#40;&#41; together with :nth&#40;&#41;...<br />
+<br />
+$ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;2&#41;,<br />
+:nth&#40;2&#41;&#41;&#39; # expected foo1bar2foo3bar4<br />
+foo1bar2foo3foo4<br />
+<br />
+...and not :g together with :nth&#40;&#41;.<br />
+<br />
+$ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :g, :nth&#40;2&#41;&#41;&#39; #<br />
+expected foo1bar2foo3bar4<br />
+foo1bar2foo3foo4<br />
+<br />
+The above are my personal expectations. The current version of S05 is<br />
+silent on how :nth&#40;&#41; interacts with :x&#40;&#41; and :g. There are spectests<br />
+for :g:nth but not &#40;as far as I can see&#41; for :x:nth.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-504976" href="/rt3/Ticket/Display.html?id=61130#txn-504976">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;07&nbsp;15:09:28&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-language <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/504976/237450/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Dec 07 07:24:07 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; The .subst method in Rakudo r33599 can understand :x&#40;&#41;...<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;2&#41;&#41;&#39; # yes<br />
+&gt; bar1bar2foo3foo4<br />
+&gt; <br />
+&gt; ...and :nth&#40;&#41;...<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :nth&#40;2&#41;&#41;&#39; # yes<br />
+&gt; foo1bar2foo3foo4<br />
+&gt; <br />
+&gt; ...and :g...<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :g&#41;&#39; # yes<br />
+&gt; bar1bar2bar3bar4<br />
+&gt; <br />
+&gt; ...but not :x&#40;&#41; together with :nth&#40;&#41;...<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;2&#41;,<br />
+&gt; :nth&#40;2&#41;&#41;&#39; # expected foo1bar2foo3bar4<br />
+&gt; foo1bar2foo3foo4<br />
+&gt; <br />
+&gt; ...and not :g together with :nth&#40;&#41;.<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :g, :nth&#40;2&#41;&#41;&#39; #<br />
+&gt; expected foo1bar2foo3bar4<br />
+&gt; foo1bar2foo3foo4<br />
+&gt; <br />
+&gt; The above are my personal expectations. The current version of S05 is<br />
+&gt; silent on how :nth&#40;&#41; interacts with :x&#40;&#41; and :g. There are spectests<br />
+&gt; for :g:nth but not &#40;as far as I can see&#41; for :x:nth.<br />
+</div>
+<br />
+Since your personal expectations are the same as mine, I took the liberty to<br />
+turn our expectations into spec tests, in<br />
+t/spec/S05-substitution/subst.t &#40;pugs r24207&#41;.<br />
+<br />
+The reasoning behind it is quite simple: I imagine :g to mean the same as<br />
+:x&#40;*&#41;. Now a :x&#40;$x&#41; and :nth&#40;$n&#41; interact like this:<br />
+<br />
+for 1 .. $x {<br />
+    match here<br />
+    if &#40;$x-1&#41; % $n == 0 {<br />
+        do substitution<br />
+    }<br />
+}<br />
+<br />
+&#40;CC&#39;ing p6l, since it defines language semantics, albeit just a bit&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-504980" href="/rt3/Ticket/Display.html?id=61130#txn-504980">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;07&nbsp;15:09:30&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-505304" href="/rt3/Ticket/Display.html?id=61130#txn-505304">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;08&nbsp;07:45:13&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-language <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61130] :nth&#40;&#41; does not work with :x&#40;&#41; or :g in .subst in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 8 Dec 2008 09:44:35 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/505304/237596/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Dec 07, 2008 at 03:09:30PM -0800, Moritz Lenz via RT wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; ...but not :x&#40;&#41; together with :nth&#40;&#41;...<br />
+&gt; &gt; <br />
+&gt; &gt; $ perl6 -e &#39;say &#34;foo1foo2foo3foo4&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;2&#41;,<br />
+&gt; &gt; :nth&#40;2&#41;&#41;&#39; # expected foo1bar2foo3bar4<br />
+&gt; &gt; foo1bar2foo3foo4<br />
+&gt; &gt; <br />
+&gt; &gt; The above are my personal expectations. The current version of S05 is<br />
+&gt; &gt; silent on how :nth&#40;&#41; interacts with :x&#40;&#41; and :g. There are spectests<br />
+&gt; &gt; for :g:nth but not &#40;as far as I can see&#41; for :x:nth.<br />
+</div>
+&gt; <br />
+&gt; Since your personal expectations are the same as mine, I took the liberty to<br />
+&gt; turn our expectations into spec tests, in<br />
+&gt; t/spec/S05-substitution/subst.t &#40;pugs r24207&#41;.<br />
+&gt; <br />
+&gt; The reasoning behind it is quite simple: I imagine :g to mean the same as<br />
+&gt; :x&#40;*&#41;. Now a :x&#40;$x&#41; and :nth&#40;$n&#41; interact like this:<br />
+&gt; <br />
+&gt; for 1 .. $x {<br />
+&gt;     match here<br />
+&gt;     if &#40;$x-1&#41; % $n == 0 {<br />
+&gt;         do substitution<br />
+&gt;     }<br />
+&gt; }<br />
+&gt; <br />
+&gt; &#40;CC&#39;ing p6l, since it defines language semantics, albeit just a bit&#41;<br />
+</div>
+<br />
+The problem with this reasoning is that :nth doesn&#39;t have to be an <br />
+integer -- S05 also allows things like<br />
+<br />
+    :nth&#40;1,2,3,5,8,13&#41;<br />
+    :nth&#40;{.is_fibonacci}&#41;<br />
+<br />
+It&#39;s not immediately obvious how those forms of :nth would interact <br />
+with :x or :g.<br />
+<br />
+The way to do something like &#34;replace every 3rd occurrence&#34; would<br />
+seem to be to do things like:<br />
+<br />
+    :nth&#40;{ $_ % 3 == 0 }&#41;<br />
+    :nth&#40;3..*:by&#40;3&#41;&#41;<br />
+<br />
+Another problem is that :x&#40;$n&#41; specifies &#34;perform $n substitutions&#34;,<br />
+such that if we say :x&#40;4&#41; and there aren&#39;t four things to substitute,<br />
+then none of the substitutions take place.<br />
+<br />
+At the moment I think that :x specifies a constraint on the<br />
+total number of substitutions that are &#40;must be&#41; performed,<br />
+while :nth selects the candidate matches to be substituted.<br />
+Thus<br />
+<br />
+    .subst&#40; $pat, $rep, :nth&#40;1,4,9,16,25,36&#41;, :x&#40;4&#41; &#41;<br />
+<br />
+would perform substitutions on the 1st, 4th, 9th, and 16th matches,<br />
+and do nothing if at least sixteen matches were not found.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.886832</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1454 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#24683: [PATCH] P6C update concat and bitwise operators</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D24683">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#24683: [PATCH] P6C update concat and bitwise operators</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=24683">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">24683</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=24683">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+allison
+&lt;al [at] shadowed.net&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=24683">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+Applied    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+p6c_update_concat_bitwise.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/68488/50912/p6c_update_concat_bitwise.patch">
+Tue Dec 16 21:41:03 2003 (19.4k) by allison
+</a>
+</font></li>
+</ul>
+
+
+concat.t<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/68488/50914/concat.t">
+Tue Dec 16 21:41:03 2003 (441b) by allison
+</a>
+</font></li>
+</ul>
+
+
+bitwise.t<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/68488/50913/bitwise.t">
+Tue Dec 16 21:41:03 2003 (1.8k) by allison
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=24683">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68488" href="/rt3/Ticket/Display.html?id=24683#txn-68488">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;16&nbsp;21:41:03&nbsp;2003</td>
+    <td class="description">
+      allison -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 16 Dec 2003 23:40:34 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">bugs-perl6 <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68488/50911/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 650b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This patch updates the following operators and their assignment<br />
+counterparts:<br />
+<br />
+_ becomes ~ &#40;concatenation&#41;<br />
+&#38; becomes +&#38; ~&#38; &#40;bitwise AND, numeric and string&#41;<br />
+<div class="message-stanza-depth-1">
+| becomes +| ~| &#40;bitwise OR, numeric and string&#41;<br />
+</div>
+~ becomes +^ ~^ &#40;bitwise XOR, numeric and string&#41;<br />
+<br />
+Unary +^ &#40;bitwise negation, a.k.a. ones complement&#41; is not implemented<br />
+yet.<br />
+<br />
+I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&#40;the op/ directory doesn&#39;t exist yet&#41;.<br />
+<br />
+&#40;My code for bitwise string operators was greatly simplified when Leo<br />
+implemented the bitwise_xors, bitwise_ands, and bitwise_ors &#40;string<br />
+versions&#41; vtable functions for PerlString. Hip-hip-hooray!&#41;<br />
+<br />
+Allison<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68488/50912/p6c_update_concat_bitwise.patch">Download p6c_update_concat_bitwise.patch</a>
+<span class="downloadcontenttype">
+[text/plain 19.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68488/50913/bitwise.t">Download bitwise.t</a>
+<span class="downloadcontenttype">
+[application/x-troff 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68488/50914/concat.t">Download concat.t</a>
+<span class="downloadcontenttype">
+[application/x-troff 441b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68489" href="/rt3/Ticket/Display.html?id=24683#txn-68489">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;16&nbsp;21:41:06&nbsp;2003</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68566" href="/rt3/Ticket/Display.html?id=24683#txn-68566">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;19&nbsp;02:03:28&nbsp;2003</td>
+    <td class="description">
+      leo -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 19 Dec 2003 10:01:33 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68566/50970/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 279b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Allison Randal &lt;bugs-perl6 <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; This patch updates the following operators and their assignment<br />
+&gt; counterparts:<br />
+</div>
+<br />
+Applied, thanks.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&gt; &#40;the op/ directory doesn&#39;t exist yet&#41;<br />
+</div>
+<br />
+Missing?<br />
+<br />
+leo<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68584" href="/rt3/Ticket/Display.html?id=24683#txn-68584">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;19&nbsp;12:04:39&nbsp;2003</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 19 Dec 2003 14:03:41 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68584/51059/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 490b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Leo wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&gt; &gt; &#40;the op/ directory doesn&#39;t exist yet&#41;<br />
+</div>
+&gt; <br />
+&gt; Missing?<br />
+</div>
+<br />
+The directory needs to be added. We&#39;re gradually moving our way toward<br />
+the test hierarchy planned on p6d:<br />
+<br />
+t/var<br />
+t/op<br />
+t/subs<br />
+t/regex<br />
+t/module<br />
+t/class<br />
+...<br />
+<br />
+Or, more extensively:<br />
+  http://p6stories.kwiki.org/index.cgi?ProposedTestHierarchy<br />
+<br />
+We haven&#39;t gotten to moving all the tests yet, but I&#39;ll add new test<br />
+files in the new hierarchy.<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68639" href="/rt3/Ticket/Display.html?id=24683#txn-68639">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;19&nbsp;23:20:43&nbsp;2003</td>
+    <td class="description">
+      pdcawley <!-- x --> at org.uk -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;, perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 20 Dec 2003 07:20:00 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Piers Cawley &lt;pdcawley <!-- x --> at org.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68639/51093/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 311b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Allison Randal &lt;al <!-- x --> at shadowed.net&gt; writes:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Leo wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; <br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&gt;&gt; &gt; &#40;the op/ directory doesn&#39;t exist yet&#41;<br />
+</div>
+&gt;&gt; <br />
+&gt;&gt; Missing?<br />
+</div>
+&gt;<br />
+&gt; The directory needs to be added. We&#39;re gradually moving our way toward<br />
+&gt; the test hierarchy planned on p6d:<br />
+</div>
+<br />
+p6d?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68645" href="/rt3/Ticket/Display.html?id=24683#txn-68645">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;02:17:15&nbsp;2003</td>
+    <td class="description">
+      leo -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 20 Dec 2003 11:05:11 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">al <!-- x --> at shadowed.net &#40;Allison Randal&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68645/51097/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 670b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Allison Randal &lt;al <!-- x --> at shadowed.net&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Leo wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&gt;&gt; &gt; &#40;the op/ directory doesn&#39;t exist yet&#41;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; Missing?<br />
+</div>
+</div>
+<br />
+<div class="message-stanza-depth-1">
+&gt; The directory needs to be added. We&#39;re gradually moving our way toward<br />
+&gt; the test hierarchy planned on p6d:<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+&gt; t/var<br />
+&gt; t/op<br />
+</div>
+<br />
+I had a short look at the subdir hierarchy, looks good.<br />
+&#40;perl6:run_tests, Makefile, and t/harness have to learn how to deal with<br />
+differently deep nested test files though&#41;.<br />
+<br />
+If you don&#39;t have CVS write access, I&#39;d vote for you getting it. In the<br />
+meantime just append new test files with a note that the subdir needs<br />
+to be created first.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Allison<br />
+</div>
+<br />
+leo<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68668" href="/rt3/Ticket/Display.html?id=24683#txn-68668">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;11:55:44&nbsp;2003</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 20 Dec 2003 13:55:04 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Piers Cawley &lt;pdcawley <!-- x --> at org.uk&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68668/51116/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 220b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Piers wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; p6d?<br />
+</div>
+<br />
+The perl6-documentation list. Started around Nov. 2002, it had about 3<br />
+months of heavy traffic and not much since. But, we did get a good plan<br />
+for the direction of p6 testing out of it.<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68670" href="/rt3/Ticket/Display.html?id=24683#txn-68670">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;12:17:49&nbsp;2003</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 20 Dec 2003 14:16:55 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68670/51120/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 402b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Leo wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; I had a short look at the subdir hierarchy, looks good.<br />
+</div>
+<br />
+Excellent.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; &#40;perl6:run_tests, Makefile, and t/harness have to learn how to deal with<br />
+&gt; differently deep nested test files though&#41;.<br />
+</div>
+<br />
+Yeah, that&#39;s on my Todo list. Hmmm... I should probably add the list to<br />
+the repository.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; If you don&#39;t have CVS write access, I&#39;d vote for you getting it.<br />
+</div>
+<br />
+I don&#39;t have it. Thanks. :&#41;<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68796" href="/rt3/Ticket/Display.html?id=24683#txn-68796">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;21&nbsp;14:26:42&nbsp;2003</td>
+    <td class="description">
+      pdcawley <!-- x --> at org.uk -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 21 Dec 2003 22:26:18 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Piers Cawley &lt;pdcawley <!-- x --> at org.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68796/51161/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 436b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Allison Randal &lt;al <!-- x --> at shadowed.net&gt; writes:<br />
+<div class="message-stanza-depth-1">
+&gt; Piers wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; <br />
+&gt;&gt; p6d?<br />
+</div>
+&gt;<br />
+&gt; The perl6-documentation list. Started around Nov. 2002, it had about<br />
+&gt; 3 months of heavy traffic and not much since. But, we did get a good<br />
+&gt; plan for the direction of p6 testing out of it.<br />
+</div>
+<br />
+I find that the best way to remember the answer to a question is to<br />
+ask the &#39;net. Usually, about 10 seconds after the mail leaves my<br />
+server I remember what the answer was.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68829" href="/rt3/Ticket/Display.html?id=24683#txn-68829">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;10:06:24&nbsp;2003</td>
+    <td class="description">
+      dan -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2003 10:32:04 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Dan Sugalski &lt;dan <!-- x --> at sidhe.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68829/51192/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 802b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+At 2:03 PM -0600 12/19/03, Allison Randal wrote:<br />
+<div class="message-stanza-depth-1">
+&gt;Leo wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;  &gt; I&#39;ve added two test files, bitwise.t and concat.t, which go in t/op/<br />
+&gt;&gt;  &gt; &#40;the op/ directory doesn&#39;t exist yet&#41;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;  Missing?<br />
+</div>
+&gt;<br />
+&gt;The directory needs to be added. We&#39;re gradually moving our way toward<br />
+&gt;the test hierarchy planned on p6d:<br />
+</div>
+<br />
+Allison, if you&#39;ve not gotten a perl.org account head over to <br />
+bugs.perl.org and get one so we can get you checkin privs. Seems <br />
+silly to force a go-between for updates to the perl compiler.<br />
+-- <br />
+                                         Dan<br />
+<br />
+--------------------------------------&#34;it&#39;s like this&#34;-------------------<br />
+Dan Sugalski                          even samurai<br />
+dan <!-- x --> at sidhe.org                         have teddy bears and even<br />
+                                       teddy bears get drunk<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68839" href="/rt3/Ticket/Display.html?id=24683#txn-68839">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;11:29:58&nbsp;2003</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2003 13:28:30 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Dan Sugalski &lt;dan <!-- x --> at sidhe.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68839/51198/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 237b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Dan wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; Allison, if you&#39;ve not gotten a perl.org account head over to <br />
+&gt; bugs.perl.org and get one so we can get you checkin privs. Seems <br />
+&gt; silly to force a go-between for updates to the perl compiler.<br />
+</div>
+<br />
+I&#39;m &#34;allison&#34;.<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68840" href="/rt3/Ticket/Display.html?id=24683#txn-68840">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;11:34:49&nbsp;2003</td>
+    <td class="description">
+      dan -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2003 14:33:57 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Dan Sugalski &lt;dan <!-- x --> at sidhe.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68840/51199/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 684b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+At 1:28 PM -0600 12/22/03, Allison Randal wrote:<br />
+<div class="message-stanza-depth-1">
+&gt;Dan wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt;<br />
+&gt;&gt;  Allison, if you&#39;ve not gotten a perl.org account head over to<br />
+&gt;&gt;  bugs.perl.org and get one so we can get you checkin privs. Seems<br />
+&gt;&gt;  silly to force a go-between for updates to the perl compiler.<br />
+</div>
+&gt;<br />
+&gt;I&#39;m &#34;allison&#34;.<br />
+</div>
+<br />
+Yes, yes you are. :&#41; Full CVS checkin, or would you prefer to stick <br />
+with just the perl 6 section?<br />
+-- <br />
+                                         Dan<br />
+<br />
+--------------------------------------&#34;it&#39;s like this&#34;-------------------<br />
+Dan Sugalski                          even samurai<br />
+dan <!-- x --> at sidhe.org                         have teddy bears and even<br />
+                                       teddy bears get drunk<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-68841" href="/rt3/Ticket/Display.html?id=24683#txn-68841">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;12:33:56&nbsp;2003</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #24683] [PATCH] P6C update concat and bitwise operators</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2003 14:33:17 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Dan Sugalski &lt;dan <!-- x --> at sidhe.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/68841/51200/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 254b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Dan wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; Full CVS checkin, or would you prefer to stick with just the perl 6<br />
+&gt; section?<br />
+</div>
+<br />
+At the moment I don&#39;t expect to work on much outside the perl 6 section<br />
+except the Perl PMC&#39;s and occasional OS X patches. That may change.<br />
+&lt;shrug&gt;<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-71805" href="/rt3/Ticket/Display.html?id=24683#txn-71805">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;21&nbsp;14:30:28&nbsp;2004</td>
+    <td class="description">
+      robert -  Status changed from &#39;new&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-71806" href="/rt3/Ticket/Display.html?id=24683#txn-71806">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;21&nbsp;14:30:32&nbsp;2004</td>
+    <td class="description">
+      robert -  Patch Status Applied added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.071307</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

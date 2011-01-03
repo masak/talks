@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   id="svg5737"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="masak-thought.svg">
+  <defs
+     id="defs5739">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 372.04724 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1052.3622 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
+       id="perspective5746" />
+    <inkscape:perspective
+       id="perspective5816"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6474"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.74587302"
+     inkscape:cx="526.18109"
+     inkscape:cy="372.04724"
+     inkscape:current-layer="layer1"
+     id="namedview5741"
+     showgrid="false"
+     inkscape:window-width="934"
+     inkscape:window-height="803"
+     inkscape:window-x="242"
+     inkscape:window-y="57"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5743">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g6480"
+       transform="translate(25.885734,-82.904928)">
+      <path
+         d="m 925.09042,349.25516 c 0,112.17879 -124.85338,203.11767 -278.86782,203.11767 -154.01445,0 -278.86783,-90.93888 -278.86783,-203.11767 0,-112.1788 124.85338,-203.11768 278.86783,-203.11768 154.01444,0 278.86782,90.93888 278.86782,203.11768 z"
+         sodipodi:ry="203.11768"
+         sodipodi:rx="278.86783"
+         sodipodi:cy="349.25516"
+         sodipodi:cx="646.2226"
+         id="path5822"
+         style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="translate(180.99596,297.6378)"
+         d="m 237.30581,215.85443 c 0,22.95408 -18.60796,41.56204 -41.56204,41.56204 -22.95407,0 -41.56203,-18.60796 -41.56203,-41.56204 0,-22.95408 18.60796,-41.56203 41.56203,-41.56203 22.95408,0 41.56204,18.60795 41.56204,41.56203 z"
+         sodipodi:ry="41.562035"
+         sodipodi:rx="41.562035"
+         sodipodi:cy="215.85443"
+         sodipodi:cx="195.74377"
+         id="path6396"
+         style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="translate(189.04022,274.84571)"
+         d="m 143.45605,295.62674 c 0,15.17931 -12.30526,27.48457 -27.48457,27.48457 -15.17931,0 -27.48457,-12.30526 -27.48457,-27.48457 0,-15.17931 12.30526,-27.48457 27.48457,-27.48457 15.17931,0 27.48457,12.30526 27.48457,27.48457 z"
+         sodipodi:ry="27.484571"
+         sodipodi:rx="27.484571"
+         sodipodi:cy="295.62674"
+         sodipodi:cx="115.97148"
+         id="path6398"
+         style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="translate(167.58885,223.8987)"
+         d="m 105.91615,382.10257 c 0,8.88545 -7.203079,16.08853 -16.088529,16.08853 -8.885449,0 -16.088529,-7.20308 -16.088529,-16.08853 0,-8.88545 7.20308,-16.08853 16.088529,-16.08853 8.88545,0 16.088529,7.20308 16.088529,16.08853 z"
+         sodipodi:ry="16.08853"
+         sodipodi:rx="16.08853"
+         sodipodi:cy="382.10257"
+         sodipodi:cx="89.827621"
+         id="path6400"
+         style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none"
+         sodipodi:type="arc" />
+      <text
+         id="text6402"
+         y="364.75906"
+         x="590.80463"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"
+         xml:space="preserve"><tspan
+           y="364.75906"
+           x="590.80463"
+           id="tspan6404"
+           sodipodi:role="line">Wow!</tspan></text>
+    </g>
+    <image
+       y="461.86194"
+       x="101.38602"
+       id="image6476"
+       height="219"
+       width="152"
+       xlink:href="file:///Users/masak/gwork/bpw-2009/masak.png" />
+  </g>
+</svg>

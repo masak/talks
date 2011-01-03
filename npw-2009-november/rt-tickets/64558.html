@@ -1,0 +1,997 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64558: Re: Building Rakudo with an installed Parrot</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64558">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64558: Re: Building Rakudo with an installed Parrot</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64558">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64558</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64558">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz
+&lt;moritz [at] faui2k3.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64558">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+parrot.spec<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/550506/261738/parrot.spec">
+Thu Apr 09 04:35:46 2009 (5.4k) by mlenz <!-- x --> at physik.uni-wuerzburg.de
+</a>
+</font></li>
+</ul>
+
+
+parrot.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/550506/261736/parrot.diff">
+Thu Apr 09 04:35:46 2009 (5.8k) by mlenz <!-- x --> at physik.uni-wuerzburg.de
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64558">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-550110" href="/rt3/Ticket/Display.html?id=64558#txn-550110">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;08&nbsp;11:59:37&nbsp;2009</td>
+    <td class="description">
+      moritz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler &lt;perl6-compiler <!-- x --> at perl.org&gt;, rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: Building Rakudo with an installed Parrot</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 08 Apr 2009 20:58:39 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Michael Schroeder &lt;mls <!-- x --> at suse.de&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550110/261552/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&#40;CC&#39;ing the bug tracker to have the patch in RT&#41;<br />
+<br />
+Michael Schroeder wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m trying to build rakudo with an installed parrot. This means<br />
+&gt; that the `parrot_config build_dir` points to a directory that<br />
+&gt; doesn&#39;t exist.<br />
+&gt; <br />
+&gt; After patching the Makefile and gen_objectref_pmc.pl the build<br />
+&gt; works. Are there any plans to make this a supported build<br />
+&gt; method?<br />
+</div>
+<br />
+As far as I know there are plans, but it&#39;s not high priority.<br />
+<br />
+Anyway, when I apply your patch to rakudo and try to build it locally, I get<br />
+<br />
+/usr/bin/perl -I/home/moritz/rakudo/parrot/lib<br />
+build/gen_objectref_pmc.pl src/pmc/objectref_pmc.template \<br />
+                src/pmc/objectref.pmc<br />
+Could not open /usr/local/lib/parrot/1.0.0-devel/src/vtable.tbl: No such<br />
+file or directory at build/gen_objectref_pmc.pl line 108.<br />
+make: *** [src/pmc/objectref.pmc] Error 2<br />
+<br />
+<br />
+&#40;Or do I need to apply the parrot patches as well?&#41;<br />
+<br />
+I&#39;m quite sure that we want to continue to support building against a<br />
+not-installed parrot as well, because that&#39;s what the developers do ;-&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-550506" href="/rt3/Ticket/Display.html?id=64558#txn-550506">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;09&nbsp;04:35:46&nbsp;2009</td>
+    <td class="description">
+      mlenz <!-- x --> at physik.uni-wuerzburg.de -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[perl #64558] Fwd: Re: Building Rakudo with an installed Parrot</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 09 Apr 2009 13:08:20 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;mlenz <!-- x --> at physik.uni-wuerzburg.de&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550506/261734/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+-------- Original Message --------<br />
+Subject: Re: Building Rakudo with an installed Parrot<br />
+Date: Thu, 9 Apr 2009 12:06:08 +0200<br />
+From: Michael Schroeder &lt;mls <!-- x --> at suse.de&gt;<br />
+To: Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;<br />
+References: &lt;20090408165901.GA7710 <!-- x --> at suse.de&gt; &lt;49DCF3DF.6010405 <!-- x --> at faui2k3.org&gt;<br />
+<br />
+On Wed, Apr 08, 2009 at 08:58:39PM +0200, Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; As far as I know there are plans, but it&#39;s not high priority.<br />
+&gt; <br />
+&gt; Anyway, when I apply your patch to rakudo and try to build it locally, I get<br />
+&gt; <br />
+&gt; /usr/bin/perl -I/home/moritz/rakudo/parrot/lib<br />
+&gt; build/gen_objectref_pmc.pl src/pmc/objectref_pmc.template \<br />
+&gt;                 src/pmc/objectref.pmc<br />
+&gt; Could not open /usr/local/lib/parrot/1.0.0-devel/src/vtable.tbl: No such<br />
+&gt; file or directory at build/gen_objectref_pmc.pl line 108.<br />
+&gt; make: *** [src/pmc/objectref.pmc] Error 2<br />
+&gt; <br />
+&gt; <br />
+&gt; &#40;Or do I need to apply the parrot patches as well?&#41;<br />
+</div>
+<br />
+Yes, you need a parrot patch. I moved the &#34;source&#34; files from /usr/src<br />
+to libdir to make it fit our packaging policy.<br />
+The cygwin folks seem to do something similar &#40;see<br />
+./ports/cygwin/parrot-1.0.0-1.src.patch&#41;.<br />
+<br />
+I&#39;m not really sure how the final parrot layout will be in that regard.<br />
+<br />
+Anyway, I&#39;ve also attached the atest version of my parrot patch<br />
+plus my parrot specfile.<br />
+<br />
+Cheers,<br />
+  Michael.<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550506/261736/parrot.diff">Download parrot.diff</a>
+<span class="downloadcontenttype">
+[text/x-patch 5.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+--- ./MANIFEST.generated.orig   2009-04-08 08:58:41.000000000 +0000<br />
++++ ./MANIFEST.generated        2009-04-08 14:00:09.000000000 +0000<br />
+@@ -190,12 +190,15 @@ runtime/parrot/library/Stream/Writer.pbc<br />
+ runtime/parrot/library/TGE.pbc                    [tge]<br />
+ src/call_list.txt                                 [devel]src<br />
+ src/glut_callbacks.c                              []<br />
++src/install_config.o                              [devel]src<br />
+ src/jit_emit.h                                    []<br />
+ src/nci.c                                         []<br />
+ src/null_config.c                                 []<br />
++src/null_config.o                                 [devel]src<br />
+ src/ops/core_ops_cgp.c                            []<br />
+ src/ops/core_ops_switch.c                         []<br />
+ src/parrot_config.c                               []<br />
++src/parrot_config.o                               [devel]src<br />
+ src/pmc/boolean.dump                              [devel]src<br />
+ src/pmc/continuation.dump                         [devel]src<br />
+ src/pmc/default.dump                              [devel]src<br />
+@@ -226,5 +229,6 @@ src/pmc/string.dump<br />
+ src/pmc/sub.dump                                  [devel]src<br />
+ src/pmc/undef.dump                                [devel]src<br />
+ src/string_private_cstring.h                      []<br />
+-tools/build/dynpmc.pl                             []<br />
++tools/build/dynoplibs.pl                          [devel]<br />
++tools/build/dynpmc.pl                             [devel]<br />
+ vtable.dump                                       [devel]src<br />
+--- ./config/gen/config_pm/config_pir.in.orig   2009-04-08 12:09:58.000000000 +0000<br />
++++ ./config/gen/config_pm/config_pir.in        2009-04-08 12:10:16.000000000 +0000<br />
+@@ -49,7 +49,7 @@ undefined values&#41; is undefined, and may<br />
+     $S0 = concat prefix, &#34;/runtime&#34;<br />
+     $I0 = stat $S0, .STAT_EXISTS<br />
+     if $I0 goto L1<br />
+-    conf_file = prefix . &#34;/lib@versiondir@/include/config.fpmc&#34;<br />
++    conf_file = &#34;@libdir@@versiondir@/include/config.fpmc&#34;<br />
+     goto L2<br />
+   L1:<br />
+     conf_file = prefix . &#34;/runtime/parrot/include/config.fpmc&#34;<br />
+--- ./config/init/defaults.pm.orig      2009-04-08 08:38:09.000000000 +0000<br />
++++ ./config/init/defaults.pm   2009-04-08 08:40:09.000000000 +0000<br />
+@@ -72,6 +72,10 @@ sub runstep {<br />
+<div class="message-stanza-depth-1">
+     # to their &#39;use English&#39; names as documented in &#39;perlvar&#39;.&#41;<br />
+</div>
+     $conf-&gt;data-&gt;set_p5&#40; OSNAME =&gt; $^O &#41;;<br />
+ <br />
++    # strip rpath flags from ccdlflags<br />
++    my $ccdlflags = $Config{ccdlflags};<br />
++    $ccdlflags =~ s/\s*-Wl,-rpath,\S*//g;<br />
++<br />
+<div class="message-stanza-depth-1">
+     # We need a Glossary somewhere!<br />
+</div>
+     $conf-&gt;data-&gt;set&#40;<br />
+         debugging =&gt; $conf-&gt;options-&gt;get&#40;&#39;debugging&#39;&#41; ? 1 : 0,<br />
+@@ -112,7 +116,7 @@ sub runstep {<br />
+<div class="message-stanza-depth-1">
+         # Linker Flags to have this binary work with the shared and dynamically<br />
+         # loadable libraries we&#39;re building.  On HP-UX, for example, we need to<br />
+         # allow dynamic libraries to access the binary&#39;s symbols<br />
+</div>
+-        link_dynamic =&gt; $Config{ccdlflags},    # e.g. -Wl,-E on HP-UX<br />
++        link_dynamic =&gt; $ccdlflags,    # e.g. -Wl,-E on HP-UX<br />
+ <br />
+<div class="message-stanza-depth-1">
+         # ld: Tool used to build shared libraries and dynamically loadable<br />
+         # modules. Often $cc on Unix-ish systems, but apparently sometimes<br />
+</div>
+--- ./tools/dev/install_dev_files.pl.orig       2009-04-08 13:01:50.000000000 +0000<br />
++++ ./tools/dev/install_dev_files.pl    2009-04-08 13:25:21.000000000 +0000<br />
+@@ -134,8 +134,9 @@ while &#40;&lt;&gt;&#41; {<br />
+         $dest = File::Spec-&gt;catdir&#40; $options{includedir}, $parrotdir, $dest &#41;;<br />
+     }<br />
+     elsif &#40; $meta{src} &#41; {<br />
+-        $dest =~ s/^src//; # strip off leading src/ dir<br />
+-        $dest = File::Spec-&gt;catdir&#40; $options{srcdir}, $parrotdir, $dest &#41;;<br />
++        #$dest =~ s/^src//; # strip off leading src/ dir<br />
++        #$dest = File::Spec-&gt;catdir&#40; $options{srcdir}, $parrotdir, $dest &#41;;<br />
++        $dest = File::Spec-&gt;catdir&#40; $options{libdir}, $parrotdir, $dest &#41;;<br />
+     }<br />
+     elsif &#40; $meta{doc} &#41; {<br />
+         $dest =~ s/^docs/pod/; # docs dir are actually raw Pod<br />
+--- ./tools/dev/pbc_to_exe.pir.orig     2009-04-07 15:56:26.000000000 +0000<br />
++++ ./tools/dev/pbc_to_exe.pir  2009-04-08 10:54:06.000000000 +0000<br />
+@@ -226,17 +226,23 @@ MAIN<br />
+     .param int install :optional<br />
+ <br />
+     $P0 = &#39;_config&#39;&#40;&#41;<br />
+-    .local string cc, ccflags, cc_o_out, osname, build_dir, slash<br />
++    .local string cc, ccflags, cc_o_out, osname, build_dir, includedir, versiondir, prefix, slash<br />
+     cc        = $P0[&#39;cc&#39;]<br />
+     ccflags   = $P0[&#39;ccflags&#39;]<br />
+     cc_o_out  = $P0[&#39;cc_o_out&#39;]<br />
+     osname    = $P0[&#39;osname&#39;]<br />
+     build_dir = $P0[&#39;build_dir&#39;]<br />
++    includedir = $P0[&#39;includedir&#39;]<br />
++    versiondir = $P0[&#39;versiondir&#39;]<br />
++    prefix    = $P0[&#39;prefix&#39;]<br />
+     slash     = $P0[&#39;slash&#39;]<br />
+ <br />
+-    .local string includedir, pathquote<br />
++    .local string pathquote<br />
++    includedir = concat includedir, versiondir<br />
++    unless prefix == build_dir goto is_installed<br />
+     includedir = concat build_dir, slash<br />
+     includedir = concat includedir, &#39;include&#39;<br />
++  is_installed:<br />
+     pathquote  = &#39;&#39;<br />
+     unless osname == &#39;MSWin32&#39; goto not_windows<br />
+     pathquote  = &#39;&#34;&#39;<br />
+@@ -276,7 +282,7 @@ MAIN<br />
+ <br />
+     $P0 = &#39;_config&#39;&#40;&#41;<br />
+     .local string cc, link, link_dynamic, linkflags, ld_out, libparrot, libs, o<br />
+-    .local string rpath, osname, build_dir, slash, icushared<br />
++    .local string rpath, osname, build_dir, libdir, versiondir, prefix, slash, icushared<br />
+     cc           = $P0[&#39;cc&#39;]<br />
+     link         = $P0[&#39;link&#39;]<br />
+     link_dynamic = $P0[&#39;link_dynamic&#39;]<br />
+@@ -288,12 +294,19 @@ MAIN<br />
+     rpath        = $P0[&#39;rpath_blib&#39;]<br />
+     osname       = $P0[&#39;osname&#39;]<br />
+     build_dir    = $P0[&#39;build_dir&#39;]<br />
++    libdir       = $P0[&#39;libdir&#39;]<br />
++    versiondir   = $P0[&#39;versiondir&#39;]<br />
++    prefix       = $P0[&#39;prefix&#39;]<br />
+     slash        = $P0[&#39;slash&#39;]<br />
+     icushared    = $P0[&#39;icu_shared&#39;]<br />
+ <br />
+     .local string config, pathquote, exeprefix<br />
+     exeprefix = substr exefile, 0, 12<br />
++    config     = concat libdir, versiondir<br />
++    config    .= slash<br />
++    unless prefix == build_dir goto is_installed<br />
+     config     = concat build_dir, slash<br />
++  is_installed:<br />
+     config    .= &#39;src&#39;<br />
+     config    .= slash<br />
+     if exeprefix == &#39;installable_&#39; goto config_install<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550506/261738/parrot.spec">Download parrot.spec</a>
+<span class="downloadcontenttype">
+[text/plain 5.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Name:           parrot<br />
+Version:        0.0.2009.06<br />
+Release:        1<br />
+Summary:        Parrot Virtual Machine<br />
+License:        Artistic 2.0<br />
+Group:          Development/Libraries<br />
+URL:            http://www.parrot.org/<br />
+Source0:        ftp://ftp.parrot.org/pub/parrot/releases/stable/%{version}/parrot-%{version}.tar.bz2<br />
+Patch0:         parrot.diff<br />
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%&#40;%{__id_u} -n&#41;<br />
+BuildRequires:  readline-devel<br />
+BuildRequires:  ncurses-devel<br />
+BuildRequires:  gmp-devel<br />
+BuildRequires:  gdbm-devel<br />
+BuildRequires:  libicu-devel<br />
+%if ! 0%{?suse_version}<br />
+BuildRequires:  perl-Test-Harness<br />
+%endif<br />
+<br />
+%package docs<br />
+Summary:        Parrot Virtual Machine documentation<br />
+License:        Artistic 2.0<br />
+Group:          Development/Libraries<br />
+%if ! 0%{?suse_version}<br />
+BuildRequires:  /usr/bin/perldoc<br />
+%endif<br />
+<br />
+%package -n libparrot1_0_0<br />
+Summary:        Parrot Virtual Machine Library<br />
+License:        Artistic 2.0<br />
+Group:          Development/Libraries<br />
+<br />
+%package devel<br />
+Summary:        Parrot Virtual Machine development headers and libraries<br />
+License:        Artistic 2.0<br />
+Group:          Development/Libraries<br />
+Requires:       %{name} = %{version}<br />
+Requires:       readline-devel<br />
+Requires:       ncurses-devel<br />
+Requires:       gmp-devel<br />
+Requires:       gdbm-devel<br />
+Requires:       libicu-devel<br />
+%if ! 0%{?suse_version}<br />
+Requires:       %{_libdir}/pkgconfig<br />
+%endif<br />
+<br />
+%description<br />
+Parrot is a virtual machine designed to efficiently compile and execute<br />
+bytecode for dynamic languages. Parrot is the target for Rakudo Perl 6,<br />
+as well as variety of other languages.<br />
+<br />
+%description -n libparrot1_0_0<br />
+Parrot is a virtual machine designed to efficiently compile and execute<br />
+bytecode for dynamic languages. Parrot is the target for Rakudo Perl 6,<br />
+as well as variety of other languages.<br />
+<br />
+%description docs<br />
+Documentation in text-, POD- and HTML-format &#40;docs/html-subdirectory&#41; and also<br />
+examples about the Parrot Virtual Machine<br />
+<br />
+%description devel<br />
+Parrot Virtual Machine development headers and libraries.<br />
+<br />
+%prep<br />
+%setup -q<br />
+%patch0<br />
+<br />
+<div class="message-stanza-depth-1">
+%{__perl} -pi -e &#39;s,&#34;lib/,&#34;%{_lib}/, if &#40;/CONST_STRING\&#40;interp,/&#41;&#39; \<br />
+</div>
+    src/library.c<br />
+<div class="message-stanza-depth-1">
+%{__perl} -pi -e &#34;s,&#39;/usr/lib&#39;,&#39;%{_libdir}&#39;,;s,runtime/lib/,runtime/%{_lib}/,&#34; \<br />
+</div>
+    tools/dev/install_files.pl<br />
+<div class="message-stanza-depth-1">
+%{__perl} -pi -e &#34;s,&#39;/usr/lib&#39;,&#39;%{_libdir}&#39;,;s,runtime/lib/,runtime/%{_lib}/,&#34; \<br />
+</div>
+    tools/dev/install_dev_files.pl<br />
+<br />
+%build<br />
+if test &#34;%{_vendor}&#34; = &#34;suse&#34;<br />
+then<br />
+    LIBS=&#39;-lncurses -lm&#39;<br />
+else<br />
+    LIBS=&#39;-lcurses -lm&#39;<br />
+fi<br />
+<br />
+OPTIMIZE=&#34;$RPM_OPT_FLAGS -fno-strict-aliasing&#34;<br />
+%ifarch %ix86 %x86_64<br />
+OPTIMIZE=&#34;$OPTIMIZE -maccumulate-outgoing-args&#34;<br />
+%endif<br />
+%ifarch ppc ia64<br />
+OPTIMIZE=&#34;-O0&#34;<br />
+%endif<br />
+<br />
+<div class="message-stanza-depth-1">
+%{__perl} Configure.pl \<br />
+</div>
+    --prefix=%{_usr} \<br />
+    --libdir=%{_libdir} \<br />
+    --sysconfdir=%{_sysconfdir} \<br />
+    --infodir=%{_datadir}/info \<br />
+    --mandir=%{_mandir} \<br />
+    --cc=&#34;%{__cc}&#34; \<br />
+    --cxx=%{__cxx} \<br />
+    --optimize=&#34;$OPTIMIZE&#34; \<br />
+    --parrot_is_shared \<br />
+    --disable-rpath \<br />
+    --lex=/usr/bin/flex \<br />
+    --yacc=/usr/bin/yacc \<br />
+    --libs=&#34;$LIBS&#34;<br />
+<br />
+export LD_LIBRARY_PATH=$&#40; pwd &#41;/blib/lib<br />
+make<br />
+make parrot_utils<br />
+make installable<br />
+make html<br />
+<br />
+%install<br />
+rm -rf $RPM_BUILD_ROOT<br />
+mkdir $RPM_BUILD_ROOT<br />
+<br />
+export LD_LIBRARY_PATH=$&#40; pwd &#41;/blib/lib<br />
+make install DESTDIR=$RPM_BUILD_ROOT<br />
+make install-dev DESTDIR=$RPM_BUILD_ROOT<br />
+PARROT_LIB=%{_libdir}`./parrot_config versiondir`<br />
+PARROT_INC=%{_includedir}`./parrot_config versiondir`<br />
+wd=`pwd`<br />
+for i in $RPM_BUILD_ROOT$PARROT_LIB/tools/build/* ; do<br />
+    perl -pi -e &#34;s@$wd/include@$PARROT_INC@g&#34; $i<br />
+    perl -pi -e &#34;s@$wd/src/pmc@$PARROT_INC/pmc@g&#34; $i<br />
+    perl -pi -e &#34;s@&#40;-Wl,&#41;?-L$wd/blib/lib@@&#34; $i<br />
+    perl -pi -e &#34;s@$wd@$PARROT_LIB@g&#34; $i<br />
+done<br />
+perl -pi -e &#39;s@^&#40;use lib ..FindBin::Bin/\.\./&#41;\.\.&#34;@$1lib&#34;@&#39; $RPM_BUILD_ROOT$PARROT_LIB/tools/build/dynpmc.pl<br />
+<br />
+<div class="message-stanza-depth-1">
+# Drop the docs so rpm can pick them up itself.<br />
+</div>
+rm -rf $RPM_BUILD_ROOT%{_usr}/share/doc/parrot    # necessary for SuSE<br />
+#rm -rf $RPM_BUILD_ROOT/%{_docdir}/parrot         # for Solaris?<br />
+<br />
+<div class="message-stanza-depth-1">
+# Force permissions on doc directories.<br />
+</div>
+find docs examples -type d -exec chmod 755 {} \;<br />
+find docs examples -type f -exec chmod 644 {} \;<br />
+<br />
+<div class="message-stanza-depth-1">
+# Force permissions on shared libs so they get stripped.<br />
+</div>
+find $RPM_BUILD_ROOT%{_libdir} -type f \&#40; -name &#39;*.so&#39; -o -name &#39;*.so.*&#39; \&#41; \<br />
+    -exec chmod 755 {} \;<br />
+<br />
+<div class="message-stanza-depth-1">
+# These files *probably* aren&#39;t needed.<br />
+</div>
+rm -rf $RPM_BUILD_ROOT%{_usr}/config \<br />
+    $RPM_BUILD_ROOT%{_includedir}/src \<br />
+    $RPM_BUILD_ROOT%{_usr}/src \<br />
+    $RPM_BUILD_ROOT%{_usr}/tools<br />
+<br />
+<div class="message-stanza-depth-1">
+# make libparrot.so a symlink<br />
+</div>
+&#40;cd $RPM_BUILD_ROOT%{_libdir} ; ln -fs libparrot.so.* libparrot.so&#41;<br />
+<br />
+%check<br />
+export LD_LIBRARY_PATH=$&#40; pwd &#41;/blib/lib<br />
+<div class="message-stanza-depth-1">
+# make test &lt; /dev/null<br />
+<div class="message-stanza-depth-2">
+# %{?_with_fulltest:make fulltest &lt; /dev/null}<br />
+</div>
+# make test || :<br />
+<div class="message-stanza-depth-2">
+# %{?_with_fulltest:make fulltest || :}<br />
+</div>
+</div>
+<br />
+%clean<br />
+rm -rf $RPM_BUILD_ROOT<br />
+<br />
+%post -n libparrot1_0_0 -p /sbin/ldconfig<br />
+<br />
+%postun -n libparrot1_0_0 -p /sbin/ldconfig<br />
+<br />
+%files<br />
+%defattr&#40;-,root,root,-&#41;<br />
+%exclude %{_bindir}/parrot_config<br />
+%exclude %{_bindir}/parrot_debugger<br />
+%exclude %{_bindir}/pbc_*<br />
+<div class="message-stanza-depth-1">
+%{_bindir}/*<br />
+</div>
+<br />
+%files -n libparrot1_0_0<br />
+%defattr&#40;-,root,root,-&#41;<br />
+%dir %{_libdir}/parrot<br />
+%dir %{_libdir}/parrot/*<br />
+<div class="message-stanza-depth-1">
+%{_libdir}/parrot/*/[^st]*<br />
+%{_libdir}/libparrot.so.*<br />
+</div>
+<br />
+%files docs<br />
+%defattr&#40;-,root,root,-&#41;<br />
+%doc ChangeLog CREDITS NEWS PBC_COMPAT PLATFORMS README<br />
+%doc RESPONSIBLE_PARTIES TODO<br />
+%doc docs examples<br />
+<br />
+%files devel<br />
+%defattr&#40;-,root,root,-&#41;<br />
+<div class="message-stanza-depth-1">
+%{_bindir}/parrot_config<br />
+%{_bindir}/parrot_debugger<br />
+%{_bindir}/pbc_disassemble<br />
+%{_bindir}/pbc_info<br />
+%{_bindir}/pbc_merge<br />
+%{_bindir}/pbc_to_exe<br />
+%{_bindir}/pbc_dump<br />
+%{_includedir}/parrot<br />
+%{_libdir}/libparrot.so<br />
+%{_libdir}/libparrot.a<br />
+%{_libdir}/pkgconfig/*<br />
+%{_libdir}/parrot/*/[st]*<br />
+</div>
+<br />
+%changelog<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-550510" href="/rt3/Ticket/Display.html?id=64558#txn-550510">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;09&nbsp;04:35:48&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.267586</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

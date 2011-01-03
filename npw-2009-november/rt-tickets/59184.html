@@ -1,0 +1,1456 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59184: Some fixes to split methods</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59184">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59184: Some fixes to split methods</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59184">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59184</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59184">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cdavaz
+&lt;cdavaz [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59184">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+split.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/474566/220710/split.p6">
+Sun Sep 21 23:47:06 2008 (605b) by cdavaz
+</a>
+</font></li>
+</ul>
+
+
+split.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/475076/221000/split.diff">
+Mon Sep 22 22:55:29 2008 (1.7k) by cdavaz
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/475058/220978/split.diff">
+Mon Sep 22 22:48:50 2008 (1.7k) by cdavaz
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/475056/220968/split.diff">
+Mon Sep 22 22:27:46 2008 (1.7k) by cdavaz
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/474566/220708/split.diff">
+Sun Sep 21 23:47:06 2008 (1.1k) by cdavaz
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59184">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474566" href="/rt3/Ticket/Display.html?id=59184#txn-474566">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;21&nbsp;23:47:04&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Some fixes to split methods</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Sep 2008 14:46:33 +0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Chris Davaz&#34; &lt;cdavaz <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474566/220706/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 729b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I have implemented the limit parameter on both Str.split&#40;String,<br />
+Integer&#41; and Str.split&#40;Regex, Integer&#41;. In doing so I had to change<br />
+the method signature of Str.split&#40;String&#41; to &#34;.sub &#39;split&#39; :method<br />
+:multi&#40;_, _&#41;&#34; from &#34;.sub &#39;split&#39; :method :multi&#40;&#39;String&#39;&#41;&#34;. The former<br />
+method signature is the correct one anyway as the latter just<br />
+restricts the invoker to being a &#39;String&#39; and doesn&#39;t say anything<br />
+about the argument type.<br />
+<br />
+All the tests except for one in split.p6 &#34;pass&#34; &#40;verify by just<br />
+looking at the output&#41;. The one that doesn&#39;t pass is:<br />
+<br />
+say 102030405.split&#40;0&#41;.perl;<br />
+<br />
+which produces:<br />
+<br />
+[&#34;1.&#34;, &#34;2&#34;, &#34;3e+&#34;, &#34;8&#34;]<br />
+<br />
+Note that this bug is not introduced by the patch, it was only<br />
+discovered because now we can do Int.split&#40;Int&#41;.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474566/220708/split.diff">Download split.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474566/220710/split.p6">Download split.p6</a>
+<span class="downloadcontenttype">
+[application/octet-stream 605b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474718" href="/rt3/Ticket/Display.html?id=59184#txn-474718">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;07:01:33&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474718/220784/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Sep 21 23:47:04 2008, cdavaz <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I have implemented the limit parameter on both Str.split&#40;String,<br />
+&gt; Integer&#41; and Str.split&#40;Regex, Integer&#41;. In doing so I had to change<br />
+&gt; the method signature of Str.split&#40;String&#41; to &#34;.sub &#39;split&#39; :method<br />
+&gt; :multi&#40;_, _&#41;&#34; from &#34;.sub &#39;split&#39; :method :multi&#40;&#39;String&#39;&#41;&#34;. The former<br />
+&gt; method signature is the correct one anyway as the latter just<br />
+&gt; restricts the invoker to being a &#39;String&#39; and doesn&#39;t say anything<br />
+&gt; about the argument type.<br />
+</div>
+<br />
+Applied as r31333, thank you very much.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; All the tests except for one in split.p6 &#34;pass&#34; &#40;verify by just<br />
+&gt; looking at the output&#41;. <br />
+</div>
+<br />
+For the mid-term and long term goals it would be much better if you<br />
+could supply the test cases as patches to t/spec/S29-str/split-simple.t,<br />
+and use the testing tools that are come with Test.pm. Manually comparing<br />
+output to expected output doesn&#39;t scale.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; The one that doesn&#39;t pass is:<br />
+&gt; <br />
+&gt; say 102030405.split&#40;0&#41;.perl;<br />
+&gt; <br />
+&gt; which produces:<br />
+&gt; <br />
+&gt; [&#34;1.&#34;, &#34;2&#34;, &#34;3e+&#34;, &#34;8&#34;]<br />
+&gt; <br />
+&gt; Note that this bug is not introduced by the patch, it was only<br />
+&gt; discovered because now we can do Int.split&#40;Int&#41;.<br />
+</div>
+<br />
+Aye.<br />
+<br />
+I think we have no spec &#40;yet?&#41; on how to stringify integers, and I don&#39;t<br />
+think we&#39;ll have one in the synopsis, since Larry has other things to do ;-&#41;<br />
+<br />
+It&#39;s likely that we either won&#39;t have exact standards &#40;and therefore<br />
+we&#39;ll use only small numbers for testing&#41;, or that the test suite will<br />
+define stringification rules.<br />
+<br />
+But that&#39;s not the topic of this ticket, so closing it now.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474722" href="/rt3/Ticket/Display.html?id=59184#txn-474722">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;07:01:38&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474724" href="/rt3/Ticket/Display.html?id=59184#txn-474724">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;07:01:39&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474768" href="/rt3/Ticket/Display.html?id=59184#txn-474768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;07:56:28&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Reference to ticket #59006 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474774" href="/rt3/Ticket/Display.html?id=59184#txn-474774">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;08:14:16&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474774/220816/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; The one that doesn&#39;t pass is:<br />
+&gt; &gt; <br />
+&gt; &gt; say 102030405.split&#40;0&#41;.perl;<br />
+&gt; &gt; <br />
+&gt; &gt; which produces:<br />
+&gt; &gt; <br />
+&gt; &gt; [&#34;1.&#34;, &#34;2&#34;, &#34;3e+&#34;, &#34;8&#34;]<br />
+&gt; &gt; <br />
+&gt; &gt; Note that this bug is not introduced by the patch, it was only<br />
+&gt; &gt; discovered because now we can do Int.split&#40;Int&#41;.<br />
+</div>
+&gt; <br />
+&gt; Aye.<br />
+&gt; <br />
+&gt; I think we have no spec &#40;yet?&#41; on how to stringify integers, and I don&#39;t<br />
+&gt; think we&#39;ll have one in the synopsis, since Larry has other things to<br />
+</div>
+do ;-&#41;<br />
+<br />
+I see this as being a Rakudo/Parrot bug, not a specification bug. <br />
+Clearly 102030405 should not lose precision the way it is here.  The<br />
+problem appears to be that Parrot doesn&#39;t give us a good mechanism to<br />
+stringify &#40;floating point&#41; values in a way that doesn&#39;t lose precision<br />
+-- see RT #59006.<br />
+<br />
+As to _why_ the above involves floating points at all -- currently the<br />
+Rakudo handles numeric constants from the source is to place the text<br />
+into a Perl 6 Str object, and then numify that object.  This allows us<br />
+to easily handle underscores &#34;102_030_405&#34;  as well as various radix<br />
+markers like &#34;0x&#34; and &#34;0b&#34;.  Unfortunately, the numification operator<br />
+&#40;prefix:&lt;+&gt;&#41; currently corresponds to Parrot&#39;s &#34;get_number&#34; vtable<br />
+method, which returns a num &#40;float&#41;, and when that value gets<br />
+stringified we lose precision --- thus RT #59006.<br />
+<br />
+When RT #59006 is fixed, this issue will also likely be fixed.  However,<br />
+I agree that it&#39;s also not part of this ticket&#39;s topic, and so we should<br />
+leave this closed.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475054" href="/rt3/Ticket/Display.html?id=59184#txn-475054">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;22:22:16&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475056" href="/rt3/Ticket/Display.html?id=59184#txn-475056">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;22:27:46&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475056/220962/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 286b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I have made the following fixes to split:<br />
+<br />
+A negative or zero limit returns all split elements &#40;before returned the<br />
+whole string&#41;<br />
+<br />
+If limit is less than the total number of possible elements that the<br />
+string could be split into, the last element contains the rest of the<br />
+unsplit string.<br />
+</div>
+</div>
+</div>
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">split.diff</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475056/220968/split.diff">Download split.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 31355&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -203,32 +203,44 @@<br />
+     .param int has_count    :opt_flag<br />
+     .local string objst<br />
+     .local pmc pieces<br />
+-    .local pmc tmps<br />
+     .local pmc retv<br />
+     .local int len<br />
++    .local int pos<br />
+     .local int i<br />
+ <br />
+     retv = new &#39;List&#39;<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    if has_count goto handle_count<br />
++  handle_count:<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     objst = self<br />
++    length $I0, delim<br />
+     split pieces, delim, objst<br />
+-<br />
+     len = pieces<br />
++    pos = 0<br />
+     i = 0<br />
++<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S0 = substr objst, pos<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     if i == len goto done<br />
+-<br />
+-    tmps = new &#39;Perl6Str&#39;<br />
+-    tmps = pieces[i]<br />
+-<br />
+-    retv.&#39;push&#39;&#40;tmps&#41;<br />
+-<br />
++    $S0 = pieces[i]<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    length $I1, $S0<br />
++    pos += $I0<br />
++    pos += $I1<br />
+     inc i<br />
+     goto loop<br />
++<br />
+   done:<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+@@ -246,6 +258,13 @@<br />
+     retv = new &#39;List&#39;<br />
+     start_pos = 0<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    if has_count goto handle_count<br />
++  handle_count:<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     match = regex&#40;$S0&#41;<br />
+     if match goto loop<br />
+     retv.&#39;push&#39;&#40;$S0&#41;<br />
+@@ -254,7 +273,10 @@<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S1 = substr $S0, start_pos<br />
++    retv.&#39;push&#39;&#40;$S1&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     match = regex&#40;$S0, &#39;continue&#39; =&gt; start_pos&#41;<br />
+     end_pos = match.&#39;from&#39;&#40;&#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475058" href="/rt3/Ticket/Display.html?id=59184#txn-475058">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;22:48:50&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475058/220972/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 149b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Sorry I made a small mistake in the last patch, this one gives it:<br />
+<br />
+Changed<br />
+<br />
+if has_count goto handle_count<br />
+<br />
+To<br />
+<br />
+unless has_count goto positive_count<br />
+</div>
+</div>
+</div>
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">split.diff</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475058/220978/split.diff">Download split.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 31355&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -203,32 +203,44 @@<br />
+     .param int has_count    :opt_flag<br />
+     .local string objst<br />
+     .local pmc pieces<br />
+-    .local pmc tmps<br />
+     .local pmc retv<br />
+     .local int len<br />
++    .local int pos<br />
+     .local int i<br />
+ <br />
+     retv = new &#39;List&#39;<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    unless has_count goto positive_count<br />
++  handle_count:<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     objst = self<br />
++    length $I0, delim<br />
+     split pieces, delim, objst<br />
+-<br />
+     len = pieces<br />
++    pos = 0<br />
+     i = 0<br />
++<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S0 = substr objst, pos<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     if i == len goto done<br />
+-<br />
+-    tmps = new &#39;Perl6Str&#39;<br />
+-    tmps = pieces[i]<br />
+-<br />
+-    retv.&#39;push&#39;&#40;tmps&#41;<br />
+-<br />
++    $S0 = pieces[i]<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    length $I1, $S0<br />
++    pos += $I0<br />
++    pos += $I1<br />
+     inc i<br />
+     goto loop<br />
++<br />
+   done:<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+@@ -246,6 +258,13 @@<br />
+     retv = new &#39;List&#39;<br />
+     start_pos = 0<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    unless has_count goto positive_count<br />
++  handle_count:<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     match = regex&#40;$S0&#41;<br />
+     if match goto loop<br />
+     retv.&#39;push&#39;&#40;$S0&#41;<br />
+@@ -254,7 +273,10 @@<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S1 = substr $S0, start_pos<br />
++    retv.&#39;push&#39;&#40;$S1&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     match = regex&#40;$S0, &#39;continue&#39; =&gt; start_pos&#41;<br />
+     end_pos = match.&#39;from&#39;&#40;&#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475076" href="/rt3/Ticket/Display.html?id=59184#txn-475076">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;22:55:29&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475076/220994/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 110b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Grr.. wrong again sorry!! Forgot to remove the handle_count label.<br />
+Please let me know if you see any problems.<br />
+</div>
+</div>
+</div>
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">split.diff</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475076/221000/split.diff">Download split.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 31355&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -203,32 +203,43 @@<br />
+     .param int has_count    :opt_flag<br />
+     .local string objst<br />
+     .local pmc pieces<br />
+-    .local pmc tmps<br />
+     .local pmc retv<br />
+     .local int len<br />
++    .local int pos<br />
+     .local int i<br />
+ <br />
+     retv = new &#39;List&#39;<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    unless has_count goto positive_count<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     objst = self<br />
++    length $I0, delim<br />
+     split pieces, delim, objst<br />
+-<br />
+     len = pieces<br />
++    pos = 0<br />
+     i = 0<br />
++<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S0 = substr objst, pos<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     if i == len goto done<br />
+-<br />
+-    tmps = new &#39;Perl6Str&#39;<br />
+-    tmps = pieces[i]<br />
+-<br />
+-    retv.&#39;push&#39;&#40;tmps&#41;<br />
+-<br />
++    $S0 = pieces[i]<br />
++    retv.&#39;push&#39;&#40;$S0&#41;<br />
++    length $I1, $S0<br />
++    pos += $I0<br />
++    pos += $I1<br />
+     inc i<br />
+     goto loop<br />
++<br />
+   done:<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+@@ -246,6 +257,12 @@<br />
+     retv = new &#39;List&#39;<br />
+     start_pos = 0<br />
+ <br />
++    # per Perl 5&#39;s negative LIMIT behavior<br />
++    unless has_count goto positive_count<br />
++    unless count &lt; 1 goto positive_count<br />
++    has_count = 0<br />
++<br />
++  positive_count:<br />
+     match = regex&#40;$S0&#41;<br />
+     if match goto loop<br />
+     retv.&#39;push&#39;&#40;$S0&#41;<br />
+@@ -254,7 +271,10 @@<br />
+   loop:<br />
+     unless has_count goto skip_count<br />
+     dec count<br />
+-    if count &lt; 0 goto done<br />
++    unless count &lt; 1 goto skip_count<br />
++    $S1 = substr $S0, start_pos<br />
++    retv.&#39;push&#39;&#40;$S1&#41;<br />
++    goto done<br />
+   skip_count:<br />
+     match = regex&#40;$S0, &#39;continue&#39; =&gt; start_pos&#41;<br />
+     end_pos = match.&#39;from&#39;&#40;&#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476096" href="/rt3/Ticket/Display.html?id=59184#txn-476096">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;07:49:19&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476096/221524/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 325b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Sep 22 22:55:29 2008, cdavaz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Grr.. wrong again sorry!! Forgot to remove the handle_count label.<br />
+&gt; Please let me know if you see any problems.<br />
+</div>
+<br />
+Sorry, I&#39;ve lost track of your patches &#40;probably due to our parallel<br />
+mailing list/RT/IRC conversations&#41;; are there still split&#40;&#41; patches open<br />
+which should be applied?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476366" href="/rt3/Ticket/Display.html?id=59184#txn-476366">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;22:19:39&nbsp;2008</td>
+    <td class="description">
+      cdavaz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59184] Some fixes to split methods</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 26 Sep 2008 13:18:32 +0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Chris Davaz&#34; &lt;cdavaz <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476366/221636/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 535b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Nope, that last one was it. Still waiting on a decision for how edge<br />
+cases on limit are to be handled.<br />
+<br />
+On Thu, Sep 25, 2008 at 10:49 PM, Moritz Lenz via RT<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon Sep 22 22:55:29 2008, cdavaz wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Grr.. wrong again sorry!! Forgot to remove the handle_count label.<br />
+&gt;&gt; Please let me know if you see any problems.<br />
+</div>
+&gt;<br />
+&gt; Sorry, I&#39;ve lost track of your patches &#40;probably due to our parallel<br />
+&gt; mailing list/RT/IRC conversations&#41;; are there still split&#40;&#41; patches open<br />
+&gt; which should be applied?<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-547316" href="/rt3/Ticket/Display.html?id=59184#txn-547316">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;31&nbsp;07:06:53&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/547316/260200/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 327b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;ron_&gt; rakudo: say 102030405.split&#40;0&#41;.perl;<br />
+&lt;p6eval&gt; rakudo c01555: OUTPUT«[&#34;1&#34;, &#34;2&#34;, &#34;3&#34;, &#34;4&#34;, &#34;5&#34;]␤»<br />
+&lt;ron_&gt; Looking at rt &#40;59184<br />
+http://rt.perl.org/rt3/Public/Bug/Display.html?id=59184&#41; and the current<br />
+tests in t/spec/S32-str/split-simple.t and wondering why the ticket is<br />
+still open.<br />
+&lt;masak&gt; ron_: I&#39;ll close it. thanks.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-547318" href="/rt3/Ticket/Display.html?id=59184#txn-547318">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;31&nbsp;07:06:53&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.218351</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

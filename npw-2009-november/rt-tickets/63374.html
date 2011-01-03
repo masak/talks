@@ -1,0 +1,818 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#63374: [BUG] Build fails with segfault while generating gen_settings.pir</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D63374">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#63374: [BUG] Build fails with segfault while generating gen_settings.pir</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63374">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">63374</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=63374">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+rooneg
+&lt;rooneg [at] electricjellyfish.net&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63374">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=63374">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-534684" href="/rt3/Ticket/Display.html?id=63374#txn-534684">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;20&nbsp;08:23:53&nbsp;2009</td>
+    <td class="description">
+      rooneg -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] Build fails with segfault while generating gen_settings.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 20 Feb 2009 11:23:22 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Garrett Rooney &lt;rooneg <!-- x --> at electricjellyfish.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/534684/253458/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;m getting a crash on OS X when trying to build rakudo.  This is with<br />
+parrot r36907 and the current version of rakudo<br />
+&#40;f23eda2c5251db5a90f5fdd3b587d4c234ee70e4&#41; from github.<br />
+<br />
+Here&#39;s a backtrace from the crash:<br />
+<br />
+$ gdb ../../parrot #perl6_s1.pbc --target=pir src/gen_setting.pm<br />
+GNU gdb 6.3.50-20050815 &#40;Apple version gdb-696&#41; &#40;Sat Oct 20 18:16:54 GMT 2007&#41;<br />
+Copyright 2004 Free Software Foundation, Inc.<br />
+GDB is free software, covered by the GNU General Public License, and you are<br />
+welcome to change it and/or distribute copies of it under certain conditions.<br />
+Type &#34;show copying&#34; to see the conditions.<br />
+There is absolutely no warranty for GDB.  Type &#34;show warranty&#34; for details.<br />
+This GDB was configured as &#34;i386-apple-darwin&#34;...<br />
+warning: --arch option not supported in this gdb.<br />
+Reading symbols for shared libraries ...... done<br />
+<br />
+&#40;gdb&#41; run perl6_s1.pbc --target=pir src/gen_setting.pm<br />
+Starting program: /Users/rooneg/opensrc/parrot/parrot perl6_s1.pbc<br />
+--target=pir src/gen_setting.pm<br />
+Reading symbols for shared libraries ..+ done<br />
+Reading symbols for shared libraries . done<br />
+Reading symbols for shared libraries . done<br />
+<br />
+Program received signal EXC_BAD_ACCESS, Could not access memory.<br />
+Reason: KERN_INVALID_ADDRESS at address: 0xdeadbeef<br />
+0x0020725b in Parrot_Perl6Str_get_number &#40;interp=0x400380,<br />
+pmc=0x348e428&#41; at ./perl6str.pmc:162<br />
+162                 if &#40;tolower&#40;&#40;unsigned char&#41;s1[0]&#41; == &#39;i&#39;<br />
+&#40;gdb&#41; where<br />
+#0  0x0020725b in Parrot_Perl6Str_get_number &#40;interp=0x400380,<br />
+pmc=0x348e428&#41; at ./perl6str.pmc:162<br />
+#1  0x0125db07 in Parrot_Object_get_number &#40;interp=0x400380,<br />
+pmc=0x348e470&#41; at ./src/pmc/object.c:2561<br />
+#2  0x010316d2 in Parrot_set_n_p &#40;cur_opcode=0x597244,<br />
+interp=0x400380&#41; at src/ops/set.ops:144<br />
+#3  0x010e0833 in runops_slow_core &#40;interp=0x400380, pc=0x597244&#41; at<br />
+src/runops_cores.c:459<br />
+#4  0x0109c665 in runops_int &#40;interp=0x400380, offset=22313&#41; at<br />
+src/interpreter.c:978<br />
+#5  0x0109d0f1 in runops &#40;interp=0x400380, offs=22313&#41; at src/call/ops.c:106<br />
+#6  0x0109d385 in runops_args &#40;interp=0x400380, sub=0x354160,<br />
+obj=0x28366b0, meth_unused=0x0, sig=0x12ed1d8 &#34;vP&#34;, ap=0xbffff94c<br />
+&#34;?nJ\003d\a?\002&#34;&#41; at src/call/ops.c:246<br />
+#7  0x0109e1b9 in Parrot_runops_fromc_args &#40;interp=0x400380,<br />
+sub=0x354160, sig=0x12ed1d8 &#34;vP&#34;&#41; at src/call/ops.c:313<br />
+#8  0x0107aa9e in Parrot_runcode &#40;interp=0x400380, argc=3,<br />
+argv=0xbffffaa8&#41; at src/embed.c:990<br />
+#9  0x012d374f in imcc_run_pbc &#40;interp=0x400380, obj_file=0,<br />
+output_file=0x0, argc=3, argv=0xbffffaa8&#41; at compilers/imcc/main.c:842<br />
+#10 0x012d43d6 in imcc_run &#40;interp=0x400380, sourcefile=0xbffffb48<br />
+&#34;perl6_s1.pbc&#34;, argc=3, argv=0xbffffaa8&#41; at compilers/imcc/main.c:1129<br />
+#11 0x00002b6c in main &#40;argc=3, argv=0xbffffaa8&#41; at src/main.c:61<br />
+&#40;gdb&#41; quit<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-534690" href="/rt3/Ticket/Display.html?id=63374#txn-534690">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;20&nbsp;08:23:55&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-535180" href="/rt3/Ticket/Display.html?id=63374#txn-535180">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Feb&nbsp;22&nbsp;23:38:52&nbsp;2009</td>
+    <td class="description">
+      rooneg -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63374] AutoReply: [BUG] Build fails with segfault while  generating gen_settings.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 20 Feb 2009 22:56:02 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Garrett Rooney &lt;rooneg <!-- x --> at electricjellyfish.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/535180/253746/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 456b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Feb 20, 2009 at 11:23 AM, perl6 via RT<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m getting a crash on OS X when trying to build rakudo.  This is with<br />
+&gt; parrot r36907 and the current version of rakudo<br />
+&gt; &#40;f23eda2c5251db5a90f5fdd3b587d4c234ee70e4&#41; from github.<br />
+</div>
+<br />
+Note that rolling back to parrot r36866 fixes the crash.  I haven&#39;t<br />
+done a binary search between the two versions to figure out the exact<br />
+cause of the crash, but it&#39;s somewhere in there.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536084" href="/rt3/Ticket/Display.html?id=63374#txn-536084">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;10:24:46&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536084/254226/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 759b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Feb 22 23:38:52 2009, rooneg wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, Feb 20, 2009 at 11:23 AM, perl6 via RT<br />
+&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; I&#39;m getting a crash on OS X when trying to build rakudo.  This is with<br />
+&gt; &gt; parrot r36907 and the current version of rakudo<br />
+&gt; &gt; &#40;f23eda2c5251db5a90f5fdd3b587d4c234ee70e4&#41; from github.<br />
+</div>
+&gt; <br />
+&gt; Note that rolling back to parrot r36866 fixes the crash.  I haven&#39;t<br />
+&gt; done a binary search between the two versions to figure out the exact<br />
+&gt; cause of the crash, but it&#39;s somewhere in there.<br />
+&gt; <br />
+</div>
+A patch was applied to resolve this issue recently, and current Rakudo<br />
+from GIT combined with the version of Parrot in build/PARROT_REVISION<br />
+now builds &#40;and that is pretty much Parrot HEAD at the moment&#41;.<br />
+<br />
+Thanks for reporting,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536088" href="/rt3/Ticket/Display.html?id=63374#txn-536088">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;10:24:48&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536092" href="/rt3/Ticket/Display.html?id=63374#txn-536092">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;10:24:49&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536814" href="/rt3/Ticket/Display.html?id=63374#txn-536814">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;27&nbsp;18:56:48&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63374] AutoReply: [BUG] Build fails with segfault while generating gen_settings.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 27 Feb 2009 20:56:10 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Garrett Rooney &lt;rooneg <!-- x --> at electricjellyfish.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536814/254572/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 708b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Feb 20, 2009 at 10:56:02PM -0500, Garrett Rooney wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, Feb 20, 2009 at 11:23 AM, perl6 via RT<br />
+&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; I&#39;m getting a crash on OS X when trying to build rakudo.  This is with<br />
+&gt; &gt; parrot r36907 and the current version of rakudo<br />
+&gt; &gt; &#40;f23eda2c5251db5a90f5fdd3b587d4c234ee70e4&#41; from github.<br />
+</div>
+&gt; <br />
+&gt; Note that rolling back to parrot r36866 fixes the crash.  I haven&#39;t<br />
+&gt; done a binary search between the two versions to figure out the exact<br />
+&gt; cause of the crash, but it&#39;s somewhere in there.<br />
+</div>
+<br />
+Are you still getting this same error today, with a more recent<br />
+version of Rakudo?<br />
+<br />
+Have you tried building Rakudo using the --gen-parrot option to Configure.pl ?<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537264" href="/rt3/Ticket/Display.html?id=63374#txn-537264">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;01&nbsp;02:34:42&nbsp;2009</td>
+    <td class="description">
+      rooneg -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63374] AutoReply: [BUG] Build fails with segfault while  generating gen_settings.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 27 Feb 2009 22:09:54 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Garrett Rooney &lt;rooneg <!-- x --> at electricjellyfish.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/537264/254816/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 845b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Feb 27, 2009 at 9:56 PM, Patrick R. Michaud &lt;pmichaud <!-- x --> at pobox.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, Feb 20, 2009 at 10:56:02PM -0500, Garrett Rooney wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; On Fri, Feb 20, 2009 at 11:23 AM, perl6 via RT<br />
+&gt;&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; I&#39;m getting a crash on OS X when trying to build rakudo.  This is with<br />
+&gt;&gt; &gt; parrot r36907 and the current version of rakudo<br />
+&gt;&gt; &gt; &#40;f23eda2c5251db5a90f5fdd3b587d4c234ee70e4&#41; from github.<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; Note that rolling back to parrot r36866 fixes the crash.  I haven&#39;t<br />
+&gt;&gt; done a binary search between the two versions to figure out the exact<br />
+&gt;&gt; cause of the crash, but it&#39;s somewhere in there.<br />
+</div>
+&gt;<br />
+&gt; Are you still getting this same error today, with a more recent<br />
+&gt; version of Rakudo?<br />
+</div>
+<br />
+Nope, this problem has been fixed and the bug can be closed.<br />
+Actually, I thought Jonathan had closed it already.<br />
+<br />
+-garrett<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.77983</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

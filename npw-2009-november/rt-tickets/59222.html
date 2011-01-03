@@ -1,0 +1,1220 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59222: [PATCH] string to number radix support</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59222">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59222: [PATCH] string to number radix support</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59222">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59222</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59222">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+s1n
+&lt;jswitzer [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59222">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+radix.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/475040/220952/radix.patch">
+Mon Sep 22 21:45:18 2008 (6.9k) by s1n
+</a>
+</font></li>
+</ul>
+
+
+radix-v2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/475480/221226/radix-v2.patch">
+Tue Sep 23 19:13:59 2008 (6.9k) by s1n
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59222">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475040" href="/rt3/Ticket/Display.html?id=59222#txn-475040">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;21:45:17&nbsp;2008</td>
+    <td class="description">
+      s1n -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] string to number radix support</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Sep 2008 23:44:53 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jason switzer&#34; &lt;jswitzer <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475040/220952/radix.patch">Download radix.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 6.9k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475040/220948/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 585b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This patch adds radix notation &#40;:\d&lt;...&gt;&#41; to the string-to-number conversion<br />
+routine Perl6Str::get_number. The tests haven&#39;t been written and<br />
+incorporated to test specifically the string conversion but the spectest<br />
+suite passes as of r31354 &#40;parrot&#41; and r22313 &#40;t/spec&#41;. Cordination with<br />
+moritz_ will take place to determine the location and the extent of the<br />
+tests that will be created.<br />
+<br />
+Not all radix constructs are supported yet &#40;in the works&#41;. Currently does<br />
+not support nested notation, such as :10&lt;12*23**3&gt; or functional forms such<br />
+as :10&#40;&#39;1234&#39;&#41;.<br />
+<br />
+Thanks,<br />
+<br />
+Jason &#34;s1n&#34; Switzer<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475040/220950/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 664b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475046" href="/rt3/Ticket/Display.html?id=59222#txn-475046">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;21:45:21&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475158" href="/rt3/Ticket/Display.html?id=59222#txn-475158">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;23&nbsp;03:05:27&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59222] [PATCH] string to number radix support</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Sep 2008 12:05:18 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475158/221044/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jason switzer &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;jason switzer&#34; <br />
+&gt; # Please include the string:  [perl #59222]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=59222 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; This patch adds radix notation &#40;:\d&lt;...&gt;&#41; to the string-to-number conversion<br />
+&gt; routine Perl6Str::get_number. The tests haven&#39;t been written and<br />
+&gt; incorporated to test specifically the string conversion but the spectest<br />
+&gt; suite passes as of r31354 &#40;parrot&#41; and r22313 &#40;t/spec&#41;. Cordination with<br />
+&gt; moritz_ will take place to determine the location and the extent of the<br />
+&gt; tests that will be created.<br />
+</div>
+<br />
+The tests should go into t/spec/S02-literals/radix.t if they aren&#39;t<br />
+there yet.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Not all radix constructs are supported yet &#40;in the works&#41;. Currently does<br />
+&gt; not support nested notation, such as :10&lt;12*23**3&gt; or functional forms such<br />
+&gt; as :10&#40;&#39;1234&#39;&#41;.<br />
+</div>
+<br />
+If such things are to be supported in string-to-number conversions &#40;is<br />
+that specced? where?&#41;, it should really take the way through the<br />
+grammar. In the end the user could change what he considers a number by<br />
+modifying the grammar. Also note that these expressions could grow<br />
+arbitrarily complex.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Index: perl6str.pmc<br />
+<div class="message-stanza-depth-2">
+&gt; ===================================================================<br />
+</div>
+&gt; --- perl6str.pmc      &#40;revision 31353&#41;<br />
+&gt; +++ perl6str.pmc      &#40;working copy&#41;<br />
+&gt; @@ -23,6 +23,58 @@<br />
+&gt;  #include &lt;ctype.h&gt;<br />
+&gt;  #include &lt;math.h&gt;<br />
+&gt;  <br />
+&gt; +FLOATVAL parse_number&#40;const char** start, const char* stop, FLOATVAL radix&#41; {<br />
+&gt; +    FLOATVAL number = 0.0;<br />
+&gt; +    //continue until the end or until we&#39;ve hit a non-digit<br />
+&gt; +    while &#40;*start &lt; stop &#38;&#38; isxdigit&#40;&#40;unsigned char&#41;**start&#41;&#41; {<br />
+</div>
+<br />
+Your usage of isxdigit&#40;&#41; makes me wonder - will that work for bases &gt; 16?<br />
+<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475162" href="/rt3/Ticket/Display.html?id=59222#txn-475162">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;23&nbsp;03:05:32&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475300" href="/rt3/Ticket/Display.html?id=59222#txn-475300">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;23&nbsp;06:58:08&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59222] [PATCH] string to number radix support</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Sep 2008 08:57:33 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475300/221130/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Sep 23, 2008 at 12:05:18PM +0200, Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; jason switzer &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Not all radix constructs are supported yet &#40;in the works&#41;. Currently does<br />
+&gt; &gt; not support nested notation, such as :10&lt;12*23**3&gt; or functional forms such<br />
+&gt; &gt; as :10&#40;&#39;1234&#39;&#41;.<br />
+</div>
+&gt; <br />
+&gt; If such things are to be supported in string-to-number conversions &#40;is<br />
+&gt; that specced? where?&#41;, ...<br />
+</div>
+<br />
+S02:2156:<br />
+<br />
+    The generic string-to-number converter will recognize all of these<br />
+    forms &#40;including the * form, since constant folding is not available<br />
+    to the run time&#41;.  Also allowed in strings are leading plus or minus,<br />
+    and maybe a trailing Units type for an implied scaling.  Leading and<br />
+    trailing whitespace is ignored. <br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; ...  it should really take the way through the<br />
+&gt; grammar. In the end the user could change what he considers a number by<br />
+&gt; modifying the grammar. <br />
+</div>
+<br />
+The spec doesn&#39;t mention anything about string-to-number conversion<br />
+following changes to the the grammar, so Rakudo has taken the opposite<br />
+approach -- i.e., the compiler uses the generic string-to-number converter<br />
+to evaluate the forms recognized by the grammar.  If this is backwards<br />
+then the spec likely needs an update.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Also note that these expressions could grow arbitrarily complex.<br />
+</div>
+<br />
+I think the recogized expression are &#40;currently&#41; limited to the <br />
+specific forms outlined in S02.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; Index: perl6str.pmc<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; ===================================================================<br />
+</div>
+&gt; &gt; --- perl6str.pmc    &#40;revision 31353&#41;<br />
+&gt; &gt; +++ perl6str.pmc    &#40;working copy&#41;<br />
+&gt; &gt; @@ -23,6 +23,58 @@<br />
+&gt; &gt;  #include &lt;ctype.h&gt;<br />
+&gt; &gt;  #include &lt;math.h&gt;<br />
+&gt; &gt;  <br />
+&gt; &gt; +FLOATVAL parse_number&#40;const char** start, const char* stop, FLOATVAL radix&#41; {<br />
+&gt; &gt; +    FLOATVAL number = 0.0;<br />
+&gt; &gt; +    //continue until the end or until we&#39;ve hit a non-digit<br />
+&gt; &gt; +    while &#40;*start &lt; stop &#38;&#38; isxdigit&#40;&#40;unsigned char&#41;**start&#41;&#41; {<br />
+</div>
+&gt; <br />
+&gt; Your usage of isxdigit&#40;&#41; makes me wonder - will that work for bases &gt; 16?<br />
+</div>
+<br />
+Correct, that should probably be isalnum&#40;&#41; instead.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475480" href="/rt3/Ticket/Display.html?id=59222#txn-475480">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;23&nbsp;19:13:59&nbsp;2008</td>
+    <td class="description">
+      s1n -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475480/221220/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 889b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Index: perl6str.pmc<br />
+&gt; &gt; &gt;<br />
+</div>
+</div>
+<div class="message-stanza-depth-2">
+&gt; ===================================================================<br />
+</div>
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; --- perl6str.pmc  &#40;revision 31353&#41;<br />
+&gt; &gt; &gt; +++ perl6str.pmc  &#40;working copy&#41;<br />
+&gt; &gt; &gt; @@ -23,6 +23,58 @@<br />
+&gt; &gt; &gt;  #include &lt;ctype.h&gt;<br />
+&gt; &gt; &gt;  #include &lt;math.h&gt;<br />
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; +FLOATVAL parse_number&#40;const char** start, const char* stop,<br />
+</div>
+</div>
+&gt; FLOATVAL radix&#41; {<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; +    FLOATVAL number = 0.0;<br />
+&gt; &gt; &gt; +    //continue until the end or until we&#39;ve hit a non-digit<br />
+&gt; &gt; &gt; +    while &#40;*start &lt; stop &#38;&#38; isxdigit&#40;&#40;unsigned char&#41;**start&#41;&#41; {<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt; Your usage of isxdigit&#40;&#41; makes me wonder - will that work for bases<br />
+&gt; &gt; 16?<br />
+</div>
+&gt; <br />
+&gt; Correct, that should probably be isalnum&#40;&#41; instead.<br />
+&gt; <br />
+&gt; Pm<br />
+&gt; <br />
+</div>
+<br />
+<br />
+Good catch. Since I didn&#39;t have a complete set of tests for this, I<br />
+didn&#39;t see that. The attached patch changes the isxdigit&#40;&#41; calls to<br />
+isalnum&#40;&#41;; that is the only change to the patch.<br />
+<br />
+Thanks,<br />
+<br />
+Jason &#34;s1n&#34; Switzer<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475480/221226/radix-v2.patch">Download radix-v2.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 6.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: perl6str.pmc<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- perl6str.pmc        &#40;revision 31354&#41;<br />
++++ perl6str.pmc        &#40;working copy&#41;<br />
+@@ -23,6 +23,58 @@<br />
+ #include &lt;ctype.h&gt;<br />
+ #include &lt;math.h&gt;<br />
+ <br />
++FLOATVAL parse_number&#40;const char** start, const char* stop, FLOATVAL radix&#41; {<br />
++    FLOATVAL number = 0.0;<br />
++    //continue until the end or until we&#39;ve hit a non-digit<br />
++    while &#40;*start &lt; stop &#38;&#38; isalnum&#40;&#40;unsigned char&#41;**start&#41;&#41; {<br />
++        /* number must not contain values less than the radix */<br />
++        unsigned int current;<br />
++        if &#40;isdigit&#40;**start&#41;&#41; current = &#40;**start&#41; - &#39;0&#39;;<br />
++        else current = tolower&#40;**start&#41; - &#39;a&#39; + 10;<br />
++        //number += &#40;&#40;*start&#41; - &#39;0&#39;&#41; * frac;<br />
++        if &#40;current &gt;= radix&#41;<br />
++            return number;<br />
++<br />
++        number = number * radix + current;<br />
++        &#40;*start&#41;++;<br />
++<br />
++        /* skip past the digit seperator _ */<br />
++        if &#40;*start &lt; stop &#38;&#38; **start == &#39;_&#39;&#41; {<br />
++            if&#40;!isalnum&#40;&#40;unsigned char&#41;*&#40;&#40;*start&#41; + 1&#41;&#41;&#41; {<br />
++                return number;<br />
++            }<br />
++            &#40;*start&#41;++;<br />
++        }<br />
++    }<br />
++    return number;<br />
++}<br />
++<br />
++FLOATVAL parse_fraction&#40;const char** start, const char* stop, FLOATVAL radix&#41; {<br />
++    FLOATVAL frac = 1.0;<br />
++    FLOATVAL number = 0.0;<br />
++    while &#40;*start &lt; stop &#38;&#38; isalnum&#40;&#40;unsigned char&#41;**start&#41;&#41; {<br />
++        frac /= radix;<br />
++        unsigned int current;<br />
++        if &#40;isdigit&#40;**start&#41;&#41; current = &#40;**start&#41; - &#39;0&#39;;<br />
++        else current = tolower&#40;**start&#41; - &#39;a&#39; + 10;<br />
++<br />
++        /* if we discover scientific notation, stop parsing */<br />
++        if &#40;tolower&#40;**start&#41; == &#39;e&#39; &#38;&#38; radix == 10&#41;<br />
++            return number;<br />
++        if &#40;current &gt;= radix&#41;<br />
++            return 0;<br />
++        <br />
++        number += current * frac;<br />
++        &#40;*start&#41;++;<br />
++        <br />
++        /* skip past the digit seperator _ */<br />
++        if &#40;*start &lt; stop &#38;&#38; **start == &#39;_&#39;<br />
++            &#38;&#38; isdigit&#40;&#40;unsigned char&#41;**&#40;start + 1&#41;&#41;&#41;<br />
++            &#40;*start&#41;++;<br />
++    }<br />
++    return number;<br />
++}<br />
++<br />
+ pmclass Perl6Str<br />
+     extends  String<br />
+     provides string<br />
+@@ -63,12 +115,14 @@<br />
+ <br />
+     FLOATVAL get_number&#40;&#41; {<br />
+         STRING   *s    = &#40;STRING *&#41;PMC_str_val&#40;SELF&#41;;<br />
+-        FLOATVAL  sign = 1.0;<br />
+-        FLOATVAL  f    = 0.0;<br />
++        FLOATVAL sign = 1.0;<br />
++        FLOATVAL f    = 0.0;<br />
++        FLOATVAL radix = 10.0;<br />
++        int radfound = 0;<br />
+ <br />
+-        if &#40;s&#41; {<br />
++        if &#40;s &#38;&#38; s-&gt;strstart&#41; {<br />
+             const char *s1         = s-&gt;strstart;<br />
+-            const char * const end = s1 + s-&gt;bufused;<br />
++            const char * const end = s1 + strlen&#40;s1&#41;;<br />
+ <br />
+             /* skip leading whitespace */<br />
+             while &#40;s1 &lt; end &#38;&#38; isspace&#40;&#40;unsigned char&#41;*s1&#41;&#41;<br />
+@@ -92,92 +146,59 @@<br />
+                     case &#39;x&#39;:<br />
+                     case &#39;X&#39;:<br />
+                         s1++;<br />
+-                        while &#40;s1 &lt; end &#38;&#38; isxdigit&#40;&#40;unsigned char&#41;*s1&#41;&#41; {<br />
+-                            f *= 16;<br />
+-                            if &#40;isdigit&#40;&#40;unsigned char&#41;*s1&#41;&#41;<br />
+-                                f += &#40;*s1&#41; - &#39;0&#39;;<br />
+-                            else<br />
+-                                f += tolower&#40;&#40;unsigned char&#41;*s1&#41; - &#39;a&#39; + 10;<br />
+-<br />
+-                            s1++;<br />
+-<br />
+-                            if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;&#41;<br />
+-                                s1++;<br />
+-                        }<br />
+-                        return sign * f;<br />
++                        return parse_number&#40;&#38;s1, end, 16&#41;;<br />
+                     case &#39;d&#39;:<br />
+                     case &#39;D&#39;:<br />
+                         s1++;<br />
+-                        while &#40;s1 &lt; end &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*s1&#41;&#41; {<br />
+-                            f = f * 10 + &#40;*s1&#41; - &#39;0&#39;;<br />
+-                            s1++;<br />
+-<br />
+-                            if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;&#41;<br />
+-                                s1++;<br />
+-                        }<br />
+-<br />
+-                        return sign * f;<br />
++                        return parse_number&#40;&#38;s1, end, 10&#41;;<br />
+                     case &#39;o&#39;:<br />
+                     case &#39;O&#39;:<br />
+                         s1++;<br />
+-                        while &#40;s1 &lt; end &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*s1&#41;<br />
+-                                        &#38;&#38; *s1 &lt;= &#39;7&#39;&#41; {<br />
+-                            f = f * 8 + &#40;*s1&#41; - &#39;0&#39;;<br />
+-<br />
+-                            s1++;<br />
+-<br />
+-                            if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;&#41;<br />
+-                                s1++;<br />
+-                        }<br />
+-<br />
+-                        return sign * f;<br />
++                        return parse_number&#40;&#38;s1, end, 8&#41;;<br />
+                     case &#39;b&#39;:<br />
+                     case &#39;B&#39;:<br />
+                         s1++;<br />
+-                        while &#40;s1 &lt; end &#38;&#38; &#40;*s1 == &#39;0&#39; || *s1 == &#39;1&#39;&#41;&#41; {<br />
+-                            f = f * 2 + &#40;*s1&#41; - &#39;0&#39;;<br />
+-                            s1++;<br />
+-<br />
+-                            if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;&#41;<br />
+-                                s1++;<br />
+-                        }<br />
+-<br />
+-                        return sign * f;<br />
++                        return parse_number&#40;&#38;s1, end, 2&#41;;<br />
+                     default:<br />
+                         break;<br />
+                 }<br />
+                 if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;<br />
+-                &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*&#40;s1+1&#41;&#41;&#41;<br />
++                    &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*&#40;s1 + 1&#41;&#41;&#41;<br />
+                     s1++;<br />
+             }<br />
+ <br />
+-            /* handle integer part */<br />
+-            while &#40;s1 &lt; end &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*s1&#41;&#41; {<br />
+-                f = f * 10 + &#40;*s1&#41; - &#39;0&#39;;<br />
++            /* handle \d+:&#40;[0..9A..Za..z]&#41; radix notation */<br />
++            if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;:&#39;&#41; {<br />
+                 s1++;<br />
++                radfound = 1;<br />
++               <br />
++                if &#40;s1 &gt;= end&#41;<br />
++                    return f;<br />
+ <br />
+-                if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39; &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*&#40;s1+1&#41;&#41;&#41;<br />
++                radix = parse_number&#40;&#38;s1, end, 10&#41;;<br />
++                if&#40;*s1 != &#39;&lt;&#39;&#41; {<br />
++                    return 0.0;<br />
++                } else {<br />
+                     s1++;<br />
++                }<br />
+             }<br />
+ <br />
+-            /* handle floating point part */<br />
++<br />
++            /* handle integer part */<br />
++            if &#40;s1 &lt; end &#38;&#38; isalnum&#40;&#40;unsigned char&#41;*s1&#41;&#41; {<br />
++                f = parse_number&#40;&#38;s1, end, radix&#41;;<br />
++            }<br />
++<br />
++            /* handle doubleing point part */<br />
+             if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;.&#39;&#41; {<br />
+-                FLOATVAL frac = 1.0;<br />
+                 s1++;<br />
+-                while &#40;s1 &lt; end &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*s1&#41;&#41; {<br />
+-                    frac /= 10;<br />
+-                    f    += &#40;&#40;*s1&#41; - &#39;0&#39;&#41; * frac;<br />
+-                    s1++;<br />
+-                    if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;_&#39;<br />
+-                    &#38;&#38; isdigit&#40;&#40;unsigned char&#41;*&#40;s1+1&#41;&#41;&#41;<br />
+-                        s1++;<br />
+-                }<br />
++                f += parse_fraction&#40;&#38;s1, end, radix&#41;;<br />
+             }<br />
+ <br />
+             /* handle exponential part */<br />
+             if &#40;s1 &lt; end &#38;&#38; &#40;*s1 == &#39;e&#39; || *s1 == &#39;E&#39;&#41;&#41; {<br />
+-                INTVAL exp_val  = 0;<br />
+-                INTVAL exp_sign = 1;<br />
++                int exp_val  = 0;<br />
++                int exp_sign = 1;<br />
+                 s1++;<br />
+ <br />
+                 if &#40;s1 &lt; end &#38;&#38; *s1 == &#39;+&#39;&#41;<br />
+@@ -197,6 +218,10 @@<br />
+ <br />
+                 return sign * f * pow&#40;10.0, exp_val * exp_sign&#41;;<br />
+             }<br />
++            <br />
++            //FIXME how to check for missing &gt;?<br />
++            if &#40;radfound &#38;&#38; *s1 != &#39;&gt;&#39;&#41;<br />
++                return 0.0;<br />
+         }<br />
+ <br />
+         return sign * f;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475484" href="/rt3/Ticket/Display.html?id=59222#txn-475484">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;23&nbsp;19:15:35&nbsp;2008</td>
+    <td class="description">
+      s1n -  Dependency by http://rt.perl.org/rt3/Ticket/Display.html?id=57970 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510406" href="/rt3/Ticket/Display.html?id=59222#txn-510406">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;18:51:00&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/510406/240428/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 30b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied in r34167, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510410" href="/rt3/Ticket/Display.html?id=59222#txn-510410">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;18:51:02&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510414" href="/rt3/Ticket/Display.html?id=59222#txn-510414">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;18:51:14&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.85243</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

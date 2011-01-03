@@ -1,0 +1,985 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58578: [BUG] Segementation fault after a ~500 regex compilations + matches</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58578">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58578: [BUG] Segementation fault after a ~500 regex compilations + matches</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58578">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58578</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58578">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58578">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+rakudo_rx_seggie.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/466362/216118/rakudo_rx_seggie.patch">
+Thu Sep 04 18:58:22 2008 (433b) by chromatic <!-- x --> at wgz.org
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58578">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466166" href="/rt3/Ticket/Display.html?id=58578#txn-466166">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;11:40:36&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] Segementation fault after a ~500 regex compilations + matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 04 Sep 2008 20:40:30 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/466166/215972/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 403b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r30754 segfaults while running some regexe tests.<br />
+How to reproduce:<br />
+<br />
+cd languages/perl6/t/spec/<br />
+vim t/spec/S05-mass/pge-tests.t   # set variable $segfault_limit to 745<br />
+svn up -r 22156<br />
+cd ../..<br />
+../../parrot perl6.pbc t/spec/S05-mass/pge-tests.t<br />
+<br />
+wait patiently until it dies. Adding -G doesn&#39;t remove that segfault.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466172" href="/rt3/Ticket/Display.html?id=58578#txn-466172">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;11:40:39&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466334" href="/rt3/Ticket/Display.html?id=58578#txn-466334">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;17:45:14&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &#40;via RT&#41; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58578] [BUG] Segementation fault after a ~500 regex compilations + matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 4 Sep 2008 17:43:55 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/466334/216098/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thursday 04 September 2008 11:40:36 Moritz Lenz wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Moritz Lenz<br />
+&gt; # Please include the string:  [perl #58578]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=58578 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Rakudo r30754 segfaults while running some regexe tests.<br />
+&gt; How to reproduce:<br />
+&gt;<br />
+&gt; cd languages/perl6/t/spec/<br />
+&gt; vim t/spec/S05-mass/pge-tests.t   # set variable $segfault_limit to 745<br />
+&gt; svn up -r 22156<br />
+&gt; cd ../..<br />
+&gt; ../../parrot perl6.pbc t/spec/S05-mass/pge-tests.t<br />
+&gt;<br />
+&gt; wait patiently until it dies. Adding -G doesn&#39;t remove that segfault.<br />
+</div>
+<br />
+Run it through GDB, and it looks like Parrot runs out of stack space <br />
+recursivelyly throwing exceptions.  If someone modifies Rakudo not to catch <br />
+the topmost exception, I bet we could track this down faster.<br />
+<br />
+&#40;I also modified the test file to skip the first 500+ tests, and I still get <br />
+weird segfaults here.&#41;<br />
+<br />
+Ah, I&#39;ve seen this sort of thing before.<br />
+<br />
+#152 0xb7c484c1 in fail_if_type_exists &#40;interp=0x804f040, name=0xb7285c48&#41;<br />
+    at src/oo.c:619<br />
+#153 0xb7c48534 in Parrot_oo_register_type &#40;interp=0x804f040, name=0xb7285c48&#41;<br />
+    at src/oo.c:649<br />
+#154 0xb7de95da in init_class_from_hash &#40;interp=0x804f040, self=0xb7285af8, <br />
+    info=0xb7285938&#41; at ./src/pmc/class.pmc:222<br />
+#155 0xb7deb038 in Parrot_Class_init_pmc &#40;interp=0x804f040, pmc=0xb7285af8, <br />
+    init_data=0xb7285c48&#41; at ./src/pmc/class.pmc:512<br />
+#156 0xb7c53f01 in pmc_new_init &#40;interp=0x804f040, base_type=49, <br />
+    init=0xb7285c48&#41; at src/pmc.c:368<br />
+#157 0xb7bba048 in Parrot_newclass_p_p &#40;cur_opcode=0xb7ab0b24, <br />
+    interp=0x804f040&#41; at src/ops/object.ops:249<br />
+#158 0xb7c5490c in runops_slow_core &#40;interp=0x804f040, pc=0xb7ab0b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#159 0xb7c15e49 in runops_int &#40;interp=0x804f040, offset=3289&#41;<br />
+---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---<br />
+    at src/interpreter.c:937<br />
+#160 0xb7c16723 in runops &#40;interp=0x804f040, offs=3289&#41; at src/inter_run.c:101<br />
+#161 0xb7c169ef in runops_args &#40;interp=0x804f040, sub=0xb728d268, <br />
+    obj=0x80a7f50, meth_unused=0x0, sig=0xb7e884e8 &#34;vPS&#34;, <br />
+    ap=0xbf82f8ac &#34;@��&lt;\020n��L\b�\202���@�004\b@��&lt;\020n�\024&#34;&#41;<br />
+    at src/inter_run.c:236<br />
+#162 0xb7c16b3c in Parrot_runops_fromc_args &#40;interp=0x804f040, sub=0xb728d268, <br />
+    sig=0xb7e884e8 &#34;vPS&#34;&#41; at src/inter_run.c:300<br />
+#163 0xb7c026aa in Parrot_ex_throw_from_c &#40;interp=0x804f040, <br />
+    exception=0xb728ce40&#41; at src/exceptions.c:292<br />
+#164 0xb7c0277e in Parrot_ex_throw_from_c_args &#40;interp=0x804f040, <br />
+    ret_addr=0x0, exitcode=20, <br />
+    format=0xb7e8b644 &#34;Class %Ss already registered!\n&#34;&#41;<br />
+    at src/exceptions.c:339<br />
+#165 0xb7c484c1 in fail_if_type_exists &#40;interp=0x804f040, name=0xb728d134&#41;<br />
+    at src/oo.c:619<br />
+#166 0xb7c48534 in Parrot_oo_register_type &#40;interp=0x804f040, name=0xb728d134&#41;<br />
+    at src/oo.c:649<br />
+#167 0xb7de95da in init_class_from_hash &#40;interp=0x804f040, self=0xb728d08c, <br />
+    info=0xb728ce94&#41; at ./src/pmc/class.pmc:222<br />
+#168 0xb7deb038 in Parrot_Class_init_pmc &#40;interp=0x804f040, pmc=0xb728d08c, <br />
+    init_data=0xb728d134&#41; at ./src/pmc/class.pmc:512<br />
+#169 0xb7c53f01 in pmc_new_init &#40;interp=0x804f040, base_type=49, <br />
+    init=0xb728d134&#41; at src/pmc.c:368<br />
+#170 0xb7bba048 in Parrot_newclass_p_p &#40;cur_opcode=0xb7ab0b24, <br />
+    interp=0x804f040&#41; at src/ops/object.ops:249<br />
+<br />
+This co-recurses for a while, and then Parrot runs out of contexts, and *that* <br />
+exception loops for a while.  An exception handler around here is wonky in <br />
+that it causes an attempt to register a new type.  Fun.<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466336" href="/rt3/Ticket/Display.html?id=58578#txn-466336">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;17:45:15&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &#40;via RT&#41; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58578] [BUG] Segementation fault after a ~500 regex compilations + matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 4 Sep 2008 17:43:55 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/466336/216100/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thursday 04 September 2008 11:40:36 Moritz Lenz wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Moritz Lenz<br />
+&gt; # Please include the string:  [perl #58578]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=58578 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Rakudo r30754 segfaults while running some regexe tests.<br />
+&gt; How to reproduce:<br />
+&gt;<br />
+&gt; cd languages/perl6/t/spec/<br />
+&gt; vim t/spec/S05-mass/pge-tests.t   # set variable $segfault_limit to 745<br />
+&gt; svn up -r 22156<br />
+&gt; cd ../..<br />
+&gt; ../../parrot perl6.pbc t/spec/S05-mass/pge-tests.t<br />
+&gt;<br />
+&gt; wait patiently until it dies. Adding -G doesn&#39;t remove that segfault.<br />
+</div>
+<br />
+Run it through GDB, and it looks like Parrot runs out of stack space <br />
+recursivelyly throwing exceptions.  If someone modifies Rakudo not to catch <br />
+the topmost exception, I bet we could track this down faster.<br />
+<br />
+&#40;I also modified the test file to skip the first 500+ tests, and I still get <br />
+weird segfaults here.&#41;<br />
+<br />
+Ah, I&#39;ve seen this sort of thing before.<br />
+<br />
+#152 0xb7c484c1 in fail_if_type_exists &#40;interp=0x804f040, name=0xb7285c48&#41;<br />
+    at src/oo.c:619<br />
+#153 0xb7c48534 in Parrot_oo_register_type &#40;interp=0x804f040, name=0xb7285c48&#41;<br />
+    at src/oo.c:649<br />
+#154 0xb7de95da in init_class_from_hash &#40;interp=0x804f040, self=0xb7285af8, <br />
+    info=0xb7285938&#41; at ./src/pmc/class.pmc:222<br />
+#155 0xb7deb038 in Parrot_Class_init_pmc &#40;interp=0x804f040, pmc=0xb7285af8, <br />
+    init_data=0xb7285c48&#41; at ./src/pmc/class.pmc:512<br />
+#156 0xb7c53f01 in pmc_new_init &#40;interp=0x804f040, base_type=49, <br />
+    init=0xb7285c48&#41; at src/pmc.c:368<br />
+#157 0xb7bba048 in Parrot_newclass_p_p &#40;cur_opcode=0xb7ab0b24, <br />
+    interp=0x804f040&#41; at src/ops/object.ops:249<br />
+#158 0xb7c5490c in runops_slow_core &#40;interp=0x804f040, pc=0xb7ab0b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#159 0xb7c15e49 in runops_int &#40;interp=0x804f040, offset=3289&#41;<br />
+---Type &lt;return&gt; to continue, or q &lt;return&gt; to quit---<br />
+    at src/interpreter.c:937<br />
+#160 0xb7c16723 in runops &#40;interp=0x804f040, offs=3289&#41; at src/inter_run.c:101<br />
+#161 0xb7c169ef in runops_args &#40;interp=0x804f040, sub=0xb728d268, <br />
+    obj=0x80a7f50, meth_unused=0x0, sig=0xb7e884e8 &#34;vPS&#34;, <br />
+    ap=0xbf82f8ac &#34;@��&lt;\020n��L\b�\202���@�004\b@��&lt;\020n�\024&#34;&#41;<br />
+    at src/inter_run.c:236<br />
+#162 0xb7c16b3c in Parrot_runops_fromc_args &#40;interp=0x804f040, sub=0xb728d268, <br />
+    sig=0xb7e884e8 &#34;vPS&#34;&#41; at src/inter_run.c:300<br />
+#163 0xb7c026aa in Parrot_ex_throw_from_c &#40;interp=0x804f040, <br />
+    exception=0xb728ce40&#41; at src/exceptions.c:292<br />
+#164 0xb7c0277e in Parrot_ex_throw_from_c_args &#40;interp=0x804f040, <br />
+    ret_addr=0x0, exitcode=20, <br />
+    format=0xb7e8b644 &#34;Class %Ss already registered!\n&#34;&#41;<br />
+    at src/exceptions.c:339<br />
+#165 0xb7c484c1 in fail_if_type_exists &#40;interp=0x804f040, name=0xb728d134&#41;<br />
+    at src/oo.c:619<br />
+#166 0xb7c48534 in Parrot_oo_register_type &#40;interp=0x804f040, name=0xb728d134&#41;<br />
+    at src/oo.c:649<br />
+#167 0xb7de95da in init_class_from_hash &#40;interp=0x804f040, self=0xb728d08c, <br />
+    info=0xb728ce94&#41; at ./src/pmc/class.pmc:222<br />
+#168 0xb7deb038 in Parrot_Class_init_pmc &#40;interp=0x804f040, pmc=0xb728d08c, <br />
+    init_data=0xb728d134&#41; at ./src/pmc/class.pmc:512<br />
+#169 0xb7c53f01 in pmc_new_init &#40;interp=0x804f040, base_type=49, <br />
+    init=0xb728d134&#41; at src/pmc.c:368<br />
+#170 0xb7bba048 in Parrot_newclass_p_p &#40;cur_opcode=0xb7ab0b24, <br />
+    interp=0x804f040&#41; at src/ops/object.ops:249<br />
+<br />
+This co-recurses for a while, and then Parrot runs out of contexts, and *that* <br />
+exception loops for a while.  An exception handler around here is wonky in <br />
+that it causes an attempt to register a new type.  Fun.<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466338" href="/rt3/Ticket/Display.html?id=58578#txn-466338">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;17:45:17&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466340" href="/rt3/Ticket/Display.html?id=58578#txn-466340">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;17:45:17&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-466362" href="/rt3/Ticket/Display.html?id=58578#txn-466362">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;04&nbsp;18:58:21&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &#40;via RT&#41; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58578] [BUG] Segementation fault after a ~500 regex compilations + matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 4 Sep 2008 18:57:30 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/466362/216116/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 502b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thursday 04 September 2008 17:43:55 chromatic wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Run it through GDB, and it looks like Parrot runs out of stack space<br />
+&gt; recursively throwing exceptions.  If someone modifies Rakudo not to catch<br />
+&gt; the topmost exception, I bet we could track this down faster.<br />
+</div>
+<br />
+... and here&#39;s what I think the problem might be.  At least this seems to fix <br />
+it for me.<br />
+<br />
+Just don&#39;t ask me *why* things to pear-shaped, unless this really is a silly <br />
+off-by-one error I haven&#39;t traced on paper yet to prove.<br />
+<br />
+-- c<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/466362/216118/rakudo_rx_seggie.patch">Download rakudo_rx_seggie.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 433b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492310" href="/rt3/Ticket/Display.html?id=58578#txn-492310">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:31:12&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at pmichaud.com</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492310/230134/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 120b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Looks to me like this bug was resolved around r30772.  If anyone else<br />
+encounters the bug, re-open a ticket.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492314" href="/rt3/Ticket/Display.html?id=58578#txn-492314">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:31:13&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492318" href="/rt3/Ticket/Display.html?id=58578#txn-492318">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:31:15&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.507919</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

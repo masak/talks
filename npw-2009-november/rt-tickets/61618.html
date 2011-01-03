@@ -1,0 +1,922 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61618: [PATCH] Report the number of elements in an infinite range correctly</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61618">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61618: [PATCH] Report the number of elements in an infinite range correctly</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61618">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61618</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61618">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cspencer
+&lt;cspencer [at] sprocket.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61618">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+infinite-range.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/512384/241558/infinite-range.patch">
+Thu Dec 25 22:03:50 2008 (11.1k) by cspencer
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511956/241386/infinite-range.patch">
+Wed Dec 24 13:57:31 2008 (10.1k) by cspencer
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511562/241160/infinite-range.patch">
+Tue Dec 23 21:39:03 2008 (10.1k) by cspencer
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511042/240802/infinite-range.patch">
+Mon Dec 22 09:46:43 2008 (2.9k) by cspencer
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61618">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511042" href="/rt3/Ticket/Display.html?id=61618#txn-511042">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;09:46:43&nbsp;2008</td>
+    <td class="description">
+      cspencer -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Report the number of elements in an infinite range correctly</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Dec 2008 10:46:17 -0700 &#40;MST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Rakudo Bugs &lt;rakudobugs <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Cory Spencer &lt;cspencer <!-- x --> at sprocket.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511042/240800/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 189b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+The attatched patch lets an infinite Range &#40;ie. &#40;1..Inf&#41;&#41; report its <br />
+length as Inf.<br />
+<br />
+It also adds temporary !FAIL cases when an infinite range is converted <br />
+into a list or string context.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511042/240802/infinite-range.patch">Download infinite-range.patch</a>
+<span class="downloadcontenttype">
+[text/plain 2.9k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511048" href="/rt3/Ticket/Display.html?id=61618#txn-511048">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;09:46:47&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511088" href="/rt3/Ticket/Display.html?id=61618#txn-511088">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;12:08:55&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511088/240830/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Dec 22 09:46:43 2008, cspencer wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; The attatched patch lets an infinite Range &#40;ie. &#40;1..Inf&#41;&#41; report its <br />
+&gt; length as Inf.<br />
+&gt; <br />
+&gt; It also adds temporary !FAIL cases when an infinite range is converted <br />
+&gt; into a list or string context.<br />
+</div>
+<br />
+The patch needs some rework before it can be accepted.  <br />
+<br />
+First, I&#39;d prefer to avoid the duplication of code between the<br />
+get_integer and get_number vtable functions; better would be put the<br />
+logic into the .elems method, and then have the vtable functions get the<br />
+results from .elems instead of vice-versa.<br />
+<br />
+Second, I&#39;d like .elems to be able to figure out the size of the range<br />
+without having to generate the full list and take the size of that. <br />
+&#40;That might not be easy to manage, so I&#39;ll accept an interim patch that<br />
+builds the list for now if that&#39;s all we can do.&#41;<br />
+<br />
+Third, note that the get_string vtable function can&#39;t really return a<br />
+!FAIL, because it&#39;s constrained to return only native strings &#40;which<br />
+can&#39;t hold a Failure object&#41;.  So that probably needs some rework.<br />
+<br />
+So, work on those a bit and resubmit.   Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511092" href="/rt3/Ticket/Display.html?id=61618#txn-511092">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;12:08:57&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511562" href="/rt3/Ticket/Display.html?id=61618#txn-511562">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;23&nbsp;21:39:03&nbsp;2008</td>
+    <td class="description">
+      cspencer -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511562/241154/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Here&#39;s take two which should handle things a bit better for many cases.<br />
+ It&#39;s passed all spectests as of revision 34313.<br />
+<br />
+It also adds a reverse&#40;&#41; method which returns another Range object.<br />
+<br />
+Please let me know if there any problems!<br />
+<br />
+Cory<br />
+<br />
+<br />
+On Mon Dec 22 12:08:55 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon Dec 22 09:46:43 2008, cspencer wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+&gt; &gt; The attatched patch lets an infinite Range &#40;ie. &#40;1..Inf&#41;&#41; report its <br />
+&gt; &gt; length as Inf.<br />
+&gt; &gt; <br />
+&gt; &gt; It also adds temporary !FAIL cases when an infinite range is converted <br />
+&gt; &gt; into a list or string context.<br />
+</div>
+&gt; <br />
+&gt; The patch needs some rework before it can be accepted.  <br />
+&gt; <br />
+&gt; First, I&#39;d prefer to avoid the duplication of code between the<br />
+&gt; get_integer and get_number vtable functions; better would be put the<br />
+&gt; logic into the .elems method, and then have the vtable functions get the<br />
+&gt; results from .elems instead of vice-versa.<br />
+&gt; <br />
+&gt; Second, I&#39;d like .elems to be able to figure out the size of the range<br />
+&gt; without having to generate the full list and take the size of that. <br />
+&gt; &#40;That might not be easy to manage, so I&#39;ll accept an interim patch that<br />
+&gt; builds the list for now if that&#39;s all we can do.&#41;<br />
+&gt; <br />
+&gt; Third, note that the get_string vtable function can&#39;t really return a<br />
+&gt; !FAIL, because it&#39;s constrained to return only native strings &#40;which<br />
+&gt; can&#39;t hold a Failure object&#41;.  So that probably needs some rework.<br />
+&gt; <br />
+&gt; So, work on those a bit and resubmit.   Thanks!<br />
+&gt; <br />
+&gt; Pm<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511562/241160/infinite-range.patch">Download infinite-range.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 10.1k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511956" href="/rt3/Ticket/Display.html?id=61618#txn-511956">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;24&nbsp;13:57:30&nbsp;2008</td>
+    <td class="description">
+      cspencer -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511956/241380/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+An updated version of the patch is attached that fixes a bug in the<br />
+stringification vtable routine.<br />
+<br />
+On Tue Dec 23 21:39:03 2008, cspencer wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s take two which should handle things a bit better for many cases.<br />
+&gt;  It&#39;s passed all spectests as of revision 34313.<br />
+&gt; <br />
+&gt; It also adds a reverse&#40;&#41; method which returns another Range object.<br />
+&gt; <br />
+&gt; Please let me know if there any problems!<br />
+&gt; <br />
+&gt; Cory<br />
+&gt; <br />
+&gt; <br />
+&gt; On Mon Dec 22 12:08:55 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; On Mon Dec 22 09:46:43 2008, cspencer wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; <br />
+&gt; &gt; &gt; The attatched patch lets an infinite Range &#40;ie. &#40;1..Inf&#41;&#41; report its <br />
+&gt; &gt; &gt; length as Inf.<br />
+&gt; &gt; &gt; <br />
+&gt; &gt; &gt; It also adds temporary !FAIL cases when an infinite range is<br />
+</div>
+</div>
+</div>
+converted <br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; into a list or string context.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The patch needs some rework before it can be accepted.  <br />
+&gt; &gt; <br />
+&gt; &gt; First, I&#39;d prefer to avoid the duplication of code between the<br />
+&gt; &gt; get_integer and get_number vtable functions; better would be put the<br />
+&gt; &gt; logic into the .elems method, and then have the vtable functions get the<br />
+&gt; &gt; results from .elems instead of vice-versa.<br />
+&gt; &gt; <br />
+&gt; &gt; Second, I&#39;d like .elems to be able to figure out the size of the range<br />
+&gt; &gt; without having to generate the full list and take the size of that. <br />
+&gt; &gt; &#40;That might not be easy to manage, so I&#39;ll accept an interim patch that<br />
+&gt; &gt; builds the list for now if that&#39;s all we can do.&#41;<br />
+&gt; &gt; <br />
+&gt; &gt; Third, note that the get_string vtable function can&#39;t really return a<br />
+&gt; &gt; !FAIL, because it&#39;s constrained to return only native strings &#40;which<br />
+&gt; &gt; can&#39;t hold a Failure object&#41;.  So that probably needs some rework.<br />
+&gt; &gt; <br />
+&gt; &gt; So, work on those a bit and resubmit.   Thanks!<br />
+&gt; &gt; <br />
+&gt; &gt; Pm<br />
+</div>
+&gt; <br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511956/241386/infinite-range.patch">Download infinite-range.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 10.1k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512384" href="/rt3/Ticket/Display.html?id=61618#txn-512384">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;25&nbsp;22:03:47&nbsp;2008</td>
+    <td class="description">
+      cspencer -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/512384/241552/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This update to the patch adds support for Whatever objects in ranges.<br />
+<br />
+On Mon Dec 22 12:08:55 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon Dec 22 09:46:43 2008, cspencer wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+&gt; &gt; The attatched patch lets an infinite Range &#40;ie. &#40;1..Inf&#41;&#41; report its <br />
+&gt; &gt; length as Inf.<br />
+&gt; &gt; <br />
+&gt; &gt; It also adds temporary !FAIL cases when an infinite range is converted <br />
+&gt; &gt; into a list or string context.<br />
+</div>
+&gt; <br />
+&gt; The patch needs some rework before it can be accepted.  <br />
+&gt; <br />
+&gt; First, I&#39;d prefer to avoid the duplication of code between the<br />
+&gt; get_integer and get_number vtable functions; better would be put the<br />
+&gt; logic into the .elems method, and then have the vtable functions get the<br />
+&gt; results from .elems instead of vice-versa.<br />
+&gt; <br />
+&gt; Second, I&#39;d like .elems to be able to figure out the size of the range<br />
+&gt; without having to generate the full list and take the size of that. <br />
+&gt; &#40;That might not be easy to manage, so I&#39;ll accept an interim patch that<br />
+&gt; builds the list for now if that&#39;s all we can do.&#41;<br />
+&gt; <br />
+&gt; Third, note that the get_string vtable function can&#39;t really return a<br />
+&gt; !FAIL, because it&#39;s constrained to return only native strings &#40;which<br />
+&gt; can&#39;t hold a Failure object&#41;.  So that probably needs some rework.<br />
+&gt; <br />
+&gt; So, work on those a bit and resubmit.   Thanks!<br />
+&gt; <br />
+&gt; Pm<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/512384/241558/infinite-range.patch">Download infinite-range.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 11.1k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.508534</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

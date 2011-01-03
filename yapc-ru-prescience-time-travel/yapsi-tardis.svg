@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg2816"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="yapsi-tardis.svg">
+  <defs
+     id="defs2818">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3693"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+    <g
+       id="g4111">
+      <rect
+         y="-11.836115"
+         x="-7.2837634"
+         height="626.40363"
+         width="818.20941"
+         id="rect3674"
+         style="fill:#dddddd;fill-opacity:1;stroke:none" />
+      <g
+         transform="translate(15.1745,140.21245)"
+         id="g3622">
+        <text
+           xml:space="preserve"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+           x="288.71875"
+           y="307.26562"
+           id="text2844"><tspan
+             sodipodi:role="line"
+             id="tspan2846"
+             x="288.71875"
+             y="307.26562">Tardis::Debugger</tspan></text>
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect2848"
+           width="332.62521"
+           height="114.11229"
+           x="218.51289"
+           y="242.94385" />
+      </g>
+    </g>
+    <g
+       id="g4118">
+      <g
+         transform="translate(15.1745,3.0349139)"
+         id="g3638">
+        <text
+           id="text3629"
+           y="164.01828"
+           x="304.89844"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+           xml:space="preserve"><tspan
+             y="164.01828"
+             x="304.89844"
+             id="tspan3631"
+             sodipodi:role="line">Yapsi::Runtime</tspan></text>
+        <rect
+           y="99.696495"
+           x="218.51289"
+           height="114.11229"
+           width="332.62521"
+           id="rect3633"
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <path
+         id="path3661"
+         d="m 400.03843,372.66544 0,-142.03339"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    </g>
+</svg>

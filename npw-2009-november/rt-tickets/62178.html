@@ -1,0 +1,955 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62178: [BUG] gather+while only takes last value tested</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62178">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62178: [BUG] gather+while only takes last value tested</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62178">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62178</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62178">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+abhijit
+&lt;amahabal [at] gmail.com&gt;
+
+<br />
+
+
+mah [at] everybody.org
+
+<br />
+
+
+s1n
+&lt;jswitzer [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62178">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62178">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-514876" href="/rt3/Ticket/Display.html?id=62178#txn-514876">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;01&nbsp;17:34:25&nbsp;2009</td>
+    <td class="description">
+      mah <!-- x --> at everybody.org - Ticket 61902:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] r34778 - strange list happenings</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 01 Jan 2009 20:33:45 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">mah <!-- x --> at everybody.org &#40;Mark A. Hershberger&#41;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/514876/242914/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 970b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+I was working on Euler problem 2<br />
+&#40;http://projecteuler.net/index.php?section=problems&#38;id=2&#41;, trying to set<br />
+up a Fibonacci class when I discovered the following strange behavior.<br />
+The code to my solution works under Pugs and produces the following<br />
+output:<br />
+<br />
+    2,8,34,144,610,2584,10946,46368,196418,832040,3524578<br />
+    4613732<br />
+<br />
+<br />
+Under rakudo, I get the following output:<br />
+<br />
+    Use of uninitialized value<br />
+    &#40;repeated several times — the warning comes from the first line in the next&#40;&#41; method&#41;<br />
+    5702887,5702887,5702887,5702887,5702887,5702887,5702887,5702887,5702887,5702887,5702887<br />
+    62731757<br />
+<br />
+Here&#39;s the source:<br />
+<br />
+-=-=- cut -=-=-<br />
+<div class="message-stanza-depth-1">
+#!perl6<br />
+</div>
+<br />
+class Fibonacci {<br />
+  has @!list is rw = &#40;0, 1&#41;;<br />
+<br />
+  method next&#40;&#41; {<br />
+    @!list[2] = [+] @!list;<br />
+    shift @!list;<br />
+    return @!list[1];<br />
+  }<br />
+}<br />
+<br />
+my $fibber = Fibonacci.new;<br />
+my $f;<br />
+<br />
+my @r = gather {<br />
+  $f = $fibber.next;<br />
+  while&#40;$f &lt; 4000000&#41; {<br />
+    take $f if $f % 2 == 0;<br />
+    $f = $fibber.next;<br />
+  }<br />
+}<br />
+say @r.join&#40;&#34;,&#34;&#41;;<br />
+say [+] @r;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-514882" href="/rt3/Ticket/Display.html?id=62178#txn-514882">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;01&nbsp;17:34:27&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 61902:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517888" href="/rt3/Ticket/Display.html?id=62178#txn-517888">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;17:30:23&nbsp;2009</td>
+    <td class="description">
+      s1n -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] gather+while only takes last value tested</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 10 Jan 2009 19:29:52 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jason switzer&#34; &lt;jswitzer <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517888/244336/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 669b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+When mixing gather with a while loop, only the last element tested by the<br />
+while predicate seems to actually be gathered. I created a test to mix<br />
+gather and while in S04-statements/gather.t:<br />
+<br />
+    my @list = gather {<br />
+        my $v = 1;<br />
+        while&#40;$v &lt;= 10&#41; {<br />
+            take $v if $v % 2 == 0;<br />
+            $v++;<br />
+        }<br />
+    };<br />
+    is ~@list, &#34;2 4 6 8 10&#34;, &#34;gather with nested while&#34;;<br />
+<br />
+At this point, @list only contains [11, 11, 11, 11, 11]. If the while loop<br />
+is replaced with a for loop &#40;C&lt;for&#40;1..10&#41; -&gt; $f&gt;&#41;, it properly returns [2,<br />
+4, 6, 8, 10].<br />
+<br />
+Tested on: revision 35352 built on parrot 0.8.2-devel for<br />
+x86_64-linux-thread-multi.<br />
+<br />
+Thanks,<br />
+<br />
+Jason &#34;s1n&#34; Switzer<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517888/244338/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517894" href="/rt3/Ticket/Display.html?id=62178#txn-517894">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;17:30:25&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518188" href="/rt3/Ticket/Display.html?id=62178#txn-518188">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;01:01:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud - Ticket 61902:  Merged into ticket #62178
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518190" href="/rt3/Ticket/Display.html?id=62178#txn-518190">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;01:01:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Merged into ticket #62178
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538066" href="/rt3/Ticket/Display.html?id=62178#txn-538066">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;03&nbsp;23:09:55&nbsp;2009</td>
+    <td class="description">
+      abhijit - Ticket 63634:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] repeated take&#40;$x&#41; all get the same value</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 3 Mar 2009 23:09:25 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">abhijit mahabal &lt;amahabal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/538066/255208/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 146b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;ecode&gt;<br />
+<br />
+my @y = gather {<br />
+    my $x = 0;<br />
+    for 1..5 {<br />
+        $x++;<br />
+        take $x;<br />
+    }<br />
+};<br />
+say @y;<br />
+<br />
+&lt;/ecode&gt;<br />
+<br />
+produces 55555.<br />
+-- <br />
+-- Abhijit<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538072" href="/rt3/Ticket/Display.html?id=62178#txn-538072">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;03&nbsp;23:09:57&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 63634:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538082" href="/rt3/Ticket/Display.html?id=62178#txn-538082">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;04&nbsp;00:50:38&nbsp;2009</td>
+    <td class="description">
+      moritz - Ticket 63634:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/538082/255218/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 315b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Mar 03 23:09:55 2009, abhijit wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;ecode&gt;<br />
+&gt; <br />
+&gt; my @y = gather {<br />
+&gt;     my $x = 0;<br />
+&gt;     for 1..5 {<br />
+&gt;         $x++;<br />
+&gt;         take $x;<br />
+&gt;     }<br />
+&gt; };<br />
+&gt; say @y;<br />
+&gt; <br />
+&gt; &lt;/ecode&gt;<br />
+</div>
+<br />
+Thanks for your report.<br />
+We already have a test for that in t/spec/S04-statements/gather.t &#40;the<br />
+last test in there&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538086" href="/rt3/Ticket/Display.html?id=62178#txn-538086">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;04&nbsp;00:50:40&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 63634:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538590" href="/rt3/Ticket/Display.html?id=62178#txn-538590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;00:39:55&nbsp;2009</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/538590/255470/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 377b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jan 10 17:30:23 2009, s1n wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; When mixing gather with a while loop, only the last element tested by the<br />
+&gt; while predicate seems to actually be gathered. I created a test to mix<br />
+&gt; gather and while in S04-statements/gather.t:<br />
+</div>
+<br />
+Patch to clone argument of &#34;take&#34; available at<br />
+<br />
+http://github.com/bacek/rakudo/commit/a87de35bf576ac612f97b6d01fbcc7b7a8ee72cf<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538594" href="/rt3/Ticket/Display.html?id=62178#txn-538594">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;00:40:00&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538734" href="/rt3/Ticket/Display.html?id=62178#txn-538734">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;13:52:07&nbsp;2009</td>
+    <td class="description">
+      moritz - Ticket 63634:  Merged into ticket #62178
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538736" href="/rt3/Ticket/Display.html?id=62178#txn-538736">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;13:52:08&nbsp;2009</td>
+    <td class="description">
+      moritz -  Merged into ticket #62178
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.089781</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

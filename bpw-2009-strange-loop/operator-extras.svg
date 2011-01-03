@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg4475">
+  <defs
+     id="defs4477" />
+    <g
+       transform="translate(11.92541,2.3005397)"
+       id="g5111">
+      <text
+         x="188.86134"
+         y="177.21198"
+         id="text4506"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="188.86134"
+           y="177.21198"
+           id="tspan4508">precedence</tspan></text>
+      <path
+         d="m 507.23274,56.187542 c -16.24796,37.454631 1.11393,80.187578 -23.31105,110.774348 22.21711,33.5019 8.47761,72.34841 23.31105,107.86046"
+         id="path5094"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       x="527.90356"
+       y="94.973732"
+       id="text4510"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="94.973732"
+         id="tspan4512">:<tspan
+   id="tspan5078"
+   style="fill:#4422ff;fill-opacity:1">equiv</tspan>&lt;infix:*&gt;</tspan></text>
+    <text
+       x="527.90356"
+       y="179.51251"
+       id="text4514"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="179.51251"
+         id="tspan4516">:<tspan
+   id="tspan5080"
+   style="fill:#4422ff;fill-opacity:1">tighter</tspan>&lt;infix:*&gt;</tspan></text>
+    <text
+       x="527.90356"
+       y="264.05133"
+       id="text4518"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="264.05133"
+         id="tspan4520">:<tspan
+   id="tspan5082"
+   style="fill:#4422ff;fill-opacity:1">looser</tspan>&lt;infix:*&gt;</tspan></text>
+    <g
+       transform="translate(11.92541,2.3005397)"
+       id="g5116">
+      <text
+         x="332.62695"
+         y="431.46118"
+         id="text4502"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="332.62695"
+           y="431.46118"
+           id="tspan4504">infix</tspan></text>
+      <path
+         d="m 507.23274,305.31566 c -16.24796,37.45463 1.11393,80.18757 -23.31105,110.77434 22.21711,33.5019 8.47761,72.34841 23.31105,107.86046"
+         id="path5109"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       x="527.90356"
+       y="348.59012"
+       id="text4486"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="348.59012"
+         id="tspan4488">:assoc&lt;<tspan
+   id="tspan5084"
+   style="fill:#4422ff;fill-opacity:1">right</tspan>&gt;</tspan></text>
+    <text
+       x="527.90356"
+       y="433.12891"
+       id="text4490"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="433.12891"
+         id="tspan4494">:assoc&lt;<tspan
+   id="tspan5086"
+   style="fill:#4422ff;fill-opacity:1">left</tspan>&gt;</tspan></text>
+    <text
+       x="527.90356"
+       y="517.66766"
+       id="text4498"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="517.66766"
+         id="tspan4500">:assoc&lt;<tspan
+   id="tspan5088"
+   style="fill:#4422ff;fill-opacity:1">list</tspan>&gt;</tspan></text>
+    <text
+       x="27.958622"
+       y="602.20642"
+       id="text4530"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="27.958622"
+         y="602.20642"
+         id="tspan4532">[post]?circumfix</tspan></text>
+    <text
+       x="527.90356"
+       y="602.20642"
+       id="text4526"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="602.20642"
+         id="tspan4528">:<tspan
+   id="tspan5090"
+   style="fill:#4422ff;fill-opacity:1">nullterm</tspan></tspan></text>
+    <text
+       x="527.90356"
+       y="686.74524"
+       id="text4522"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="527.90356"
+         y="686.74524"
+         id="tspan4524">:<tspan
+   id="tspan5092"
+   style="fill:#4422ff;fill-opacity:1">nows</tspan></tspan></text>
+</svg>

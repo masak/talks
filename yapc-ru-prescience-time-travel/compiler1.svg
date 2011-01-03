@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg2816"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="compiler1.svg">
+  <defs
+     id="defs2818">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3798"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+    <g>
+        <rect
+           style="fill:#dddddd;fill-opacity:1;stroke:none"
+           id="rect3674"
+           width="818.20941"
+           height="626.40363"
+           x="-7.2837634"
+           y="-11.836115" />
+        <g
+           id="g3743"
+           transform="translate(25.493172,10.773865)">
+          <rect
+             y="184.8255"
+             x="264.6434"
+             height="208.80122"
+             width="219.72685"
+             id="rect3729"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <text
+             id="text3739"
+             y="296.4761"
+             x="316.7334"
+             style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+             xml:space="preserve"><tspan
+               y="296.4761"
+               x="316.7334"
+               id="tspan3741"
+               sodipodi:role="line">compiler</tspan></text>
+        </g>
+    </g>
+    <g
+       id="g4612">
+      <text
+         id="text3725"
+         y="114.30179"
+         x="344.50781"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+         xml:space="preserve"><tspan
+           y="114.30179"
+           x="344.50781"
+           id="tspan3727"
+           sodipodi:role="line">program</tspan></text>
+      <path
+         id="path3766"
+         d="m 399.96157,130.47273 0,50.98634"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    </g>
+    <path
+       id="path4594"
+       d="m 399.96157,415.24339 0,50.98634"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    <text
+       id="text3735"
+       y="493.05753"
+       x="344.50781"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"><tspan
+         y="493.05753"
+         x="344.50781"
+         id="tspan3737"
+         sodipodi:role="line">program</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       x="486.79819"
+       y="114.30179"
+       id="text4601"><tspan
+         sodipodi:role="line"
+         id="tspan4603"
+         x="486.79819"
+         y="114.30179">(language A)</tspan></text>
+    <text
+       id="text4605"
+       y="493.05753"
+       x="486.79819"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"><tspan
+         y="493.05753"
+         x="486.79819"
+         id="tspan4607"
+         sodipodi:role="line">(language B)</tspan></text>
+</svg>

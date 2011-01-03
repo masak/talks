@@ -1,0 +1,696 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57864: Calling a token &#34;text&#34;, &#34;null&#34; or &#34;ws&#34; in Rakudo makes matching fail</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57864">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57864: Calling a token &#34;text&#34;, &#34;null&#34; or &#34;ws&#34; in Rakudo makes matching fail</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57864">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57864</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57864">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57864">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57864">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458066" href="/rt3/Ticket/Display.html?id=57864#txn-458066">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;12&nbsp;11:58:42&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Calling a token &#34;text&#34; in rakudo makes matching fail</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 12 Aug 2008 20:58:23 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/458066/211792/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 344b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+r30183:<br />
+$ ./perl6 -e &#39;grammar A { token TOP { &lt;foo&gt; }; token foo { d } }; &#34;d&#34;<br />
+~~ A::TOP&#39; # works<br />
+$ ./perl6 -e &#39;grammar A { token TOP { &lt;text&gt; }; token text { d } };<br />
+&#34;d&#34; ~~ A::TOP&#39; # fails!<br />
+Null PMC access in type&#40;&#41;<br />
+[...]<br />
+<br />
+Same goes for &#39;rule text&#39; or &#39;regex test&#39;. My uneducated guess is that<br />
+something inside PGE is called &#39;text&#39; and clashes.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-470860" href="/rt3/Ticket/Display.html?id=57864#txn-470860">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;14&nbsp;07:51:56&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/470860/218908/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 794b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Aug 12 11:58:42 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; r30183:<br />
+&gt; $ ./perl6 -e &#39;grammar A { token TOP { &lt;foo&gt; }; token foo { d } }; &#34;d&#34;<br />
+&gt; ~~ A::TOP&#39; # works<br />
+&gt; $ ./perl6 -e &#39;grammar A { token TOP { &lt;text&gt; }; token text { d } };<br />
+&gt; &#34;d&#34; ~~ A::TOP&#39; # fails!<br />
+&gt; Null PMC access in type&#40;&#41;<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; Same goes for &#39;rule text&#39; or &#39;regex test&#39;. My uneducated guess is that<br />
+&gt; something inside PGE is called &#39;text&#39; and clashes.<br />
+</div>
+<br />
+You&#39;re correct -- .text is a method on Match objects &#40;see S05&#41;, and at<br />
+the moment that tends to conflict with any rules named &#39;text&#39; in a<br />
+grammar.  This may be fixed when we convert PGE to generate multimethods<br />
+for regexes instead of normal methods, but ultimately there&#39;s a deep<br />
+underlying conflict with Match methods and grammar methods that we&#39;ll<br />
+need to resolve somehow.<br />
+<br />
+Thanks,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-470864" href="/rt3/Ticket/Display.html?id=57864#txn-470864">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;14&nbsp;07:51:58&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-470866" href="/rt3/Ticket/Display.html?id=57864#txn-470866">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;14&nbsp;07:52:01&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490310" href="/rt3/Ticket/Display.html?id=57864#txn-490310">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Oct&nbsp;31&nbsp;20:47:07&nbsp;2008</td>
+    <td class="description">
+      chrisdolan -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/490310/228990/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1003b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Sep 14 07:51:56 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; You&#39;re correct -- .text is a method on Match objects &#40;see S05&#41;, and at<br />
+&gt; the moment that tends to conflict with any rules named &#39;text&#39; in a<br />
+&gt; grammar.  This may be fixed when we convert PGE to generate multimethods<br />
+&gt; for regexes instead of normal methods, but ultimately there&#39;s a deep<br />
+&gt; underlying conflict with Match methods and grammar methods that we&#39;ll<br />
+&gt; need to resolve somehow.<br />
+</div>
+<br />
+It seems to be Regex.pir that is taking all of the invocations.  I have<br />
+discovered that, beyond &lt;text&gt;, I cannot create tokens/rules named<br />
+&#34;null&#34;, &#34;ws&#34;, etc.  The latter is particularly problematic in writing<br />
+parsers in Perl6.  The following simple example shows the failure:<br />
+<br />
+grammar WSOverride {<br />
+   token TOP { &lt;tok_foo&gt; &lt;.ws&gt; &lt;tok_bar&gt; };<br />
+   token tok_foo { foo };<br />
+   token tok_bar { bar };<br />
+   token ws { [ \h | \v | &#39;%&#39; ]+ };<br />
+}<br />
+<br />
+ok&#40;&#39;foo bar&#39; ~~ WSOverride::TOP&#41;; # succeeds<br />
+ok&#40;&#34;foo\nbar&#34; ~~ WSOverride::TOP&#41;; # succeeds<br />
+ok&#40;&#34;foo%%%\nbar&#34; ~~ WSOverride::TOP&#41;; # fails<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-490380" href="/rt3/Ticket/Display.html?id=57864#txn-490380">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;01&nbsp;02:18:10&nbsp;2008</td>
+    <td class="description">
+      masak -  Subject changed from &#39;Calling a token &#34;text&#34; in rakudo makes matching fail&#39; to &#39;Calling a token &#34;text&#34;, &#34;null&#34; or &#34;ws&#34; in Rakudo makes matching fail&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491606" href="/rt3/Ticket/Display.html?id=57864#txn-491606">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;05&nbsp;22:19:28&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">cmasak <!-- x --> at gmail.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57864] Calling a token &#34;text&#34; in rakudo makes matching fail</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 6 Nov 2008 00:19:08 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Chris Dolan via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491606/229692/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Oct 31, 2008 at 08:47:09PM -0700, Chris Dolan via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; It seems to be Regex.pir that is taking all of the invocations.  I have<br />
+&gt; discovered that, beyond &lt;text&gt;, I cannot create tokens/rules named<br />
+&gt; &#34;null&#34;, &#34;ws&#34;, etc.  The latter is particularly problematic in writing<br />
+&gt; parsers in Perl6.  The following simple example shows the failure:<br />
+&gt; <br />
+&gt; grammar WSOverride {<br />
+&gt;    token TOP { &lt;tok_foo&gt; &lt;.ws&gt; &lt;tok_bar&gt; };<br />
+&gt;    token tok_foo { foo };<br />
+&gt;    token tok_bar { bar };<br />
+&gt;    token ws { [ \h | \v | &#39;%&#39; ]+ };<br />
+&gt; }<br />
+&gt; <br />
+&gt; ok&#40;&#39;foo bar&#39; ~~ WSOverride::TOP&#41;; # succeeds<br />
+&gt; ok&#40;&#34;foo\nbar&#34; ~~ WSOverride::TOP&#41;; # succeeds<br />
+&gt; ok&#40;&#34;foo%%%\nbar&#34; ~~ WSOverride::TOP&#41;; # fails<br />
+</div>
+<br />
+First, note that  C&lt; &#39;foo bar&#39; ~~ WSOverride::TOP &gt;  isn&#39;t<br />
+really the correct syntax for invoking a rule -- but the<br />
+synopses don&#39;t really specify what the correct syntax is yet.<br />
+At the moment we do know that it&#39;s not likely to be <br />
+C&lt; &#39;foo&#39; ~~ Grammar::rule &gt;.<br />
+<br />
+Beyond that, the problem appears to be that Rakudo is not<br />
+presently creating its grammars properly -- it appears to<br />
+be deriving them directly from Any instead of from a PGE<br />
+grammar class of some sort.  As a result, inheritance and<br />
+method dispatch don&#39;t seem to be working quite properly,<br />
+and we&#39;ll need to get that fixed.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.466947</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

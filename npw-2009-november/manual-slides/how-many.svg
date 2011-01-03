@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="how-many.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3225">
+      <stop
+         style="stop-color:#202020;stop-opacity:1;"
+         offset="0"
+         id="stop3227" />
+      <stop
+         style="stop-color:#404040;stop-opacity:1;"
+         offset="1"
+         id="stop3229" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3225"
+       id="linearGradient3231"
+       x1="305.7514"
+       y1="612.96027"
+       x2="305.7514"
+       y2="-7.0500927"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#202020"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.67375"
+     inkscape:cx="408.2087"
+     inkscape:cy="300"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="742"
+     inkscape:window-height="713"
+     inkscape:window-x="668"
+     inkscape:window-y="74" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:url(#linearGradient3231);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2453"
+       width="816.32654"
+       height="617.4397"
+       x="-7.4211502"
+       y="-7.0500927" />
+    <text
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#78ff01;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed"
+       xml:space="preserve"
+       id="text2383"
+       y="147.68356"
+       x="482.30157"><tspan
+         id="tspan2385"
+         y="147.68356"
+         x="482.30157"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#78ff01;fill-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed">the Specs</tspan></text>
+    <text
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#ff36c1;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed"
+       xml:space="preserve"
+       id="text3424"
+       y="332.11914"
+       x="478.47345"><tspan
+         id="tspan3426"
+         y="332.11914"
+         x="478.47345"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#ff36c1;fill-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed">Rakudo</tspan></text>
+    <text
+       style="font-size:80px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#2d60ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed"
+       xml:space="preserve"
+       id="text3428"
+       y="509.62112"
+       x="478.51251"><tspan
+         id="tspan3430"
+         y="509.62112"
+         x="478.51251"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#2d60ff;fill-opacity:1;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Condensed">Parrot</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text2387"
+       y="54.70726"
+       x="114.33807"><tspan
+         id="tspan2389"
+         y="54.70726"
+         x="114.33807">...have read some of</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3434"
+       y="106.07349"
+       x="166.83807"><tspan
+         id="tspan3436"
+         y="106.07349"
+         x="166.83807">...have read all of</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3438"
+       y="152.84003"
+       x="204.96307"><tspan
+         id="tspan3440"
+         y="152.84003"
+         x="204.96307">...have patched</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3442"
+       y="208.62997"
+       x="133.40057"><tspan
+         id="tspan3444"
+         y="208.62997"
+         x="133.40057">...have downloaded</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3446"
+       y="255.57236"
+       x="43.459167"><tspan
+         id="tspan3448"
+         y="255.57236"
+         x="43.459167">...have written a script in</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3450"
+       y="311.3623"
+       x="207.15057"><tspan
+         id="tspan3452"
+         y="311.3623"
+         x="207.15057">...have crashed</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3454"
+       y="358.48041"
+       x="13.654482"><tspan
+         id="tspan3456"
+         y="358.48041"
+         x="13.654482">...have submitted a bug for</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3458"
+       y="409.67081"
+       x="204.96307"><tspan
+         id="tspan3460"
+         y="409.67081"
+         x="204.96307">...have patched</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3462"
+       y="465.46078"
+       x="133.40057"><tspan
+         id="tspan3464"
+         y="465.46078"
+         x="133.40057">...have downloaded</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3466"
+       y="516.82697"
+       x="207.15057"><tspan
+         id="tspan3468"
+         y="516.82697"
+         x="207.15057">...have crashed</tspan></text>
+    <text
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"
+       id="text3470"
+       y="563.76929"
+       x="204.96307"><tspan
+         id="tspan3472"
+         y="563.76929"
+         x="204.96307">...have patched</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,655 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#18404: [PATCH languages/perl6/P6C/Parser.pm] Allow Debug&#40;&#41; to work in grammar</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D18404">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#18404: [PATCH languages/perl6/P6C/Parser.pm] Allow Debug&#40;&#41; to work in grammar</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=18404">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">18404</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=18404">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+educated_foo
+&lt;educated_foo [at] yahoo.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+chromatic [at] wgz.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=18404">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+All    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+Applied    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+p6cparser.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/41669/33501/p6cparser.patch">
+Fri Nov 15 00:09:28 2002 (849b) by Ed_Barton <!-- x --> at i2.com
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=18404">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-41669" href="/rt3/Ticket/Display.html?id=18404#txn-41669">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;15&nbsp;00:09:28&nbsp;2002</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">bugs-perl6 <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH languages/perl6/P6C/Parser.pm] Allow Debug&#40;&#41; to work in grammar</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 15 Nov 2002 00:02:33 -0800</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/41669/33500/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 639b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The --debug-info and -g flags were not working in the perl6 binary.  It would <br />
+have been enabled in this section of get_parser&#40;&#41;:<br />
+<br />
+    if &#40;defined $OPT{&#39;debug-info&#39;}&#41; {<br />
+            if &#40;$parser-&gt;can&#40;&#39;Debug&#39;&#41;&#41; {<br />
+                $parser-&gt;Debug&#40;1&#41;;<br />
+            }<br />
+            else {<br />
+                $parser-&gt;Replace&#40;q!stmts:  __stmt[$arg[0]]&#40;s?&#41; !&#41;;<br />
+            }<br />
+    }<br />
+<br />
+Unfortunately, while $parser is blessed into the Parse::RecDescent package, <br />
+the Debug&#40;&#41; method in the grammar lives in <br />
+Parse::RecDescent::namespace000001.  This patch corrects P6C::Parser to put <br />
+Debug&#40;&#41; in the Parse::RecDescent package.<br />
+<br />
+This may not be the ideal solution, but it fixes the problem for me.<br />
+<br />
+-- c<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/41669/33501/p6cparser.patch">Download p6cparser.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 849b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-41739" href="/rt3/Ticket/Display.html?id=18404#txn-41739">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;16&nbsp;21:38:44&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-45073" href="/rt3/Ticket/Display.html?id=18404#txn-45073">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;12&nbsp;16:16:09&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/45073/35505/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 788b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Works for me.  Applied.<br />
+<br />
+/s<br />
+<br />
+[chromatic &lt;!--c--&gt; &lt;i&gt;at&lt;/i&gt; &lt;!--a--&gt; wgz.org - Fri Nov 15 00:09:28 2002]:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; The --debug-info and -g flags were not working in the perl6 binary.<br />
+&gt; It would<br />
+&gt; have been enabled in this section of get_parser&#40;&#41;:<br />
+&gt; <br />
+&gt;     if &#40;defined $OPT{&#39;debug-info&#39;}&#41; {<br />
+&gt;           if &#40;$parser-&gt;can&#40;&#39;Debug&#39;&#41;&#41; {<br />
+&gt;               $parser-&gt;Debug&#40;1&#41;;<br />
+&gt;           }<br />
+&gt;           else {<br />
+&gt;               $parser-&gt;Replace&#40;q!stmts:  __stmt[$arg[0]]&#40;s?&#41; !&#41;;<br />
+&gt;           }<br />
+&gt;     }<br />
+&gt; <br />
+&gt; Unfortunately, while $parser is blessed into the Parse::RecDescent<br />
+&gt; package,<br />
+&gt; the Debug&#40;&#41; method in the grammar lives in<br />
+&gt; Parse::RecDescent::namespace000001.  This patch corrects P6C::Parser<br />
+&gt; to put<br />
+&gt; Debug&#40;&#41; in the Parse::RecDescent package.<br />
+&gt; <br />
+&gt; This may not be the ideal solution, but it fixes the problem for me.<br />
+&gt; <br />
+&gt; -- c<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-45074" href="/rt3/Ticket/Display.html?id=18404#txn-45074">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;12&nbsp;16:16:53&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Status changed from &#39;new&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-45075" href="/rt3/Ticket/Display.html?id=18404#txn-45075">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;12&nbsp;16:16:54&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Default: Keyword/5 changed from &#40;no value&#41; to &#39;Bug&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-45076" href="/rt3/Ticket/Display.html?id=18404#txn-45076">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;12&nbsp;16:16:54&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Default: Keyword/17 changed from &#40;no value&#41; to &#39;All&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-45077" href="/rt3/Ticket/Display.html?id=18404#txn-45077">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;12&nbsp;16:16:54&nbsp;2002</td>
+    <td class="description">
+      educated_foo -  Default: Keyword/18 changed from &#40;no value&#41; to &#39;Applied&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.397141</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

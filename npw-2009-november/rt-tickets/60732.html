@@ -1,0 +1,1053 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60732: Parrot doesn&#39;t distinguish hash access from array access</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60732">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60732: Parrot doesn&#39;t distinguish hash access from array access</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60732">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60732</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60732">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60732">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60732">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-498144" href="/rt3/Ticket/Display.html?id=60732#txn-498144">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;21&nbsp;10:43:14&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Hash indexes shouldn&#39;t work on array refs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 21 Nov 2008 19:43:23 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/498144/233680/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 254b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+From #perl6 today:<br />
+<br />
+19:33 &lt; moritz_&gt; rakudo: my $x = [ 42 ]; say $x&lt;0&gt;<br />
+19:33 &lt; p6eval&gt; rakudo 32984: OUTPUT[42␤]<br />
+<br />
+I don&#39;t think that should be allowed.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-498166" href="/rt3/Ticket/Display.html?id=60732#txn-498166">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;21&nbsp;20:59:38&nbsp;2008</td>
+    <td class="description">
+      particle -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60732] Hash indexes shouldn&#39;t work on array refs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 21 Nov 2008 20:59:11 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jerry gay&#34; &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/498166/233692/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Nov 21, 2008 at 10:43, via RT Moritz Lenz<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Moritz Lenz<br />
+&gt; # Please include the string:  [perl #60732]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=60732 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; From #perl6 today:<br />
+&gt;<br />
+&gt; 19:33 &lt; moritz_&gt; rakudo: my $x = [ 42 ]; say $x&lt;0&gt;<br />
+&gt; 19:33 &lt; p6eval&gt; rakudo 32984: OUTPUT[42␤]<br />
+&gt;<br />
+&gt; I don&#39;t think that should be allowed.<br />
+&gt;<br />
+</div>
+the real test is:<br />
+<br />
+&#40;8:52:47 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;0_but_true&gt;;<br />
+&#40;8:52:49 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&#40;8:53:38 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;true_but_0&gt;;<br />
+&#40;8:53:40 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&#40;8:53:50 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;XXX&gt;;<br />
+&#40;8:53:52 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&#40;8:54:37 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;XXX&gt;;<br />
+&#40;8:54:39 PM&#41; p6eval: rakudo 32998: OUTPUT[a␤]<br />
+&#40;8:58:41 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;1.4&gt;;<br />
+&#40;8:58:44 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&#40;8:58:48 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;0.4&gt;;<br />
+&#40;8:58:50 PM&#41; p6eval: rakudo 32998: OUTPUT[a␤]<br />
+<br />
+so, the index is coerced to an integer. is that really wrong?<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-498168" href="/rt3/Ticket/Display.html?id=60732#txn-498168">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;21&nbsp;20:59:42&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-498948" href="/rt3/Ticket/Display.html?id=60732#txn-498948">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Nov&nbsp;24&nbsp;05:14:12&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org,  bugs-bitbucket <!-- x --> at develooper.com,  Perl6 &lt;perl6-language <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60732] Hash indexes shouldn&#39;t work on array refs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 23 Nov 2008 19:14:17 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">jerry gay &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/498948/234156/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jerry gay wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri, Nov 21, 2008 at 10:43, via RT Moritz Lenz<br />
+&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  Moritz Lenz<br />
+&gt;&gt; # Please include the string:  [perl #60732]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=60732 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; From #perl6 today:<br />
+&gt;&gt;<br />
+&gt;&gt; 19:33 &lt; moritz_&gt; rakudo: my $x = [ 42 ]; say $x&lt;0&gt;<br />
+&gt;&gt; 19:33 &lt; p6eval&gt; rakudo 32984: OUTPUT[42␤]<br />
+&gt;&gt;<br />
+&gt;&gt; I don&#39;t think that should be allowed.<br />
+&gt;&gt;<br />
+</div>
+&gt; the real test is:<br />
+&gt; <br />
+&gt; &#40;8:52:47 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;0_but_true&gt;;<br />
+&gt; &#40;8:52:49 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&gt; &#40;8:53:38 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;true_but_0&gt;;<br />
+&gt; &#40;8:53:40 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&gt; &#40;8:53:50 PM&#41; [particle]1: rakudo: my $x = [42]; say $x&lt;XXX&gt;;<br />
+&gt; &#40;8:53:52 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&gt; &#40;8:54:37 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;XXX&gt;;<br />
+&gt; &#40;8:54:39 PM&#41; p6eval: rakudo 32998: OUTPUT[a␤]<br />
+&gt; &#40;8:58:41 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;1.4&gt;;<br />
+&gt; &#40;8:58:44 PM&#41; p6eval: rakudo 32998: OUTPUT[42␤]<br />
+&gt; &#40;8:58:48 PM&#41; [particle]1: rakudo: my $x = [&#39;a&#39;, 42]; say $x&lt;0.4&gt;;<br />
+&gt; &#40;8:58:50 PM&#41; p6eval: rakudo 32998: OUTPUT[a␤]<br />
+&gt; <br />
+&gt; so, the index is coerced to an integer. is that really wrong?<br />
+&gt; ~jerry<br />
+</div>
+<br />
+IMHO yes, because Perl explicitly distinguishes between arrays and<br />
+hashes &#40;and it&#39;s one of the things we never regretted, I think ;-&#41;. Any<br />
+intermixing between the two would only lead to confusion, especially if<br />
+somebody writes a class whose objects are both hashe and array.<br />
+<br />
+But that&#39;s just my two cents, CC&#39;ing p6l for clarification.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-499074" href="/rt3/Ticket/Display.html?id=60732#txn-499074">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Nov&nbsp;24&nbsp;09:37:52&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60732] Hash indexes shouldn&#39;t work on array refs</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 24 Nov 2008 11:36:49 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/499074/234214/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 698b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Nov 21, 2008 at 10:43:15AM -0800, Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; From #perl6 today:<br />
+&gt; <br />
+&gt; 19:33 &lt; moritz_&gt; rakudo: my $x = [ 42 ]; say $x&lt;0&gt;<br />
+&gt; 19:33 &lt; p6eval&gt; rakudo 32984: OUTPUT[42␤]<br />
+&gt; <br />
+&gt; I don&#39;t think that should be allowed.<br />
+</div>
+<br />
+It&#39;s allowed at least for Match objects -- from S05:<br />
+<br />
+<div class="message-stanza-depth-1">
+    # The numbered captures may be treated as named, <br />
+</div>
+      so $&lt;0 1 2&gt; is equivalent to $/[0,1,2]. This allows <br />
+      you to write slices of intermixed named and numbered captures.<br />
+<br />
+I agree that it&#39;s probably not allowed in the general case of<br />
+indexing a List or Array, though.  We will probably fix this when <br />
+we implement postcircumfix:&lt;{ }&gt; and postcircumfix:&lt;[ ]&gt; as part<br />
+of handling list and hash slices.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-501686" href="/rt3/Ticket/Display.html?id=60732#txn-501686">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;29&nbsp;14:57:11&nbsp;2008</td>
+    <td class="description">
+      masak - Ticket 60922:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Parrot doesn&#39;t distinguish hash access from array access in matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 29 Nov 2008 23:56:36 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/501686/235638/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; rakudo: grammar G { token TOP { ^ &lt;foo&gt;+ $ }; token foo { &#39;:&#39;<br />
+&lt;bar&gt;?  }; token bar { \w } }; &#34;:a:b&#34; ~~ G; say ~$/&lt;foo&gt;&lt;bar&gt; # is<br />
+this a bug? shouldn&#39;t ~$/&lt;foo&gt;&lt;bar&gt; be just &#39;a&#39; ?<br />
+&lt;p6eval&gt; rakudo 33354: OUTPUT[:a␤]<br />
+&lt;pmichaud&gt; rakudo:  grammar G { token TOP { ^ &lt;foo&gt;+ $ }; token foo {<br />
+&#39;:&#39; &lt;bar&gt;? }; token bar { \w } };  my $m = G::TOP&#40;&#39;:a:b&#39;&#41;;  say<br />
+$m&lt;foo&gt;&lt;bar&gt;;<br />
+&lt;p6eval&gt; rakudo 33354: OUTPUT[:a␤]<br />
+&lt;pmichaud&gt; rakudo:  grammar G { token TOP { ^ &lt;foo&gt;+ $ }; token foo {<br />
+&#39;:&#39; &lt;bar&gt;? }; token bar { \w } };  my $m = G::TOP&#40;&#39;:a:b&#39;&#41;;  say<br />
+$m&lt;foo&gt;;<br />
+&lt;p6eval&gt; rakudo 33354: OUTPUT[:a:b␤]<br />
+&lt;pmichaud&gt; rakudo:  grammar G { token TOP { ^ &lt;foo&gt;+ $ }; token foo {<br />
+&#39;:&#39; &lt;bar&gt;? }; token bar { \w } };  my $m = G::TOP&#40;&#39;:a:b&#39;&#41;;  say<br />
+$m&lt;foo&gt;&lt;bar&gt;[0];<br />
+&lt;p6eval&gt; rakudo 33354: OUTPUT[Use of uninitialized value␤␤]<br />
+&lt;pmichaud&gt; rakudo:  grammar G { token TOP { ^ &lt;foo&gt;+ $ }; token foo {<br />
+&#39;:&#39; &lt;bar&gt;? }; token bar { \w } };  my $m = G::TOP&#40;&#39;:a:b&#39;&#41;;  say<br />
+$m&lt;foo&gt;[0]&lt;bar&gt;[0];<br />
+&lt;p6eval&gt; rakudo 33354: OUTPUT[a␤]<br />
+&lt;pmichaud&gt; masak:  the problem is that Parrot doesn&#39;t distinguish hash<br />
+access from array access<br />
+&lt;pmichaud&gt; so $/&lt;foo&gt;&lt;bar&gt;   is actually the same as $/&lt;foo&gt;[0]<br />
+&lt;pmichaud&gt; because $/&lt;foo&gt; is an array.<br />
+&lt;masak&gt; pmichaud: so, is it a bug or not?<br />
+&lt;pmichaud&gt; yes, but I&#39;m not sure where yet.<br />
+&lt;masak&gt; pmichaud: I&#39;ll report it, then.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502080" href="/rt3/Ticket/Display.html?id=60732#txn-502080">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;30&nbsp;12:30:19&nbsp;2008</td>
+    <td class="description">
+      moritz - Ticket 60922:  Merged into ticket #60732
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502082" href="/rt3/Ticket/Display.html?id=60732#txn-502082">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;30&nbsp;12:30:19&nbsp;2008</td>
+    <td class="description">
+      moritz -  Merged into ticket #60732
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502084" href="/rt3/Ticket/Display.html?id=60732#txn-502084">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;30&nbsp;12:30:19&nbsp;2008</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;Hash indexes shouldn&#39;t work on array refs&#39; to &#39;Parrot doesn&#39;t distinguish hash access from array access in matches&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502376" href="/rt3/Ticket/Display.html?id=60732#txn-502376">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;01&nbsp;07:03:45&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60922] Parrot doesn&#39;t distinguish hash access from array access in matches</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 1 Dec 2008 09:03:23 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/502376/236034/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 106b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Just a note that I expect we will fix this when we implement<br />
+slicing and the postcircumfix: methods.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510196" href="/rt3/Ticket/Display.html?id=60732#txn-510196">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;03:12:05&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Subject changed from &#39;Parrot doesn&#39;t distinguish hash access from array access in matches&#39; to &#39;Parrot doesn&#39;t distinguish hash access from array access&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510198" href="/rt3/Ticket/Display.html?id=60732#txn-510198">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;03:13:14&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/510198/240288/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 32b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Now fixed in r34137, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510202" href="/rt3/Ticket/Display.html?id=60732#txn-510202">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;03:13:18&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-510206" href="/rt3/Ticket/Display.html?id=60732#txn-510206">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;20&nbsp;03:13:41&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.297592</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

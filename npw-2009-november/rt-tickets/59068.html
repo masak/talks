@@ -1,0 +1,830 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59068: [BUG]  .perl on strings doesn&#39;t properly escape all sequences</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59068">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59068: [BUG]  .perl on strings doesn&#39;t properly escape all sequences</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59068">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59068</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59068">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59068">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59068">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-473526" href="/rt3/Ticket/Display.html?id=59068#txn-473526">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Sep&nbsp;19&nbsp;07:05:05&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG]  .perl on strings doesn&#39;t properly escape all sequences</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 19 Sep 2008 09:04:30 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/473526/220278/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 558b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Sep 19, 2008 at 11:29:30AM +0400, Andrew Shitov wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; when I tried to use a dollar sign on a page, November failed to read<br />
+&gt; the modified page. It turns out that .perl method does not escape<br />
+&gt; dollars, thus<br />
+&gt;     say &#39;$&#39;.perl<br />
+&gt; produces<br />
+&gt;     &#34;$&#34;<br />
+&gt; while I expect to get<br />
+&gt;     &#34;\$&#34;<br />
+&gt; <br />
+&gt; Fail happens when the string containing non-escaped dollar is being eval-ed.<br />
+</div>
+<br />
+We probably also need to escape other items that might cause interpolation<br />
+in strings, such as {, @, and % .<br />
+<br />
+Also need to check that non-ASCII characters are properly encoded.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-473532" href="/rt3/Ticket/Display.html?id=59068#txn-473532">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Sep&nbsp;19&nbsp;07:05:08&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474318" href="/rt3/Ticket/Display.html?id=59068#txn-474318">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;21&nbsp;10:50:20&nbsp;2008</td>
+    <td class="description">
+      moritz.lenz <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler &lt;perl6-compiler <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[perl #59068] Re: [november] Re: .perl fix</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 21 Sep 2008 18:05:55 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">november-wiki <!-- x --> at googlegroups.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz.lenz <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474318/220582/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 952b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sun, Sep 21, 2008 at 03:34:50PM +0200, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; <br />
+&gt;&gt; Andrew &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; It turns out that .perl method does not escape<br />
+&gt;&gt; &gt; dollars<br />
+</div>
+&gt;&gt; <br />
+&gt;&gt; Have you thought about reporting this via rakudobug <!-- x --> at perl.org?<br />
+</div>
+&gt; <br />
+&gt; It&#39;s already there as RT #59068.<br />
+&gt; <br />
+&gt; It would help if someone could describe all of the things that<br />
+&gt; need escaping, either as prose, Perl code, or text.<br />
+</div>
+<br />
+&#40;CC&#39;ed p6c and the ticket, hope it worked&#41;<br />
+<br />
+afaict the following characters needs escaping:<br />
+<br />
+        \     &#40;escaping&#41;<br />
+        &#34;     &#40;string delimiter&#41;<br />
+        $%@&#38;  &#40;sigils&#41;<br />
+        {     &#40;closures&#41;<br />
+<br />
+&#40;assembled from http://perlcabal.org/syn/S02.html#Literals &#41;<br />
+<br />
+Or in Perl 6 code:<br />
+<br />
+s:g/&lt;[\\$%@&#38;{&#34;]&gt;/\\$0/<br />
+<br />
+Additionally some white spaces might be nice to escape, but I don&#39;t<br />
+think it&#39;s mandatory: \n, \t.<br />
+Also non-ASCII-Codepoints could be replaced by their \x... or \c...<br />
+escape sequence.<br />
+<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474322" href="/rt3/Ticket/Display.html?id=59068#txn-474322">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;21&nbsp;10:50:24&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474786" href="/rt3/Ticket/Display.html?id=59068#txn-474786">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;08:21:48&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59068] Re: [november] Re: .perl fix</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Sep 2008 10:21:24 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474786/220826/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 809b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Sep 21, 2008 at 10:50:22AM -0700, Moritz Lenz via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; It would help if someone could describe all of the things that<br />
+&gt; &gt; need escaping, either as prose, Perl code, or text.<br />
+</div>
+&gt; <br />
+&gt; &#40;CC&#39;ed p6c and the ticket, hope it worked&#41;<br />
+&gt; <br />
+&gt; afaict the following characters needs escaping:<br />
+&gt; <br />
+&gt;       \     &#40;escaping&#41;<br />
+&gt;         &#34;     &#40;string delimiter&#41;<br />
+&gt;       $%@&#38;  &#40;sigils&#41;<br />
+&gt;         {     &#40;closures&#41;<br />
+&gt; <br />
+&gt; &#40;assembled from http://perlcabal.org/syn/S02.html#Literals &#41;<br />
+</div>
+<br />
+I tried to implement this using the .trans method on strings,<br />
+but couldn&#39;t find the right set of arguments to pass to .trans<br />
+&#40;I kept getting &#34;Must pass a List of Pairs for transliteration&#34;<br />
+exceptions.&#41; <br />
+<br />
+I think that .trans needs to be reworked -- once that is<br />
+done we can easily fix the .perl method for strings.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474812" href="/rt3/Ticket/Display.html?id=59068#txn-474812">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;08:49:42&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59068] Re: [november] Re: .perl fix</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 22 Sep 2008 17:49:35 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474812/220838/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sun, Sep 21, 2008 at 10:50:22AM -0700, Moritz Lenz via RT wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; It would help if someone could describe all of the things that<br />
+&gt;&gt; &gt; need escaping, either as prose, Perl code, or text.<br />
+</div>
+&gt;&gt; <br />
+&gt;&gt; &#40;CC&#39;ed p6c and the ticket, hope it worked&#41;<br />
+&gt;&gt; <br />
+&gt;&gt; afaict the following characters needs escaping:<br />
+&gt;&gt; <br />
+&gt;&gt;      \     &#40;escaping&#41;<br />
+&gt;&gt;         &#34;     &#40;string delimiter&#41;<br />
+&gt;&gt;      $%@&#38;  &#40;sigils&#41;<br />
+&gt;&gt;         {     &#40;closures&#41;<br />
+&gt;&gt; <br />
+&gt;&gt; &#40;assembled from http://perlcabal.org/syn/S02.html#Literals &#41;<br />
+</div>
+&gt; <br />
+&gt; I tried to implement this using the .trans method on strings,<br />
+&gt; but couldn&#39;t find the right set of arguments to pass to .trans<br />
+&gt; &#40;I kept getting &#34;Must pass a List of Pairs for transliteration&#34;<br />
+&gt; exceptions.&#41; <br />
+</div>
+<br />
+Something along these lines?<br />
+<br />
+my $x = &#39;<br />
+$scalar<br />
+@array[]<br />
+%hash{}<br />
+&#38;sub&#40;&#41;<br />
+{ closure }<br />
+&#39;;<br />
+<br />
+say $x.trans&#40;&#40;<br />
+        [&#39;\\&#39;,   &#39;&#34;&#39;,   &#39;$&#39;,   &#39;%&#39;,   &#39;@&#39;,   &#39;&#38;&#39;,   &#39;{&#39;,   &#34;\n&#34; ] =&gt;<br />
+        [&#39;\\\\&#39;, &#39;\\&#34;&#39;, &#39;\\$&#39;, &#39;\\%&#39;, &#39;\\@&#39;, &#39;\\&#38;&#39;, &#39;\\{&#39;, &#39;\\n&#39;]<br />
+&#41;&#41;;<br />
+<br />
+<div class="message-stanza-depth-1">
+# prints out<br />
+</div>
+\n\$scalar\n\@array[]\n\%hash\{}\n\&#38;sub&#40;&#41;\n\{ closure }\n<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474904" href="/rt3/Ticket/Display.html?id=59068#txn-474904">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;11:35:31&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/474904/220884/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 45b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Str.perl is now fixed in r31341.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-474906" href="/rt3/Ticket/Display.html?id=59068#txn-474906">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;22&nbsp;11:35:32&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.98202</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

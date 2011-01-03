@@ -1,0 +1,1279 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#56618: [BUG] rakudo segfaults calling subs in a module</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D56618">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#56618: [BUG] rakudo segfaults calling subs in a module</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56618">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">56618</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=56618">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+jhorwitz
+&lt;jeff [at] smashing.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56618">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=56618">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439424" href="/rt3/Ticket/Display.html?id=56618#txn-439424">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;09:42:32&nbsp;2008</td>
+    <td class="description">
+      jhorwitz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 5 Jul 2008 12:42:10 -0400 &#40;EDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jeff Horwitz &lt;jeff <!-- x --> at smashing.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439424/201300/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+In r29081, the following code segfaults:<br />
+<br />
+   module Foo::Bar;<br />
+   sub foo&#40;&#41; { say &#34;bar&#34;; }<br />
+   foo&#40;&#41;; # segfaults here<br />
+<br />
+The script works if the modules declaration is omitted.  I also tried <br />
+running with -G, and it still segfaults at the same place.  pmichaud was <br />
+able to reproduce as well.<br />
+<br />
+Backtrace follows:<br />
+<br />
+#0  0x402cc6df in Parrot_Closure_invoke &#40;interp=0x804f048, pmc=0x4161e700,<br />
+     in_next=0x868e23c&#41; at closure.pmc:103<br />
+103             else if &#40;&#40;PObj_get_FLAGS&#40;outer_sub&#41; &#38; SUB_FLAG_IS_OUTER&#41; <br />
+&#38;&#38;<br />
+&#40;gdb&#41; bt<br />
+#0  0x402cc6df in Parrot_Closure_invoke &#40;interp=0x804f048, pmc=0x4161e700,<br />
+     in_next=0x868e23c&#41; at closure.pmc:103<br />
+#1  0x400f32d6 in Parrot_invokecc_p &#40;cur_opcode=0x868e234,<br />
+     interp=0x804f048&#41;<br />
+     at core.ops:413<br />
+#2  0x40196274 in runops_slow_core &#40;interp=0x804f048, pc=0x868e234&#41;<br />
+     at src/runops_cores.c:221<br />
+#3  0x40168c26 in runops_int &#40;interp=0x804f048, offset=17&#41;<br />
+     at src/interpreter.c:918<br />
+#4  0x40169525 in runops &#40;interp=0x804f048, offs=17&#41; at<br />
+     src/inter_run.c:106<br />
+#5  0x401697aa in runops_args &#40;interp=0x804f048, sub=0x4161e754,<br />
+     obj=0x8099da8, meth_unused=0x0, sig=0x403c5814 &#34;P&#34;,<br />
+     ap=0xbffff7bc &#34;\005\025@\001&#34;&#41; at src/inter_run.c:232<br />
+#6  0x401698ec in Parrot_runops_fromc_args &#40;interp=0x804f048,<br />
+     sub=0x4161e754,<br />
+     sig=0x403c5814 &#34;P&#34;&#41; at src/inter_run.c:301<br />
+#7  0x4018b8c5 in run_sub &#40;interp=0x804f048, sub_pmc=0x4161e754&#41;<br />
+     at src/packfile.c:493<br />
+#8  0x4018bb0c in do_1_sub_pragma &#40;interp=0x804f048, sub_pmc=0x4161e754,<br />
+     action=PBC_MAIN&#41; at src/packfile.c:585<br />
+#9  0x4018bda6 in do_sub_pragmas &#40;interp=0x804f048, self=0x87c4938,<br />
+     action=PBC_MAIN, eval_pmc=0x4161e540&#41; at src/packfile.c:719<br />
+#10 0x401903c5 in PackFile_fixup_subs &#40;interp=0x804f048, what=PBC_MAIN,<br />
+     eval=0x4161e540&#41; at src/packfile.c:3800<br />
+#11 0x403aeea0 in imcc_compile &#40;interp=0x804f048,<br />
+     s=0x87c4508 &#34;\n.namespace \n.sub \&#34;_block11\&#34;  :lexid&#40;\&#34;21\&#34;&#41;\n    new<br />
+     $P12, \&#34;Perl6Scalar\&#34;\n    .lex \&#34;$_\&#34;, $P12\n    new $P13,<br />
+     \&#34;Perl6Scalar\&#34;\n    .lex \&#34;$!\&#34;, $P13\n    new $P14, \&#34;Perl6Scalar\&#34;\n<br />
+     .lex \&#34;$/\&#34;, $P14\n    get_hll_g&#34;..., pasm_file=0,<br />
+     error_message=0xbffff94c&#41;<br />
+     at compilers/imcc/parser_util.c:920<br />
+#12 0x403af143 in imcc_compile_pir_ex &#40;interp=0x804f048,<br />
+     s=0x87c4508 &#34;\n.namespace \n.sub \&#34;_block11\&#34;  :lexid&#40;\&#34;21\&#34;&#41;\n    new<br />
+     $P12, \&#34;Perl6Scalar\&#34;\n    .lex \&#34;$_\&#34;, $P12\n    new $P13,<br />
+     \&#34;Perl6Scalar\&#34;\n    .lex \&#34;$!\&#34;, $P13\n    new $P14, \&#34;Perl6Scalar\&#34;\n<br />
+     .lex \&#34;$/\&#34;, $P14\n    get_hll_g&#34;...&#41;<br />
+     atcompilers/imcc/parser_util.c:1086<br />
+#13 0x4017261d in pcf_P_Jt &#40;interp=0x804f048, self=0x82238e8&#41; at<br />
+     src/nci.c:234<br />
+#14 0x402d6c9e in Parrot_NCI_invoke &#40;interp=0x804f048, pmc=0x82238e8,<br />
+     next=0x412c8ce8&#41; at nci.pmc:203<br />
+#15 0x400f32d6 in Parrot_invokecc_p &#40;cur_opcode=0x412c8ce0, interp=0x804f048&#41;<br />
+     at core.ops:413<br />
+#16 0x40196274 in runops_slow_core &#40;interp=0x804f048, pc=0x412c8ce0&#41;<br />
+     at src/runops_cores.c:221<br />
+#17 0x40168c26 in runops_int &#40;interp=0x804f048, offset=3280&#41;<br />
+     at src/interpreter.c:918<br />
+#18 0x40169525 in runops &#40;interp=0x804f048, offs=13293&#41; at<br />
+     src/inter_run.c:106<br />
+#19 0x401697aa in runops_args &#40;interp=0x804f048, sub=0x8354d00,<br />
+     obj=0x8099da8,<br />
+     meth_unused=0x0, sig=0x403c1d47 &#34;vP&#34;, ap=0xbffffbbc &#34;P\035A\220&#34;&#41;<br />
+     at src/inter_run.c:232<br />
+#20 0x401698ec in Parrot_runops_fromc_args &#40;interp=0x804f048,<br />
+     sub=0x8354d00,<br />
+     sig=0x403c1d47 &#34;vP&#34;&#41; at src/inter_run.c:301<br />
+#21 0x40152507 in Parrot_runcode &#40;interp=0x804f048, argc=2,<br />
+     argv=0xbffffd1c&#41;<br />
+     at src/embed.c:950<br />
+#22 0x4039d334 in imcc_run_pbc &#40;interp=0x804f048, obj_file=0,<br />
+     output_file=0x0,<br />
+     argc=2, argv=0xbffffd1c&#41; at compilers/imcc/main.c:782<br />
+#23 0x4039dde2 in imcc_run &#40;interp=0x804f048,<br />
+     sourcefile=0xbffffe20 &#34;perl6.pbc&#34;, argc=2, argv=0xbffffd1c&#41;<br />
+     at compilers/imcc/main.c:1070<br />
+#24 0x080488d8 in main &#40;argc=2, argv=0xbffffd1c&#41; at src/main.c:61<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439430" href="/rt3/Ticket/Display.html?id=56618#txn-439430">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;09:42:35&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439470" href="/rt3/Ticket/Display.html?id=56618#txn-439470">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;13:04:12&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Jeff Horwitz &#40;via RT&#41; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 5 Jul 2008 13:03:20 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439470/201326/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 726b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Saturday 05 July 2008 09:42:33 Jeff Horwitz wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; In r29081, the following code segfaults:<br />
+&gt;<br />
+&gt;    module Foo::Bar;<br />
+&gt;    sub foo&#40;&#41; { say &#34;bar&#34;; }<br />
+&gt;    foo&#40;&#41;; # segfaults here<br />
+&gt;<br />
+&gt; The script works if the modules declaration is omitted.  I also tried<br />
+&gt; running with -G, and it still segfaults at the same place.  pmichaud was<br />
+&gt; able to reproduce as well.<br />
+&gt;<br />
+&gt; Backtrace follows:<br />
+&gt;<br />
+&gt; #0  0x402cc6df in Parrot_Closure_invoke &#40;interp=0x804f048, pmc=0x4161e700,<br />
+&gt;      in_next=0x868e23c&#41; at closure.pmc:103<br />
+&gt; 103             else if &#40;&#40;PObj_get_FLAGS&#40;outer_sub&#41; &#38; SUB_FLAG_IS_OUTER&#41;<br />
+&gt; &#38;&#38;<br />
+</div>
+<br />
+Random guess: foo&#40;&#41; is a Closure PMC, but it doesn&#39;t have an outer.  Aren&#39;t <br />
+all Subs generated from Rakudo Closures at the moment?<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439474" href="/rt3/Ticket/Display.html?id=56618#txn-439474">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;13:04:14&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439732" href="/rt3/Ticket/Display.html?id=56618#txn-439732">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;06:43:53&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 6 Jul 2008 08:43:19 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439732/201474/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Jul 05, 2008 at 01:03:20PM -0700, chromatic wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Saturday 05 July 2008 09:42:33 Jeff Horwitz wrote:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; In r29081, the following code segfaults:<br />
+&gt; &gt;<br />
+&gt; &gt;    module Foo::Bar;<br />
+&gt; &gt;    sub foo&#40;&#41; { say &#34;bar&#34;; }<br />
+&gt; &gt;    foo&#40;&#41;; # segfaults here<br />
+&gt; &gt;<br />
+&gt; &gt; The script works if the modules declaration is omitted.  I also tried<br />
+&gt; &gt; running with -G, and it still segfaults at the same place.  pmichaud was<br />
+&gt; &gt; able to reproduce as well.<br />
+&gt; &gt;<br />
+&gt; &gt; Backtrace follows:<br />
+&gt; &gt;<br />
+&gt; &gt; #0  0x402cc6df in Parrot_Closure_invoke &#40;interp=0x804f048, pmc=0x4161e700,<br />
+&gt; &gt;      in_next=0x868e23c&#41; at closure.pmc:103<br />
+&gt; &gt; 103             else if &#40;&#40;PObj_get_FLAGS&#40;outer_sub&#41; &#38; SUB_FLAG_IS_OUTER&#41;<br />
+&gt; &gt; &#38;&#38;<br />
+</div>
+&gt; <br />
+&gt; Random guess: foo&#40;&#41; is a Closure PMC, but it doesn&#39;t have an outer.  Aren&#39;t <br />
+&gt; all Subs generated from Rakudo Closures at the moment?<br />
+</div>
+<br />
+Good guess -- you&#39;re likely correct.  This is a convergence of issues --<br />
+first, Rakudo is now tagging all of its subs with an :instanceof attribute,<br />
+which automatically makes every sub into a subclass of the Closure PMC.<br />
+However, as noted in RT #47956 subs with :load cannot be the target of :outer,<br />
+and so we end up with a Closure PMC that has no :outer flag &#40;bad&#41;, and thus<br />
+the segfault &#40;also bad&#41;.<br />
+<br />
+Allison has said that RT #47956 is fixed in the pdd25cx branch, so that may<br />
+be one solution.  However, I also know that we need a better solution to<br />
+:instanceof than we have implemented now, so that may be another.  Beyond that,<br />
+I&#39;m not sure what we can do for the very short term.  My guess is that we<br />
+may need to avoid :instanceof in Rakudo for the time being, since it&#39;s more <br />
+important that we get modules and classes to work than it is to have imcc <br />
+create subs of the appropriate type.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439736" href="/rt3/Ticket/Display.html?id=56618#txn-439736">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;06:57:53&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Subject changed from &#39;[BUG] rakudo segfaults calling subs in a namespace&#39; to &#39;[BUG] rakudo segfaults calling subs in a module&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439738" href="/rt3/Ticket/Display.html?id=56618#txn-439738">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;06:59:16&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org,  Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 06 Jul 2008 15:58:45 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439738/201478/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 593b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; However, I also know that we need a better solution to :instanceof than we have implemented now, so that may be another.  Beyond that, I&#39;m not sure what we can do for the very short term.  My guess is that we<br />
+&gt; may need to avoid :instanceof in Rakudo for the time being, since it&#39;s more important that we get modules and classes to work than it is to have imcc create subs of the appropriate type.<br />
+&gt;   <br />
+</div>
+I have a patch that gets us off using :instanceof mostly ready; I&#39;ll get <br />
+it finished up and checked in on my Rakudo day &#40;Tuesday, I expect&#41;.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439744" href="/rt3/Ticket/Display.html?id=56618#txn-439744">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;07:07:08&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org, Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 6 Jul 2008 09:06:47 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439744/201482/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 881b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Jul 06, 2008 at 03:58:45PM +0200, Jonathan Worthington wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt;However, I also know that we need a better solution to :instanceof than we <br />
+&gt; &gt;have implemented now, so that may be another.  Beyond that, I&#39;m not sure <br />
+&gt; &gt;what we can do for the very short term.  My guess is that we<br />
+&gt; &gt;may need to avoid :instanceof in Rakudo for the time being, since it&#39;s <br />
+&gt; &gt;more important that we get modules and classes to work than it is to have <br />
+&gt; &gt;imcc create subs of the appropriate type.<br />
+&gt; &gt;  <br />
+</div>
+&gt; I have a patch that gets us off using :instanceof mostly ready; I&#39;ll get <br />
+&gt; it finished up and checked in on my Rakudo day &#40;Tuesday, I expect&#41;.<br />
+</div>
+<br />
+Would it hurt for us to temporarily remove :instanceof from<br />
+src/parser/actions.pm &#40;at least for subs&#41; until your patch is<br />
+ready?  Otherwise &#34;module Foo;&#34; doesn&#39;t really work -- e.g., for mod_perl6.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439748" href="/rt3/Ticket/Display.html?id=56618#txn-439748">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;07:12:21&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org,  Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 06 Jul 2008 16:11:53 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439748/201486/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 716b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Would it hurt for us to temporarily remove :instanceof from<br />
+&gt; src/parser/actions.pm &#40;at least for subs&#41; until your patch is<br />
+&gt; ready?  Otherwise &#34;module Foo;&#34; doesn&#39;t really work -- e.g., for mod_perl6.<br />
+&gt;   <br />
+</div>
+If you&#39;re ready for two spectests that currently pass to start failing, <br />
+you can do that. On the other hand, my patch causes the exact same <br />
+failures and but replaces :instanceof with something useful, so if we <br />
+can put up with that regression for a few days I may as well just put my <br />
+patch in today as it is anyway. &#40;Trying to get some hacking break <br />
+today...RSI is going to bite me next week otherwise. Thus why I&#39;d rather <br />
+not try and fix it all up today.&#41;<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439752" href="/rt3/Ticket/Display.html?id=56618#txn-439752">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;07:18:43&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org, Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 6 Jul 2008 09:18:20 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439752/201490/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1019b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Jul 06, 2008 at 04:11:53PM +0200, Jonathan Worthington wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt;Would it hurt for us to temporarily remove :instanceof from<br />
+&gt; &gt;src/parser/actions.pm &#40;at least for subs&#41; until your patch is<br />
+&gt; &gt;ready?  Otherwise &#34;module Foo;&#34; doesn&#39;t really work -- e.g., for mod_perl6.<br />
+</div>
+&gt;  <br />
+&gt; If you&#39;re ready for two spectests that currently pass to start failing, <br />
+&gt; you can do that. On the other hand, my patch causes the exact same <br />
+&gt; failures and but replaces :instanceof with something useful, so if we <br />
+&gt; can put up with that regression for a few days I may as well just put my <br />
+&gt; patch in today as it is anyway. &#40;Trying to get some hacking break <br />
+&gt; today...RSI is going to bite me next week otherwise. Thus why I&#39;d rather <br />
+&gt; not try and fix it all up today.&#41;<br />
+</div>
+<br />
+I don&#39;t mind having a couple of regression failures for a day or two.<br />
+We could also &#34;todo/skip&#34; the newly failing spectests until the full<br />
+patch is available, to avoid confusion for others who may be running<br />
+spectest_regression.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439758" href="/rt3/Ticket/Display.html?id=56618#txn-439758">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;07:58:38&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;, perl6-compiler <!-- x --> at perl.org,  Jeff Horwitz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 06 Jul 2008 16:58:12 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439758/201494/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 151b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I don&#39;t mind having a couple of regression failures for a day or two.<br />
+&gt;   <br />
+</div>
+OK, then it&#39;s in as r29098.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439768" href="/rt3/Ticket/Display.html?id=56618#txn-439768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;10:13:15&nbsp;2008</td>
+    <td class="description">
+      jhorwitz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56618] [BUG] rakudo segfaults calling subs in a namespace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 6 Jul 2008 12:02:55 -0400 &#40;EDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jeff Horwitz &lt;jeff <!-- x --> at smashing.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439768/201498/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 377b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, 6 Jul 2008, Jonathan Worthington via RT wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; I don&#39;t mind having a couple of regression failures for a day or two.<br />
+&gt;&gt;<br />
+</div>
+&gt; OK, then it&#39;s in as r29098.<br />
+</div>
+<br />
+excellent, this fixes my problem.  do we want to close out this ticket and <br />
+let RT #47956 handle the rest, or are there still some lingering issues to <br />
+address with :instanceof?<br />
+<br />
+-jeff<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-456230" href="/rt3/Ticket/Display.html?id=56618#txn-456230">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;07&nbsp;14:16:01&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/456230/210826/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 499b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jul 06 10:13:15 2008, jhorwitz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; excellent, this fixes my problem.  do we want to close out this ticket<br />
+</div>
+and <br />
+<div class="message-stanza-depth-1">
+&gt; let RT #47956 handle the rest, or are there still some lingering<br />
+</div>
+issues to <br />
+<div class="message-stanza-depth-1">
+&gt; address with :instanceof?<br />
+&gt; <br />
+</div>
+Maybe, but we&#39;re not using it for the moment and there&#39;s some larger<br />
+design discussions to be had around this stuff. So I think we can close<br />
+this ticket now the issue it reports is resolved, and any :instanceof<br />
+issues can have tickets of their own.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-456252" href="/rt3/Ticket/Display.html?id=56618#txn-456252">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;07&nbsp;14:35:45&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.91095</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

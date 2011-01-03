@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg4913">
+  <defs
+     id="defs4915" />
+  <g
+     id="layer1">
+    <text
+       x="220.05464"
+       y="130.55861"
+       id="text4924"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="220.05464"
+         y="130.55861"
+         id="tspan4926">a?</tspan></text>
+    <text
+       x="220.05464"
+       y="249.48547"
+       id="text4928"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="220.05464"
+         y="249.48547"
+         id="tspan4930">a*</tspan></text>
+    <text
+       x="220.05464"
+       y="366.2327"
+       id="text4932"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="220.05464"
+         y="366.2327"
+         id="tspan4934">a+</tspan></text>
+    <text
+       x="184.58199"
+       y="575.42651"
+       id="text4936"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="184.58199"
+         y="575.42651"
+         id="tspan4938">greedy</tspan></text>
+    <g
+       transform="translate(-22.152778,-36.266853)"
+       id="g4952">
+      <text
+         x="475.32016"
+         y="166.82545"
+         id="text4940"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="166.82545"
+           id="tspan4942">a?:?</tspan></text>
+      <text
+         x="475.32016"
+         y="285.75232"
+         id="text4944"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="285.75232"
+           id="tspan4946">a*:?</tspan></text>
+      <text
+         x="475.32016"
+         y="402.49954"
+         id="text4948"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="402.49954"
+           id="tspan4950">a+:?</tspan></text>
+    </g>
+    <g
+       transform="translate(-20.078082,-36.266853)"
+       id="g5500">
+      <text
+         x="464.71469"
+         y="611.69336"
+         id="text4960"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="464.71469"
+           y="611.69336"
+           id="tspan4962">eager</tspan></text>
+      <path
+         d="m 447.5159,594.48118 136.37319,19.86017"
+         id="path4964"
+         style="fill:none;stroke:#d70202;stroke-width:10.62992096;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <text
+       x="439.59708"
+       y="635.00702"
+       id="text5476"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="439.59708"
+         y="635.00702"
+         id="tspan5478">frugal</tspan></text>
+    <g
+       transform="translate(225.35067,-36.266853)"
+       id="g5480">
+      <text
+         x="475.32016"
+         y="166.82545"
+         id="text5482"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="166.82545"
+           id="tspan5484">a?:</tspan></text>
+      <text
+         x="475.32016"
+         y="285.75232"
+         id="text5486"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="285.75232"
+           id="tspan5488">a*:</tspan></text>
+      <text
+         x="475.32016"
+         y="402.49954"
+         id="text5490"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.32016"
+           y="402.49954"
+           id="tspan5492">a+:</tspan></text>
+    </g>
+    <text
+       x="742.6474"
+       y="575.42651"
+       id="text5494"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="742.6474"
+         y="575.42651"
+         id="tspan5496">no</tspan><tspan
+         x="742.6474"
+         y="635.42651"
+         id="tspan5498">backtracking</tspan></text>
+    <text
+       x="272.7464"
+       y="130.55861"
+       id="text5569"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="272.7464"
+         y="130.55861"
+         id="tspan5571">:!</tspan></text>
+    <text
+       x="272.7464"
+       y="249.48547"
+       id="text5573"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="272.7464"
+         y="249.48547"
+         id="tspan5575">:!</tspan></text>
+    <text
+       x="274.0704"
+       y="366.2327"
+       id="text5577"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="274.0704"
+         y="366.2327"
+         id="tspan5579">:!</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,956 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58368: Matching against a token imported from a many-jointed namespace makes Rakudo segfault</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58368">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58368: Matching against a token imported from a many-jointed namespace makes Rakudo segfault</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58368">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58368</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58368">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58368">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+backtrace.txt<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/477678/222318/backtrace.txt">
+Mon Sep 29 14:18:30 2008 (12.1k) by jhorwitz
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58368">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463574" href="/rt3/Ticket/Display.html?id=58368#txn-463574">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;26&nbsp;00:38:46&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Matching against a token imported from a many-jointed namespace makes Rakudo segfault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 26 Aug 2008 09:38:27 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463574/214552/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 220b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+r30537:<br />
+$ cat A.pm<br />
+use v6;<br />
+<br />
+grammar A {<br />
+    token b  { foo };<br />
+};<br />
+<br />
+$ ./perl6 -e &#39;use A; say &#34;foo&#34; ~~ A::b&#39; # works<br />
+foo<br />
+<br />
+$ mkdir C<br />
+$ cp A.pm C/D.pm<br />
+$ ./perl6 -e &#39;use C::D; say &#34;foo&#34; ~~ A::b&#39; # segfaults<br />
+Segmentation fault<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477678" href="/rt3/Ticket/Display.html?id=58368#txn-477678">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;14:18:30&nbsp;2008</td>
+    <td class="description">
+      jhorwitz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477678/222312/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Aug 26 00:38:46 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; r30537:<br />
+&gt; $ cat A.pm<br />
+&gt; use v6;<br />
+&gt; <br />
+&gt; grammar A {<br />
+&gt;     token b  { foo };<br />
+&gt; };<br />
+&gt; <br />
+&gt; $ ./perl6 -e &#39;use A; say &#34;foo&#34; ~~ A::b&#39; # works<br />
+&gt; foo<br />
+&gt; <br />
+&gt; $ mkdir C<br />
+&gt; $ cp A.pm C/D.pm<br />
+&gt; $ ./perl6 -e &#39;use C::D; say &#34;foo&#34; ~~ A::b&#39; # segfaults<br />
+&gt; Segmentation fault<br />
+</div>
+<br />
+I ran into a related problem today, which may help narrow this down.  <br />
+It appears that using *any* module with a nested namespace segfaults, <br />
+regardless of the contents of the module, but not if you omit the end-<br />
+of-statement semicolon.  Very strange.<br />
+<br />
+Ran lots of tests, and there&#39;s a GC component to the failure.  Assume <br />
+that Foo and Foo::Bar are dummy modules, only containing the <br />
+string &#34;1;&#34; so they return true.<br />
+<br />
+This works &#40;as of r31495 on debian&#41;:<br />
+parrot perl6.pbc -e &#39;use Foo&#39;<br />
+<br />
+This works:<br />
+parrot perl6.pbc -e &#39;use Foo;&#39;<br />
+<br />
+This works:<br />
+parrot perl6.pbc -e &#39;use Foo::Bar&#39;<br />
+<br />
+This segfaults &#40;trailing semicolon&#41;:<br />
+parrot perl6.pbc -e &#39;use Foo::Bar;&#39;<br />
+<br />
+This segfaults &#40;with --gc-debug&#41;:<br />
+parrot perl6.pbc --gc-debug -e &#39;use Foo::Bar;&#39;<br />
+<br />
+This works &#40;with -G&#41;:<br />
+parrot perl6.pbc -G -e &#39;use Foo::Bar;&#39;<br />
+<br />
+The backtrace is long and nasty, so I&#39;ve attached as a separate file.  <br />
+Hopefully others can reproduce and this helps someone with a better <br />
+understanding of the internals than I have.<br />
+<br />
+-jeff<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477678/222318/backtrace.txt">Download backtrace.txt</a>
+<span class="downloadcontenttype">
+[text/plain 12.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+#0  0x4029c798 in ascii_compute_hash &#40;interp_unused=0x804f048,<br />
+    source_string=0x40a24334, seed=3793&#41; at src/charset/ascii.c:746<br />
+#1  0x400f08c5 in string_hash &#40;interp=0x804f048, s=0x40a24334, seed=3793&#41;<br />
+    at src/string.c:2243<br />
+#2  0x4015f460 in key_hash_STRING &#40;interp=0x804f048, s=0x40a24334, seed=3793&#41;<br />
+    at src/hash.c:153<br />
+#3  0x40160665 in parrot_hash_put &#40;interp=0x804f048, hash=0x8477810,<br />
+    key=0x40a24334, value=0x40d0ad3c&#41; at src/hash.c:1163<br />
+#4  0x4031a48d in Parrot_Hash_set_string_keyed &#40;interp=0x804f048,<br />
+    pmc=0x4111beb0, key=0x8206794, value=0x40b7da6c&#41; at hash.pmc:789<br />
+#5  0x4035ec32 in Parrot_Object_set_string_keyed &#40;interp=0x804f048,<br />
+    pmc=0x4111bee8, key=0x8206794, value=0x40b7da6c&#41; at object.c:4066<br />
+#6  0x40112736 in Parrot_set_p_kc_s &#40;cur_opcode=0x407f7d34, interp=0x804f048&#41;<br />
+    at set.ops:423<br />
+#7  0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x407f7d34&#41;<br />
+    at src/runops_cores.c:222<br />
+#8  0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#9  0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#10 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x41100ea8,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbfffe3dc &#34;,\n\020A,\n\020A\213Ò&lt;@&#40;äÿ¿\bK\035\bxìD@\020XJ\b&#40;äÿ¿¨\016\020A&#34;&#41; at src/inter_run.c:236<br />
+#11 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x41100ea8,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#12 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x41100a2c&#41; at src/exceptions.c:291<br />
+#13 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#14 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x41100ce8&#41;<br />
+    at src/oo.c:592<br />
+#15 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x41100ce8&#41;<br />
+    at src/oo.c:622<br />
+#16 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x41100c94,<br />
+    info=0x41100a9c&#41; at class.pmc:222<br />
+#17 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x41100c94,<br />
+    init_data=0x41100ce8&#41; at class.pmc:512<br />
+#18 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x41100ce8&#41; at src/pmc.c:368<br />
+#19 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#20 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#21 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#22 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#23 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410e3bf4,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbfffe73c &#34;\030:\016A\030:\016A\213Ò&lt;@\210çÿ¿\bK\035\bxìD@&#40;5R\b\210çÿ¿ô;\016A&#34;&#41; at src/inter_run.c:236<br />
+#24 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410e3bf4,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#25 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410e3a18&#41; at src/exceptions.c:291<br />
+#26 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#27 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410e3b68&#41;<br />
+    at src/oo.c:592<br />
+#28 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410e3b68&#41;<br />
+    at src/oo.c:622<br />
+#29 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410e3b14,<br />
+    info=0x410e3a34&#41; at class.pmc:222<br />
+#30 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410e3b14,<br />
+    init_data=0x410e3b68&#41; at class.pmc:512<br />
+#31 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410e3b68&#41; at src/pmc.c:368<br />
+#32 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#33 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#34 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#35 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#36 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410e7c60,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbfffea9c &#34;\204z\016A\204z\016A\213Ò&lt;@èêÿ¿\bK\035\bxìD@h\021R\bèêÿ¿`|\016A&#34;&#41; at src/inter_run.c:236<br />
+#37 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410e7c60,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#38 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410e7a84&#41; at src/exceptions.c:291<br />
+#39 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#40 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410e7bd4&#41;<br />
+    at src/oo.c:592<br />
+#41 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410e7bd4&#41;<br />
+    at src/oo.c:622<br />
+#42 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410e7b80,<br />
+    info=0x410e7aa0&#41; at class.pmc:222<br />
+#43 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410e7b80,<br />
+    init_data=0x410e7bd4&#41; at class.pmc:512<br />
+#44 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410e7bd4&#41; at src/pmc.c:368<br />
+#45 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#46 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#47 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#48 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#49 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410e99e8,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbfffedfc &#34;ð\227\016Að\227\016A\213Ò&lt;@Hîÿ¿\bK\035\bxìD@°ÏQ\bHîÿ¿è\231\016A&#34;&#41; at src/inter_run.c:236<br />
+#50 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410e99e8,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#51 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410e97f0&#41; at src/exceptions.c:291<br />
+#52 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#53 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410e995c&#41;<br />
+    at src/oo.c:592<br />
+#54 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410e995c&#41;<br />
+    at src/oo.c:622<br />
+#55 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410e9908,<br />
+    info=0x410e980c&#41; at class.pmc:222<br />
+#56 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410e9908,<br />
+    init_data=0x410e995c&#41; at class.pmc:512<br />
+#57 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410e995c&#41; at src/pmc.c:368<br />
+#58 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#59 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#60 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#61 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#62 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410ed6b8,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbffff15c &#34;èÑ\016AèÑ\016A\213Ò&lt;@¨ñÿ¿\bK\035\bxìD@À\201Q\b¨ñÿ¿¸Ö\016A&#34;&#41;<br />
+    at src/inter_run.c:236<br />
+#63 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410ed6b8,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#64 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410ed1e8&#41; at src/exceptions.c:291<br />
+#65 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#66 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410ed584&#41;<br />
+    at src/oo.c:592<br />
+#67 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410ed584&#41;<br />
+    at src/oo.c:622<br />
+#68 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410ed514,<br />
+    info=0x410ed204&#41; at class.pmc:222<br />
+#69 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410ed514,<br />
+    init_data=0x410ed584&#41; at class.pmc:512<br />
+#70 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410ed584&#41; at src/pmc.c:368<br />
+#71 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#72 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#73 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#74 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#75 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410f0dbc,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbffff4bc &#34;@\t\017A@\t\017A\213Ò&lt;@\bõÿ¿\bK\035\bxìD@\bmC\b\bõÿ¿¼\r\017A&#34;&#41; at src/inter_run.c:236<br />
+#76 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410f0dbc,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#77 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410f0940&#41; at src/exceptions.c:291<br />
+#78 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#79 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410f0bfc&#41;<br />
+    at src/oo.c:592<br />
+#80 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410f0bfc&#41;<br />
+    at src/oo.c:622<br />
+#81 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410f0b70,<br />
+    info=0x410f095c&#41; at class.pmc:222<br />
+#82 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410f0b70,<br />
+    init_data=0x410f0bfc&#41; at class.pmc:512<br />
+#83 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410f0bfc&#41; at src/pmc.c:368<br />
+#84 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#85 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#86 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=3289&#41;<br />
+    at src/interpreter.c:937<br />
+#87 0x4016946f in runops &#40;interp=0x804f048, offs=3289&#41; at src/inter_run.c:101<br />
+#88 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x410f77d4,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca3d4 &#34;vP&#34;,<br />
+    ap=0xbffff81c &#34;ts\017Ats\017A\213Ò&lt;@høÿ¿\bK\035\bxìD@\200°B\bhøÿ¿Ôw\017A&#34;&#41;<br />
+    at src/inter_run.c:236<br />
+#89 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x410f77d4,<br />
+    sig=0x403ca3d4 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#90 0x40155355 in Parrot_ex_throw_from_c &#40;interp=0x804f048,<br />
+    exception=0x410f7374&#41; at src/exceptions.c:291<br />
+#91 0x4015543c in Parrot_ex_throw_from_c_args &#40;interp=Could not find the frame base for &#34;Parrot_ex_throw_from_c_args&#34;.<br />
+&#41; at src/exceptions.c:338<br />
+#92 0x4018afe1 in fail_if_type_exists &#40;interp=0x804f048, name=0x410f76f4&#41;<br />
+    at src/oo.c:592<br />
+#93 0x4018b054 in Parrot_oo_register_type &#40;interp=0x804f048, name=0x410f76f4&#41;<br />
+    at src/oo.c:622<br />
+#94 0x4032af3a in init_class_from_hash &#40;interp=0x804f048, self=0x410f756c,<br />
+    info=0x410f73c8&#41; at class.pmc:222<br />
+#95 0x4032c988 in Parrot_Class_init_pmc &#40;interp=0x804f048, pmc=0x410f756c,<br />
+    init_data=0x410f76f4&#41; at class.pmc:512<br />
+#96 0x40196881 in pmc_new_init &#40;interp=0x804f048, base_type=49,<br />
+    init=0x410f76f4&#41; at src/pmc.c:368<br />
+#97 0x401080b8 in Parrot_newclass_p_p &#40;cur_opcode=0x410d1b24, interp=0x804f048&#41;<br />
+    at object.ops:249<br />
+#98 0x4019727c in runops_slow_core &#40;interp=0x804f048, pc=0x410d1b24&#41;<br />
+    at src/runops_cores.c:222<br />
+#99 0x40168bc9 in runops_int &#40;interp=0x804f048, offset=16643&#41;<br />
+    at src/interpreter.c:937<br />
+#100 0x4016946f in runops &#40;interp=0x804f048, offs=16643&#41; at src/inter_run.c:101<br />
+#101 0x40169714 in runops_args &#40;interp=0x804f048, sub=0x834cd78,<br />
+    obj=0x809da40, meth_unused=0x0, sig=0x403ca097 &#34;vP&#34;,<br />
+    ap=0xbffffb7c &#34;\224GÏ@¸ûÿ¿\220°&#34;&#41; at src/inter_run.c:236<br />
+#102 0x4016984c in Parrot_runops_fromc_args &#40;interp=0x804f048, sub=0x834cd78,<br />
+    sig=0x403ca097 &#34;vP&#34;&#41; at src/inter_run.c:300<br />
+#103 0x40152a07 in Parrot_runcode &#40;interp=0x804f048, argc=4, argv=0xbffffcd8&#41;<br />
+    at src/embed.c:951<br />
+#104 0x403a5124 in imcc_run_pbc &#40;interp=0x804f048, obj_file=0,<br />
+    output_file=0x0, argc=4, argv=0xbffffcd8&#41; at compilers/imcc/main.c:791<br />
+#105 0x403a5bd2 in imcc_run &#40;interp=0x804f048,<br />
+    sourcefile=0xbffffddf &#34;perl6.pbc&#34;, argc=4, argv=0xbffffcd8&#41;<br />
+    at compilers/imcc/main.c:1079<br />
+#106 0x080488d8 in main &#40;argc=4, argv=0xbffffcd8&#41; at src/main.c:61<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477682" href="/rt3/Ticket/Display.html?id=58368#txn-477682">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;14:18:34&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-479876" href="/rt3/Ticket/Display.html?id=58368#txn-479876">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Oct&nbsp;04&nbsp;10:56:44&nbsp;2008</td>
+    <td class="description">
+      jhorwitz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/479876/223500/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 137b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The example I posted with --gc-debug works as of r31619.  Running <br />
+without any flags still segfaults with the identical backtrace though.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480638" href="/rt3/Ticket/Display.html?id=58368#txn-480638">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;07&nbsp;09:01:46&nbsp;2008</td>
+    <td class="description">
+      jhorwitz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/480638/223892/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 196b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The segfault occurs during PAST generation:<br />
+<br />
+jeff@groovy:~/build/parrot/languages/perl6$ ../../parrot perl6.pbc --<br />
+target=past y.p6<br />
+Segmentation fault &#40;core dumped&#41;<br />
+<br />
+Using --target=parse succeeds.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480702" href="/rt3/Ticket/Display.html?id=58368#txn-480702">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;07&nbsp;12:57:46&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/480702/223920/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 152b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Resolved as of r31762 &#40;confirmed by jhorwitz&#41;.  We didn&#39;t identify a<br />
+specific checkin which resolved things, but we can do a binary search if<br />
+necessary.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480704" href="/rt3/Ticket/Display.html?id=58368#txn-480704">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;07&nbsp;12:57:47&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.594288</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

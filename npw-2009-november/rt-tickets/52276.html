@@ -1,0 +1,981 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#52276: 0-array and 1-array composer broken</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D52276">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#52276: 0-array and 1-array composer broken</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=52276">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">52276</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=52276">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cognominal
+&lt;cognominal [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=52276">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+array_composer.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/407604/185048/array_composer.diff">
+Sun May 18 10:24:16 2008 (1.4k) by cognominal
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=52276">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-378676" href="/rt3/Ticket/Display.html?id=52276#txn-378676">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;30&nbsp;02:06:41&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">0-array and 1-array composer broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 30 Mar 2008 10:06:22 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stéphane Payrard&#34; &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/378676/171406/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+but  n-array composer with n &gt; 1 works correctly<br />
+<br />
+$ alias rakudo<br />
+alias rakudo=&#39;./parrot languages/perl6/perl6.pbc&#39;<br />
+$ rakudo  -e &#39;my @a = [1]; say @a[0]&#39;<br />
+get_pmc_keyed&#40;&#41; not implemented in class &#39;Integer&#39;<br />
+current instr.: &#39;_block10&#39; pc 44 &#40;EVAL_11:25&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 823<br />
+&#40;src/PCT/HLLCompiler.pir:476&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1314<br />
+&#40;src/PCT/HLLCompiler.pir:704&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 8199 &#40;perl6.pir:169&#41;<br />
+<br />
+$  rakudo  -e &#39;my @a = []; say @a[0]&#39;<br />
+error:imcc:syntax error, unexpected COMMA &#40;&#39;,&#39;&#41;<br />
+        in file &#39;EVAL_11&#39; line 15<br />
+error:imcc:syntax error, unexpected &#39;\n&#39;<br />
+        in file &#39;EVAL_11&#39; line 17<br />
+get_pmc_keyed&#40;&#41; not implemented in class &#39;Undef&#39;<br />
+current instr.: &#39;_block10&#39; pc 31 &#40;EVAL_11:23&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 823<br />
+&#40;src/PCT/HLLCompiler.pir:476&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1314<br />
+&#40;src/PCT/HLLCompiler.pir:704&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 8199 &#40;perl6.pir:169&#41;<br />
+<br />
+$ rakudo  -e &#39;my @a = [1,2]; say @a[1]&#39;<br />
+2<br />
+<br />
+-- <br />
+cognominal stef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-407586" href="/rt3/Ticket/Display.html?id=52276#txn-407586">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;18&nbsp;10:18:15&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/407586/185032/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This fixes the bug but does not handle multidimensional arrays.<br />
+It is dependant on the included nqp patch<br />
+<br />
+Index: languages/perl6/src/parser/actions.pm<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+=========================================================<br />
+</div>
+==========<br />
+</div>
+--- languages/perl6/src/parser/actions.pm       &#40;revision 27594&#41;<br />
++++ languages/perl6/src/parser/actions.pm       &#40;working copy&#41;<br />
+@@ -1629,12 +1629,19 @@<br />
+<br />
+ method circumfix&#40;$/, $key&#41; {<br />
+    my $past;<br />
+-    if $key eq &#39;&#40; &#41;&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++    if $key eq &#39;[ ]&#39; or $key eq &#39;&#40; &#41;&#39; {<br />
++        my $statement := $&lt;statementlist&gt;&lt;statement&gt;;<br />
++        if +$statement  == 1 {<br />
++            if $statement[0]&lt;expr&gt;&lt;expr&gt;&lt;type&gt; eq &#39;infix:,&#39; {<br />
++                $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++            } else {<br />
++                $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;,<br />
+:pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++                $past.push&#40; $&#40; $statement&lt;expr&gt; &#41; &#41;;<br />
++            }<br />
++        } else {<br />
++           $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;,<br />
+:pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++        }<br />
+    }<br />
+-    if $key eq &#39;[ ]&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
+-    }<br />
+    elsif $key eq &#39;{ }&#39; {<br />
+        $past := $&#40; $&lt;pblock&gt; &#41;;<br />
+    }<br />
+<br />
+<br />
+<br />
+<br />
+Index: compilers/nqp/src/Grammar.pg<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+=========================================================<br />
+</div>
+==========<br />
+</div>
+--- compilers/nqp/src/Grammar.pg        &#40;revision 27594&#41;<br />
++++ compilers/nqp/src/Grammar.pg        &#40;working copy&#41;<br />
+@@ -487,3 +487,11 @@<br />
+    is nullterm<br />
+    { ... }<br />
+<br />
++## loose logical operators<br />
++proto infix:&lt;and&gt; is looser&#40;infix:&lt;,&gt;&#41;<br />
++    is pasttype&#40;&#39;if&#39;&#41;<br />
++    { .... }<br />
++<br />
++proto infix:&lt;or&gt; is looser&#40;infix:&lt;and&gt;&#41;<br />
++    is pasttype&#40;&#39;unless&#39;&#41;<br />
++    { ... }<br />
+<br />
+--<br />
+cognominal stef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-407590" href="/rt3/Ticket/Display.html?id=52276#txn-407590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;18&nbsp;10:18:17&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-407604" href="/rt3/Ticket/Display.html?id=52276#txn-407604">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;18&nbsp;10:24:16&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/407604/185042/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 63b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+it seems that lines have been folded. So I attach the diff here<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/407604/185048/array_composer.diff">Download array_composer.diff</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: languages/perl6/src/parser/actions.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/src/parser/actions.pm       &#40;revision 27594&#41;<br />
++++ languages/perl6/src/parser/actions.pm       &#40;working copy&#41;<br />
+@@ -1629,12 +1629,19 @@<br />
+ <br />
+ method circumfix&#40;$/, $key&#41; {<br />
+     my $past;<br />
+-    if $key eq &#39;&#40; &#41;&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++    if $key eq &#39;[ ]&#39; or $key eq &#39;&#40; &#41;&#39; {<br />
++        my $statement := $&lt;statementlist&gt;&lt;statement&gt;;<br />
++        if +$statement  == 1 {<br />
++            if $statement[0]&lt;expr&gt;&lt;expr&gt;&lt;type&gt; eq &#39;infix:,&#39; {<br />
++                $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++            } else {<br />
++                $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;, :pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++                $past.push&#40; $&#40; $statement&lt;expr&gt; &#41; &#41;;<br />
++            }<br />
++        } else {<br />
++           $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;, :pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++        }<br />
+     }<br />
+-    if $key eq &#39;[ ]&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
+-    }<br />
+     elsif $key eq &#39;{ }&#39; {<br />
+         $past := $&#40; $&lt;pblock&gt; &#41;;<br />
+     }<br />
+Index: compilers/nqp/src/Grammar.pg<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- compilers/nqp/src/Grammar.pg        &#40;revision 27594&#41;<br />
++++ compilers/nqp/src/Grammar.pg        &#40;working copy&#41;<br />
+@@ -487,3 +487,11 @@<br />
+     is nullterm<br />
+     { ... }<br />
+ <br />
++## loose logical operators<br />
++proto infix:&lt;and&gt; is looser&#40;infix:&lt;,&gt;&#41;<br />
++    is pasttype&#40;&#39;if&#39;&#41;<br />
++    { .... } <br />
++<br />
++proto infix:&lt;or&gt; is looser&#40;infix:&lt;and&gt;&#41;<br />
++    is pasttype&#40;&#39;unless&#39;&#41;<br />
++    { ... }<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-407726" href="/rt3/Ticket/Display.html?id=52276#txn-407726">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;May&nbsp;18&nbsp;15:57:25&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #52276] AutoReply: 0-array and 1-array composer broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 18 May 2008 16:39:01 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stéphane Payrard&#34; &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/407726/185096/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This fix the bug but does not handle multidimensional arrays.<br />
+It is dependant on the nqp patch<br />
+<br />
+Index: languages/perl6/src/parser/actions.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/src/parser/actions.pm       &#40;revision 27594&#41;<br />
++++ languages/perl6/src/parser/actions.pm       &#40;working copy&#41;<br />
+@@ -1629,12 +1629,19 @@<br />
+<br />
+ method circumfix&#40;$/, $key&#41; {<br />
+     my $past;<br />
+-    if $key eq &#39;&#40; &#41;&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++    if $key eq &#39;[ ]&#39; or $key eq &#39;&#40; &#41;&#39; {<br />
++        my $statement := $&lt;statementlist&gt;&lt;statement&gt;;<br />
++        if +$statement  == 1 {<br />
++            if $statement[0]&lt;expr&gt;&lt;expr&gt;&lt;type&gt; eq &#39;infix:,&#39; {<br />
++                $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
++            } else {<br />
++                $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;,<br />
+:pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++                $past.push&#40; $&#40; $statement&lt;expr&gt; &#41; &#41;;<br />
++            }<br />
++        } else {<br />
++           $past := PAST::Op.new&#40; :node&#40;$/&#41;, :name&#40;&#39;list&#39;&#41;,<br />
+:pasttype&#40;&#39;call&#39;&#41; &#41;;<br />
++        }<br />
+     }<br />
+-    if $key eq &#39;[ ]&#39; {<br />
+-        $past := $&#40; $&lt;statementlist&gt; &#41;;<br />
+-    }<br />
+     elsif $key eq &#39;{ }&#39; {<br />
+         $past := $&#40; $&lt;pblock&gt; &#41;;<br />
+     }<br />
+<br />
+<br />
+<br />
+<br />
+Index: compilers/nqp/src/Grammar.pg<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- compilers/nqp/src/Grammar.pg        &#40;revision 27594&#41;<br />
++++ compilers/nqp/src/Grammar.pg        &#40;working copy&#41;<br />
+@@ -487,3 +487,11 @@<br />
+     is nullterm<br />
+     { ... }<br />
+<br />
++## loose logical operators<br />
++proto infix:&lt;and&gt; is looser&#40;infix:&lt;,&gt;&#41;<br />
++    is pasttype&#40;&#39;if&#39;&#41;<br />
++    { .... }<br />
++<br />
++proto infix:&lt;or&gt; is looser&#40;infix:&lt;and&gt;&#41;<br />
++    is pasttype&#40;&#39;unless&#39;&#41;<br />
++    { ... }<br />
+<br />
+-- <br />
+cognominal stef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408302" href="/rt3/Ticket/Display.html?id=52276#txn-408302">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;19&nbsp;12:22:35&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/408302/185340/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun May 18 15:57:25 2008, cognominal wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; This fix the bug but does not handle multidimensional arrays.<br />
+&gt; It is dependant on the nqp patch<br />
+</div>
+<br />
+I&#39;ve committed the nqp patch in r27647, thanks.<br />
+<br />
+As far as the array composer goes, I can&#39;t really accept the patch<br />
+as-is.  For one, it causes everything in parens to be treated as a list,<br />
+but an expression such as &#40;3&#41; or &#40;3+4&#41; shouldn&#39;t be treated as a list. <br />
+In particular, with this patch in place we get an error for mathematical<br />
+expressions involved parens, such as 5 * &#40;3 + 2&#41;.<br />
+<br />
+What really needs to happen here is to introduce a &#34;list&#34; past node type<br />
+into PCT, and to eliminate a lot of the direct references to &#34;infix:,&#34;<br />
+in actions.pm .  I know that people were using &#34;infix:,&#34; to make things<br />
+work, but it&#39;s fundamentally flawed to have it occurring as much as it<br />
+is.  I hope to get infix:, past generation fixed in the next couple of<br />
+days, and then we can revisit the array composers.  Perhaps we&#39;ll soon<br />
+have list assignments working as well &#40;it&#39;s high on the ROADMAP at the<br />
+moment&#41;.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408306" href="/rt3/Ticket/Display.html?id=52276#txn-408306">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;19&nbsp;12:22:42&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415936" href="/rt3/Ticket/Display.html?id=52276#txn-415936">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;29&nbsp;13:26:19&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415936/189122/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 28b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Fixed in r27917, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415938" href="/rt3/Ticket/Display.html?id=52276#txn-415938">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;29&nbsp;13:26:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.917984</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

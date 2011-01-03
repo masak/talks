@@ -1,0 +1,889 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#63922: Fresh rakudo fails to build on FreeBSD</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D63922">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#63922: Fresh rakudo fails to build on FreeBSD</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63922">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">63922</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=63922">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+kap
+&lt;kkapp [at] rambler.ru&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63922">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=63922">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-541730" href="/rt3/Ticket/Display.html?id=63922#txn-541730">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Mar&nbsp;16&nbsp;01:19:14&nbsp;2009</td>
+    <td class="description">
+      kap -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Fresh rakudo fails to build on FreeBSD</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 16 Mar 2009 11:18:49 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&lt;rakudobug <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Alex Kapranoff &lt;kkapp <!-- x --> at rambler.ru&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/541730/257148/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Good day!<br />
+<br />
+I just pulled the fresh rakudo sources, Configured them with <br />
+--gen-parrot and the parrot build fails:<br />
+<div class="message-stanza-depth-1">
+============<br />
+</div>
+Invoking Parrot to generate runtime/parrot/include/config.fpmc --cross <br />
+your fingers<br />
+./miniparrot config_lib.pasm &gt; runtime/parrot/include/config.fpmc<br />
+perl tools/build/parrot_config_c.pl &gt; \<br />
+    src/parrot_config.c<br />
+src/parrot_config.c<br />
+g++ -o parrot \<br />
+    src/main.o src/parrot_config.o \<br />
+    -Wl,-R/usr/home/kappa/work/rakudo/parrot/blib/lib <br />
+-L/usr/home/kappa/work/rakudo/parrot/blib/lib -lparrot  -lm -lcrypt <br />
+-lutil -pthread -lreadline -Wl,-E <br />
+-Wl,-R/usr/local/lib/perl5/5.8.9/mach/CORE<br />
+./parrot -o runtime/parrot/include/parrotlib.pbc <br />
+runtime/parrot/library/parrotlib.pir<br />
+Null PMC access in get_pmc_keyed_str&#40;&#41;<br />
+gmake: *** [runtime/parrot/include/parrotlib.pbc] Ошибка 1<br />
+Unable to locate parrot_config.<br />
+To automatically checkout &#40;svn&#41; and build a copy of parrot,<br />
+try re-running Configure.pl with the &#39;--gen-parrot&#39; option.<br />
+Or, use the &#39;--parrot-config&#39; option to explicitly specify<br />
+the location of parrot_config.<br />
+<div class="message-stanza-depth-1">
+============<br />
+</div>
+<div class="message-stanza-depth-1">
+% cat build/PARROT_REVISION<br />
+</div>
+37414<br />
+<br />
+--<br />
+Alex Kapranoff.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-542406" href="/rt3/Ticket/Display.html?id=63922#txn-542406">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;17&nbsp;21:32:40&nbsp;2009</td>
+    <td class="description">
+      not.com <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">How to &#34;make smoke&#34; when parrot won&#39;t make? &#40;was Re: [perl #63922]  Fresh rakudo fails to build on FreeBSD&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 17 Mar 2009 21:32:13 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/542406/257486/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 807b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; I just pulled the fresh rakudo sources, Configured them with<br />
+&gt; --gen-parrot and the parrot build fails:<br />
+</div>
+...<br />
+<div class="message-stanza-depth-1">
+&gt; ./miniparrot config_lib.pasm &gt; runtime/parrot/include/config.fpmc<br />
+</div>
+...<br />
+<div class="message-stanza-depth-1">
+&gt; Null PMC access in get_pmc_keyed_str&#40;&#41;<br />
+&gt; gmake: *** [runtime/parrot/include/parrotlib.pbc ...<br />
+</div>
+<br />
+It looks like I&#39;m having the same problem on openbsd, which I posted<br />
+about here a few days ago. Trying be a little more helpful, I set up a<br />
+cron job to update and smoke-test parrot. The smoke test ran OK with<br />
+the older revision of parrot, r37017, then I updated to the current<br />
+rev, r37540. That gets the same build error at the &#34;./miniparrot<br />
+config_lib.pasm &#34; step.<br />
+<br />
+Thing is, I don&#39;t know how to report a build failure to smolder. &#34;make<br />
+smoke&#34; won&#39;t run if &#34;make&#34; won&#39;t run!<br />
+<br />
+So, what&#39;s the way to tell smolder &#34;make&#34; failed?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-542410" href="/rt3/Ticket/Display.html?id=63922#txn-542410">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;17&nbsp;21:32:42&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-542560" href="/rt3/Ticket/Display.html?id=63922#txn-542560">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;18&nbsp;14:00:33&nbsp;2009</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63922] Fresh rakudo fails to build on FreeBSD</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 18 Mar 2009 17:00:13 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/542560/257530/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;m getting further but still failing to get Rakudo working &#40;OS X<br />
+10.5.6, gcc 4.0.1&#41;, same parrot revision &#40;r37414&#41;:<br />
+<br />
+...<br />
+c++ -o perl6_ops_switch.bundle perl6_ops_switch.o  -L/opt/local/lib<br />
+-L/usr/local/lib -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib<br />
+-L/sw/lib  -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib -undefined<br />
+dynamic_lookup -L/sw/lib -L/opt/local/lib -undefined dynamic_lookup<br />
+-bundle -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib -lparrot<br />
+perl -e &#34;&#34; &gt; src/gen_setting.pir<br />
+/Users/mreed/proj/perl6/rakudo/parrot/parrot  -o perl6_s1.pbc perl6.pir<br />
+get_bignum&#40;&#41; not implemented in class &#39;ParrotLibrary&#39;<br />
+make: *** [perl6_s1.pbc] Error 1<br />
+<br />
+<br />
+On Mon, Mar 16, 2009 at 4:19 AM, Alex Kapranoff<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Alex Kapranoff<br />
+&gt; # Please include the string:  [perl #63922]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=63922 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Good day!<br />
+&gt;<br />
+&gt; I just pulled the fresh rakudo sources, Configured them with<br />
+&gt; --gen-parrot and the parrot build fails:<br />
+<div class="message-stanza-depth-2">
+&gt; ============<br />
+</div>
+&gt; Invoking Parrot to generate runtime/parrot/include/config.fpmc --cross<br />
+&gt; your fingers<br />
+&gt; ./miniparrot config_lib.pasm &gt; runtime/parrot/include/config.fpmc<br />
+&gt; perl tools/build/parrot_config_c.pl &gt; \<br />
+&gt;    src/parrot_config.c<br />
+&gt; src/parrot_config.c<br />
+&gt; g++ -o parrot \<br />
+&gt;    src/main.o src/parrot_config.o \<br />
+&gt;    -Wl,-R/usr/home/kappa/work/rakudo/parrot/blib/lib<br />
+&gt; -L/usr/home/kappa/work/rakudo/parrot/blib/lib -lparrot  -lm -lcrypt<br />
+&gt; -lutil -pthread -lreadline -Wl,-E<br />
+&gt; -Wl,-R/usr/local/lib/perl5/5.8.9/mach/CORE<br />
+&gt; ./parrot -o runtime/parrot/include/parrotlib.pbc<br />
+&gt; runtime/parrot/library/parrotlib.pir<br />
+&gt; Null PMC access in get_pmc_keyed_str&#40;&#41;<br />
+&gt; gmake: *** [runtime/parrot/include/parrotlib.pbc] Ошибка 1<br />
+&gt; Unable to locate parrot_config.<br />
+&gt; To automatically checkout &#40;svn&#41; and build a copy of parrot,<br />
+&gt; try re-running Configure.pl with the &#39;--gen-parrot&#39; option.<br />
+&gt; Or, use the &#39;--parrot-config&#39; option to explicitly specify<br />
+&gt; the location of parrot_config.<br />
+<div class="message-stanza-depth-2">
+&gt; ============<br />
+</div>
+<div class="message-stanza-depth-2">
+&gt; % cat build/PARROT_REVISION<br />
+</div>
+&gt; 37414<br />
+&gt;<br />
+&gt; --<br />
+&gt; Alex Kapranoff.<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-542620" href="/rt3/Ticket/Display.html?id=63922#txn-542620">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;18&nbsp;15:49:56&nbsp;2009</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63922] Fresh rakudo fails to build on FreeBSD</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 18 Mar 2009 18:49:25 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/542620/257552/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Nm, installed libparrot was interfering.<br />
+<br />
+On Wed, Mar 18, 2009 at 5:00 PM, Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m getting further but still failing to get Rakudo working &#40;OS X<br />
+&gt; 10.5.6, gcc 4.0.1&#41;, same parrot revision &#40;r37414&#41;:<br />
+&gt;<br />
+&gt; ...<br />
+&gt; c++ -o perl6_ops_switch.bundle perl6_ops_switch.o  -L/opt/local/lib<br />
+&gt; -L/usr/local/lib -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib<br />
+&gt; -L/sw/lib  -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib -undefined<br />
+&gt; dynamic_lookup -L/sw/lib -L/opt/local/lib -undefined dynamic_lookup<br />
+&gt; -bundle -L/Users/mreed/proj/perl6/rakudo/parrot/blib/lib -lparrot<br />
+&gt; perl -e &#34;&#34; &gt; src/gen_setting.pir<br />
+&gt; /Users/mreed/proj/perl6/rakudo/parrot/parrot  -o perl6_s1.pbc perl6.pir<br />
+&gt; get_bignum&#40;&#41; not implemented in class &#39;ParrotLibrary&#39;<br />
+&gt; make: *** [perl6_s1.pbc] Error 1<br />
+&gt;<br />
+&gt;<br />
+&gt; On Mon, Mar 16, 2009 at 4:19 AM, Alex Kapranoff<br />
+&gt; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  Alex Kapranoff<br />
+&gt;&gt; # Please include the string:  [perl #63922]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=63922 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; Good day!<br />
+&gt;&gt;<br />
+&gt;&gt; I just pulled the fresh rakudo sources, Configured them with<br />
+&gt;&gt; --gen-parrot and the parrot build fails:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; ============<br />
+</div>
+&gt;&gt; Invoking Parrot to generate runtime/parrot/include/config.fpmc --cross<br />
+&gt;&gt; your fingers<br />
+&gt;&gt; ./miniparrot config_lib.pasm &gt; runtime/parrot/include/config.fpmc<br />
+&gt;&gt; perl tools/build/parrot_config_c.pl &gt; \<br />
+&gt;&gt;    src/parrot_config.c<br />
+&gt;&gt; src/parrot_config.c<br />
+&gt;&gt; g++ -o parrot \<br />
+&gt;&gt;    src/main.o src/parrot_config.o \<br />
+&gt;&gt;    -Wl,-R/usr/home/kappa/work/rakudo/parrot/blib/lib<br />
+&gt;&gt; -L/usr/home/kappa/work/rakudo/parrot/blib/lib -lparrot  -lm -lcrypt<br />
+&gt;&gt; -lutil -pthread -lreadline -Wl,-E<br />
+&gt;&gt; -Wl,-R/usr/local/lib/perl5/5.8.9/mach/CORE<br />
+&gt;&gt; ./parrot -o runtime/parrot/include/parrotlib.pbc<br />
+&gt;&gt; runtime/parrot/library/parrotlib.pir<br />
+&gt;&gt; Null PMC access in get_pmc_keyed_str&#40;&#41;<br />
+&gt;&gt; gmake: *** [runtime/parrot/include/parrotlib.pbc] Ошибка 1<br />
+&gt;&gt; Unable to locate parrot_config.<br />
+&gt;&gt; To automatically checkout &#40;svn&#41; and build a copy of parrot,<br />
+&gt;&gt; try re-running Configure.pl with the &#39;--gen-parrot&#39; option.<br />
+&gt;&gt; Or, use the &#39;--parrot-config&#39; option to explicitly specify<br />
+&gt;&gt; the location of parrot_config.<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; ============<br />
+</div>
+<div class="message-stanza-depth-3">
+&gt;&gt; % cat build/PARROT_REVISION<br />
+</div>
+&gt;&gt; 37414<br />
+&gt;&gt;<br />
+&gt;&gt; --<br />
+&gt;&gt; Alex Kapranoff.<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt;<br />
+&gt; --<br />
+&gt; Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-544970" href="/rt3/Ticket/Display.html?id=63922#txn-544970">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;24&nbsp;10:03:45&nbsp;2009</td>
+    <td class="description">
+      not.com <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63922] Fresh rakudo fails to build on FreeBSD</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 24 Mar 2009 10:01:58 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">yary &lt;not.com <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/544970/258876/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 754b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I am still getting a &#34;Null PMC access in get_pmc_keyed_str&#40;&#41;&#34; error<br />
+when building parrot as part of rakudo on my OpenBSD system, same<br />
+error Alex had when starting this thread. I&#39;ve tracked it down to line<br />
+170 in runtime/parrot/library/parrotlib.pir<br />
+<br />
+.sub find_file_path<br />
+    .param string name<br />
+    .param pmc array<br />
+    .local string ret<br />
+    .local pmc iter<br />
+<div class="message-stanza-depth-1">
+# The following line, creating a new &#39;Iterator&#39;, causes Null PMC access<br />
+</div>
+    iter = new &#39;Iterator&#39;, array<br />
+    iter = 0 #ITERATE_FROM_START<br />
+<br />
+NEXT:<br />
+    null ret<br />
+    unless iter goto END<br />
+<br />
+    $P0 = shift iter<br />
+...<br />
+<br />
+I&#39;d like help on fixing this. I know next to nothing about parrot programming!<br />
+<br />
+Also, it&#39;d be nice if parrot could tell us the line number when it<br />
+hits an error compiling a PIR file.<br />
+<br />
+-y<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.111943</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

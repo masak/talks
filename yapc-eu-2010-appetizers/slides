@@ -1,0 +1,459 @@
+=for head1 :image<ulteriorepicure-328651980.jpg>
+    Perl 6 Appetizers
+
+Hi, I'm C<masak>.
+
+=for head1 :image<ulteriorepicure-328651980.jpg>
+    Steaming hot C<for> loops
+
+Look ma, no parens!
+
+Loop from C<0> up to (but not including) C<$var>.
+
+    for 0 ..^ $var {
+        ...
+    }
+
+    =Hi '0 ..^ $var'
+
+    for ^$var {
+        ...
+    }
+    =Hi '^'
+
+Loop from just below C<$var> down to 0.
+
+    for $var ^.. 0 { # WRONG
+        ...
+    }
+    =Err '$var ^.. 0'
+    =Err 'WRONG'
+
+    for reverse ^$var {
+        ...
+    }
+    =Hi 'reverse ^$var'
+
+Loop over the indexes of C<@array>.
+
+    for 0 ..^ @array.elems {
+        ...
+    }
+    =Hi '.elems'
+
+    for ^@array.elems {
+        ...
+    }
+    =Hi '^'
+    =Hi '.elems'
+
+    for ^@array {
+        ...
+    }
+    =Hi '^'
+
+    for @array.keys {
+        ...
+    }
+    =Hi '.keys'
+
+Loop over even numbers up to C<$var>.
+
+    for 0, 2 ... $var {
+        ...
+    }
+    =Hi '0, 2 ... $var'
+
+=for head1 :image<eole-449958332.jpg>
+    Cook classes without a block
+
+Perl 6 introduces the block declaration form.
+
+    class Dugong {
+        has $.nose = "funny";
+        has $.eyes = "sad";
+        
+        ...
+    }
+    =Hi '{'
+    =Hi '}'
+
+Try not to use the block declaration form too much.
+
+    class Dugong;
+    
+    has $.nose = "funny";
+    has $.eyes = "sad";
+    
+    ...
+    =Hi ';'
+
+Frees up one layer of indentation.
+
+Easier to read, one less { } pair to keep track of.
+
+=for head1 :image<sifu_renka-2516998703.jpg>
+    Delicate debugging with wrapper methods
+
+Ever been in this situation?
+
+    method do-strange-stuff($foo, $bar, $baz) {
+        # do the strange stuff
+        ...
+        
+        return $result;
+    }
+
+    method do-strange-stuff($foo, $bar, $baz) {
+        # do the strange stuff
+        ...
+        say $result;
+        return $result;
+    }
+    =Hi 'say $result'
+
+    method do-strange-stuff($foo, $bar, $baz) {
+        # do the strange stuff
+        ...
+        note $result;
+        return $result;
+    }
+    =Hi 'note'
+
+    method more-strange-stuff($foo, $bar, $baz) {
+        if ... {
+            ...
+            
+            return $result;
+        }
+        elsif ... {
+            ...
+            
+            return $result;
+        }
+        else ... {
+            ...
+            
+            return $result;
+        }
+    }
+    =Hi /return/
+
+    method more-strange-stuff($foo, $bar, $baz) {
+        if ... {
+            ...
+            note $result;
+            return $result;
+        }
+        elsif ... {
+            ...
+            note $result;
+            return $result;
+        }
+        else ... {
+            ...
+            note $result;
+            return $result;
+        }
+    }
+    =Hi /note/
+
+Here's a way to avoid proliferation of C<note> statements:
+
+    role DebugMyClass {
+        method more-strange-stuff($foo, $bar, $baz) {
+            my $result = callsame;
+            note $result;
+            return $result;
+        }
+    }
+    =Hi 'note'
+
+    role DebugMyClass {
+        method more-strange-stuff($foo, $bar, $baz) {
+            my $result = callsame;
+            note $result;
+            return $result;
+        }
+    }
+    
+    $object does DebugMyClass;
+    =Hi 'does'
+
+Wrapping is fun and powerful, but non-immediate.
+
+=for head1 :image<kevharb-3975303773.jpg>
+    Side-effect-free code is easier to digest
+
+Not doing assignments is preferable
+
+    sub path-to-module-name($path is rw) {
+        $path ~~   s[^ 'lib/' ][];
+        $path ~~   s[\.pm6?$][];
+        $path ~~ s:g['/'][::];
+        $path
+    }
+
+The variable from the C<CALLER> changes, too.
+
+    sub path-to-module-name($path is rw) {
+        $path.=subst(/^ 'lib/'/, '');
+        $path.=subst(/\.pm6?$/, '');
+        $path.=subst('/', '::', :g);
+        $path
+    }
+    =Hi /'.=subst'/
+
+    =Err 'is rw'
+
+We can make a copy and change the new value.
+
+    sub path-to-module-name($path is copy) {
+        $path.=subst(/^ 'lib/'/, '');
+        $path.=subst(/\.pm6?$/, '');
+        $path.=subst('/', '::', :g);
+        $path
+    }
+    =Hi 'is copy'
+
+    =Err 'is copy'
+
+    sub path-to-module-name($path) {
+        $path.subst(/^'lib/'/, '')\
+             .subst(/\.pm6?$/, '')\
+             .subst('/', '::', :g);
+    }
+
+Code without assignments is more modular.
+
+Programmer: ☺
+
+Compiler: ☺
+
+=for head1 :image<clockworkgrue-2114410910.jpg>
+    Callbacks are best served cold
+
+Callbacks are beautiful.
+
+    method my-sort(@list, &comparator) {
+        ...
+    }
+
+Relish in creating local code variables.
+
+    my &above    = -> [$x, $y] { [$x, $y + 1] };
+    my &below    = -> [$x, $y] { [$x, $y - 1] };
+    my &right-of = -> [$x, $y] { [$x + 1, $y] };
+    my &left-of  = -> [$x, $y] { [$x - 1, $y] };
+    
+    $piece.move( above above right-of $piece.pos );
+
+=for head1 :image<osakajon-51158893.jpg>
+    Bake conditionals into signatures
+
+Common situation: test parameters for various conditions.
+
+    method make-move(Str $move) {
+        if $move ~~ Type1 {
+            ...
+        }
+        elsif $move ~~ Type2 {
+            ...
+        }
+    }
+
+Replace C<if> statements with multis with more precise signatures.
+
+    multi method make-move(Type1 $move) {
+        ...
+    }
+    
+    multi method make-move(Type2 $move) {
+        ...
+    }
+
+Save a level of indentation.
+
+More declarative; hides plumbing.
+
+=for head1 :image<mr_t_in_dc-3626626341.jpg>
+    Multimethods as a recipe for success
+
+Let's say you have a bunch of types.
+
+    class Blobble::Foo {}
+    class Blobble::Bar {}
+    class Blobble::Baz {}
+
+And we need to do different things for each class.
+
+    sub treat-blobble($blobble) {
+        if $blobble ~~ Blobble::Foo {
+            ...
+        }
+        elsif $blobble ~~ Blobble::Bar {
+            ...
+        }
+        elsif $blobble ~~ Blobble::Baz {
+            ...
+        }
+        else {
+            die "Unknown blobble :(";
+        }
+    }
+    =Hi /'$blobble ~~ Blobble::'\w+/
+
+But this is a typical use case for our switch statement.
+
+    sub treat-blobble($blobble) {
+        given $blobble {
+            when Blobble::Foo {
+                ...
+            }
+            when Blobble::Bar {
+                ...
+            }
+            when Blobble::Baz {
+                ...
+            }
+            default {
+                die "Unknown blobble :(";
+            }
+        }
+    }
+    =Hi /when/
+    =Hi /default/
+
+Even shorter:
+
+    sub treat-blobble($_) {
+    
+        when Blobble::Foo {
+            ...
+        }
+        when Blobble::Bar {
+            ...
+        }
+        when Blobble::Baz {
+            ...
+        }
+        default {
+            die "Unknown blobble :(";
+        }
+    
+    }
+    =Hi '$_'
+
+And of course:
+
+    sub treat-blobble(Blobble $_) {
+    
+        when Blobble::Foo {
+            ...
+        }
+        when Blobble::Bar {
+            ...
+        }
+        when Blobble::Baz {
+            ...
+        }
+        
+        
+        
+    
+    }
+    =Hi 'Blobble'
+
+=for head1 :image<40542289@N02-4820291341.jpg>
+    Serve your code with lexical routines/types
+
+Things should have as small a scope as possible.
+
+In Perl 6, that goes for subroutines as well.
+
+Real-life example from the C<pls> module installer.
+
+    method build($project --> Result) {
+        ...
+        my @modules = map { path-to-module-name($_) }, @module-files;
+        ...
+        sub path-to-module-name($path) {
+            $path.subst(/^'lib/'/, '').subst(/\.pm6?$/, '')\
+                 .subst('/', '::', :g);
+        }
+        ...
+    }
+    =Hi /'path-to-module-name'/
+    =Hi 'sub'
+
+You can treat types in the same manner.
+
+    sub invade(Planet $earth) {
+        my class Alien {
+            has $.teeth;
+            method attack(Planet $earth) { say "☣!" }
+        }
+        my Alien @mothership;
+        push @mothership, Alien.new for ^100;
+        @mothership».attack($earth);
+    }
+
+    =Hi 'my class'
+
+=for head1 :image<soylentgreen23-3481837131.jpg>
+    Don't forget the C<MAIN> course!
+
+The C<MAIN> sub maps command-line arguments to a signature.
+
+    sub MAIN(Bool :$quickly) {
+        say +$quickly;
+    }
+    
+    $ script            # prints '0'
+    $ script --quickly  # prints '1'
+
+    sub MAIN($name = "Dionysos") {
+        say "Hello, $name!";
+    }
+    
+    $ greet             # prints 'Hello, Dionysos!'
+    $ greet --name=Tom  # prints 'Hello, Tom!'
+
+Command-line argument parsing for free!
+
+Usage line for free!
+
+=for head1 :image<soylentgreen23-3481837131.jpg>
+    Attribution
+
+Been using these cc-licenced images from Flickr.
+
+    5th Course Taccozette & Oxtail
+        http://www.flickr.com/photos/ulteriorepicure/328651980/
+    Pretty cooked
+        http://www.flickr.com/photos/eole/449958332/
+    Egg Mesh
+        http://www.flickr.com/photos/sifu_renka/2516998703/
+    Crispy Suckling Pig Appetizer
+        http://www.flickr.com/photos/kevharb/3975303773/
+    Amateur Food Porn: Potion of Tomato Bisque
+        http://www.flickr.com/photos/clockworkgrue/2114410910/
+    Home Cooking Party: Appetizer - Pao de Queijo (Brazilian Cheese Rolls)
+        http://www.flickr.com/photos/osakajon/51158893/
+    Artomatic 2009 Kerrin's Appetizers
+        http://www.flickr.com/photos/mr_t_in_dc/3626626341/
+    Hummus with veggies
+        http://www.flickr.com/photos/40542289@N02/4820291341/
+    Main Course
+        http://www.flickr.com/photos/soylentgreen23/3481837131/
+
+This presentation was built using Perl 6.
+
+    
+    
+    
+                   Rakudo      Inkscape
+             Pod6    ⇒     SVG      ⇒      PDF
+
+=for head1 :image<eole-449958332.jpg>
+    Thank you!

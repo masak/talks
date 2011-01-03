@@ -1,0 +1,680 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61776: Rakudo gives incorrect output for subtypes</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61776">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61776: Rakudo gives incorrect output for subtypes</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61776">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61776</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61776">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+publiustemp-perl6users [at] yahoo.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61776">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61776">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-513212" href="/rt3/Ticket/Display.html?id=61776#txn-513212">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;27&nbsp;14:08:48&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6users <!-- x --> at yahoo.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo gives incorrect output for subtypes</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 27 Dec 2008 14:08:24 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6users <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/513212/241984/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+    subset Letter of Str where { $_ =~ /^ &lt;[a..z]&gt; $/ };<br />
+<br />
+    my $first_letter = &#39;a&#39;;<br />
+    say $first_letter;<br />
+<br />
+    my Letter $second_letter = &#39;a&#39;;<br />
+    say $second_letter;<br />
+<br />
+    sub doit &#40;Letter $letter&#41; {<br />
+        say $letter;<br />
+    }<br />
+<br />
+    doit&#40;&#39;a&#39;&#41;;<br />
+<br />
+That outputs &#40;_block69 is the second &#39;say&#39; and the &#39;Cannot assign&#39; is the sub call&#41;:<br />
+<br />
+a<br />
+_block69<br />
+Cannot assign to readonly variable.<br />
+current instr.: &#39;die&#39; pc 14740 &#40;src/builtins/control.pir:204&#41;<br />
+called from Sub &#39;infix:=&#39; pc 13106 &#40;src/builtins/assign.pir:24&#41;<br />
+called from Sub &#39;_block62&#39; pc 310 &#40;EVAL_14:128&#41;<br />
+called from Sub &#39;!SUBTYPE_ACCEPTS&#39; pc 15909 &#40;src/builtins/guts.pir:237&#41;<br />
+called from Sub &#39;!TYPECHECKPARAM&#39; pc 15676 &#40;src/builtins/guts.pir:128&#41;<br />
+called from Sub &#39;doit&#39; pc 527 &#40;EVAL_14:212&#41;<br />
+called from Sub &#39;_block14&#39; pc 200 &#40;EVAL_14:83&#41;<br />
+called from Sub &#39;!UNIT_START&#39; pc 16073 &#40;src/builtins/guts.pir:327&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 892 &#40;src/PCT/HLLCompiler.pir:508&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1217 &#40;src/PCT/HLLCompiler.pir:669&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1398 &#40;src/PCT/HLLCompiler.pir:759&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 18981 &#40;perl6.pir:162&#41;<br />
+perl6&#40;8003&#41; malloc: *** error for object 0x2bcc680: double free<br />
+*** set a breakpoint in malloc_error_break to debug<br />
+<br />
+My info:<br />
+<br />
+$ svn info; uname -a<br />
+Path: .<br />
+URL: https://svn.perl.org/parrot/trunk<br />
+Repository Root: https://svn.perl.org/parrot<br />
+Repository UUID: d31e2699-5ff4-0310-a27c-f18f2fbe73fe<br />
+Revision: 34446<br />
+Node Kind: directory<br />
+Schedule: normal<br />
+Last Changed Author: kjs<br />
+Last Changed Rev: 34446<br />
+Last Changed Date: 2008-12-27 21:17:55 +0000 &#40;Sat, 27 Dec 2008&#41;<br />
+<br />
+Darwin curtis-poes-computer-3.local 9.5.1 Darwin Kernel Version 9.5.1: Fri Sep 19 16:19:24 PDT 2008; root:xnu-1228.8.30~1/RELEASE_I386 i386<br />
+<br />
+ --<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518206" href="/rt3/Ticket/Display.html?id=61776#txn-518206">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;01:08:18&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532088" href="/rt3/Ticket/Display.html?id=61776#txn-532088">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;10:06:37&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532088/252276/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 971b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Dec 27 14:08:48 2008, publiustemp-perl6users <!-- x --> at yahoo.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt;     subset Letter of Str where { $_ =~ /^ &lt;[a..z]&gt; $/ };<br />
+&gt; <br />
+&gt;     my $first_letter = &#39;a&#39;;<br />
+&gt;     say $first_letter;<br />
+&gt; <br />
+&gt;     my Letter $second_letter = &#39;a&#39;;<br />
+&gt;     say $second_letter;<br />
+&gt; <br />
+&gt;     sub doit &#40;Letter $letter&#41; {<br />
+&gt;         say $letter;<br />
+&gt;     }<br />
+&gt; <br />
+&gt;     doit&#40;&#39;a&#39;&#41;;<br />
+&gt; <br />
+&gt; That outputs &#40;_block69 is the second &#39;say&#39; and the &#39;Cannot assign&#39; is<br />
+&gt; the sub call&#41;:<br />
+&gt; <br />
+&gt; a<br />
+&gt; _block69<br />
+&gt; Cannot assign to readonly variable.<br />
+&gt; <br />
+</div>
+<br />
+That&#39;s a Perl 5-o. :-&#41; You likely meant:<br />
+<br />
+subset Letter of Str where { $_ ~~ /^ &lt;[a..z]&gt; $/ };<br />
+<br />
+Which does work. But there are two issues:<br />
+<br />
+* We should implement the =~ check to give you a useful message about<br />
+this change. There&#39;s already a ticket for that one.<br />
+<br />
+* I think both cases should give the &#34;cannot assign to readonly<br />
+variable&#34; warning because the $_ should be read-only inside that block.<br />
+<br />
+So to resolve this ticket we should do the second of these.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532094" href="/rt3/Ticket/Display.html?id=61776#txn-532094">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;10:06:40&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532102" href="/rt3/Ticket/Display.html?id=61776#txn-532102">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;11:03:45&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532102/252286/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 828b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Feb 13 10:06:37 2009, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Dec 27 14:08:48 2008, publiustemp-perl6users <!-- x --> at yahoo.com wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt;     subset Letter of Str where { $_ =~ /^ &lt;[a..z]&gt; $/ };<br />
+&gt; &gt; <br />
+&gt; &gt;     ...snip...<br />
+&gt; &gt; <br />
+</div>
+&gt; That&#39;s a Perl 5-o. :-&#41; You likely meant:<br />
+&gt; <br />
+&gt; subset Letter of Str where { $_ ~~ /^ &lt;[a..z]&gt; $/ };<br />
+&gt; <br />
+&gt; ...snip...<br />
+&gt; <br />
+&gt; * I think both cases should give the &#34;cannot assign to readonly<br />
+&gt; variable&#34; warning because the $_ should be read-only inside that block.<br />
+&gt; <br />
+&gt; So to resolve this ticket we should do the second of these.<br />
+&gt; <br />
+</div>
+And as of git 0f87695 this now fails with the read-only error in all<br />
+cases, not just the second one. &#40;It may well segfault after giving the<br />
+error, but that&#39;s a Parrot issue that we already have plenty of open<br />
+tickets for, so resolving this one&#41;.<br />
+<br />
+Plus added tests. :-&#41;<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532110" href="/rt3/Ticket/Display.html?id=61776#txn-532110">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;11:03:48&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.28427</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

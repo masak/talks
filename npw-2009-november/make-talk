@@ -1,0 +1,230 @@
+#!/usr/local/bin/perl -w
+use 5.010_000;
+use strict;
+use SVG (-nocredits => 1);
+use open ':utf8';
+
+if (@ARGV < 2) {
+    push @ARGV, 'talk.source';
+}
+
+binmode(STDIN, ':utf8');
+
+$/ = "\n\n";
+my %slide_dimensions = ( width => 800, height => 600 );
+
+my $slide_no = 0;
+sub snapshot {
+    my ($svg) = @_;
+
+    my $filename = sprintf 'output/svg-slides/%03d.svg', $slide_no;
+    open my $SVG_FILE, '>', $filename or die $!;
+    say {$SVG_FILE} $svg->xmlify;
+    ++$slide_no;
+}
+
+sub include_svg {
+    my ($original) = @_;
+
+    my $copy = sprintf 'output/svg-slides/%03d.svg', $slide_no;
+    system("cp $original $copy");
+    ++$slide_no;
+}
+
+while (defined (my $chunk = <>)) {
+    my $svg = SVG->new( %slide_dimensions );
+    my $gradient = $svg->gradient(
+        -type => 'linear',
+        id => 'background-gradient',
+        x1 => 0,
+        y1 => $slide_dimensions{height} * 1.010,
+        x2 => 0,
+        y2 => $slide_dimensions{height} * -.010,
+        gradientUnits => 'userSpaceOnUse',
+    );
+    $gradient->stop(
+        id     => 'bg-g-1',
+        style  => { 'stop-color' => '#202020', 'stop-opacity' => 1 },
+        offset => 0,
+    );
+    $gradient->stop(
+        id     => 'bg-g-2',
+        style  => { 'stop-color' => '#404040', 'stop-opacity' => 1 },
+        offset => 1,
+    );
+    my $background = $svg->g(id => 'background');
+    $background->rect(
+        width  => $slide_dimensions{width}  * 1.010,
+        height => $slide_dimensions{height} * 1.010,
+        x      => $slide_dimensions{width}  * -.005,
+        y      => $slide_dimensions{height} * -.005,
+        style  => { 'fill' => 'url(#background-gradient)', 'stroke' => 'none' },
+    );
+
+    my $content = $svg->g(id => 'content', style => { 'fill' => '#ffffff' });
+    my @lines = grep { !/^>/ } split "\n", $chunk;
+    my $slide_mode = 'normal';
+    if ($lines[0] =~ m/^\. ([^.]++) \.$/x) {
+        $slide_mode = $1;
+        shift @lines;
+    }
+    print $., "\t", $slide_mode, "\n";
+    if ($slide_mode eq 'title') {
+        @lines = grep { !/^!$/ } @lines;
+        my @heights = (.25, .35, .65, .75, .85);
+        my $i = 0;
+        for my $line (@lines) {
+            $content->text(
+                x => $slide_dimensions{width} * .5,
+                'text-anchor' => 'middle',
+                y => $slide_dimensions{height} * $heights[$i],
+                style => { 'font-size' => $i++ ? '40px' : '80px',
+                           'font-family' => 'Gill Sans' },
+            )->cdata( $line );
+        }
+        snapshot($svg);
+    }
+    elsif ($slide_mode eq 'normal') {
+        my @heights = map { ($_ - @lines/2) * .1 + .45 } 1..@lines;
+        my $i = 0;
+        for my $line (@lines) {
+            $content->text(
+                x => $slide_dimensions{width} * .5,
+                'text-anchor' => 'middle',
+                y => $slide_dimensions{height} * $heights[$i++],
+                style => { 'font-size' => '40px',
+                           'font-family' => 'Gill Sans' },
+            )->cdata( $line );
+        }
+        snapshot($svg);
+    }
+    elsif ($slide_mode eq 'code') {
+        my @heights = map { ($_ - @lines/2) * .05 + .45 } 1..@lines;
+        my $i = 0;
+        for my $line (@lines) {
+            $line =~ m/^( *)/;
+            my $indent = length $1;
+            $content->text(
+                x => $slide_dimensions{width} * (.1 + .0175 * $indent),
+                y => $slide_dimensions{height} * $heights[$i++],
+                style => { 'font-size' => '24px',
+                           'font-family' => 'Andale Mono' },
+            )->cdata( $line );
+        }
+        snapshot($svg);
+    }
+    elsif ($slide_mode eq 'fill') {
+        my @heights = map { ($_ - @lines/2) * .1 + .45 } 1..@lines;
+        my $i = 0;
+        for my $line (@lines) {
+            my $accum_str = '';
+            for my $word (split ' ', $line) {
+                if ($accum_str ne ' ') {
+                    $accum_str .= ' ';
+                }
+                $accum_str .= $word;
+                $content->text(
+                    x => $slide_dimensions{width} * .25,
+                    y => $slide_dimensions{height} * $heights[$i],
+                    style => { 'font-size' => '40px',
+                               'font-family' => 'Gill Sans' },
+                )->cdata( $accum_str );
+                snapshot($svg);
+            }
+            ++$i;
+        }
+    }
+    elsif ($slide_mode eq 'chat') {
+        my @heights = map { ($_ - @lines/2) * .08 + .45 } 1..@lines;
+        my $i = 0;
+        for my $line (@lines) {
+            $content->text(
+                x => $slide_dimensions{width} * .10,
+                y => $slide_dimensions{height} * $heights[$i++],
+                style => { 'font-size' => '20px',
+                           'font-family' => 'Andale Mono', }
+            )->cdata( $line );
+            snapshot($svg);
+        }
+    }
+    elsif ($slide_mode eq 'double list') {
+        my @few_list;
+        my @many_list;
+
+        for my $line (@lines) {
+            if ($line =~ /^- (.*)/) {
+                push @many_list, $1;
+            }
+            elsif ($line =~ /^>/) {
+            }
+            elsif ($line =~ /(.*):$/) {
+                push @few_list, $1;
+            }
+        }
+        my $i = 0;
+        for my $line (@few_list) {
+            $content->text(
+                x => $slide_dimensions{width} * .60,
+                y => $slide_dimensions{height} * (.2, .5, .85)[$i],
+                style => { 'font-size' => '80px',
+                           'font-family' => 'Arial Narrow',
+                           'font-weight' => 'bold',
+                           'fill' =>
+                                ('#78ff01', '#ff36c1', '#2d60ff')[$i++] },
+            )->cdata( $line );
+        }
+        my @heights = map { ($_ - @lines/2) * .09 + .6 } 1..@lines;
+        $i = 0;
+        for my $line (@many_list) {
+            $content->text(
+                x => $slide_dimensions{width} * .55,
+                'text-anchor' => 'end',
+                y => $slide_dimensions{height} * $heights[$i],
+                style => { 'font-size' => '40px',
+                           'font-family' => 'Gill Sans',
+                           'fill' =>
+                                ('#78ff01', '#78ff01','#78ff01',
+                                 '#ff36c1', '#ff36c1', '#ff36c1', '#ff36c1',
+                                 '#ff36c1',
+                                 '#2d60ff', '#2d60ff', '#2d60ff')[$i++] },
+            )->cdata( $line );
+            snapshot($svg);
+        }
+    }
+    elsif ($slide_mode eq 'screenshot') {
+        my $number = shift @lines;
+        $number =~ /^number: (\d+)/ or die $number;
+        include_svg("manual-slides/screenshot-$1.svg");
+    }
+    elsif ($slide_mode eq 'perl6 graph') {
+        my $number = shift @lines;
+        $number =~ /^number: (\d+)/ or die $number;
+        include_svg("manual-slides/perl6-graph-$1.svg");
+    }
+    elsif ($slide_mode eq 'empty') {
+        snapshot($svg);
+    }
+    else {
+        $content->text(
+            x => $slide_dimensions{width} * .5,
+            'text-anchor' => 'middle',
+            y => $slide_dimensions{height} * .5,
+            style => { 'font-size' => '40px',
+                       'font-family' => 'Gill Sans' },
+        )->cdata( ".$slide_mode." );
+        snapshot($svg);
+    }
+}
+
+my $inkscape_executable
+    = '/Applications/Inkscape.app/Contents/Resources/bin/inkscape';
+
+system
+    "$inkscape_executable --export-text-to-path --export-bbox-page "
+    . "--without-gui --file=output/svg-slides/$_.svg "
+    . "--export-pdf=output/pdf-slides/$_.pdf 2> /dev/null"
+        for map { sprintf '%03d', $_ } 0..$slide_no-1;
+
+system
+    'gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite'
+    . ' -sOutputFile=output/talk.pdf output/pdf-slides/*';

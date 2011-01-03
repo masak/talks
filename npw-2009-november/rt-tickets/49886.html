@@ -1,0 +1,779 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#49886: [PATCH] languages/perl6 requires `=begin&#39; to have a corrisponding ident. Remove that requirement</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D49886">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#49886: [PATCH] languages/perl6 requires `=begin&#39; to have a corrisponding ident. Remove that requirement</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=49886">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">49886</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time worked">Worked:</td>
+    <td class="value time worked">2 min
+</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=49886">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+avar
+&lt;avar [at] cpan.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=49886">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=49886">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-346826" href="/rt3/Ticket/Display.html?id=49886#txn-346826">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;17&nbsp;12:34:22&nbsp;2008</td>
+    <td class="description">
+      avar -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] languages/perl6 requires `=begin&#39; to have a corrisponding ident. Remove that requirement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 17 Jan 2008 20:33:52 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">avar <!-- x --> at cpan.org &#40;Ævar Arnfjörð Bjarmason&#41;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/346826/155030/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 120b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+This allows me to run kp6 tests:<br />
+<br />
+$ ../../parrot perl6.pbc /var/src/v6/v6-KindaPerl6/t/kp6/02-str-concat.t <br />
+1..1<br />
+ok 1<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/346826/155032/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 560b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/346826/155034/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 501b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-346832" href="/rt3/Ticket/Display.html?id=49886#txn-346832">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;17&nbsp;12:34:24&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-347112" href="/rt3/Ticket/Display.html?id=49886#txn-347112">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;17&nbsp;17:37:57&nbsp;2008</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #49886] [PATCH] languages/perl6 requires `=begin&#39; to have a corrisponding ident. Remove that requirement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 17 Jan 2008 17:36:43 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/347112/155150/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 941b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Jan 17, 2008 at 12:34:23PM -0800, Ævar Arnfjörð Bjarmason via RT wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+: Index: src/parser/grammar.pg<br />
+<div class="message-stanza-depth-2">
+: ===================================================================<br />
+</div>
+: --- src/parser/grammar.pg     &#40;revision 24905&#41;<br />
+: +++ src/parser/grammar.pg     &#40;working copy&#41;<br />
+: @@ -111,8 +111,8 @@<br />
+:  token pod_comment {<br />
+:      ^^ &#39;=&#39; &lt;.unsp&gt;?<br />
+:      [<br />
+: -    | begin &lt;.ws&gt; &lt;ident&gt; .*? \n<br />
+: -      &#39;=&#39; &lt;.unsp&gt;? &#39;end&#39; &lt;.ws&gt; $&lt;ident&gt; \N*         {*}         #= block<br />
+: +    | begin &lt;.ws&gt; [ &lt;ident&gt; ]? .*? \n<br />
+: +      &#39;=&#39; &lt;.unsp&gt;? &#39;end&#39; &lt;.ws&gt; [ $&lt;ident&gt; ]? \N*    {*}         #= block<br />
+<div class="message-stanza-depth-2">
+:      | \N*                                           {*}         #= misc<br />
+</div>
+:      ]<br />
+:      {*}<br />
+</div>
+<br />
+That is problematic, since it allows<br />
+<br />
+    =begin foo<br />
+    =end<br />
+<br />
+&#40;Well, problematic unless you believe in that sort of thing...&#41;<br />
+Of course, both grammar.pg and STD.pm are just filling in for the<br />
+missing S26 implementation there, so it&#39;s a stopgap in any case.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-347114" href="/rt3/Ticket/Display.html?id=49886#txn-347114">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;17&nbsp;17:37:59&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-347176" href="/rt3/Ticket/Display.html?id=49886#txn-347176">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;17&nbsp;20:32:59&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #49886] [PATCH] languages/perl6 requires `=begin&#39; to have a corrisponding ident. Remove that requirement</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 17 Jan 2008 22:32:35 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/347176/155174/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Jan 17, 2008 at 05:36:43PM -0800, Larry Wall wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Thu, Jan 17, 2008 at 12:34:23PM -0800, Ævar Arnfjörð Bjarmason via RT wrote:<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; : Index: src/parser/grammar.pg<br />
+<div class="message-stanza-depth-3">
+&gt; : ===================================================================<br />
+</div>
+&gt; : --- src/parser/grammar.pg   &#40;revision 24905&#41;<br />
+&gt; : +++ src/parser/grammar.pg   &#40;working copy&#41;<br />
+&gt; : @@ -111,8 +111,8 @@<br />
+&gt; :  token pod_comment {<br />
+&gt; :      ^^ &#39;=&#39; &lt;.unsp&gt;?<br />
+&gt; :      [<br />
+&gt; : -    | begin &lt;.ws&gt; &lt;ident&gt; .*? \n<br />
+&gt; : -      &#39;=&#39; &lt;.unsp&gt;? &#39;end&#39; &lt;.ws&gt; $&lt;ident&gt; \N*         {*}         #= block<br />
+&gt; : +    | begin &lt;.ws&gt; [ &lt;ident&gt; ]? .*? \n<br />
+&gt; : +      &#39;=&#39; &lt;.unsp&gt;? &#39;end&#39; &lt;.ws&gt; [ $&lt;ident&gt; ]? \N*    {*}         #= block<br />
+<div class="message-stanza-depth-3">
+&gt; :      | \N*                                           {*}         #= misc<br />
+</div>
+&gt; :      ]<br />
+&gt; :      {*}<br />
+</div>
+&gt; <br />
+&gt; That is problematic, since it allows<br />
+&gt; <br />
+&gt;     =begin foo<br />
+&gt;     =end<br />
+&gt; <br />
+&gt; &#40;Well, problematic unless you believe in that sort of thing...&#41;<br />
+&gt; Of course, both grammar.pg and STD.pm are just filling in for the<br />
+&gt; missing S26 implementation there, so it&#39;s a stopgap in any case.<br />
+</div>
+<br />
+Agreed.  Since neither S26 nor STD.pm currently allow =begin or<br />
+=end without an identifier, we won&#39;t implement it that way.  &#40;Of<br />
+course, if the change is useful we could ask the perl6-language<br />
+gods to allow this.&#41;<br />
+<br />
+So, I&#39;ll close this ticket for now, and when/if the spec or STD.pm<br />
+changes we can do an update then.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-369852" href="/rt3/Ticket/Display.html?id=49886#txn-369852">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;12&nbsp;08:57:58&nbsp;2008</td>
+    <td class="description">
+      particle -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/369852/166756/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 58b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+closed for now as per pmichaud in previous comment.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-369854" href="/rt3/Ticket/Display.html?id=49886#txn-369854">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;12&nbsp;08:57:59&nbsp;2008</td>
+    <td class="description">
+      particle -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-369858" href="/rt3/Ticket/Display.html?id=49886#txn-369858">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Mar&nbsp;12&nbsp;08:58:12&nbsp;2008</td>
+    <td class="description">
+      particle -  Comments added
+    </td>
+    <td class="time-taken">2 min</td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/369858/166760/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 58b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+closed for now as per pmichaud in previous comment.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.370913</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

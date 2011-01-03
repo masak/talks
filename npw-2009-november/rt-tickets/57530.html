@@ -1,0 +1,1788 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57530: Fwd: Parallelize the Perl 6 tests</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57530">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57530: Fwd: Parallelize the Perl 6 tests</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57530">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57530</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57530">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57530">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+paratest.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/469222/217866/paratest.patch">
+Wed Sep 10 08:26:25 2008 (2.2k) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+make.spectest_regression.output.darwin.ppc.txt<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/469868/218400/make.spectest_regression.output.darwin.ppc.txt">
+Thu Sep 11 16:56:57 2008 (20.5k) by jkeen <!-- x --> at verizon.net
+</a>
+</font></li>
+</ul>
+
+
+parallel-r.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/469314/217940/parallel-r.patch">
+Wed Sep 10 13:44:20 2008 (3k) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57530">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-453620" href="/rt3/Ticket/Display.html?id=57530#txn-453620">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;02&nbsp;10:52:52&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 2 Aug 2008 12:52:16 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/453620/209292/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Schwern provided the following patch at the OSCON hackathon,<br />
+but we should probably test it on a couple of other architectures<br />
+before applying it.  So, can others apply, test, and report<br />
+results?<br />
+<br />
+If it works on sufficient platforms, we can apply it.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+<br />
+----- Forwarded message from Michael G Schwern &lt;schwern <!-- x --> at pobox.com&gt; -----<br />
+<br />
+Date: Sat, 26 Jul 2008 19:44:36 -0700<br />
+From: Michael G Schwern &lt;schwern <!-- x --> at pobox.com&gt;<br />
+To: &#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;<br />
+Subject: Parallelize the Perl 6 tests<br />
+<br />
+Turns on parallel testing for the perl 6 tests<br />
+* default 3 jobs in parallel.  Useful for dual cores,<br />
+  not so much to swamp a single core machine.<br />
+* introduces a &#34;jobs&#34; option Parrot::Test::Harness<br />
+* also a PARROT_HARNESS_JOBS environment variable<br />
+<br />
+Runs the spectest_regression about 50% faster on my Macbook.<br />
+<br />
+<br />
+-- <br />
+Insulting our readers is part of our business model.<br />
+        http://somethingpositive.net/sp07122005.shtml<br />
+<br />
+<br />
+Index: lib/Parrot/Test/Harness.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- lib/Parrot/Test/Harness.pm  &#40;revision 29706&#41;<br />
++++ lib/Parrot/Test/Harness.pm  &#40;working copy&#41;<br />
+@@ -162,12 +162,14 @@<br />
+     exit unless my @files = get_files&#40;%options&#41;;<br />
+ <br />
+     if &#40;eval { require TAP::Harness; 1 }&#41; {<br />
+-        my %options =<br />
++        my %harness_options =<br />
+               $options{exec}     ? &#40; exec =&gt; $options{exec} &#41;<br />
+<div class="message-stanza-depth-1">
+             : $options{compiler} ? &#40; exec =&gt; [ &#39;../../parrot&#39;, &#39;./&#39; . $options{compiler} ] &#41;<br />
+             :                      &#40;&#41;;<br />
+</div>
+-        TAP::Harness-&gt;new&#40; \%options &#41;-&gt;runtests&#40; @files &#41;;<br />
+ <br />
++        $harness_options{jobs} = $ENV{PARROT_HARNESS_JOBS} || $options{jobs} || 1;<br />
++        TAP::Harness-&gt;new&#40; \%harness_options &#41;-&gt;runtests&#40; @files &#41;;<br />
++<br />
+         return;<br />
+     }<br />
+ <br />
+Index: languages/perl6/t/harness<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/t/harness   &#40;revision 29782&#41;<br />
++++ languages/perl6/t/harness   &#40;working copy&#41;<br />
+@@ -11,7 +11,6 @@<br />
+ use lib qw&#40; ../../lib &#41;;<br />
+ use strict;<br />
+ <br />
+-our %harness_args;<br />
+ our $recurse = 1;<br />
+ <br />
+ our %harness_args = &#40;<br />
+@@ -22,6 +21,10 @@<br />
+ GetOptions&#40;<br />
+         &#39;tests-from-file=s&#39; =&gt; \my $list_file,<br />
+         &#39;fudge&#39;             =&gt; \my $do_fudge,<br />
++<br />
++        # A sensible default is num_cores + 1.<br />
++        # Many people have two cores these days.<br />
++        &#39;jobs:3&#39;            =&gt; \$harness_args{jobs},<br />
+     &#41;;<br />
+ <br />
+ <br />
+Index: languages/perl6/config/makefiles/root.in<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/config/makefiles/root.in    &#40;revision 29782&#41;<br />
++++ languages/perl6/config/makefiles/root.in    &#40;working copy&#41;<br />
+@@ -189,7 +189,7 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # NOTE: eventually, we should remove --keep-exit-code and --fudge<br />
+ #       as the goal is that all tests must pass without fudge<br />
+</div>
+-HARNESS_WITH_FUDGE = $&#40;PERL&#41; t/harness --fudge --keep-exit-code<br />
++HARNESS_WITH_FUDGE = $&#40;PERL&#41; t/harness --fudge --keep-exit-code --jobs<br />
+ <br />
+ spectest: all t/spec<br />
+        -cd t/spec &#38;&#38; svn up<br />
+@@ -213,7 +213,7 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run a single test<br />
+</div>
+ t/*.t t/*/*.t t/*/*/*.t: all<br />
+-       @$&#40;HARNESS_WITH_FUDGE&#41; $@<br />
++       @$&#40;HARNESS_WITH_FUDGE&#41; --jobs=1 $@<br />
+ <br />
+ t/localtest.data:<br />
+        $&#40;PERL&#41; -MExtUtils::Command -e test_f $@<br />
+<br />
+<br />
+----- End forwarded message -----<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-453630" href="/rt3/Ticket/Display.html?id=57530#txn-453630">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;02&nbsp;11:15:00&nbsp;2008</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57530] Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 2 Aug 2008 14:14:37 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Will Coleda&#34; &lt;will <!-- x --> at coleda.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/453630/209302/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 747b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Aug 2, 2008 at 1:52 PM, Patrick R. Michaud &#40;via RT&#41;<br />
+&lt;perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Patrick R. Michaud<br />
+&gt; # Please include the string:  [perl #57530]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=57530 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Schwern provided the following patch at the OSCON hackathon,<br />
+&gt; but we should probably test it on a couple of other architectures<br />
+&gt; before applying it.  So, can others apply, test, and report<br />
+&gt; results?<br />
+&gt;<br />
+&gt; If it works on sufficient platforms, we can apply it.<br />
+</div>
+&lt;SNIP&gt;<br />
+<br />
+It&#39;d be nice if we used the same env var for this as we did for the<br />
+main harness. &#40;that one is currently TEST_JOBS, iirc.&#41;<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-453634" href="/rt3/Ticket/Display.html?id=57530#txn-453634">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;02&nbsp;11:15:02&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469222" href="/rt3/Ticket/Display.html?id=57530#txn-469222">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;08:26:25&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">moritz <!-- x --> at verplant.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469222/217860/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 683b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; It&#39;d be nice if we used the same env var for this as we did for the<br />
+&gt; main harness. &#40;that one is currently TEST_JOBS, iirc.&#41;<br />
+</div>
+<br />
+Per request from moritz I have come up with an updated patch that seems<br />
+to apply cleanly and tested it on Ubuntu and cygwin/Windows Vista.  It<br />
+gives the expected output for &#34;make test&#34; and &#34;make spectest&#34; in both<br />
+cases and gives a nice performance boost under Ubuntu.  Under<br />
+cygwin/Windows Vista however the performance seems a bit slower and I<br />
+wonder if we shouldn&#39;t really check for the OS or use &#39;jobs:1&#39; in<br />
+languages/perl6/t/harness rather than &#39;jobs:3&#39;.<br />
+<br />
+Per the suggestion above the controlling environment variable in the<br />
+patch is TEST_JOBS.<br />
+<br />
+Ron<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469222/217866/paratest.patch">Download paratest.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: lib/Parrot/Test/Harness.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- lib/Parrot/Test/Harness.pm  &#40;revision 30967&#41;<br />
++++ lib/Parrot/Test/Harness.pm  &#40;working copy&#41;<br />
+@@ -166,12 +166,13 @@<br />
+     exit unless my @files = get_files&#40;%options&#41;;<br />
+ <br />
+     if &#40;eval { require TAP::Harness; 1 }&#41; {<br />
+-        my %opts =<br />
++        my %harness_options =<br />
+               $options{exec}     ? &#40; exec =&gt; $options{exec} &#41;<br />
+<div class="message-stanza-depth-1">
+             : $options{compiler} ? &#40; exec =&gt; [ &#39;../../parrot&#39;, &#39;./&#39; . $options{compiler} ] &#41;<br />
+             :                      &#40;&#41;;<br />
+</div>
+-        $opts{verbosity} = $options{verbosity} ? $options{verbosity} : 0;<br />
+-        TAP::Harness-&gt;new&#40; \%opts &#41;-&gt;runtests&#40; @files &#41;;<br />
++        $harness_options{verbosity} = $options{verbosity} ? $options{verbosity} : 0;<br />
++        $harness_options{jobs} = $ENV{TEST_JOBS} || $options{jobs} || 1;<br />
++        TAP::Harness-&gt;new&#40; \%harness_options &#41;-&gt;runtests&#40; @files &#41;;<br />
+ <br />
+         return;<br />
+     }<br />
+Index: languages/perl6/t/harness<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/t/harness   &#40;revision 30967&#41;<br />
++++ languages/perl6/t/harness   &#40;working copy&#41;<br />
+@@ -24,6 +24,9 @@<br />
+         &#39;tests-from-file=s&#39; =&gt; \my $list_file,<br />
+         &#39;fudge&#39;             =&gt; \my $do_fudge,<br />
+         &#39;verbosity=i&#39;       =&gt; \$harness_args{verbosity},<br />
++        # A sensible default is num_cores + 1.<br />
++        # Many people have two cores these days.<br />
++        &#39;jobs:3&#39;            =&gt; \$harness_args{jobs},        <br />
+     &#41;;<br />
+ <br />
+ <br />
+Index: languages/perl6/config/makefiles/root.in<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/config/makefiles/root.in    &#40;revision 30967&#41;<br />
++++ languages/perl6/config/makefiles/root.in    &#40;working copy&#41;<br />
+@@ -196,7 +196,7 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # NOTE: eventually, we should remove --keep-exit-code and --fudge<br />
+ #       as the goal is that all tests must pass without fudge<br />
+</div>
+-HARNESS_WITH_FUDGE = $&#40;PERL&#41; t/harness --fudge --keep-exit-code<br />
++HARNESS_WITH_FUDGE = $&#40;PERL&#41; t/harness --fudge --keep-exit-code --jobs<br />
+ <br />
+ spectest: all t/spec<br />
+        -cd t/spec &#38;&#38; svn up<br />
+@@ -224,7 +224,7 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run a single test<br />
+</div>
+ t/*.t t/*/*.t t/*/*/*.t: all<br />
+-       @$&#40;HARNESS_WITH_FUDGE&#41; $@<br />
++       @$&#40;HARNESS_WITH_FUDGE&#41; --jobs=1 $@<br />
+ <br />
+ t/localtest.data:<br />
+        $&#40;PERL&#41; -MExtUtils::Command -e test_f $@<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469230" href="/rt3/Ticket/Display.html?id=57530#txn-469230">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;09:29:14&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57530] Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 10 Sep 2008 18:19:49 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469230/217872/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ron Schmidt via RT wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; It&#39;d be nice if we used the same env var for this as we did for the<br />
+&gt;&gt; main harness. &#40;that one is currently TEST_JOBS, iirc.&#41;<br />
+</div>
+&gt; <br />
+&gt; Per request from moritz I have come up with an updated patch that seems<br />
+&gt; to apply cleanly and tested it on Ubuntu and cygwin/Windows Vista.  It<br />
+&gt; gives the expected output for &#34;make test&#34; and &#34;make spectest&#34; in both<br />
+&gt; cases and gives a nice performance boost under Ubuntu.  <br />
+</div>
+<br />
+Thank you very much. On Debian with two cores I get<br />
+2 jobs: 4m04<br />
+1 job:  2m35<br />
+<br />
+Which is good enough for me ;-&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Under<br />
+&gt; cygwin/Windows Vista however the performance seems a bit slower and I<br />
+&gt; wonder if we shouldn&#39;t really check for the OS or use &#39;jobs:1&#39; in<br />
+&gt; languages/perl6/t/harness rather than &#39;jobs:3&#39;.<br />
+</div>
+<br />
+Is there a good reason to test in parallel at all if TEST_JOBS isn&#39;t set<br />
+as an environment? That&#39;s how perl and parrot core tests do it, and I<br />
+think it&#39;s quite a good practice. People who test often will just define<br />
+that environment variable globally.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Per the suggestion above the controlling environment variable in the<br />
+&gt; patch is TEST_JOBS.<br />
+</div>
+<br />
+++ for that, and ++ for the patch.<br />
+<br />
+Now we need some feedback from MacOS X and windows/msvc users, then I&#39;ll<br />
+apply the patch.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469238" href="/rt3/Ticket/Display.html?id=57530#txn-469238">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;09:36:11&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57530] Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 10 Sep 2008 18:35:59 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469238/217880/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 214b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Thank you very much. On Debian with two cores I get<br />
+&gt; 2 jobs: 4m04<br />
+&gt; 1 job:  2m35<br />
+</div>
+<br />
+Well, actually it&#39;s the other way round ;-&#41;<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469242" href="/rt3/Ticket/Display.html?id=57530#txn-469242">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;09:37:42&nbsp;2008</td>
+    <td class="description">
+      rurban -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469242/217884/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 491b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+confirmed moritz cygwin test<br />
+<br />
+Interesting is that the step from Test-Harness-3.12 to Test-Harness-3.13<br />
+makes the difference.<br />
+<br />
+make spectest_regression<br />
+jobs:3 + 2 physical cores + Test-Harness-3.13<br />
+Files=159, Tests=4859, 78 wallclock secs &#40; 0.72 usr  0.25 sys + 143.56<br />
+cusr  8.31 csys = 152.84 CPU&#41;<br />
+Result: PASS<br />
+<br />
+without patch or with patch + Test::Harness-3.12<br />
+Files=159, Tests=4859, 137 wallclock secs &#40; 0.12 usr  0.12 sys + 130.19<br />
+cusr  7.13 csys = 137.57 CPU&#41;<br />
+Result: PASS<br />
+-- <br />
+Reini Urban<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469306" href="/rt3/Ticket/Display.html?id=57530#txn-469306">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;12:41:28&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">moritz <!-- x --> at verplant.org, reini.urban <!-- x --> at gmail.com</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469306/217928/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 913b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Sep 10 09:37:42 2008, rurban wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; confirmed moritz cygwin test<br />
+&gt; <br />
+&gt; Interesting is that the step from Test-Harness-3.12 to Test-Harness-<br />
+</div>
+3.13<br />
+<div class="message-stanza-depth-1">
+&gt; makes the difference.<br />
+&gt; <br />
+</div>
+<br />
+I upgraded my Test::Harness for cygwin and my performance started to <br />
+improve noticeably with TEST_JOBS &gt; 1.  If you still, for whatever <br />
+reason, want to leave the default number of jobs at 1 for spectest and <br />
+spectest_regression, you can just apply the first patch to <br />
+lib/Parrot/Test/Harness.pm, and leave out the patches to the other two <br />
+files.  I tested that and it defaults the TEST_JOBS to 1 and obeys the <br />
+TEST_JOBS environment variable if it&#39;s set.  On the other hand going <br />
+with schwern&#39;s original intent may be OK and may be improved, if <br />
+someone asks me to try being more ambitious, by, for example, having <br />
+perl6/languages/t/harness warn about old versions Test::Harness under <br />
+circumstances where it may cause trouble.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469314" href="/rt3/Ticket/Display.html?id=57530#txn-469314">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;10&nbsp;13:44:20&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57530] Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 10 Sep 2008 22:44:04 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469314/217938/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ron Schmidt via RT wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; It&#39;d be nice if we used the same env var for this as we did for the<br />
+&gt;&gt; main harness. &#40;that one is currently TEST_JOBS, iirc.&#41;<br />
+</div>
+&gt; <br />
+&gt; Per request from moritz I have come up with an updated patch that seems<br />
+&gt; to apply cleanly and tested it on Ubuntu and cygwin/Windows Vista.  It<br />
+&gt; gives the expected output for &#34;make test&#34; and &#34;make spectest&#34; in both<br />
+&gt; cases and gives a nice performance boost under Ubuntu.  Under<br />
+&gt; cygwin/Windows Vista however the performance seems a bit slower and I<br />
+&gt; wonder if we shouldn&#39;t really check for the OS or use &#39;jobs:1&#39; in<br />
+&gt; languages/perl6/t/harness rather than &#39;jobs:3&#39;.<br />
+&gt; <br />
+&gt; Per the suggestion above the controlling environment variable in the<br />
+&gt; patch is TEST_JOBS.<br />
+</div>
+<br />
+Attached is a slightly improved patch:<br />
+1&#41; doesn&#39;t have trailing spaces in t/harness<br />
+2&#41; &#39;make localtest_loud&#39; works as before<br />
+&#40;with the old patch you wouldn&#39;t see the verbose output, which is<br />
+crucial when you try to fudge tests for rakudo&#41;<br />
+3&#41; &#39;make t/spec/$path_to_file.t&#39; is now verbose by default &#40;which also<br />
+makes sense because you usually don&#39;t want to run many of those from the<br />
+command line&#41;<br />
+<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469314/217940/parallel-r.patch">Download parallel-r.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: lib/Parrot/Test/Harness.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- lib/Parrot/Test/Harness.pm  &#40;revision 30954&#41;<br />
++++ lib/Parrot/Test/Harness.pm  &#40;working copy&#41;<br />
+@@ -166,12 +166,13 @@<br />
+     exit unless my @files = get_files&#40;%options&#41;;<br />
+ <br />
+     if &#40;eval { require TAP::Harness; 1 }&#41; {<br />
+-        my %opts =<br />
++        my %harness_options =<br />
+               $options{exec}     ? &#40; exec =&gt; $options{exec} &#41;<br />
+<div class="message-stanza-depth-1">
+             : $options{compiler} ? &#40; exec =&gt; [ &#39;../../parrot&#39;, &#39;./&#39; . $options{compiler} ] &#41;<br />
+             :                      &#40;&#41;;<br />
+</div>
+-        $opts{verbosity} = $options{verbosity} ? $options{verbosity} : 0;<br />
+-        TAP::Harness-&gt;new&#40; \%opts &#41;-&gt;runtests&#40; @files &#41;;<br />
++        $harness_options{verbosity} = $options{verbosity} ? $options{verbosity} : 0;<br />
++        $harness_options{jobs} = $ENV{TEST_JOBS} || $options{jobs} || 1;<br />
++        TAP::Harness-&gt;new&#40; \%harness_options &#41;-&gt;runtests&#40; @files &#41;;<br />
+ <br />
+         return;<br />
+     }<br />
+Index: languages/perl6/t/harness<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/t/harness   &#40;revision 30969&#41;<br />
++++ languages/perl6/t/harness   &#40;working copy&#41;<br />
+@@ -24,6 +24,9 @@<br />
+         &#39;tests-from-file=s&#39; =&gt; \my $list_file,<br />
+         &#39;fudge&#39;             =&gt; \my $do_fudge,<br />
+         &#39;verbosity=i&#39;       =&gt; \$harness_args{verbosity},<br />
++        # A sensible default is num_cores + 1.<br />
++        # Many people have two cores these days.<br />
++        &#39;jobs:3&#39;            =&gt; \$harness_args{jobs},<br />
+     &#41;;<br />
+ <br />
+ <br />
+Index: languages/perl6/config/makefiles/root.in<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/config/makefiles/root.in    &#40;revision 30969&#41;<br />
++++ languages/perl6/config/makefiles/root.in    &#40;working copy&#41;<br />
+@@ -197,21 +197,22 @@<br />
+<div class="message-stanza-depth-1">
+ # NOTE: eventually, we should remove --keep-exit-code and --fudge<br />
+ #       as the goal is that all tests must pass without fudge<br />
+</div>
+ HARNESS_WITH_FUDGE = $&#40;PERL&#41; t/harness --fudge --keep-exit-code<br />
++HARNESS_WITH_FUDGE_JOBS = $&#40;HARNESS_WITH_FUDGE&#41; --jobs<br />
+ <br />
+ spectest: all t/spec<br />
+        -cd t/spec &#38;&#38; svn up<br />
+-       $&#40;HARNESS_WITH_FUDGE&#41; t/spec<br />
++       $&#40;HARNESS_WITH_FUDGE_JOBS&#41; t/spec<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run the spectests that we know work.<br />
+</div>
+ spectest_regression: all t/spec t/spectest_regression.data<br />
+        -cd t/spec &#38;&#38; svn up<br />
+-       $&#40;HARNESS_WITH_FUDGE&#41; --tests-from-file=t/spectest_regression.data<br />
++       $&#40;HARNESS_WITH_FUDGE_JOBS&#41; --tests-from-file=t/spectest_regression.data<br />
+ <br />
+ fulltest: coretest spectest_regression codetest<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run the tests in t/localtest.data<br />
+</div>
+ localtest: all t/spec t/localtest.data<br />
+-       @$&#40;HARNESS_WITH_FUDGE&#41; --tests-from-file=t/localtest.data<br />
++       @$&#40;HARNESS_WITH_FUDGE_JOBS&#41; --tests-from-file=t/localtest.data<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run the tests in t/localtest.data with a higher verbosity<br />
+</div>
+ localtest_loud: all t/spec t/localtest.data<br />
+@@ -220,11 +221,11 @@<br />
+<div class="message-stanza-depth-1">
+ # Run many tests of your choise.<br />
+ # make somtests TESTFILES=t/foo/bar<br />
+</div>
+ sometests: all<br />
+-       @$&#40;HARNESS_WITH_FUDGE&#41; $&#40;TESTFILES&#41;<br />
++       @$&#40;HARNESS_WITH_FUDGE_JOBS&#41; $&#40;TESTFILES&#41;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Run a single test<br />
+</div>
+ t/*.t t/*/*.t t/*/*/*.t: all<br />
+-       @$&#40;HARNESS_WITH_FUDGE&#41; $@<br />
++       @$&#40;HARNESS_WITH_FUDGE&#41; --verbosity=1 $@<br />
+ <br />
+ t/localtest.data:<br />
+        $&#40;PERL&#41; -MExtUtils::Command -e test_f $@<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469542" href="/rt3/Ticket/Display.html?id=57530#txn-469542">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;11&nbsp;05:08:13&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469542/218156/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz,<br />
+<br />
+I applied parallel-r.patch to trunk at r30978 on Darwin &#40;10.4 PPC&#41;,<br />
+successfully built and tested Parrot, built Perl 6, then got the results<br />
+below out of &#39;make test&#39;.<br />
+<br />
+Since I build and test Perl 6 infrequently, I&#39;m not sure whether these<br />
+results are different from what I would have gotten without the patch<br />
+applied.  But everything passed!<br />
+<br />
+Thank you very much.<br />
+kid51<br />
+<br />
+<br />
+/usr/local/bin/perl t/harness t/00-parrot t/01-sanity<br />
+t/00-parrot/01-literals............ok     <br />
+t/00-parrot/02-op-math.............ok     <br />
+t/00-parrot/03-op-logic............ok     <br />
+t/00-parrot/04-op-cmp..............ok     <br />
+t/00-parrot/05-var-array...........ok     <br />
+t/00-parrot/05-var.................ok     <br />
+t/00-parrot/06-op-inplace..........ok     <br />
+t/00-parrot/07-op-string...........ok     <br />
+t/00-parrot/08-regex...............ok     <br />
+t/01-sanity/01-tap.................ok     <br />
+t/01-sanity/02-counter.............ok   <br />
+t/01-sanity/03-equal...............ok   <br />
+t/01-sanity/04-if..................ok   <br />
+t/01-sanity/05-sub.................ok   <br />
+t/01-sanity/06-use.................ok   <br />
+t/01-sanity/07-binding.............ok   <br />
+t/01-sanity/07-defined.............ok   <br />
+t/01-sanity/07-end-blocks..........ok   <br />
+t/01-sanity/07-for.................ok   <br />
+t/01-sanity/07-isa.................ok   <br />
+t/01-sanity/07-range...............ok   <br />
+t/01-sanity/07-ref.................ok   <br />
+t/01-sanity/07-simple-multisubs....ok   <br />
+t/01-sanity/07-split...............ok   <br />
+t/01-sanity/07-substr..............ok   <br />
+t/01-sanity/07-try.................ok   <br />
+t/01-sanity/08-say.................ok     <br />
+t/01-sanity/09-types...............ok   <br />
+All tests successful.<br />
+Files=28, Tests=232, 82 wallclock secs &#40; 0.36 usr  0.29 sys + 71.43 cusr<br />
+ 6.98 csys = 79.06 CPU&#41;<br />
+Result: PASS<br />
+prove t/pmc<br />
+t/pmc/mutable...................ok   <br />
+t/pmc/mutablevar................ok   <br />
+t/pmc/perl6multisub-arity.......ok     <br />
+t/pmc/perl6multisub-basic.......ok   <br />
+t/pmc/perl6multisub-tiebreak....ok   <br />
+t/pmc/perl6multisub-type........ok     <br />
+All tests successful.<br />
+Files=6, Tests=39,  8 wallclock secs &#40; 0.10 usr  0.08 sys +  6.45 cusr <br />
+1.21 csys =  7.84 CPU&#41;<br />
+Result: PASS<br />
+make -C /Users/jimk/work/parrot codetest<br />
+/usr/local/bin/perl t/harness --gc-debug --running-make-test --code-tests<br />
+t/distro/file_metadata.........# Collecting svn:mime-type attributes...<br />
+t/distro/file_metadata.........1/5 # Collecting svn:keywords attributes...<br />
+t/distro/file_metadata.........3/5 # Collecting svn:eol-style attributes...<br />
+t/distro/file_metadata.........4/5 # Collecting svn:eol-style attributes...<br />
+t/distro/file_metadata.........ok   <br />
+t/codingstd/c_code_coda........ok   <br />
+t/codingstd/c_cppcomments......ok   <br />
+t/codingstd/c_header_guards....ok   <br />
+t/codingstd/c_indent...........ok   <br />
+t/codingstd/c_macro_args.......ok   <br />
+t/codingstd/c_operator.........ok   <br />
+t/codingstd/c_parens...........ok   <br />
+t/codingstd/c_returns..........ok   <br />
+t/codingstd/c_struct...........ok   <br />
+t/codingstd/check_isxxx........ok   <br />
+t/codingstd/check_toxxx........ok   <br />
+t/codingstd/copyright..........ok   <br />
+t/codingstd/cuddled_else.......ok   <br />
+t/codingstd/filenames..........ok   <br />
+t/codingstd/gmt_utc............ok   <br />
+t/codingstd/linelength.........ok   <br />
+t/codingstd/pccmethod_deps.....ok   <br />
+t/codingstd/pdd_format.........ok   <br />
+t/codingstd/perlcritic.........ok       <br />
+t/codingstd/pir_code_coda......ok   <br />
+t/codingstd/svn_id.............ok   <br />
+t/codingstd/tabs...............ok   <br />
+t/codingstd/trailing_space.....ok   <br />
+All tests successful.<br />
+Files=24, Tests=374, 960 wallclock secs &#40; 0.64 usr  0.37 sys + 628.56<br />
+cusr 28.01 csys = 657.58 CPU&#41;<br />
+Result: PASS<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469578" href="/rt3/Ticket/Display.html?id=57530#txn-469578">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;11&nbsp;05:25:53&nbsp;2008</td>
+    <td class="description">
+      rurban -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57530] Fwd: Parallelize the Perl 6 tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 11 Sep 2008 14:25:11 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Reini Urban&#34; &lt;rurban@x-ray.at&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469578/218180/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+2008/9/11 James Keenan via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;:<br />
+<div class="message-stanza-depth-1">
+&gt; Moritz,<br />
+&gt;<br />
+&gt; I applied parallel-r.patch to trunk at r30978 on Darwin &#40;10.4 PPC&#41;,<br />
+&gt; successfully built and tested Parrot, built Perl 6, then got the results<br />
+&gt; below out of &#39;make test&#39;.<br />
+&gt;<br />
+&gt; Since I build and test Perl 6 infrequently, I&#39;m not sure whether these<br />
+&gt; results are different from what I would have gotten without the patch<br />
+&gt; applied.  But everything passed!<br />
+</div>
+<br />
+Wrong make target.<br />
+You have to run<br />
+<br />
+$ cd languages/perl6<br />
+$ make spectest_regression<br />
+<br />
+to test this patch and the speed difference.<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Thank you very much.<br />
+&gt; kid51<br />
+&gt;<br />
+&gt;<br />
+&gt; /usr/local/bin/perl t/harness t/00-parrot t/01-sanity<br />
+&gt; t/00-parrot/01-literals............ok<br />
+&gt; t/00-parrot/02-op-math.............ok<br />
+&gt; t/00-parrot/03-op-logic............ok<br />
+&gt; t/00-parrot/04-op-cmp..............ok<br />
+&gt; t/00-parrot/05-var-array...........ok<br />
+&gt; t/00-parrot/05-var.................ok<br />
+&gt; t/00-parrot/06-op-inplace..........ok<br />
+&gt; t/00-parrot/07-op-string...........ok<br />
+&gt; t/00-parrot/08-regex...............ok<br />
+&gt; t/01-sanity/01-tap.................ok<br />
+&gt; t/01-sanity/02-counter.............ok<br />
+&gt; t/01-sanity/03-equal...............ok<br />
+&gt; t/01-sanity/04-if..................ok<br />
+&gt; t/01-sanity/05-sub.................ok<br />
+&gt; t/01-sanity/06-use.................ok<br />
+&gt; t/01-sanity/07-binding.............ok<br />
+&gt; t/01-sanity/07-defined.............ok<br />
+&gt; t/01-sanity/07-end-blocks..........ok<br />
+&gt; t/01-sanity/07-for.................ok<br />
+&gt; t/01-sanity/07-isa.................ok<br />
+&gt; t/01-sanity/07-range...............ok<br />
+&gt; t/01-sanity/07-ref.................ok<br />
+&gt; t/01-sanity/07-simple-multisubs....ok<br />
+&gt; t/01-sanity/07-split...............ok<br />
+&gt; t/01-sanity/07-substr..............ok<br />
+&gt; t/01-sanity/07-try.................ok<br />
+&gt; t/01-sanity/08-say.................ok<br />
+&gt; t/01-sanity/09-types...............ok<br />
+&gt; All tests successful.<br />
+&gt; Files=28, Tests=232, 82 wallclock secs &#40; 0.36 usr  0.29 sys + 71.43 cusr<br />
+&gt;  6.98 csys = 79.06 CPU&#41;<br />
+&gt; Result: PASS<br />
+&gt; prove t/pmc<br />
+&gt; t/pmc/mutable...................ok<br />
+&gt; t/pmc/mutablevar................ok<br />
+&gt; t/pmc/perl6multisub-arity.......ok<br />
+&gt; t/pmc/perl6multisub-basic.......ok<br />
+&gt; t/pmc/perl6multisub-tiebreak....ok<br />
+&gt; t/pmc/perl6multisub-type........ok<br />
+&gt; All tests successful.<br />
+&gt; Files=6, Tests=39,  8 wallclock secs &#40; 0.10 usr  0.08 sys +  6.45 cusr<br />
+&gt; 1.21 csys =  7.84 CPU&#41;<br />
+&gt; Result: PASS<br />
+&gt; make -C /Users/jimk/work/parrot codetest<br />
+&gt; /usr/local/bin/perl t/harness --gc-debug --running-make-test --code-tests<br />
+&gt; t/distro/file_metadata.........# Collecting svn:mime-type attributes...<br />
+&gt; t/distro/file_metadata.........1/5 # Collecting svn:keywords attributes...<br />
+&gt; t/distro/file_metadata.........3/5 # Collecting svn:eol-style attributes...<br />
+&gt; t/distro/file_metadata.........4/5 # Collecting svn:eol-style attributes...<br />
+&gt; t/distro/file_metadata.........ok<br />
+&gt; t/codingstd/c_code_coda........ok<br />
+&gt; t/codingstd/c_cppcomments......ok<br />
+&gt; t/codingstd/c_header_guards....ok<br />
+&gt; t/codingstd/c_indent...........ok<br />
+&gt; t/codingstd/c_macro_args.......ok<br />
+&gt; t/codingstd/c_operator.........ok<br />
+&gt; t/codingstd/c_parens...........ok<br />
+&gt; t/codingstd/c_returns..........ok<br />
+&gt; t/codingstd/c_struct...........ok<br />
+&gt; t/codingstd/check_isxxx........ok<br />
+&gt; t/codingstd/check_toxxx........ok<br />
+&gt; t/codingstd/copyright..........ok<br />
+&gt; t/codingstd/cuddled_else.......ok<br />
+&gt; t/codingstd/filenames..........ok<br />
+&gt; t/codingstd/gmt_utc............ok<br />
+&gt; t/codingstd/linelength.........ok<br />
+&gt; t/codingstd/pccmethod_deps.....ok<br />
+&gt; t/codingstd/pdd_format.........ok<br />
+&gt; t/codingstd/perlcritic.........ok<br />
+&gt; t/codingstd/pir_code_coda......ok<br />
+&gt; t/codingstd/svn_id.............ok<br />
+&gt; t/codingstd/tabs...............ok<br />
+&gt; t/codingstd/trailing_space.....ok<br />
+&gt; All tests successful.<br />
+&gt; Files=24, Tests=374, 960 wallclock secs &#40; 0.64 usr  0.37 sys + 628.56<br />
+&gt; cusr 28.01 csys = 657.58 CPU&#41;<br />
+&gt; Result: PASS<br />
+&gt;<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Reini Urban<br />
+http://phpwiki.org/ http://murbreak.at/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469686" href="/rt3/Ticket/Display.html?id=57530#txn-469686">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;11&nbsp;08:30:49&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469686/218254/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 219b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Since the feedback so far was mostly positive &#40;and none defeating&#41; I now<br />
+applied the patch. Thanks go to all contributers and testers.<br />
+<br />
+If there are some problems with the test harness, please open a new ticket.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469690" href="/rt3/Ticket/Display.html?id=57530#txn-469690">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;11&nbsp;08:30:55&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-469868" href="/rt3/Ticket/Display.html?id=57530#txn-469868">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;11&nbsp;16:56:57&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469868/218394/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 353b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Sep 11 08:30:49 2008, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Since the feedback so far was mostly positive &#40;and none defeating&#41; I now<br />
+&gt; applied the patch. Thanks go to all contributers and testers.<br />
+&gt; <br />
+&gt; If there are some problems with the test harness, please open a new<br />
+</div>
+ticket.<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+</div>
+FWIW:  Here are the results I got when I ran make spectest_regression as<br />
+you advised.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/469868/218400/make.spectest_regression.output.darwin.ppc.txt">Download make.spectest_regression.output.darwin.ppc.txt</a>
+<span class="downloadcontenttype">
+[text/plain 20.5k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.797522</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

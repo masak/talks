@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg6450">
+  <defs
+     id="defs6452" />
+  <g
+     id="layer1">
+    <g
+       id="g7018">
+      <rect
+         width="816.66669"
+         height="630"
+         x="-8.333333"
+         y="-15"
+         id="rect6460"
+         style="fill:#7fc8a2;fill-opacity:1;stroke:none" />
+      <text
+         x="41.888416"
+         y="100.86383"
+         id="text6972"
+         xml:space="preserve"
+         style="font-size:21.36858368px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="41.888416"
+           y="100.86383"
+           id="tspan6974">mm/ The quick brown fox(es)? jump[&lt;?{$0}&gt;|s&lt;!{$0}&gt;|ed] /</tspan></text>
+    </g>
+    <text
+       x="37.109375"
+       y="270"
+       id="text7023"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="37.109375"
+         y="270"
+         id="tspan7025">Matches:  The quick brown fox jumps</tspan><tspan
+         x="37.109375"
+         y="310"
+         id="tspan7027">          The quick brown fox jumped</tspan><tspan
+         x="37.109375"
+         y="350"
+         id="tspan7029">          The quick brown foxes jump</tspan><tspan
+         x="37.109375"
+         y="390"
+         id="tspan7031">          The quick brown foxes jumped</tspan></text>
+    <text
+       x="37.109375"
+       y="478.33334"
+       id="text7033"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="37.109375"
+         y="478.33334"
+         id="tspan7035">Fails on: The quick brown fox jump</tspan><tspan
+         x="37.109375"
+         y="518.33337"
+         id="tspan7037">          The quick brown foxes jumps</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,1026 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57790: nicer error message for 12345[1] &#40;number scalar indexed with .[]&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57790">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57790: nicer error message for 12345[1] &#40;number scalar indexed with .[]&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57790">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57790</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57790">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57790">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+Positional_trap_elements.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/549002/261060/Positional_trap_elements.patch">
+Sat Apr 04 05:49:25 2009 (790b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57790">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-457188" href="/rt3/Ticket/Display.html?id=57790#txn-457188">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;11&nbsp;00:08:21&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">array indexing of integers parses&#40;!&#41;, fails at runtime and exposes internals</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 11 Aug 2008 09:08:03 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/457188/211378/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 889b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+r30166:<br />
+$ perl6 -e &#39;999999[1]&#39;<br />
+get_pmc_keyed&#40;&#41; not implemented in class &#39;Integer&#39;<br />
+[...]<br />
+$ perl6 -e &#39;1000000[1]&#39;<br />
+get_pmc_keyed&#40;&#41; not implemented in class &#39;Float&#39;<br />
+[...]<br />
+<br />
+So:<br />
+<br />
+* For some reason, a literal integer followed by an array index makes<br />
+it though parsing. Is it really valid standard Perl 6 syntax?<br />
+<br />
+* A Parrot error is thrown once the code is run. Even if code like<br />
+this gets through the parsing stage &#40;and we can&#39;t stop, say, integers<br />
+in variables being array-indexed&#41;, the error should be trapped by<br />
+rakudo.<br />
+<br />
+* Some magical limit between 999999 and 1000000 makes the error start<br />
+talking about &#39;Float&#39; rather than &#39;Integer&#39;. This is also the point<br />
+when numbers are written in exponential form, as 1+e6. Perl 5 handles<br />
+integers of much higher magnitude by default.<br />
+<br />
+Perl 5.8 has a simple solution to array indexing of integers:<br />
+<br />
+$ perl -e 1[1]&#39;<br />
+syntax error at -e line 1, near &#34;1[&#34;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458712" href="/rt3/Ticket/Display.html?id=57790#txn-458712">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;14&nbsp;03:30:18&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57790] array indexing of integers parses&#40;!&#41;, fails at runtime and exposes internals</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 14 Aug 2008 02:32:29 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/458712/212102/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Aug 11, 2008 at 12:08:21AM -0700, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; r30166:<br />
+&gt; $ perl6 -e &#39;999999[1]&#39;<br />
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Integer&#39;<br />
+&gt; [...]<br />
+&gt; $ perl6 -e &#39;1000000[1]&#39;<br />
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Float&#39;<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; So:<br />
+&gt; <br />
+&gt; * For some reason, a literal integer followed by an array index makes<br />
+&gt; it though parsing. Is it really valid standard Perl 6 syntax?<br />
+</div>
+<br />
+AFAICT, according to the grammar it&#39;s valid standard Perl 6 syntax.<br />
+Whether something else is supposed to catch this and throw an<br />
+exception is &#40;as yet&#41; unspecced.  But keep in mind that we can<br />
+do things like method calls on literals, so it seems that other<br />
+postfixish sorts of things are &#40;syntactically&#41; legal.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; * A Parrot error is thrown once the code is run. Even if code like<br />
+&gt; this gets through the parsing stage &#40;and we can&#39;t stop, say, integers<br />
+&gt; in variables being array-indexed&#41;, the error should be trapped by<br />
+&gt; rakudo.<br />
+</div>
+<br />
+At present Rakudo doesn&#39;t try to interpret all exceptions that Parrot<br />
+may throw and impose its own interpretations on them.  But suggestions<br />
+are welcome here.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; * Some magical limit between 999999 and 1000000 makes the error start<br />
+&gt; talking about &#39;Float&#39; rather than &#39;Integer&#39;. This is also the point<br />
+&gt; when numbers are written in exponential form, as 1+e6. Perl 5 handles<br />
+&gt; integers of much higher magnitude by default.<br />
+</div>
+<br />
+I think this has to do with the way that integers are interpreted<br />
+in PIR.  I&#39;m not exactly certain how we want to resolve it, but<br />
+it&#39;s likely going to require some help from Parrot.  &#40;Either that<br />
+or we get POST to compile to bytecode directly and avoid the PIR<br />
+translation altogether.&#41;<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458716" href="/rt3/Ticket/Display.html?id=57790#txn-458716">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;14&nbsp;03:30:21&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458722" href="/rt3/Ticket/Display.html?id=57790#txn-458722">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;14&nbsp;03:59:28&nbsp;2008</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57790] array indexing of integers parses&#40;!&#41;, fails at runtime and exposes internals</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 14 Aug 2008 03:58:45 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/458722/212108/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 451b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Aug 14, 2008 at 02:32:29AM -0500, Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+: AFAICT, according to the grammar it&#39;s valid standard Perl 6 syntax.<br />
+</div>
+<br />
+At least in pugs, 42[0] is legal, and produces the value 42, on<br />
+the theory that anything can be considered a list of 1 item, and<br />
+if you use something as a list, it is one.  And it&#39;s a useful<br />
+idiom when you&#39;re not sure whether you are getting a list or not,<br />
+but you just want the first value in any case.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458804" href="/rt3/Ticket/Display.html?id=57790#txn-458804">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Aug&nbsp;14&nbsp;09:22:02&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57790] array indexing of integers parses&#40;!&#41;, fails at runtime and exposes internals</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 14 Aug 2008 18:21:49 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/458804/212150/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 873b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl MXXsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+&gt; # Please include the string:  [perl #57790]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=57790 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; r30166:<br />
+&gt; $ perl6 -e &#39;999999[1]&#39;<br />
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Integer&#39;<br />
+&gt; [...]<br />
+&gt; $ perl6 -e &#39;1000000[1]&#39;<br />
+&gt; get_pmc_keyed&#40;&#41; not implemented in class &#39;Float&#39;<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; So:<br />
+&gt; <br />
+&gt; * For some reason, a literal integer followed by an array index makes<br />
+&gt; it though parsing. Is it really valid standard Perl 6 syntax?<br />
+</div>
+<br />
+Yes. Imagine<br />
+<br />
+class Int is also { method postcircumfix:&lt;[ ]&gt; { ... } }<br />
+<br />
+In general .[] and .{} are just method calls with a fancy syntax, so<br />
+they are allowed everywhere &#40;but might throw runtime errors&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-548204" href="/rt3/Ticket/Display.html?id=57790#txn-548204">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;02&nbsp;07:02:55&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/548204/260658/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 415b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;PhatEddy&gt; rakudo: 1000000[1]<br />
+&lt;p6eval&gt; rakudo c40f3b: OUTPUT«elements&#40;&#41; not implemented in class<br />
+&#39;Integer&#39; [...]<br />
+&lt;masak&gt; PhatEddy: what did you expect that to do?<br />
+&lt;PhatEddy&gt; according to an old ticket it was giving some parrot errors<br />
+&lt;PhatEddy&gt; rt 57790 http://rt.perl.org/rt3/Public/Bug/Display.html?id=57790<br />
+&lt;masak&gt; PhatEddy: ah.<br />
+&lt;masak&gt; August... I didn&#39;t recognize it. :&#41;<br />
+&lt;masak&gt; I think we can close that one.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-548206" href="/rt3/Ticket/Display.html?id=57790#txn-548206">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;02&nbsp;07:02:55&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-548242" href="/rt3/Ticket/Display.html?id=57790#txn-548242">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;02&nbsp;07:43:09&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/548242/260674/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 589b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Apr 02 07:02:55 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;PhatEddy&gt; rakudo: 1000000[1]<br />
+&gt; &lt;p6eval&gt; rakudo c40f3b: OUTPUT«elements&#40;&#41; not implemented in class<br />
+&gt; &#39;Integer&#39; [...]<br />
+</div>
+<br />
+After further discussion this output was noted as an improvement but <br />
+not as good error ouput as desired.<br />
+<br />
+For now an improvement to behavior similar to that displayed below was <br />
+loosely agreed upon as wanted:<br />
+<br />
+&lt;PhatEddy&gt; rakudo: say &#34;abc&#34;[0]<br />
+&lt;p6eval&gt; rakudo c40f3b: OUTPUT«Method &#39;postcircumfix:[ ]&#39; not found for <br />
+invocant of class &#39;Str&#39;␤current instr.: &#39;postcircumfix:[ ]&#39; pc 3926 <br />
+&#40;src/classes/Positional.pir:100&#41;␤»<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-548246" href="/rt3/Ticket/Display.html?id=57790#txn-548246">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;02&nbsp;07:51:51&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-548248" href="/rt3/Ticket/Display.html?id=57790#txn-548248">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Apr&nbsp;02&nbsp;07:53:33&nbsp;2009</td>
+    <td class="description">
+      masak -  Subject changed from &#39;array indexing of integers parses&#40;!&#41;, fails at runtime and exposes internals&#39; to &#39;nicer error message for 12345[1] &#40;number scalar indexed with .[]&#41;&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549002" href="/rt3/Ticket/Display.html?id=57790#txn-549002">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Apr&nbsp;04&nbsp;05:49:25&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] nicer error message for 12345[1] &#40;number scalar indexed   with .[]&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549002/261054/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 215b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The attached patch should generate the desired error message.  If <br />
+someone wants a test for this, just let me know which test file the <br />
+test belongs in and I will be happy to post an appropriate test for <br />
+that file.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549002/261060/Positional_trap_elements.patch">Download Positional_trap_elements.patch</a>
+<span class="downloadcontenttype">
+[text/plain 790b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+--- a/src/classes/Positional.pir<br />
++++ b/src/classes/Positional.pir<br />
+@@ -105,9 +105,24 @@ Returns a list element or slice.<br />
+     .param pmc invocant<br />
+     .param pmc argsblock<br />
+     .param pmc options :slurpy :named<br />
++    <br />
++    # if elements fails we can probably count on postcfix to err adequately<br />
++    push_eh call_and_throw_err<br />
+     $I0 = elements invocant<br />
+     $P0 = box $I0<br />
+     set_hll_global [&#39;Whatever&#39;], &#39;$!slice&#39;, $P0<br />
++    goto just_call<br />
++<br />
++call_and_throw_err:<br />
++    .const string NO_ELEMENTS_MARKER = &#34;elements&#40;&#41; not implemented&#34;<br />
++    .get_results &#40;$P0&#41;<br />
++    $I0 = length NO_ELEMENTS_MARKER<br />
++    $S0 = $P0<br />
++    $S0 = substr $S0, 0, $I0<br />
++    if $S0 == NO_ELEMENTS_MARKER goto just_call<br />
++    rethrow $P0<br />
++<br />
++just_call:<br />
+     .local pmc args<br />
+     args = argsblock&#40;&#41;<br />
+     args = &#39;list&#39;&#40;args&#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.938164</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

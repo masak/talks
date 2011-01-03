@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="800"
+   height="600"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3225">
+      <stop
+         id="stop3227"
+         style="stop-color:#202020;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3229"
+         style="stop-color:#404040;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="305.7514"
+       y1="612.96027"
+       x2="305.7514"
+       y2="-7.0500927"
+       id="linearGradient3231"
+       xlink:href="#linearGradient3225"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="layer1">
+    <rect
+       width="816.32654"
+       height="617.4397"
+       x="-7.4211502"
+       y="-7.0500927"
+       id="rect2453"
+       style="opacity:1;fill:url(#linearGradient3231);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       transform="translate(0,35.33971)"
+       id="g2439">
+      <g
+         id="g2433">
+        <text
+           x="106.38672"
+           y="118.48586"
+           id="text2383"
+           xml:space="preserve"
+           style="font-size:80px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+             x="106.38672"
+             y="118.48586"
+             id="tspan2385">Beauty and Chaos</tspan></text>
+        <text
+           x="205.42969"
+           y="187.87363"
+           id="text2387"
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+             x="205.42969"
+             y="187.87363"
+             id="tspan2389">The story of November</tspan></text>
+      </g>
+      <g
+         id="g2425">
+        <text
+           x="187.26562"
+           y="365.61017"
+           id="text2391"
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+             x="187.26562"
+             y="365.61017"
+             id="tspan2393">A talk given at NPW 2009</tspan></text>
+        <text
+           x="283.54492"
+           y="413.491"
+           id="text2395"
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+             x="283.54492"
+             y="413.491"
+             id="tspan2397">by Carl Mäsak</tspan></text>
+        <text
+           x="305.01968"
+           y="465.79565"
+           id="text2399"
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+             x="305.01968"
+             y="465.79565"
+             id="tspan2401">2009-04-17</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

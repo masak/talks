@@ -1,0 +1,901 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62768: Rakudo dies when PIR-compiling a module that depends on a module with  undeclared barewords</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62768">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62768: Rakudo dies when PIR-compiling a module that depends on a module with  undeclared barewords</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62768">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62768</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62768">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62768">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62768">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-524928" href="/rt3/Ticket/Display.html?id=62768#txn-524928">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;26&nbsp;02:03:21&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo dies when PIR-compiling a module that depends on a module with  undeclared barewords</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 26 Jan 2009 11:03:00 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/524928/247990/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 682b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r35994 seems mightly confused about whether to compile a module<br />
+containing a bareword that hasn&#39;t been declared, and whether to<br />
+compile modules that depend on such a module.<br />
+<br />
+$ cat A.pm<br />
+use B;<br />
+$ cat B.pm<br />
+class B does C;<br />
+$ $PARROT_DIR/parrot $PARROT_DIR/languages/perl6/perl6.pbc<br />
+--target=pir --output=B.pir B.pm<br />
+$ $PARROT_DIR/parrot $PARROT_DIR/languages/perl6/perl6.pbc<br />
+--target=pir --output=A.pir A.pm<br />
+Null PMC access in find_method&#40;&#41;<br />
+[...]<br />
+<br />
+There are two things wrong with the above. First B.pm shouldn&#39;t<br />
+compile. Second, A.pm shouldn&#39;t compile less often than B.pm does.<br />
+<br />
+Note that running either A.pm or B.pm also produces the same Null PMC<br />
+access. Please fix that too.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526334" href="/rt3/Ticket/Display.html?id=62768#txn-526334">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;29&nbsp;06:37:42&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 62908:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">An undeclared identifier isn&#39;t caught if it&#39;s imported indirectly</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 29 Jan 2009 15:37:03 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/526334/248732/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 264b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+$ cat A.pm<br />
+use v6;<br />
+use B;<br />
+<br />
+class A does C {<br />
+}<br />
+$ cat B.pm<br />
+use v6;<br />
+use C;<br />
+$ cat C.pm<br />
+use v6;<br />
+<br />
+role C {<br />
+}<br />
+$ perl6 A.pm # works<br />
+<br />
+I&#39;ve encountered cases where this fails during PIR compilation, but I<br />
+am unable to reproduce them right now. AFAIU, it should fail always.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526668" href="/rt3/Ticket/Display.html?id=62768#txn-526668">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:29:38&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 62908:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/526668/248864/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 853b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+masak &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; $ cat A.pm<br />
+&gt; use v6;<br />
+&gt; use B;<br />
+&gt; <br />
+&gt; class A does C {<br />
+&gt; }<br />
+&gt; $ cat B.pm<br />
+&gt; use v6;<br />
+&gt; use C;<br />
+&gt; $ cat C.pm<br />
+&gt; use v6;<br />
+&gt; <br />
+&gt; role C {<br />
+&gt; }<br />
+&gt; $ perl6 A.pm # works<br />
+&gt; <br />
+&gt; I&#39;ve encountered cases where this fails during PIR compilation, but I<br />
+&gt; am unable to reproduce them right now. AFAIU, it should fail always.<br />
+</div>
+<br />
+This bug is, as jnthn++ pointed out over IRC, largely bogus. An<br />
+indirectly declared C should be visible in A, so the above code should<br />
+never fail, not always as I claimed.<br />
+<br />
+The failure during PIR compilation turned out to be due to an undeclared<br />
+identifier &#39;B&#39;.<br />
+<br />
+$ cat A.pm<br />
+use v6;<br />
+<br />
+class A {<br />
+  has B $!b;<br />
+}<br />
+$ cat A/B.pm <br />
+use v6;<br />
+use A;<br />
+<br />
+class A::B is A {<br />
+}<br />
+$ perl6 --target=pir --output=A.pir A.pm<br />
+$ perl6 --target=pir --output=A/B.pir A/B.pm <br />
+Lexical &#39;self&#39; not found<br />
+[...]<br />
+<br />
+But that makes this bug a variant of #67268. Marking it as such.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526674" href="/rt3/Ticket/Display.html?id=62768#txn-526674">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:29:42&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 62908:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526676" href="/rt3/Ticket/Display.html?id=62768#txn-526676">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:30:23&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 62908:  Merged into ticket #62768
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526678" href="/rt3/Ticket/Display.html?id=62768#txn-526678">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:30:23&nbsp;2009</td>
+    <td class="description">
+      masak -  Merged into ticket #62768
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526680" href="/rt3/Ticket/Display.html?id=62768#txn-526680">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:31:22&nbsp;2009</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/526680/248870/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 87b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+masak &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; But that makes this bug a variant of #67268<br />
+</div>
+<br />
+Oops, mean #62768, of course.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526684" href="/rt3/Ticket/Display.html?id=62768#txn-526684">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;01:31:24&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-530950" href="/rt3/Ticket/Display.html?id=62768#txn-530950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;05:15:12&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/530950/251572/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 573b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Jan 30 01:29:38 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; The failure during PIR compilation turned out to be due to an undeclared<br />
+&gt; identifier &#39;B&#39;.<br />
+&gt; <br />
+&gt; $ cat A.pm<br />
+&gt; use v6;<br />
+&gt; <br />
+&gt; class A {<br />
+&gt;   has B $!b;<br />
+&gt; }<br />
+&gt; $ cat A/B.pm <br />
+&gt; use v6;<br />
+&gt; use A;<br />
+&gt; <br />
+&gt; class A::B is A {<br />
+&gt; }<br />
+&gt; $ perl6 --target=pir --output=A.pir A.pm<br />
+&gt; $ perl6 --target=pir --output=A/B.pir A/B.pm <br />
+&gt; Lexical &#39;self&#39; not found<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; But that makes this bug a variant of #67268. Marking it as such.<br />
+</div>
+<br />
+Actually you don&#39;t need anything fancy to re-produce this, just:<br />
+<br />
+class A { has B $.x }<br />
+<br />
+In the REPL does it.<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-530952" href="/rt3/Ticket/Display.html?id=62768#txn-530952">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;06:07:08&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/530952/251574/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 913b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Feb 11 05:15:12 2009, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri Jan 30 01:29:38 2009, masak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; The failure during PIR compilation turned out to be due to an undeclared<br />
+&gt; &gt; identifier &#39;B&#39;.<br />
+&gt; &gt; <br />
+&gt; &gt; $ cat A.pm<br />
+&gt; &gt; use v6;<br />
+&gt; &gt; <br />
+&gt; &gt; class A {<br />
+&gt; &gt;   has B $!b;<br />
+&gt; &gt; }<br />
+&gt; &gt; $ cat A/B.pm <br />
+&gt; &gt; use v6;<br />
+&gt; &gt; use A;<br />
+&gt; &gt; <br />
+&gt; &gt; class A::B is A {<br />
+&gt; &gt; }<br />
+&gt; &gt; $ perl6 --target=pir --output=A.pir A.pm<br />
+&gt; &gt; $ perl6 --target=pir --output=A/B.pir A/B.pm <br />
+&gt; &gt; Lexical &#39;self&#39; not found<br />
+&gt; &gt; [...]<br />
+&gt; &gt; <br />
+&gt; &gt; But that makes this bug a variant of #67268. Marking it as such.<br />
+</div>
+&gt; <br />
+&gt; Actually you don&#39;t need anything fancy to re-produce this, just:<br />
+&gt; <br />
+&gt; class A { has B $.x }<br />
+&gt; <br />
+&gt; In the REPL does it.<br />
+&gt; <br />
+</div>
+And that now reports a &#34;Malformed declaration&#34; at compile time,<br />
+following STD.pm&#39;s lead &#40;though we can&#39;t say it&#39;s a my or has<br />
+declaration yet, but I&#39;ve put in a comment noting the difference&#41;.<br />
+<br />
+So, fixed in git fba805c.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-530958" href="/rt3/Ticket/Display.html?id=62768#txn-530958">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;06:07:11&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.813187</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

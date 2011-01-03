@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="297mm"
+   height="210mm"
+   id="svg26004">
+  <defs
+     id="defs26006" />
+  <g
+     id="layer1">
+    <image
+       xlink:href="/Users/masak/gwork/yapc-eu-2009/1340787730-ecstaticist.jpg"
+       x="-24.631348"
+       y="0"
+       width="1101.6249"
+       height="1101.6249"
+       id="image26112" />
+    <text
+       x="394.21692"
+       y="389.57925"
+       id="text26116"
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+         x="394.21692"
+         y="389.57925"
+         id="tspan26118">Web.pm</tspan></text>
+  </g>
+</svg>

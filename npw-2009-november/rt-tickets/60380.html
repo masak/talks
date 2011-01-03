@@ -1,0 +1,907 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60380: [TODO] catch modification of read-only arguments</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60380">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60380: [TODO] catch modification of read-only arguments</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60380">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60380</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60380">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60380">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Todo    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+check_readonly.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492664/230356/check_readonly.patch">
+Sat Nov 08 04:58:36 2008 (4.3k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60380">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491864" href="/rt3/Ticket/Display.html?id=60380#txn-491864">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;10:37:55&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] catch modification of read-only arguments</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 06 Nov 2008 20:38:28 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491864/229842/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 522b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r32373:<br />
+<br />
+$ ./perl6 -e &#39;sub f&#40;$x&#41; {$x++}; my $y = 2; f&#40;$y&#41;; say &#34;still here&#34;&#39;<br />
+still here<br />
+<br />
+that should die, because subroutine arguments are read-only by default.<br />
+A test for that is in t/spec/S06-traits/misc.t.<br />
+<br />
+Note that assignment already dies as it should:<br />
+<br />
+$ ./perl6 -e &#39;sub f&#40;$x&#41; {$x = 3}; my $y = 2; f&#40;$y&#41;; say &#34;still here&#34;&#39;<br />
+Cannot assign to readonly variable<br />
+...<br />
+<br />
+&#40;there&#39;s now also a test for that in the same file&#41;.<br />
+<br />
+Moritz<br />
+<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491870" href="/rt3/Ticket/Display.html?id=60380#txn-491870">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;10:38:03&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Todo added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492664" href="/rt3/Ticket/Display.html?id=60380#txn-492664">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;04:58:36&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492664/230350/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 219b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello,<br />
+<br />
+there is attached patch to factor check readonly status to separate<br />
+function. Unfortunately I can&#39;t add call to &#39;!CHECK_READONLY&#39;<br />
+ into &#40;prefix|postfix&#41;&#40;++|--&#41; because I&#39;m waiting to resolve #59596 :&#41;<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492664/230356/check_readonly.patch">Download check_readonly.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 4.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/builtins/assign.pir b/languages/perl6/src/builtins/assign.pir<br />
+index 2dd9b57..2c70f45 100644<br />
+--- a/languages/perl6/src/builtins/assign.pir<br />
++++ b/languages/perl6/src/builtins/assign.pir<br />
+@@ -33,12 +33,9 @@ src/builtins/inplace.pir - Inplace assignments<br />
+     unless $I0 goto have_source<br />
+     source = source.&#39;Scalar&#39;&#40;&#41;<br />
+   have_source:<br />
+-    .local pmc ro, type<br />
+-    getprop ro, &#39;readonly&#39;, cont<br />
+-    if null ro goto ro_ok<br />
+-    unless ro goto ro_ok<br />
+-    &#39;die&#39;&#40;&#39;Cannot assign to readonly variable.&#39;&#41;<br />
++    &#39;!CHECK_READONLY&#39;&#40;cont&#41;<br />
+   ro_ok:<br />
++    .local pmc type<br />
+     $I0 = defined source<br />
+     unless $I0 goto do_assign<br />
+     getprop type, &#39;type&#39;, cont<br />
+@@ -69,6 +66,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:~=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     concat a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -77,6 +75,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a += b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -85,6 +84,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:-=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a -= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -93,6 +93,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:*=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a *= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -101,6 +102,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:/=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a /= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -109,6 +111,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:%=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a %= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -117,6 +120,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:x=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     repeat a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -126,6 +130,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:**=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     pow $P0, a, b<br />
+     &#39;infix:=&#39;&#40;a, $P0&#41;<br />
+     .return &#40;a&#41;<br />
+@@ -138,6 +143,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+&lt;=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a &lt;&lt;= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -146,6 +152,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+&gt;=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a &gt;&gt;= b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -154,6 +161,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+&#38;=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     band a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -162,6 +170,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+|=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bor a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -170,6 +179,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:+^=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bxor a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -178,6 +188,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:~&#38;=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     a = bands a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -186,6 +197,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:~|=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bors a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -194,6 +206,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:~^=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bxors a, b<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+@@ -202,6 +215,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:?&#38;=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     band a, b<br />
+     $I0 = istrue a<br />
+     a = $I0<br />
+@@ -212,6 +226,7 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:?|=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bor a, b<br />
+     $I0 = istrue a<br />
+     a = $I0<br />
+@@ -222,12 +237,23 @@ src/builtins/inplace.pir - Inplace assignments<br />
+ .sub &#39;infix:?^=&#39;<br />
+     .param pmc a<br />
+     .param pmc b<br />
++    &#39;!CHECK_READONLY&#39;&#40;a&#41;<br />
+     bxor a, b<br />
+     $I0 = istrue a<br />
+     a = $I0<br />
+     .return &#40;a&#41;<br />
+ .end<br />
+ <br />
++.sub &#39;!CHECK_READONLY&#39;<br />
++    .param pmc arg<br />
++    .local pmc ro<br />
++    getprop ro, &#39;readonly&#39;, arg<br />
++    if null ro goto done<br />
++    unless ro goto done<br />
++    &#39;die&#39;&#40;&#39;Cannot assign to readonly variable.&#39;&#41;<br />
++  done:<br />
++    .return &#40;&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492668" href="/rt3/Ticket/Display.html?id=60380#txn-492668">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;04:58:41&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500646" href="/rt3/Ticket/Display.html?id=60380#txn-500646">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;12:19:33&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500646/235056/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 728b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Nov 08 04:58:36 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; there is attached patch to factor check readonly status to separate<br />
+&gt; function. Unfortunately I can&#39;t add call to &#39;!CHECK_READONLY&#39;<br />
+&gt;  into &#40;prefix|postfix&#41;&#40;++|--&#41; because I&#39;m waiting to resolve #59596 :&#41;<br />
+</div>
+<br />
+Thanks for the patch. However, it&#39;s not really the way to go on these.<br />
+The op= cases are meta-operators, and should be equivalent to<br />
+<br />
+infix:&lt;=&gt;&#40;$target, infix:{$op}&#40;$target, $arg&#41;&#41;<br />
+<br />
+In the &#40;nearer&#41; future I think we&#39;ll generate these from the op table<br />
+rather than maintaining them all by hand, but in the end the grammar<br />
+rules will parse them just as meta-operators and we can emit code like<br />
+the above directly. Then the check will fall out of the infix:&lt;=&gt;.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-531126" href="/rt3/Ticket/Display.html?id=60380#txn-531126">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;08:16:59&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/531126/251690/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 364b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Nov 06 10:37:55 2008, moritz <!-- x --> at verplant.org wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo r32373:<br />
+&gt; <br />
+&gt; $ ./perl6 -e &#39;sub f&#40;$x&#41; {$x++}; my $y = 2; f&#40;$y&#41;; say &#34;still here&#34;&#39;<br />
+&gt; still here<br />
+&gt; <br />
+&gt; that should die, because subroutine arguments are read-only by default.<br />
+&gt; A test for that is in t/spec/S06-traits/misc.t.<br />
+&gt; <br />
+</div>
+Fixed in git 45cf376 and that test is un-fudged.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-531132" href="/rt3/Ticket/Display.html?id=60380#txn-531132">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;08:17:02&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.522091</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

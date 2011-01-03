@@ -1,0 +1,2946 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#55492: [PATCH] implementation of transliteration</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D55492">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#55492: [PATCH] implementation of transliteration</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55492">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">55492</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=55492">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cjfields
+&lt;cjfields [at] uiuc.edu&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55492">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+trans.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/440344/201906/trans.diff">
+Mon Jul 07 19:49:28 2008 (5.6k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/439872/201546/trans.diff">
+Sun Jul 06 14:18:57 2008 (5.8k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/439624/201418/trans.diff">
+Sat Jul 05 21:15:47 2008 (5.7k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/439542/201370/trans.diff">
+Sat Jul 05 18:56:17 2008 (5.7k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/435512/199176/trans.diff">
+Thu Jun 26 15:05:43 2008 (3.7k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/435502/199156/trans.diff">
+Thu Jun 26 14:33:06 2008 (3.7k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/432636/197626/trans.diff">
+Sat Jun 21 16:14:31 2008 (3.1k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/423248/192844/trans.diff">
+Mon Jun 09 15:10:23 2008 (1.6k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/422634/192486/trans.diff">
+Sun Jun 08 11:47:18 2008 (1.6k) by cjfields
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=55492">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-422634" href="/rt3/Ticket/Display.html?id=55492#txn-422634">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;08&nbsp;11:47:18&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] partial implementation of transliteration</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 8 Jun 2008 13:46:56 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Fields &lt;cjfields <!-- x --> at uiuc.edu&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422634/192484/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 567b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached is a partial PIR-based implementation of trans&#40;&#41; for Str.pir  <br />
+&#40;for transliteration&#41;; diff run off r28183.  It handles very simple  <br />
+transliteration only and doesn&#39;t deal with strings that are  <br />
+interpolated as Ranges, so it will need some more significant tweaking  <br />
+to get everything working.  I will add a version of trans.t to pugs  <br />
+that works with Rakudo; this patch doesn&#39;t pass all transliteration  <br />
+tests yet.<br />
+<br />
+A more fully implemented p6-based version is being developed and will  <br />
+be added when using p6 code for classes becomes possible.<br />
+<br />
+chris<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422634/192486/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422634/192488/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-422640" href="/rt3/Ticket/Display.html?id=55492#txn-422640">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;08&nbsp;11:47:19&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-423248" href="/rt3/Ticket/Display.html?id=55492#txn-423248">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;09&nbsp;15:10:23&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/423248/192838/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 223b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attaching updated diff file &#40;against r28209&#41; which passes 5/17 tests.  Will commit rakudo-<br />
+compliant test suite to pugs when I determine &#40;via #perl6&#41; how to go about it w/o breaking the <br />
+already-present trans.t in t/spec.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/423248/192844/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir     2008-06-08 23:28:40.000000000 -0500<br />
+--- Str.pir.back        2008-06-08 13:37:39.000000000 -0500<br />
+***************<br />
+*** 213,283 ****<br />
+      .return&#40;retv&#41;<br />
+  .end<br />
+  <br />
+- =item trans&#40;&#41;<br />
+- <br />
+- Partial implementation of transliteration.  Handles simple p6-like<br />
+- transliteration &#40;see S05&#41;:<br />
+- <br />
+-   &#34;ABC&#34;.trans&#40; &#40;&#39;A&#39;=&gt;&#39;a&#39;&#41;, &#40;&#39;B&#39;=&gt;&#39;b&#39;&#41;, &#40;&#39;C&#39;=&gt;&#39;c&#39;&#41; &#41; # abc<br />
+-   &#34;ABC&#34;.trans&#40;&#39;XYZ&#39; =&gt; &#39;xyz&#39;&#41;<br />
+-   &#34;ABCXYZ&#34;.trans&#40; &#40;[&#39;A&#39;..&#39;C&#39;] =&gt; [&#39;a&#39;..&#39;c&#39;]&#41;, &#40;&lt;X Y Z&gt; =&gt; &lt;x y z&gt;&#41;<br />
+-   <br />
+-   Does not interpolate strings &#39;A..Z&#39; or &#39;A-Z&#39; into Ranges &#40;&#39;A&#39;..&#39;Z&#39;&#41; yet<br />
+-   <br />
+- =cut<br />
+- <br />
+- .sub &#39;trans&#39; :method<br />
+-     .param pmc args :slurpy<br />
+-     .local pmc pair<br />
+-     .local pmc table<br />
+-     .local pmc tmps<br />
+-     .local pmc retv<br />
+-     <br />
+-     table = new &#39;Hash&#39;<br />
+-     retv = new &#39;Perl6Str&#39;<br />
+-     tmps = self<br />
+-     <br />
+-   pair_loop:<br />
+-     unless args, st_trans<br />
+-     pair = shift args<br />
+-     .local pmc key, val, key_it, val_it<br />
+-     # should handle Array key/value pairs<br />
+-     key = pair.&#39;key&#39;&#40;&#41;<br />
+-     val = pair.&#39;value&#39;&#40;&#41;<br />
+-     key_it = new &#39;Iterator&#39;, key<br />
+-     val_it = new &#39;Iterator&#39;, val<br />
+-     <br />
+-   mapping:<br />
+-     unless key_it, pair_loop<br />
+-     $S0 = shift key_it<br />
+-     $S1 = shift val_it<br />
+-     table[$S0] = $S1<br />
+-     goto mapping<br />
+-     <br />
+-   st_trans:<br />
+-     # &#39;Perl6Str&#39; iterator is not working here for some reason &#40;not implemented&#41;<br />
+-     .local int pos, len<br />
+-     .local string orig, rep<br />
+-     len = tmps.&#39;chars&#39;&#40;&#41;<br />
+-     pos = 0<br />
+-     <br />
+-   trans_loop:<br />
+-     if pos == len goto done<br />
+-     orig = substr tmps, pos, 1<br />
+-     rep = table[orig]<br />
+-     if rep, next<br />
+-     rep = orig<br />
+-     <br />
+-   next:<br />
+-     concat retv, rep<br />
+-     pos += 1<br />
+-     goto trans_loop<br />
+-     <br />
+-   done: <br />
+-     .return&#40;retv&#41;<br />
+- .end<br />
+- <br />
+- =cut<br />
+  <br />
+  =item perl&#40;&#41;<br />
+  <br />
+--- 213,218 ----<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-423250" href="/rt3/Ticket/Display.html?id=55492#txn-423250">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;09&nbsp;15:10:24&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-423484" href="/rt3/Ticket/Display.html?id=55492#txn-423484">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;09&nbsp;21:09:37&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/423484/193056/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 103b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+S05-transliteration/trans.t has been updated in pugs, should pass 5 of 17 tests now with last <br />
+patch<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432636" href="/rt3/Ticket/Display.html?id=55492#txn-432636">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;16:14:31&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432636/197620/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 87b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached patch passes all tests &#40;except5 tests for tr///, which isn&#39;t implemented&#41;.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432636/197626/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 3.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir.old 2008-06-21 16:59:14.000000000 -0500<br />
+--- Str.pir     2008-06-21 17:55:45.000000000 -0500<br />
+***************<br />
+*** 213,218 ****<br />
+--- 213,339 ----<br />
+      .return&#40;retv&#41;<br />
+  .end<br />
+  <br />
++ =item trans&#40;&#41;<br />
++ <br />
++ Partial implementation of transliteration.  Handles simple p6-like<br />
++ transliteration &#40;see S05&#41;:<br />
++ <br />
++   &#34;ABC&#34;.trans&#40; &#40;&#39;A&#39;=&gt;&#39;a&#39;&#41;, &#40;&#39;B&#39;=&gt;&#39;b&#39;&#41;, &#40;&#39;C&#39;=&gt;&#39;c&#39;&#41; &#41; # abc<br />
++   &#34;ABC&#34;.trans&#40;&#39;ABC&#39; =&gt; &#39;abc&#39;&#41;<br />
++   &#34;ABCXYZ&#34;.trans&#40; &#40;[&#39;A&#39;..&#39;C&#39;] =&gt; [&#39;a&#39;..&#39;c&#39;]&#41;, &#40;&lt;X Y Z&gt; =&gt; &lt;x y z&gt;&#41; &#41;<br />
++   <br />
++   Does not interpret strings &#39;A..Z&#39; or &#39;A-Z&#39; into Ranges &#40;&#39;A&#39;..&#39;Z&#39;&#41; yet<br />
++   <br />
++ =cut<br />
++ <br />
++ .sub &#39;!transmap&#39; :multi&#40;_&#41;<br />
++     .param pmc range<br />
++     .local pmc retval, it<br />
++     retval = new &#39;ResizablePMCArray&#39;<br />
++   range_loop:<br />
++     unless range, done<br />
++     $S0 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transmap&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param pmc str<br />
++     .local pmc retval, prior, next, rclass, range, list, frm, to<br />
++     .local int end, pos<br />
++     retval = new &#39;ResizablePMCArray&#39;<br />
++     prior = new &#39;ResizablePMCArray&#39;    <br />
++     prior = str.&#39;split&#39;&#40;&#39;..&#39;&#41;<br />
++     end = prior<br />
++     dec end<br />
++     pos = 0 <br />
++   process_prior:<br />
++     unless prior, done<br />
++     # set is a String, not a Perl6Str<br />
++     $S0 = shift prior<br />
++     next = new &#39;ResizablePMCArray&#39;<br />
++     next = split &#39;&#39;, $S0<br />
++     if pos == 0 goto process_retval<br />
++     # set up Perl6 Range here; when .HLL mapping works for Str may refactor<br />
++   get_from:<br />
++     $S1 = pop retval<br />
++     if $S1 == &#39; &#39; goto get_from<br />
++     frm = new &#39;Perl6Str&#39;<br />
++     frm = $S1<br />
++   get_to:<br />
++     $S1 = shift next<br />
++     if $S1 == &#39; &#39; goto get_to<br />
++     to = new &#39;Perl6Str&#39;<br />
++     to = $S1<br />
++   set_range:<br />
++     rclass = get_hll_global &#39;Range&#39;<br />
++     range = rclass.&#39;new&#39;&#40;&#39;from&#39;=&gt;frm, &#39;to&#39;=&gt;to&#41;<br />
++   process_list:<br />
++     unless range, process_retval<br />
++     $S2 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S2<br />
++     goto process_list<br />
++   process_retval:<br />
++     unless next, process_prior<br />
++     $S3 = shift next<br />
++     push retval, $S3<br />
++     inc pos<br />
++     goto process_retval<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc tmps<br />
++     .local pmc retv<br />
++     table = new &#39;Hash&#39;<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     .local pmc key, val, keymap, valmap<br />
++     .local string lv<br />
++     key = pair.&#39;key&#39;&#40;&#41;<br />
++     val = pair.&#39;value&#39;&#40;&#41;<br />
++     keymap = &#39;!transmap&#39;&#40;key&#41;<br />
++     valmap = &#39;!transmap&#39;&#40;val&#41;<br />
++   mapping:<br />
++     unless keymap, pair_loop<br />
++     # reconfigure to let val &#39;overflow&#39;<br />
++     $S0 = shift keymap<br />
++     unless valmap, get_prev<br />
++     lv = shift valmap<br />
++   get_prev:<br />
++     $S1 = lv<br />
++     table[$S0] = $S1<br />
++     goto mapping<br />
++   st_trans:<br />
++     # &#39;Perl6Str&#39; iterator is not working here for some reason &#40;not implemented&#41;<br />
++     .local int pos, len<br />
++     .local string orig, rep<br />
++     len = tmps.&#39;chars&#39;&#40;&#41;<br />
++     pos = 0<br />
++   trans_loop:<br />
++     if pos == len goto done<br />
++     orig = substr tmps, pos, 1<br />
++     rep = table[orig]<br />
++     if rep, next<br />
++     rep = orig<br />
++   next:<br />
++     concat retv, rep<br />
++     pos += 1<br />
++     goto trans_loop<br />
++   done: <br />
++     .return&#40;retv&#41;<br />
++ .end<br />
++ <br />
++ =cut<br />
+  <br />
+  =item perl&#40;&#41;<br />
+  <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432648" href="/rt3/Ticket/Display.html?id=55492#txn-432648">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;16:33:22&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432648/197634/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 220b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jun 21 16:14:31 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Attached patch passes all tests &#40;except5 tests for tr///, which isn&#39;t<br />
+&gt; implemented&#41;.<br />
+</div>
+<br />
+D&#39;oh!  POD needs to be updated to reflect strings are interpreted to look for ranges.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433400" href="/rt3/Ticket/Display.html?id=55492#txn-433400">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;23&nbsp;09:14:58&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/433400/198034/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 428b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jun 21 16:33:22 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jun 21 16:14:31 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Attached patch passes all tests &#40;except5 tests for tr///, which<br />
+</div>
+&gt; isn&#39;t<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; implemented&#41;.<br />
+</div>
+</div>
+<br />
+Marking as stalled until I can get a Str.pir patch for handling one-to-many and many-to-one <br />
+versions of trans&#40;&#41;, where key/value is Array.  It will require some backtracking for at least the <br />
+many-to-one case to get longest leftmost match.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433402" href="/rt3/Ticket/Display.html?id=55492#txn-433402">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;23&nbsp;09:14:59&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Status changed from &#39;open&#39; to &#39;stalled&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-435502" href="/rt3/Ticket/Display.html?id=55492#txn-435502">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;26&nbsp;14:33:06&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/435502/199150/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 740b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jun 23 09:14:58 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jun 21 16:33:22 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; On Sat Jun 21 16:14:31 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Attached patch passes all tests &#40;except5 tests for tr///, which<br />
+</div>
+&gt; &gt; isn&#39;t<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; implemented&#41;.<br />
+</div>
+</div>
+&gt; <br />
+&gt; Marking as stalled until I can get a Str.pir patch for handling one-<br />
+&gt; to-many and many-to-one<br />
+&gt; versions of trans&#40;&#41;, where key/value is Array.  It will require some<br />
+&gt; backtracking for at least the<br />
+&gt; many-to-one case to get longest leftmost match.<br />
+</div>
+<br />
+New patch added, passes all tests in S05-transliteration/trans.t.  I will add new spec tests for <br />
+options :s &#40;squash&#41; and :d &#40;delete&#41;.  I&#39;ll try to add in :c in a separate patch &#40;will require some <br />
+more work and discussion on #perl6/#parrot&#41;.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/435502/199156/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 3.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir.old 2008-06-26 16:27:16.000000000 -0500<br />
+--- Str.pir     2008-06-26 16:27:05.000000000 -0500<br />
+***************<br />
+*** 216,221 ****<br />
+--- 216,377 ----<br />
+      .return&#40;retv&#41;<br />
+  .end<br />
+  <br />
++ =item trans&#40;&#41;<br />
++ <br />
++   Implementation of transliteration.<br />
++   <br />
++   TODO: Does not handle :c &#40;complement&#41; yet<br />
++ <br />
++ =cut<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++     .param pmc range<br />
++     .local pmc retval, it<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++   range_loop:<br />
++     unless range, done<br />
++     $S0 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param pmc str<br />
++     .local pmc retval, prior, next, rclass, range, list, frm, to<br />
++     .local int pos<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++     prior = new &#39;ResizableStringArray&#39;    <br />
++     prior = str.&#39;split&#39;&#40;&#39;..&#39;&#41;<br />
++     pos = 0 <br />
++   process_prior:<br />
++     unless prior, done<br />
++     # set is a String, not a Perl6Str<br />
++     $S0 = shift prior<br />
++     next = new &#39;ResizableStringArray&#39;<br />
++     next = split &#39;&#39;, $S0<br />
++     if pos == 0 goto process_retval<br />
++     # set up Perl6 Range here; when .HLL mapping works for Str may refactor<br />
++   get_from:<br />
++     $S1 = pop retval<br />
++     if $S1 == &#39; &#39; goto get_from<br />
++     frm = new &#39;Perl6Str&#39;<br />
++     frm = $S1<br />
++   get_to:<br />
++     $S1 = shift next<br />
++     if $S1 == &#39; &#39; goto get_to<br />
++     to = new &#39;Perl6Str&#39;<br />
++     to = $S1<br />
++   set_range:<br />
++     # convert to p6 Range<br />
++     rclass = get_hll_global &#39;Range&#39;<br />
++     range = rclass.&#39;new&#39;&#40;&#39;from&#39;=&gt;frm, &#39;to&#39;=&gt;to&#41;<br />
++   process_list:<br />
++     unless range, process_retval<br />
++     $S2 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S2<br />
++     goto process_list<br />
++   process_retval:<br />
++     unless next, process_prior<br />
++     $S3 = shift next<br />
++     push retval, $S3<br />
++     inc pos<br />
++     goto process_retval<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++     .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc itable<br />
++     .local pmc pkey<br />
++     .local pmc pval<br />
++     .local pmc retv<br />
++     .local string tmps, k, v, lv, lastmatch<br />
++     .local int len, klen, vlen, adjpos, pos, ind, nhits<br />
++     table = new &#39;Hash&#39;<br />
++     itable = new &#39;Hash&#39;<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++     lv = &#39;&#39;<br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     pkey = pair.&#39;key&#39;&#40;&#41;<br />
++     pval = pair.&#39;value&#39;&#40;&#41;<br />
++     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++     pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++     vlen = elements pval<br />
++     if vlen goto mapping<br />
++     if del goto mapping<br />
++     pval = clone pkey<br />
++   mapping:<br />
++     unless pkey, pair_loop<br />
++     k = shift pkey<br />
++     unless pval, get_prev1<br />
++     lv = shift pval<br />
++   get_prev1:<br />
++     unless del, get_prev2<br />
++     v = &#39;&#39;<br />
++   get_prev2:<br />
++     v = lv<br />
++     nhits = 0<br />
++     pos = 0<br />
++   index_loop:<br />
++     ind = index tmps, k, pos<br />
++     if ind == -1 goto check_elems<br />
++     inc nhits<br />
++     $S0 = itable[ind]<br />
++     unless $S0, new_hit<br />
++     $I0 = length $S0<br />
++     $I1 = length k<br />
++     if $I1 &lt; $I0 goto next_hit<br />
++   new_hit:<br />
++     itable[ind] = k<br />
++   next_hit:<br />
++     pos = ind + 1<br />
++     goto index_loop<br />
++   check_elems:<br />
++     unless nhits, mapping<br />
++     table[k] = v<br />
++     goto mapping<br />
++   st_trans:<br />
++     len = length tmps<br />
++     pos = 0<br />
++     adjpos = 0<br />
++     lastmatch = &#39;&#39;<br />
++   table_loop:<br />
++     if pos == len goto done<br />
++     k = itable[pos]<br />
++     unless k, next_pos2<br />
++     v = table[k]<br />
++     unless squash, replace<br />
++     if k != lastmatch goto replace<br />
++   del_v:<br />
++     v = &#39;&#39;<br />
++   replace:<br />
++     vlen = length v<br />
++     klen = length k<br />
++     say v<br />
++     substr tmps, adjpos, klen, v<br />
++   next_pos1:<br />
++     lastmatch = k  <br />
++     adjpos += vlen<br />
++     pos += klen<br />
++     goto table_loop<br />
++   next_pos2:<br />
++     inc pos<br />
++     inc adjpos<br />
++     goto table_loop<br />
++   done:<br />
++     retv = tmps<br />
++     .return&#40;retv&#41;<br />
++ .end<br />
+  <br />
+  =item perl&#40;&#41;<br />
+  <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-435506" href="/rt3/Ticket/Display.html?id=55492#txn-435506">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;26&nbsp;14:33:08&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;stalled&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-435512" href="/rt3/Ticket/Display.html?id=55492#txn-435512">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;26&nbsp;15:05:43&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/435512/199170/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 148b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+My bad; I left an extraneous &#39;say&#39; debugging line in the last patch; attaching new one.  Surprised <br />
+RT doesn&#39;t allow you to replace an old patch...<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/435512/199176/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 3.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir.old 2008-06-26 16:27:16.000000000 -0500<br />
+--- Str.pir     2008-06-26 16:41:45.000000000 -0500<br />
+***************<br />
+*** 216,221 ****<br />
+--- 216,376 ----<br />
+      .return&#40;retv&#41;<br />
+  .end<br />
+  <br />
++ =item trans&#40;&#41;<br />
++ <br />
++   Implementation of transliteration.<br />
++   <br />
++   TODO: Does not handle :c &#40;complement&#41; yet<br />
++ <br />
++ =cut<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++     .param pmc range<br />
++     .local pmc retval, it<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++   range_loop:<br />
++     unless range, done<br />
++     $S0 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param pmc str<br />
++     .local pmc retval, prior, next, rclass, range, list, frm, to<br />
++     .local int pos<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++     prior = new &#39;ResizableStringArray&#39;    <br />
++     prior = str.&#39;split&#39;&#40;&#39;..&#39;&#41;<br />
++     pos = 0 <br />
++   process_prior:<br />
++     unless prior, done<br />
++     # set is a String, not a Perl6Str<br />
++     $S0 = shift prior<br />
++     next = new &#39;ResizableStringArray&#39;<br />
++     next = split &#39;&#39;, $S0<br />
++     if pos == 0 goto process_retval<br />
++     # set up Perl6 Range here; when .HLL mapping works for Str may refactor<br />
++   get_from:<br />
++     $S1 = pop retval<br />
++     if $S1 == &#39; &#39; goto get_from<br />
++     frm = new &#39;Perl6Str&#39;<br />
++     frm = $S1<br />
++   get_to:<br />
++     $S1 = shift next<br />
++     if $S1 == &#39; &#39; goto get_to<br />
++     to = new &#39;Perl6Str&#39;<br />
++     to = $S1<br />
++   set_range:<br />
++     # convert to p6 Range<br />
++     rclass = get_hll_global &#39;Range&#39;<br />
++     range = rclass.&#39;new&#39;&#40;&#39;from&#39;=&gt;frm, &#39;to&#39;=&gt;to&#41;<br />
++   process_list:<br />
++     unless range, process_retval<br />
++     $S2 = range.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S2<br />
++     goto process_list<br />
++   process_retval:<br />
++     unless next, process_prior<br />
++     $S3 = shift next<br />
++     push retval, $S3<br />
++     inc pos<br />
++     goto process_retval<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++     .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc itable<br />
++     .local pmc pkey<br />
++     .local pmc pval<br />
++     .local pmc retv<br />
++     .local string tmps, k, v, lv, lastmatch<br />
++     .local int len, klen, vlen, adjpos, pos, ind, nhits<br />
++     table = new &#39;Hash&#39;<br />
++     itable = new &#39;Hash&#39;<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++     lv = &#39;&#39;<br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     pkey = pair.&#39;key&#39;&#40;&#41;<br />
++     pval = pair.&#39;value&#39;&#40;&#41;<br />
++     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++     pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++     vlen = elements pval<br />
++     if vlen goto mapping<br />
++     if del goto mapping<br />
++     pval = clone pkey<br />
++   mapping:<br />
++     unless pkey, pair_loop<br />
++     k = shift pkey<br />
++     unless pval, get_prev1<br />
++     lv = shift pval<br />
++   get_prev1:<br />
++     unless del, get_prev2<br />
++     v = &#39;&#39;<br />
++   get_prev2:<br />
++     v = lv<br />
++     nhits = 0<br />
++     pos = 0<br />
++   index_loop:<br />
++     ind = index tmps, k, pos<br />
++     if ind == -1 goto check_elems<br />
++     inc nhits<br />
++     $S0 = itable[ind]<br />
++     unless $S0, new_hit<br />
++     $I0 = length $S0<br />
++     $I1 = length k<br />
++     if $I1 &lt; $I0 goto next_hit<br />
++   new_hit:<br />
++     itable[ind] = k<br />
++   next_hit:<br />
++     pos = ind + 1<br />
++     goto index_loop<br />
++   check_elems:<br />
++     unless nhits, mapping<br />
++     table[k] = v<br />
++     goto mapping<br />
++   st_trans:<br />
++     len = length tmps<br />
++     pos = 0<br />
++     adjpos = 0<br />
++     lastmatch = &#39;&#39;<br />
++   table_loop:<br />
++     if pos == len goto done<br />
++     k = itable[pos]<br />
++     unless k, next_pos2<br />
++     v = table[k]<br />
++     unless squash, replace<br />
++     if k != lastmatch goto replace<br />
++   del_v:<br />
++     v = &#39;&#39;<br />
++   replace:<br />
++     vlen = length v<br />
++     klen = length k<br />
++     substr tmps, adjpos, klen, v<br />
++   next_pos1:<br />
++     lastmatch = k  <br />
++     adjpos += vlen<br />
++     pos += klen<br />
++     goto table_loop<br />
++   next_pos2:<br />
++     inc pos<br />
++     inc adjpos<br />
++     goto table_loop<br />
++   done:<br />
++     retv = tmps<br />
++     .return&#40;retv&#41;<br />
++ .end<br />
+  <br />
+  =item perl&#40;&#41;<br />
+  <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439524" href="/rt3/Ticket/Display.html?id=55492#txn-439524">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;18:45:55&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Subject changed from &#39;[PATCH] partial implementation of transliteration&#39; to &#39;[PATCH] implementation of transliteration&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439542" href="/rt3/Ticket/Display.html?id=55492#txn-439542">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;18:56:17&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439542/201364/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 489b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This should be the final &#40;fully implemented&#41; version of trans&#40;&#41;.  Complement, squash, and delete <br />
+options are implemented &#40;named args :c, :s, :d&#41;; it uses longest leftmost match when needed.  Also added relevant tests to t/spec/S05-transliteration/trans.t.  <br />
+<br />
+Not sure whether this belongs in Str or Any, so I placed in in Str.pir for now.  It&#39;s possible some <br />
+things here will need to be changed as the the spec changes, but this seems to match what is <br />
+described in S05 and is a start.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439542/201370/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 5.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir.old 2008-07-05 20:25:35.000000000 -0500<br />
+--- Str.pir     2008-07-05 20:41:08.000000000 -0500<br />
+***************<br />
+*** 206,211 ****<br />
+--- 206,432 ----<br />
+  .end<br />
+  <br />
+  <br />
++ =item trans&#40;&#41;<br />
++ <br />
++   Method implementation of transliteration<br />
++   <br />
++ =cut<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++     .param pmc r<br />
++     .local pmc retval<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++   range_loop:<br />
++     unless r, done<br />
++     $S0 = r.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param string str<br />
++     .local pmc retval, prior, frm, to<br />
++     .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
++     .local string p<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++     prior = new &#39;ResizableStringArray&#39;<br />
++     start = 0<br />
++     skipped = 0<br />
++     len = length str<br />
++     end = len - 2<br />
++   next_index:<br />
++     ind = index str, &#39;..&#39; , start<br />
++     if ind == -1 goto last_string<br />
++     # ranges can only be after first position, before last one<br />
++     if ind == 0 goto skip_pos<br />
++     if ind &gt;= end goto last_string    <br />
++   init_range:<br />
++     r_start = ind - 1<br />
++     r_end = ind + 2<br />
++   range_frm:<br />
++     $S0 = substr str, r_start, 1<br />
++     $I0 = ord $S0<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S0 == &#39; &#39; goto range_to<br />
++     r_start -= 1<br />
++     if r_start &lt; 0 goto illegal_range  <br />
++     goto range_frm<br />
++   range_to:<br />
++     $S1 = substr str, r_end, 1<br />
++     $I1 = ord $S1<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S1 == &#39; &#39; goto prev_string<br />
++     r_end += 1<br />
++     if r_end == len goto illegal_range<br />
++     goto range_to<br />
++   prev_string:<br />
++     s_len = r_start - start<br />
++     s_len += skipped<br />
++     unless s_len, start_range<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_pstring:<br />
++     unless prior, start_range<br />
++     $S2 = shift prior<br />
++     push retval, $S2<br />
++     goto process_pstring<br />
++   start_range:<br />
++     if $I0 &gt; $I1 goto illegal_range<br />
++   make_range:<br />
++     # Here we&#39;re assuming the ordinal increments correctly for all chars.<br />
++     # This is a bit naive for now, it definitely needs some unicode testing.<br />
++     # If needed we can switch this over to use a true string Range<br />
++     if $I0 &gt; $I1 goto next_loop<br />
++     $S2 = chr $I0<br />
++     push retval, $S2<br />
++     inc $I0<br />
++     goto make_range<br />
++   illegal_range:<br />
++     die &#34;Illegal range used in transliteration operator&#34;<br />
++   next_loop:<br />
++     start = r_end + 1<br />
++     goto next_index<br />
++   skip_pos: <br />
++     inc start<br />
++     inc skipped<br />
++     goto next_index<br />
++   last_string:<br />
++     s_len = len - start<br />
++     if s_len &lt;= 0 goto done<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_lstring:<br />
++     unless prior, done<br />
++     $S0 = shift prior<br />
++     push retval, $S0<br />
++     goto process_lstring    <br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++     .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
++     .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc itable<br />
++     .local pmc pkey<br />
++     .local pmc pval<br />
++     .local pmc retv<br />
++     .local string tmps, k, v, lv, lastmatch, comp_match<br />
++     .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
++     table = new &#39;Hash&#39;<br />
++     itable = new &#39;Hash&#39; # should used ordered hash here<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++     lv = &#39;&#39;<br />
++     <br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     isa_pair = isa pair<br />
++     unless isa_pair, pair_exception<br />
++     pkey = pair.&#39;key&#39;&#40;&#41;<br />
++     pval = pair.&#39;value&#39;&#40;&#41;<br />
++     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++     pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++     vlen = elements pval<br />
++     if vlen goto comp_check<br />
++     if del goto comp_check<br />
++     pval = clone pkey<br />
++   comp_check:<br />
++     # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
++     # many examples where this is used otherwise<br />
++     comp_match = pval[0]<br />
++     <br />
++   mapping:<br />
++     unless pkey, pair_loop<br />
++     k = shift pkey<br />
++     unless pval, get_prev1<br />
++     lv = shift pval<br />
++   get_prev1:<br />
++     unless del, get_prev2<br />
++     v = &#39;&#39;<br />
++   get_prev2:<br />
++     v = lv<br />
++     nhits = 0<br />
++     pos = 0<br />
++   index_loop:<br />
++     ind = index tmps, k, pos<br />
++     if ind == -1 goto check_elems<br />
++     inc nhits<br />
++     $S0 = itable[ind]<br />
++     unless $S0, new_hit<br />
++     # keep longest hit at that index<br />
++     $I0 = length $S0<br />
++     $I1 = length k<br />
++     if $I1 &lt; $I0 goto next_hit<br />
++   new_hit:<br />
++     itable[ind] = k<br />
++   next_hit:<br />
++     pos = ind + 1<br />
++     goto index_loop<br />
++   check_elems:<br />
++     unless nhits, mapping<br />
++     table[k] = v<br />
++     goto mapping<br />
++     <br />
++   st_trans:<br />
++     len = length tmps<br />
++     pos = 0<br />
++     adjpos = 0<br />
++     v = &#39;&#39;<br />
++     k = &#39;&#39;<br />
++     lastmatch = &#39;&#39;<br />
++     <br />
++   table_loop:<br />
++     if pos &gt;= len goto done<br />
++     k = itable[pos]<br />
++     if comp goto complement<br />
++   normal:<br />
++     unless k, skip_pos<br />
++     v = table[k]<br />
++     klen = length k<br />
++     goto check_squash<br />
++   complement:<br />
++     # may need to change dep. on how we want :c to work<br />
++     if k, skip_pos<br />
++     v = comp_match<br />
++     klen = 1<br />
++   check_squash:<br />
++     unless squash, replace<br />
++     unless v == lastmatch goto replace<br />
++     vlen = 0<br />
++     substr tmps, adjpos, klen, &#39;&#39;<br />
++     goto next_pos<br />
++   replace:<br />
++     vlen = length v<br />
++     substr tmps, adjpos, klen, v<br />
++   next_pos:<br />
++     pos += klen<br />
++     adjpos += vlen<br />
++     lastmatch = v<br />
++     goto table_loop<br />
++   skip_pos:<br />
++     inc pos<br />
++     inc adjpos<br />
++     lastmatch = &#39;&#39;<br />
++     goto table_loop<br />
++     <br />
++   done:<br />
++     retv = tmps<br />
++     .return&#40;retv&#41;<br />
++     <br />
++   pair_exception:<br />
++     die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++ .end<br />
++ <br />
+  =item perl&#40;&#41;<br />
+  <br />
+  Returns a Perl representation of the Str.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439624" href="/rt3/Ticket/Display.html?id=55492#txn-439624">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;05&nbsp;21:15:47&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439624/201412/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 87b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Had a type check which failed in the last patch &#40;bad op&#41;.  This is the corrected patch.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439624/201418/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 5.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** Str.pir.old 2008-07-05 20:25:35.000000000 -0500<br />
+--- Str.pir     2008-07-05 23:13:12.000000000 -0500<br />
+***************<br />
+*** 205,210 ****<br />
+--- 205,436 ----<br />
+      .return&#40;retv&#41;<br />
+  .end<br />
+  <br />
++ =item match&#40;&#41;<br />
++ <br />
++   Method implementation of match &#40;m//&#41;<br />
++ <br />
++ =cut<br />
++ <br />
++ =item trans&#40;&#41;<br />
++ <br />
++   Method implementation of transliteration<br />
++   <br />
++ =cut<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++     .param pmc r<br />
++     .local pmc retval<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++   range_loop:<br />
++     unless r, done<br />
++     $S0 = r.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param string str<br />
++     .local pmc retval, prior, frm, to<br />
++     .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
++     .local string p<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++     prior = new &#39;ResizableStringArray&#39;<br />
++     start = 0<br />
++     skipped = 0<br />
++     len = length str<br />
++     end = len - 2<br />
++   next_index:<br />
++     ind = index str, &#39;..&#39; , start<br />
++     if ind == -1 goto last_string<br />
++     # ranges can only be after first position, before last one<br />
++     if ind == 0 goto skip_pos<br />
++     if ind &gt;= end goto last_string    <br />
++   init_range:<br />
++     r_start = ind - 1<br />
++     r_end = ind + 2<br />
++   range_frm:<br />
++     $S0 = substr str, r_start, 1<br />
++     $I0 = ord $S0<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S0 == &#39; &#39; goto range_to<br />
++     r_start -= 1<br />
++     if r_start &lt; 0 goto illegal_range  <br />
++     goto range_frm<br />
++   range_to:<br />
++     $S1 = substr str, r_end, 1<br />
++     $I1 = ord $S1<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S1 == &#39; &#39; goto prev_string<br />
++     r_end += 1<br />
++     if r_end == len goto illegal_range<br />
++     goto range_to<br />
++   prev_string:<br />
++     s_len = r_start - start<br />
++     s_len += skipped<br />
++     unless s_len, start_range<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_pstring:<br />
++     unless prior, start_range<br />
++     $S2 = shift prior<br />
++     push retval, $S2<br />
++     goto process_pstring<br />
++   start_range:<br />
++     if $I0 &gt; $I1 goto illegal_range<br />
++   make_range:<br />
++     # Here we&#39;re assuming the ordinal increments correctly for all chars.<br />
++     # This is a bit naive for now, it definitely needs some unicode testing.<br />
++     # If needed we can switch this over to use a true string Range<br />
++     if $I0 &gt; $I1 goto next_loop<br />
++     $S2 = chr $I0<br />
++     push retval, $S2<br />
++     inc $I0<br />
++     goto make_range<br />
++   illegal_range:<br />
++     die &#34;Illegal range used in transliteration operator&#34;<br />
++   next_loop:<br />
++     start = r_end + 1<br />
++     goto next_index<br />
++   skip_pos: <br />
++     inc start<br />
++     inc skipped<br />
++     goto next_index<br />
++   last_string:<br />
++     s_len = len - start<br />
++     if s_len &lt;= 0 goto done<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_lstring:<br />
++     unless prior, done<br />
++     $S0 = shift prior<br />
++     push retval, $S0<br />
++     goto process_lstring    <br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++     .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
++     .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc itable<br />
++     .local pmc pkey<br />
++     .local pmc pval<br />
++     .local pmc retv<br />
++     .local string tmps, k, v, lv, lastmatch, comp_match<br />
++     .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
++     table = new &#39;Hash&#39;<br />
++     itable = new &#39;Hash&#39; # should used ordered hash here<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++     lv = &#39;&#39;<br />
++     <br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     isa_pair = isa pair, &#39;Perl6Pair&#39;<br />
++     unless isa_pair, pair_exception<br />
++     pkey = pair.&#39;key&#39;&#40;&#41;<br />
++     pval = pair.&#39;value&#39;&#40;&#41;<br />
++     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++     pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++     vlen = elements pval<br />
++     if vlen goto comp_check<br />
++     if del goto comp_check<br />
++     pval = clone pkey<br />
++   comp_check:<br />
++     # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
++     # many examples where this is used otherwise<br />
++     comp_match = pval[0]<br />
++     <br />
++   mapping:<br />
++     unless pkey, pair_loop<br />
++     k = shift pkey<br />
++     unless pval, get_prev1<br />
++     lv = shift pval<br />
++   get_prev1:<br />
++     unless del, get_prev2<br />
++     v = &#39;&#39;<br />
++   get_prev2:<br />
++     v = lv<br />
++     nhits = 0<br />
++     pos = 0<br />
++   index_loop:<br />
++     ind = index tmps, k, pos<br />
++     if ind == -1 goto check_elems<br />
++     inc nhits<br />
++     $S0 = itable[ind]<br />
++     unless $S0, new_hit<br />
++     # keep longest hit at that index<br />
++     $I0 = length $S0<br />
++     $I1 = length k<br />
++     if $I1 &lt; $I0 goto next_hit<br />
++   new_hit:<br />
++     itable[ind] = k<br />
++   next_hit:<br />
++     pos = ind + 1<br />
++     goto index_loop<br />
++   check_elems:<br />
++     unless nhits, mapping<br />
++     table[k] = v<br />
++     goto mapping<br />
++     <br />
++   st_trans:<br />
++     len = length tmps<br />
++     pos = 0<br />
++     adjpos = 0<br />
++     v = &#39;&#39;<br />
++     k = &#39;&#39;<br />
++     lastmatch = &#39;&#39;<br />
++     <br />
++   table_loop:<br />
++     if pos &gt;= len goto done<br />
++     k = itable[pos]<br />
++     if comp goto complement<br />
++   normal:<br />
++     unless k, skip_pos<br />
++     v = table[k]<br />
++     klen = length k<br />
++     goto check_squash<br />
++   complement:<br />
++     # may need to change dep. on how we want :c to work<br />
++     if k, skip_pos<br />
++     v = comp_match<br />
++     klen = 1<br />
++   check_squash:<br />
++     unless squash, replace<br />
++     unless v == lastmatch goto replace<br />
++     vlen = 0<br />
++     substr tmps, adjpos, klen, &#39;&#39;<br />
++     goto next_pos<br />
++   replace:<br />
++     vlen = length v<br />
++     substr tmps, adjpos, klen, v<br />
++   next_pos:<br />
++     pos += klen<br />
++     adjpos += vlen<br />
++     lastmatch = v<br />
++     goto table_loop<br />
++   skip_pos:<br />
++     inc pos<br />
++     inc adjpos<br />
++     lastmatch = &#39;&#39;<br />
++     goto table_loop<br />
++     <br />
++   done:<br />
++     retv = tmps<br />
++     .return&#40;retv&#41;<br />
++     <br />
++   pair_exception:<br />
++     die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++ .end<br />
+  <br />
+  =item perl&#40;&#41;<br />
+  <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-439872" href="/rt3/Ticket/Display.html?id=55492#txn-439872">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;06&nbsp;14:18:57&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439872/201540/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 56b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Code moved to builtins/any-str.pir.  New patch attached.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/439872/201546/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 5.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+*** any-str.pir.old     2008-07-06 15:42:32.000000000 -0500<br />
+--- any-str.pir 2008-07-06 15:38:10.000000000 -0500<br />
+***************<br />
+*** 75,85 ****<br />
+      .return &#40;$P0&#41;<br />
+  .end<br />
+  <br />
+  <br />
+<div class="message-stanza-depth-1">
+! =back<br />
+! <br />
+</div>
+  =cut<br />
+  <br />
+<div class="message-stanza-depth-1">
+  # Local Variables:<br />
+  #   mode: pir<br />
+  #   fill-column: 100<br />
+</div>
+--- 75,301 ----<br />
+      .return &#40;$P0&#41;<br />
+  .end<br />
+  <br />
++ =item trans&#40;&#41;<br />
+  <br />
+<div class="message-stanza-depth-1">
+!   Implementation of transliteration<br />
+!   <br />
+</div>
+  =cut<br />
+  <br />
++ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++     .param pmc r<br />
++     .local pmc retval<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++   range_loop:<br />
++     unless r, done<br />
++     $S0 = r.&#39;shift&#39;&#40;&#41;<br />
++     push retval, $S0<br />
++     goto range_loop<br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++     .param string str<br />
++     .local pmc retval, prior, frm, to<br />
++     .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
++     .local string p<br />
++     retval = new &#39;ResizableStringArray&#39;<br />
++     prior = new &#39;ResizableStringArray&#39;<br />
++     start = 0<br />
++     skipped = 0<br />
++     len = length str<br />
++     end = len - 2<br />
++   next_index:<br />
++     ind = index str, &#39;..&#39; , start<br />
++     if ind == -1 goto last_string<br />
++     # ranges can only be after first position, before last one<br />
++     if ind == 0 goto skip_pos<br />
++     if ind &gt;= end goto last_string    <br />
++   init_range:<br />
++     r_start = ind - 1<br />
++     r_end = ind + 2<br />
++   range_frm:<br />
++     $S0 = substr str, r_start, 1<br />
++     $I0 = ord $S0<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S0 == &#39; &#39; goto range_to<br />
++     r_start -= 1<br />
++     if r_start &lt; 0 goto illegal_range  <br />
++     goto range_frm<br />
++   range_to:<br />
++     $S1 = substr str, r_end, 1<br />
++     $I1 = ord $S1<br />
++     # following code may be commented dep. on how we interpret<br />
++     # spaces within ranges, like &#39;a .. b&#39;<br />
++     unless $S1 == &#39; &#39; goto prev_string<br />
++     r_end += 1<br />
++     if r_end == len goto illegal_range<br />
++     goto range_to<br />
++   prev_string:<br />
++     s_len = r_start - start<br />
++     s_len += skipped<br />
++     unless s_len, start_range<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_pstring:<br />
++     unless prior, start_range<br />
++     $S2 = shift prior<br />
++     push retval, $S2<br />
++     goto process_pstring<br />
++   start_range:<br />
++     if $I0 &gt; $I1 goto illegal_range<br />
++   make_range:<br />
++     # Here we&#39;re assuming the ordinal increments correctly for all chars.<br />
++     # This is a bit naive for now, it definitely needs some unicode testing.<br />
++     # If needed we can switch this over to use a true string Range<br />
++     if $I0 &gt; $I1 goto next_loop<br />
++     $S2 = chr $I0<br />
++     push retval, $S2<br />
++     inc $I0<br />
++     goto make_range<br />
++   illegal_range:<br />
++     die &#34;Illegal range used in transliteration operator&#34;<br />
++   next_loop:<br />
++     start = r_end + 1<br />
++     goto next_index<br />
++   skip_pos: <br />
++     inc start<br />
++     inc skipped<br />
++     goto next_index<br />
++   last_string:<br />
++     s_len = len - start<br />
++     if s_len &lt;= 0 goto done<br />
++     p = substr str, start, s_len<br />
++     prior = split &#39;&#39;, p<br />
++   process_lstring:<br />
++     unless prior, done<br />
++     $S0 = shift prior<br />
++     push retval, $S0<br />
++     goto process_lstring    <br />
++   done:<br />
++     .return&#40;retval&#41;<br />
++ .end<br />
++ <br />
++ .sub &#39;trans&#39; :method<br />
++     .param pmc args :slurpy<br />
++     .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++     .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
++     .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++     .local pmc pair<br />
++     .local pmc table<br />
++     .local pmc itable<br />
++     .local pmc pkey<br />
++     .local pmc pval<br />
++     .local pmc retv<br />
++     .local string tmps, k, v, lv, lastmatch, comp_match<br />
++     .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
++     table = new &#39;Hash&#39;<br />
++     itable = new &#39;Hash&#39; # should used ordered hash here<br />
++     retv = new &#39;Perl6Str&#39;<br />
++     tmps = self<br />
++     lv = &#39;&#39;<br />
++     <br />
++   pair_loop:<br />
++     unless args, st_trans<br />
++     pair = shift args<br />
++     isa_pair = isa pair, &#39;Perl6Pair&#39;<br />
++     unless isa_pair, pair_exception<br />
++     pkey = pair.&#39;key&#39;&#40;&#41;<br />
++     pval = pair.&#39;value&#39;&#40;&#41;<br />
++     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++     pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++     vlen = elements pval<br />
++     if vlen goto comp_check<br />
++     if del goto comp_check<br />
++     pval = clone pkey<br />
++   comp_check:<br />
++     # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
++     # many examples where this is used otherwise<br />
++     comp_match = pval[0]<br />
++     <br />
++   mapping:<br />
++     unless pkey, pair_loop<br />
++     k = shift pkey<br />
++     unless pval, get_prev1<br />
++     lv = shift pval<br />
++   get_prev1:<br />
++     unless del, get_prev2<br />
++     v = &#39;&#39;<br />
++   get_prev2:<br />
++     v = lv<br />
++     nhits = 0<br />
++     pos = 0<br />
++   index_loop:<br />
++     ind = index tmps, k, pos<br />
++     if ind == -1 goto check_elems<br />
++     inc nhits<br />
++     $S0 = itable[ind]<br />
++     unless $S0, new_hit<br />
++     # keep longest hit at that index<br />
++     $I0 = length $S0<br />
++     $I1 = length k<br />
++     if $I1 &lt; $I0 goto next_hit<br />
++   new_hit:<br />
++     itable[ind] = k<br />
++   next_hit:<br />
++     pos = ind + 1<br />
++     goto index_loop<br />
++   check_elems:<br />
++     unless nhits, mapping<br />
++     table[k] = v<br />
++     goto mapping<br />
++     <br />
++   st_trans:<br />
++     len = length tmps<br />
++     pos = 0<br />
++     adjpos = 0<br />
++     v = &#39;&#39;<br />
++     k = &#39;&#39;<br />
++     lastmatch = &#39;&#39;<br />
++     <br />
++   table_loop:<br />
++     if pos &gt;= len goto done<br />
++     k = itable[pos]<br />
++     if comp goto complement<br />
++   normal:<br />
++     unless k, skip_pos<br />
++     v = table[k]<br />
++     klen = length k<br />
++     goto check_squash<br />
++   complement:<br />
++     # may need to change dep. on how we want :c to work<br />
++     if k, skip_pos<br />
++     v = comp_match<br />
++     klen = 1<br />
++   check_squash:<br />
++     unless squash, replace<br />
++     unless v == lastmatch goto replace<br />
++     vlen = 0<br />
++     substr tmps, adjpos, klen, &#39;&#39;<br />
++     goto next_pos<br />
++   replace:<br />
++     vlen = length v<br />
++     substr tmps, adjpos, klen, v<br />
++   next_pos:<br />
++     pos += klen<br />
++     adjpos += vlen<br />
++     lastmatch = v<br />
++     goto table_loop<br />
++   skip_pos:<br />
++     inc pos<br />
++     inc adjpos<br />
++     lastmatch = &#39;&#39;<br />
++     goto table_loop<br />
++     <br />
++   done:<br />
++     retv = tmps<br />
++     .return&#40;retv&#41;<br />
++     <br />
++   pair_exception:<br />
++     die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++ .end<br />
++ <br />
+<div class="message-stanza-depth-1">
+  # Local Variables:<br />
+  #   mode: pir<br />
+  #   fill-column: 100<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-440344" href="/rt3/Ticket/Display.html?id=55492#txn-440344">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jul&nbsp;07&nbsp;19:49:28&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/440344/201900/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 294b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jul 06 14:18:57 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Code moved to builtins/any-str.pir.  New patch attached.<br />
+</div>
+<br />
+Latest patch works with :c, :s using a many-to-many transliteration using arrays, as described <br />
+in S05.  Patch conforms to submissions.pod &#40;sorry about all of the additional ones above&#41;.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/440344/201906/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 5.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+--- languages/perl6/src/builtins/any-str.pir.old        2008-07-06 15:42:32.000000000 -0500<br />
++++ languages/perl6/src/builtins/any-str.pir    2008-07-07 21:28:03.000000000 -0500<br />
+@@ -75,11 +75,232 @@<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
++=item trans&#40;&#41;<br />
+ <br />
+-=back<br />
+-<br />
++  Implementation of transliteration<br />
++  <br />
+ =cut<br />
+ <br />
++.sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
++    .param pmc r<br />
++    .local pmc retval<br />
++    retval = new &#39;ResizableStringArray&#39;<br />
++  range_loop:<br />
++    unless r, done<br />
++    $S0 = r.&#39;shift&#39;&#40;&#41;<br />
++    push retval, $S0<br />
++    goto range_loop<br />
++  done:<br />
++    .return&#40;retval&#41;<br />
++.end<br />
++<br />
++.sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++    .param string str<br />
++    .local pmc retval, prior, frm, to<br />
++    .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
++    .local string p<br />
++    retval = new &#39;ResizableStringArray&#39;<br />
++    prior = new &#39;ResizableStringArray&#39;<br />
++    start = 0<br />
++    skipped = 0<br />
++    len = length str<br />
++    end = len - 2<br />
++  next_index:<br />
++    ind = index str, &#39;..&#39; , start<br />
++    if ind == -1 goto last_string<br />
++    # ranges can only be after first position, before last one<br />
++    if ind == 0 goto skip_pos<br />
++    if ind &gt;= end goto last_string    <br />
++  init_range:<br />
++    r_start = ind - 1<br />
++    r_end = ind + 2<br />
++  range_frm:<br />
++    $S0 = substr str, r_start, 1<br />
++    $I0 = ord $S0<br />
++    # following code may be commented dep. on how we interpret<br />
++    # spaces within ranges, like &#39;a .. b&#39;<br />
++    unless $S0 == &#39; &#39; goto range_to<br />
++    r_start -= 1<br />
++    if r_start &lt; 0 goto illegal_range  <br />
++    goto range_frm<br />
++  range_to:<br />
++    $S1 = substr str, r_end, 1<br />
++    $I1 = ord $S1<br />
++    # following code may be commented dep. on how we interpret<br />
++    # spaces within ranges, like &#39;a .. b&#39;<br />
++    unless $S1 == &#39; &#39; goto prev_string<br />
++    r_end += 1<br />
++    if r_end == len goto illegal_range<br />
++    goto range_to<br />
++  prev_string:<br />
++    s_len = r_start - start<br />
++    s_len += skipped<br />
++    unless s_len, start_range<br />
++    p = substr str, start, s_len<br />
++    prior = split &#39;&#39;, p<br />
++  process_pstring:<br />
++    unless prior, start_range<br />
++    $S2 = shift prior<br />
++    push retval, $S2<br />
++    goto process_pstring<br />
++  start_range:<br />
++    if $I0 &gt; $I1 goto illegal_range<br />
++  make_range:<br />
++    # Here we&#39;re assuming the ordinal increments correctly for all chars.<br />
++    # This is a bit naive for now, it definitely needs some unicode testing.<br />
++    # If needed we can switch this over to use a true string Range<br />
++    if $I0 &gt; $I1 goto next_loop<br />
++    $S2 = chr $I0<br />
++    push retval, $S2<br />
++    inc $I0<br />
++    goto make_range<br />
++  illegal_range:<br />
++    die &#34;Illegal range used in transliteration operator&#34;<br />
++  next_loop:<br />
++    start = r_end + 1<br />
++    goto next_index<br />
++  skip_pos: <br />
++    inc start<br />
++    inc skipped<br />
++    goto next_index<br />
++  last_string:<br />
++    s_len = len - start<br />
++    if s_len &lt;= 0 goto done<br />
++    p = substr str, start, s_len<br />
++    prior = split &#39;&#39;, p<br />
++  process_lstring:<br />
++    unless prior, done<br />
++    $S0 = shift prior<br />
++    push retval, $S0<br />
++    goto process_lstring    <br />
++  done:<br />
++    .return&#40;retval&#41;<br />
++.end<br />
++<br />
++.sub &#39;trans&#39; :method<br />
++    .param pmc args :slurpy<br />
++    .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
++    .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
++    .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++    .local pmc pair<br />
++    .local pmc table<br />
++    .local pmc itable<br />
++    .local pmc pkey<br />
++    .local pmc pval<br />
++    .local pmc retv<br />
++    .local string tmps, k, v, lv, lastmatch, comp_match<br />
++    .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
++    table = new &#39;Hash&#39;<br />
++    itable = new &#39;Hash&#39;<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    tmps = self<br />
++    lv = &#39;&#39;<br />
++    <br />
++  pair_loop:<br />
++    unless args, st_trans<br />
++    pair = shift args<br />
++    isa_pair = isa pair, &#39;Perl6Pair&#39;<br />
++    unless isa_pair, pair_exception<br />
++    pkey = pair.&#39;key&#39;&#40;&#41;<br />
++    pval = pair.&#39;value&#39;&#40;&#41;<br />
++    pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
++    pval = &#39;!transtable&#39;&#40;pval&#41;<br />
++    vlen = elements pval<br />
++    if vlen goto comp_check<br />
++    if del goto comp_check<br />
++    pval = clone pkey<br />
++  comp_check:<br />
++    # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
++    # many examples where this is used otherwise<br />
++    comp_match = pval[0]<br />
++    <br />
++  mapping:<br />
++    unless pkey, pair_loop<br />
++    k = shift pkey<br />
++    unless pval, get_prev1<br />
++    lv = shift pval<br />
++  get_prev1:<br />
++    unless del, get_prev2<br />
++    v = &#39;&#39;<br />
++  get_prev2:<br />
++    v = lv<br />
++    nhits = 0<br />
++    pos = 0<br />
++  index_loop:<br />
++    ind = index tmps, k, pos<br />
++    if ind == -1 goto check_elems<br />
++    inc nhits<br />
++    $S0 = itable[ind]<br />
++    unless $S0, new_hit<br />
++    # keep longest hit at that index<br />
++    $I0 = length $S0<br />
++    $I1 = length k<br />
++    if $I1 &lt; $I0 goto next_hit<br />
++  new_hit:<br />
++    itable[ind] = k<br />
++  next_hit:<br />
++    pos = ind + 1<br />
++    goto index_loop<br />
++  check_elems:<br />
++    unless nhits, mapping<br />
++    table[k] = v<br />
++    goto mapping<br />
++    <br />
++  st_trans:<br />
++    len = length tmps<br />
++    pos = 0<br />
++    adjpos = 0<br />
++    v = &#39;&#39;<br />
++    k = &#39;&#39;<br />
++    lastmatch = &#39;&#39;<br />
++    <br />
++  table_loop:<br />
++    if pos &gt;= len goto done<br />
++    k = itable[pos]<br />
++    klen = length k<br />
++    if comp goto complement<br />
++  normal:<br />
++    unless k, skip_pos<br />
++    v = table[k]<br />
++    goto check_squash<br />
++  complement:<br />
++    # may need to change dep. on how we want :c to work<br />
++    if k, skip_pos_comp<br />
++    v = comp_match<br />
++    klen = 1<br />
++  check_squash:<br />
++    unless squash, replace<br />
++    unless v == lastmatch goto replace<br />
++    vlen = 0<br />
++    substr tmps, adjpos, klen, &#39;&#39;<br />
++    goto next_pos<br />
++  replace:<br />
++    vlen = length v<br />
++    substr tmps, adjpos, klen, v<br />
++  next_pos:<br />
++    pos      += klen<br />
++    adjpos   += vlen<br />
++    lastmatch = v<br />
++    goto table_loop<br />
++  skip_pos:<br />
++    pos      += 1<br />
++    adjpos   += 1<br />
++    lastmatch = &#39;&#39;<br />
++    goto table_loop<br />
++  skip_pos_comp:<br />
++    pos      += klen<br />
++    adjpos   += klen<br />
++    lastmatch = &#39;&#39;<br />
++    goto table_loop    <br />
++    <br />
++  done:<br />
++    retv = tmps<br />
++    .return&#40;retv&#41;<br />
++    <br />
++  pair_exception:<br />
++    die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++.end<br />
++<br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+ #   fill-column: 100<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-444242" href="/rt3/Ticket/Display.html?id=55492#txn-444242">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;15&nbsp;10:07:01&nbsp;2008</td>
+    <td class="description">
+      moritz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/444242/203864/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 125b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied as r29490 &#40;with minor whitespaces fixes and adding the<br />
+appropriate test to spectest_regression&#41;, thank you very much.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-444244" href="/rt3/Ticket/Display.html?id=55492#txn-444244">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;15&nbsp;10:07:02&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 4.268089</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

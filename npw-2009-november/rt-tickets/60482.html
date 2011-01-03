@@ -1,0 +1,888 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60482: Rakudo dies strangely on .trans calls to strings coming from PGE</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60482">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60482: Rakudo dies strangely on .trans calls to strings coming from PGE</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60482">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60482</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60482">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60482">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60482">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493768" href="/rt3/Ticket/Display.html?id=60482#txn-493768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;08:43:09&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo dies strangely on .trans call in for loop on .split result</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 11 Nov 2008 17:42:37 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493768/230988/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 470b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; ...but now I&#39;ve found something. seriously!<br />
+&lt;masak&gt; rakudo: say &#34;foo\nbar\nbaz&#34;.trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41;<br />
+&lt;p6eval&gt; rakudo 32543: OUTPUT[foo bar baz␤]<br />
+&lt;masak&gt; all good, yes?<br />
+&lt;masak&gt; now look:<br />
+&lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+.trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+file&#41;:-1&#41;␤]<br />
+&lt;masak&gt; HAH!<br />
+* masak files ticket<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493784" href="/rt3/Ticket/Display.html?id=60482#txn-493784">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;08:50:34&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493784/231002/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 675b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;pmichaud&gt; oh, I see the issu<br />
+&lt;pmichaud&gt; issue<br />
+&lt;jnthn&gt; pmurias: We don&#39;t explicitly construct a capture right now.<br />
+&lt;pmichaud&gt; the strings that come back from PGE aren&#39;t Perl6Str<br />
+&lt;jnthn&gt; Ah.<br />
+&lt;pmichaud&gt; so it&#39;s calling the .trans method in &#40;Parrot&#41; String instead<br />
+of &#40;Perl 6&#41; Str<br />
+&lt;jnthn&gt; The Parrot string has a trans method?<br />
+* jnthn didn&#39;t know that<br />
+&lt;jnthn&gt; Makes sense though.<br />
+&lt;pmichaud&gt;     METHOD trans&#40;STRING *src, PMC *table&#41; {<br />
+&lt;masak&gt; pmichaud: is it easy to fix?<br />
+&lt;pmichaud&gt; masak: not at the moment.<br />
+&lt;jnthn&gt; Needs HLL. :-&#40;<br />
+&lt;pmichaud&gt; we need to get HLL type mapping in place.<br />
+&lt;masak&gt; oh well.<br />
+&lt;pmichaud&gt; and then PGE will have to become smart enough to do that mapping.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493788" href="/rt3/Ticket/Display.html?id=60482#txn-493788">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;08:50:35&nbsp;2008</td>
+    <td class="description">
+      masak -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493790" href="/rt3/Ticket/Display.html?id=60482#txn-493790">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;08:51:18&nbsp;2008</td>
+    <td class="description">
+      masak -  Subject changed from &#39;Rakudo dies strangely on .trans call in for loop on .split result&#39; to &#39;Rakudo dies strangely on .trans calls to strings coming from PGE&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-494078" href="/rt3/Ticket/Display.html?id=60482#txn-494078">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;12&nbsp;08:07:43&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60482] Rakudo dies strangely on .trans call in for loop on .split result</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 12 Nov 2008 10:07:21 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/494078/231146/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 745b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Nov 11, 2008 at 08:43:09AM -0800, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+&gt; .trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&gt; &lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+&gt; expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+&gt; file&#41;:-1&#41;␤]<br />
+&gt; &lt;masak&gt; HAH!<br />
+&gt; * masak files ticket<br />
+</div>
+<br />
+The problem is that the strings returned in PGE&#39;s Match objects<br />
+are Parrot String PMCs, and so the .trans method for String PMCs<br />
+&#40;src/pmc/string.pmc:867&#41; ends up being used instead of the .trans<br />
+method defined by Rakudo.<br />
+<br />
+This will all likely be fixed when we have HLL mapping in place,<br />
+and when PGE is updated to understand HLL mapping.  Until then, I<br />
+think we&#39;re a little stuck on this one.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-494586" href="/rt3/Ticket/Display.html?id=60482#txn-494586">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;13&nbsp;13:05:10&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/494586/231514/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 720b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Nov 12 08:07:43 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue, Nov 11, 2008 at 08:43:09AM -0800, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+&gt; &gt; .trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&gt; &gt; &lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+&gt; &gt; expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+&gt; &gt; file&#41;:-1&#41;␤]<br />
+&gt; &gt; &lt;masak&gt; HAH!<br />
+&gt; &gt; * masak files ticket<br />
+</div>
+&gt; <br />
+&gt; The problem is that the strings returned in PGE&#39;s Match objects<br />
+&gt; are Parrot String PMCs, and so the .trans method for String PMCs<br />
+&gt; &#40;src/pmc/string.pmc:867&#41; ends up being used instead of the .trans<br />
+&gt; method defined by Rakudo.<br />
+</div>
+<br />
+Added to the test suite as pugs r22999, and to rakudo in r32626.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-494668" href="/rt3/Ticket/Display.html?id=60482#txn-494668">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;13&nbsp;14:13:08&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/494668/231566/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Nov 12 08:07:43 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue, Nov 11, 2008 at 08:43:09AM -0800, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+&gt; &gt; .trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&gt; &gt; &lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+&gt; &gt; expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+&gt; &gt; file&#41;:-1&#41;␤]<br />
+&gt; &gt; &lt;masak&gt; HAH!<br />
+&gt; &gt; * masak files ticket<br />
+</div>
+&gt; <br />
+&gt; The problem is that the strings returned in PGE&#39;s Match objects<br />
+&gt; are Parrot String PMCs, and so the .trans method for String PMCs<br />
+&gt; &#40;src/pmc/string.pmc:867&#41; ends up being used instead of the .trans<br />
+&gt; method defined by Rakudo.<br />
+&gt; <br />
+&gt; This will all likely be fixed when we have HLL mapping in place,<br />
+&gt; and when PGE is updated to understand HLL mapping.  Until then, I<br />
+&gt; think we&#39;re a little stuck on this one.<br />
+</div>
+<br />
+As a start towards fixing this, I&#39;ve added a String.Scalar method that<br />
+will promote Parrot String PMCs into Rakudo Str objects whenever the<br />
+String PMC is asked for its scalar value &#40;e.g., upon assignment&#41;.<br />
+<br />
+So, while $/[0].trans&#40;...&#41; will still go to the wrong object, assigning<br />
+$/[0] to a scalar and then performing .trans&#40;...&#41; will get closer to<br />
+what you want.<br />
+<br />
+Again, a lot of this gets solved by HLL mapping -- but even once we have<br />
+HLL mapping this can be a very useful backstop.<br />
+<br />
+We also now have the .PARROT method, which can be used to find out<br />
+exactly what type of object Parrot thinks something is &#40;as opposed to<br />
+how Rakudo sees it&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497126" href="/rt3/Ticket/Display.html?id=60482#txn-497126">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;18&nbsp;20:58:51&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497126/233136/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Nov 12 08:07:43 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue, Nov 11, 2008 at 08:43:09AM -0800, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+&gt; &gt; .trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&gt; &gt; &lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+&gt; &gt; expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+&gt; &gt; file&#41;:-1&#41;␤]<br />
+&gt; &gt; &lt;masak&gt; HAH!<br />
+&gt; &gt; * masak files ticket<br />
+</div>
+&gt; <br />
+&gt; The problem is that the strings returned in PGE&#39;s Match objects<br />
+&gt; are Parrot String PMCs, and so the .trans method for String PMCs<br />
+&gt; &#40;src/pmc/string.pmc:867&#41; ends up being used instead of the .trans<br />
+&gt; method defined by Rakudo.<br />
+&gt; <br />
+&gt; This will all likely be fixed when we have HLL mapping in place,<br />
+&gt; and when PGE is updated to understand HLL mapping.  Until then, I<br />
+&gt; think we&#39;re a little stuck on this one.<br />
+&gt; <br />
+&gt; Pm<br />
+</div>
+<br />
+Related to this, I am planning to reimplement .trans to use alternation in a grammar instead <br />
+of the current implementation &#40;which fakes LTM at the expense of generating lots of <br />
+Matches&#41;.  That may wait for LTM in PGE.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522534" href="/rt3/Ticket/Display.html?id=60482#txn-522534">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;20&nbsp;10:29:48&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522534/246846/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 874b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Nov 13 13:05:10 2008, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed Nov 12 08:07:43 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; On Tue, Nov 11, 2008 at 08:43:09AM -0800, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; &lt;masak&gt; rakudo: for &#34;foo\nbar\nbaz&#34;.split&#40; /\n ** 2..*/ &#41; { say<br />
+&gt; &gt; &gt; .trans&#40;[ /\s+/ =&gt; &#34; &#34; ]&#41; }<br />
+&gt; &gt; &gt; &lt;p6eval&gt; rakudo 32543: OUTPUT[too few arguments passed &#40;2&#41; - 3 params<br />
+&gt; &gt; &gt; expected␤current instr.: &#39;_block25&#39; pc -342568903 &#40;&#40;unknown<br />
+&gt; &gt; &gt; file&#41;:-1&#41;␤]<br />
+&gt; &gt; &gt; &lt;masak&gt; HAH!<br />
+&gt; &gt; &gt; * masak files ticket<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The problem is that the strings returned in PGE&#39;s Match objects<br />
+&gt; &gt; are Parrot String PMCs, and so the .trans method for String PMCs<br />
+&gt; &gt; &#40;src/pmc/string.pmc:867&#41; ends up being used instead of the .trans<br />
+&gt; &gt; method defined by Rakudo.<br />
+</div>
+&gt; <br />
+&gt; Added to the test suite as pugs r22999, and to rakudo in r32626.<br />
+</div>
+<br />
+These tests &#40;in t/spec/integration/real-strings.t&#41; now all pass, so<br />
+closing ticket...<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522538" href="/rt3/Ticket/Display.html?id=60482#txn-522538">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;20&nbsp;10:29:49&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.17731</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

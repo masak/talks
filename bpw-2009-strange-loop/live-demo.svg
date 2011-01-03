@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg3028">
+  <defs
+     id="defs3030" />
+  <g
+     id="layer1">
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/live-demo.png"
+       x="289.68109"
+       y="106.12978"
+       width="473"
+       height="350"
+       id="image3109" />
+    <text
+       x="246.98546"
+       y="602.80438"
+       id="text3113"
+       xml:space="preserve"
+       style="font-size:98.45762634px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="246.98546"
+         y="602.80438"
+         id="tspan3115">LIVE DEMO</tspan></text>
+  </g>
+</svg>

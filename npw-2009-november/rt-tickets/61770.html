@@ -1,0 +1,1221 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61770: Bare &#39;print&#39; and &#39;say&#39; calls should be compile errors</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61770">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61770: Bare &#39;print&#39; and &#39;say&#39; calls should be compile errors</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61770">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61770</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61770">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+moritz
+&lt;moritz [at] faui2k3.org&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+dave.whipp [at] gmail.com
+
+<br />
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61770">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61770">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-513138" href="/rt3/Ticket/Display.html?id=61770#txn-513138">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;27&nbsp;11:42:46&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Bare &#39;print&#39; and &#39;say&#39; calls should be compile errors</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 27 Dec 2008 20:42:26 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/513138/241944/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 373b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r34400:<br />
+<br />
+$ perl6 -e &#39;print&#39;<br />
+$ perl6 -e &#39;say&#39;<br />
+<br />
+$<br />
+<br />
+S16:340, about &#39;print&#39;:<br />
+<br />
+] It is a compiler error to use a bare C&lt;print&gt; without arguments.<br />
+] &#40;However, it&#39;s fine if you have an explicit argument list that evaluates to<br />
+] the empty list at runtime.&#41;<br />
+<br />
+...and, S16:360, about &#39;say&#39;:<br />
+<br />
+] As with C&lt;print&gt;, it is a compiler error to use a bare C&lt;say&gt; without<br />
+] arguments.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516214" href="/rt3/Ticket/Display.html?id=61770#txn-516214">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;13:50:05&nbsp;2009</td>
+    <td class="description">
+      dave.whipp <!-- x --> at gmail.com - Ticket 62028:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">&#34;say&#34; with no args should be an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 6 Jan 2009 13:49:41 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Dave Whipp&#34; &lt;dave.whipp <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516214/243484/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 128b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+S16 requires that &#34;say&#34; &#40;and &#34;print&#34;&#41; when called with no args should<br />
+be a compile-time error. Rakudo accepts it with no error.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516294" href="/rt3/Ticket/Display.html?id=61770#txn-516294">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;18:39:20&nbsp;2009</td>
+    <td class="description">
+      pmichaud - Ticket 62028:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62028] &#34;say&#34; with no args should be an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 6 Jan 2009 20:39:00 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516294/243512/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 392b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Jan 06, 2009 at 01:50:06PM -0800, Dave Whipp wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; S16 requires that &#34;say&#34; &#40;and &#34;print&#34;&#41; when called with no args should<br />
+&gt; be a compile-time error. Rakudo accepts it with no error.<br />
+</div>
+<br />
+Since S16 has been in an incomplete &#34;draft&#34; status for such a long<br />
+time, I&#39;d like to get confirmation from p6l about this part of<br />
+the spec before committing it to an implementation.<br />
+<br />
+Thanks,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516296" href="/rt3/Ticket/Display.html?id=61770#txn-516296">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;18:39:20&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 62028:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516308" href="/rt3/Ticket/Display.html?id=61770#txn-516308">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;22:51:35&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 62028:  Merged into ticket #61770
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516310" href="/rt3/Ticket/Display.html?id=61770#txn-516310">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;22:51:35&nbsp;2009</td>
+    <td class="description">
+      masak -  Merged into ticket #61770
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516614" href="/rt3/Ticket/Display.html?id=61770#txn-516614">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;07&nbsp;17:54:26&nbsp;2009</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62028] &#34;say&#34; with no args should be an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 7 Jan 2009 17:53:40 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516614/243730/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Jan 06, 2009 at 08:39:00PM -0600, Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+: On Tue, Jan 06, 2009 at 01:50:06PM -0800, Dave Whipp wrote:<br />
+<div class="message-stanza-depth-2">
+: &gt; <br />
+: &gt; S16 requires that &#34;say&#34; &#40;and &#34;print&#34;&#41; when called with no args should<br />
+: &gt; be a compile-time error. Rakudo accepts it with no error.<br />
+</div>
+: <br />
+: Since S16 has been in an incomplete &#34;draft&#34; status for such a long<br />
+: time, I&#39;d like to get confirmation from p6l about this part of<br />
+: the spec before committing it to an implementation.<br />
+</div>
+<br />
+Hmm, well, the case for complaining on &#34;print&#34; is pretty clear cut,<br />
+since print with no args is a no-op, and hence can only mean they<br />
+were intending to default to $_.<br />
+<br />
+With &#34;say&#34; it&#39;s not such a clear case, since they might have been<br />
+intending to mean &#34;print nothing but emit the newline&#34;.  On the<br />
+other hand, they might have meant to say $_, in which case they&#39;d<br />
+thank us for the error.  And it&#39;s pretty easy to use any of<br />
+<br />
+    say &#39;&#39;;<br />
+    say &#40;&#41;;<br />
+    &#39;&#39;.say;<br />
+    print &#34;\n&#34;;<br />
+<br />
+to be clearer about the intent.  So my inclination is to outlaw<br />
+bare &#34;say&#34; as well, as an aid to catching a common p5thinko that<br />
+some folks might otherwise find difficult to debug.<br />
+<br />
+I suppose a case could be made for just making one or both of those<br />
+warnings.  STD already has a mechanism for reporting &#34;Possible<br />
+difficulties&#34;, so maybe that&#39;s a good-enough way to handle it.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516618" href="/rt3/Ticket/Display.html?id=61770#txn-516618">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;07&nbsp;17:54:28&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516628" href="/rt3/Ticket/Display.html?id=61770#txn-516628">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;07&nbsp;18:29:16&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62028] &#34;say&#34; with no args should be an error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 7 Jan 2009 20:28:50 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516628/243740/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 904b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jan 07, 2009 at 05:53:40PM -0800, Larry Wall wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; And it&#39;s pretty easy to use any of<br />
+&gt; <br />
+&gt;     say &#39;&#39;;<br />
+&gt;     say &#40;&#41;;<br />
+&gt;     &#39;&#39;.say;<br />
+&gt;     print &#34;\n&#34;;<br />
+&gt; <br />
+&gt; to be clearer about the intent.  So my inclination is to outlaw<br />
+&gt; bare &#34;say&#34; as well, as an aid to catching a common p5thinko that<br />
+&gt; some folks might otherwise find difficult to debug.<br />
+</div>
+<br />
+I&#39;m fine with this.<br />
+<br />
+How about C&lt; say&#40;&#41; &gt;  as a function call instead of a listop?<br />
+Still illegal?<br />
+<br />
+If they&#39;re &#34;compiler errors&#34;, do you expect that we&#39;ll catch them<br />
+as part of the grammar &#40;i.e., in STD.pm&#41;, or a later compiler phase?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I suppose a case could be made for just making one or both of those<br />
+&gt; warnings.  STD already has a mechanism for reporting &#34;Possible<br />
+&gt; difficulties&#34;, so maybe that&#39;s a good-enough way to handle it.<br />
+</div>
+<br />
+That also works for me -- I&#39;d just like a pointer as to where<br />
+we&#39;re likely to stick the test for this.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518792" href="/rt3/Ticket/Display.html?id=61770#txn-518792">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;19:18:51&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518792/244832/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 557b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jan 07 17:54:26 2009, larry wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; [...] So my inclination is to outlaw<br />
+&gt; bare &#34;say&#34; as well, as an aid to catching a common p5thinko that<br />
+&gt; some folks might otherwise find difficult to debug.<br />
+</div>
+<br />
+Bare &#34;say&#34; and &#34;print&#34; are now illegal in Rakudo as of r35431.  This<br />
+currently catches only the truly bare say/print -- the parenthesized<br />
+forms are still allowed:<br />
+<br />
+    say;      # error<br />
+    say &#40;&#41;;   # ok<br />
+    say&#40;&#41;;    # spec is unclear, rakudo currently allows this<br />
+<br />
+If the C&lt;say&#40;&#41;&gt; and C&lt;print&#40;&#41;&gt; forms should be disallowed, we can do<br />
+that as well.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518798" href="/rt3/Ticket/Display.html?id=61770#txn-518798">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;19:18:56&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518808" href="/rt3/Ticket/Display.html?id=61770#txn-518808">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;20:38:38&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61770] Bare &#39;print&#39; and &#39;say&#39; calls should be compile errors</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 22:38:02 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud via RT&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518808/244838/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 872b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Jan 11, 2009 at 07:18:53PM -0800, Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed Jan 07 17:54:26 2009, larry wrote:<br />
+&gt; Bare &#34;say&#34; and &#34;print&#34; are now illegal in Rakudo as of r35431.  This<br />
+&gt; currently catches only the truly bare say/print -- the parenthesized<br />
+&gt; forms are still allowed:<br />
+&gt; <br />
+&gt;     say;      # error<br />
+&gt;     say &#40;&#41;;   # ok<br />
+&gt;     say&#40;&#41;;    # spec is unclear, rakudo currently allows this<br />
+&gt; <br />
+&gt; If the C&lt;say&#40;&#41;&gt; and C&lt;print&#40;&#41;&gt; forms should be disallowed, we can do<br />
+&gt; that as well.<br />
+</div>
+<br />
+Actually, that fix didn&#39;t turn out to be complete, so I&#39;ve entered<br />
+a new fix, and the C&lt;say&#40;&#41;&gt; and C&lt;print&#40;&#41;&gt; forms are now disallowed<br />
+also.  Thus we&#39;re left with:<br />
+<br />
+    say;      # error<br />
+    say&#40;&#41;;    # error<br />
+    say &#40;&#41;;   # ok<br />
+<br />
+Since this matches the spec, I&#39;ll close this ticket &#40;as soon as I can<br />
+get back into rt.perl.org to do so -- it&#39;s not responding for me<br />
+right now&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518928" href="/rt3/Ticket/Display.html?id=61770#txn-518928">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;20:56:32&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61770] Bare &#39;print&#39; and &#39;say&#39; calls should be compile errors</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 22:38:02 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud via RT&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518928/244896/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 873b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Jan 11, 2009 at 07:18:53PM -0800, Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed Jan 07 17:54:26 2009, larry wrote:<br />
+&gt; Bare &#34;say&#34; and &#34;print&#34; are now illegal in Rakudo as of r35431.  This<br />
+&gt; currently catches only the truly bare say/print -- the parenthesized<br />
+&gt; forms are still allowed:<br />
+&gt; <br />
+&gt;     say;      # error<br />
+&gt;     say &#40;&#41;;   # ok<br />
+&gt;     say&#40;&#41;;    # spec is unclear, rakudo currently allows this<br />
+&gt; <br />
+&gt; If the C&lt;say&#40;&#41;&gt; and C&lt;print&#40;&#41;&gt; forms should be disallowed, we can do<br />
+&gt; that as well.<br />
+</div>
+<br />
+Actually, that fix didn&#39;t turn out to be complete, so I&#39;ve entered<br />
+a new fix, and the C&lt;say&#40;&#41;&gt; and C&lt;print&#40;&#41;&gt; forms are now disallowed<br />
+also.  Thus we&#39;re left with:<br />
+<br />
+    say;      # error<br />
+    say&#40;&#41;;    # error<br />
+    say &#40;&#41;;   # ok<br />
+<br />
+Since this matches the spec, I&#39;ll close this ticket &#40;as soon as I can<br />
+get back into rt.perl.org to do so -- it&#39;s not responding for me<br />
+right now&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518978" href="/rt3/Ticket/Display.html?id=61770#txn-518978">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;21:21:39&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518978/244910/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 56b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Assigning to moritz to make sure we have a spectest.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518982" href="/rt3/Ticket/Display.html?id=61770#txn-518982">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;21:21:43&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to moritz
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520214" href="/rt3/Ticket/Display.html?id=61770#txn-520214">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;14&nbsp;12:56:04&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/520214/245558/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 181b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jan 11 21:21:39 2009, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Assigning to moritz to make sure we have a spectest.<br />
+</div>
+<br />
+Added some to t/spec/S16-io/bare-say.t &#40;and added it to t/spectest.data&#41;<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520218" href="/rt3/Ticket/Display.html?id=61770#txn-520218">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;14&nbsp;12:56:06&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.811047</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

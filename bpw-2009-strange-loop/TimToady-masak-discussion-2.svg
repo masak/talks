@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg6130">
+  <defs
+     id="defs6132" />
+  <g
+     id="layer1">
+    <rect
+       width="930.53601"
+       height="585.03998"
+       x="60.913086"
+       y="79.527252"
+       id="rect6439"
+       style="opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       x="95.248962"
+       y="185.29724"
+       id="text6401"
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="95.248962"
+         y="185.29724"
+         id="tspan6403">&lt;TimToady&gt; and I very much don't like co-routines that change their signature</tspan><tspan
+         x="95.248962"
+         y="207.79724"
+         id="tspan6405">           depending on whether they're initting or continuing, though making</tspan><tspan
+         x="95.248962"
+         y="230.29724"
+         id="tspan6407">           yield return new arguments is a sop to fix that</tspan><tspan
+         x="95.248962"
+         y="252.79724"
+         id="tspan6409">   &lt;masak&gt; hm, yes. co-routines changing signatures feels wrong, I agree.</tspan><tspan
+         x="95.248962"
+         y="275.29724"
+         id="tspan6411">   &lt;masak&gt; Seaside and Lift are two web applications which make good use of</tspan><tspan
+         x="95.248962"
+         y="297.79724"
+         id="tspan6413">           continuations. PGE and other parsers use them liberally. I'm still</tspan><tspan
+         x="95.248962"
+         y="320.29724"
+         id="tspan6415">           trying to figure out which contortions are necessary to port such</tspan><tspan
+         x="95.248962"
+         y="342.79724"
+         id="tspan6417">           applications to pure Perl 6.</tspan><tspan
+         x="95.248962"
+         y="365.29724"
+         id="tspan6419">&lt;TimToady&gt; I thought those were just &quot;web continuations&quot;</tspan><tspan
+         x="95.248962"
+         y="387.79724"
+         id="tspan6421">   &lt;masak&gt; the point is that they're syntactically supported.</tspan><tspan
+         x="95.248962"
+         y="410.29724"
+         id="tspan6423">&lt;TimToady&gt; well, basically, lazy lists are our continuation syntax primitive</tspan><tspan
+         x="95.248962"
+         y="432.79724"
+         id="tspan6425">&lt;TimToady&gt; lazy lists are also a poor-man's monad</tspan><tspan
+         x="95.248962"
+         y="455.29724"
+         id="tspan6427">&lt;TimToady&gt; making sure time happens in the right order :)</tspan><tspan
+         x="95.248962"
+         y="477.79724"
+         id="tspan6429">   &lt;masak&gt; TimToady: either I'm missing something major from the 'lazy lists are</tspan><tspan
+         x="95.248962"
+         y="500.29724"
+         id="tspan6431">           our continuation syntax primitive' viewpoint, or I'm simply</tspan><tspan
+         x="95.248962"
+         y="522.79724"
+         id="tspan6433">           dissatisfied with it.</tspan><tspan
+         x="95.248962"
+         y="545.29724"
+         id="tspan6435">&lt;TimToady&gt; continuations are like naked singularities, but the event horizon</tspan><tspan
+         x="95.248962"
+         y="567.79724"
+         id="tspan6437">           is a lazy list</tspan></text>
+  </g>
+</svg>

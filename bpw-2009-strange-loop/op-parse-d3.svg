@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg5212">
+  <defs
+     id="defs5214" />
+  <text
+     x="236.55423"
+     y="586.64215"
+     id="text5223"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="236.55423"
+       y="586.64215"
+       id="tspan5225">Expression:</tspan></text>
+  <text
+     x="669.30017"
+     y="586.64215"
+     id="text5227"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="669.30017"
+       y="586.64215"
+       id="tspan5229">a ** b ** c</tspan></text>
+  <text
+     x="239.57767"
+     y="493.80884"
+     id="text5749"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="239.57767"
+       y="493.80884"
+       id="tspan5751">Op stack:</tspan></text>
+  <path
+     d="m 799.91872,603.62236 22.4005,38.79882 -44.80103,0 22.40053,-38.79882 z"
+     id="path5753"
+     style="opacity:0.98999999;fill:#4422ff;fill-opacity:1;stroke:none" />
+  <text
+     x="456.38678"
+     y="256.96207"
+     id="text5759"
+     xml:space="preserve"
+     style="font-size:30.23413467px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="456.38678"
+       y="256.96207"
+       id="tspan5761">a</tspan></text>
+  <text
+     x="667.42517"
+     y="493.80884"
+     id="text3603"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="667.42517"
+       y="493.80884"
+       id="tspan3605">infix:**</tspan></text>
+</svg>

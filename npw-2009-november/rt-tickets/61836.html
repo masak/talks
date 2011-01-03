@@ -1,0 +1,1175 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61836: Rakudo cannot take the minimum of undef</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61836">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61836: Rakudo cannot take the minimum of undef</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61836">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61836</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61836">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61836">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+failure_misc.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/533036/252864/failure_misc.patch">
+Mon Feb 16 14:15:28 2009 (974b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+undef.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/532384/252490/undef.patch">
+Fri Feb 13 23:28:40 2009 (749b) by bacek
+</a>
+</font></li>
+</ul>
+
+
+undef_almost_fix.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/533036/252858/undef_almost_fix.patch">
+Mon Feb 16 14:15:28 2009 (596b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+Failure.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/533036/252870/Failure.patch">
+Mon Feb 16 14:15:28 2009 (1.2k) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61836">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-514112" href="/rt3/Ticket/Display.html?id=61836#txn-514112">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;30&nbsp;01:38:55&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo cannot take the minimum of undef</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 30 Dec 2008 10:38:24 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/514112/242488/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 128b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r34628:<br />
+<br />
+$ perl6 -e &#39;undef min 2&#39;<br />
+Multiple Dispatch: No suitable candidate found for &#39;cmp&#39;, with signature &#39;PP-&gt;I&#39;<br />
+[...]<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515768" href="/rt3/Ticket/Display.html?id=61836#txn-515768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;11:53:29&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61836] Rakudo cannot take the minimum of undef</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 05 Jan 2009 20:54:31 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/515768/243266/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 532b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl MXXsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34; <br />
+&gt; # Please include the string:  [perl #61836]<br />
+&gt; # in the subject line of all future correspondence about this issue. <br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61836 &gt;<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; Rakudo r34628:<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;undef min 2&#39;<br />
+&gt; Multiple Dispatch: No suitable candidate found for &#39;cmp&#39;, with signature &#39;PP-&gt;I&#39;<br />
+&gt; [...]<br />
+</div>
+<br />
+Added tests to t/spec/S03-operators/misc.t &#40;but I don&#39;t know what the<br />
+result should be, I just tested with lives_ok&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-515772" href="/rt3/Ticket/Display.html?id=61836#txn-515772">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;05&nbsp;11:53:30&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532384" href="/rt3/Ticket/Display.html?id=61836#txn-532384">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;23:28:40&nbsp;2009</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532384/252484/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 881b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jan 05 11:53:29 2009, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Carl MXXsak &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; # New Ticket Created by  &#34;Carl Mäsak&#34;<br />
+&gt; &gt; # Please include the string:  [perl #61836]<br />
+&gt; &gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; &gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61836 &gt;<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt; Rakudo r34628:<br />
+&gt; &gt;<br />
+&gt; &gt; $ perl6 -e &#39;undef min 2&#39;<br />
+&gt; &gt; Multiple Dispatch: No suitable candidate found for &#39;cmp&#39;, with<br />
+</div>
+&gt; signature &#39;PP-&gt;I&#39;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; [...]<br />
+</div>
+&gt; <br />
+&gt; Added tests to t/spec/S03-operators/misc.t &#40;but I don&#39;t know what the<br />
+&gt; result should be, I just tested with lives_ok&#41;.<br />
+&gt; <br />
+&gt; Cheers,<br />
+&gt; Moritz<br />
+&gt; <br />
+</div>
+<br />
+Part of this bug fixed in #61840.<br />
+Part of this bug related to Parrot absence of VTABLE_cmp for &#34;undef&#34;.<br />
+<br />
+Attached patch adds VTABLE_cmp for Undef in Parrot. Other approach is to<br />
+add .sub &#39;cmp&#39; :multi&#40;&#39;Failure&#39;,_&#41; to Rakudo. I can&#39;t judge with one is<br />
+better.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532384/252490/undef.patch">Download undef.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 749b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit 948c9412c390b86cf68eaf5cc76525e050a1e100<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Sat Feb 14 18:24:13 2009 +1100<br />
+<br />
+    Implement Undef.cmp<br />
+<br />
+diff --git a/src/pmc/undef.pmc b/src/pmc/undef.pmc<br />
+index ed949a0..0bde497 100644<br />
+--- a/src/pmc/undef.pmc<br />
++++ b/src/pmc/undef.pmc<br />
+@@ -245,6 +245,25 @@ Returns 1 if the C&lt;*value&gt; is an Undef PMC, 0 otherwise.<br />
+     MULTI INTVAL is_equal&#40;DEFAULT value&#41; {<br />
+         return 0;<br />
+     }<br />
++<br />
++/*<br />
++<br />
++=item C&lt;INTVAL cmp&#40;PMC *value&#41;&gt;<br />
++<br />
++Returns 1 if the C&lt;*value&gt; is an Undef PMC, otherwise delegate comparition to value.<br />
++<br />
++=cut<br />
++<br />
++*/<br />
++<br />
++    MULTI INTVAL cmp&#40;Undef value&#41; {<br />
++        return 1;<br />
++    }<br />
++<br />
++    MULTI INTVAL cmp&#40;DEFAULT value&#41; {<br />
++        return VTABLE_cmp&#40;INTERP, value, SELF&#41;;<br />
++    }<br />
++<br />
+ }<br />
+ <br />
+ /*<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-533036" href="/rt3/Ticket/Display.html?id=61836#txn-533036">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Feb&nbsp;16&nbsp;14:15:27&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/533036/252852/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+As demonstrated by the test script and output below, run with the <br />
+proposed patch applied, the patch proposed on 2/14 doesn&#39;t quite result <br />
+in the right answers.  Note in the output that &#34;2 min undef&#34; <br />
+incorrectly yields 2 and fails to give an &#34;uninitialized value&#34; <br />
+warning.  This can be partially fixed by changing the return values <br />
+from the multies to &#39;return 0;&#39; and &#39;return -1 * VTABLE_cmp&#40;INTERP, <br />
+value, SELF&#41;;&#39; respectively as provided in undef_almost_fix.patch.  The <br />
+revised fix still does not, however, always address &#34;uninitialized <br />
+value&#34; warnings for reasons described in parrot track #285 <br />
+&#40;https://trac.parrot.org/parrot/ticket/285&#41;.  I have attached a patch, <br />
+Failure.patch, that seems to properly fix the problem by modifying <br />
+Failure.pir.  Please apply either Failure.patch or <br />
+undef_almost_fix.patch and NOT both.  The failure_misc.patch file <br />
+updates t/spec/S03-operators/misc.t to enable some enhanced versions of <br />
+the relevant tests.  It also fixes a minor problem in the min operator <br />
+of List.pir that makes the operator do extra work that is not done by <br />
+the min function in any-list.pir and can cause extra <br />
+unneeded &#39;uninitialized value&#39; warnings when min is used with undef.  <br />
+The patches do not seem to break any spectest_regression tests.<br />
+<br />
+Test script: *******************<br />
+say &#39;next step is 2 min undef&#39;;<br />
+my $x = 2 min undef;<br />
+say &#39;done 2 min undef&#39;;<br />
+if &#40;defined $x&#41; {<br />
+        say &#34;x wrongly defined with value: $x&#34;<br />
+}<br />
+else {<br />
+        say &#34;x correctly undefined&#34;<br />
+}<br />
+<br />
+say &#39;next step is undef min 2&#39;;<br />
+$x = undef min 2;<br />
+say &#39;done undef min 2&#39;;<br />
+if &#40;defined $x&#41; {<br />
+        say &#34;x wrongly defined with value: $x&#34;<br />
+}<br />
+else {<br />
+        say &#34;x correctly undefined&#34;<br />
+}<br />
+<br />
+Test script output: *******************<br />
+next step is 2 min undef<br />
+done 2 min undef<br />
+x wrongly defined with value: 2<br />
+next step is undef min 2<br />
+Use of uninitialized value<br />
+done undef min 2<br />
+x correctly undefined<br />
+<br />
+Ron<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/533036/252858/undef_almost_fix.patch">Download undef_almost_fix.patch</a>
+<span class="downloadcontenttype">
+[text/plain 596b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/pmc/undef.pmc<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/pmc/undef.pmc   &#40;revision 36800&#41;<br />
++++ src/pmc/undef.pmc   &#40;working copy&#41;<br />
+@@ -245,6 +245,28 @@<br />
+     MULTI INTVAL is_equal&#40;DEFAULT value&#41; {<br />
+         return 0;<br />
+     }<br />
++    <br />
++<br />
++/*<br />
++<br />
++=item C&lt;INTVAL cmp&#40;PMC *value&#41;&gt;<br />
++<br />
++Returns 1 if the C&lt;*value&gt; is an Undef PMC, otherwise delegate comparition to value.<br />
++<br />
++=cut<br />
++<br />
++*/<br />
++<br />
++<br />
++    MULTI INTVAL cmp&#40;Undef value&#41; {<br />
++        return 0;<br />
++    }<br />
++<br />
++    MULTI INTVAL cmp&#40;DEFAULT value&#41; {<br />
++        return  -1 * VTABLE_cmp&#40;INTERP, value, SELF&#41;;<br />
++    }<br />
++<br />
++    <br />
+ }<br />
+ <br />
+ /*<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/533036/252864/failure_misc.patch">Download failure_misc.patch</a>
+<span class="downloadcontenttype">
+[text/plain 974b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/src/classes/List.pir b/src/classes/List.pir<br />
+index 4375e6f..6c3ba7d 100644<br />
+--- a/src/classes/List.pir<br />
++++ b/src/classes/List.pir<br />
+@@ -571,8 +571,8 @@ have_args:<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # Find minimum.<br />
+</div>
+     .local pmc cur_min, it<br />
+-    cur_min = args[0]<br />
+     it = iter args<br />
++    cur_min = shift it<br />
+ find_min_loop:<br />
+     unless it goto find_min_loop_end<br />
+     $P0 = shift it<br />
+Index: t/spec/S03-operators/misc.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spec/S03-operators/misc.t &#40;revision 25359&#41;<br />
++++ t/spec/S03-operators/misc.t &#40;working copy&#41;<br />
+@@ -124,8 +124,8 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S03/Tight or precedence/&#34;any value of any type may be compared with +Inf<br />
+ # or -Inf values&#34;&gt;<br />
+</div>
+-#?rakudo todo &#39;RT #61836&#39;<br />
+ {<br />
+-    lives_ok { &#40;2 min undef&#41; }, &#39;can do &#40;2 min undef&#41;&#39;; <br />
+-    lives_ok { &#40;undef min 2&#41; }, &#39;can do &#40;undef min 2&#41;&#39;; <br />
++  # from &#39;RT #61836&#39;<br />
++  ok &#40; not defined &#40;2 min undef&#41;, &#39;can do &#40;2 min undef&#41;&#39;&#41;;<br />
++  ok &#40; not defined &#40;undef min 2&#41;, &#39;can do &#40;undef min 2&#41;&#39;&#41;;<br />
+ }<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/533036/252870/Failure.patch">Download Failure.patch</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/src/classes/Failure.pir b/src/classes/Failure.pir<br />
+index 7a78d5a..7b4a8e7 100644<br />
+--- a/src/classes/Failure.pir<br />
++++ b/src/classes/Failure.pir<br />
+@@ -124,6 +124,42 @@<br />
+     .return &#40;self&#41;<br />
+ .end<br />
+ <br />
++=comment<br />
++<br />
++The cmp and cmp_num vtable methods below fix problems that really<br />
++should be fixed in the parrot undef.pmc file when parrot trac #285<br />
++is fixed because C&lt;&#39;abc&#39; cmp undef&gt; works through the parrot pmc<br />
++level now.  These methods enable/fix C&lt;undef cmp &#39;abc&#39;&gt;,<br />
++C&lt;undef E&lt;lt&gt;=E&lt;gt&gt; 2&gt;, etc. more or less correctly for the time being.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;cmp&#39; :vtable :method<br />
++    .param pmc value<br />
++    $I0 = isa value, &#39;Failure&#39;<br />
++    if $I0 goto ret_zero<br />
++    $I0 = cmp value, self<br />
++    $I0 = - $I0<br />
++    .return &#40;$I0&#41;<br />
++ret_zero:<br />
++    $S0 = self      # exception &#40;string here might change but OK for now&#41;<br />
++    $S0 = value     # exception &#40;string here might change but OK for now&#41;<br />
++    .return &#40;0&#41;    <br />
++.end<br />
++<br />
++.sub &#39;cmp_num&#39; :vtable :method<br />
++    .param pmc value<br />
++    $I0 = isa value, &#39;Failure&#39;<br />
++    if $I0 goto ret_zero<br />
++    $I0 = cmp_num value, self<br />
++    $I0 = - $I0<br />
++    .return &#40;$I0&#41;<br />
++ret_zero:<br />
++    $I0 = self      # exception<br />
++    $I0 = value     # exception<br />
++    .return &#40;0&#41;    <br />
++.end<br />
++<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+</div>
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-533862" href="/rt3/Ticket/Display.html?id=61836#txn-533862">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Feb&nbsp;19&nbsp;05:27:45&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 63338:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">&#39;undef min 100&#39; gives mmd failure in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 19 Feb 2009 14:27:21 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/533862/253286/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 248b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; rakudo: undef min 100<br />
+&lt;p6eval&gt; rakudo 543e22: OUTPUT«Multiple Dispatch: No suitable<br />
+candidate found for &#39;cmp&#39;, with signature &#39;PP-&gt;I&#39; [...]<br />
+<br />
+Expected result: undef, I think. Unless the &#39;min&#39; numifies the result<br />
+and it becomes 0. Whatever.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-534282" href="/rt3/Ticket/Display.html?id=61836#txn-534282">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Feb&nbsp;19&nbsp;08:54:10&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 63338:  Merged into ticket #61836
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-534284" href="/rt3/Ticket/Display.html?id=61836#txn-534284">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Feb&nbsp;19&nbsp;08:54:10&nbsp;2009</td>
+    <td class="description">
+      masak -  Merged into ticket #61836
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549162" href="/rt3/Ticket/Display.html?id=61836#txn-549162">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Apr&nbsp;04&nbsp;14:08:31&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">cmasak <!-- x --> at gmail.com</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549162/261140/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 435b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Feb 19 05:27:45 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;masak&gt; rakudo: undef min 100<br />
+&gt; &lt;p6eval&gt; rakudo 543e22: OUTPUT«Multiple Dispatch: No suitable<br />
+&gt; candidate found for &#39;cmp&#39;, with signature &#39;PP-&gt;I&#39; [...]<br />
+&gt; <br />
+&gt; Expected result: undef, I think. Unless the &#39;min&#39; numifies the result<br />
+&gt; and it becomes 0. Whatever.<br />
+</div>
+<br />
+With my proposed patches applied on my system:<br />
+<br />
+$ ./perl6 -e &#39;my $x = undef min 100; say $x.perl&#39;<br />
+Use of uninitialized value<br />
+undef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.641968</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

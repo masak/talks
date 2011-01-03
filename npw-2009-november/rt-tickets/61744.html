@@ -1,0 +1,968 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61744: error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61744">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61744: error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61744">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61744</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61744">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+markusl
+&lt;markus [at] mnslaker.f9.co.uk&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61744">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61744">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512798" href="/rt3/Ticket/Display.html?id=61744#txn-512798">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;14:41:49&nbsp;2008</td>
+    <td class="description">
+      markusl -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 26 Dec 2008 22:41:21 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Markus Laker &lt;markus <!-- x --> at co.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/512798/241772/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello,<br />
+<br />
+I&#39;m attempting to compile Parrot and Perl 6 for the first time using gcc 4.1.2 <br />
+on Linux.  I&#39;ve checked out revision 34399 form svn.  Parrot compiles <br />
+successfully, but languages/perl6 fails like this:<br />
+<br />
+<br />
+msl@edward:~/parrot/languages/perl6$ make<br />
+cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl generate <br />
+perl6str objectref perl6scalar mutablevar perl6multisub<br />
+cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl compile <br />
+perl6str objectref perl6scalar mutablevar perl6multisub<br />
+cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl linklibs <br />
+perl6str objectref perl6scalar mutablevar perl6multisub<br />
+cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl <br />
+copy --destination=/home/msl/parrot/runtime/parrot/dynext perl6str objectref <br />
+perl6scalar mutablevar perl6multisub<br />
+../../parrot  -o perl6.pbc perl6.pir<br />
+error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;<br />
+        in file &#39;src/builtins/op.pir&#39; line 434<br />
+        included from &#39;src/gen_builtins.pir&#39; line 25<br />
+        included from &#39;perl6.pir&#39; line 1<br />
+make: *** [perl6.pbc] Error 1<br />
+msl@edward:~/parrot/languages/perl6$<br />
+<br />
+<br />
+The line in question is the `rebless_subclass&#39; instruction two paragraphs <br />
+before the end of this function:<br />
+<br />
+<br />
+.sub &#39;infix:does&#39;<br />
+    .param pmc var<br />
+    .param pmc role<br />
+    .param pmc init_value      :optional<br />
+    .param int have_init_value :opt_flag<br />
+<br />
+<div class="message-stanza-depth-1">
+    # Get the class of the variable we&#39;re adding roles to.<br />
+</div>
+    .local pmc p6meta, parrot_class<br />
+    parrot_class = class var<br />
+<br />
+<div class="message-stanza-depth-1">
+    # Derive a new class that does the role&#40;s&#41; specified.<br />
+</div>
+    .local pmc derived<br />
+    derived = new &#39;Class&#39;<br />
+    addparent derived, parrot_class<br />
+    $I0 = isa role, &#39;Role&#39;<br />
+    if $I0 goto one_role<br />
+    $I0 = isa role, &#39;List&#39;<br />
+    if $I0 goto many_roles<br />
+    &#39;die&#39;&#40;&#34;&#39;does&#39; expects a role or a list of roles&#34;&#41;<br />
+<br />
+  one_role:<br />
+    &#39;!keyword_does&#39;&#40;derived, role&#41;<br />
+    goto added_roles<br />
+<br />
+  many_roles:<br />
+    .local pmc role_it, cur_role<br />
+    role_it = iter role<br />
+  roles_loop:<br />
+    unless role_it goto roles_loop_end<br />
+    cur_role = shift role_it<br />
+    &#39;!keyword_does&#39;&#40;derived, cur_role&#41;<br />
+    goto roles_loop<br />
+  roles_loop_end:<br />
+  added_roles:<br />
+<br />
+<div class="message-stanza-depth-1">
+    # Register proto-object.<br />
+</div>
+    .local pmc p6meta, proto<br />
+    p6meta = get_hll_global [&#39;Perl6Object&#39;], &#39;$!P6META&#39;<br />
+    proto = var.&#39;WHAT&#39;&#40;&#41;<br />
+    p6meta.&#39;register&#39;&#40;derived, &#39;protoobject&#39;=&gt;proto&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+    # Instantiate the class to make it form itself.<br />
+</div>
+    $P0 = new derived<br />
+<br />
+<div class="message-stanza-depth-1">
+    # Re-bless the object into the subclass.<br />
+</div>
+    rebless_subclass var, derived<br />
+<br />
+<div class="message-stanza-depth-1">
+    # If we were given something to initialize with, do so.<br />
+</div>
+    unless have_init_value goto no_init<br />
+    .local pmc attrs<br />
+    .local string attr_name<br />
+    attrs = inspect role, &#34;attributes&#34;<br />
+    attrs = attrs.&#39;keys&#39;&#40;&#41;<br />
+    $I0 = elements attrs<br />
+    if $I0 != 1 goto attr_error<br />
+    attr_name = attrs[0]<br />
+    attr_name = substr attr_name, 2 # lop of sigil and twigil<br />
+    $P0 = var.attr_name&#40;&#41;<br />
+    assign $P0, init_value<br />
+  no_init:<br />
+<br />
+<div class="message-stanza-depth-1">
+    # We&#39;re done - return.<br />
+</div>
+    .return &#40;var&#41;<br />
+<br />
+<br />
+I&#39;m not familiar enough with Parrot to correct the syntax.  However, if I <br />
+comment out the line, I get a clean build.  Will I lose any more than the <br />
+C&lt;does&gt; keyword?<br />
+<br />
+Thanks and regards,<br />
+<br />
+Markus<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512918" href="/rt3/Ticket/Display.html?id=61744#txn-512918">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;27&nbsp;02:08:02&nbsp;2008</td>
+    <td class="description">
+      kjs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61744] error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 27 Dec 2008 11:07:36 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">kjstol &lt;parrotcode <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/512918/241846/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+it seems to me this syntax error message indicates that it doesn&#39;t know the<br />
+opcode &#39;rebless_subclass&#39;. The parser expects a &#39;&#40;&#39;, which indicates that it<br />
+wants to parse rebless_subclass as a sub name.<br />
+<br />
+Haven&#39;t built parrot in 10 days myself now, so can&#39;t tell why it&#39;s not<br />
+working and whether it should. I expect other people will be able to tell<br />
+you that. Just wanted to clarify the syntax error.<br />
+<br />
+kjs<br />
+<br />
+<br />
+<br />
+On Fri, Dec 26, 2008 at 11:41 PM, via RT Markus Laker &lt;<br />
+parrotbug-followup <!-- x --> at parrotcode.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Markus Laker<br />
+&gt; # Please include the string:  [perl #61744]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=61744 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Hello,<br />
+&gt;<br />
+&gt; I&#39;m attempting to compile Parrot and Perl 6 for the first time using gcc<br />
+&gt; 4.1.2<br />
+&gt; on Linux.  I&#39;ve checked out revision 34399 form svn.  Parrot compiles<br />
+&gt; successfully, but languages/perl6 fails like this:<br />
+&gt;<br />
+&gt;<br />
+&gt; msl@edward:~/parrot/languages/perl6$ make<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl generate<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl compile<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl linklibs<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt; copy --destination=/home/msl/parrot/runtime/parrot/dynext perl6str<br />
+&gt; objectref<br />
+&gt; perl6scalar mutablevar perl6multisub<br />
+&gt; ../../parrot  -o perl6.pbc perl6.pir<br />
+&gt; error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;<br />
+&gt;        in file &#39;src/builtins/op.pir&#39; line 434<br />
+&gt;        included from &#39;src/gen_builtins.pir&#39; line 25<br />
+&gt;        included from &#39;perl6.pir&#39; line 1<br />
+&gt; make: *** [perl6.pbc] Error 1<br />
+&gt; msl@edward:~/parrot/languages/perl6$<br />
+&gt;<br />
+&gt;<br />
+&gt; The line in question is the `rebless_subclass&#39; instruction two paragraphs<br />
+&gt; before the end of this function:<br />
+&gt;<br />
+&gt;<br />
+&gt; .sub &#39;infix:does&#39;<br />
+&gt;    .param pmc var<br />
+&gt;    .param pmc role<br />
+&gt;    .param pmc init_value      :optional<br />
+&gt;    .param int have_init_value :opt_flag<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # Get the class of the variable we&#39;re adding roles to.<br />
+</div>
+&gt;    .local pmc p6meta, parrot_class<br />
+&gt;    parrot_class = class var<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # Derive a new class that does the role&#40;s&#41; specified.<br />
+</div>
+&gt;    .local pmc derived<br />
+&gt;    derived = new &#39;Class&#39;<br />
+&gt;    addparent derived, parrot_class<br />
+&gt;    $I0 = isa role, &#39;Role&#39;<br />
+&gt;    if $I0 goto one_role<br />
+&gt;    $I0 = isa role, &#39;List&#39;<br />
+&gt;    if $I0 goto many_roles<br />
+&gt;    &#39;die&#39;&#40;&#34;&#39;does&#39; expects a role or a list of roles&#34;&#41;<br />
+&gt;<br />
+&gt;  one_role:<br />
+&gt;    &#39;!keyword_does&#39;&#40;derived, role&#41;<br />
+&gt;    goto added_roles<br />
+&gt;<br />
+&gt;  many_roles:<br />
+&gt;    .local pmc role_it, cur_role<br />
+&gt;    role_it = iter role<br />
+&gt;  roles_loop:<br />
+&gt;    unless role_it goto roles_loop_end<br />
+&gt;    cur_role = shift role_it<br />
+&gt;    &#39;!keyword_does&#39;&#40;derived, cur_role&#41;<br />
+&gt;    goto roles_loop<br />
+&gt;  roles_loop_end:<br />
+&gt;  added_roles:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # Register proto-object.<br />
+</div>
+&gt;    .local pmc p6meta, proto<br />
+&gt;    p6meta = get_hll_global [&#39;Perl6Object&#39;], &#39;$!P6META&#39;<br />
+&gt;    proto = var.&#39;WHAT&#39;&#40;&#41;<br />
+&gt;    p6meta.&#39;register&#39;&#40;derived, &#39;protoobject&#39;=&gt;proto&#41;<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # Instantiate the class to make it form itself.<br />
+</div>
+&gt;    $P0 = new derived<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # Re-bless the object into the subclass.<br />
+</div>
+&gt;    rebless_subclass var, derived<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # If we were given something to initialize with, do so.<br />
+</div>
+&gt;    unless have_init_value goto no_init<br />
+&gt;    .local pmc attrs<br />
+&gt;    .local string attr_name<br />
+&gt;    attrs = inspect role, &#34;attributes&#34;<br />
+&gt;    attrs = attrs.&#39;keys&#39;&#40;&#41;<br />
+&gt;    $I0 = elements attrs<br />
+&gt;    if $I0 != 1 goto attr_error<br />
+&gt;    attr_name = attrs[0]<br />
+&gt;    attr_name = substr attr_name, 2 # lop of sigil and twigil<br />
+&gt;    $P0 = var.attr_name&#40;&#41;<br />
+&gt;    assign $P0, init_value<br />
+&gt;  no_init:<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;    # We&#39;re done - return.<br />
+</div>
+&gt;    .return &#40;var&#41;<br />
+&gt;<br />
+&gt;<br />
+&gt; I&#39;m not familiar enough with Parrot to correct the syntax.  However, if I<br />
+&gt; comment out the line, I get a clean build.  Will I lose any more than the<br />
+&gt; C&lt;does&gt; keyword?<br />
+&gt;<br />
+&gt; Thanks and regards,<br />
+&gt;<br />
+&gt; Markus<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512920" href="/rt3/Ticket/Display.html?id=61744#txn-512920">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Dec&nbsp;27&nbsp;02:08:03&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-531028" href="/rt3/Ticket/Display.html?id=61744#txn-531028">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;11&nbsp;06:59:36&nbsp;2009</td>
+    <td class="description">
+      coke -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-531968" href="/rt3/Ticket/Display.html?id=61744#txn-531968">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;07:22:45&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/531968/252202/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Dec 26 14:41:49 2008, markusl wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m attempting to compile Parrot and Perl 6 for the first time using<br />
+&gt; gcc 4.1.2<br />
+&gt; on Linux.  I&#39;ve checked out revision 34399 form svn.  Parrot compiles<br />
+&gt; successfully, but languages/perl6 fails like this:<br />
+&gt; <br />
+&gt; <br />
+&gt; msl@edward:~/parrot/languages/perl6$ make<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt; generate<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt; compile<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt; linklibs<br />
+&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt; copy --destination=/home/msl/parrot/runtime/parrot/dynext perl6str<br />
+&gt; objectref<br />
+&gt; perl6scalar mutablevar perl6multisub<br />
+&gt; ../../parrot  -o perl6.pbc perl6.pir<br />
+&gt; error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;<br />
+&gt;         in file &#39;src/builtins/op.pir&#39; line 434<br />
+&gt;         included from &#39;src/gen_builtins.pir&#39; line 25<br />
+&gt;         included from &#39;perl6.pir&#39; line 1<br />
+&gt; make: *** [perl6.pbc] Error 1<br />
+&gt; msl@edward:~/parrot/languages/perl6$<br />
+&gt; <br />
+&gt; <br />
+&gt; The line in question is the `rebless_subclass&#39; instruction two<br />
+&gt; paragraphs<br />
+&gt; before the end of this function:<br />
+&gt; <br />
+</div>
+rebless_subclass is a dynop, but in the make it doesn&#39;t look like they<br />
+got compiled. Which is rather odd... Please can you try with the latest<br />
+build?<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;m not familiar enough with Parrot to correct the syntax.  However,<br />
+&gt; if I<br />
+&gt; comment out the line, I get a clean build.  Will I lose any more than<br />
+&gt; the<br />
+&gt; C&lt;does&gt; keyword?<br />
+&gt; <br />
+</div>
+Well, it&#39;s not a syntax error so much, but rather that a C library<br />
+wasn&#39;t compiled properly &#40;thus it reports a syntax error, but actually<br />
+it&#39;s because it thinks it&#39;s a function call rather than knowing its an<br />
+extra op&#41;.<br />
+<br />
+Report from latest builds would be most welcome!<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-531974" href="/rt3/Ticket/Display.html?id=61744#txn-531974">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;07:38:15&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61744] error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 13 Feb 2009 16:39:01 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/531974/252208/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jnthn <!-- x --> at jnthn.net via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Fri Dec 26 14:41:49 2008, markusl wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; I&#39;m attempting to compile Parrot and Perl 6 for the first time using<br />
+&gt;&gt; gcc 4.1.2<br />
+&gt;&gt; on Linux.  I&#39;ve checked out revision 34399 form svn.  Parrot compiles<br />
+&gt;&gt; successfully, but languages/perl6 fails like this:<br />
+&gt;&gt; <br />
+&gt;&gt; <br />
+&gt;&gt; msl@edward:~/parrot/languages/perl6$ make<br />
+&gt;&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt;&gt; generate<br />
+&gt;&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt;&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt;&gt; compile<br />
+&gt;&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt;&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt;&gt; linklibs<br />
+&gt;&gt; perl6str objectref perl6scalar mutablevar perl6multisub<br />
+&gt;&gt; cd src/pmc &#38;&#38; /usr/bin/perl /home/msl/parrot/tools/build/dynpmc.pl<br />
+&gt;&gt; copy --destination=/home/msl/parrot/runtime/parrot/dynext perl6str<br />
+&gt;&gt; objectref<br />
+&gt;&gt; perl6scalar mutablevar perl6multisub<br />
+&gt;&gt; ../../parrot  -o perl6.pbc perl6.pir<br />
+&gt;&gt; error:imcc:syntax error, unexpected VAR, expecting &#39;&#40;&#39; &#40;&#39;var&#39;&#41;<br />
+&gt;&gt;         in file &#39;src/builtins/op.pir&#39; line 434<br />
+&gt;&gt;         included from &#39;src/gen_builtins.pir&#39; line 25<br />
+&gt;&gt;         included from &#39;perl6.pir&#39; line 1<br />
+&gt;&gt; make: *** [perl6.pbc] Error 1<br />
+&gt;&gt; msl@edward:~/parrot/languages/perl6$<br />
+</div>
+</div>
+<br />
+FYI I regularly get these messages when I forgot to &#39;make clean&#39; before<br />
+&#39;make&#39; - which happens more often these days because parrot&#39;s &#39;make<br />
+realclean&#39; doesn&#39;t clean rakudo.<br />
+<br />
+Still I think the build system shouldn&#39;t require a &#39;make clean&#39;, so<br />
+perhaps there&#39;s a dependency missing somewhere?<br />
+<br />
+&#40;Since I can&#39;t reproduce it with a maximally parallelized build &#40;`make<br />
+clean; make -j&#41; I guess it&#39;s a missing dependency between source file<br />
+and binary, not between different binary targets&#41;.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.651322</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

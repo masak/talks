@@ -1,0 +1,876 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62326: [BUG] can&#39;t call subs with namespaces, such as Foo::bar&#40;&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62326">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62326: [BUG] can&#39;t call subs with namespaces, such as Foo::bar&#40;&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62326">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62326</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62326">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+jhorwitz
+&lt;jeff [at] smashing.org&gt;
+
+<br />
+
+
+moritz
+&lt;moritz [at] faui2k3.org&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62326">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62326">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-519880" href="/rt3/Ticket/Display.html?id=62326#txn-519880">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;13&nbsp;15:18:05&nbsp;2009</td>
+    <td class="description">
+      moritz -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Calling a sub from a Module returns sub name + args</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 14 Jan 2009 00:18:52 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/519880/245416/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 800b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+00:11 &lt;@moritz_&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b&#40;&#41;<br />
+00:11 &lt; p6eval&gt; rakudo 35511: OUTPUT«b␤»<br />
+<br />
+should return &#39;bar&#39;, of course<br />
+<br />
+00:12 &lt;@moritz_&gt; rakudo: module A { sub b&#40;$x&#41; { return &#39;bar&#39; }}; say<br />
+                 A::b&#40;&#34;blubb&#34;&#41;<br />
+00:12 &lt; p6eval&gt; rakudo 35511: OUTPUT«bblubb␤»<br />
+<br />
+even more curious ;-&#41;<br />
+<br />
+00:12 &lt;@jnthn&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b<br />
+00:12 &lt; p6eval&gt; rakudo 35511: OUTPUT«bar␤»<br />
+<br />
+works<br />
+<br />
+00:13 &lt;@jnthn&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b&#40;&#41;<br />
+00:13 &lt; p6eval&gt; rakudo 35511: OUTPUT«b␤»<br />
+<br />
+doesn&#39;t<br />
+<br />
+00:16 &lt;@moritz_&gt; rakudo: module A { sub b&#40;$x&#41; { return &#39;bar&#39; }}; say<br />
+                 &#40;A::b&#40;&#34;blubb&#34;&#41;&#41;.perl<br />
+00:16 &lt; p6eval&gt; rakudo 35513: OUTPUT«[{ ... }, &#34;blubb&#34;]␤»<br />
+<br />
+So A::b&#40;&#41; actually returns a Code object?<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-519886" href="/rt3/Ticket/Display.html?id=62326#txn-519886">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;13&nbsp;15:25:44&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/519886/245422/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 350b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Jan 13 15:18:05 2009, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; 00:11 &lt;@moritz_&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b&#40;&#41;<br />
+&gt; 00:11 &lt; p6eval&gt; rakudo 35511: OUTPUT«b␤»<br />
+</div>
+<br />
+The tests in t/spec/S11-modules/export.t did still pass because their<br />
+return value used to be their name only. I&#39;ve changed that, and TODO&#39;ed<br />
+three tests that now fail. <br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-519890" href="/rt3/Ticket/Display.html?id=62326#txn-519890">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;13&nbsp;15:25:45&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520762" href="/rt3/Ticket/Display.html?id=62326#txn-520762">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;11:27:54&nbsp;2009</td>
+    <td class="description">
+      jhorwitz - Ticket 62410:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] can&#39;t call subs with namespaces, such as Foo::bar&#40;&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 15 Jan 2009 14:27:01 -0500 &#40;EST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jeff Horwitz &lt;jeff <!-- x --> at smashing.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/520762/245860/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 996b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+the Foo::bar&#40;&#41; format for calling subs no longer works as of r35597.  for <br />
+me personally, it&#39;s a blocker for mod_perl6.<br />
+<br />
+if i run the following script, the second sub call never happens, and <br />
+there is no error.<br />
+<br />
+  module Foo;<br />
+<br />
+  sub bar&#40;$arg&#41;<br />
+  {<br />
+      say $arg;<br />
+  }<br />
+<br />
+  bar&#40;&#34;without namespace&#34;&#41;;<br />
+  Foo::bar&#40;&#34;with namespace&#34;&#41;;<br />
+<br />
+[jeff@groovy perl6]$ ../../parrot perl6.pbc x.p6<br />
+without namespace<br />
+[jeff@groovy perl6]$<br />
+<br />
+<br />
+the PIR shows that instead of invoking the sub, rakudo is invoking &#34;infix:,&#34;:<br />
+<br />
+.namespace [&#34;Foo&#34;]<br />
+.sub &#34;_block20&#34;  :subid&#40;&#34;12&#34;&#41;<br />
+     .const &#39;Sub&#39; $P23 = &#34;13&#34;<br />
+     capture_lex $P23<br />
+     $P22 = &#34;!meta_create&#34;&#40;&#34;module&#34;, &#34;Foo&#34;, 0&#41;<br />
+     .local pmc metaclass<br />
+     set metaclass, $P22<br />
+     &#34;!meta_compose&#34;&#40;metaclass&#41;<br />
+     new $P33, &#34;Str&#34;<br />
+     assign $P33, &#34;without namespace&#34;<br />
+     &#34;bar&#34;&#40;$P33&#41;<br />
+     get_hll_global $P34, [&#34;Foo&#34;], &#34;bar&#34;<br />
+     new $P35, &#34;Str&#34;<br />
+     assign $P35, &#34;with namespace&#34;<br />
+     $P36 = &#34;infix:,&#34;&#40;$P34, $P35&#41;    # &lt;--- offending code here<br />
+     .return &#40;$P36&#41;<br />
+.end<br />
+<br />
+-jeff<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520768" href="/rt3/Ticket/Display.html?id=62326#txn-520768">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;11:27:56&nbsp;2009</td>
+    <td class="description">
+      RT_System - Ticket 62410:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520848" href="/rt3/Ticket/Display.html?id=62326#txn-520848">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;14:51:42&nbsp;2009</td>
+    <td class="description">
+      moritz - Ticket 62410:  Merged into ticket #62326
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520850" href="/rt3/Ticket/Display.html?id=62326#txn-520850">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;14:51:42&nbsp;2009</td>
+    <td class="description">
+      moritz -  Merged into ticket #62326
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520852" href="/rt3/Ticket/Display.html?id=62326#txn-520852">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;14:51:42&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] can&#39;t call subs with namespaces, such as Foo::bar&#40;&#41;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/520852/245896/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 74b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is the same bug as RT #62326, with a bit different analysis. Merging.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-520856" href="/rt3/Ticket/Display.html?id=62326#txn-520856">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;15&nbsp;14:51:43&nbsp;2009</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;Calling a sub from a Module returns sub name + args&#39; to &#39;[BUG] can&#39;t call subs with namespaces, such as Foo::bar&#40;&#41;&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522116" href="/rt3/Ticket/Display.html?id=62326#txn-522116">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;09:21:50&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522116/246636/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 293b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Jan 13 15:18:05 2009, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; 00:11 &lt;@moritz_&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b&#40;&#41;<br />
+&gt; 00:11 &lt; p6eval&gt; rakudo 35511: OUTPUT«b␤»<br />
+&gt; <br />
+&gt; should return &#39;bar&#39;, of course<br />
+&gt; <br />
+</div>
+This and the various other cases in this ticket are resolved in r35763.<br />
+<br />
+Thanks!<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522120" href="/rt3/Ticket/Display.html?id=62326#txn-522120">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;09:21:57&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522120/246640/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 293b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Jan 13 15:18:05 2009, moritz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; 00:11 &lt;@moritz_&gt; rakudo: module A { sub b { return &#39;bar&#39; }}; say A::b&#40;&#41;<br />
+&gt; 00:11 &lt; p6eval&gt; rakudo 35511: OUTPUT«b␤»<br />
+&gt; <br />
+&gt; should return &#39;bar&#39;, of course<br />
+&gt; <br />
+</div>
+This and the various other cases in this ticket are resolved in r35763.<br />
+<br />
+Thanks!<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522126" href="/rt3/Ticket/Display.html?id=62326#txn-522126">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;09:22:18&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.71127</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

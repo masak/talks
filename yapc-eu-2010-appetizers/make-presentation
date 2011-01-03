@@ -1,0 +1,249 @@
+#!/usr/local/bin/perl6
+use v6;
+
+class Pod::Object {}
+class Pod::Head is Pod::Object { has $.data; has $.text }
+class Pod::Code is Pod::Object { has @.lines is rw }
+class Pod::Para is Pod::Object { has $.text }
+
+my @pod;
+for slurp("slides").split(/\n\n+/) {
+    push @pod, do given $_ {
+        sub xml-escape($text) {
+            # XXX: Should do more replacements here, but don't dare do them
+            #      right now, since there are angle brackets in C<>
+            $text.trans( ['&'] => ['&amp;'] );
+        }
+
+        when /^ '=for head1 ' (\N*) \n \h+ (.*) / {
+            Pod::Head.new( :data(xml-escape $0), :text(xml-escape $1) );
+        }
+        when /^ '    '/ {
+            my @lines = map { xml-escape .substr(4) }, .split("\n");
+            Pod::Code.new( :@lines );
+        }
+        default {
+            Pod::Para.new( :text(xml-escape $_) );
+        }
+    };
+}
+
+# XXX FIX -- maybe use Perl 5 here, or do something with the exif headers
+#            ourselves
+my %hardcoded-sizes =
+    '40542289@N02-4820291341.jpg'   => [640, 426],
+    'eole-449958332.jpg'            => [1024, 683],
+    'clockworkgrue-2114410910.jpg'  => [1024, 768],
+    'kevharb-3975303773.jpg'        => [1024, 768],
+    'mr_t_in_dc-3626626341.jpg'     => [1024, 683],
+    'osakajon-51158893.jpg'         => [800, 600],
+    'sifu_renka-2516998703.jpg'     => [768, 1024],
+    'soylentgreen23-3481837131.jpg' => [1024, 655],
+    'ulteriorepicure-328651980.jpg' => [800, 530],
+;
+
+class Slide {
+    has Pod::Head $.head;
+    has Pod::Para $.para;
+    has Pod::Code $.code;
+
+    my $header = q[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="800px"
+   height="600px">
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     width="820"
+     height="620"
+     x="-10"
+     y="-10" />
+];
+
+    my $footer = q[</svg>
+];
+
+    method serialize() {
+        sub tspanize($text is copy) {
+            while $text ~~ / 'C<' (.*?) '>' / {
+                $text = $text.substr(0, $/.from)
+                        ~ '<tspan style="font-family:Andale Mono;">'
+                        ~ $0
+                        ~ '</tspan>'
+                        ~ $text.substr($/.to);
+            }
+            $text
+        }
+
+        $.head.data ~~ /':image<' (.*?) '>' /
+            or die "No image in $.head.data()";;
+        my $image = ~$0;
+        my ($width, $height) = %hardcoded-sizes{$image}.list;
+        my $x-scale-factor = 820 / $width;
+        my $y-scale-factor = 620 / $height;
+        my $scale-factor = [max] $x-scale-factor, $y-scale-factor;
+        $width *= $scale-factor;
+        $width.=Int;
+        $height *= $scale-factor;
+        $height.=Int;
+        my $content = qq[    <image
+       xlink:href="file:///Users/masak/gwork/appetizers/images/$image"
+       x="-10"
+       y="-10"
+       width="$width"
+       height="$height" />
+    <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none;opacity:.5"
+     width="820"
+     height="620"
+     x="-10"
+     y="-10" />
+];
+        my $text = tspanize $.head.text;
+        if $.para {
+            $content ~= qq[    <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     width="820"
+     height="620"
+     x="-10"
+     y="100" />
+    <text
+     x="30"
+     y="60"
+     style="font-size:36px;text-align:center;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans">{$text}</text>
+];
+            $text = tspanize $.para.text;
+            if $.code {
+                $content ~= qq[    <text
+     x="30"
+     y="160"
+     style="font-size:24px;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans">{$text}</text>
+    <rect
+     style="fill:#dddddd;fill-opacity:1;stroke:none"
+     width="740"
+     height="370"
+     x="30"
+     y="200"
+     rx="10"
+     ry="10" />
+];
+                my @directives;
+                unshift @directives, pop $.code.lines
+                    while $.code.lines[*-1] ~~ /^ '='/;
+                for @directives {
+                    when /^ '='(Hi|Err) \h+ \' (.*?) \' $/ {
+                        my $color = $0 eq 'Hi' ?? '#007777' !! '#ff7777';
+                        my $sought = ~$1;
+                        for @.code.lines {
+                            if defined (my $from = .index($sought)) {
+                                my $to = $from + $sought.chars;
+                                $_ = .substr(0, $from)
+                                     ~ "<tspan style='fill: $color'>"
+                                     ~ $sought
+                                     ~ '</tspan>'
+                                     ~ .substr($to);
+                                last;
+                            }
+                        }
+                    }
+                    when /^ '=Hi' \h+ ('/' .*? '/') $/ {
+                        my $color = '#007777';
+                        my $regex = eval ~$0;
+                        for @.code.lines {
+                            if $_ ~~ Any && $_ ~~ $regex {
+                                $_ = .substr(0, $/.from)
+                                     ~ "<tspan style='fill: $color'>"
+                                     ~ ~$/
+                                     ~ '</tspan>'
+                                     # RAKUDO: .substr outside of Str -> Mu
+                                     ~ (.substr($/.to) // '');
+                            }
+                        }
+                    }
+                    die "Didn't match $_";
+                }
+                my $size    = $.code.lines > 9 ?? '12px' !! '24px';
+                my $spacing = $.code.lines > 9 ??     20 !!     40;
+                for @.code.lines.kv -> $i, $line {
+                    my $y = 200 + $spacing * ($i + 1);
+                    $content ~= qq[    <text
+     x="45"
+     y="$y"
+     xml:space="preserve"
+     style="font-size:$size;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono">{$line}</text>
+];
+                }
+            }
+            else {
+                $content ~= qq[    <text
+     x="400"
+     y="350"
+     style="font-size:36px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans">{$text}</text>
+];
+            }
+        }
+        else {
+            my $size = $text.chars > 35 ?? '36px' !! '48px';
+            $content ~= qq[    <text
+     x="400"
+     y="300"
+     style="font-size:$size;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans">{$text}</text>
+];
+        }
+        $header, $content, $footer
+    }
+}
+
+my @slides;
+
+sub make-slide(Pod::Head $head, Pod::Para $para?, Pod::Code $code?) {
+    push @slides, Slide.new( :$head, :$para, :$code );
+}
+
+my $current-head;
+my $current-para;
+my $current-code;
+for @pod {
+    when Pod::Head {
+        $current-head = $_;
+        make-slide($current-head);
+    }
+    when Pod::Para {
+        $current-para = $_;
+        make-slide($current-head, $current-para);
+    }
+    when Pod::Code {
+        if $current-code && .lines[0] ~~ / ^ '=' / {
+            pop $current-code.lines while $current-code.lines[*-1] ~~ /^ '='/;
+            unshift .lines, $current-code.lines;
+        }
+        $current-code = $_;
+        if @slides > 1 && !@slides[*-1].code {
+            pop @slides; # A para slide doesn't appear by itself before a code
+        }
+        make-slide($current-head, $current-para, $current-code);
+    }
+}
+
+my $gs-dir = 'generated-slides';
+run("rm -rf $gs-dir");
+# RAKUDO: 0o777 should be the default [perl #76978]
+mkdir $gs-dir, 0o777;
+
+for @slides.kv -> $i, $slide {
+    my $slide-filename = sprintf("$gs-dir/slide%03d.svg", $i + 1);
+    my $fh = open $slide-filename, :w;
+    $fh.print: $slide.serialize;
+    $fh.close;
+}
+
+my $inkscape_executable
+    = '/Applications/Inkscape.app/Contents/Resources/bin/inkscape';
+
+run "$inkscape_executable "
+    ~ "--without-gui --file=$gs-dir/slide$_.svg "
+    ~ "--export-eps=$gs-dir/slide$_.eps 2>&1 | perl -ne 'print unless /WARNING|RANDR|locale|Language/ || /^\\s*\$/'"
+        for map { sprintf '%03d', $_ + 1 }, ^+@slides;

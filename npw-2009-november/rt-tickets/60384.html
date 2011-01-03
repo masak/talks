@@ -1,0 +1,1025 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60384: [PATCH] Remove references to __get_string&#40;&#41; and related methods in PGE POD</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60384">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60384: [PATCH] Remove references to __get_string&#40;&#41; and related methods in PGE POD</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60384">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60384</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60384">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+chris [at] chrisdolan.net
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60384">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+__get_string.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/491986/229922/__get_string.patch">
+Thu Nov 06 18:26:25 2008 (804b) by chris <!-- x --> at chrisdolan.net
+</a>
+</font></li>
+</ul>
+
+
+anon.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/500338/234874/anon.patch">
+Tue Nov 25 23:47:18 2008 (3.7k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60384">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491986" href="/rt3/Ticket/Display.html?id=60384#txn-491986">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;18:26:24&nbsp;2008</td>
+    <td class="description">
+      chris <!-- x --> at chrisdolan.net -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Remove references to __get_string&#40;&#41; and related methods in PGE POD</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 6 Nov 2008 20:25:58 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Dolan &lt;chris <!-- x --> at chrisdolan.net&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491986/229920/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 106b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The attached patch does s{__get_}{get_} on compilers/pge/PGE/ <br />
+Match.pir to make POD match up with code.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491986/229922/__get_string.patch">Download __get_string.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 804b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491992" href="/rt3/Ticket/Display.html?id=60384#txn-491992">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;06&nbsp;18:26:29&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-499822" href="/rt3/Ticket/Display.html?id=60384#txn-499822">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;12:59:52&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Queue changed from perl6 to parrot
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-499824" href="/rt3/Ticket/Display.html?id=60384#txn-499824">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;12:59:53&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-499826" href="/rt3/Ticket/Display.html?id=60384#txn-499826">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;13:12:31&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">PGE/PCT: Deprecate method access to get_string, get_bool, etc.    vtable functions</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/499826/234574/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 601b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Actually, the vtable functions should not have method names at all --<br />
+i.e., instead of<br />
+<br />
+.sub &#39;get_bool&#39; :method :vtable<br />
+<br />
+we should have<br />
+<br />
+.sub &#39;&#39; :method :vtable&#40;&#39;get_bool&#39;&#41;<br />
+<br />
+<br />
+At present there may be some users of pge that expect to use the methods<br />
+directly -- as in:<br />
+<br />
+    $I0 = match.&#39;get_bool&#39;&#40;&#41;<br />
+<br />
+This will go away, and the correct approach is:<br />
+<br />
+    $I0 = istrue match<br />
+<br />
+So, I&#39;ve marked the old named-method invocation as deprecated for all<br />
+PGE and PCT items, and this can be done after the next release.<br />
+<br />
+In the meantime I&#39;ll apply the patch to remove the leading underscores<br />
+in the POD.  Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-499830" href="/rt3/Ticket/Display.html?id=60384#txn-499830">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;13:12:33&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500338" href="/rt3/Ticket/Display.html?id=60384#txn-500338">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;23:47:18&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">parrot-dev <!-- x --> at parrot.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500338/234868/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 315b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Nov 25 13:12:31 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Actually, the vtable functions should not have method names at all --<br />
+&gt; i.e., instead of<br />
+&gt; <br />
+&gt; .sub &#39;get_bool&#39; :method :vtable<br />
+&gt; <br />
+&gt; we should have<br />
+&gt; <br />
+&gt; .sub &#39;&#39; :method :vtable&#40;&#39;get_bool&#39;&#41;<br />
+</div>
+<br />
+Hello, <br />
+<br />
+there is small patch for Rakudo to anonymize vtable methods.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500338/234874/anon.patch">Download anon.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 3.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Capture.pir b/languages/perl6/src/classes/Capture.pir<br />
+index e763e53..0152321 100644<br />
+--- a/languages/perl6/src/classes/Capture.pir<br />
++++ b/languages/perl6/src/classes/Capture.pir<br />
+@@ -29,7 +29,7 @@ This file sets up the Perl 6 C&lt;Capture&gt; class.<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub &#39;VTABLE_get_string&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     $S0 = self.&#39;list&#39;&#40;&#41;<br />
+     .return &#40;$S0&#41;<br />
+ .end<br />
+diff --git a/languages/perl6/src/classes/IO.pir b/languages/perl6/src/classes/IO.pir<br />
+index 210c843..5ed0a01 100644<br />
+--- a/languages/perl6/src/classes/IO.pir<br />
++++ b/languages/perl6/src/classes/IO.pir<br />
+@@ -172,7 +172,7 @@ The IOIterator class implements the I/O iterator.<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub get_bool :method :vtable<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_bool&#39;&#41;<br />
+     .local pmc PIO<br />
+     $P0 = getattribute self, &#34;$!IO&#34;<br />
+     PIO = getattribute $P0, &#34;$!PIO&#34;<br />
+@@ -201,7 +201,7 @@ Return the value inside this container in item context.<br />
+     .return&#40;$P0&#41;<br />
+ .end<br />
+ <br />
+-.sub &#39;get_string&#39; :vtable<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     .tailcall self.&#39;item&#39;&#40;&#41;<br />
+ .end<br />
+ <br />
+diff --git a/languages/perl6/src/classes/List.pir b/languages/perl6/src/classes/List.pir<br />
+index 204f502..199eba0 100644<br />
+--- a/languages/perl6/src/classes/List.pir<br />
++++ b/languages/perl6/src/classes/List.pir<br />
+@@ -43,7 +43,7 @@ Return a clone of this list.  &#40;Clones its elements also.&#41;<br />
+ =cut<br />
+ <br />
+ .namespace [&#39;List&#39;]<br />
+-.sub &#39;clone&#39; :vtable :method<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;clone&#39;&#41;<br />
+     .local pmc p6meta, result, iter<br />
+     $P0 = typeof self<br />
+     result = new $P0<br />
+@@ -65,7 +65,7 @@ Return the elements of the list joined by spaces.<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub &#39;get_string&#39; :vtable :method<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     $S0 = join &#39; &#39;, self<br />
+     .return &#40;$S0&#41;<br />
+ .end<br />
+diff --git a/languages/perl6/src/classes/Mapping.pir b/languages/perl6/src/classes/Mapping.pir<br />
+index f3d9f7d..f6cb26d 100644<br />
+--- a/languages/perl6/src/classes/Mapping.pir<br />
++++ b/languages/perl6/src/classes/Mapping.pir<br />
+@@ -50,7 +50,7 @@ ourself in a ObjectRef.<br />
+ .end<br />
+ <br />
+ <br />
+-.sub &#39;get_string&#39; :method :vtable<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     $S0 = &#39;&#39;<br />
+     .local pmc iter<br />
+     iter = new &#39;Iterator&#39;, self<br />
+diff --git a/languages/perl6/src/classes/Object.pir b/languages/perl6/src/classes/Object.pir<br />
+index 09f4077..1336207 100644<br />
+--- a/languages/perl6/src/classes/Object.pir<br />
++++ b/languages/perl6/src/classes/Object.pir<br />
+@@ -650,7 +650,7 @@ Returns a proto-object with an autovivification closure attached to it.<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub get_pmc_keyed :vtable :method<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_pmc_keyed&#39;&#41;<br />
+     .param pmc what<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # We&#39;ll build auto-vivification hash of values.<br />
+</div>
+diff --git a/languages/perl6/src/classes/Pair.pir b/languages/perl6/src/classes/Pair.pir<br />
+index 66efaa5..fcc077b 100644<br />
+--- a/languages/perl6/src/classes/Pair.pir<br />
++++ b/languages/perl6/src/classes/Pair.pir<br />
+@@ -68,7 +68,7 @@ Stringify the Pair.<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub &#39;get_string&#39; :method :vtable<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     $S0 = self.&#39;key&#39;&#40;&#41;<br />
+     concat $S0, &#34;\t&#34;<br />
+     $S1 = self.&#39;value&#39;&#40;&#41;<br />
+diff --git a/languages/perl6/src/classes/Range.pir b/languages/perl6/src/classes/Range.pir<br />
+index f81e0c6..14da86f 100644<br />
+--- a/languages/perl6/src/classes/Range.pir<br />
++++ b/languages/perl6/src/classes/Range.pir<br />
+@@ -30,19 +30,19 @@ src/classes/Range.pir - methods for the Range class<br />
+ <br />
+ =cut<br />
+ <br />
+-.sub &#39;VTABLE_get_integer&#39; :method :vtable&#40;&#39;get_integer&#39;&#41;<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_integer&#39;&#41;<br />
+     $P0 = self.&#39;list&#39;&#40;&#41;<br />
+     $I0 = $P0<br />
+     .return &#40;$I0&#41;<br />
+ .end<br />
+ <br />
+-.sub &#39;VTABLE_get_number&#39; :method :vtable&#40;&#39;get_number&#39;&#41;<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_number&#39;&#41;<br />
+     $P0 = self.&#39;list&#39;&#40;&#41;<br />
+     $N0 = $P0<br />
+     .return &#40;$N0&#41;<br />
+ .end<br />
+ <br />
+-.sub &#39;VTABLE_get_string&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
++.sub &#39;&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
+     $P0 = self.&#39;list&#39;&#40;&#41;<br />
+     $S0 = $P0<br />
+     .return &#40;$S0&#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500880" href="/rt3/Ticket/Display.html?id=60384#txn-500880">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;19:47:30&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500880/235218/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 174b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; there is small patch for Rakudo to anonymize vtable methods.<br />
+</div>
+<br />
+<br />
+Not all of the Rakudo vtable functions should be anonymized -- i.e.,<br />
+&#39;clone&#39; is a real method as well.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500884" href="/rt3/Ticket/Display.html?id=60384#txn-500884">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;20:00:58&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500884/235222/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 110b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+PGE patch applied in r33256 -- moving ticket back to the perl6 queue so<br />
+that we can look at bacek&#39;s patch.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-504882" href="/rt3/Ticket/Display.html?id=60384#txn-504882">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Dec&nbsp;07&nbsp;10:44:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507654" href="/rt3/Ticket/Display.html?id=60384#txn-507654">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;09:37:42&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507654/238830/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 159b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Closing ticket -- many of the vtable methods have been migrated, and the<br />
+rest are being taken care of as part of a general refactor of all of the<br />
+builtins.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507656" href="/rt3/Ticket/Display.html?id=60384#txn-507656">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;09:37:42&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.979965</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

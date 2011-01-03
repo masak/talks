@@ -1,0 +1,871 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62506: Rakudo segfault on missing method</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62506">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62506: Rakudo segfault on missing method</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62506">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62506</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62506">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+isop
+&lt;isop4 [at] yahoo.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62506">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62506">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522194" href="/rt3/Ticket/Display.html?id=62506#txn-522194">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;13:04:17&nbsp;2009</td>
+    <td class="description">
+      isop -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo segfault on missing method</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 19 Jan 2009 13:03:22 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug &lt;parrotbug <!-- x --> at parrotcode.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">isop &lt;isop4 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522194/246676/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 66b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Following perl6 code segfaults with r31857:<br />
+<br />
+say 8.bla;<br />
+<br />
+<br />
+      <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522364" href="/rt3/Ticket/Display.html?id=62506#txn-522364">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;23:06:03&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522364/246768/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 363b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jan 19 13:04:17 2009, isop wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Following perl6 code segfaults with r31857:<br />
+&gt; <br />
+&gt; say 8.bla;<br />
+</div>
+<br />
+Doesn&#39;t segfault here &#40;32 bit Linux, r35789&#41; &#40;it does give a &#34;double<br />
+free or corruption&#34; after the error message, but we have another ticket<br />
+for that&#41;.<br />
+<br />
+Could you please try again with a newer version of parrot, and also tell<br />
+us about your platform?<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522368" href="/rt3/Ticket/Display.html?id=62506#txn-522368">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;23:06:05&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522370" href="/rt3/Ticket/Display.html?id=62506#txn-522370">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;23:10:34&nbsp;2009</td>
+    <td class="description">
+      moritz -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523788" href="/rt3/Ticket/Display.html?id=62506#txn-523788">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;23&nbsp;02:29:24&nbsp;2009</td>
+    <td class="description">
+      isop -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62506] Rakudo segfault on missing method</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 23 Jan 2009 00:27:05 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug-followup <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">isop &lt;isop4 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523788/247522/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+----- Original Message ----<br />
+<div class="message-stanza-depth-1">
+&gt; From: Moritz Lenz via RT &lt;parrotbug-followup <!-- x --> at parrotcode.org&gt;<br />
+&gt; To: isop4 <!-- x --> at yahoo.com<br />
+&gt; Sent: Tuesday, January 20, 2009 9:06:03 AM<br />
+&gt; Subject: [perl #62506] Rakudo segfault on missing method <br />
+&gt; <br />
+&gt; On Mon Jan 19 13:04:17 2009, isop wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Following perl6 code segfaults with r31857:<br />
+&gt; &gt; <br />
+&gt; &gt; say 8.bla;<br />
+</div>
+&gt; <br />
+&gt; Doesn&#39;t segfault here &#40;32 bit Linux, r35789&#41; &#40;it does give a &#34;double<br />
+&gt; free or corruption&#34; after the error message, but we have another ticket<br />
+&gt; for that&#41;.<br />
+&gt; <br />
+&gt; Could you please try again with a newer version of parrot, and also tell<br />
+&gt; us about your platform?<br />
+&gt; <br />
+&gt; Moritz<br />
+</div>
+<br />
+<br />
+Oops, you&#39;re right. It gives<br />
+*** glibc detected *** ./perl6: corrupted double-linked list: 0x08713a08 ***                                                      <br />
+<br />
+I just saw it crash and immediately assumed a segfault.<br />
+<br />
+I now tried with r31857 and still get the error. &#40;It doesn&#39;t happen if I type &#34;say 8.bla;&#34; to the interactive interpreter, btw&#41;<br />
+<br />
+I&#39;m compiling with distcc over two computers. gcc --version on each gives:<br />
+1. gcc &#40;Debian 4.3.2-1&#41; 4.3.2<br />
+2. gcc &#40;Ubuntu 4.3.2-1ubuntu11&#41; 4.3.2<br />
+<br />
+I&#39;m trying &#34;make realclean &#38;&#38; make perl6&#34; &#40;w/o distcc&#41; now, and I&#39;ll see if it still shows up.<br />
+<br />
+<br />
+      <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523790" href="/rt3/Ticket/Display.html?id=62506#txn-523790">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;23&nbsp;02:29:40&nbsp;2009</td>
+    <td class="description">
+      isop -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62506] Rakudo segfault on missing method</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 23 Jan 2009 00:59:35 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug-followup <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">isop &lt;isop4 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523790/247524/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+<br />
+<br />
+----- Original Message ----<br />
+<div class="message-stanza-depth-1">
+&gt; From: isop &lt;isop4 <!-- x --> at yahoo.com&gt;<br />
+&gt; To: parrotbug-followup <!-- x --> at parrotcode.org<br />
+&gt; Sent: Friday, January 23, 2009 10:27:05 AM<br />
+&gt; Subject: Re: [perl #62506] Rakudo segfault on missing method<br />
+&gt; <br />
+&gt; <br />
+&gt; <br />
+&gt; ----- Original Message ----<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; From: Moritz Lenz via RT <br />
+&gt; &gt; To: isop4 <!-- x --> at yahoo.com<br />
+&gt; &gt; Sent: Tuesday, January 20, 2009 9:06:03 AM<br />
+&gt; &gt; Subject: [perl #62506] Rakudo segfault on missing method <br />
+&gt; &gt; <br />
+&gt; &gt; On Mon Jan 19 13:04:17 2009, isop wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Following perl6 code segfaults with r31857:<br />
+&gt; &gt; &gt; <br />
+&gt; &gt; &gt; say 8.bla;<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Doesn&#39;t segfault here &#40;32 bit Linux, r35789&#41; &#40;it does give a &#34;double<br />
+&gt; &gt; free or corruption&#34; after the error message, but we have another ticket<br />
+&gt; &gt; for that&#41;.<br />
+&gt; &gt; <br />
+&gt; &gt; Could you please try again with a newer version of parrot, and also tell<br />
+&gt; &gt; us about your platform?<br />
+&gt; &gt; <br />
+&gt; &gt; Moritz<br />
+</div>
+&gt; <br />
+&gt; <br />
+&gt; Oops, you&#39;re right. It gives<br />
+&gt; *** glibc detected *** ./perl6: corrupted double-linked list: 0x08713a08 ***    <br />
+&gt;                                                   <br />
+&gt; <br />
+&gt; I just saw it crash and immediately assumed a segfault.<br />
+&gt; <br />
+&gt; I now tried with r31857 and still get the error. &#40;It doesn&#39;t happen if I type <br />
+&gt; &#34;say 8.bla;&#34; to the interactive interpreter, btw&#41;<br />
+&gt; <br />
+&gt; I&#39;m compiling with distcc over two computers. gcc --version on each gives:<br />
+&gt; 1. gcc &#40;Debian 4.3.2-1&#41; 4.3.2<br />
+&gt; 2. gcc &#40;Ubuntu 4.3.2-1ubuntu11&#41; 4.3.2<br />
+&gt; <br />
+&gt; I&#39;m trying &#34;make realclean &#38;&#38; make perl6&#34; &#40;w/o distcc&#41; now, and I&#39;ll see if it <br />
+&gt; still shows up.<br />
+</div>
+<br />
+&#40;I forgot perl Configure.pl&#41;<br />
+<br />
+No good. It still crashes the same way.<br />
+<br />
+<br />
+      <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536188" href="/rt3/Ticket/Display.html?id=62506#txn-536188">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:17:13&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536188/254294/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Jan 23 02:29:40 2009, isop wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; ----- Original Message ----<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; From: isop &lt;isop4 <!-- x --> at yahoo.com&gt;<br />
+&gt; &gt; To: parrotbug-followup <!-- x --> at parrotcode.org<br />
+&gt; &gt; Sent: Friday, January 23, 2009 10:27:05 AM<br />
+&gt; &gt; Subject: Re: [perl #62506] Rakudo segfault on missing method<br />
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt; ----- Original Message ----<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; From: Moritz Lenz via RT<br />
+&gt; &gt; &gt; To: isop4 <!-- x --> at yahoo.com<br />
+&gt; &gt; &gt; Sent: Tuesday, January 20, 2009 9:06:03 AM<br />
+&gt; &gt; &gt; Subject: [perl #62506] Rakudo segfault on missing method<br />
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; On Mon Jan 19 13:04:17 2009, isop wrote:<br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; &gt; Following perl6 code segfaults with r31857:<br />
+&gt; &gt; &gt; &gt;<br />
+&gt; &gt; &gt; &gt; say 8.bla;<br />
+</div>
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; Doesn&#39;t segfault here &#40;32 bit Linux, r35789&#41; &#40;it does give a<br />
+</div>
+</div>
+&gt; &#34;double<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; free or corruption&#34; after the error message, but we have another<br />
+</div>
+</div>
+&gt; ticket<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; for that&#41;.<br />
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; Could you please try again with a newer version of parrot, and<br />
+</div>
+</div>
+&gt; also tell<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; us about your platform?<br />
+&gt; &gt; &gt;<br />
+&gt; &gt; &gt; Moritz<br />
+</div>
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt; Oops, you&#39;re right. It gives<br />
+&gt; &gt; *** glibc detected *** ./perl6: corrupted double-linked list:<br />
+</div>
+&gt; 0x08713a08 ***<br />
+<div class="message-stanza-depth-2">
+&gt; &gt;<br />
+&gt; &gt;<br />
+&gt; &gt; I just saw it crash and immediately assumed a segfault.<br />
+&gt; &gt;<br />
+&gt; &gt; I now tried with r31857 and still get the error. &#40;It doesn&#39;t happen<br />
+</div>
+&gt; if I type<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &#34;say 8.bla;&#34; to the interactive interpreter, btw&#41;<br />
+&gt; &gt;<br />
+&gt; &gt; I&#39;m compiling with distcc over two computers. gcc --version on each<br />
+</div>
+&gt; gives:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 1. gcc &#40;Debian 4.3.2-1&#41; 4.3.2<br />
+&gt; &gt; 2. gcc &#40;Ubuntu 4.3.2-1ubuntu11&#41; 4.3.2<br />
+&gt; &gt;<br />
+&gt; &gt; I&#39;m trying &#34;make realclean &#38;&#38; make perl6&#34; &#40;w/o distcc&#41; now, and I&#39;ll<br />
+</div>
+&gt; see if it<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; still shows up.<br />
+</div>
+&gt; <br />
+&gt; &#40;I forgot perl Configure.pl&#41;<br />
+&gt; <br />
+&gt; No good. It still crashes the same way.<br />
+&gt; <br />
+</div>
+We did a fix today that should deal with double frees on exit, and I<br />
+expect it will have caught the one leading to this segfaulting. If you<br />
+still get the segfault rather than just an error, feel free to re-open.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536192" href="/rt3/Ticket/Display.html?id=62506#txn-536192">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:17:14&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.172447</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

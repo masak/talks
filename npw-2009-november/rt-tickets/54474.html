@@ -1,0 +1,1650 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#54474: [BUG] cmp doesn&#39;t works for integers</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D54474">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#54474: [BUG] cmp doesn&#39;t works for integers</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54474">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">54474</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=54474">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54474">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+integer.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409420/185936/integer.diff">
+Tue May 20 13:47:53 2008 (4.1k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/408840/185626/integer.diff">
+Tue May 20 04:01:48 2008 (4.1k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+integer2.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409110/185772/integer2.diff">
+Tue May 20 07:38:13 2008 (4.1k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=54474">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408444" href="/rt3/Ticket/Display.html?id=54474#txn-408444">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;19&nbsp;14:10:05&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] cmp doesn&#39;t works for integers</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 20 May 2008 07:09:10 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/408444/185408/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 366b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Parrot&#39;s op cmp doesn&#39;t work for integers.<br />
+<br />
+$ cat v.pir<br />
+.sub main :main<br />
+     $P99 = subclass &#39;Integer&#39;, &#39;Int&#39;<br />
+<br />
+     .local pmc a, b<br />
+     a = new &#39;Int&#39;<br />
+     a = 1<br />
+<br />
+     b = new &#39;Int&#39;<br />
+     b = 2<br />
+<br />
+     $I0 = cmp a, b<br />
+     say $I0<br />
+<br />
+     $I0 = cmp b, a<br />
+     say $I0<br />
+.end<br />
+$ ./parrot v.pir<br />
+1<br />
+1<br />
+$<br />
+<br />
+Expected results<br />
+-1<br />
+1<br />
+<br />
+&#40;Thanks to pmichaud for clean version of test case&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408450" href="/rt3/Ticket/Display.html?id=54474#txn-408450">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;19&nbsp;14:10:07&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408688" href="/rt3/Ticket/Display.html?id=54474#txn-408688">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;00:30:31&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/408688/185532/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon May 19 14:10:05 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Parrot&#39;s op cmp doesn&#39;t work for integers.<br />
+</div>
+<br />
+I did some investigations. Everything will work, if I&#39;ll replace<br />
+PMC_int_val&#40;SELF&#41; with VTABLE_get_integer&#40;INTERP, SELF&#41; in<br />
+src/pmc/integer.pmc. Just because SELF is not &#39;Integer&#39; but &#39;Object&#39;.<br />
+<br />
+<br />
+<br />
+&#40;gdb&#41; r v.pir<br />
+The program being debugged has been started already.<br />
+Start it from the beginning? &#40;y or n&#41; y<br />
+Starting program: /Users/bacek/src/parrot-git/parrot/parrot v.pir<br />
+Reading symbols for shared libraries .. done<br />
+<br />
+Breakpoint 3, Parrot_cmp_i_p_p &#40;cur_opcode=0xb23690, interp=0xb09d30&#41; at<br />
+cmp.ops:622<br />
+622       $1 = mmd_dispatch_i_pp&#40;interp, $2, $3, MMD_CMP&#41;;<br />
+&#40;gdb&#41; c<br />
+Continuing.<br />
+<br />
+Breakpoint 6, Parrot_Integer_cmp &#40;interp=0xb09d30, pmc=0xd2bbe0,<br />
+value=0xd2bb8c&#41; at integer.pmc:1176<br />
+1176                /* int or undef */<br />
+&#40;gdb&#41; up<br />
+#1  0x005283f6 in mmd_dispatch_i_pp &#40;interp=0xb09d30, left=0xd2bbe0,<br />
+right=0xd2bb8c, func_nr=37&#41; at src/mmd.c:744<br />
+744         return &#40;*real_function&#41;&#40;interp, left, right&#41;;<br />
+&#40;gdb&#41; p real_function <br />
+$20 = &#40;mmd_f_i_pp&#41; 0x60f850 &lt;Parrot_Integer_cmp&gt;<br />
+&#40;gdb&#41; p left<br />
+$21 = &#40;PMC *&#41; 0xd2bbe0<br />
+&#40;gdb&#41; p Parrot_Object_get_integer&#40;interp, left&#41; <br />
+$22 = 5<br />
+&#40;gdb&#41; p Parrot_Integer_get_integer&#40;interp, left&#41;<br />
+$23 = 13810628<br />
+&#40;gdb&#41; <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408690" href="/rt3/Ticket/Display.html?id=54474#txn-408690">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;00:30:31&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-408840" href="/rt3/Ticket/Display.html?id=54474#txn-408840">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;04:01:48&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/408840/185620/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 91b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+There is a patch for src/pmc/integer.pm to use SELF.get_integer&#40;&#41;<br />
+instead of PMC_int_val.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/408840/185626/integer.diff">Download integer.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 4.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/pmc/integer.pmc<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/pmc/integer.pmc &#40;revision 27652&#41;<br />
++++ src/pmc/integer.pmc &#40;working copy&#41;<br />
+@@ -200,7 +200,7 @@<br />
+ <br />
+ */<br />
+     VTABLE FLOATVAL get_number&#40;&#41; {<br />
+-        return &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41;;<br />
++        return &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -229,11 +229,11 @@<br />
+ <br />
+ */<br />
+     VTABLE STRING *get_string&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+     VTABLE STRING *get_repr&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -413,7 +413,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -660,7 +660,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -1136,7 +1136,7 @@<br />
+     VTABLE INTVAL is_equal&#40;PMC *value&#41; {<br />
+ MMD_BigInt: {<br />
+         PMC * const temp = pmc_new&#40;INTERP, enum_class_BigInt&#41;;<br />
+-        VTABLE_set_integer_native&#40;INTERP, temp, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_set_integer_native&#40;INTERP, temp, SELF.get_integer&#40;&#41;&#41;;<br />
+         return Parrot_BigInt_is_equal_BigInt&#40;INTERP, temp, value&#41;;<br />
+     }<br />
+ MMD_DEFAULT: {<br />
+@@ -1157,10 +1157,10 @@<br />
+     VTABLE INTVAL cmp&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1169,12 +1169,12 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+-            const INTVAL diff = PMC_int_val&#40;SELF&#41;<br />
++            const INTVAL diff = SELF.get_integer&#40;&#41;<br />
+                 - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+@@ -1192,11 +1192,11 @@<br />
+     VTABLE INTVAL cmp_num&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+ <br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1205,13 +1205,13 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+             const INTVAL diff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+     }<br />
+@@ -1308,7 +1308,7 @@<br />
+     VTABLE void freeze&#40;visit_info *info&#41; {<br />
+         IMAGE_IO * const io = info-&gt;image_io;<br />
+         SUPER&#40;info&#41;;<br />
+-        VTABLE_push_integer&#40;INTERP, io, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_push_integer&#40;INTERP, io, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409110" href="/rt3/Ticket/Display.html?id=54474#txn-409110">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;07:38:13&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409110/185766/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 25b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Cleaned version of patch.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409110/185772/integer2.diff">Download integer2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 4.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+--- src/pmc/integer.pmc 2008-05-21 00:31:57.000000000 +1000<br />
++++ src/pmc/integer2.pmc        2008-05-21 00:28:32.000000000 +1000<br />
+@@ -187,7 +187,7 @@<br />
+ <br />
+ */<br />
+     VTABLE INTVAL get_bool&#40;&#41; {<br />
+-        return PMC_int_val&#40;SELF&#41; ? 1 : 0;<br />
++        return SELF.get_integer&#40;&#41; ? 1 : 0;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -200,7 +200,7 @@<br />
+ <br />
+ */<br />
+     VTABLE FLOATVAL get_number&#40;&#41; {<br />
+-        return &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41;;<br />
++        return SELF.get_integer&#40;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -229,11 +229,11 @@<br />
+ <br />
+ */<br />
+     VTABLE STRING *get_string&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+     VTABLE STRING *get_repr&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -413,7 +413,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -660,7 +660,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -1136,7 +1136,7 @@<br />
+     VTABLE INTVAL is_equal&#40;PMC *value&#41; {<br />
+ MMD_BigInt: {<br />
+         PMC * const temp = pmc_new&#40;INTERP, enum_class_BigInt&#41;;<br />
+-        VTABLE_set_integer_native&#40;INTERP, temp, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_set_integer_native&#40;INTERP, temp, SELF.get_integer&#40;&#41;&#41;;<br />
+         return Parrot_BigInt_is_equal_BigInt&#40;INTERP, temp, value&#41;;<br />
+     }<br />
+ MMD_DEFAULT: {<br />
+@@ -1157,10 +1157,10 @@<br />
+     VTABLE INTVAL cmp&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_number&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1169,12 +1169,12 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_number&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+-            const INTVAL diff = PMC_int_val&#40;SELF&#41;<br />
++            const INTVAL diff = SELF.get_integer&#40;&#41;<br />
+                 - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+@@ -1192,11 +1192,11 @@<br />
+     VTABLE INTVAL cmp_num&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_number&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+ <br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1205,13 +1205,13 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_number&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+             const INTVAL diff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+     }<br />
+@@ -1308,7 +1308,7 @@<br />
+     VTABLE void freeze&#40;visit_info *info&#41; {<br />
+         IMAGE_IO * const io = info-&gt;image_io;<br />
+         SUPER&#40;info&#41;;<br />
+-        VTABLE_push_integer&#40;INTERP, io, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_push_integer&#40;INTERP, io, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409378" href="/rt3/Ticket/Display.html?id=54474#txn-409378">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;13:06:08&nbsp;2008</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">bugs-bitbucket <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54474] [BUG] cmp doesn&#39;t works for integers</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 20 May 2008 16:05:43 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Will Coleda&#34; &lt;will <!-- x --> at coleda.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409378/185910/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The original problem description is a little off: this works for core<br />
+Integer type, but not for the parrotObject subclass.<br />
+<br />
+I was able to use gdb to break in the function called by the cmp op,<br />
+and then step through to find which actual function this was being<br />
+sent to via MMD. It was using Integer&#39;s &#39;cmp&#39;, in the DEFAULT branch,<br />
+which assumes things about the storage of SELF which are apparently<br />
+not true.<br />
+<br />
+I suspect that if this is the right fix &#40;see below&#41;, that we need to<br />
+replace this usage throughout the core PMCs, or subclassing is going<br />
+to break in all sorts of odd places.<br />
+<br />
+$ svn diff src<br />
+Index: src/pmc/integer.pmc<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/pmc/integer.pmc &#40;revision 27433&#41;<br />
++++ src/pmc/integer.pmc &#40;working copy&#41;<br />
+@@ -1174,7 +1174,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+-            const INTVAL diff = PMC_int_val&#40;SELF&#41;<br />
++            const INTVAL diff = VTABLE_get_integer&#40;INTERP, SELF&#41;<br />
+                 - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+On Mon, May 19, 2008 at 5:10 PM, via RT Vasily Chekalkin<br />
+&lt;parrotbug-followup <!-- x --> at parrotcode.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Vasily Chekalkin<br />
+&gt; # Please include the string:  [perl #54474]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=54474 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Parrot&#39;s op cmp doesn&#39;t work for integers.<br />
+&gt;<br />
+&gt; $ cat v.pir<br />
+&gt; .sub main :main<br />
+&gt;     $P99 = subclass &#39;Integer&#39;, &#39;Int&#39;<br />
+&gt;<br />
+&gt;     .local pmc a, b<br />
+&gt;     a = new &#39;Int&#39;<br />
+&gt;     a = 1<br />
+&gt;<br />
+&gt;     b = new &#39;Int&#39;<br />
+&gt;     b = 2<br />
+&gt;<br />
+&gt;     $I0 = cmp a, b<br />
+&gt;     say $I0<br />
+&gt;<br />
+&gt;     $I0 = cmp b, a<br />
+&gt;     say $I0<br />
+&gt; .end<br />
+&gt; $ ./parrot v.pir<br />
+&gt; 1<br />
+&gt; 1<br />
+&gt; $<br />
+&gt;<br />
+&gt; Expected results<br />
+&gt; -1<br />
+&gt; 1<br />
+&gt;<br />
+&gt; &#40;Thanks to pmichaud for clean version of test case&#41;<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+</div>
+<br />
+<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409396" href="/rt3/Ticket/Display.html?id=54474#txn-409396">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;13:18:36&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Will Coleda&#34; &lt;will <!-- x --> at coleda.com&gt;, bugs-bitbucket <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54474] [BUG] cmp doesn&#39;t works for integers</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 20 May 2008 13:17:07 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrot-porters <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409396/185920/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tuesday 20 May 2008 13:05:43 Will Coleda wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; The original problem description is a little off: this works for core<br />
+&gt; Integer type, but not for the parrotObject subclass.<br />
+&gt;<br />
+&gt; I was able to use gdb to break in the function called by the cmp op,<br />
+&gt; and then step through to find which actual function this was being<br />
+&gt; sent to via MMD. It was using Integer&#39;s &#39;cmp&#39;, in the DEFAULT branch,<br />
+&gt; which assumes things about the storage of SELF which are apparently<br />
+&gt; not true.<br />
+&gt;<br />
+&gt; I suspect that if this is the right fix &#40;see below&#41;, that we need to<br />
+&gt; replace this usage throughout the core PMCs, or subclassing is going<br />
+&gt; to break in all sorts of odd places.<br />
+&gt;<br />
+&gt; $ svn diff src<br />
+&gt; Index: src/pmc/integer.pmc<br />
+<div class="message-stanza-depth-2">
+&gt; ===================================================================<br />
+</div>
+&gt; --- src/pmc/integer.pmc &#40;revision 27433&#41;<br />
+&gt; +++ src/pmc/integer.pmc &#40;working copy&#41;<br />
+&gt; @@ -1174,7 +1174,7 @@<br />
+&gt;          }<br />
+&gt;  MMD_DEFAULT: {<br />
+&gt;              /* int or undef */<br />
+&gt; -            const INTVAL diff = PMC_int_val&#40;SELF&#41;<br />
+&gt; +            const INTVAL diff = VTABLE_get_integer&#40;INTERP, SELF&#41;<br />
+&gt;                  - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+&gt;              return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+&gt;          }<br />
+</div>
+<br />
+This is correct.  PMC_*_val must die.<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409420" href="/rt3/Ticket/Display.html?id=54474#txn-409420">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;13:47:53&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54474] AutoReply: [BUG] cmp doesn&#39;t works for integers</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 20 May 2008 20:00:47 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug-followup <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409420/185934/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 137b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+There is patch for src/pmc/integer.pmc which changes usage of <br />
+PMC_int_val to SELF.get_integer&#40;&#41; for fetching value.<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409420/185936/integer.diff">Download integer.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 4.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/pmc/integer.pmc<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/pmc/integer.pmc &#40;revision 27652&#41;<br />
++++ src/pmc/integer.pmc &#40;working copy&#41;<br />
+@@ -200,7 +200,7 @@<br />
+ <br />
+ */<br />
+     VTABLE FLOATVAL get_number&#40;&#41; {<br />
+-        return &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41;;<br />
++        return &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -229,11 +229,11 @@<br />
+ <br />
+ */<br />
+     VTABLE STRING *get_string&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+     VTABLE STRING *get_repr&#40;&#41; {<br />
+-        return string_from_int&#40;INTERP, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        return string_from_int&#40;INTERP, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+@@ -413,7 +413,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; + VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -660,7 +660,7 @@<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+         VTABLE_set_number_native&#40;INTERP, SELF,<br />
+-            PMC_int_val&#40;SELF&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
++            SELF.get_integer&#40;&#41; * VTABLE_get_number&#40;INTERP, value&#41;&#41;;<br />
+         }<br />
+     }<br />
+ <br />
+@@ -1136,7 +1136,7 @@<br />
+     VTABLE INTVAL is_equal&#40;PMC *value&#41; {<br />
+ MMD_BigInt: {<br />
+         PMC * const temp = pmc_new&#40;INTERP, enum_class_BigInt&#41;;<br />
+-        VTABLE_set_integer_native&#40;INTERP, temp, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_set_integer_native&#40;INTERP, temp, SELF.get_integer&#40;&#41;&#41;;<br />
+         return Parrot_BigInt_is_equal_BigInt&#40;INTERP, temp, value&#41;;<br />
+     }<br />
+ MMD_DEFAULT: {<br />
+@@ -1157,10 +1157,10 @@<br />
+     VTABLE INTVAL cmp&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1169,12 +1169,12 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+-            const INTVAL diff = PMC_int_val&#40;SELF&#41;<br />
++            const INTVAL diff = SELF.get_integer&#40;&#41;<br />
+                 - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+@@ -1192,11 +1192,11 @@<br />
+     VTABLE INTVAL cmp_num&#40;PMC *value&#41; {<br />
+ MMD_String: {<br />
+             FLOATVAL fdiff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+ <br />
+             if &#40;FLOAT_IS_ZERO&#40;fdiff&#41;&#41; {<br />
+                 const INTVAL idiff =<br />
+-                    PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                    SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+                 return idiff &gt; 0 ? 1 : idiff &lt; 0 ? -1 : 0;<br />
+             }<br />
+             else {<br />
+@@ -1205,13 +1205,13 @@<br />
+         }<br />
+ MMD_Float: {<br />
+             const FLOATVAL diff =<br />
+-                &#40;FLOATVAL&#41;PMC_int_val&#40;SELF&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
++                &#40;FLOATVAL&#41;SELF.get_integer&#40;&#41; - VTABLE_get_number&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+ MMD_DEFAULT: {<br />
+             /* int or undef */<br />
+             const INTVAL diff =<br />
+-                PMC_int_val&#40;SELF&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
++                SELF.get_integer&#40;&#41; - VTABLE_get_integer&#40;INTERP, value&#41;;<br />
+             return diff &gt; 0 ? 1 : diff &lt; 0 ? -1 : 0;<br />
+         }<br />
+     }<br />
+@@ -1308,7 +1308,7 @@<br />
+     VTABLE void freeze&#40;visit_info *info&#41; {<br />
+         IMAGE_IO * const io = info-&gt;image_io;<br />
+         SUPER&#40;info&#41;;<br />
+-        VTABLE_push_integer&#40;INTERP, io, PMC_int_val&#40;SELF&#41;&#41;;<br />
++        VTABLE_push_integer&#40;INTERP, io, SELF.get_integer&#40;&#41;&#41;;<br />
+     }<br />
+ <br />
+ /*<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409462" href="/rt3/Ticket/Display.html?id=54474#txn-409462">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;15:08:28&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409462/185954/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 222b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue May 20 13:18:36 2008, chromatic <!-- x --> at wgz.org wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; This is correct.  PMC_*_val must die.<br />
+</div>
+<br />
+I&#39;ve created patch with replacing PMC_int_val with SELF.get_integer&#40;&#41;.<br />
+It&#39;s attached to ticket as integer2.diff<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409754" href="/rt3/Ticket/Display.html?id=54474#txn-409754">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;21&nbsp;03:11:02&nbsp;2008</td>
+    <td class="description">
+      bacek -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409796" href="/rt3/Ticket/Display.html?id=54474#txn-409796">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;21&nbsp;04:37:22&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">parrot-porters <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409796/186108/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 305b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue May 20 15:08:28 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue May 20 13:18:36 2008, chromatic <!-- x --> at wgz.org wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+&gt; &gt; This is correct.  PMC_*_val must die.<br />
+</div>
+&gt; <br />
+&gt; I&#39;ve created patch with replacing PMC_int_val with SELF.get_integer&#40;&#41;.<br />
+&gt; It&#39;s attached to ticket as integer2.diff<br />
+&gt; <br />
+</div>
+Applied as r27700, thanks.<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409802" href="/rt3/Ticket/Display.html?id=54474#txn-409802">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;21&nbsp;04:37:25&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-436966" href="/rt3/Ticket/Display.html?id=54474#txn-436966">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;30&nbsp;07:20:31&nbsp;2008</td>
+    <td class="description">
+      coke -  Reference by ticket #56464 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437004" href="/rt3/Ticket/Display.html?id=54474#txn-437004">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;30&nbsp;07:53:40&nbsp;2008</td>
+    <td class="description">
+      coke -  Reference by ticket #56468 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.356603</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg7581">
+  <defs
+     id="defs7583" />
+  <g
+     id="layer1">
+    <rect
+       width="815"
+       height="620"
+       x="-7.5"
+       y="-10"
+       id="rect7591"
+       style="fill:#dddddd;fill-opacity:1;stroke:none" />
+    <text
+       x="33.054306"
+       y="91.331123"
+       id="text8103"
+       xml:space="preserve"
+       style="font-size:31.61368942px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="33.054306"
+         y="91.331123"
+         id="tspan8111">my 0..9 $D;</tspan><tspan
+         x="33.054306"
+         y="130.84824"
+         id="tspan8164">my 0..9 $E where ($N + $R + $!C1 % 10);</tspan><tspan
+         x="33.054306"
+         y="170.36534"
+         id="tspan8166">my      $Y = ($D + $E) % 10;</tspan><tspan
+         x="33.054306"
+         y="209.88246"
+         id="tspan8168">my      $!C1 = ($D + $E) div 10;</tspan><tspan
+         x="33.054306"
+         y="249.39957"
+         id="tspan8170">my 0..9 $N;</tspan><tspan
+         x="33.054306"
+         y="288.91669"
+         id="tspan8172">my 0..9 $R;</tspan><tspan
+         x="33.054306"
+         y="328.43381"
+         id="tspan8174">my      $!C2 = ($N + $R + $!C1) div 10;</tspan><tspan
+         x="33.054306"
+         y="367.9509"
+         id="tspan8176">my 0..9 $O where ($S + $M + $!C3) % 10;</tspan><tspan
+         x="33.054306"
+         y="407.46802"
+         id="tspan8178">my      $!C3 = ($E + $O + $!C2) div 10;</tspan><tspan
+         x="33.054306"
+         y="446.98514"
+         id="tspan8180">my 1..9 $S;</tspan><tspan
+         x="33.054306"
+         y="486.50223"
+         id="tspan8182">my 1..9 $M where $!C4;</tspan><tspan
+         x="33.054306"
+         y="526.01935"
+         id="tspan8184">my      $!C4 = ($S + $M + $!C3) div 10;</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg2816"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="debugging1.svg">
+    <g
+       id="g3641">
+      <rect
+         y="-11.836115"
+         x="-7.2837634"
+         height="626.40363"
+         width="818.20941"
+         id="rect3674"
+         style="fill:#dddddd;fill-opacity:1;stroke:none" />
+      <g
+         transform="translate(101.97268,-1.3656921)"
+         id="g3601">
+        <rect
+           style="fill:#404040;fill-opacity:1;stroke:none"
+           id="rect2823"
+           width="234.29439"
+           height="512.29132"
+           x="180.88013"
+           y="45.220032" />
+        <text
+           xml:space="preserve"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+           x="219.14694"
+           y="-375.95941"
+           id="text3597"
+           transform="matrix(0,1,-1,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan3599"
+             x="219.14694"
+             y="-375.95941">program run</tspan></text>
+      </g>
+      <g
+         id="g3635">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 183.30804,30.652504 0,547.496206"
+           id="path3606" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 158.26331,535.69463 25.07489,43.43099 25.58753,-44.31889"
+           id="path3608" />
+        <text
+           xml:space="preserve"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+           x="271.71094"
+           y="-194.22742"
+           id="text3610"
+           transform="matrix(0,1,-1,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan3612"
+             x="271.71094"
+             y="-194.22742">time</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:78.83562469px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ff8484;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       x="290.78259"
+       y="440.97116"
+       id="text3653"><tspan
+         sodipodi:role="line"
+         id="tspan3655"
+         x="290.78259"
+         y="440.97116">☹</tspan></text>
+    <g
+       id="g3669">
+      <text
+         xml:space="preserve"
+         style="font-size:78.83562469px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ff8484;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+         x="290.78259"
+         y="210.31866"
+         id="text3659"><tspan
+           sodipodi:role="line"
+           id="tspan3661"
+           x="290.78259"
+           y="210.31866">☠</tspan></text>
+      <g
+         id="g3665">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+           d="m 270.7132,415.478 -29.13505,0 0,-228.22459 32.77693,0"
+           id="path3657" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 257.09687,405.18397 17.44024,10.27588 -17.68499,10.84403"
+           id="path3663"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+</svg>

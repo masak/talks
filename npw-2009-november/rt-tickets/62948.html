@@ -1,0 +1,651 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62948: [PATCH] some array autovivification fixes/improvements</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62948">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62948: [PATCH] some array autovivification fixes/improvements</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62948">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62948</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62948">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ronaldxs
+&lt;ronaldxs [at] software-path.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62948">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+array_autoviv_bitbetter.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/526812/248984/array_autoviv_bitbetter.patch">
+Fri Jan 30 17:19:56 2009 (3.2k) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62948">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526812" href="/rt3/Ticket/Display.html?id=62948#txn-526812">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;17:19:56&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] some array autovivification fixes/improvements</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 30 Jan 2009 20:19:04 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/526812/248982/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is a follow up to rt #61324 that observed, among other things, that <br />
+&#39;my @a; @a[2] = &#34;b&#34;; say @a&#39; crashed with a null PMC error.<br />
+<br />
+rt #61324 was closed and that problem was fixed but a closer look <br />
+revealed a number of seemingly related problems that were not. If the <br />
+program started with &#39;my @a; @a[1] = &#34;b&#34;&#39; several other cases like &#39;my <br />
+@b = @a;&#39;, &#39;my @b = &#40;&#34;c&#34;, @a&#41;;&#39;, &#39;my $x = + @a.grep&#40;{ $_ eq &#34;b&#34;}&#41;&#39;, and <br />
+&#39;my $x = @a.min&#40;&#41;&#39; all crashed with null PMC errors even after #61324 <br />
+patches.<br />
+<br />
+It seems that when you take some slurpy params like say/print and grep,<br />
+min, join etc. with a declaration like that below<br />
+<br />
+.param pmc args :slurpy<br />
+<br />
+your args are allocated as a ResizablePMCArray. List.pir registers <br />
+itself as a parent class of ResizablePMCArray and effectively provides <br />
+the &#39;!flatten&#39; method for the args in such a case. When the List.pir <br />
+&#39;!flatten&#39; method sees a perl array &#40;Perl6Array&#41; it calls splice to <br />
+flatten and append it to the result set. The ResizablePMCArray <br />
+get_pmc_keyed_int vtable function, called by splice, was appending <br />
+PMCNULL values to the results and causing the crashes. ResizablePMCArray <br />
+is an ancestor of Perl6Array. The array assignments like &#39;my @a; @a[1] = <br />
+&#34;b&#34;; my @b = @a&#39; where also calling the same &#39;!flatten’ method.<br />
+<br />
+The patch I include here provides a reasonably simple, pir based, <br />
+get_pmc_keyed_int vtable function in Array.pir that seems to fix all of <br />
+the above problems without breaking anything. There are other possible <br />
+approaches to the problem. Since it also fixes the problem with <br />
+print/say I also include a patch to remove the changes to print that are <br />
+no longer needed.<br />
+<br />
+Tests for related conditions were already in array_extending.t so I <br />
+include a patch that puts more tests there including the problem cases <br />
+noted above. It seems to me that the tests in array_extending.t are <br />
+really autovivification tests that might belong in the <br />
+S09-autovivification directory.<br />
+<br />
+I also include a patch that tentatively removes some autovivification <br />
+code from Positional.pir since my patch to Array.pir covers all test <br />
+cases, the autovivification of rvalue Positional references was a <br />
+problem in the existing code and it is not clear to me whether the <br />
+Positional role is intended to do autovivification going forward. The <br />
+patch to Array.pir includes a comment noting the problems with rvalue <br />
+autovivification similar to those described for hashes in rt #61882.<br />
+<br />
+I expect to be boarding a flight to Mexico tomorrow but expect to be <br />
+able to get some access to email by WIFI next week.<br />
+<br />
+Hope some of this helps,<br />
+Ron<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/526812/248984/array_autoviv_bitbetter.patch">Download array_autoviv_bitbetter.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 3.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/spec/S02-builtin_data_types/array_extending.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spec/S02-builtin_data_types/array_extending.t     &#40;revision 25127&#41;<br />
++++ t/spec/S02-builtin_data_types/array_extending.t     &#40;working copy&#41;<br />
+@@ -2,7 +2,7 @@<br />
+ <br />
+ use Test;<br />
+ <br />
+-plan 16;<br />
++plan 21;<br />
+ <br />
+ {<br />
+<div class="message-stanza-depth-1">
+     # Compare with Perl 5:<br />
+</div>
+@@ -86,3 +86,19 @@<br />
+     ok @a[1] ~~ undef, &#39;... and the second is undef&#39;;<br />
+     is @a[2], 6,       &#39;... and  the third is 6&#39;;<br />
+ }<br />
++<br />
++{<br />
++    my @a;<br />
++    @a[2] = &#39;b&#39;;<br />
++    my @b = @a;<br />
++    is +@b, 3, &#39;really a degenerative case of assigning list to array&#39;;<br />
++    @b = &#40;6, @a&#41;;<br />
++    is +@b, 4, &#39;assigning list with extended array to an array&#39;;<br />
++    my $s = @a.join&#40;&#39;:&#39;&#41;;<br />
++    is $s, &#39;::b&#39;, &#39;join on extended array&#39;;<br />
++    my $n = + @a.grep&#40;{ $_ eq &#39;b&#39;}&#41;;<br />
++    is $n, 1, &#39;grep on extended array&#39;;<br />
++    @a[1] = &#39;c&#39;;  # cmp doesn&#39;t handle undef cmp undef yet<br />
++    my $m = @a.min&#40;&#41;;<br />
++    ok not defined $m, &#39;min on list with undefined el returns undef&#39;;<br />
++}<br />
+Index: src/classes/Array.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/Array.pir       &#40;revision 36120&#41;<br />
++++ src/classes/Array.pir       &#40;working copy&#41;<br />
+@@ -30,7 +30,9 @@<br />
+ .namespace [&#39;Perl6Array&#39;]<br />
+ .sub &#39;delete&#39; :method :multi&#40;Perl6Array&#41;<br />
+     .param pmc indices :slurpy<br />
+-    .local pmc result<br />
++    .local pmc super_class_accessor, result<br />
++    <br />
++    super_class_accessor = getattribute self, [&#39;ResizablePMCArray&#39;], &#39;proxy&#39;<br />
+     result = new &#39;List&#39;<br />
+     null $P99<br />
+ <br />
+@@ -47,7 +49,7 @@<br />
+     dec $I0<br />
+   shorten_loop:<br />
+     if $I0 &lt; 0 goto shorten_end<br />
+-    $P0 = self[$I0]<br />
++    $P0 = super_class_accessor[$I0]<br />
+     unless null $P0 goto shorten_end<br />
+     delete self[$I0]<br />
+     dec $I0<br />
+@@ -267,6 +269,29 @@<br />
+ <br />
+ =cut<br />
+ <br />
++=item get_pmc_keyed_int&#40;&#41;   &#40;vtable method&#41;<br />
++<br />
++Try to return undef/Failure rather than null for null index.  Also<br />
++autovivifies for now.<br />
++<br />
++=cut<br />
++<br />
++# autovivification will happen here for rvalues which will need fixing later ...<br />
++<br />
++.sub get_pmc_keyed_int :vtable :method<br />
++    .param int key<br />
++    .local pmc super_class_accessor, retval<br />
++    <br />
++    super_class_accessor = getattribute self, [&#39;ResizablePMCArray&#39;], &#39;proxy&#39;<br />
++    retval = super_class_accessor[ key ]<br />
++    unless null retval goto done<br />
++    retval = &#39;undef&#39;&#40;&#41;<br />
++    super_class_accessor[ key ] = retval<br />
++done:<br />
++    .return &#40;retval&#41;<br />
++.end<br />
++<br />
++<br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+ #   fill-column: 100<br />
+</div>
+Index: src/classes/Positional.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/Positional.pir  &#40;revision 36120&#41;<br />
++++ src/classes/Positional.pir  &#40;working copy&#41;<br />
+@@ -46,9 +46,10 @@<br />
+     goto end<br />
+   result_fetch:<br />
+     result = self[$I0]<br />
+-    unless null result goto end<br />
+-    result = &#39;undef&#39;&#40;&#41;<br />
+-    self[$I0] = result<br />
++# -- not clear on whether autovivication is part of positional role &#40;maybe?&#41; --    <br />
++#    unless null result goto end<br />
++#    result = &#39;undef&#39;&#40;&#41;<br />
++#    self[$I0] = result<br />
+     goto end<br />
+   result_whatever:<br />
+     result = &#39;list&#39;&#40;self&#41;<br />
+Index: src/builtins/io.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/io.pir &#40;revision 36120&#41;<br />
++++ src/builtins/io.pir &#40;working copy&#41;<br />
+@@ -20,9 +20,6 @@<br />
+   iter_loop:<br />
+     unless it goto iter_end<br />
+     $P0 = shift it<br />
+-    unless null $P0 goto iter_nonull<br />
+-    $P0 = new &#39;Failure&#39;<br />
+-  iter_nonull:<br />
+     print $P0<br />
+     goto iter_loop<br />
+   iter_end:<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-526818" href="/rt3/Ticket/Display.html?id=62948#txn-526818">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;30&nbsp;17:19:58&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.627271</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

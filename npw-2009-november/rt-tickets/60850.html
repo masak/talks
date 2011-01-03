@@ -1,0 +1,781 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60850: r33207: Multiple spectest failures on OS X</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60850">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60850: r33207: Multiple spectest failures on OS X</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60850">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60850</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60850">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+publiustemp-perl6compiler2 [at] yahoo.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60850">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+fail.txt<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/500328/234856/fail.txt">
+Tue Nov 25 23:38:58 2008 (25.4k) by publiustemp-perl6compiler2 <!-- x --> at yahoo.com
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60850">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500328" href="/rt3/Ticket/Display.html?id=60850#txn-500328">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;23:38:58&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6compiler2 <!-- x --> at yahoo.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">r33207: Multiple spectest failures on OS X</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 25 Nov 2008 23:38:22 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6compiler2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500328/234854/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I still have out of country guests, so I won&#39;t have much follow up time on this.  If there&#39;s specific help I can give, let me know and I&#39;ll see if I can squeeze in some time.<br />
+<br />
+Note that if you are using Test::Harness 3.X, you probably need to grab the latest version from Subversion:<br />
+<br />
+    svn co http://svn.hexten.net/tapx/trunk test_harness<br />
+<br />
+Otherwise, the t/spec/S12-classes/declaration-order.t failure will not show up in the summary.<br />
+<br />
+I&#39;ve also attached a the full output of &#39;make spectest&#39;.<br />
+<br />
+Summary of failures:<br />
+<br />
+  Test Summary Report<br />
+-------------------<br />
+t/spec/S02-literals/quoting.rakudo                           &#40;Wstat: 256 Tests: 0 Failed: 0&#41;<br />
+  Non-zero exit status: 1<br />
+  Parse errors: No plan found in TAP output<br />
+t/spec/S03-operators/increment.rakudo                        &#40;Wstat: 0 Tests: 41 Failed: 0&#41;<br />
+  TODO passed:   1, 3-4, 6, 8-9, 11-12, 14, 16<br />
+t/spec/S12-class/declaration-order.t                         &#40;Wstat: 6 Tests: 2 Failed: 0&#41;<br />
+  Non-zero wait status: 6<br />
+t/spec/S12-methods/default-trait.t                           &#40;Wstat: 0 Tests: 6 Failed: 1&#41;<br />
+  Failed test:  2<br />
+Files=224, Tests=6417, 295 wallclock secs &#40; 1.68 usr  0.88 sys + 489.80 cusr 24.57 csys = 516.93 CPU&#41;<br />
+Result: FAIL<br />
+<br />
+<br />
+uname -a<br />
+<br />
+$ uname -a<br />
+Darwin curtis-poes-computer-3.local 9.5.1 Darwin Kernel Version 9.5.1: Fri Sep 19 16:19:24 PDT 2008; root:xnu-1228.8.30~1/RELEASE_I386 i386<br />
+<br />
+$ cd ..<br />
+parrot $ svn info<br />
+Path: .<br />
+URL: https://svn.perl.org/parrot/trunk<br />
+Repository Root: https://svn.perl.org/parrot<br />
+Repository UUID: d31e2699-5ff4-0310-a27c-f18f2fbe73fe<br />
+Revision: 33207<br />
+Node Kind: directory<br />
+Schedule: normal<br />
+Last Changed Author: moritz<br />
+Last Changed Rev: 33207<br />
+Last Changed Date: 2008-11-25 21:43:42 +0000 &#40;Tue, 25 Nov 2008&#41;<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500328/234856/fail.txt">Download fail.txt</a>
+<span class="downloadcontenttype">
+[text/plain 25.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500346" href="/rt3/Ticket/Display.html?id=60850#txn-500346">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;04:07:40&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500346/234882/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 437b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi!<br />
+<br />
+Thanks for testing. :-&#41;<br />
+<br />
+On Tue Nov 25 23:38:58 2008, publiustemp-perl6compiler2 <!-- x --> at yahoo.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; t/spec/S12-methods/default-trait.t                           &#40;Wstat: 0<br />
+&gt; Tests: 6 Failed: 1&#41;<br />
+&gt;   Failed test:  2<br />
+&gt; <br />
+</div>
+I&#39;d be especially interested in the test output of this one &#40;or to know<br />
+if it&#39;s no longer failing with latest Rakudo&#41;. Since I was just working<br />
+on that recently, and can&#39;t reproduce a failure here.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500350" href="/rt3/Ticket/Display.html?id=60850#txn-500350">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;04:07:43&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500370" href="/rt3/Ticket/Display.html?id=60850#txn-500370">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;04:21:05&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6compiler2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60850] r33207: Multiple spectest failures on OS X</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 26 Nov 2008 04:20:44 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6compiler2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500370/234892/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 870b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+----- Original Message ----<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue Nov 25 23:38:58 2008, publiustemp-perl6compiler2 <!-- x --> at yahoo.com wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; t/spec/S12-methods/default-trait.t                           &#40;Wstat: 0<br />
+&gt; &gt; Tests: 6 Failed: 1&#41;<br />
+&gt; &gt;   Failed test:  2<br />
+&gt; &gt; <br />
+</div>
+&gt; I&#39;d be especially interested in the test output of this one &#40;or to know<br />
+&gt; if it&#39;s no longer failing with latest Rakudo&#41;. Since I was just working<br />
+&gt; on that recently, and can&#39;t reproduce a failure here.<br />
+</div>
+<br />
+I&#39;ll try to get to this later, but after work, I&#39;m heading out with friends.  If anyone else has OS X and can reproduce this, that would be fantastic.  I won&#39;t be home any time soon.<br />
+<br />
+ <br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500608" href="/rt3/Ticket/Display.html?id=60850#txn-500608">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;10:17:16&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6compiler2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60850] r33207: Multiple spectest failures on OS X</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 26 Nov 2008 10:16:44 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6compiler2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500608/235036/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<br />
+----- Original Message ----<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; From: &#34;jnthn <!-- x --> at jnthn.net via RT&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;<br />
+&gt;<br />
+&gt; Thanks for testing. :-&#41;<br />
+&gt; <br />
+&gt; On Tue Nov 25 23:38:58 2008, publiustemp-perl6compiler2 <!-- x --> at yahoo.com wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; t/spec/S12-methods/default-trait.t                           &#40;Wstat: 0<br />
+&gt; &gt; Tests: 6 Failed: 1&#41;<br />
+&gt; &gt;   Failed test:  2<br />
+&gt; &gt; <br />
+</div>
+&gt; I&#39;d be especially interested in the test output of this one &#40;or to know<br />
+&gt; if it&#39;s no longer failing with latest Rakudo&#41;. Since I was just working<br />
+&gt; on that recently, and can&#39;t reproduce a failure here.<br />
+</div>
+<br />
+t/spec/S12-methods/default-trait.t .. <br />
+oh yes<br />
+oh yes<br />
+oh yes<br />
+1..6<br />
+ok 1 - &#39;is default&#39; trait makes otherwise ambigous method dispatch live<br />
+not ok 2 - &#39;is default&#39; trait tie-breaks on method dispatch<br />
+ok 3 - &#39;is default&#39; trait makes otherwise ambigous method dispatch live<br />
+ok 4 - &#39;is default&#39; trait on subs<br />
+ok 5 - basic sanity with arity based dispatch and slurpies<br />
+ok 6 - &#34;is default&#34; trait wins against empty slurpy param<br />
+Failed 1/6 subtests <br />
+<br />
+Test Summary Report<br />
+-------------------<br />
+t/spec/S12-methods/default-trait.t &#40;Wstat: 0 Tests: 6 Failed: 1&#41;<br />
+  Failed test:  2<br />
+Files=1, Tests=6,  1 wallclock secs &#40; 0.02 usr  0.01 sys +  1.17 cusr  0.08 csys =  1.28 CPU&#41;<br />
+Result: FAIL<br />
+<br />
+The failing test:<br />
+<br />
+  class Something {<br />
+      multi method doit&#40;Int $x&#41;            { 2 * $x };<br />
+      multi method doit&#40;Int $x&#41; is default { 3 * $x };<br />
+  }<br />
+<br />
+  my $obj = Something.new&#40;&#41;;<br />
+  lives_ok { $obj.doit&#40;3&#41; }, &#34;&#39;is default&#39; trait makes otherwise ambigous method dispatch live&#34;;<br />
+  is $obj.doit&#40;3&#41;, 9, &#34;&#39;is default&#39; trait tie-breaks on method dispatch&#34;;  <br />
+  <br />
+$obj.doit&#40;3&#41; returns 6, not 9.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.43037</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

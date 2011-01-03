@@ -1,0 +1,2124 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59446: [PATCH] implement Closures and Regexes in .trans</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59446">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59446: [PATCH] implement Closures and Regexes in .trans</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59446">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59446</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59446">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cjfields [at] illinois.edu
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59446">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+trans.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/478654/222824/trans.diff">
+Wed Oct 01 19:47:10 2008 (11.4k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/478012/222526/trans.diff">
+Tue Sep 30 08:09:54 2008 (11.4k) by cjfields
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/477548/222220/trans.diff">
+Mon Sep 29 07:07:30 2008 (11.4k) by cjfields <!-- x --> at illinois.edu
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/477532/222204/trans.diff">
+Mon Sep 29 06:49:27 2008 (11.4k) by cjfields <!-- x --> at illinois.edu
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59446">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477532" href="/rt3/Ticket/Display.html?id=59446#txn-477532">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;06:49:27&nbsp;2008</td>
+    <td class="description">
+      cjfields <!-- x --> at illinois.edu -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] implement Closures and Regexes in .trans</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 29 Sep 2008 08:46:57 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Fields &lt;cjfields <!-- x --> at illinois.edu&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477532/222198/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached is a patch which implements preliminary support for Regexes  <br />
+and Closures and hews much closer to S05&#39;s definition of  <br />
+transliteration:<br />
+<br />
+1&#41; allowing Hashes/Lists as arguments, and<br />
+2&#41; spaces are important in Ranges: &#39;A .. Z&#39; is interpreted as a list  <br />
+of &#40;&#39;A&#39;, &#39; &#39;, &#39;Z&#39;&#41;, not &#40;&#39;A&#39;..&#39;Z&#39;&#41;<br />
+<br />
+A few unspec&#39;d portions are the modifiers and their long names:  <br />
+behavior of :c &#40;:complement&#41;, :d &#40;:delete&#41;, and :s &#40;:squash&#41; hasn&#39;t  <br />
+been covered in S05 yet, but the behavior is similar to what is found  <br />
+for p5 tr///.  These can be updated fairly easily when this is covered  <br />
+in more detail.  Also, a few spots in the patch will require future  <br />
+updating once Regex becomes a valid class and once HLL mapping is  <br />
+complete:<br />
+<br />
+1&#41; &#39;String&#39; is type-checked for one private multisub, &#39;!transtable&#39;;  <br />
+it should be &#39;Perl6Str&#39;. but this fails under some conditions<br />
+2&#41; Regex isn&#39;t implemented as a type yet &#40;it shows up as &#39;Block&#39; or  <br />
+&#39;Sub&#39;&#41;; I am type-checking it against &#39;Sub&#39; for now<br />
+<br />
+One unresolved issue: acc. to S05, in cases where the match is a Regex  <br />
+and the replacement is a Closure, the Match object is passed to the  <br />
+Closure.  This currently fails in Rakudo but I left this in the patch  <br />
+for bug testing.  The issue appears similar to RT 58352.  I&#39;ll look  <br />
+this issue up in RT and if needed I&#39;ll file as a separate bug; the  <br />
+following demonstrates the bug with the current patch applied:<br />
+<br />
+say &#34;ABC123DEF456GHI&#34;.trans&#40;<br />
+     [/ &lt;alpha&gt;+ /, &#39;B&#39;, &#39;C&#39;] =&gt; [{ &#39;foo&#39; } ,&#39;b&#39; , &#39;c&#39;]<br />
+     &#41;;<br />
+<br />
+say &#34;ABC123DEF456GHI&#34;.trans&#40;<br />
+     [/ &lt;alpha&gt;+ /, &#39;B&#39;, &#39;C&#39;] =&gt; [{ chr&#40;$0&#41; } ,&#39;b&#39; , &#39;c&#39;]<br />
+     &#41;;<br />
+<br />
+Error: Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+<br />
+<br />
+<br />
+<br />
+chris<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477532/222202/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 2.3k]
+</span> 
+</div>
+<div class="messagebody">
+Attached is a patch which implements preliminary support for Regexes and Closures and hews much closer to S05's definition of transliteration:<div><br><div>1) allowing Hashes/Lists as arguments, and</div><div>2) spaces are important in Ranges: 'A .. Z' is interpreted as a list of ('A', ' ', 'Z'), not ('A'..'Z')<div><br></div><div>A few unspec'd portions are the modifiers and their long names: behavior of :c (:complement), :d (:delete), and :s (:squash) hasn't been covered in S05 yet, but the behavior is similar to what is found for p5 tr///. &nbsp;These can be updated fairly easily when this is covered in more detail. &nbsp;Also, a few spots in the patch will require future updating once Regex becomes a valid class and once HLL mapping is complete:</div><div><br></div><div>1) 'String' is type-checked for one private multisub, '!transtable'; it should be 'Perl6Str'. but this fails under some conditions</div><div>2) Regex isn't implemented as a type yet (it shows up as 'Block' or 'Sub'); I am type-checking it against 'Sub' for now</div><div><br></div><div>One unresolved issue: acc. to S05, in cases where the match is a Regex and the replacement is a Closure, the Match object is passed to the Closure. &nbsp;This currently fails in Rakudo but I left this in the patch for bug testing. &nbsp;The issue appears similar to RT<span class="Apple-style-span"> 58352. &nbsp;I'll<span class="Apple-style-span">&nbsp;look this issue up in RT and if needed I'll file as a separate bug; the following demonstrates the bug with the current patch applied:</span></span></div><div><br></div><div><div>say "ABC123DEF456GHI".trans(</div><div>&nbsp;&nbsp; &nbsp;[/ &lt;alpha&gt;+ /, 'B', 'C'] =&gt; [{ 'foo' } ,'b' , 'c']</div><div>&nbsp;&nbsp; &nbsp;);</div><div><br></div><div>say "ABC123DEF456GHI".trans(</div><div>&nbsp;&nbsp; &nbsp;[/ &lt;alpha&gt;+ /, 'B', 'C'] =&gt; [{ chr($0) } ,'b' , 'c']</div><div>&nbsp;&nbsp; &nbsp;);</div><div><br></div><div><div>Error: Null PMC access in get_pmc_keyed_int()</div><div><br></div></div></div><div><br></div><div></div></div></div></div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477532/222204/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 11.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477532/222206/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 188b]
+</span> 
+</div>
+<div class="messagebody">
+<div><div><div></div><div><br></div><div>chris</div>
+</div></div></div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477538" href="/rt3/Ticket/Display.html?id=59446#txn-477538">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;06:49:30&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477548" href="/rt3/Ticket/Display.html?id=59446#txn-477548">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:07:30&nbsp;2008</td>
+    <td class="description">
+      cjfields <!-- x --> at illinois.edu - Ticket 59448:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] implement Closures and Regexes in .trans</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 29 Sep 2008 09:06:49 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Fields &lt;cjfields <!-- x --> at illinois.edu&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477548/222214/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached is a patch which implements preliminary support for Regexes  <br />
+and Closures and hews much closer to S05&#39;s definition of  <br />
+transliteration:<br />
+<br />
+1&#41; allowing Hashes/Lists as arguments, and<br />
+2&#41; spaces are important in Ranges: &#39;A .. Z&#39; is interpreted as a list  <br />
+of &#40;&#39;A&#39;, &#39; &#39;, &#39;Z&#39;&#41;, not &#40;&#39;A&#39;..&#39;Z&#39;&#41;<br />
+<br />
+A few unspec&#39;d portions are the modifiers and their long names:  <br />
+behavior of :c &#40;:complement&#41;, :d &#40;:delete&#41;, and :s &#40;:squash&#41; hasn&#39;t  <br />
+been covered in S05 yet, but the behavior is similar to what is found  <br />
+for p5 tr///.  These can be updated fairly easily when this is covered  <br />
+in more detail.  Also, a few spots in the patch will require future  <br />
+updating once Regex becomes a valid class and once HLL mapping is  <br />
+complete:<br />
+<br />
+1&#41; &#39;String&#39; is type-checked for one private multisub, &#39;!transtable&#39;;  <br />
+it should be &#39;Perl6Str&#39;. but this fails under some conditions<br />
+2&#41; Regex isn&#39;t implemented as a type yet &#40;it shows up as &#39;Block&#39; or  <br />
+&#39;Sub&#39;&#41;; I am type-checking it against &#39;Sub&#39; for now<br />
+<br />
+One unresolved issue: acc. to S05, in cases where the match is a Regex  <br />
+and the replacement is a Closure, the Match object is passed to the  <br />
+Closure.  This currently fails in Rakudo but I left this in the patch  <br />
+for bug testing.  The issue appears similar to RT 58352.  I&#39;ll look  <br />
+this issue up in RT and if needed I&#39;ll file as a separate bug; the  <br />
+following demonstrates the bug with the current patch applied:<br />
+<br />
+say &#34;ABC123DEF456GHI&#34;.trans&#40;<br />
+     [/ &lt;alpha&gt;+ /, &#39;B&#39;, &#39;C&#39;] =&gt; [{ &#39;foo&#39; } ,&#39;b&#39; , &#39;c&#39;]<br />
+     &#41;;<br />
+<br />
+say &#34;ABC123DEF456GHI&#34;.trans&#40;<br />
+     [/ &lt;alpha&gt;+ /, &#39;B&#39;, &#39;C&#39;] =&gt; [{ chr&#40;$0&#41; } ,&#39;b&#39; , &#39;c&#39;]<br />
+     &#41;;<br />
+<br />
+Error: Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+<br />
+<br />
+<br />
+<br />
+chris<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477548/222218/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 2.3k]
+</span> 
+</div>
+<div class="messagebody">
+Attached is a patch which implements preliminary support for Regexes and Closures and hews much closer to S05's definition of transliteration:<div><br><div>1) allowing Hashes/Lists as arguments, and</div><div>2) spaces are important in Ranges: 'A .. Z' is interpreted as a list of ('A', ' ', 'Z'), not ('A'..'Z')<div><br></div><div>A few unspec'd portions are the modifiers and their long names: behavior of :c (:complement), :d (:delete), and :s (:squash) hasn't been covered in S05 yet, but the behavior is similar to what is found for p5 tr///. &nbsp;These can be updated fairly easily when this is covered in more detail. &nbsp;Also, a few spots in the patch will require future updating once Regex becomes a valid class and once HLL mapping is complete:</div><div><br></div><div>1) 'String' is type-checked for one private multisub, '!transtable'; it should be 'Perl6Str'. but this fails under some conditions</div><div>2) Regex isn't implemented as a type yet (it shows up as 'Block' or 'Sub'); I am type-checking it against 'Sub' for now</div><div><br></div><div>One unresolved issue: acc. to S05, in cases where the match is a Regex and the replacement is a Closure, the Match object is passed to the Closure. &nbsp;This currently fails in Rakudo but I left this in the patch for bug testing. &nbsp;The issue appears similar to RT<span class="Apple-style-span"> 58352. &nbsp;I'll<span class="Apple-style-span">&nbsp;look this issue up in RT and if needed I'll file as a separate bug; the following demonstrates the bug with the current patch applied:</span></span></div><div><br></div><div><div>say "ABC123DEF456GHI".trans(</div><div>&nbsp;&nbsp; &nbsp;[/ &lt;alpha&gt;+ /, 'B', 'C'] =&gt; [{ 'foo' } ,'b' , 'c']</div><div>&nbsp;&nbsp; &nbsp;);</div><div><br></div><div>say "ABC123DEF456GHI".trans(</div><div>&nbsp;&nbsp; &nbsp;[/ &lt;alpha&gt;+ /, 'B', 'C'] =&gt; [{ chr($0) } ,'b' , 'c']</div><div>&nbsp;&nbsp; &nbsp;);</div><div><br></div><div><div>Error: Null PMC access in get_pmc_keyed_int()</div><div><br></div></div></div><div><br></div><div></div></div></div><span></span></div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477548/222220/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 11.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477548/222222/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 201b]
+</span> 
+</div>
+<div class="messagebody">
+<span></span><div><div><div></div><div><br></div><div>chris</div>
+</div></div></div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477554" href="/rt3/Ticket/Display.html?id=59446#txn-477554">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:07:33&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 59448:  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477574" href="/rt3/Ticket/Display.html?id=59446#txn-477574">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:13:59&nbsp;2008</td>
+    <td class="description">
+      cjfields - Ticket 59448:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477574/222238/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 60b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Duplicate message sent to rakudobug, so deleting this ticket<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477578" href="/rt3/Ticket/Display.html?id=59446#txn-477578">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:14:01&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 59448:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477580" href="/rt3/Ticket/Display.html?id=59446#txn-477580">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:14:01&nbsp;2008</td>
+    <td class="description">
+      cjfields - Ticket 59448:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477580/222242/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 60b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Duplicate message sent to rakudobug, so deleting this ticket<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477588" href="/rt3/Ticket/Display.html?id=59446#txn-477588">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:53:29&nbsp;2008</td>
+    <td class="description">
+      moritz - Ticket 59448:  Merged into ticket #59446
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477590" href="/rt3/Ticket/Display.html?id=59446#txn-477590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;07:53:29&nbsp;2008</td>
+    <td class="description">
+      moritz -  Merged into ticket #59446
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477592" href="/rt3/Ticket/Display.html?id=59446#txn-477592">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;08:17:08&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">pmichaud <!-- x --> at pobox.com</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477592/222250/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Sep 29 06:49:27 2008, cjfields <!-- x --> at illinois.edu wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Attached is a patch which implements preliminary support for Regexes  <br />
+&gt; and Closures and hews much closer to S05&#39;s definition of  <br />
+&gt; transliteration:<br />
+</div>
+<br />
+++ for the patch! From a short glance it looks sane, although I didn&#39;t<br />
+take the time yet to mentally cover most code paths.<br />
+ <br />
+<div class="message-stanza-depth-1">
+&gt; 1&#41; allowing Hashes/Lists as arguments, and<br />
+&gt; 2&#41; spaces are important in Ranges: &#39;A .. Z&#39; is interpreted as a list  <br />
+&gt; of &#40;&#39;A&#39;, &#39; &#39;, &#39;Z&#39;&#41;, not &#40;&#39;A&#39;..&#39;Z&#39;&#41;<br />
+</div>
+<br />
+There&#39;s one test in t/spec/S05-transliteration/trans.t that suggests<br />
+otherwise &#40;and is probably outdated in this respect&#41;, and fails when I<br />
+apply the patch. In the spirit of TDD it would be nice if you could<br />
+correct that test first, and mark it as todo &#40;#?rakudo todo &#39;RT #59446&#39;&#41;<br />
+until this patch is applied.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; A few unspec&#39;d portions are the modifiers and their long names:  <br />
+&gt; behavior of :c &#40;:complement&#41;, :d &#40;:delete&#41;, and :s &#40;:squash&#41; hasn&#39;t  <br />
+&gt; been covered in S05 yet, but the behavior is similar to what is found  <br />
+&gt; for p5 tr///. These can be updated fairly easily when this is covered  <br />
+&gt; in more detail. <br />
+</div>
+<br />
+That&#39;s good enough for me.<br />
+<br />
+If nobody objects within a few days &#40;or requests more time for a review&#41;<br />
+I&#39;ll apply it.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477596" href="/rt3/Ticket/Display.html?id=59446#txn-477596">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;08:17:12&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477614" href="/rt3/Ticket/Display.html?id=59446#txn-477614">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;29&nbsp;09:30:14&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477614/222268/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 288b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Changes to trans.t committed.  with-closures.t passes for me as well.  <br />
+<br />
+We could probably move some of those tests in trans.t to with_closures.t and possibly make a <br />
+new with_regexes.t.  I may post an updated patch if I can work around the aforementioned bug <br />
+or if I find anything odd.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478012" href="/rt3/Ticket/Display.html?id=59446#txn-478012">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;30&nbsp;08:09:54&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478012/222520/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 242b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Updated the patch &#40;against r31514&#41; to fix a bug.  Calls to Match.next were incorrect and <br />
+exposed a bug which caused closures to be invoked prematurely.  This has been replaced with <br />
+repeated calls to the Regex using the &#39;continue&#39; parameter.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478012/222526/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 11.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: languages/perl6/src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/src/builtins/any-str.pir    &#40;revision 31514&#41;<br />
++++ languages/perl6/src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -454,24 +454,37 @@<br />
+ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
+     .param pmc r<br />
+     .local pmc retval, tmps<br />
+-    retval = new &#39;ResizableStringArray&#39;<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
+     tmps = clone r<br />
+   range_loop:<br />
+     unless tmps, done<br />
+-    $S0 = tmps.&#39;shift&#39;&#40;&#41;<br />
+-    push retval, $S0<br />
++    $P0 = tmps.&#39;shift&#39;&#40;&#41;<br />
++    push retval, $P0<br />
+     goto range_loop<br />
+   done:<br />
+     .return&#40;retval&#41;<br />
+ .end<br />
+ <br />
+-.sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++# Handles Regexes and Closures<br />
++<br />
++.sub &#39;!transtable&#39; :multi&#40;&#39;Sub&#39;&#41;<br />
++    .param pmc r<br />
++    .local pmc retval<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
++    push retval, r<br />
++    .return&#40;retval&#41;<br />
++.end<br />
++<br />
++# TODO: Note the multisub type here should be &#39;Perl6Str&#39; or &#39;Str&#39;, but mapping<br />
++# issues currently prevent this from working correctly unless &#39;String&#39; is used<br />
++<br />
++.sub &#39;!transtable&#39; :multi&#40;&#39;String&#39;&#41;<br />
+     .param string str<br />
+-    .local pmc retval, prior, frm, to<br />
++    .local pmc retval, prior, frm, to, next_str<br />
+     .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
+     .local string p<br />
+-    retval = new &#39;ResizableStringArray&#39;<br />
+-    prior = new &#39;ResizableStringArray&#39;<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
++    prior = new &#39;ResizablePMCArray&#39;<br />
+     start = 0<br />
+     skipped = 0<br />
+     len = length str<br />
+@@ -488,21 +501,9 @@<br />
+   range_frm:<br />
+     $S0 = substr str, r_start, 1<br />
+     $I0 = ord $S0<br />
+-    # following code may be commented dep. on how we interpret<br />
+-    # spaces within ranges, like &#39;a .. b&#39;<br />
+-    unless $S0 == &#39; &#39; goto range_to<br />
+-    r_start -= 1<br />
+-    if r_start &lt; 0 goto illegal_range<br />
+-    goto range_frm<br />
+   range_to:<br />
+     $S1 = substr str, r_end, 1<br />
+     $I1 = ord $S1<br />
+-    # following code may be commented dep. on how we interpret<br />
+-    # spaces within ranges, like &#39;a .. b&#39;<br />
+-    unless $S1 == &#39; &#39; goto prev_string<br />
+-    r_end += 1<br />
+-    if r_end == len goto illegal_range<br />
+-    goto range_to<br />
+   prev_string:<br />
+     s_len = r_start - start<br />
+     s_len += skipped<br />
+@@ -512,7 +513,9 @@<br />
+   process_pstring:<br />
+     unless prior, start_range<br />
+     $S2 = shift prior<br />
+-    push retval, $S2<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S2<br />
++    push retval, next_str<br />
+     goto process_pstring<br />
+   start_range:<br />
+     if $I0 &gt; $I1 goto illegal_range<br />
+@@ -522,7 +525,9 @@<br />
+<div class="message-stanza-depth-1">
+     # If needed we can switch this over to use a true string Range<br />
+</div>
+     if $I0 &gt; $I1 goto next_loop<br />
+     $S2 = chr $I0<br />
+-    push retval, $S2<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S2<br />
++    push retval, next_str    <br />
+     inc $I0<br />
+     goto make_range<br />
+   illegal_range:<br />
+@@ -536,42 +541,76 @@<br />
+     goto next_index<br />
+   last_string:<br />
+     s_len = len - start<br />
+-    if s_len &lt;= 0 goto done<br />
++    if s_len &lt;= 0 goto check_rval<br />
+     p = substr str, start, s_len<br />
+     prior = split &#39;&#39;, p<br />
+   process_lstring:<br />
+-    unless prior, done<br />
++    unless prior, check_rval<br />
+     $S0 = shift prior<br />
+-    push retval, $S0<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S0<br />
++    push retval, next_str<br />
+     goto process_lstring<br />
++  check_rval:<br />
++    $I0 = elements retval<br />
++    if $I0 &gt; 0 goto done<br />
++    push retval, &#39;&#39;<br />
+   done:<br />
+     .return&#40;retval&#41;<br />
+ .end<br />
+ <br />
++<br />
+ .sub &#39;trans&#39; :method<br />
+     .param pmc args :slurpy<br />
+-    .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
+-    .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
+-    .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
+-    .local pmc pair<br />
+-    .local pmc table<br />
+-    .local pmc itable<br />
+-    .local pmc pkey<br />
+-    .local pmc pval<br />
+-    .local pmc retv<br />
+-    .local string tmps, k, v, lv, lastmatch, comp_match<br />
+-    .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
+-    table = new &#39;Hash&#39;<br />
+-    itable = new &#39;Hash&#39;<br />
++    .param pmc adverbs         :slurpy :named<br />
++    .local int del, comp, squash<br />
++    $I0 = exists adverbs[&#39;d&#39;]<br />
++    $I1 = exists adverbs[&#39;delete&#39;]<br />
++    del = $I0 || $I1<br />
++    $I0 = exists adverbs[&#39;c&#39;]<br />
++    $I1 = exists adverbs[&#39;complement&#39;]<br />
++    comp = $I0 || $I1<br />
++    $I0 = exists adverbs[&#39;s&#39;]<br />
++    $I1 = exists adverbs[&#39;squash&#39;]<br />
++    squash = $I0 || $I1<br />
++    #.param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
++    # TODO: unspec&#39;d behavior: above arguments are similar<br />
++    # to p5 tr/// but are not described in S05, need some<br />
++    # clarification on whether these are implemented correctly<br />
++    .local pmc table, itable, retv, comp_match<br />
++    .local int len, klen, vlen, adjpos, pos, ind, nhits<br />
++    .const .Sub ufo = &#34;infix:&lt;=&gt;&#34;<br />
++    # itable maps matching positions to key, value array<br />
++    itable = new &#39;Perl6Hash&#39;<br />
+     retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-    lv = &#39;&#39;<br />
+ <br />
++  init_pair_loop:<br />
++    .local pmc pair, pkey, pval, pairlist<br />
++    .local int isatype<br />
+   pair_loop:<br />
+-    unless args, st_trans<br />
++    unless args, init_trans<br />
+     pair = shift args<br />
+-    isa_pair = isa pair, &#39;Perl6Pair&#39;<br />
+-    unless isa_pair, pair_exception<br />
++    # following is a cludge to get around list context issues<br />
++    # should be removed once that works<br />
++    isatype = isa pair, &#39;Perl6Pair&#39;<br />
++    if isatype goto isa_pair<br />
++    isatype = isa pair, &#39;Hash&#39;<br />
++    if isatype goto isa_hash<br />
++    isatype = isa pair, &#39;List&#39;<br />
++    if isatype goto isa_list<br />
++    # change to Failure?<br />
++    die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++  isa_hash:<br />
++    pairlist = pair.&#39;pairs&#39;&#40;&#41;<br />
++    goto pairlist_loop<br />
++  isa_list:<br />
++    pairlist = clone pair<br />
++  pairlist_loop:<br />
++    unless pairlist, pair_loop<br />
++    pair = shift pairlist<br />
++    push args, pair<br />
++    goto pairlist_loop<br />
++  isa_pair:<br />
+     pkey = pair.&#39;key&#39;&#40;&#41;<br />
+     pval = pair.&#39;value&#39;&#40;&#41;<br />
+     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
+@@ -582,94 +621,185 @@<br />
+     pval = clone pkey<br />
+   comp_check:<br />
+<div class="message-stanza-depth-1">
+     # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
+</div>
+-    # many examples where this is used otherwise<br />
++    # any reliable examples where this is used otherwise<br />
+     comp_match = pval[0]<br />
+ <br />
++  init_mapping:<br />
++    .local pmc key, val, lastval<br />
++    .local string tmps, ks, prev_ks, vs, prev_vs<br />
++    .local int prev_pos<br />
++    tmps = self<br />
+   mapping:<br />
++    .local int k_isa_regex, v_isa_closure, pass_match<br />
++    .local pmc match<br />
+     unless pkey, pair_loop<br />
+-    k = shift pkey<br />
++    key = shift pkey<br />
+     unless pval, get_prev1<br />
+-    lv = shift pval<br />
++    lastval = shift pval<br />
+   get_prev1:<br />
+-    unless del, get_prev2<br />
+-    v = &#39;&#39;<br />
++    if del, get_prev2<br />
++    val = lastval<br />
++    goto init_index_loop<br />
+   get_prev2:<br />
+-    v = lv<br />
++    val = new &#39;Perl6Str&#39;<br />
++    val = &#39;&#39;<br />
++  init_index_loop:<br />
++    k_isa_regex = isa key, &#39;Sub&#39; # should be Regex<br />
++    v_isa_closure = isa val, &#39;Closure&#39;<br />
++    pass_match = k_isa_regex &#38;&#38; v_isa_closure<br />
+     nhits = 0<br />
+     pos = 0<br />
++    prev_pos = 0<br />
++    # assume key is always a Str for now &#40;will need to adjust for Regex&#41;<br />
++    unless k_isa_regex, index_loop<br />
++    match = self.&#39;match&#39;&#40;key&#41;<br />
++<br />
++  regex_loop:<br />
++    unless match goto mapping<br />
++    ind = match.&#39;from&#39;&#40;&#41;<br />
++    ks = match.&#39;text&#39;&#40;&#41;<br />
++    inc nhits<br />
++    goto check_hit<br />
+   index_loop:<br />
+-    ind = index tmps, k, pos<br />
+-    if ind == -1 goto check_elems<br />
++    ks = key<br />
++    ind = index tmps, ks, pos<br />
++    if ind == -1 goto mapping<br />
+     inc nhits<br />
+-    $S0 = itable[ind]<br />
+-    unless $S0, new_hit<br />
++  check_hit:<br />
++    klen = length ks<br />
++    $I0 = exists itable[ind]<br />
++    unless $I0, new_hit<br />
++    prev_ks = itable[ind;0]<br />
+<div class="message-stanza-depth-1">
+     # keep longest hit at that index<br />
+</div>
+-    $I0 = length $S0<br />
+-    $I1 = length k<br />
+-    if $I1 &lt; $I0 goto next_hit<br />
++    $I1 = length prev_ks<br />
++    if klen &lt; $I1 goto next_hit<br />
+   new_hit:<br />
+-    itable[ind] = k<br />
++    $P1 = new &#39;ResizablePMCArray&#39;<br />
++    push $P1, ks<br />
++    unless v_isa_closure, not_closure<br />
++    unless pass_match, simple_closure<br />
++  regex_closure:<br />
++    vs = val&#40;match&#41;<br />
++    goto push_val<br />
++  simple_closure:<br />
++    vs = val&#40;&#41;<br />
++    goto push_val<br />
++  not_closure:<br />
++    vs = val<br />
++  push_val:<br />
++    push $P1, vs<br />
++    itable[ind] = $P1<br />
+   next_hit:<br />
+-    pos = ind + 1<br />
+-    goto index_loop<br />
+-  check_elems:<br />
+-    unless nhits, mapping<br />
+-    table[k] = v<br />
+-    goto mapping<br />
++    prev_pos = ind<br />
++    pos = ind + klen<br />
++    prev_vs = vs<br />
++    unless k_isa_regex goto index_loop<br />
++    # Do we just grab the next match &#40;which may backtrack&#41;, or only grab longest<br />
++    # match? This will affect closures ...<br />
++    match = key&#40;tmps, &#39;continue&#39; =&gt; pos&#41;<br />
++    goto regex_loop<br />
+ <br />
++  init_trans:<br />
++    .local string lastmatch<br />
++    .local pmc hit_set, inv_set, inv_table, it<br />
++    .local int kvdiff, llm, pr_pos, st, end<br />
++    ks = &#39;&#39;<br />
++    vs = &#39;&#39;<br />
++    lastmatch = &#39;&#39;<br />
++    hit_set = new &#39;ResizableIntegerArray&#39;<br />
++  normal_hits:<br />
++    hit_set = itable.&#39;keys&#39;&#40;&#41;<br />
++    hit_set = hit_set.&#39;sort&#39;&#40;ufo&#41;<br />
++    unless comp, st_trans<br />
++  comp_hits:<br />
++    # if :c is indicated, rebuild complement set and use that instead<br />
++    # of original itable<br />
++    inv_table = new &#39;Perl6Hash&#39;<br />
++    st = 0<br />
++    end = 0<br />
++    len = length tmps<br />
++    inv_set = new &#39;ResizableIntegerArray&#39;<br />
++    it = hit_set.&#39;iterator&#39;&#40;&#41;<br />
++  comp_loop1:<br />
++    unless it, fence_post<br />
++    end = shift it<br />
++    ks = itable[end;0]<br />
++    klen = length ks<br />
++  comp_loop2:<br />
++    if st == len goto finish_comp<br />
++    if st == end goto comp_loop3<br />
++    # TODO: unspec&#39;d behavior<br />
++    # depending on how we want to implement complement, we could<br />
++    # modify the following to replace the entire unmatched range once<br />
++    # or each char &#40;latter implemented for now to match tests&#41;<br />
++    push inv_set, st<br />
++    $I0 = isa comp_match, &#39;Closure&#39;<br />
++    unless $I0, normal_complement2<br />
++    vs = comp_match&#40;&#41;<br />
++    goto finish_complement2<br />
++  normal_complement2:<br />
++    vs = comp_match<br />
++  finish_complement2:<br />
++    $P1 = new &#39;ResizablePMCArray&#39;<br />
++    push $P1, &#39;x&#39; # placeholder char; we can replace with substr if needed<br />
++    push $P1, vs<br />
++    inv_table[st] = $P1<br />
++    inc st<br />
++    goto comp_loop2<br />
++  comp_loop3:<br />
++    st = end<br />
++    st += klen<br />
++    goto comp_loop1<br />
++  fence_post:<br />
++    end = len<br />
++    goto comp_loop2<br />
++  finish_comp:<br />
++    hit_set = inv_set<br />
++    itable = inv_table<br />
++    <br />
+   st_trans:<br />
+-    len = length tmps<br />
+-    pos = 0<br />
+-    adjpos = 0<br />
+-    v = &#39;&#39;<br />
+-    k = &#39;&#39;<br />
+-    lastmatch = &#39;&#39;<br />
++    pos = 0 # original unadjusted position<br />
++    pr_pos = 0 # prior unadjusted position<br />
++    adjpos = 0 # adjusted position<br />
++    kvdiff = 0 # key-value string length diff<br />
++    klen = 0 # key len<br />
++    vlen = 0 # val len<br />
++    llm = 0 # orig end marker for longest leftmost match<br />
+ <br />
+   table_loop:<br />
+-    if pos &gt;= len goto done<br />
+-    k = itable[pos]<br />
+-    klen = length k<br />
+-    if comp goto complement<br />
+-  normal:<br />
+-    unless k, skip_pos<br />
+-    v = table[k]<br />
++    unless hit_set, done<br />
++    pos = shift hit_set<br />
++    ks = itable[pos;0]<br />
++    klen = length ks<br />
++    # skip matches between pos and end of llm<br />
++    if pos &lt; llm goto table_loop<br />
++    llm = pos + klen<br />
++    vs = itable[pos;1]<br />
++    vlen = length vs<br />
+     goto check_squash<br />
+-  complement:<br />
+-    # may need to change dep. on how we want :c to work<br />
+-    if k, skip_pos_comp<br />
+-    v = comp_match<br />
+-    klen = 1<br />
+   check_squash:<br />
+     unless squash, replace<br />
+-    unless v == lastmatch goto replace<br />
++    unless vs == lastmatch goto replace<br />
++    $I0 = pos - prev_pos<br />
++    unless $I0 == klen goto replace<br />
+     vlen = 0<br />
+-    substr tmps, adjpos, klen, &#39;&#39;<br />
++    prev_pos = pos<br />
++    pos += adjpos<br />
++    substr tmps, pos, klen, &#39;&#39;<br />
+     goto next_pos<br />
+   replace:<br />
+-    vlen = length v<br />
+-    substr tmps, adjpos, klen, v<br />
++    prev_pos = pos<br />
++    pos += adjpos<br />
++    substr tmps, pos, klen, vs<br />
+   next_pos:<br />
+-    pos      += klen<br />
+-    adjpos   += vlen<br />
+-    lastmatch = v<br />
++    kvdiff = klen - vlen<br />
++    adjpos -= kvdiff<br />
++    lastmatch = vs<br />
+     goto table_loop<br />
+-  skip_pos:<br />
+-    pos      += 1<br />
+-    adjpos   += 1<br />
+-    lastmatch = &#39;&#39;<br />
+-    goto table_loop<br />
+-  skip_pos_comp:<br />
+-    pos      += klen<br />
+-    adjpos   += klen<br />
+-    lastmatch = &#39;&#39;<br />
+-    goto table_loop<br />
+ <br />
+   done:<br />
+     retv = tmps<br />
+     .return&#40;retv&#41;<br />
+-<br />
+-  pair_exception:<br />
+-    die &#34;Must pass a List of Pairs for transliteration&#34;<br />
+ .end<br />
+ <br />
+ =item subst<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478654" href="/rt3/Ticket/Display.html?id=59446#txn-478654">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;19:47:10&nbsp;2008</td>
+    <td class="description">
+      cjfields -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478654/222818/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 135b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Latest patch fixes a bug which calls Closures prematurely; I&#39;ll add tests to with_closures.t to <br />
+catch that &#40;contingent on this patch&#41;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478654/222824/trans.diff">Download trans.diff</a>
+<span class="downloadcontenttype">
+[text/plain 11.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: languages/perl6/src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/src/builtins/any-str.pir    &#40;revision 31561&#41;<br />
++++ languages/perl6/src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -441,24 +441,37 @@<br />
+ .sub &#39;!transtable&#39; :multi&#40;_&#41;<br />
+     .param pmc r<br />
+     .local pmc retval, tmps<br />
+-    retval = new &#39;ResizableStringArray&#39;<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
+     tmps = clone r<br />
+   range_loop:<br />
+     unless tmps, done<br />
+-    $S0 = tmps.&#39;shift&#39;&#40;&#41;<br />
+-    push retval, $S0<br />
++    $P0 = tmps.&#39;shift&#39;&#40;&#41;<br />
++    push retval, $P0<br />
+     goto range_loop<br />
+   done:<br />
+     .return&#40;retval&#41;<br />
+ .end<br />
+ <br />
+-.sub &#39;!transtable&#39; :multi&#40;&#39;Perl6Str&#39;&#41;<br />
++# Handles Regexes and Closures<br />
++<br />
++.sub &#39;!transtable&#39; :multi&#40;&#39;Sub&#39;&#41;<br />
++    .param pmc r<br />
++    .local pmc retval<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
++    push retval, r<br />
++    .return&#40;retval&#41;<br />
++.end<br />
++<br />
++# TODO: Note the multisub type here should be &#39;Perl6Str&#39; or &#39;Str&#39;, but mapping<br />
++# issues currently prevent this from working correctly unless &#39;String&#39; is used<br />
++<br />
++.sub &#39;!transtable&#39; :multi&#40;&#39;String&#39;&#41;<br />
+     .param string str<br />
+-    .local pmc retval, prior, frm, to<br />
++    .local pmc retval, prior, frm, to, next_str<br />
+     .local int start, end, len, ind, skipped, r_start, r_end, s_len<br />
+     .local string p<br />
+-    retval = new &#39;ResizableStringArray&#39;<br />
+-    prior = new &#39;ResizableStringArray&#39;<br />
++    retval = new &#39;ResizablePMCArray&#39;<br />
++    prior = new &#39;ResizablePMCArray&#39;<br />
+     start = 0<br />
+     skipped = 0<br />
+     len = length str<br />
+@@ -475,21 +488,9 @@<br />
+   range_frm:<br />
+     $S0 = substr str, r_start, 1<br />
+     $I0 = ord $S0<br />
+-    # following code may be commented dep. on how we interpret<br />
+-    # spaces within ranges, like &#39;a .. b&#39;<br />
+-    unless $S0 == &#39; &#39; goto range_to<br />
+-    r_start -= 1<br />
+-    if r_start &lt; 0 goto illegal_range<br />
+-    goto range_frm<br />
+   range_to:<br />
+     $S1 = substr str, r_end, 1<br />
+     $I1 = ord $S1<br />
+-    # following code may be commented dep. on how we interpret<br />
+-    # spaces within ranges, like &#39;a .. b&#39;<br />
+-    unless $S1 == &#39; &#39; goto prev_string<br />
+-    r_end += 1<br />
+-    if r_end == len goto illegal_range<br />
+-    goto range_to<br />
+   prev_string:<br />
+     s_len = r_start - start<br />
+     s_len += skipped<br />
+@@ -499,7 +500,9 @@<br />
+   process_pstring:<br />
+     unless prior, start_range<br />
+     $S2 = shift prior<br />
+-    push retval, $S2<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S2<br />
++    push retval, next_str<br />
+     goto process_pstring<br />
+   start_range:<br />
+     if $I0 &gt; $I1 goto illegal_range<br />
+@@ -509,7 +512,9 @@<br />
+<div class="message-stanza-depth-1">
+     # If needed we can switch this over to use a true string Range<br />
+</div>
+     if $I0 &gt; $I1 goto next_loop<br />
+     $S2 = chr $I0<br />
+-    push retval, $S2<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S2<br />
++    push retval, next_str    <br />
+     inc $I0<br />
+     goto make_range<br />
+   illegal_range:<br />
+@@ -523,42 +528,75 @@<br />
+     goto next_index<br />
+   last_string:<br />
+     s_len = len - start<br />
+-    if s_len &lt;= 0 goto done<br />
++    if s_len &lt;= 0 goto check_rval<br />
+     p = substr str, start, s_len<br />
+     prior = split &#39;&#39;, p<br />
+   process_lstring:<br />
+-    unless prior, done<br />
++    unless prior, check_rval<br />
+     $S0 = shift prior<br />
+-    push retval, $S0<br />
++    next_str = new &#39;Perl6Str&#39;<br />
++    next_str = $S0<br />
++    push retval, next_str<br />
+     goto process_lstring<br />
++  check_rval:<br />
++    $I0 = elements retval<br />
++    if $I0 &gt; 0 goto done<br />
++    push retval, &#39;&#39;<br />
+   done:<br />
+     .return&#40;retval&#41;<br />
+ .end<br />
+ <br />
++<br />
+ .sub &#39;trans&#39; :method<br />
+     .param pmc args :slurpy<br />
+-    .param int del :named&#40;&#39;d&#39;&#41; :optional<br />
+-    .param int comp :named&#40;&#39;c&#39;&#41; :optional<br />
+-    .param int squash :named&#40;&#39;s&#39;&#41; :optional<br />
+-    .local pmc pair<br />
+-    .local pmc table<br />
+-    .local pmc itable<br />
+-    .local pmc pkey<br />
+-    .local pmc pval<br />
+-    .local pmc retv<br />
+-    .local string tmps, k, v, lv, lastmatch, comp_match<br />
+-    .local int len, klen, vlen, adjpos, pos, ind, nhits, isa_pair<br />
+-    table = new &#39;Hash&#39;<br />
+-    itable = new &#39;Hash&#39;<br />
++    .param pmc adverbs         :slurpy :named<br />
++    .local int del, comp, squash<br />
++    $I0 = exists adverbs[&#39;d&#39;]<br />
++    $I1 = exists adverbs[&#39;delete&#39;]<br />
++    del = $I0 || $I1<br />
++    $I0 = exists adverbs[&#39;c&#39;]<br />
++    $I1 = exists adverbs[&#39;complement&#39;]<br />
++    comp = $I0 || $I1<br />
++    $I0 = exists adverbs[&#39;s&#39;]<br />
++    $I1 = exists adverbs[&#39;squash&#39;]<br />
++    squash = $I0 || $I1<br />
++    # TODO: unspec&#39;d behavior: above arguments are similar<br />
++    # to p5 tr/// but are not described in S05, need some<br />
++    # clarification on whether these are implemented correctly<br />
++    .local pmc table, itable, retv, comp_match, by<br />
++    .local int len, klen, vlen, adjpos, pos, ind, nhits<br />
++    by = get_hll_global &#39;infix:&lt;=&gt;&#39;<br />
++    # itable maps matching positions to key, value array<br />
++    itable = new &#39;Perl6Hash&#39;<br />
+     retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-    lv = &#39;&#39;<br />
+ <br />
++  init_pair_loop:<br />
++    .local pmc pair, pkey, pval, pairlist<br />
++    .local int isatype<br />
+   pair_loop:<br />
+-    unless args, st_trans<br />
++    unless args, init_trans<br />
+     pair = shift args<br />
+-    isa_pair = isa pair, &#39;Perl6Pair&#39;<br />
+-    unless isa_pair, pair_exception<br />
++    # following is a cludge to get around list context issues<br />
++    # should be removed once that works<br />
++    isatype = isa pair, &#39;Perl6Pair&#39;<br />
++    if isatype goto isa_pair<br />
++    isatype = isa pair, &#39;Hash&#39;<br />
++    if isatype goto isa_hash<br />
++    isatype = isa pair, &#39;List&#39;<br />
++    if isatype goto isa_list<br />
++    # change to Failure?<br />
++    die &#34;Must pass a List of Pairs for transliteration&#34;<br />
++  isa_hash:<br />
++    pairlist = pair.&#39;pairs&#39;&#40;&#41;<br />
++    goto pairlist_loop<br />
++  isa_list:<br />
++    pairlist = clone pair<br />
++  pairlist_loop:<br />
++    unless pairlist, pair_loop<br />
++    pair = shift pairlist<br />
++    push args, pair<br />
++    goto pairlist_loop<br />
++  isa_pair:<br />
+     pkey = pair.&#39;key&#39;&#40;&#41;<br />
+     pval = pair.&#39;value&#39;&#40;&#41;<br />
+     pkey = &#39;!transtable&#39;&#40;pkey&#41;<br />
+@@ -569,96 +607,181 @@<br />
+     pval = clone pkey<br />
+   comp_check:<br />
+<div class="message-stanza-depth-1">
+     # for :c, I am using first element for replacing for now.  I can&#39;t find<br />
+</div>
+-    # many examples where this is used otherwise<br />
++    # any reliable examples where this is used otherwise<br />
+     comp_match = pval[0]<br />
+ <br />
++  init_mapping:<br />
++    .local pmc key, val, lastval, prev_val, prev_key<br />
++    .local string tmps<br />
++    .local int prev_pos, k_isa_regex<br />
++    tmps = self<br />
+   mapping:<br />
++    .local pmc match, km<br />
+     unless pkey, pair_loop<br />
+-    k = shift pkey<br />
++    key = shift pkey<br />
+     unless pval, get_prev1<br />
+-    lv = shift pval<br />
++    lastval = shift pval<br />
+   get_prev1:<br />
+-    unless del, get_prev2<br />
+-    v = &#39;&#39;<br />
++    if del, get_prev2<br />
++    val = lastval<br />
++    goto init_index_loop<br />
+   get_prev2:<br />
+-    v = lv<br />
++    val = new &#39;Perl6Str&#39;<br />
++    val = &#39;&#39;<br />
++  init_index_loop:<br />
+     nhits = 0<br />
+     pos = 0<br />
++    prev_pos = 0<br />
++    # assume key is always a Str for now &#40;will need to adjust for Regex&#41;<br />
++    k_isa_regex = isa key, &#39;Sub&#39; # should be Regex<br />
++    unless k_isa_regex, index_loop<br />
++<br />
++  regex_loop:<br />
++    match = key&#40;tmps, &#39;continue&#39; =&gt; pos&#41;<br />
++    unless match goto mapping<br />
++    ind = match.&#39;from&#39;&#40;&#41;<br />
++    km = match<br />
++    inc nhits<br />
++    goto check_hit<br />
+   index_loop:<br />
+-    ind = index tmps, k, pos<br />
+-    if ind == -1 goto check_elems<br />
++    km = key<br />
++    # change over to index method<br />
++    $S0 = key<br />
++    ind = index tmps, $S0, pos<br />
++    if ind == -1 goto mapping<br />
+     inc nhits<br />
+-    $S0 = itable[ind]<br />
+-    unless $S0, new_hit<br />
++  check_hit:<br />
++    klen = km.&#39;chars&#39;&#40;&#41;     # should work for Match, Str<br />
++    $I0 = exists itable[ind]<br />
++    unless $I0, new_hit<br />
++    prev_key = itable[ind;0]<br />
+<div class="message-stanza-depth-1">
+     # keep longest hit at that index<br />
+</div>
+-    $I0 = length $S0<br />
+-    $I1 = length k<br />
+-    if $I1 &lt; $I0 goto next_hit<br />
++    $I1 = prev_key.&#39;chars&#39;&#40;&#41;<br />
++    if klen &lt; $I1 goto next_hit<br />
+   new_hit:<br />
+-    itable[ind] = k<br />
++    $P1 = new &#39;ResizablePMCArray&#39;<br />
++    push $P1, km<br />
++    push $P1, val<br />
++    itable[ind] = $P1<br />
+   next_hit:<br />
+-    pos = ind + 1<br />
+-    goto index_loop<br />
+-  check_elems:<br />
+-    unless nhits, mapping<br />
+-    table[k] = v<br />
+-    goto mapping<br />
++    prev_pos = ind<br />
++    pos = ind + klen<br />
++    prev_val = val<br />
++    unless k_isa_regex goto index_loop<br />
++    # Do we just grab the next match &#40;which may backtrack&#41;, or only grab longest<br />
++    # match? This will affect closures ...<br />
++    goto regex_loop<br />
+ <br />
++  init_trans:<br />
++    .local pmc hit_set, inv_set, inv_table, it<br />
++    .local int kvdiff, llm, pr_pos, st, end<br />
++    .local string vs<br />
++    hit_set = new &#39;ResizableIntegerArray&#39;<br />
++  normal_hits:<br />
++    hit_set = itable.&#39;keys&#39;&#40;&#41;<br />
++    hit_set = hit_set.&#39;sort&#39;&#40;by&#41;<br />
++    unless comp, st_trans<br />
++  comp_hits:<br />
++    # if :c is indicated, rebuild complement set and use that instead<br />
++    # of original itable<br />
++    inv_table = new &#39;Perl6Hash&#39;<br />
++    st = 0<br />
++    end = 0<br />
++    len = length tmps<br />
++    inv_set = new &#39;ResizableIntegerArray&#39;<br />
++    it = hit_set.&#39;iterator&#39;&#40;&#41;<br />
++  comp_loop1:<br />
++    unless it, fence_post<br />
++    end = shift it<br />
++    key = itable[end;0]<br />
++    klen = key.&#39;chars&#39;&#40;&#41;<br />
++  comp_loop2:<br />
++    if st == len goto finish_comp<br />
++    if st == end goto comp_loop3<br />
++    # TODO: unspec&#39;d behavior<br />
++    # depending on how we want to implement complement, we could<br />
++    # modify the following to replace the entire unmatched range once<br />
++    # or each char &#40;latter implemented for now to match tests&#41;<br />
++    push inv_set, st<br />
++    $P1 = new &#39;ResizablePMCArray&#39;<br />
++    push $P1, &#39;x&#39; # placeholder char; we can replace with substr if needed<br />
++    push $P1, comp_match<br />
++    inv_table[st] = $P1<br />
++    inc st<br />
++    goto comp_loop2<br />
++  comp_loop3:<br />
++    st += klen<br />
++    goto comp_loop1<br />
++  fence_post:<br />
++    end = len<br />
++    goto comp_loop2<br />
++  finish_comp:<br />
++    hit_set = inv_set<br />
++    itable = inv_table<br />
++  <br />
+   st_trans:<br />
+-    len = length tmps<br />
+-    pos = 0<br />
+-    adjpos = 0<br />
+-    v = &#39;&#39;<br />
+-    k = &#39;&#39;<br />
++    .local int k_isa_match, v_isa_closure, pass_match<br />
++    .local pmc lastmatch, v<br />
++    lastmatch = new &#39;Perl6Str&#39;<br />
+     lastmatch = &#39;&#39;<br />
+-<br />
++    pos = 0 # original unadjusted position<br />
++    pr_pos = 0 # prior unadjusted position<br />
++    adjpos = 0 # adjusted position<br />
++    kvdiff = 0 # key-value string length diff<br />
++    klen = 0 # key len<br />
++    vlen = 0 # val len<br />
++    llm = 0 # orig end marker for longest leftmost match<br />
++    <br />
+   table_loop:<br />
+-    if pos &gt;= len goto done<br />
+-    k = itable[pos]<br />
+-    klen = length k<br />
+-    if comp goto complement<br />
+-  normal:<br />
+-    unless k, skip_pos<br />
+-    v = table[k]<br />
+-    goto check_squash<br />
+-  complement:<br />
+-    # may need to change dep. on how we want :c to work<br />
+-    if k, skip_pos_comp<br />
+-    v = comp_match<br />
+-    klen = 1<br />
++    unless hit_set, done<br />
++    pos = shift hit_set<br />
++    if pos &lt; llm goto table_loop<br />
++    key = itable[pos;0]<br />
++    k_isa_match = isa key, &#39;PGE::Match&#39;<br />
++    klen = key.&#39;chars&#39;&#40;&#41;<br />
++    # skip matches between pos and end of llm<br />
++    llm = pos + klen<br />
++    val = itable[pos;1]<br />
++    v_isa_closure = isa val, &#39;Closure&#39;<br />
++    pass_match = k_isa_match &#38;&#38; v_isa_closure<br />
++    unless v_isa_closure, not_closure<br />
++    unless pass_match, simple_closure<br />
++  regex_closure:<br />
++    val = val&#40;key&#41;<br />
++    goto not_closure<br />
++  simple_closure:<br />
++    val = val&#40;&#41;<br />
++  not_closure:<br />
++    vlen = val.&#39;chars&#39;&#40;&#41;<br />
+   check_squash:<br />
+     unless squash, replace<br />
+-    unless v == lastmatch goto replace<br />
++    # should these be stringified prior to squash?<br />
++    unless lastmatch goto replace<br />
++    unless val == lastmatch goto replace<br />
++    $I0 = pos - prev_pos<br />
++    unless $I0 == klen goto replace<br />
+     vlen = 0<br />
+-    substr tmps, adjpos, klen, &#39;&#39;<br />
++    prev_pos = pos<br />
++    pos += adjpos<br />
++    substr tmps, pos, klen, &#39;&#39;<br />
+     goto next_pos<br />
+   replace:<br />
+-    vlen = length v<br />
+-    substr tmps, adjpos, klen, v<br />
++    prev_pos = pos<br />
++    pos += adjpos<br />
++    $S0 = val<br />
++    substr tmps, pos, klen, $S0<br />
+   next_pos:<br />
+-    pos      += klen<br />
+-    adjpos   += vlen<br />
+-    lastmatch = v<br />
++    kvdiff = klen - vlen<br />
++    adjpos -= kvdiff<br />
++    lastmatch = val<br />
+     goto table_loop<br />
+-  skip_pos:<br />
+-    pos      += 1<br />
+-    adjpos   += 1<br />
+-    lastmatch = &#39;&#39;<br />
+-    goto table_loop<br />
+-  skip_pos_comp:<br />
+-    pos      += klen<br />
+-    adjpos   += klen<br />
+-    lastmatch = &#39;&#39;<br />
+-    goto table_loop<br />
+ <br />
+   done:<br />
+     retv = tmps<br />
+     .return&#40;retv&#41;<br />
+-<br />
+-  pair_exception:<br />
+-    die &#34;Must pass a List of Pairs for transliteration&#34;<br />
+ .end<br />
+ <br />
++<br />
+ =item subst<br />
+ <br />
+  our Str method Str::subst &#40; Any $string: Any $substring, Any $replacement &#41;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478760" href="/rt3/Ticket/Display.html?id=59446#txn-478760">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;02&nbsp;00:48:16&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478760/222890/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 268b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Oct 01 19:47:10 2008, cjfields wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Latest patch fixes a bug which calls Closures prematurely; I&#39;ll add<br />
+&gt; tests to with_closures.t to<br />
+&gt; catch that &#40;contingent on this patch&#41;<br />
+</div>
+<br />
+Thank you very much, applied as r31562 &#40;modulo trailing ws coding<br />
+standard fixes&#41;.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478764" href="/rt3/Ticket/Display.html?id=59446#txn-478764">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;02&nbsp;00:48:17&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.542945</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

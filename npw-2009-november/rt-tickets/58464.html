@@ -1,0 +1,1175 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58464: Match bug, $0 empty</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58464">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58464: Match bug, $0 empty</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58464">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58464</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58464">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ihrd
+&lt;forihrd [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58464">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58464">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-464794" href="/rt3/Ticket/Display.html?id=58464#txn-464794">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;30&nbsp;07:17:06&nbsp;2008</td>
+    <td class="description">
+      ihrd -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 31 Aug 2008 01:16:37 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/464794/215278/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 153b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi!<br />
+<br />
+my $string = &#39;%CD&#39;;<br />
+while &#40; $string ~~ /\%&#40;..&#41;/ &#41; {<br />
+   my $match = $0;<br />
+}<br />
+<br />
+that die with Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+<br />
+Ihrd<br />
+Vladivostok.pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-464808" href="/rt3/Ticket/Display.html?id=58464#txn-464808">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;30&nbsp;07:41:01&nbsp;2008</td>
+    <td class="description">
+      ihrd - Ticket 58466:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 31 Aug 2008 01:40:37 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/464808/215284/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Oh, excuse me:<br />
+---<br />
+osname= linux<br />
+osvers= 2.6.15.7<br />
+arch=   i486-linux-gnu-thread-multi<br />
+cc=     cc<br />
+---<br />
+Flags:<br />
+    category=core<br />
+    severity=critical<br />
+    ack=no<br />
+---<br />
+<br />
+---<br />
+Summary of my parrot 0.7.0 &#40;r30645&#41; configuration:<br />
+  configdate=&#39;Sat Aug 30 04:01:46 2008 GMT&#39;<br />
+  Platform:<br />
+    osname=linux, archname=i486-linux-gnu-thread-multi<br />
+    jitcapable=1, jitarchname=i386-linux,<br />
+    jitosname=LINUX, jitcpuarch=i386<br />
+    execcapable=1<br />
+    perl=/usr/local/bin/perl<br />
+  Compiler:<br />
+    cc=&#39;cc&#39;, ccflags=&#39;-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS<br />
+-DDEBIAN  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE<br />
+-D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED<br />
+ -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL<br />
+-DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED<br />
+-DHASATTRIBUTE_WARN_UNUSED_RESULT  -falign-functions=16<br />
+-fvisibility=hidden -maccumulate-outgoing-args -W -Wall<br />
+-Waggregate-return -Wcast-align -Wcast-qual -Wchar-subscripts<br />
+-Wcomment -Wdisabled-optimization -Wendif-labels -Wextra -Wformat<br />
+-Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k<br />
+-Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch<br />
+-Wmissing-braces -Wmissing-field-initializers<br />
+-Wno-missing-format-attribute -Wmissing-include-dirs -Wpacked<br />
+-Wparentheses -Wpointer-arith -Wreturn-type -Wsequence-point<br />
+-Wno-shadow -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2<br />
+-Wswitch -Wswitch-default -Wtrigraphs -Wundef -Wunknown-pragmas<br />
+-Wno-unused -Wvariadic-macros -Wwrite-strings -Wbad-function-cast<br />
+-Wc++-compat -Wdeclaration-after-statement<br />
+-Wimplicit-function-declaration -Wimplicit-int -Wmain<br />
+-Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wnonnull<br />
+-DDISABLE_GC_DEBUG=1 -DNDEBUG -O2 -DHAS_GETTEXT&#39;,<br />
+<br />
+<br />
+2008/8/31 Илья &lt;forihrd <!-- x --> at gmail.com&gt;:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi!<br />
+&gt;<br />
+&gt; my $string = &#39;%CD&#39;;<br />
+&gt; while &#40; $string ~~ /\%&#40;..&#41;/ &#41; {<br />
+&gt;   my $match = $0;<br />
+&gt; }<br />
+&gt;<br />
+&gt; that die with Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+&gt;<br />
+&gt; Ihrd<br />
+&gt; Vladivostok.pm<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465004" href="/rt3/Ticket/Display.html?id=58464#txn-465004">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;30&nbsp;15:22:38&nbsp;2008</td>
+    <td class="description">
+      ihrd - Ticket 58474:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 31 Aug 2008 09:22:16 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465004/215396/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+And excuse me again -- open ticket #58352 about that problem.<br />
+<br />
+2008/8/31 Илья &lt;forihrd <!-- x --> at gmail.com&gt;:<br />
+<div class="message-stanza-depth-1">
+&gt; Oh, excuse me:<br />
+&gt; ---<br />
+&gt; osname= linux<br />
+&gt; osvers= 2.6.15.7<br />
+&gt; arch=   i486-linux-gnu-thread-multi<br />
+&gt; cc=     cc<br />
+&gt; ---<br />
+&gt; Flags:<br />
+&gt;    category=core<br />
+&gt;    severity=critical<br />
+&gt;    ack=no<br />
+&gt; ---<br />
+&gt;<br />
+&gt; ---<br />
+&gt; Summary of my parrot 0.7.0 &#40;r30645&#41; configuration:<br />
+&gt;  configdate=&#39;Sat Aug 30 04:01:46 2008 GMT&#39;<br />
+&gt;  Platform:<br />
+&gt;    osname=linux, archname=i486-linux-gnu-thread-multi<br />
+&gt;    jitcapable=1, jitarchname=i386-linux,<br />
+&gt;    jitosname=LINUX, jitcpuarch=i386<br />
+&gt;    execcapable=1<br />
+&gt;    perl=/usr/local/bin/perl<br />
+&gt;  Compiler:<br />
+&gt;    cc=&#39;cc&#39;, ccflags=&#39;-D_REENTRANT -D_GNU_SOURCE -DTHREADS_HAVE_PIDS<br />
+&gt; -DDEBIAN  -pipe -I/usr/local/include -D_LARGEFILE_SOURCE<br />
+&gt; -D_FILE_OFFSET_BITS=64 -DHASATTRIBUTE_CONST  -DHASATTRIBUTE_DEPRECATED<br />
+&gt;  -DHASATTRIBUTE_MALLOC  -DHASATTRIBUTE_NONNULL<br />
+&gt; -DHASATTRIBUTE_NORETURN  -DHASATTRIBUTE_PURE  -DHASATTRIBUTE_UNUSED<br />
+&gt; -DHASATTRIBUTE_WARN_UNUSED_RESULT  -falign-functions=16<br />
+&gt; -fvisibility=hidden -maccumulate-outgoing-args -W -Wall<br />
+&gt; -Waggregate-return -Wcast-align -Wcast-qual -Wchar-subscripts<br />
+&gt; -Wcomment -Wdisabled-optimization -Wendif-labels -Wextra -Wformat<br />
+&gt; -Wformat-extra-args -Wformat-nonliteral -Wformat-security -Wformat-y2k<br />
+&gt; -Wimplicit -Wimport -Winit-self -Winline -Winvalid-pch<br />
+&gt; -Wmissing-braces -Wmissing-field-initializers<br />
+&gt; -Wno-missing-format-attribute -Wmissing-include-dirs -Wpacked<br />
+&gt; -Wparentheses -Wpointer-arith -Wreturn-type -Wsequence-point<br />
+&gt; -Wno-shadow -Wsign-compare -Wstrict-aliasing -Wstrict-aliasing=2<br />
+&gt; -Wswitch -Wswitch-default -Wtrigraphs -Wundef -Wunknown-pragmas<br />
+&gt; -Wno-unused -Wvariadic-macros -Wwrite-strings -Wbad-function-cast<br />
+&gt; -Wc++-compat -Wdeclaration-after-statement<br />
+&gt; -Wimplicit-function-declaration -Wimplicit-int -Wmain<br />
+&gt; -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wnonnull<br />
+&gt; -DDISABLE_GC_DEBUG=1 -DNDEBUG -O2 -DHAS_GETTEXT&#39;,<br />
+&gt;<br />
+&gt;<br />
+&gt; 2008/8/31 Илья &lt;forihrd <!-- x --> at gmail.com&gt;:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Hi!<br />
+&gt;&gt;<br />
+&gt;&gt; my $string = &#39;%CD&#39;;<br />
+&gt;&gt; while &#40; $string ~~ /\%&#40;..&#41;/ &#41; {<br />
+&gt;&gt;   my $match = $0;<br />
+&gt;&gt; }<br />
+&gt;&gt;<br />
+&gt;&gt; that die with Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+&gt;&gt;<br />
+&gt;&gt; Ihrd<br />
+&gt;&gt; Vladivostok.pm<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465038" href="/rt3/Ticket/Display.html?id=58464#txn-465038">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;05:17:09&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58464] Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 31 Aug 2008 14:16:46 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465038/215428/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 189b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ihrd &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; my $string = &#39;%CD&#39;;<br />
+&gt; while &#40; $string ~~ /\%&#40;..&#41;/ &#41; {<br />
+&gt;   my $match = $0;<br />
+&gt; }<br />
+&gt;<br />
+&gt; that die with Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+</div>
+<br />
+I think this bug is the same as #58352.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465042" href="/rt3/Ticket/Display.html?id=58464#txn-465042">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;05:17:11&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465044" href="/rt3/Ticket/Display.html?id=58464#txn-465044">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;05:22:11&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58464] Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 31 Aug 2008 14:21:48 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465044/215432/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 501b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Carl &#40;&gt;&#41;, Ihrd &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; my $string = &#39;%CD&#39;;<br />
+&gt;&gt; while &#40; $string ~~ /\%&#40;..&#41;/ &#41; {<br />
+&gt;&gt;   my $match = $0;<br />
+&gt;&gt; }<br />
+&gt;&gt;<br />
+&gt;&gt; that die with Null PMC access in get_pmc_keyed_int&#40;&#41;<br />
+</div>
+&gt;<br />
+&gt; I think this bug is the same as #58352.<br />
+</div>
+<br />
+And thus it can be worked around, for the time being, doing this:<br />
+<br />
+my $string = &#39;%CD&#39;;<br />
+while $string ~~ /\%&#40;..&#41;/ {<br />
+  $string ~~ /\%&#40;..&#41;/<br />
+  my $match = $0;<br />
+}<br />
+<br />
+...or by using binding, as moritz++ discovered:<br />
+<br />
+my $string = &#39;%CD&#39;;<br />
+my $M := $string ~~ /\%&#40;..&#41;/;<br />
+while $M {<br />
+  my $match = $M[0];<br />
+}<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465048" href="/rt3/Ticket/Display.html?id=58464#txn-465048">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;06:11:20&nbsp;2008</td>
+    <td class="description">
+      dland - Ticket 58466:  Merged into ticket #58464
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465050" href="/rt3/Ticket/Display.html?id=58464#txn-465050">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;06:11:20&nbsp;2008</td>
+    <td class="description">
+      dland -  Merged into ticket #58464
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465052" href="/rt3/Ticket/Display.html?id=58464#txn-465052">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;06:11:35&nbsp;2008</td>
+    <td class="description">
+      dland - Ticket 58474:  Merged into ticket #58464
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465054" href="/rt3/Ticket/Display.html?id=58464#txn-465054">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;31&nbsp;06:11:35&nbsp;2008</td>
+    <td class="description">
+      dland -  Merged into ticket #58464
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465178" href="/rt3/Ticket/Display.html?id=58464#txn-465178">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;01&nbsp;04:28:01&nbsp;2008</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58474] Re: Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 1 Sep 2008 22:06:50 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465178/215486/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 275b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi!<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I think this bug is the same as #58352.<br />
+</div>
+Yes, it is. I try to say that when I &#34;And excuse me again -- open<br />
+ticket #58352 about that problem.&#34;<br />
+excuse my bad English &#40;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; And thus it can be worked around, for the time being, doing this:<br />
+&gt; &lt;...&gt;<br />
+</div>
+Ok! I will use it;<br />
+<br />
+Ilya<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465184" href="/rt3/Ticket/Display.html?id=58464#txn-465184">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Sep&nbsp;01&nbsp;06:50:54&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58474] Re: Match bug, $0 empty</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 1 Sep 2008 15:50:24 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465184/215492/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 613b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Илья &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; I think this bug is the same as #58352.<br />
+</div>
+&gt;<br />
+&gt; Yes, it is. I try to say that when I &#34;And excuse me again -- open<br />
+&gt; ticket #58352 about that problem.&#34;<br />
+</div>
+<br />
+No problem -- there was a bit of lag on the mailing list, that&#39;s all.<br />
+I got your self-reply after I wrote my reply, even though you sent it<br />
+before.<br />
+<br />
+&#40;Also, It&#39;s partly a good thing that the same bug is reported many<br />
+times -- it gives Rakudo implementors a hint that many people in<br />
+parallel are running up against the same bug. In this case, it also<br />
+gave me a chance to tell you how we are currently directing around the<br />
+problem. Win-win.&#41;<br />
+<br />
+// Carl<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507822" href="/rt3/Ticket/Display.html?id=58464#txn-507822">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;12:57:06&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/507822/238928/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 193b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+As far as I can tell, this issue was fixed with lexicals &#40;RT #58352&#41;, so<br />
+I&#39;m marking this ticket resolved.  If the issue appears again, please<br />
+reopen this ticket or open a new one.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507828" href="/rt3/Ticket/Display.html?id=58464#txn-507828">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;12:57:09&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-507832" href="/rt3/Ticket/Display.html?id=58464#txn-507832">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;15&nbsp;12:57:12&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.575412</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

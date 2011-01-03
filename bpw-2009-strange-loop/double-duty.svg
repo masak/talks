@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg8436">
+  <defs
+     id="defs8438">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         id="path4537"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         id="path4540"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path4552"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <linearGradient
+       id="linearGradient8959">
+      <stop
+         id="stop8961"
+         style="stop-color:#adadad;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop8963"
+         style="stop-color:#ebebeb;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient8965"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-5.0473006,186.75012)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient8976"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-5.0473006,186.75012)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient8981"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,186.75012)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient8996"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,186.75012)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9001"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9016"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9026"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9031"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,-122.39704)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9033"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9038"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9050"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,186.75012)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9052"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9054"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,-122.39704)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9076"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient5976"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+  </defs>
+    <g
+       transform="translate(39.956261,-55.053635)"
+       id="g9040">
+      <rect
+         width="320.5036"
+         height="133.75348"
+         rx="17.716536"
+         ry="17.716536"
+         x="365.92929"
+         y="357.97598"
+         id="rect8990"
+         style="opacity:0.98999999;fill:url(#linearGradient5976);fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         x="493.61761"
+         y="437.01682"
+         id="text8992"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="493.61761"
+           y="437.01682"
+           id="tspan8994">PGE</tspan></text>
+    </g>
+    <g
+       transform="translate(39.956261,-2.2481537)"
+       id="g5934">
+      <path
+         d="m 225.8667,192.67688 c 1.31789,107.89034 56.59623,140.70528 135.01529,141.32442"
+         id="path4016"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:none;marker-end:url(#Arrow1Mend)" />
+      <text
+         x="224.60487"
+         y="171.22586"
+         id="text5916"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="224.60487"
+           y="171.22586"
+           id="tspan5918">Perl 6 program</tspan></text>
+    </g>
+    <g
+       transform="translate(39.956261,-2.2481537)"
+       id="g5939">
+      <path
+         d="M 822.84371,196.46236 C 821.52582,304.3527 766.24748,337.16764 687.82842,337.78678"
+         id="path5534"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-mid:none;marker-end:none" />
+      <text
+         x="822.71002"
+         y="171.33133"
+         id="text5926"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="822.71002"
+           y="171.33133"
+           id="tspan5928">AST</tspan></text>
+    </g>
+    <g
+       transform="translate(39.956261,-2.2481537)"
+       id="g5944">
+      <path
+         d="M 225.8667,553.28247 C 227.18459,445.39213 282.46293,412.57719 360.88199,411.95805"
+         id="path5532"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:none;marker-end:url(#Arrow1Mend)" />
+      <text
+         x="225.8667"
+         y="592.67548"
+         id="text5920"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="225.8667"
+           y="592.67548"
+           id="tspan5922">Perl 6 regex</tspan></text>
+    </g>
+    <g
+       transform="translate(39.956261,-2.2481537)"
+       id="g5949">
+      <path
+         d="M 822.84371,557.06795 C 821.52582,449.17761 766.24748,416.36267 687.82842,415.74353"
+         id="path5536"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-mid:none;marker-end:none" />
+      <text
+         x="822.71002"
+         y="595.50555"
+         id="text5930"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="822.71002"
+           y="595.50555"
+           id="tspan5932">$/</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,456 @@
+=for head1 :image<durian.jpg>
+    Perl 6
+
+The thing about the durian
+
+Hi, I'm C<masak>
+
+=for head1 :image<durian.jpg>
+    Easy things easy, hard things possible
+
+Work your way up
+
+Learn-by-need
+
+Perl 6 takes Perl 5 and cleans it up
+
+10 years
+
+There's some madness to the method after all
+
+=for head1 :image<durian.jpg>
+    Introducing Perl 6
+
+Problem
+
+Too broad
+
+Too deep
+
+C<@brains».explode()>
+
+=for head1 :image<durian.jpg>
+    Badges
+
+Bronze badge — working knowledge
+
+Silver badge — details and stuff
+
+Gold badge — behind the scenes
+
+Important: badgier ≠ better
+
+=for head1 :image<durian.jpg>
+    Four areas
+
+From small to large
+
+Operators
+
+Subroutines
+
+Object orientation
+
+Parsing
+
+=for head1 :image<durian.jpg>
+    Operators — Bronze badge
+
+Basic operators.
+
+    + - * / %
+
+    <  >  == !=
+    lt gt eq ne
+    ~~
+    
+    &&  || !
+    and or not
+    &   |
+    
+    + ~ ?
+
+Junctions.
+
+    if $answer == 1 | 3 | 5 {
+        ...
+    }
+
+=for head1 :image<durian.jpg>
+    Operators — Silver badge
+
+Meta operators.
+
+    +  -  *  /  %
+    =+ -+ *= /= %=
+    
+    $a += 42;   # means $a = $a + 42
+    $a.=flip;   # means $a = $a.flip
+    
+    # You can put '=' after any operator
+
+     Metaop  does       example
+     ------  ----       -------
+    
+     =       assignment  +=
+     !       negation    !~~
+     « »     hyper       «-»
+     [ ]     reduction   [+]
+     X       cross       X*
+     Z       zip         Z~
+
+=for head1 :image<durian.jpg>
+    Operators — Gold badge
+
+The long names of operators.
+
+    infix:<+>
+    prefix:<+>
+    
+    postfix:<++>
+    circumfix:<( )>
+    postcircumfix:<[ ]>
+
+Operator overloading.
+
+    sub postfix:<!>(Int $n) {
+        [*] 1..$n
+    }
+    say 5!;     # 120
+
+    multi infix:<+>(MyType $a, MyType $b) {
+        ...
+    }
+    =Hi 'multi'
+
+Get your metaops for free.
+
+=for head1 :image<durian.jpg>
+    Subroutines — Bronze badge
+
+Type signatures.
+
+    Perl 5:
+    
+    sub foo {
+        my ($a, $b, $c) = @_;
+        ...
+    }
+
+    Perl 6:
+    
+    sub foo($a, $b, $c) {
+        ...
+    }
+
+Type contraints.
+
+    sub check-age($name, $age) {
+        say "Checking the age of $name...";
+    }
+
+    sub check-age(Str $name, Int $age) {
+        say "Checking the age of $name...";
+    }
+    =Hi 'Str'
+    =Hi 'Int'
+
+=for head1 :image<durian.jpg>
+    Subroutines — Silver badge
+
+Multi subs.
+
+    multi check-age(Str $name,
+                    Int $age where { $age < 18 }) {
+        say "You are too young!";
+    }
+    
+    multi check-age(Str $name, Int $age) {
+        say "Welcome in!";
+    }
+    =Hi 'where'
+    =Hi 'multi'
+
+All the built-in subs are multi subs.
+
+C<.substr>
+
+=for head1 :image<durian.jpg>
+    Subroutines — Gold badge
+
+Dispatchers.
+
+(Under construction.)
+
+=for head1 :image<durian.jpg>
+    OO — Bronze badge
+
+C<class>, C<has> and C<method>.
+
+    class Food {
+        has $.name;
+        has $.flavor is rw;
+        
+        method eat {
+            say "Mmm, $.name — it's really $.flavor!";
+        }
+    }
+    =Hi /'$.'\w+/
+
+    my $breakfast = Food.new(name => 'müsli',
+                             flavor => 'wholesome');
+    say $breakfast.name;
+    say $breakfast.flavor;
+    
+    my $dinner = Food.new(:name('nasi goreng'),
+                          :flavor<yummy>);
+    $dinner.eat();
+    # "Mmm, nasi goreng — it's really yummy!"
+
+Inheritance.
+
+    class SwedishFood is Food {
+        # still has $.name and $.flavor
+        
+        method eat {
+            say "$.name mit de $.flavor fleyvor!"
+        }
+    }
+
+    my $dinner = SwedishFood.name(:name<Meatballs>,
+                                  :flavor<meati>);
+    say $dinner.flavor; # "meati"
+    $dinner.eat; # "Meatballs vit de meati fleyvor!"
+
+=for head1 :image<durian.jpg>
+    OO — Silver badge
+
+Public and private.
+
+    class Quiz {
+        has @.guesses;
+        has $!answer is rw;
+    
+        method make-new-guess() { ... }
+    }
+
+Multiple inheritance.
+
+    class LightSource {
+        has $.brightness;   # in lux
+    }
+    
+    class GlowingFood is Food is LightSource {
+        # ah, the miracles of science!
+    }
+
+    my $dinner = GlowingFood.new(
+        :name('glowing jelly'),
+        :flavor<brilliant>);
+    
+    $dinner.eat();
+    # "Mmm, glowing jelly — it's really brilliant!"
+
+Problem with multi inheritance: method collision.
+
+    class Gymnast {
+        method go-to-bar { say "whee!" }
+    }
+    class Drinker {
+        method go-to-bar { say "glug glug" }
+    }
+    
+    class DrunkGymnast is Gymnast is Drinker { ... }
+    DrunkGymnast.new.go-to-bar;  # ???
+
+Multi inheritance: don't use it.
+
+Use roles!
+
+    role Logging { ... }
+    
+    class MyBusinessManager does Logging {
+        ...
+    }
+    =Hi 'does'
+
+Solved MI problem is solved!
+
+    role Gymnastics {
+        method go-to-bar { say "whee!" }
+    }
+    role Drinking {
+        method go-to-bar { say "glug glug" }
+    }
+    
+    class DrunkGymnast does Gymnastics does Drinking {
+        ...
+    }
+    
+    DrunkGymnast.new.go-to-bar;  # ???
+    =Hi /role/
+    =Hi 'does'
+
+    role Gymnastics {
+        method go-to-bar { say "whee!" }
+    }
+    role Drinking {
+        method go-to-bar { say "glug glug" }
+    }
+    
+    class DrunkGymnast does Gymnastics does Drinking {
+        ...
+    } # BAM! (at compile time)
+    =Hi /role/
+    =Hi 'does'
+
+    role Gymnastics {
+        method go-to-bar { say "whee!" }
+    }
+    role Drinking {
+        method go-to-bar { say "glug glug" }
+    }
+    
+    class DrunkGymnast does Gymnastics does Drinking {
+        method go-to-bar {
+            self.Drinking::go-to-bar;
+        }
+    }
+    
+    DrunkGymnast.new.go-to-bar; # "glug glug"
+    =Hi 'Drinking::'
+
+Roles are actually parametric underneath.
+
+    role Bottle[::T] {
+        method Str { "a bottle of {T.perl}" }
+    }
+    
+    class Wine {}
+    
+    say Bottle[Wine].new # "a bottle of Wine"
+
+=for head1 :image<durian.jpg>
+    OO — Gold badge
+
+Introspection.
+
+Normally, you talk to the object.
+
+Sometime you'll want "one level above".
+
+Introspection.
+
+    class Car {
+        has @.wheels;
+    }
+    
+    say +Car.new(:wheels(0 xx 4)).wheels; # 4
+    
+    say Car.^attributes;  # wheels
+    say +Car.^attributes; # 1
+
+    Car.^attributes
+    
+        is really short for
+    
+    Car.HOW.attributes
+
+Meta-class object.
+
+    class Enemy {
+        method attack-with-arrows   { say "peow peow peow" }
+        method attack-with-swords   { say "swish cling clang" }
+        method attack-with-fireball { say "sssSSS fwoooof" }
+        method attack-with-camelia  { say "flap flap RAWWR!" }
+    }
+    
+    my $selector = { .name ~~ /^ 'attack-with-' / };
+    given Enemy.new -> $e {
+        my $attack-strategy
+            = $e.^methods().grep($selector).pick();
+    
+        $e.$attack-strategy();           # call a random method
+    }
+
+=for head1 :image<durian.jpg>
+    Parsing — Bronze badge
+
+Quantifiers.
+
+    a? a+ a*
+    
+    a ** 2
+    a ** 2..4
+    a ** { come p6 code }
+    a ** ','
+
+Grouping.
+
+    (...)   # capturing
+    [...]   # non-capturing
+    '...'   # quoting
+    "..."   # interpolated quoting
+
+Calling other regexes and rules.
+
+    <some-rule>  # invoke a regex
+
+The match variable, C<$/>.
+
+    $/      # contains everything
+    $0      # short for $/[0]
+    $1      # short for $/[1]
+    ...
+    $<foo>  # short for $/<foo>
+    
+    foo+ is fo[o]+, not [foo]+
+
+=for head1 :image<durian.jpg>
+    Parsing — Silver badge
+
+Grammars!
+
+C<regex>/C<token>/C<rule>
+
+C<multi>
+
+Longest-Token Matching.
+
+LIVE DEMO
+
+=for head1 :image<durian.jpg>
+    Parsing — Gold badge
+
+Grammars look like classes.
+
+    class C {
+        method    m1 { ... }
+        method    m2 { ... }
+        submethod m3 { ... }
+    }
+
+    grammar G {
+        regex r1 { ... }
+        token r2 { ... }
+        rule  r3 { ... }
+    }
+
+Just a different type of C<.HOW>.
+
+Grammar inheritance.
+
+    grammar More-G is G {
+        # add and override
+    }
+
+    grammar More-G does SomeNiceRules {
+        # add and override
+    }
+
+Perl 6 is parsed using a Perl 6 grammar.
+
+Perl 6 can be inherited from and changed.
+
+=for head1 :image<durian.jpg>
+    Thank you!

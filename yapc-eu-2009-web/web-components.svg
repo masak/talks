@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <image
+     xlink:href="3583523428-dancingshiva.jpg"
+     x="-6.3408203"
+     y="-27.864227"
+     width="1065.0438"
+     height="799.82294"
+     id="image4849" />
+  <text
+     x="310.1777"
+     y="205.72945"
+     id="text24481"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="310.1777"
+       y="205.72945"
+       id="tspan24483"
+       style="font-weight:bold;-inkscape-font-specification:Optima Bold">Web.pm subprojects</tspan></text>
+  <path
+     d="M 194.26723,226.92084 L 858.09496,226.92084"
+     id="path24495"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <text
+     x="190.88724"
+     y="316.73285"
+     id="text24505"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="190.88724"
+       y="316.73285"
+       id="tspan24507">Request/Response</tspan></text>
+  <text
+     x="190.88724"
+     y="402.48227"
+     id="text25892"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="190.88724"
+       y="402.48227"
+       id="tspan25894">Dispatching</tspan></text>
+  <text
+     x="193.12724"
+     y="488.23166"
+     id="text24509"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="193.12724"
+       y="488.23166"
+       id="tspan24511">Templating</tspan></text>
+  <text
+     x="192.23123"
+     y="573.98102"
+     id="text24501"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="192.23123"
+       y="573.98102"
+       id="tspan24503">MVC</tspan></text>
+  <text
+     x="860.55646"
+     y="316.73285"
+     id="text24521"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="860.55646"
+       y="316.73285"
+       id="tspan24523"
+       style="text-align:end;text-anchor:end">Web.pm (core)</tspan></text>
+  <text
+     x="858.09247"
+     y="402.48227"
+     id="text25896"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="858.09247"
+       y="402.48227"
+       id="tspan25898"
+       style="text-align:end;text-anchor:end">LolDispatch, Faz,  Astaire</tspan></text>
+  <text
+     x="858.41248"
+     y="488.23166"
+     id="text24525"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="858.41248"
+       y="488.23166"
+       id="tspan24527"
+       style="text-align:end;text-anchor:end">?, Hitomi, Tags</tspan></text>
+  <text
+     x="858.41248"
+     y="573.98102"
+     id="text24517"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="858.41248"
+       y="573.98102"
+       id="tspan24519"
+       style="text-align:end;text-anchor:end">?</tspan></text>
+</svg>

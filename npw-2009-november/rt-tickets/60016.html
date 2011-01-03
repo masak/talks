@@ -1,0 +1,1549 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60016: [PATCH] Make basic Perl 6 tests pass</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60016">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60016: [PATCH] Make basic Perl 6 tests pass</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60016">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60016</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60016">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+jkeen [at] verizon.net
+
+<br />
+
+
+publiustemp-perl6internals2 [at] yahoo.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60016">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+perl6tests.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/486390/226782/perl6tests.patch">
+Mon Oct 20 11:41:21 2008 (1.5k) by publiustemp-perl6internals2 <!-- x --> at yahoo.com
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/486350/226750/perl6tests.patch">
+Mon Oct 20 10:16:28 2008 (1.5k) by publiustemp-perl6internals2 <!-- x --> at yahoo.com
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/486336/226734/perl6tests.patch">
+Mon Oct 20 09:46:09 2008 (1.1k) by publiustemp-perl6internals2 <!-- x --> at yahoo.com
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60016">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480010" href="/rt3/Ticket/Display.html?id=60016#txn-480010">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Oct&nbsp;05&nbsp;16:53:10&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] languages/perl6/t/00-parrot/06-op-inplace.t failure</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 05 Oct 2008 19:52:35 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">James E Keenan &lt;jkeen <!-- x --> at verizon.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/480010/223560/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 403b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I don&#39;t often build Rakudo, so I&#39;m not even sure whether this is the  <br />
+correct place to report this bug.  In any event, this was run on  <br />
+Linux at r31685.<br />
+<br />
+make &#38;&#38; make test<br />
+<br />
+t/00-parrot/06-op-inplace      &#40;Wstat: 0 Tests: 11 Failed: 0&#41;<br />
+   Parse errors: Tests out of sequence.  Found &#40;1&#41; but expected &#40;8&#41;<br />
+                 Tests out of sequence.  Found &#40;7&#41; but expected &#40;10&#41;<br />
+<br />
+<br />
+Thank you very much.<br />
+kid51<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480016" href="/rt3/Ticket/Display.html?id=60016#txn-480016">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Oct&nbsp;05&nbsp;16:53:12&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 59634:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480018" href="/rt3/Ticket/Display.html?id=60016#txn-480018">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Oct&nbsp;05&nbsp;17:00:35&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/480018/223566/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 311b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Oct 05 16:53:10 2008, jkeen <!-- x --> at verizon.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I don&#39;t often build Rakudo, so I&#39;m not even sure whether this is the  <br />
+&gt; correct place to report this bug.  In any event, this was run on  <br />
+&gt; Linux at r31685.<br />
+&gt; <br />
+&gt; make &#38;&#38; make test<br />
+&gt; <br />
+</div>
+<br />
+FWIW, the error was reproduced when I typed:<br />
+<br />
+make perl6 &#38;&#38; make test<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480022" href="/rt3/Ticket/Display.html?id=60016#txn-480022">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Oct&nbsp;05&nbsp;17:00:36&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-480072" href="/rt3/Ticket/Display.html?id=60016#txn-480072">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Oct&nbsp;05&nbsp;18:04:00&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/480072/223594/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 562b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hope this additional diagnostic info helps:<br />
+<br />
+$ perl t/harness --verbosity=1 t/00-parrot/06-op-inplace.t<br />
+t/00-parrot/06-op-inplace....<br />
+1..11<br />
+ok 1<br />
+ok 2<br />
+ok 3<br />
+ok 4<br />
+ok 5<br />
+ok 6<br />
+ok 7<br />
+ok 1<br />
+ok 9<br />
+ok 7<br />
+ok 11<br />
+ All 11 subtests passed <br />
+<br />
+Test Summary Report<br />
+-------------------<br />
+t/00-parrot/06-op-inplace &#40;Wstat: 0 Tests: 11 Failed: 0&#41;<br />
+  Parse errors: Tests out of sequence.  Found &#40;1&#41; but expected &#40;8&#41;<br />
+                Tests out of sequence.  Found &#40;7&#41; but expected &#40;10&#41;<br />
+Files=1, Tests=11,  2 wallclock secs &#40; 0.01 usr  0.00 sys +  1.05 cusr <br />
+0.04 csys =  1.10 CPU&#41;<br />
+Result: FAIL<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-485830" href="/rt3/Ticket/Display.html?id=60016#txn-485830">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Oct&nbsp;18&nbsp;19:52:51&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/485830/226474/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 638b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Tonight I got this:<br />
+<br />
+t/00-parrot/06-op-inplace.......... All 11 subtests passed <br />
+<br />
+... but then I subsequently got this:<br />
+<br />
+Test Summary Report<br />
+-------------------<br />
+t/00-parrot/06-op-inplace      &#40;Wstat: 0 Tests: 11 Failed: 0&#41;<br />
+  Parse errors: Tests out of sequence.  Found &#40;3&#41; but expected &#40;9&#41;<br />
+                Tests out of sequence.  Found &#40;8&#41; but expected &#40;10&#41;<br />
+                Tests out of sequence.  Found &#40;12&#41; but expected &#40;11&#41;<br />
+<br />
+I&#39;ve never seen a test report like this, i.e., one which reports when<br />
+tests were run out of sequence.  Granted, having tests run out of<br />
+sequence doesn&#39;t sound good.  But what exactly is the problem here?<br />
+<br />
+kid51<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486336" href="/rt3/Ticket/Display.html?id=60016#txn-486336">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;09:46:08&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6internals2 <!-- x --> at yahoo.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 20 Oct 2008 09:45:34 -0700 &#40;PDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486336/226732/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 829b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+If you do this after building parrot:<br />
+<br />
+  cd languages/perl6<br />
+  make test<br />
+<br />
+This basic test suite will fail.  That&#39;s because of this test program:<br />
+<br />
+  t/00-parrot/06-op-inplace.t<br />
+<br />
+It was written before modules could be loaded and manually printed out &#34;ok $num&#34; lines, but it did so out of sequence.  This causes Test::Harness to note a parse error and report a failure for the test suite, even though all tests pass.<br />
+<br />
+I&#39;ve updated it to &#34;use Test&#34; and output test numbers in sequence without altering the semantics of the test.  &#34;make test&#34; in languages/perl6 now passes on my MacBook.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486336/226734/perl6tests.patch">Download perl6tests.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486342" href="/rt3/Ticket/Display.html?id=60016#txn-486342">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;09:46:14&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486350" href="/rt3/Ticket/Display.html?id=60016#txn-486350">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;10:16:28&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6internals2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] AutoReply: [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 20 Oct 2008 10:14:52 -0700 &#40;PDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug-followup <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486350/226748/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 938b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+OK, I&#39;ve updated the patch.  I&#39;ve made the following assumptions:<br />
+<br />
+1.  I cannot load modules.<br />
+2.  I cannot use subroutines.<br />
+3.  I cannot use inline ops for the test counter &#40;since that&#39;s what<br />
+    is being tested&#41;<br />
+<br />
+The problem is that I&#39;ve made the tests pass by assuming that the value of $a at each point is the correct value.  I&#39;m assuming from what Jerry has pointed out that these number should be sequential.  It&#39;s a trivial fix to remedy this in the tests, but I didn&#39;t want to try and second-guess what was going on.<br />
+<br />
+I think this patch &#40;or something similar&#41; is important as those who want to play with Rakudo will see a test failure if they run &#39;make test&#39; as the README instructs.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486350/226750/perl6tests.patch">Download perl6tests.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486380" href="/rt3/Ticket/Display.html?id=60016#txn-486380">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;11:03:38&nbsp;2008</td>
+    <td class="description">
+      coke -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486390" href="/rt3/Ticket/Display.html?id=60016#txn-486390">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;11:41:20&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6internals2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] AutoReply: [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 20 Oct 2008 11:40:53 -0700 &#40;PDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486390/226780/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 735b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Sorry for the patch spam.  I&#39;m embarrassed that I didn&#39;t have this correct the first time &#40;hey, YOU stay home and write tests for a strange platform while sick&#41;<br />
+<br />
+The test will now fail, but they&#39;ll fail for the correct reason:  **= is being misparsed, as pointed out earlier.<br />
+<br />
+You might not notice the tests failing, but that&#39;s because &#34;make test&#34; seems to run the harness 3 times and the failing test is in the first run.  If you don&#39;t notice this, you won&#39;t notice these tests failing.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486390/226782/perl6tests.patch">Download perl6tests.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486586" href="/rt3/Ticket/Display.html?id=60016#txn-486586">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;20:00:57&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486586/226906/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 380b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Oct 20 09:46:08 2008, publiustemp-perl6internals2 <!-- x --> at yahoo.com wrote:<br />
+\&gt; This basic test suite will fail.  That&#39;s because of this test program:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt;   t/00-parrot/06-op-inplace.t<br />
+&gt; <br />
+</div>
+<br />
+I&#39;ve reported this a couple of times in<br />
+http://rt.perl.org/rt3/Ticket/Display.html?id=59634 -- but no one paid<br />
+attention.<br />
+<br />
+Since you&#39;re proposing a patch, I&#39;ll merge 59634 into this one.<br />
+<br />
+kid51<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486590" href="/rt3/Ticket/Display.html?id=60016#txn-486590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;20:01:04&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486594" href="/rt3/Ticket/Display.html?id=60016#txn-486594">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;20:02:02&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net - Ticket 59634:  Merged into ticket #60016
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486596" href="/rt3/Ticket/Display.html?id=60016#txn-486596">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;20:02:02&nbsp;2008</td>
+    <td class="description">
+      jkeen <!-- x --> at verizon.net -  Merged into ticket #60016
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486638" href="/rt3/Ticket/Display.html?id=60016#txn-486638">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;00:22:00&nbsp;2008</td>
+    <td class="description">
+      publiustemp-perl6internals2 <!-- x --> at yahoo.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Oct 2008 00:21:24 -0700 &#40;PDT&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486638/226940/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 977b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+--- On Tue, 21/10/08, James Keenan via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; <br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; \&gt; This basic test suite will fail.  That&#39;s<br />
+&gt; because of this test program:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+&gt; &gt;   t/00-parrot/06-op-inplace.t<br />
+&gt; &gt; <br />
+</div>
+&gt; <br />
+&gt; I&#39;ve reported this a couple of times in<br />
+&gt; http://rt.perl.org/rt3/Ticket/Display.html?id=59634 -- but<br />
+&gt; no one paid<br />
+&gt; attention.<br />
+&gt; <br />
+&gt; Since you&#39;re proposing a patch, I&#39;ll merge 59634<br />
+&gt; into this one.<br />
+</div>
+<br />
+Thanks.  Hopefully this time there will be some traction because there does appear to be a bug in Perl 6, as evidenced by this one-liner:<br />
+<br />
+  perl6 $ ../../parrot perl6.pbc -e &#39;my $x = 3; $x **= 2; say $x&#39;<br />
+  3<br />
+<br />
+Unless, of course, this isn&#39;t supposed to be implemented yet, but that seems strange since it&#39;s in the basic tests.<br />
+<br />
+Cheers,<br />
+Ovid<br />
+--<br />
+Buy the book         - http://www.oreilly.com/catalog/perlhks/<br />
+Tech blog            - http://use.perl.org/~Ovid/journal/<br />
+Twitter              - http://twitter.com/OvidPerl<br />
+Official Perl 6 Wiki - http://www.perlfoundation.org/perl6<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486784" href="/rt3/Ticket/Display.html?id=60016#txn-486784">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;08:51:28&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org, perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Oct 2008 10:50:57 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Ovid &lt;publiustemp-perl6internals2 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486784/227016/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Oct 21, 2008 at 12:21:24AM -0700, Ovid wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; --- On Tue, 21/10/08, James Keenan via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt; <br />
+&gt; Thanks.  Hopefully this time there will be some traction because there <br />
+&gt; does appear to be a bug in Perl 6, as evidenced by this one-liner:<br />
+&gt; <br />
+&gt;   perl6 $ ../../parrot perl6.pbc -e &#39;my $x = 3; $x **= 2; say $x&#39;<br />
+&gt;   3<br />
+&gt; <br />
+&gt; Unless, of course, this isn&#39;t supposed to be implemented yet, but <br />
+&gt; that seems strange since it&#39;s in the basic tests.<br />
+</div>
+<br />
+The infix:&lt;**=&gt; code broke as part of the mmd branch merge, because<br />
+the meaning of Parrot&#39;s &#39;pow&#39; opcode has changed.  The infix:&lt;**=&gt;<br />
+function used the Parrot opcode &#40;src/builtins/assign.pir:80&#41;<br />
+<br />
+    a = a ** b          #  pow a, a, b<br />
+<br />
+Before the MMD merge, this opcode meant &#34;raise a to the power<br />
+of b and store the result back in a&#34;.  However, after the mmd<br />
+branch merge this opcode now means &#34;create a new PMC containing<br />
+the value of a raised to the b power and set register a to point<br />
+to that new PMC, leaving the value of its original PMC alone&#34;.<br />
+So, the pow opcode is no longer able to act as an inplace modifier.<br />
+<br />
+I&#39;ve corrected this in r32071, by explicitly assigning the new<br />
+result back to the PMC referenced by &#39;a&#39;.<br />
+<br />
+I&#39;ve also applied Ovid&#39;s patch &#40;with some fixes&#41; in r32072, so<br />
+that the test correctly reports failures instead of simply<br />
+saying there are misnumbered tests.<br />
+<br />
+Lastly, we&#39;ve now reorganized the &#39;make test&#39; target to make it more<br />
+obvious when there is a failure in the t/00-parrot/ or t/01-sanity/<br />
+tests, and removed the coding standards tests from &#39;make test&#39;.<br />
+<br />
+Thanks, closing ticket!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486786" href="/rt3/Ticket/Display.html?id=60016#txn-486786">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;08:51:34&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486792" href="/rt3/Ticket/Display.html?id=60016#txn-486792">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;08:51:40&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-487650" href="/rt3/Ticket/Display.html?id=60016#txn-487650">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;23&nbsp;20:14:16&nbsp;2008</td>
+    <td class="description">
+      allison <!-- x --> at perl.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">parrot-dev <!-- x --> at parrot.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 23 Oct 2008 20:13:29 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;allison <!-- x --> at perl.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/487650/227502/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 917b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; The infix:&lt;**=&gt; code broke as part of the mmd branch merge, because<br />
+&gt; the meaning of Parrot&#39;s &#39;pow&#39; opcode has changed.  The infix:&lt;**=&gt;<br />
+&gt; function used the Parrot opcode &#40;src/builtins/assign.pir:80&#41;<br />
+&gt; <br />
+&gt;     a = a ** b          #  pow a, a, b<br />
+&gt; <br />
+&gt; Before the MMD merge, this opcode meant &#34;raise a to the power<br />
+&gt; of b and store the result back in a&#34;.  However, after the mmd<br />
+&gt; branch merge this opcode now means &#34;create a new PMC containing<br />
+&gt; the value of a raised to the b power and set register a to point<br />
+&gt; to that new PMC, leaving the value of its original PMC alone&#34;.<br />
+&gt; So, the pow opcode is no longer able to act as an inplace modifier.<br />
+</div>
+<br />
+The other math opcodes have two argument versions that call the &#39;i_&#39; <br />
+inplace vtable function. I can add these for &#39;pow&#39; if needed.<br />
+<br />
+Allison<br />
+_______________________________________________<br />
+http://lists.parrot.org/mailman/listinfo/parrot-dev<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-487718" href="/rt3/Ticket/Display.html?id=60016#txn-487718">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Oct&nbsp;24&nbsp;07:57:26&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">jkeen <!-- x --> at verizon.net, publiustemp-perl6internals2 <!-- x --> at yahoo.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60016] [PATCH] Make basic Perl 6 tests pass</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 24 Oct 2008 09:56:58 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Allison Randal via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/487718/227546/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 888b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Oct 23, 2008 at 08:14:19PM -0700, Allison Randal via RT wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt;     a = a ** b          #  pow a, a, b<br />
+&gt; &gt; <br />
+&gt; &gt; Before the MMD merge, this opcode meant &#34;raise a to the power<br />
+&gt; &gt; of b and store the result back in a&#34;.  However, after the mmd<br />
+&gt; &gt; branch merge this opcode now means &#34;create a new PMC containing<br />
+&gt; &gt; the value of a raised to the b power and set register a to point<br />
+&gt; &gt; to that new PMC, leaving the value of its original PMC alone&#34;.<br />
+&gt; &gt; So, the pow opcode is no longer able to act as an inplace modifier.<br />
+</div>
+&gt; <br />
+&gt; The other math opcodes have two argument versions that call the &#39;i_&#39; <br />
+&gt; inplace vtable function. I can add these for &#39;pow&#39; if needed.<br />
+</div>
+<br />
+I&#39;m not sure that every opcode needs an inplace form.  And in Rakudo&#39;s<br />
+case it&#39;s not likely to matter much, as the &#40;Perl 6&#41; inplace operators <br />
+are unlikely to be able to use Parrot&#39;s inplace opcodes anyway.<br />
+<br />
+Thanks,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.455719</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

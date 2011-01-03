@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg4369">
+  <defs
+     id="defs4371">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         id="path3638"
+         style="font-size:12px;fill:#dd5511;fill-rule:evenodd;stroke:#dd5511;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <rect
+     width="833.33331"
+     height="631.66669"
+     x="-16.666656"
+     y="-15.833344"
+     id="rect4379"
+     style="fill:#dddddd;fill-opacity:1;stroke:none" />
+  <text
+     x="187.27251"
+     y="15.743575"
+     id="text8664"
+     xml:space="preserve"
+     style="font-size:9.35567951px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="187.27251"
+       y="15.743575"
+       id="tspan8666">use strict;</tspan><tspan
+       x="187.27251"
+       y="27.438175"
+       id="tspan8668"></tspan><tspan
+       x="187.27251"
+       y="39.132774"
+       id="tspan8670"># The classical 8 queens puzzle</tspan><tspan
+       x="187.27251"
+       y="50.827374"
+       id="tspan8672"># Place 8 queens on a chess board without any of them threatening each other</tspan><tspan
+       x="187.27251"
+       y="62.521973"
+       id="tspan8674"># Returns true if the first argument equals any of the subsequent ones,</tspan><tspan
+       x="187.27251"
+       y="74.216576"
+       id="tspan8676"># otherwise returns false</tspan><tspan
+       x="187.27251"
+       y="85.911171"
+       id="tspan8678">sub any_equals {</tspan><tspan
+       x="187.27251"
+       y="97.605774"
+       id="tspan8680">   my $value = shift;</tspan><tspan
+       x="187.27251"
+       y="109.30037"
+       id="tspan8682"></tspan><tspan
+       x="187.27251"
+       y="120.99497"
+       id="tspan8684">   while (my $other_value = shift) {</tspan><tspan
+       x="187.27251"
+       y="132.68958"
+       id="tspan8686">       return 1 if $value == $other_value;</tspan><tspan
+       x="187.27251"
+       y="144.38417"
+       id="tspan8688">   }</tspan><tspan
+       x="187.27251"
+       y="156.07877"
+       id="tspan8690"></tspan><tspan
+       x="187.27251"
+       y="167.77336"
+       id="tspan8692">   return &amp;apos;&amp;apos;;</tspan><tspan
+       x="187.27251"
+       y="179.46797"
+       id="tspan8694">}</tspan><tspan
+       x="187.27251"
+       y="191.16257"
+       id="tspan8696"></tspan><tspan
+       x="187.27251"
+       y="202.85716"
+       id="tspan8698"># Returns true if the first argument differs (absolutely) by one from the</tspan><tspan
+       x="187.27251"
+       y="214.55176"
+       id="tspan8700"># second, or by two from the third, or... and so on, otherwise returns</tspan><tspan
+       x="187.27251"
+       y="226.24637"
+       id="tspan8702"># false</tspan><tspan
+       x="187.27251"
+       y="237.94096"
+       id="tspan8704">sub any_aligns {</tspan><tspan
+       x="187.27251"
+       y="249.63556"
+       id="tspan8706">   my $value = shift;</tspan><tspan
+       x="187.27251"
+       y="261.33017"
+       id="tspan8708">   my $difference = 0;</tspan><tspan
+       x="187.27251"
+       y="273.02475"
+       id="tspan8710"></tspan><tspan
+       x="187.27251"
+       y="284.71936"
+       id="tspan8712">   while (my $other_value = shift) {</tspan><tspan
+       x="187.27251"
+       y="296.41397"
+       id="tspan8714">       ++$difference;</tspan><tspan
+       x="187.27251"
+       y="308.10855"
+       id="tspan8716">       return 1 if abs($value - $other_value) == $difference;</tspan><tspan
+       x="187.27251"
+       y="319.80316"
+       id="tspan8718">   }</tspan><tspan
+       x="187.27251"
+       y="331.49777"
+       id="tspan8720"></tspan><tspan
+       x="187.27251"
+       y="343.19235"
+       id="tspan8722">   return &amp;apos;&amp;apos;;</tspan><tspan
+       x="187.27251"
+       y="354.88696"
+       id="tspan8724">}</tspan><tspan
+       x="187.27251"
+       y="366.58154"
+       id="tspan8726"></tspan><tspan
+       x="187.27251"
+       y="378.27615"
+       id="tspan8728">sub generate_solutions {</tspan><tspan
+       x="187.27251"
+       y="389.97076"
+       id="tspan8730">   my $levels_left = shift;</tspan><tspan
+       x="187.27251"
+       y="401.66534"
+       id="tspan8732">   my @values_so_far = @_;</tspan><tspan
+       x="187.27251"
+       y="413.35995"
+       id="tspan8734"></tspan><tspan
+       x="187.27251"
+       y="425.05457"
+       id="tspan8736">   for my $column (1..8) {</tspan><tspan
+       x="187.27251"
+       y="436.74915"
+       id="tspan8738">       next if any_equals($column, @values_so_far);</tspan><tspan
+       x="187.27251"
+       y="448.44376"
+       id="tspan8740">       next if any_aligns($column, @values_so_far);</tspan><tspan
+       x="187.27251"
+       y="460.13837"
+       id="tspan8742"></tspan><tspan
+       x="187.27251"
+       y="471.83295"
+       id="tspan8744">       if ($levels_left &gt; 1) {</tspan><tspan
+       x="187.27251"
+       y="483.52756"
+       id="tspan8746">           generate_solutions($levels_left - 1, $column, @values_so_far);</tspan><tspan
+       x="187.27251"
+       y="495.22214"
+       id="tspan8748">       }</tspan><tspan
+       x="187.27251"
+       y="506.91675"
+       id="tspan8750">       else {</tspan><tspan
+       x="187.27251"
+       y="518.61133"
+       id="tspan8752">           print join ' ', ($column, @values_so_far);</tspan><tspan
+       x="187.27251"
+       y="530.30597"
+       id="tspan8754">           print &quot;\\n&quot;;</tspan><tspan
+       x="187.27251"
+       y="542.00055"
+       id="tspan8756">       }</tspan><tspan
+       x="187.27251"
+       y="553.69513"
+       id="tspan8758">   }</tspan><tspan
+       x="187.27251"
+       y="565.38977"
+       id="tspan8760">}</tspan><tspan
+       x="187.27251"
+       y="577.08435"
+       id="tspan8762"></tspan><tspan
+       x="187.27251"
+       y="588.77893"
+       id="tspan8764">generate_solutions(8);</tspan></text>
+</svg>

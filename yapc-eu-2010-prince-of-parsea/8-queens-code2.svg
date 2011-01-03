@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg4369">
+  <defs
+     id="defs4371">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         id="path3638"
+         style="font-size:12px;fill:#dd5511;fill-rule:evenodd;stroke:#dd5511;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <rect
+     width="833.33331"
+     height="631.66669"
+     x="-16.666656"
+     y="-15.833344"
+     id="rect4379"
+     style="fill:#dddddd;fill-opacity:1;stroke:none" />
+  <g
+     transform="matrix(0.39763537,0,0,0.39763537,76.460283,108.49243)"
+     id="g5267">
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="58.620689"
+       id="rect4891"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="58.620689"
+       id="rect4893"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="164.37073"
+       id="rect4895"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="164.37073"
+       id="rect4897"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="58.620689"
+       id="rect4907"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="58.620689"
+       id="rect4909"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="164.37073"
+       id="rect4911"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="164.37073"
+       id="rect4913"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="270.11871"
+       id="rect4917"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="270.11871"
+       id="rect4919"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="375.86874"
+       id="rect4921"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="375.86874"
+       id="rect4923"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="270.11871"
+       id="rect4927"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="270.11871"
+       id="rect4929"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="375.86874"
+       id="rect4931"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="375.86874"
+       id="rect4933"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="58.620689"
+       id="rect5001"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="58.620689"
+       id="rect5003"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="164.37073"
+       id="rect5005"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="164.37073"
+       id="rect5007"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="58.620689"
+       id="rect5011"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="58.620689"
+       id="rect5013"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="164.37073"
+       id="rect5015"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="164.37073"
+       id="rect5017"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="270.11871"
+       id="rect5021"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="270.11871"
+       id="rect5023"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="375.86874"
+       id="rect5025"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="375.86874"
+       id="rect5027"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="270.11871"
+       id="rect5031"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="270.11871"
+       id="rect5033"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="375.86874"
+       id="rect5035"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="375.86874"
+       id="rect5037"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="481.61621"
+       id="rect5043"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="481.61621"
+       id="rect5045"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="587.36621"
+       id="rect5047"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="587.36621"
+       id="rect5049"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="481.61621"
+       id="rect5053"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="481.61621"
+       id="rect5055"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="587.36621"
+       id="rect5057"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="587.36621"
+       id="rect5059"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="693.1142"
+       id="rect5063"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="693.1142"
+       id="rect5065"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="-73.563217"
+       y="798.86426"
+       id="rect5067"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="32.183907"
+       y="798.86426"
+       id="rect5069"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="693.1142"
+       id="rect5073"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="693.1142"
+       id="rect5075"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="137.93576"
+       y="798.86426"
+       id="rect5077"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="243.68289"
+       y="798.86426"
+       id="rect5079"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="481.61621"
+       id="rect5085"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="481.61621"
+       id="rect5087"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="587.36621"
+       id="rect5089"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="587.36621"
+       id="rect5091"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="481.61621"
+       id="rect5095"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="481.61621"
+       id="rect5097"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="587.36621"
+       id="rect5099"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="587.36621"
+       id="rect5101"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="693.1142"
+       id="rect5105"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="693.1142"
+       id="rect5107"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="349.42722"
+       y="798.86426"
+       id="rect5109"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="455.17435"
+       y="798.86426"
+       id="rect5111"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="693.1142"
+       id="rect5115"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="693.1142"
+       id="rect5117"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="560.92621"
+       y="798.86426"
+       id="rect5119"
+       style="fill:#665533;fill-opacity:1;stroke:none" />
+    <rect
+       width="105.74712"
+       height="105.74712"
+       x="666.67334"
+       y="798.86426"
+       id="rect5121"
+       style="fill:#ffeebb;fill-opacity:1;stroke:none" />
+  </g>
+  <g
+     transform="translate(-23.818767,0)"
+     id="g5365">
+    <text
+       x="218.95415"
+       y="162.53061"
+       id="text5333"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="218.95415"
+         y="162.53061"
+         id="tspan5335">♕</tspan></text>
+    <text
+       x="386.33362"
+       y="205.35992"
+       id="text5337"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="386.33362"
+         y="205.35992"
+         id="tspan5339">♕</tspan></text>
+    <text
+       x="91.861832"
+       y="246.22034"
+       id="text5341"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="91.861832"
+         y="246.22034"
+         id="tspan5343">♕</tspan></text>
+    <text
+       x="260.96902"
+       y="289.65851"
+       id="text5345"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="260.96902"
+         y="289.65851"
+         id="tspan5347">♕</tspan></text>
+    <text
+       x="345.6076"
+       y="330.21451"
+       id="text5349"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="345.6076"
+         y="330.21451"
+         id="tspan5351">♕</tspan></text>
+    <text
+       x="134.48555"
+       y="373.17822"
+       id="text5353"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="134.48555"
+         y="373.17822"
+         id="tspan5355">♕</tspan></text>
+    <text
+       x="301.82947"
+       y="415.0231"
+       id="text5357"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="301.82947"
+         y="415.0231"
+         id="tspan5359">♕</tspan></text>
+    <text
+       x="176.63486"
+       y="456.69797"
+       id="text5361"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"><tspan
+         x="176.63486"
+         y="456.69797"
+         id="tspan5363">♕</tspan></text>
+  </g>
+  <text
+     x="464.13068"
+     y="26.10128"
+     id="text6624"
+     xml:space="preserve"
+     style="font-size:10.06666183px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="464.13068"
+       y="26.10128"
+       id="tspan6662">for 1..8 -&gt; $pos1 {</tspan><tspan
+       x="464.13068"
+       y="38.684608"
+       id="tspan7104">  for 1..8 -&gt; $pos2 {</tspan><tspan
+       x="464.13068"
+       y="51.267933"
+       id="tspan7106">    next if $pos2     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="63.851261"
+       id="tspan7108">    for 1..8 -&gt; $pos3 {</tspan><tspan
+       x="464.13068"
+       y="76.434586"
+       id="tspan7110">      next if $pos3     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="89.017921"
+       id="tspan7112">      next if $pos3     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="101.60125"
+       id="tspan7114">      for 1..8 -&gt; $pos4 {</tspan><tspan
+       x="464.13068"
+       y="114.18458"
+       id="tspan7116">        next if $pos4     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="126.76791"
+       id="tspan7118">        next if $pos4     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="139.35123"
+       id="tspan7120">        next if $pos4     == $pos3;</tspan><tspan
+       x="464.13068"
+       y="151.93456"
+       id="tspan7122">        for 1..8 -&gt; $pos5 {</tspan><tspan
+       x="464.13068"
+       y="164.51787"
+       id="tspan7124">          next if $pos5     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="177.1012"
+       id="tspan7126">          next if $pos5     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="189.68452"
+       id="tspan7128">          next if $pos5     == $pos3;</tspan><tspan
+       x="464.13068"
+       y="202.26785"
+       id="tspan7130">          next if $pos5     == $pos4;</tspan><tspan
+       x="464.13068"
+       y="214.85118"
+       id="tspan7132">          for 1..8 -&gt; $pos6 {</tspan><tspan
+       x="464.13068"
+       y="227.43451"
+       id="tspan7134">            next if $pos6     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="240.01784"
+       id="tspan7136">            next if $pos6     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="252.60117"
+       id="tspan7138">            next if $pos6     == $pos3;</tspan><tspan
+       x="464.13068"
+       y="265.18448"
+       id="tspan7140">            next if $pos6     == $pos4;</tspan><tspan
+       x="464.13068"
+       y="277.76779"
+       id="tspan7142">            next if $pos6     == $pos5;</tspan><tspan
+       x="464.13068"
+       y="290.35114"
+       id="tspan7144">            for 1..8 -&gt; $pos7 {</tspan><tspan
+       x="464.13068"
+       y="302.93445"
+       id="tspan7146">              next if $pos7     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="315.51779"
+       id="tspan7148">              next if $pos7     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="328.1011"
+       id="tspan7150">              next if $pos7     == $pos3;</tspan><tspan
+       x="464.13068"
+       y="340.68445"
+       id="tspan7152">              next if $pos7     == $pos4;</tspan><tspan
+       x="464.13068"
+       y="353.26776"
+       id="tspan7154">              next if $pos7     == $pos5;</tspan><tspan
+       x="464.13068"
+       y="365.8511"
+       id="tspan7156">              next if $pos7     == $pos6;</tspan><tspan
+       x="464.13068"
+       y="378.43442"
+       id="tspan7158">              for 1..8 -&gt; $pos8 {</tspan><tspan
+       x="464.13068"
+       y="391.01776"
+       id="tspan7160">                next if $pos8     == $pos1;</tspan><tspan
+       x="464.13068"
+       y="403.60107"
+       id="tspan7162">                next if $pos8     == $pos2;</tspan><tspan
+       x="464.13068"
+       y="416.18442"
+       id="tspan7164">                next if $pos8     == $pos3;</tspan><tspan
+       x="464.13068"
+       y="428.76773"
+       id="tspan7166">                next if $pos8     == $pos4;</tspan><tspan
+       x="464.13068"
+       y="441.35107"
+       id="tspan7168">                next if $pos8     == $pos5;</tspan><tspan
+       x="464.13068"
+       y="453.93439"
+       id="tspan7170">                next if $pos8     == $pos6;</tspan><tspan
+       x="464.13068"
+       y="466.51773"
+       id="tspan7172">                next if $pos8     == $pos7;</tspan><tspan
+       x="464.13068"
+       y="479.10104"
+       id="tspan7234">                # print solution</tspan><tspan
+       x="464.13068"
+       y="491.68439"
+       id="tspan7174">              }</tspan><tspan
+       x="464.13068"
+       y="504.26767"
+       id="tspan7176">            }</tspan><tspan
+       x="464.13068"
+       y="516.85107"
+       id="tspan7178">          }</tspan><tspan
+       x="464.13068"
+       y="529.43433"
+       id="tspan7180">        }</tspan><tspan
+       x="464.13068"
+       y="542.0177"
+       id="tspan7182">      }</tspan><tspan
+       x="464.13068"
+       y="554.60101"
+       id="tspan7184">    }</tspan><tspan
+       x="464.13068"
+       y="567.18433"
+       id="tspan7186">  }</tspan><tspan
+       x="464.13068"
+       y="579.76764"
+       id="tspan7188">}</tspan><tspan
+       x="464.13068"
+       y="592.35101"
+       id="tspan7190" /></text>
+</svg>

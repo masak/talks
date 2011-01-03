@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg7581">
+  <defs
+     id="defs7583" />
+  <g
+     id="layer1">
+    <rect
+       width="815"
+       height="620"
+       x="-7.5"
+       y="-10"
+       id="rect7591"
+       style="fill:#dddddd;fill-opacity:1;stroke:none" />
+    <text
+       x="242.74609"
+       y="226.53516"
+       id="text8103"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="242.74609"
+         y="226.53516"
+         id="tspan8105">    S E N D</tspan><tspan
+         x="242.74609"
+         y="286.53516"
+         id="tspan8107">+   M O R E</tspan><tspan
+         x="242.74609"
+         y="346.53516"
+         id="tspan8109">-----------</tspan><tspan
+         x="242.74609"
+         y="406.53516"
+         id="tspan8111">  M O N E Y</tspan></text>
+  </g>
+</svg>

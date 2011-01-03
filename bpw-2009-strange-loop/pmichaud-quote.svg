@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   id="svg5737"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="pmichaud-quote.svg">
+  <defs
+     id="defs5739">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 372.04724 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1052.3622 : 372.04724 : 1"
+       inkscape:persp3d-origin="526.18109 : 248.03149 : 1"
+       id="perspective5746" />
+    <inkscape:perspective
+       id="perspective5816"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:document-units="mm"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.74587302"
+     inkscape:cx="526.18109"
+     inkscape:cy="372.04724"
+     inkscape:current-layer="layer1"
+     id="namedview5741"
+     showgrid="false"
+     inkscape:window-width="934"
+     inkscape:window-height="803"
+     inkscape:window-x="242"
+     inkscape:window-y="57"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5743">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g6340"
+       transform="translate(7.2844609,6.3160871)">
+      <image
+         xlink:href="file:///Users/masak/gwork/bpw-2009/pmichaud.jpg"
+         width="150"
+         height="200"
+         id="image5818"
+         x="154.26155"
+         y="430.92148" />
+      <path
+         id="path5822"
+         d="m 604.65671,100.54083 c -154.01445,0 -278.875,90.94621 -278.875,203.125 0,62.05486 38.22412,117.61758 98.4375,154.875 -15.25796,31.88263 -49.73089,57.15577 -93.25,68.34375 55.98375,-0.97876 104.43975,-20.58422 129.90625,-49.15625 41.98815,18.44127 91.17584,29.0625 143.78125,29.0625 154.01445,0 278.875,-90.94621 278.875,-203.125 0,-112.17879 -124.86055,-203.125 -278.875,-203.125 z"
+         style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"
+       x="610.02338"
+       y="235.9651"
+       id="text6344"><tspan
+         sodipodi:role="line"
+         id="tspan6346"
+         x="610.02338"
+         y="235.9651">&quot;PGE is actually</tspan><tspan
+         sodipodi:role="line"
+         x="610.02338"
+         y="295.96509"
+         id="tspan6348">quite small –</tspan><tspan
+         sodipodi:role="line"
+         x="610.02338"
+         y="355.96509"
+         id="tspan6352">about 5.4 k</tspan><tspan
+         sodipodi:role="line"
+         x="610.02338"
+         y="415.96509"
+         id="tspan6350">lines of code.&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+       x="490.70013"
+       y="608.68268"
+       id="text11830"><tspan
+         sodipodi:role="line"
+         id="tspan11832"
+         x="490.70013"
+         y="608.68268"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville">— Patrick Michaud</tspan></text>
+  </g>
+</svg>

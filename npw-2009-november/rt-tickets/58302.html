@@ -1,0 +1,840 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58302: [BUG] binary junctions of undefs in boolean context fails &#40;21/37&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58302">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58302: [BUG] binary junctions of undefs in boolean context fails &#40;21/37&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58302">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58302</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58302">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+stifynsemons
+&lt;stifynsemons [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58302">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+junctions.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/462784/214102/junctions.p6">
+Sat Aug 23 22:17:08 2008 (1.8k) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58302">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-462784" href="/rt3/Ticket/Display.html?id=58302#txn-462784">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;23&nbsp;22:17:08&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] binary junctions of undefs in boolean context fails &#40;21/37&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 23 Aug 2008 23:16:46 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/462784/214102/junctions.p6">Download junctions.p6</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/462784/214098/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;ve attached a file, junctions.p6, which illustrates that binary junctions<br />
+treat &#34;undef&#34; as true, and not as false.  My interpretation is that if you<br />
+have:<br />
+if JUNCTION { THEN }<br />
+<br />
+the JUNCTION simplifies down to a simple logical operation, as in Perl 5<br />
+&#40;Though ^ doesn&#39;t mean quite the same thing with more than two operands&#41;.<br />
+ Test cases 34-37 were an attempt to use them in other contexts, and it<br />
+seems that in an equality context, they work fine &#40;or at least better&#41;.<br />
+<br />
+Thus 1|undef is evaluated as true, as is 1&#38;undef; but 0|undef is also<br />
+evaluated as true.  On the other hand, 1^undef is true which contradicts the<br />
+theory, but 0^undef is true as well.<br />
+<br />
+The output of the attached perl script is shown below.<br />
+<br />
+ok 1<br />
+not ok 2<br />
+not ok 3<br />
+ok 4<br />
+not ok 5<br />
+not ok 6<br />
+not ok 7<br />
+ok 8<br />
+ok 9<br />
+not ok 10<br />
+ok 11<br />
+not ok 12<br />
+ok 13<br />
+ok 14<br />
+not ok 15<br />
+not ok 16<br />
+ok 17<br />
+ok 18<br />
+ok 19<br />
+ok 20<br />
+not ok 21<br />
+not ok 22<br />
+ok 23<br />
+ok 24<br />
+ok 25<br />
+not ok 26<br />
+ok 27<br />
+not ok 28<br />
+not ok 29<br />
+not ok 30<br />
+not ok 31<br />
+not ok 32<br />
+not ok 33<br />
+not ok 34<br />
+not ok 35<br />
+not ok 36<br />
+ok 37<br />
+<br />
+System info:<br />
+sully:parrot stephensimmons$ perl6 -v<br />
+This is Rakudo Perl 6, revision 30440 built on parrot 0.7.0-devel<br />
+for darwin-thread-multi-2level.<br />
+<br />
+Copyright 2006-2008, The Perl Foundation.<br />
+<br />
+sully:parrot stephensimmons$ uname -a<br />
+Darwin sully.local 9.4.0 Darwin Kernel Version 9.4.0: Mon Jun  9 19:30:53<br />
+PDT 2008; root:xnu-1228.5.20~1/RELEASE_I386 i386<br />
+<br />
+Stephen Simmons<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/462784/214100/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 2k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-462790" href="/rt3/Ticket/Display.html?id=58302#txn-462790">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Aug&nbsp;23&nbsp;22:17:13&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463120" href="/rt3/Ticket/Display.html?id=58302#txn-463120">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;12:01:22&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58302] [BUG] binary junctions of undefs in boolean context fails &#40;21/37&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 24 Aug 2008 21:01:07 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463120/214284/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Stephen Simmons &#40;via RT&#41; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;ve attached a file, junctions.p6, which illustrates that binary junctions<br />
+&gt; treat &#34;undef&#34; as true, and not as false.  My interpretation is that if you<br />
+&gt; have:<br />
+&gt; if JUNCTION { THEN }<br />
+&gt; <br />
+&gt; the JUNCTION simplifies down to a simple logical operation, as in Perl 5<br />
+&gt; &#40;Though ^ doesn&#39;t mean quite the same thing with more than two operands&#41;.<br />
+</div>
+<br />
+Yes, that&#39;s my interpretation as well.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;  Test cases 34-37 were an attempt to use them in other contexts, and it<br />
+&gt; seems that in an equality context, they work fine &#40;or at least better&#41;.<br />
+&gt; <br />
+&gt; Thus 1|undef is evaluated as true, as is 1&#38;undef; but 0|undef is also<br />
+&gt; evaluated as true.  On the other hand, 1^undef is true which contradicts the<br />
+&gt; theory, but 0^undef is true as well.<br />
+&gt; <br />
+&gt; The output of the attached perl script is shown below.<br />
+</div>
+<br />
+Thanks for the tests, I&#39;ll rewrite them in terms of Test.pm, and add<br />
+them to the test suite.<br />
+<br />
+Tests 34 to 36 were a bit overcritical:<br />
+<br />
+&#40;0|undef &#38;&#38; say &#34;not ok 34&#34;&#41; || say &#34;not ok 34&#34;;<br />
+&#40;0&#38;undef &#38;&#38; say &#34;not ok 35&#34;&#41; || say &#34;not ok 35&#34;;<br />
+&#40;0^undef &#38;&#38; say &#34;not ok 36&#34;&#41; || say &#34;not ok 36&#34;;<br />
+<br />
+but are easily corrected. The rest seem fine to me.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463124" href="/rt3/Ticket/Display.html?id=58302#txn-463124">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;12:01:28&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463376" href="/rt3/Ticket/Display.html?id=58302#txn-463376">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;05:51:25&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58302] [BUG] binary junctions of undefs in boolean context fails &#40;21/37&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 24 Aug 2008 15:27:30 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463376/214442/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 718b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Aug 24, 2008 at 1:01 PM, Moritz Lenz via RT &lt;<br />
+perl6-bugs-followup <!-- x --> at perl.org&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;<br />
+&gt; Thanks for the tests, I&#39;ll rewrite them in terms of Test.pm, and add<br />
+&gt; them to the test suite.<br />
+</div>
+<br />
+<br />
+I probably should learn how to do them the right way :-&#41;<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;<br />
+&gt;<br />
+&gt; Tests 34 to 36 were a bit overcritical:<br />
+&gt;<br />
+&gt; &#40;0|undef &#38;&#38; say &#34;not ok 34&#34;&#41; || say &#34;not ok 34&#34;;<br />
+&gt; &#40;0&#38;undef &#38;&#38; say &#34;not ok 35&#34;&#41; || say &#34;not ok 35&#34;;<br />
+&gt; &#40;0^undef &#38;&#38; say &#34;not ok 36&#34;&#41; || say &#34;not ok 36&#34;;<br />
+&gt;<br />
+&gt; but are easily corrected. The rest seem fine to me.<br />
+</div>
+<br />
+<br />
+Oops.  It appears with the 0.7.0 release that they still fail when<br />
+corrected.<br />
+<br />
+Thanks,<br />
+Stephen Simmons<br />
+<br />
+<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;<br />
+&gt;<br />
+&gt; Cheers,<br />
+&gt; Moritz<br />
+&gt;<br />
+&gt; --<br />
+&gt; Moritz Lenz<br />
+&gt; http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492380" href="/rt3/Ticket/Display.html?id=58302#txn-492380">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;18:24:41&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492380/230176/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 60b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This tests is now part of spectest suite.<br />
+<br />
+Resolving ticket.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492382" href="/rt3/Ticket/Display.html?id=58302#txn-492382">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;18:33:48&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.061835</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

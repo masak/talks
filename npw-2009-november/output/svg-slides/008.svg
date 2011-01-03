@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="600" width="800" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<linearGradient gradientUnits="userSpaceOnUse" id="background-gradient" x1="0" x2="0" y1="606" y2="-6">
+		<stop id="bg-g-1" offset="0" style="stop-opacity: 1; stop-color: #202020" />
+		<stop id="bg-g-2" offset="1" style="stop-opacity: 1; stop-color: #404040" />
+	</linearGradient>
+	<g id="background">
+		<rect height="606" style="fill: url(#background-gradient); stroke: none" width="808" x="-4" y="-3" />
+	</g>
+	<g id="content" style="fill: #ffffff">		<text style="font-family: Gill Sans; font-size: 40px" text-anchor="middle" x="400" y="300">languages
+		</text>
+	</g>
+</svg>

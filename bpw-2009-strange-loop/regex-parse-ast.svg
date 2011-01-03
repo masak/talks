@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg8436">
+  <defs
+     id="defs8438">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)"
+         id="path6680"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <linearGradient
+       id="linearGradient8959">
+      <stop
+         id="stop8961"
+         style="stop-color:#adadad;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop8963"
+         style="stop-color:#ebebeb;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9076"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,32.80745)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient9122"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,-97.600252)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient7164"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(12.618257,57.604223)" />
+    <linearGradient
+       x1="516.08649"
+       y1="459.30002"
+       x2="516.08649"
+       y2="324.81418"
+       id="linearGradient7175"
+       xlink:href="#linearGradient8959"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(36.901723,-147.44238)" />
+  </defs>
+    <g
+       transform="translate(24.283466,49.842075)"
+       id="g7114">
+      <rect
+         width="320.5036"
+         height="133.75348"
+         rx="17.716536"
+         ry="17.716536"
+         x="365.92929"
+         y="382.77277"
+         id="rect8990"
+         style="opacity:0.98999999;fill:url(#linearGradient7164);fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         x="470.87152"
+         y="455.40634"
+         id="text8992"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="470.87152"
+           y="455.40634"
+           id="tspan8994">regex</tspan></text>
+    </g>
+    <g
+       id="g7222">
+      <path
+         d="m 218.60454,506.24043 167.82275,0"
+         id="path6138"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+      <text
+         x="130.27678"
+         y="516.33502"
+         id="text7104"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="130.27678"
+           y="516.33502"
+           id="tspan7106">text</tspan></text>
+    </g>
+    <g
+       id="g7227">
+      <path
+         d="m 713.24,506.24043 167.82275,0"
+         id="path7098"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+      <text
+         x="916.39386"
+         y="523.90601"
+         id="text7100"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="916.39386"
+           y="523.90601"
+           id="tspan7102">$/</tspan></text>
+    </g>
+    <g
+       id="g7232">
+      <text
+         x="63.57365"
+         y="256.39905"
+         id="text7108"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="63.57365"
+           y="256.39905"
+           id="tspan7110">pattern</tspan></text>
+      <path
+         d="m 218.60454,246.30444 167.82275,0"
+         id="path7112"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    </g>
+    <g
+       id="g7217">
+      <rect
+         width="320.5036"
+         height="133.75348"
+         rx="17.716536"
+         ry="17.716536"
+         x="390.21277"
+         y="177.72617"
+         id="rect7121"
+         style="opacity:0.98999999;fill:url(#linearGradient7175);fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         x="475.37082"
+         y="257.00427"
+         id="text7123"
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="475.37082"
+           y="257.00427"
+           id="tspan7125">OPTable</tspan></text>
+    </g>
+    <g
+       id="g7237">
+      <path
+         d="m 711.97818,246.30444 167.82275,0"
+         id="path7134"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+      <text
+         x="897.64008"
+         y="256.39905"
+         id="text7136"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="897.64008"
+           y="256.39905"
+           id="tspan7138">AST</tspan></text>
+    </g>
+    <path
+       d="M 936.58306,271.54095 C 856.77627,346.07373 655.10894,340.41336 559.2973,429.26909"
+       id="path7140"
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    <g
+       id="g7242">
+      <path
+         d="m 555.51186,107.50367 1e-5,65.61491"
+         id="path7190"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+      <text
+         x="463.57224"
+         y="88.576302"
+         id="text7192"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+           x="463.57224"
+           y="88.576302"
+           id="tspan7194">operators</tspan></text>
+    </g>
+</svg>

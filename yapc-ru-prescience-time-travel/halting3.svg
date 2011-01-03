@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg2816"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="halting3.svg">
+  <defs
+     id="defs2818">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path3747"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+  <g>
+    <rect
+       style="fill:#dddddd;fill-opacity:1;stroke:none"
+       id="rect3674"
+       width="818.20941"
+       height="626.40363"
+       x="-7.2837634"
+       y="-11.836115" />
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       x="481.59967"
+       y="66.395073"
+       id="text3711"><tspan
+         sodipodi:role="line"
+         id="tspan3713"
+         x="481.59967"
+         y="66.395073">input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       x="252.96281"
+       y="45.280735"
+       id="text3707"><tspan
+         sodipodi:role="line"
+         id="tspan3709"
+         x="252.96281"
+         y="45.280735">code</tspan></text>
+    <g
+       id="g4823">
+      <rect
+         y="13.717705"
+         x="464.94687"
+         height="92.261002"
+         width="100.75873"
+         id="rect2933"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="cccc"
+         id="path3715"
+         d="m 518.92969,118.89754 -1.21395,26.70713 -117.75418,0 0,50.98634"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+      <g
+         transform="matrix(0.29226928,0,0,0.29226928,164.74969,-32.819949)"
+         id="g4333">
+        <g
+           id="g4204"
+           transform="translate(36.418823,-8.4370041)">
+          <text
+             id="text4187"
+             y="593.93024"
+             x="282.85281"
+             style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#004000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+             xml:space="preserve"><tspan
+               y="593.93024"
+               x="282.85281"
+               id="tspan4189"
+               sodipodi:role="line">☺</tspan></text>
+          <path
+             sodipodi:nodetypes="cc"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+             d="M 365.40213,341.42641 308.34598,552.65554"
+             id="path4195" />
+        </g>
+        <g
+           id="g4209"
+           transform="translate(36.418823,-8.4370041)">
+          <text
+             id="text4191"
+             y="450.68286"
+             x="422.45828"
+             style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+             xml:space="preserve"><tspan
+               y="450.68286"
+               x="422.45828"
+               id="tspan4193"
+               sodipodi:role="line">☹</tspan></text>
+          <path
+             id="path4197"
+             d="m 365.40213,341.42641 54.62822,69.19575"
+             style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+             sodipodi:nodetypes="cc" />
+        </g>
+      </g>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4328"
+         width="100.75873"
+         height="92.261002"
+         x="234.29439"
+         y="13.717705" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+         d="m 281.88705,118.89754 1.21395,26.70713 117.75418,0"
+         id="path4343"
+         sodipodi:nodetypes="ccc" />
+    </g>
+  </g>
+  <g
+     id="g4838">
+    <rect
+       y="217.66315"
+       x="234.29439"
+       height="219.72687"
+       width="331.41125"
+       id="rect2931"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       id="text4559"
+       y="308.71017"
+       x="308.84375"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"><tspan
+         y="308.71017"
+         x="308.84375"
+         id="tspan4561"
+         sodipodi:role="line">StuckFinder™</tspan></text>
+  </g>
+  <g
+     id="g4814">
+    <g
+       transform="translate(0,-50.986343)"
+       id="g4754">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
+         d="m 384.82549,515.02276 0,21.85129 -103.18664,0 0,37.63278"
+         id="path4566"
+         sodipodi:nodetypes="cccc" />
+      <path
+         sodipodi:nodetypes="cccc"
+         id="path4752"
+         d="m 384.50516,515.02276 0,21.85129 103.18664,0 0,37.63278"
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+    </g>
+    <text
+       id="text4794"
+       y="563.64191"
+       x="258.29266"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#004000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"><tspan
+         y="563.64191"
+         x="258.29266"
+         id="tspan4796"
+         sodipodi:role="line">☺</tspan></text>
+    <text
+       id="text4802"
+       y="566.41925"
+       x="469.66226"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#800000;fill-opacity:1;stroke:none;font-family:Gill Sans;-inkscape-font-specification:Gill Sans"
+       xml:space="preserve"><tspan
+         y="566.41925"
+         x="469.66226"
+         id="tspan4804"
+         sodipodi:role="line">☹</tspan></text>
+  </g>
+</svg>

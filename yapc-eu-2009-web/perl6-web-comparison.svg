@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <image
+     xlink:href="3583523428-dancingshiva.jpg"
+     x="-6.3408203"
+     y="-27.864227"
+     width="1065.0438"
+     height="799.82294"
+     id="image4849" />
+  <g
+     transform="translate(0,-85.907117)"
+     id="g4091">
+    <text
+       x="229.32805"
+       y="204.42152"
+       id="text24477"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima Bold"><tspan
+         x="229.32805"
+         y="204.42152"
+         id="tspan24479">Perl 6</tspan></text>
+    <text
+       x="643.24414"
+       y="204.42152"
+       id="text24481"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+         x="643.24414"
+         y="204.42152"
+         id="tspan24483"
+         style="font-weight:bold;-inkscape-font-specification:Optima Bold">Web.pm</tspan></text>
+    <path
+       d="M 194.26723,225.61291 L 858.09496,225.61291"
+       id="path24495"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     x="238.28943"
+     y="229.51781"
+     id="text24505"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="238.28943"
+       y="229.51781"
+       id="tspan24507">Rewrite</tspan></text>
+  <text
+     x="678.50165"
+     y="229.51781"
+     id="text24521"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="678.50165"
+       y="229.51781"
+       id="tspan24523">Rewrite</tspan></text>
+  <text
+     x="212.61768"
+     y="315.26721"
+     id="text25892"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="212.61768"
+       y="315.26721"
+       id="tspan25894">Steals ideas</tspan></text>
+  <text
+     x="652.82983"
+     y="315.26721"
+     id="text25896"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="652.82983"
+       y="315.26721"
+       id="tspan25898">Steals ideas</tspan></text>
+  <text
+     x="229.13217"
+     y="401.0166"
+     id="text24509"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="229.13217"
+       y="401.0166"
+       id="tspan24511">Coercion</tspan></text>
+  <text
+     x="669.34436"
+     y="401.0166"
+     id="text24525"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="669.34436"
+       y="401.0166"
+       id="tspan24527">Coercion</tspan></text>
+  <text
+     x="220.64767"
+     y="486.76599"
+     id="text24501"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="220.64767"
+       y="486.76599"
+       id="tspan24503">Encodings</tspan></text>
+  <text
+     x="660.85986"
+     y="486.76599"
+     id="text24517"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="660.85986"
+       y="486.76599"
+       id="tspan24519">Encodings</tspan></text>
+  <text
+     x="258.77994"
+     y="572.51538"
+     id="text24497"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="258.77994"
+       y="572.51538"
+       id="tspan24499">Spec</tspan></text>
+  <text
+     x="698.99213"
+     y="572.51538"
+     id="text24513"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="698.99213"
+       y="572.51538"
+       id="tspan24515">Spec</tspan></text>
+  <text
+     x="207.78894"
+     y="658.26477"
+     id="text4258"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="207.78894"
+       y="658.26477"
+       id="tspan4260">Usable now</tspan></text>
+  <text
+     x="648.0011"
+     y="658.26477"
+     id="text4262"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Optima;-inkscape-font-specification:Optima"><tspan
+       x="648.0011"
+       y="658.26477"
+       id="tspan4264">Usable now</tspan></text>
+</svg>

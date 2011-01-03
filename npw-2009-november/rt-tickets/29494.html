@@ -1,0 +1,733 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#29494: [P6C Patch: tests] A few parser tests</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D29494">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#29494: [P6C Patch: tests] A few parser tests</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=29494">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">29494</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">rejected</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=29494">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+amahabal
+&lt;amahabal [at] cs.indiana.edu&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=29494">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+tests.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/87198/61725/tests.patch">
+Mon May 10 19:42:45 2004 (3.4k) by amahabal
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=29494">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-87198" href="/rt3/Ticket/Display.html?id=29494#txn-87198">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;May&nbsp;10&nbsp;19:42:45&nbsp;2004</td>
+    <td class="description">
+      amahabal -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[P6C Patch: tests] A few parser tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 10 May 2004 21:42:09 -0500 &#40;EST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Perl 6 Bugs &lt;bugs-perl6 <!-- x --> at develooper.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Abhijit A. Mahabal&#34; &lt;amahabal <!-- x --> at indiana.edu&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/87198/61724/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 722b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+        I wrote a small module that uses Test::More and allows us to write<br />
+many many tests fast; For each test, it just checks whether a particular<br />
+string matches &#40;or doesn&#39;t match&#41; a particular rule, without paying<br />
+attention to what it parsed as. Sometimes this is all that is needed. It<br />
+is possible to mark things &#34;TODO&#34; or &#34;SKIP&#34;. Here is part of the test the<br />
+patch contains to illustrate what I mean:<br />
+<br />
+linetests directive =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+package<br />
+module<br />
+TODO class<br />
+TODO role<br />
+END<br />
+<br />
+linetests binary =&gt; 0, &lt;&lt;&#39;END&#39;;<br />
+0b03<br />
+END<br />
+<br />
+linetests sigparam =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+$a<br />
+$a is rw = 9<br />
++$a<br />
+END<br />
+<br />
+So far I only have a few tests in there, but I&#39;ll add many more soon.<br />
+<br />
+--abhijit<br />
+<br />
+Abhijit A. Mahabal      http://www.cs.indiana.edu/~amahabal/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/87198/61725/tests.patch">Download tests.patch</a>
+<span class="downloadcontenttype">
+[text/plain 3.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-87307" href="/rt3/Ticket/Display.html?id=29494#txn-87307">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;12&nbsp;13:19:49&nbsp;2004</td>
+    <td class="description">
+      amahabal -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/87307/61819/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 137b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I forgot to mention that this has to be run in the directory<br />
+languages/perl6/t/parser, and won&#39;t work from languages/perl6 etc.<br />
+--abhijit<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-87308" href="/rt3/Ticket/Display.html?id=29494#txn-87308">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;12&nbsp;13:19:51&nbsp;2004</td>
+    <td class="description">
+      amahabal -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-139131" href="/rt3/Ticket/Display.html?id=29494#txn-139131">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;19&nbsp;23:37:35&nbsp;2006</td>
+    <td class="description">
+      mjanardhan -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/139131/92578/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 842b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+test append.<br />
+On Mon May 10 19:42:45 2004, amahabal wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi,<br />
+&gt;       I wrote a small module that uses Test::More and allows us to write<br />
+&gt; many many tests fast; For each test, it just checks whether a particular<br />
+&gt; string matches &#40;or doesn&#39;t match&#41; a particular rule, without paying<br />
+&gt; attention to what it parsed as. Sometimes this is all that is needed. It<br />
+&gt; is possible to mark things &#34;TODO&#34; or &#34;SKIP&#34;. Here is part of the test the<br />
+&gt; patch contains to illustrate what I mean:<br />
+&gt; <br />
+&gt; linetests directive =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+&gt; package<br />
+&gt; module<br />
+&gt; TODO class<br />
+&gt; TODO role<br />
+&gt; END<br />
+&gt; <br />
+&gt; linetests binary =&gt; 0, &lt;&lt;&#39;END&#39;;<br />
+&gt; 0b03<br />
+&gt; END<br />
+&gt; <br />
+&gt; linetests sigparam =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+&gt; $a<br />
+&gt; $a is rw = 9<br />
+&gt; +$a<br />
+&gt; END<br />
+&gt; <br />
+&gt; So far I only have a few tests in there, but I&#39;ll add many more soon.<br />
+&gt; <br />
+&gt; --abhijit<br />
+&gt; <br />
+&gt; Abhijit A. Mahabal      http://www.cs.indiana.edu/~amahabal/<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-272005" href="/rt3/Ticket/Display.html?id=29494#txn-272005">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;12&nbsp;07:48:54&nbsp;2007</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/272005/119069/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Apologies for the delay in response, this ticket was left in the perl6<br />
+queue which hasn&#39;t been monitored closely.<br />
+<br />
+The current plan for tests for perl6 on parrot is to run the official<br />
+perl6 tests, which currently means &#34;whatever is in pugs&#34;. If you&#39;re<br />
+interested in committing tests to pugs, commit bits there are freely<br />
+available.<br />
+<br />
+There is also a new implementation of perl6 on parrot. See<br />
+http://www.parrotcode.org/ for details on how to get the latest version.<br />
+<br />
+Regards.<br />
+<br />
+On Wed Jul 19 23:37:35 2006, mjanardhan wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; test append.<br />
+&gt; On Mon May 10 19:42:45 2004, amahabal wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Hi,<br />
+&gt; &gt;     I wrote a small module that uses Test::More and allows us to write<br />
+&gt; &gt; many many tests fast; For each test, it just checks whether a particular<br />
+&gt; &gt; string matches &#40;or doesn&#39;t match&#41; a particular rule, without paying<br />
+&gt; &gt; attention to what it parsed as. Sometimes this is all that is needed. It<br />
+&gt; &gt; is possible to mark things &#34;TODO&#34; or &#34;SKIP&#34;. Here is part of the<br />
+</div>
+</div>
+test the<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; patch contains to illustrate what I mean:<br />
+&gt; &gt; <br />
+&gt; &gt; linetests directive =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+&gt; &gt; package<br />
+&gt; &gt; module<br />
+&gt; &gt; TODO class<br />
+&gt; &gt; TODO role<br />
+&gt; &gt; END<br />
+&gt; &gt; <br />
+&gt; &gt; linetests binary =&gt; 0, &lt;&lt;&#39;END&#39;;<br />
+&gt; &gt; 0b03<br />
+&gt; &gt; END<br />
+&gt; &gt; <br />
+&gt; &gt; linetests sigparam =&gt; 1, &lt;&lt;&#39;END&#39;;<br />
+&gt; &gt; $a<br />
+&gt; &gt; $a is rw = 9<br />
+&gt; &gt; +$a<br />
+&gt; &gt; END<br />
+&gt; &gt; <br />
+&gt; &gt; So far I only have a few tests in there, but I&#39;ll add many more soon.<br />
+&gt; &gt; <br />
+&gt; &gt; --abhijit<br />
+&gt; &gt; <br />
+&gt; &gt; Abhijit A. Mahabal      http://www.cs.indiana.edu/~amahabal/<br />
+</div>
+&gt; <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-272009" href="/rt3/Ticket/Display.html?id=29494#txn-272009">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;12&nbsp;07:48:55&nbsp;2007</td>
+    <td class="description">
+      coke -  Status changed from &#39;open&#39; to &#39;rejected&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.817502</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1526 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57400: Working with %*ENV in Rakudo is difficult</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57400">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57400: Working with %*ENV in Rakudo is difficult</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57400">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57400</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57400">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+johan.viklund [at] ebc.uu.se
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57400">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+env-mapping.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511886/241334/env-mapping.patch">
+Wed Dec 24 10:19:12 2008 (2k) by cspencer
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57400">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-451516" href="/rt3/Ticket/Display.html?id=57400#txn-451516">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;30&nbsp;00:08:10&nbsp;2008</td>
+    <td class="description">
+      johan.viklund <!-- x --> at uu.se -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Copying %*ENV seqfaults</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 30 Jul 2008 09:05:39 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Johan Viklund &lt;johan.viklund <!-- x --> at uu.se&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/451516/208188/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 605b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+$ svn info | grep Revi<br />
+Revision: 29869<br />
+<br />
+This works<br />
+<br />
+$ ./perl6 -e &#39;my %t = &#40;&#41;; my %s=%t&#39;<br />
+<br />
+<br />
+But this does not<br />
+<br />
+$ ./perl6 -e &#39;my %s=%*ENV&#39;<br />
+Parrot VM: Can&#39;t turn to a singleton type!<br />
+current instr.: &#39;parrot;Perl6Hash;infix:=&#39; pc 4699 &#40;src/gen_builtins.pir:3215&#41;<br />
+called from Sub &#39;_block11&#39; pc 28 &#40;EVAL_10:17&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806 &#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1305 &#40;src/PCT/HLLCompiler.pir:708&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 14902 &#40;perl6.pir:172&#41;<br />
+Segmentation fault &#40;core dumped&#41;<br />
+<br />
+<br />
+-- <br />
+Johan Viklund<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-484756" href="/rt3/Ticket/Display.html?id=57400#txn-484756">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;16&nbsp;06:29:04&nbsp;2008</td>
+    <td class="description">
+      masak -  Subject changed from &#39;Copying %*ENV seqfaults&#39; to &#39;Working with %*ENV in Rakudo is difficult&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-484758" href="/rt3/Ticket/Display.html?id=57400#txn-484758">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;16&nbsp;06:31:14&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/484758/225858/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Here&#39;s a thorough investigation of the strange properties of %*ENV.<br />
+<br />
+Rakudo r31926 has an %*ENV variable which claims to be of Hash type, but<br />
+which behaves very non-hashlike when you poke it. Its hash values are<br />
+supposedly strings, but don&#39;t have the corresponding Str methods.<br />
+<br />
+say &#39;a&#39;.WHAT;<br />
+<div class="message-stanza-depth-1">
+# Str<br />
+</div>
+<br />
+say &#39;a&#39;.trans&#40;&#41;;<br />
+<div class="message-stanza-depth-1">
+# a<br />
+</div>
+<br />
+say %*ENV&lt;Q&gt;.WHAT;<br />
+<div class="message-stanza-depth-1">
+# Str<br />
+</div>
+<br />
+say %*ENV&lt;Q&gt;.trans&#40;&#41;;<br />
+<div class="message-stanza-depth-1">
+# too few arguments passed &#40;1&#41; - 3 params expected<br />
+</div>
+<br />
+say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;;<br />
+<div class="message-stanza-depth-1">
+# Null PMC access in get_string&#40;&#41;<br />
+</div>
+<br />
+say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;.WHAT;<br />
+<div class="message-stanza-depth-1">
+# Null PMC access in find_method&#40;&#41;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV&lt;Q&gt; .= trans&#40;[ &#34;A&#34; =&gt; &#34;B&#34; ], []&#41;&#39;<br />
+</div>
+<div class="message-stanza-depth-1">
+# Null PMC access in name&#40;&#41;<br />
+</div>
+<br />
+sub foo&#40;$s is rw&#41; { $s .= trans&#40; [ &#39;a&#39; =&gt; &#39;b&#39; ], [] &#41; }<br />
+say foo&#40; &#39;a&#39; &#41;;<br />
+<div class="message-stanza-depth-1">
+# b<br />
+</div>
+say foo&#40; %*ENV&lt;Q&gt; &#41;;<br />
+<div class="message-stanza-depth-1">
+# Null PMC access in can&#40;&#41;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV&lt;A&gt; = &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+# &#34;&#34;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV&lt;A&gt; := &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+# &#34;OH HAI&#34;<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV = {}<br />
+</div>
+<div class="message-stanza-depth-1">
+# Parrot VM: Can&#39;t modify a singleton<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV := {}; say %*ENV.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+# {}<br />
+</div>
+<br />
+my %h = %*ENV<br />
+<div class="message-stanza-depth-1">
+# Parrot VM: Can&#39;t turn to a singleton type!<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV.keys<br />
+%*ENV.values<br />
+%*ENV.kv<br />
+%*ENV.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+# No applicable methods.<br />
+</div>
+<br />
+say %*ENV.elems<br />
+<div class="message-stanza-depth-1">
+# 1<br />
+</div>
+<br />
+say %*ENV.join<br />
+<div class="message-stanza-depth-1">
+# get_string&#40;&#41; not implemented in class &#39;Env&#39;<br />
+</div>
+<br />
+In summary:<br />
+<br />
+1. Ordinary strings and strings in %*ENV are unequally treated. You can call<br />
+.trans&#40;&#41;, or .trans&#40;[]&#41; on the former, but you have to send in two non-<br />
+invocant arguments to the latter.<br />
+<br />
+2. The result of a successful .trans call on an %*ENV item returns something<br />
+which, when touched in any way, causes Rakudo to explode. Most likely a<br />
+Parrot<br />
+Null value. This is the case regardless of the value of the %*ENV item, and<br />
+regardless of whether it has been defined.<br />
+<br />
+3. Actively modifying the %*ENV item using .=trans produces a Null PMC<br />
+access<br />
+in another Parrot sub, and doing this from within a subroutine, produces<br />
+a Null<br />
+PMC acces in yet another Parrot sub.<br />
+<br />
+4. Setting an %*ENV item using infix:&lt;=&gt; has no effect. Setting it using<br />
+infix:&lt;:=&gt; works. Setting %*ENV itself using infix:&lt;=&gt; produces a Parrot VM<br />
+error. Setting it using infix:&lt;:=&gt; works. Assigning %*ENV to another<br />
+variable<br />
+using infix:&lt;=&gt; produces another Parrot VM error.<br />
+<br />
+5. When calling the methods .keys, .values, .kv or .perl on %*ENV, something<br />
+fails with &#34;No applicable methods&#34;. &#40;Note, though, that this is<br />
+different from<br />
+the error message produced by calling a method that doesn&#39;t exist on Hash:<br />
+&#34;Method &#39;foo&#39; not found for invocant of class &#39;Env&#39;&#34;&#41; The %*ENV.elems mehtod<br />
+always reports &#39;1&#39;. Calling %*ENV.join&#40;&#41; produces an error message.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-484762" href="/rt3/Ticket/Display.html?id=57400#txn-484762">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Oct&nbsp;16&nbsp;06:31:17&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491202" href="/rt3/Ticket/Display.html?id=57400#txn-491202">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;04&nbsp;09:11:01&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491202/229430/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 348b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Oct 16 06:31:14 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s a thorough investigation of the strange properties of %*ENV.<br />
+&gt; ...<br />
+</div>
+Some of this will be resolved, most likely, in upcoming container and<br />
+assignment changes. We will probably end up making this a kind of tied<br />
+hash. Anyway, will review this again after the aforementioned changes<br />
+are done.<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493862" href="/rt3/Ticket/Display.html?id=57400#txn-493862">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;13:16:19&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Dependency on ticket #58362 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493896" href="/rt3/Ticket/Display.html?id=57400#txn-493896">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;13:59:46&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/493896/231052/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Oct 16 06:31:14 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s a thorough investigation of the strange properties of %*ENV.<br />
+</div>
+<br />
+Here&#39;s an explanation -- I&#39;ll start with the summary first and then look<br />
+at the examples.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; In summary:<br />
+&gt; <br />
+&gt; 1. Ordinary strings and strings in %*ENV are unequally treated. You<br />
+</div>
+can call<br />
+<div class="message-stanza-depth-1">
+&gt; .trans&#40;&#41;, or .trans&#40;[]&#41; on the former, but you have to send in two non-<br />
+&gt; invocant arguments to the latter.<br />
+</div>
+<br />
+Rakudo&#39;s %*ENV is simply an instance of Parrot&#39;s Env PMC.  Whenever we<br />
+fetch something from the Env PMC, we get back a String PMC.  This isn&#39;t<br />
+a full Rakudo Str object, though, so their behaviors are a bit latter.<br />
+<br />
+In particular, Parrot&#39;s String PMC already has a .trans method defined<br />
+on it, so Rakudo&#39;s .trans method for Str doesn&#39;t override it.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; 2. The result of a successful .trans call on an %*ENV item returns<br />
+</div>
+something<br />
+<div class="message-stanza-depth-1">
+&gt; which, when touched in any way, causes Rakudo to explode.<br />
+</div>
+<br />
+The .trans method on String PMC doesn&#39;t return a value at all -- it does<br />
+an inplace modification.  So, the return value is garbage that indeed<br />
+causes Parrot to go boom.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; 3. Actively modifying the %*ENV item using .=trans produces a Null PMC<br />
+&gt; access<br />
+&gt; in another Parrot sub, and doing this from within a subroutine, produces<br />
+&gt; a Null<br />
+&gt; PMC acces in yet another Parrot sub.<br />
+</div>
+<br />
+Since %*ENV returns a Parrot String PMC, and since the .trans method on<br />
+the String PMC returns garbage, the inplace modifier ends up trying to<br />
+store garbage back into the String PMC.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; 4. Setting an %*ENV item using infix:&lt;=&gt; has no effect. Setting it using<br />
+&gt; infix:&lt;:=&gt; works. <br />
+</div>
+<br />
+The values that come back from %*ENV are String PMCs that aren&#39;t tied to<br />
+the environment at all, thus assigning to those PMCs has no effect.<br />
+<br />
+However, binding an item using &lt;:=&gt; does activate the set_*_keyed VTABLE<br />
+of the underlying Env PMC, so that does work.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Setting %*ENV itself using infix:&lt;=&gt; produces a Parrot VM<br />
+&gt; error.<br />
+</div>
+<br />
+The Env PMC is a singleton PMC that doesn&#39;t understand assignment. <br />
+We&#39;ll need to map this somehow so that it understands how to rebuild<br />
+itself from a list or hash. <br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Setting it using infix:&lt;:=&gt; works. <br />
+</div>
+<br />
+You can rebind %*ENV to a different hash, but then it loses its magical<br />
+Env properties.  &#40;This may also end up being the case for infix:&lt;=&gt; above.&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Assigning %*ENV to another<br />
+&gt; variable<br />
+&gt; using infix:&lt;=&gt; produces another Parrot VM error.<br />
+</div>
+<br />
+The Parrot Env PMC is a singleton PMC, so apparently there&#39;s not a way<br />
+to clone or copy it.  This will probably be fixed via ObjectRefs, if<br />
+it&#39;s not fixed already.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; 5. When calling the methods .keys, .values, .kv or .perl on %*ENV,<br />
+</div>
+something<br />
+<div class="message-stanza-depth-1">
+&gt; fails with &#34;No applicable methods&#34;. <br />
+</div>
+<br />
+Since %*ENV &#40;and the Env PMC&#41; is not really a Hash or Mapping, none of<br />
+those methods yet apply.  This is probably fixable if we map the Env PMC<br />
+onto Rakudo&#39;s Mapping class.<br />
+<br />
+<br />
+So, with those points out of the way, here are the explanations of the<br />
+examples:<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say %*ENV&lt;Q&gt;.WHAT;<br />
+<div class="message-stanza-depth-2">
+&gt; # Str<br />
+</div>
+</div>
+<br />
+<div class="message-stanza-depth-1">
+%*ENV&lt;Q&gt; actually returns a Parrot String PMC, which we&#39;ve mapped onto<br />
+</div>
+the Rakudo Str type, so it reports &#39;Str&#39; as its type &#40;even though it isn&#39;t&#41;.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say %*ENV&lt;Q&gt;.trans&#40;&#41;;<br />
+<div class="message-stanza-depth-2">
+&gt; # too few arguments passed &#40;1&#41; - 3 params expected<br />
+</div>
+</div>
+<br />
+Since the String PMC has its own .trans method, the Str.trans method<br />
+doesn&#39;t get invoked &#40;and the signatures are different&#41;.<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;;<br />
+<div class="message-stanza-depth-2">
+&gt; # Null PMC access in get_string&#40;&#41;<br />
+</div>
+&gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;.WHAT;<br />
+<div class="message-stanza-depth-2">
+&gt; # Null PMC access in find_method&#40;&#41;<br />
+</div>
+</div>
+<br />
+This invocation matches the signature for String.trans &#40;not Str.trans&#41;,<br />
+but that .trans is an inplace modification that returns PMCNULL.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; %*ENV&lt;Q&gt; .= trans&#40;[ &#34;A&#34; =&gt; &#34;B&#34; ], []&#41;&#39;<br />
+</div>
+<div class="message-stanza-depth-2">
+&gt; # Null PMC access in name&#40;&#41;<br />
+</div>
+</div>
+<br />
+This ends up calling %*ENV&lt;Q&gt;.trans&#40; ... &#41;, which returns PMCNULL and<br />
+cannot be assigned back to %*ENV&lt;Q&gt;.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; %*ENV&lt;A&gt; = &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+&gt; # &#34;&#34;<br />
+</div>
+<div class="message-stanza-depth-1">
+&gt; %*ENV&lt;A&gt; := &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-1">
+&gt; # &#34;OH HAI&#34;<br />
+</div>
+<br />
+Assignment doesn&#39;t work, but binding does.<br />
+<br />
+<br />
+<br />
+Hope this helps -- I&#39;ll see which of the above I can clean up.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493902" href="/rt3/Ticket/Display.html?id=57400#txn-493902">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;11&nbsp;13:59:52&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511886" href="/rt3/Ticket/Display.html?id=57400#txn-511886">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;24&nbsp;10:19:11&nbsp;2008</td>
+    <td class="description">
+      cspencer -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511886/241328/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+This patch maps %*ENV onto the Mapping interface, allowing the<br />
+fmt/keys/kv/pairs/values methods to work.<br />
+<br />
+Please let me know if their are any issues to be corrected in it!<br />
+<br />
+Thanks,<br />
+<br />
+Cory<br />
+<br />
+On Tue Nov 11 13:59:46 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Thu Oct 16 06:31:14 2008, masak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Here&#39;s a thorough investigation of the strange properties of %*ENV.<br />
+</div>
+&gt; <br />
+&gt; Here&#39;s an explanation -- I&#39;ll start with the summary first and then look<br />
+&gt; at the examples.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; In summary:<br />
+&gt; &gt; <br />
+&gt; &gt; 1. Ordinary strings and strings in %*ENV are unequally treated. You<br />
+</div>
+&gt; can call<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; .trans&#40;&#41;, or .trans&#40;[]&#41; on the former, but you have to send in two non-<br />
+&gt; &gt; invocant arguments to the latter.<br />
+</div>
+&gt; <br />
+&gt; Rakudo&#39;s %*ENV is simply an instance of Parrot&#39;s Env PMC.  Whenever we<br />
+&gt; fetch something from the Env PMC, we get back a String PMC.  This isn&#39;t<br />
+&gt; a full Rakudo Str object, though, so their behaviors are a bit latter.<br />
+&gt; <br />
+&gt; In particular, Parrot&#39;s String PMC already has a .trans method defined<br />
+&gt; on it, so Rakudo&#39;s .trans method for Str doesn&#39;t override it.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 2. The result of a successful .trans call on an %*ENV item returns<br />
+</div>
+&gt; something<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; which, when touched in any way, causes Rakudo to explode.<br />
+</div>
+&gt; <br />
+&gt; The .trans method on String PMC doesn&#39;t return a value at all -- it does<br />
+&gt; an inplace modification.  So, the return value is garbage that indeed<br />
+&gt; causes Parrot to go boom.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 3. Actively modifying the %*ENV item using .=trans produces a Null PMC<br />
+&gt; &gt; access<br />
+&gt; &gt; in another Parrot sub, and doing this from within a subroutine, produces<br />
+&gt; &gt; a Null<br />
+&gt; &gt; PMC acces in yet another Parrot sub.<br />
+</div>
+&gt; <br />
+&gt; Since %*ENV returns a Parrot String PMC, and since the .trans method on<br />
+&gt; the String PMC returns garbage, the inplace modifier ends up trying to<br />
+&gt; store garbage back into the String PMC.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 4. Setting an %*ENV item using infix:&lt;=&gt; has no effect. Setting it using<br />
+&gt; &gt; infix:&lt;:=&gt; works. <br />
+</div>
+&gt; <br />
+&gt; The values that come back from %*ENV are String PMCs that aren&#39;t tied to<br />
+&gt; the environment at all, thus assigning to those PMCs has no effect.<br />
+&gt; <br />
+&gt; However, binding an item using &lt;:=&gt; does activate the set_*_keyed VTABLE<br />
+&gt; of the underlying Env PMC, so that does work.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Setting %*ENV itself using infix:&lt;=&gt; produces a Parrot VM<br />
+&gt; &gt; error.<br />
+</div>
+&gt; <br />
+&gt; The Env PMC is a singleton PMC that doesn&#39;t understand assignment. <br />
+&gt; We&#39;ll need to map this somehow so that it understands how to rebuild<br />
+&gt; itself from a list or hash. <br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Setting it using infix:&lt;:=&gt; works. <br />
+</div>
+&gt; <br />
+&gt; You can rebind %*ENV to a different hash, but then it loses its magical<br />
+&gt; Env properties.  &#40;This may also end up being the case for infix:&lt;=&gt;<br />
+</div>
+above.&#41;<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Assigning %*ENV to another<br />
+&gt; &gt; variable<br />
+&gt; &gt; using infix:&lt;=&gt; produces another Parrot VM error.<br />
+</div>
+&gt; <br />
+&gt; The Parrot Env PMC is a singleton PMC, so apparently there&#39;s not a way<br />
+&gt; to clone or copy it.  This will probably be fixed via ObjectRefs, if<br />
+&gt; it&#39;s not fixed already.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; 5. When calling the methods .keys, .values, .kv or .perl on %*ENV,<br />
+</div>
+&gt; something<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; fails with &#34;No applicable methods&#34;. <br />
+</div>
+&gt; <br />
+&gt; Since %*ENV &#40;and the Env PMC&#41; is not really a Hash or Mapping, none of<br />
+&gt; those methods yet apply.  This is probably fixable if we map the Env PMC<br />
+&gt; onto Rakudo&#39;s Mapping class.<br />
+&gt; <br />
+&gt; <br />
+&gt; So, with those points out of the way, here are the explanations of the<br />
+&gt; examples:<br />
+&gt; <br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say %*ENV&lt;Q&gt;.WHAT;<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; # Str<br />
+</div>
+</div>
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; %*ENV&lt;Q&gt; actually returns a Parrot String PMC, which we&#39;ve mapped onto<br />
+</div>
+&gt; the Rakudo Str type, so it reports &#39;Str&#39; as its type &#40;even though it<br />
+</div>
+isn&#39;t&#41;.<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say %*ENV&lt;Q&gt;.trans&#40;&#41;;<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; # too few arguments passed &#40;1&#41; - 3 params expected<br />
+</div>
+</div>
+&gt; <br />
+&gt; Since the String PMC has its own .trans method, the Str.trans method<br />
+&gt; doesn&#39;t get invoked &#40;and the signatures are different&#41;.<br />
+&gt; <br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;;<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; # Null PMC access in get_string&#40;&#41;<br />
+</div>
+&gt; &gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;.WHAT;<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; # Null PMC access in find_method&#40;&#41;<br />
+</div>
+</div>
+&gt; <br />
+&gt; This invocation matches the signature for String.trans &#40;not Str.trans&#41;,<br />
+&gt; but that .trans is an inplace modification that returns PMCNULL.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; %*ENV&lt;Q&gt; .= trans&#40;[ &#34;A&#34; =&gt; &#34;B&#34; ], []&#41;&#39;<br />
+</div>
+<div class="message-stanza-depth-3">
+&gt; &gt; # Null PMC access in name&#40;&#41;<br />
+</div>
+</div>
+&gt; <br />
+&gt; This ends up calling %*ENV&lt;Q&gt;.trans&#40; ... &#41;, which returns PMCNULL and<br />
+&gt; cannot be assigned back to %*ENV&lt;Q&gt;.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; %*ENV&lt;A&gt; = &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-2">
+&gt; &gt; # &#34;&#34;<br />
+</div>
+<div class="message-stanza-depth-2">
+&gt; &gt; %*ENV&lt;A&gt; := &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-2">
+&gt; &gt; # &#34;OH HAI&#34;<br />
+</div>
+&gt; <br />
+&gt; Assignment doesn&#39;t work, but binding does.<br />
+&gt; <br />
+&gt; <br />
+&gt; <br />
+&gt; Hope this helps -- I&#39;ll see which of the above I can clean up.<br />
+&gt; <br />
+&gt; Pm<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511886/241334/env-mapping.patch">Download env-mapping.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 2k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511924" href="/rt3/Ticket/Display.html?id=57400#txn-511924">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;24&nbsp;11:58:53&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">johan.viklund <!-- x --> at uu.se</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57400] Working with %*ENV in Rakudo is difficult</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 24 Dec 2008 13:58:21 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Cory Spencer via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511924/241358/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 5.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Instead of duplicating the method calls, a simpler approach might be<br />
+to create a Perl6Env class that has Env and Mapping as parents, then<br />
+change %*ENV to create a Perl6Env instead of a Env.  This should<br />
+cause %*ENV to inherit all of Mapping&#39;s methods.  &#40;For other examples,<br />
+see how Mapping, List, and Complex are set up to inherit from Parrot<br />
+built-in PMC types.&#41;<br />
+<br />
+This might also make it easier for us to create proxies that do<br />
+the correct thing with the real environment when values are stored<br />
+into %*ENV.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+<br />
+On Wed, Dec 24, 2008 at 10:19:23AM -0800, Cory Spencer via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; This patch maps %*ENV onto the Mapping interface, allowing the<br />
+&gt; fmt/keys/kv/pairs/values methods to work.<br />
+&gt; <br />
+&gt; Please let me know if their are any issues to be corrected in it!<br />
+&gt; <br />
+&gt; Thanks,<br />
+&gt; <br />
+&gt; Cory<br />
+&gt; <br />
+&gt; On Tue Nov 11 13:59:46 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; On Thu Oct 16 06:31:14 2008, masak wrote:<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Here&#39;s a thorough investigation of the strange properties of %*ENV.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Here&#39;s an explanation -- I&#39;ll start with the summary first and then look<br />
+&gt; &gt; at the examples.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; In summary:<br />
+&gt; &gt; &gt; <br />
+&gt; &gt; &gt; 1. Ordinary strings and strings in %*ENV are unequally treated. You<br />
+</div>
+&gt; &gt; can call<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; .trans&#40;&#41;, or .trans&#40;[]&#41; on the former, but you have to send in two non-<br />
+&gt; &gt; &gt; invocant arguments to the latter.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Rakudo&#39;s %*ENV is simply an instance of Parrot&#39;s Env PMC.  Whenever we<br />
+&gt; &gt; fetch something from the Env PMC, we get back a String PMC.  This isn&#39;t<br />
+&gt; &gt; a full Rakudo Str object, though, so their behaviors are a bit latter.<br />
+&gt; &gt; <br />
+&gt; &gt; In particular, Parrot&#39;s String PMC already has a .trans method defined<br />
+&gt; &gt; on it, so Rakudo&#39;s .trans method for Str doesn&#39;t override it.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; 2. The result of a successful .trans call on an %*ENV item returns<br />
+</div>
+&gt; &gt; something<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; which, when touched in any way, causes Rakudo to explode.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The .trans method on String PMC doesn&#39;t return a value at all -- it does<br />
+&gt; &gt; an inplace modification.  So, the return value is garbage that indeed<br />
+&gt; &gt; causes Parrot to go boom.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; 3. Actively modifying the %*ENV item using .=trans produces a Null PMC<br />
+&gt; &gt; &gt; access<br />
+&gt; &gt; &gt; in another Parrot sub, and doing this from within a subroutine, produces<br />
+&gt; &gt; &gt; a Null<br />
+&gt; &gt; &gt; PMC acces in yet another Parrot sub.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Since %*ENV returns a Parrot String PMC, and since the .trans method on<br />
+&gt; &gt; the String PMC returns garbage, the inplace modifier ends up trying to<br />
+&gt; &gt; store garbage back into the String PMC.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; 4. Setting an %*ENV item using infix:&lt;=&gt; has no effect. Setting it using<br />
+&gt; &gt; &gt; infix:&lt;:=&gt; works. <br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The values that come back from %*ENV are String PMCs that aren&#39;t tied to<br />
+&gt; &gt; the environment at all, thus assigning to those PMCs has no effect.<br />
+&gt; &gt; <br />
+&gt; &gt; However, binding an item using &lt;:=&gt; does activate the set_*_keyed VTABLE<br />
+&gt; &gt; of the underlying Env PMC, so that does work.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Setting %*ENV itself using infix:&lt;=&gt; produces a Parrot VM<br />
+&gt; &gt; &gt; error.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The Env PMC is a singleton PMC that doesn&#39;t understand assignment. <br />
+&gt; &gt; We&#39;ll need to map this somehow so that it understands how to rebuild<br />
+&gt; &gt; itself from a list or hash. <br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Setting it using infix:&lt;:=&gt; works. <br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; You can rebind %*ENV to a different hash, but then it loses its magical<br />
+&gt; &gt; Env properties.  &#40;This may also end up being the case for infix:&lt;=&gt;<br />
+</div>
+&gt; above.&#41;<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; Assigning %*ENV to another<br />
+&gt; &gt; &gt; variable<br />
+&gt; &gt; &gt; using infix:&lt;=&gt; produces another Parrot VM error.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; The Parrot Env PMC is a singleton PMC, so apparently there&#39;s not a way<br />
+&gt; &gt; to clone or copy it.  This will probably be fixed via ObjectRefs, if<br />
+&gt; &gt; it&#39;s not fixed already.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; 5. When calling the methods .keys, .values, .kv or .perl on %*ENV,<br />
+</div>
+&gt; &gt; something<br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; fails with &#34;No applicable methods&#34;. <br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Since %*ENV &#40;and the Env PMC&#41; is not really a Hash or Mapping, none of<br />
+&gt; &gt; those methods yet apply.  This is probably fixable if we map the Env PMC<br />
+&gt; &gt; onto Rakudo&#39;s Mapping class.<br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+&gt; &gt; So, with those points out of the way, here are the explanations of the<br />
+&gt; &gt; examples:<br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; say %*ENV&lt;Q&gt;.WHAT;<br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # Str<br />
+</div>
+</div>
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; %*ENV&lt;Q&gt; actually returns a Parrot String PMC, which we&#39;ve mapped onto<br />
+</div>
+&gt; &gt; the Rakudo Str type, so it reports &#39;Str&#39; as its type &#40;even though it<br />
+</div>
+&gt; isn&#39;t&#41;.<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; say %*ENV&lt;Q&gt;.trans&#40;&#41;;<br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # too few arguments passed &#40;1&#41; - 3 params expected<br />
+</div>
+</div>
+&gt; &gt; <br />
+&gt; &gt; Since the String PMC has its own .trans method, the Str.trans method<br />
+&gt; &gt; doesn&#39;t get invoked &#40;and the signatures are different&#41;.<br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;;<br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # Null PMC access in get_string&#40;&#41;<br />
+</div>
+&gt; &gt; &gt; say %*ENV&lt;Q&gt;.trans&#40; [], [] &#41;.WHAT;<br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # Null PMC access in find_method&#40;&#41;<br />
+</div>
+</div>
+&gt; &gt; <br />
+&gt; &gt; This invocation matches the signature for String.trans &#40;not Str.trans&#41;,<br />
+&gt; &gt; but that .trans is an inplace modification that returns PMCNULL.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; <br />
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; %*ENV&lt;Q&gt; .= trans&#40;[ &#34;A&#34; =&gt; &#34;B&#34; ], []&#41;&#39;<br />
+</div>
+<div class="message-stanza-depth-4">
+&gt; &gt; &gt; # Null PMC access in name&#40;&#41;<br />
+</div>
+</div>
+&gt; &gt; <br />
+&gt; &gt; This ends up calling %*ENV&lt;Q&gt;.trans&#40; ... &#41;, which returns PMCNULL and<br />
+&gt; &gt; cannot be assigned back to %*ENV&lt;Q&gt;.<br />
+&gt; &gt; <br />
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; %*ENV&lt;A&gt; = &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; # &#34;&#34;<br />
+</div>
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; %*ENV&lt;A&gt; := &#34;OH HAI&#34;; say %*ENV&lt;A&gt;.perl<br />
+</div>
+<div class="message-stanza-depth-3">
+&gt; &gt; &gt; # &#34;OH HAI&#34;<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Assignment doesn&#39;t work, but binding does.<br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+&gt; &gt; <br />
+&gt; &gt; Hope this helps -- I&#39;ll see which of the above I can clean up.<br />
+&gt; &gt; <br />
+&gt; &gt; Pm<br />
+</div>
+&gt; <br />
+&gt; <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.628468</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

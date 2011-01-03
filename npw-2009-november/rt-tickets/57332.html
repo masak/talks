@@ -1,0 +1,1238 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57332: [TODO] Warnings on use of undefiend routine?</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57332">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57332: [TODO] Warnings on use of undefiend routine?</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57332">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57332</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57332">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+chris [at] chrisdolan.net
+
+<br />
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57332">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+undefined_class.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/497978/233612/undefined_class.patch">
+Thu Nov 20 20:46:18 2008 (881b) by chris <!-- x --> at chrisdolan.net
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57332">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-450222" href="/rt3/Ticket/Display.html?id=57332#txn-450222">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;27&nbsp;07:27:49&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Matching against nonexistent class throws wrong kind of error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 27 Jul 2008 16:27:26 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/450222/207356/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 978b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+$ svn info | grep Revi<br />
+Revision: 29791<br />
+<br />
+There&#39;s no problem matching against an extant class:<br />
+<br />
+$ ./perl6 -e &#39;class A {}; say &#34;mm, pie&#34; ~~ A&#39;<br />
+0<br />
+<br />
+But matching against an undefined class doesn&#39;t work:<br />
+<br />
+$ ./perl6 -e &#39;say &#34;mm, pie&#34; ~~ A&#39;<br />
+Method &#39;ACCEPTS&#39; not found for invocant of class &#39;Failure&#39;<br />
+current instr.: &#39;infix:~~&#39; pc 12501 &#40;src/gen_builtins.pir:7936&#41;<br />
+called from Sub &#39;_block11&#39; pc 34 &#40;EVAL_13:17&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1305<br />
+&#40;src/PCT/HLLCompiler.pir:708&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 14567 &#40;perl6.pir:172&#41;<br />
+<br />
+Now, it shouldn&#39;t work &#40;because A hasn&#39;t been defined&#41;, but<br />
+<br />
+* The error is all wrong. The class &#39;Failure&#39; has got nothing to do with it.<br />
+* It feels like this could/should be intercepted at BEGIN time, just<br />
+like the `class DerivingClass is NotYetDefinedClass {}` error. In both<br />
+cases, it&#39;s a question of an undeclared bareword.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-450538" href="/rt3/Ticket/Display.html?id=57332#txn-450538">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;27&nbsp;14:27:06&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57332] Matching against nonexistent class throws wrong kind of error</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 27 Jul 2008 16:24:46 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/450538/207556/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 885b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Jul 27, 2008 at 07:27:50AM -0700, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; * The error is all wrong. The class &#39;Failure&#39; has got nothing to do with it.<br />
+&gt; * It feels like this could/should be intercepted at BEGIN time, just<br />
+&gt; like the `class DerivingClass is NotYetDefinedClass {}` error. In both<br />
+&gt; cases, it&#39;s a question of an undeclared bareword.<br />
+</div>
+<br />
+You&#39;re correct, Rakudo doesn&#39;t maintain a compile-time symbol table<br />
+at the moment, and thus isn&#39;t detecting undeclared barewords yet.<br />
+<br />
+This is a _little_ bit trickier than it might seem at first, since<br />
+Perl 6 assumes that unrecognized identifiers &#40;barewords&#41; can be<br />
+post-declared listops.  So, BEGIN may be a little too soon -- we<br />
+may want to do it at CHECK time or something like that.<br />
+<br />
+Currently most refactors having to do with BEGIN/INIT/END/etc. are<br />
+awaiting Parrot&#39;s merge of the concurrency/exceptions &#40;pdd25cx&#41; branch<br />
+back into trunk.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-450542" href="/rt3/Ticket/Display.html?id=57332#txn-450542">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;27&nbsp;14:27:08&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-450546" href="/rt3/Ticket/Display.html?id=57332#txn-450546">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jul&nbsp;27&nbsp;14:28:30&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Dependency on ticket #56800 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497978" href="/rt3/Ticket/Display.html?id=57332#txn-497978">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;20:46:18&nbsp;2008</td>
+    <td class="description">
+      chris <!-- x --> at chrisdolan.net - Ticket 60718:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] better error message for .new on undefined class</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 22:45:54 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Chris Dolan &lt;chris <!-- x --> at chrisdolan.net&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497978/233610/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+If you accidentally try to instantiate a class that has not been  <br />
+defined, but the namespace for that class has been vivified, then you  <br />
+get an obscure error message:<br />
+<br />
+<div class="message-stanza-depth-1">
+     % perl6 -e &#39;class Foo::Bar::Baz { }; Foo::Bar.new;&#39;<br />
+</div>
+     Null PMC access in get_string&#40;&#41;<br />
+     current instr.: &#39;parrot;Perl6Object;new&#39; pc 277 &#40;src/ <br />
+gen_builtins.pir:190&#41;<br />
+     called from Sub &#39;_block11&#39; pc 27 &#40;EVAL_11:17&#41;<br />
+     called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 898 &#40;src/PCT/ <br />
+HLLCompiler.pir:510&#41;<br />
+     called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1450  <br />
+&#40;src/PCT/HLLCompiler.pir:774&#41;<br />
+     called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 16257 &#40;perl6.pir: <br />
+168&#41;<br />
+<br />
+With the attached patch, Rakudo instead dies with a more informative  <br />
+message:<br />
+<br />
+<div class="message-stanza-depth-1">
+     % perl6 -e &#39;class Foo::Bar::Baz { }; Foo::Bar.new;&#39;<br />
+</div>
+     Cannot instantiate Module.  Perhaps you have not defined a class  <br />
+named Foo::Bar?<br />
+     current instr.: &#39;die&#39; pc 12358 &#40;src/gen_builtins.pir:7530&#41;<br />
+     called from Sub &#39;parrot;Module;new&#39; pc 8086 &#40;src/ <br />
+gen_builtins.pir:5170&#41;<br />
+     called from Sub &#39;_block11&#39; pc 27 &#40;EVAL_11:17&#41;<br />
+     called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 898 &#40;src/PCT/ <br />
+HLLCompiler.pir:510&#41;<br />
+     called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1450  <br />
+&#40;src/PCT/HLLCompiler.pir:774&#41;<br />
+     called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 16257 &#40;perl6.pir: <br />
+168&#41;<br />
+<br />
+The patch is a bit of a hack.  It introduces a new&#40;&#41; method to  <br />
+Module.pir which just constructs the error message and dies.  Most of  <br />
+the added code is used to build the intended class name.  Surely  <br />
+someone more familiar with the NameSpace pmc can improve it a bit?<br />
+<br />
+  Module.pir |   19 +++++++++++++++++++<br />
+  1 files changed, 19 insertions&#40;+&#41;<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497978/233612/undefined_class.patch">Download undefined_class.patch</a>
+<span class="downloadcontenttype">
+[application/octet-stream 881b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497984" href="/rt3/Ticket/Display.html?id=57332#txn-497984">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;20:46:20&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60718:  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497986" href="/rt3/Ticket/Display.html?id=57332#txn-497986">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;22:28:03&nbsp;2008</td>
+    <td class="description">
+      chrisdolan - Ticket 60718:  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497986/233618/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 195b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+There is at least one problem with the approach in this patch.  I now get:<br />
+<br />
+<div class="message-stanza-depth-1">
+% perl6 -e &#39;my %h = :a&#40;1&#41;; %h.pairs&#39;<br />
+</div>
+Cannot instantiate Module.  Perhaps you have not defined a class named<br />
+Perl6Pair?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500690" href="/rt3/Ticket/Display.html?id=57332#txn-500690">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;12:38:19&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 60718:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500690/235088/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Nov 20 20:46:18 2008, chris <!-- x --> at chrisdolan.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; If you accidentally try to instantiate a class that has not been  <br />
+&gt; defined, but the namespace for that class has been vivified, then you  <br />
+&gt; get an obscure error message:<br />
+&gt; ...<br />
+&gt; With the attached patch, Rakudo instead dies with a more informative  <br />
+&gt; message:<br />
+&gt; ...<br />
+&gt; The patch is a bit of a hack.  It introduces a new&#40;&#41; method to  <br />
+&gt; Module.pir which just constructs the error message and dies.  Most of  <br />
+&gt; the added code is used to build the intended class name.  Surely  <br />
+&gt; someone more familiar with the NameSpace pmc can improve it a bit?<br />
+&gt; <br />
+</div>
+We should actually detect this at compile time, not runtime. That<br />
+depends on registering and checking/looking up symbols as we compile,<br />
+which is on the task list for the next month or so. So thanks for the<br />
+patch, but I&#39;m afraid it&#39;s the wrong approach.<br />
+<br />
+I will leave the ticket open, however, as something that needs to happen<br />
+as a result of the symbol registry stuff. Once we get a useful error<br />
+message at compile time, it&#39;s can be closed.<br />
+<br />
+Thanks!<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500694" href="/rt3/Ticket/Display.html?id=57332#txn-500694">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;12:38:24&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60718:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500856" href="/rt3/Ticket/Display.html?id=57332#txn-500856">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;26&nbsp;17:53:24&nbsp;2008</td>
+    <td class="description">
+      chrisdolan - Ticket 60718:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] better error message for .new on undefined class</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500856/235198/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 640b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Nov 26 12:38:19 2008, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; We should actually detect this at compile time, not runtime. That<br />
+&gt; depends on registering and checking/looking up symbols as we compile,<br />
+&gt; which is on the task list for the next month or so. So thanks for the<br />
+&gt; patch, but I&#39;m afraid it&#39;s the wrong approach.<br />
+&gt; <br />
+&gt; I will leave the ticket open, however, as something that needs to happen<br />
+&gt; as a result of the symbol registry stuff. Once we get a useful error<br />
+&gt; message at compile time, it&#39;s can be closed.<br />
+&gt; <br />
+&gt; Thanks!<br />
+&gt; <br />
+&gt; Jonathan<br />
+</div>
+<br />
+Yes, I agree the patch is a terrible approach.  I&#39;ll change the subject<br />
+to [TODO] and mark it stalled<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-524948" href="/rt3/Ticket/Display.html?id=57332#txn-524948">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;26&nbsp;02:42:39&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/524948/248004/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 289b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This now works in r35994:<br />
+<br />
+$ perl6 -e &#39;say &#34;mm, pie&#34; ~~ A&#39;<br />
+Could not find non-existent sub A<br />
+[...]<br />
+<br />
+Not sure if I can resolve the ticket though, since things are still not<br />
+checked before runtime:<br />
+<br />
+$ perl6 -e &#39;say &#34;OH HAI&#34;; say &#34;mm, pie&#34; ~~ A&#39;<br />
+OH HAI<br />
+Could not find non-existent sub A<br />
+[...]<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525812" href="/rt3/Ticket/Display.html?id=57332#txn-525812">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;07:48:43&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/525812/248448/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 567b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jan 26 02:42:39 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; This now works in r35994:<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;mm, pie&#34; ~~ A&#39;<br />
+&gt; Could not find non-existent sub A<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; Not sure if I can resolve the ticket though, since things are still not<br />
+&gt; checked before runtime:<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;OH HAI&#34;; say &#34;mm, pie&#34; ~~ A&#39;<br />
+&gt; OH HAI<br />
+&gt; Could not find non-existent sub A<br />
+&gt; [...]<br />
+</div>
+<br />
+Since A could well be a post-declared listop, maybe we can warn about A<br />
+being an undefined routine, but I think that is the most we can do at<br />
+compile time &#40;so it&#39;s a warning not an error&#41;. Thoughts?<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525844" href="/rt3/Ticket/Display.html?id=57332#txn-525844">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:00:08&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 60718:  Merged into ticket #57332
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525846" href="/rt3/Ticket/Display.html?id=57332#txn-525846">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:00:08&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Merged into ticket #57332
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525848" href="/rt3/Ticket/Display.html?id=57332#txn-525848">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:00:08&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Subject changed from &#39;Matching against nonexistent class throws wrong kind of error&#39; to &#39;[PATCH] better error message for .new on undefined class&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525850" href="/rt3/Ticket/Display.html?id=57332#txn-525850">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:02:22&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[TODO] Warnings on use of undefiend routine?</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/525850/248470/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 228b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Merged a couple of tickets together that basically boil down to the same<br />
+thing - when you write something you expect to be a type name, but it<br />
+gets &#40;correctly&#41; treated as a call to a routine, but that isn&#39;t quite<br />
+what we want...<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525852" href="/rt3/Ticket/Display.html?id=57332#txn-525852">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:02:23&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Subject changed from &#39;[PATCH] better error message for .new on undefined class&#39; to &#39;[TODO] Warnings on use of undefiend routine?&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-525854" href="/rt3/Ticket/Display.html?id=57332#txn-525854">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;28&nbsp;08:02:54&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/525854/248472/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 357b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jan 28 08:02:22 2009, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Merged a couple of tickets together that basically boil down to the same<br />
+&gt; thing - when you write something you expect to be a type name, but it<br />
+&gt; gets &#40;correctly&#41; treated as a call to a routine, but that isn&#39;t quite<br />
+&gt; what we want...<br />
+</div>
+<br />
+Or at least, we want it to at least warn, maybe...comments welcome.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.166287</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

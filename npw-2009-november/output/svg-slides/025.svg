@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="600" width="800" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<linearGradient gradientUnits="userSpaceOnUse" id="background-gradient" x1="0" x2="0" y1="606" y2="-6">
+		<stop id="bg-g-1" offset="0" style="stop-opacity: 1; stop-color: #202020" />
+		<stop id="bg-g-2" offset="1" style="stop-opacity: 1; stop-color: #404040" />
+	</linearGradient>
+	<g id="background">
+		<rect height="606" style="fill: url(#background-gradient); stroke: none" width="808" x="-4" y="-3" />
+	</g>
+	<g id="content" style="fill: #ffffff">
+		<text style="fill: #78ff01; font-family: Arial Narrow; font-weight: bold; font-size: 80px" x="480" y="120">the Specs
+		</text>
+		<text style="fill: #ff36c1; font-family: Arial Narrow; font-weight: bold; font-size: 80px" x="480" y="300">Rakudo
+		</text>
+		<text style="fill: #2d60ff; font-family: Arial Narrow; font-weight: bold; font-size: 80px" x="480" y="510">Parrot
+		</text>
+		<text style="fill: #78ff01; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="36">...have read some of
+		</text>
+		<text style="fill: #78ff01; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="90">...have read all of
+		</text>
+		<text style="fill: #78ff01; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="144">...have patched
+		</text>
+		<text style="fill: #ff36c1; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="198">...have downloaded
+		</text>
+		<text style="fill: #ff36c1; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="252">...have written a script in
+		</text>
+		<text style="fill: #ff36c1; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="306">...have crashed
+		</text>
+		<text style="fill: #ff36c1; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="360">...have submitted a bug for
+		</text>		<text style="fill: #ff36c1; font-family: Gill Sans; font-size: 40px" text-anchor="end" x="440" y="414">...have patched
+		</text>
+	</g>
+</svg>

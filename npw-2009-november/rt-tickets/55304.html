@@ -1,0 +1,1876 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#55304: [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D55304">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#55304: [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55304">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">55304</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=55304">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=55304">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+eval.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/421922/192156/eval.diff">
+Sat Jun 07 01:19:08 2008 (1.5k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+eval2.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/421924/192162/eval2.diff">
+Sat Jun 07 01:19:20 2008 (1.3k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/421808/192074/eval2.diff">
+Fri Jun 06 21:26:35 2008 (1.3k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+eval_stuff.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/419608/190966/eval_stuff.patch">
+Wed Jun 04 14:28:55 2008 (1.3k) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=55304">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-419584" href="/rt3/Ticket/Display.html?id=55304#txn-419584">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;04&nbsp;14:01:08&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 04 Jun 2008 23:18:42 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org, Perl 6 Internals &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/419584/190952/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 250b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached patch, mostly courtesy Vasily &#34;bacek&#34; Chekalkin, adds the<br />
+eval_lives_ok and eval_dies_ok methods to Test.pm, and adds three more<br />
+passing tests to &#39;make spectest_regression&#39;.<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-419590" href="/rt3/Ticket/Display.html?id=55304#txn-419590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;04&nbsp;14:01:10&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-419608" href="/rt3/Ticket/Display.html?id=55304#txn-419608">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;04&nbsp;14:28:55&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 04 Jun 2008 23:46:37 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org,  Perl 6 Internals &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/419608/190964/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 118b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Oops, forgot to attach patch. Now it&#39;s really there.<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/419608/190966/eval_stuff.patch">Download eval_stuff.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: languages/perl6/t/spectest_regression.data<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/t/spectest_regression.data  &#40;revision 28065&#41;<br />
++++ languages/perl6/t/spectest_regression.data  &#40;working copy&#41;<br />
+@@ -6,6 +6,8 @@<br />
+ S02-literals/autoref.t<br />
+ S02-literals/hex_chars.t<br />
+ S02-literals/radix.t<br />
++S02-polymorphic_types/subset-code.t             # pure<br />
++S02-polymorphic_types/subset-range.t<br />
+ S03-operators/autoincrement.t                   # pure<br />
+ S03-operators/comparison.t<br />
+ S03-operators/cross-metaop.t<br />
+@@ -39,6 +41,7 @@<br />
+ S29-list/map_empty_list.t<br />
+ S29-list/map_flattening.t<br />
+ S29-list/map_function_return_values.t<br />
++S29-list/map.t<br />
+ S29-list/mutating_listops.t                     # pure<br />
+ S29-list/sort.t<br />
+ S29-num/abs.t<br />
+Index: languages/perl6/Test.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/Test.pm     &#40;revision 28065&#41;<br />
++++ languages/perl6/Test.pm     &#40;working copy&#41;<br />
+@@ -122,7 +122,23 @@<br />
+     lives_ok&#40;$closure, &#39;&#39;&#41;;<br />
+ }<br />
+ <br />
++multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
++    eval &#40; $code &#41;;<br />
++    proclaim&#40;&#40;defined $!&#41;, $reason&#41;;<br />
++}<br />
++multi sub eval_dies_ok&#40;$code&#41; {<br />
++    eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
++}<br />
+ <br />
++multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
++    try { eval &#40;$code&#41; }<br />
++    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
++}<br />
++multi sub eval_lives_ok&#40;$code&#41; {<br />
++    eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
++}<br />
++<br />
++<br />
+<div class="message-stanza-depth-1">
+ ## &#39;private&#39; subs<br />
+</div>
+ <br />
+ sub proclaim&#40;$cond, $desc&#41; {<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-419610" href="/rt3/Ticket/Display.html?id=55304#txn-419610">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;04&nbsp;15:02:35&nbsp;2008</td>
+    <td class="description">
+      particle -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org, &#34;Perl 6 Internals&#34; &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 4 Jun 2008 15:02:11 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Moritz Lenz&#34; &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jerry gay&#34; &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/419610/190968/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 176b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jun 4, 2008 at 2:46 PM, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;<br />
+</div>
+thanks, applied as of r28074.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-419612" href="/rt3/Ticket/Display.html?id=55304#txn-419612">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;04&nbsp;15:02:37&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420282" href="/rt3/Ticket/Display.html?id=55304#txn-420282">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;14:27:15&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 05 Jun 2008 17:26:39 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/420282/191384/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;<br />
+&gt;   <br />
+</div>
+Your implementations of eval_lives_ok and eval_dies_ok seem <br />
+inconsistent.  eval_lives_ok uses try and eval_dies_ok does not.  The <br />
+two implementations may catch different types of exceptions.  I am <br />
+proposing the patch below:<br />
+<br />
+$ svn diff Test.pm<br />
+Index: Test.pm<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- Test.pm     &#40;revision 28117&#41;<br />
++++ Test.pm     &#40;working copy&#41;<br />
+@@ -122,17 +122,20 @@<br />
+     lives_ok&#40;$closure, &#39;&#39;&#41;;<br />
+ }<br />
+<br />
++sub eval_exception &#40;$code&#41; {<br />
++    my $eval_exception;<br />
++    try { eval &#40; $code &#41;; $eval_exception = $! }<br />
++    $eval_exception // $!;<br />
++}<br />
+ multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
+-    eval &#40; $code &#41;;<br />
+-    proclaim&#40;&#40;defined $!&#41;, $reason&#41;;<br />
++    proclaim&#40;&#40;defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_dies_ok&#40;$code&#41; {<br />
+     eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
+ }<br />
+<br />
+ multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
+-    try { eval &#40;$code&#41; }<br />
+-    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
++    proclaim&#40;&#40;not defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_lives_ok&#40;$code&#41; {<br />
+     eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420300" href="/rt3/Ticket/Display.html?id=55304#txn-420300">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;14:48:34&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 06 Jun 2008 00:05:43 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/420300/191390/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ronald Schmidt wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;&gt;<br />
+&gt;&gt;   <br />
+</div>
+&gt; Your implementations of eval_lives_ok and eval_dies_ok seem <br />
+&gt; inconsistent.  eval_lives_ok uses try and eval_dies_ok does not.  The <br />
+&gt; two implementations may catch different types of exceptions.  I am <br />
+&gt; proposing the patch below:<br />
+</div>
+<br />
+Good catch. Actually I already encountered I problem with these two<br />
+subs, but haven&#39;t got around to fix it so far.<br />
+<br />
+Are there any exceptions that are not caught by eval?<br />
+Currently rakudo seems to catch every run time exception, but parse<br />
+failures still throw an exception. I&#39;m pretty sure that&#39;s wrong, because<br />
+it&#39;s contrary to Perl 6&#39;s exception philosophy.<br />
+<br />
+So eval&#40;&#41; needs more work, but in the mean time your patch works just<br />
+fine &#40;and it will continue to work when eval is fixed&#41;, so I vote +1 here.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; $ svn diff Test.pm<br />
+&gt; Index: Test.pm<br />
+<div class="message-stanza-depth-2">
+&gt; ===================================================================<br />
+</div>
+&gt; --- Test.pm     &#40;revision 28117&#41;<br />
+&gt; +++ Test.pm     &#40;working copy&#41;<br />
+&gt; @@ -122,17 +122,20 @@<br />
+&gt;      lives_ok&#40;$closure, &#39;&#39;&#41;;<br />
+&gt;  }<br />
+&gt; <br />
+&gt; +sub eval_exception &#40;$code&#41; {<br />
+&gt; +    my $eval_exception;<br />
+&gt; +    try { eval &#40; $code &#41;; $eval_exception = $! }<br />
+&gt; +    $eval_exception // $!;<br />
+&gt; +}<br />
+&gt;  multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
+&gt; -    eval &#40; $code &#41;;<br />
+&gt; -    proclaim&#40;&#40;defined $!&#41;, $reason&#41;;<br />
+&gt; +    proclaim&#40;&#40;defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
+&gt;  }<br />
+&gt;  multi sub eval_dies_ok&#40;$code&#41; {<br />
+&gt;      eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
+&gt;  }<br />
+&gt; <br />
+&gt;  multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
+&gt; -    try { eval &#40;$code&#41; }<br />
+&gt; -    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
+&gt; +    proclaim&#40;&#40;not defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
+&gt;  }<br />
+&gt;  multi sub eval_lives_ok&#40;$code&#41; {<br />
+&gt;      eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
+&gt; <br />
+&gt; <br />
+</div>
+<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420302" href="/rt3/Ticket/Display.html?id=55304#txn-420302">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;15:17:25&nbsp;2008</td>
+    <td class="description">
+      particle -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Ronald Schmidt&#34; &lt;ronaldxs@software-path.com&gt;, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 5 Jun 2008 15:17:06 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Moritz Lenz&#34; &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jerry gay&#34; &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/420302/191392/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Jun 5, 2008 at 3:05 PM, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Ronald Schmidt wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;&gt;&gt;<br />
+&gt;&gt;&gt;<br />
+</div>
+&gt;&gt; Your implementations of eval_lives_ok and eval_dies_ok seem<br />
+&gt;&gt; inconsistent.  eval_lives_ok uses try and eval_dies_ok does not.  The<br />
+&gt;&gt; two implementations may catch different types of exceptions.  I am<br />
+&gt;&gt; proposing the patch below:<br />
+</div>
+&gt;<br />
+&gt; Good catch. Actually I already encountered I problem with these two<br />
+&gt; subs, but haven&#39;t got around to fix it so far.<br />
+&gt;<br />
+&gt; Are there any exceptions that are not caught by eval?<br />
+&gt; Currently rakudo seems to catch every run time exception, but parse<br />
+&gt; failures still throw an exception. I&#39;m pretty sure that&#39;s wrong, because<br />
+&gt; it&#39;s contrary to Perl 6&#39;s exception philosophy.<br />
+&gt;<br />
+&gt; So eval&#40;&#41; needs more work, but in the mean time your patch works just<br />
+&gt; fine &#40;and it will continue to work when eval is fixed&#41;, so I vote +1 here.<br />
+&gt;<br />
+</div>
+agreed, good catch. applied with some formatting tweaks &#40;eg. putting<br />
+eval_exception&#40;&#41; in the &#39;private&#39; subs area&#41; as r28124.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-421772" href="/rt3/Ticket/Display.html?id=55304#txn-421772">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;06&nbsp;20:11:36&nbsp;2008</td>
+    <td class="description">
+      particle -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Moritz Lenz&#34; &lt;moritz <!-- x --> at verplant.org&gt;, perl6-bugs-followup <!-- x --> at perl.org,  &#34;Perl 6 Internals&#34; &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 6 Jun 2008 20:11:14 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Vasily Chekalkin&#34; &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jerry gay&#34; &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421772/192046/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 512b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri, Jun 6, 2008 at 7:34 PM, Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; jerry gay wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt;<br />
+&gt;&gt; On Wed, Jun 4, 2008 at 2:46 PM, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;<br />
+&gt;&gt; wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt;<br />
+&gt;&gt;&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;&gt;&gt;<br />
+</div>
+&gt;&gt; thanks, applied as of r28074.<br />
+&gt;&gt; ~jerry<br />
+</div>
+&gt;<br />
+&gt; This is wrong patch. eval&#40;&#41; shouldn&#39;t throws any exceptions.<br />
+&gt;<br />
+&gt; Correct patch for &#39;eval&#40;&#41;&#39; and Test.pm attached.<br />
+&gt;<br />
+</div>
+would you reformat this in universal diff format please? my patch<br />
+program doesn&#39;t speak git.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-421808" href="/rt3/Ticket/Display.html?id=55304#txn-421808">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jun&nbsp;06&nbsp;21:26:35&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421808/192068/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 221b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Fri Jun 06 20:11:36 2008, particle wrote:<br />
+<br />
+&#40;Sorry for spam if any. Looks like my message was rejected by mailman.&#41;<br />
+<br />
+eval&#40;&#41; shouldn&#39;t throws any exceptions.<br />
+<br />
+Correct patch for &#39;eval&#40;&#41;&#39; and Test.pm attached.<br />
+<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421808/192074/eval2.diff">Download eval2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+===================================================<br />
+</div>
+--- Test.pm &#40;orig&#41;<br />
++++ Test.pm &#40;modified&#41;<br />
+@@ -123,14 +123,16 @@ multi sub lives_ok&#40;$closure&#41; {<br />
+ }<br />
+ <br />
+ multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;$code&#41;;<br />
++    proclaim&#40;defined&#40;$!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_dies_ok&#40;$code&#41; {<br />
+     eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
+ }<br />
+ <br />
+ multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;not defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;$code&#41;;<br />
++    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_lives_ok&#40;$code&#41; {<br />
+     eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
+@@ -139,12 +141,6 @@ multi sub eval_lives_ok&#40;$code&#41; {<br />
+ <br />
+<div class="message-stanza-depth-1">
+ ## &#39;private&#39; subs<br />
+</div>
+ <br />
+-sub eval_exception&#40;$code&#41; {<br />
+-    my $eval_exception;<br />
+-    try { eval &#40;$code&#41;; $eval_exception = $! }<br />
+-    $eval_exception // $!;<br />
+-}<br />
+-<br />
+ sub proclaim&#40;$cond, $desc&#41; {<br />
+     $testing_started  = 1;<br />
+     $num_of_tests_run = $num_of_tests_run + 1;<br />
+<div class="message-stanza-depth-1">
+===================================================<br />
+</div>
+--- src/builtins/control.pir &#40;orig&#41;<br />
++++ src/builtins/control.pir &#40;modified&#41;<br />
+@@ -113,13 +113,12 @@ on error.<br />
+     unless have_lang goto no_lang<br />
+     &#39;die&#39;&#40;&#39;Lanuage parameter to eval unimplemented.&#39;&#41;<br />
+   no_lang:<br />
++    push_eh catch<br />
+ <br />
+     .local pmc compiler, invokable<br />
+     .local pmc res, exception<br />
+     compiler = compreg &#39;Perl6&#39;<br />
+     invokable = compiler.&#39;compile&#39;&#40;code&#41;<br />
+-<br />
+-    push_eh catch<br />
+     res = invokable&#40;&#41;<br />
+     pop_eh<br />
+     exception = new &#39;Failure&#39;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-421922" href="/rt3/Ticket/Display.html?id=55304#txn-421922">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;07&nbsp;01:19:08&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;, perl6-bugs-followup <!-- x --> at perl.org, Perl 6 Internals &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 07 Jun 2008 12:34:32 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org, jerry gay &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421922/192154/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 325b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jerry gay wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed, Jun 4, 2008 at 2:46 PM, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt; wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Oops, forgot to attach patch. Now it&#39;s really there.<br />
+&gt;&gt;<br />
+</div>
+&gt; thanks, applied as of r28074.<br />
+&gt; ~jerry<br />
+</div>
+<br />
+This is wrong patch. eval&#40;&#41; shouldn&#39;t throws any exceptions.<br />
+<br />
+Correct patch for &#39;eval&#40;&#41;&#39; and Test.pm attached.<br />
+<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421922/192156/eval.diff">Download eval.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/Test.pm b/languages/perl6/Test.pm<br />
+index 5cb04ae..ccc34a9 100644<br />
+--- a/languages/perl6/Test.pm<br />
++++ b/languages/perl6/Test.pm<br />
+@@ -123,14 +123,16 @@ multi sub lives_ok&#40;$closure&#41; {<br />
+ }<br />
+ <br />
+ multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;code&#41;;<br />
++    proclaim&#40;defined&#40;$!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_dies_ok&#40;$code&#41; {<br />
+     eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
+ }<br />
+ <br />
+ multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;not defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;$code&#41;;<br />
++    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_lives_ok&#40;$code&#41; {<br />
+     eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
+@@ -139,12 +141,6 @@ multi sub eval_lives_ok&#40;$code&#41; {<br />
+ <br />
+<div class="message-stanza-depth-1">
+ ## &#39;private&#39; subs<br />
+</div>
+ <br />
+-sub eval_exception&#40;$code&#41; {<br />
+-    my $eval_exception;<br />
+-    try { eval &#40;$code&#41;; $eval_exception = $! }<br />
+-    $eval_exception // $!;<br />
+-}<br />
+-<br />
+ sub proclaim&#40;$cond, $desc&#41; {<br />
+     $testing_started  = 1;<br />
+     $num_of_tests_run = $num_of_tests_run + 1;<br />
+diff --git a/languages/perl6/src/builtins/control.pir b/languages/perl6/src/builtins/control.pir<br />
+index 479b1b6..558a4c4 100644<br />
+--- a/languages/perl6/src/builtins/control.pir<br />
++++ b/languages/perl6/src/builtins/control.pir<br />
+@@ -113,13 +113,12 @@ on error.<br />
+     unless have_lang goto no_lang<br />
+     &#39;die&#39;&#40;&#39;Lanuage parameter to eval unimplemented.&#39;&#41;<br />
+   no_lang:<br />
++    push_eh catch<br />
+ <br />
+     .local pmc compiler, invokable<br />
+     .local pmc res, exception<br />
+     compiler = compreg &#39;Perl6&#39;<br />
+     invokable = compiler.&#39;compile&#39;&#40;code&#41;<br />
+-<br />
+-    push_eh catch<br />
+     res = invokable&#40;&#41;<br />
+     pop_eh<br />
+     exception = new &#39;Failure&#39;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-421924" href="/rt3/Ticket/Display.html?id=55304#txn-421924">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;07&nbsp;01:19:20&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;,  perl6-bugs-followup <!-- x --> at perl.org,  Perl 6 Internals &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 07 Jun 2008 13:53:43 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">jerry gay &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421924/192160/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 385b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jerry gay wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; would you reformat this in universal diff format please? my patch<br />
+&gt; program doesn&#39;t speak git.<br />
+</div>
+<br />
+Strange... It is &#39;universal diff&#39; format. Can be applied with<br />
+&#39;patch -p1 &lt; eval.diff&#39; in top-level parrot directory. Or with<br />
+&#39;patch -p3 &lt; eval.diff&#39; in languages/perl6.<br />
+<br />
+Anyway, attached patch can be applied within &#39;patch -p0&#39; in <br />
+languages/perl6 directory.<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/421924/192162/eval2.diff">Download eval2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+===================================================<br />
+</div>
+--- Test.pm &#40;orig&#41;<br />
++++ Test.pm &#40;modified&#41;<br />
+@@ -123,14 +123,16 @@ multi sub lives_ok&#40;$closure&#41; {<br />
+ }<br />
+ <br />
+ multi sub eval_dies_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;code&#41;;<br />
++    proclaim&#40;defined&#40;$!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_dies_ok&#40;$code&#41; {<br />
+     eval_dies_ok&#40;$code, &#39;&#39;&#41;;<br />
+ }<br />
+ <br />
+ multi sub eval_lives_ok&#40;$code, $reason&#41; {<br />
+-    proclaim&#40;&#40;not defined eval_exception&#40;$code&#41;&#41;, $reason&#41;;<br />
++       eval&#40;$code&#41;;<br />
++    proclaim&#40;&#40;not defined $!&#41;, $reason&#41;;<br />
+ }<br />
+ multi sub eval_lives_ok&#40;$code&#41; {<br />
+     eval_lives_ok&#40;$code, &#39;&#39;&#41;;<br />
+@@ -139,12 +141,6 @@ multi sub eval_lives_ok&#40;$code&#41; {<br />
+ <br />
+<div class="message-stanza-depth-1">
+ ## &#39;private&#39; subs<br />
+</div>
+ <br />
+-sub eval_exception&#40;$code&#41; {<br />
+-    my $eval_exception;<br />
+-    try { eval &#40;$code&#41;; $eval_exception = $! }<br />
+-    $eval_exception // $!;<br />
+-}<br />
+-<br />
+ sub proclaim&#40;$cond, $desc&#41; {<br />
+     $testing_started  = 1;<br />
+     $num_of_tests_run = $num_of_tests_run + 1;<br />
+<div class="message-stanza-depth-1">
+===================================================<br />
+</div>
+--- src/builtins/control.pir &#40;orig&#41;<br />
++++ src/builtins/control.pir &#40;modified&#41;<br />
+@@ -113,13 +113,12 @@ on error.<br />
+     unless have_lang goto no_lang<br />
+     &#39;die&#39;&#40;&#39;Lanuage parameter to eval unimplemented.&#39;&#41;<br />
+   no_lang:<br />
++    push_eh catch<br />
+ <br />
+     .local pmc compiler, invokable<br />
+     .local pmc res, exception<br />
+     compiler = compreg &#39;Perl6&#39;<br />
+     invokable = compiler.&#39;compile&#39;&#40;code&#41;<br />
+-<br />
+-    push_eh catch<br />
+     res = invokable&#40;&#41;<br />
+     pop_eh<br />
+     exception = new &#39;Failure&#39;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-422074" href="/rt3/Ticket/Display.html?id=55304#txn-422074">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;07&nbsp;07:13:07&nbsp;2008</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org, perl6-compiler <!-- x --> at perl.org,  jerry gay &lt;jerry.gay <!-- x --> at gmail.com&gt;, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 07 Jun 2008 10:12:36 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ronald Schmidt &lt;ronaldxs@software-path.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422074/192210/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt;<br />
+&gt; This is wrong patch. eval&#40;&#41; shouldn&#39;t throws any exceptions.<br />
+&gt;<br />
+&gt; Correct patch for &#39;eval&#40;&#41;&#39; and Test.pm attached.<br />
+&gt;<br />
+&gt;<br />
+</div>
+As Mr Lenz wrote with respect to eval exceptions and this patch:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;&gt; Are there any exceptions that are not caught by eval?<br />
+&gt;&gt; Currently rakudo seems to catch every run time exception,<br />
+&gt;&gt; /***** BUT PARSE FAILURES STILL THROW AN EXCEPTION. *****/<br />
+&gt;&gt; I&#39;m pretty sure that&#39;s wrong, because<br />
+&gt;&gt; it&#39;s contrary to Perl 6&#39;s exception philosophy.<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+&gt;&gt; So eval&#40;&#41; needs more work, but in the mean time your patch works just<br />
+&gt;&gt; fine &#40;and it will continue to work when eval is fixed&#41;, so I vote +1 here.<br />
+</div>
+<br />
+<br />
+For example:<br />
+<br />
+eval &#39;my $x = 2; $x = $x / 0; say $x;&#39;; say &#39;eval exception &#39;, $!;<br />
+eval exception Divide by zero<br />
+<br />
+eval &#39;my $x; my $y; &#40;$x = $y&#41; = 3; say $x;&#39;; say &#39;eval exception &#39;, $!;<br />
+Method &#39;lvalue&#39; not found for invocant of class &#39;PAST::Stmts&#39;<br />
+<br />
+In the second case eval throws an exception and it would make sense for <br />
+eval_dies_ok to catch it and report it as a case that died.  The second <br />
+case is from the pugs lvalue.t suite.  I am currently doing work in that <br />
+area and would like to use eval_&#40;dies|lives&#41;_ok for some tests including <br />
+tests from lvalue.t.<br />
+<br />
+Ron<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-422076" href="/rt3/Ticket/Display.html?id=55304#txn-422076">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;07&nbsp;07:38:47&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422076/192212/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 307b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jun 07 07:13:07 2008, ronaldxs wrote:<br />
+<br />
+Probably I don&#39;t understand correctly your question. This is output from<br />
+my version of patched rakudo:<br />
+<br />
+$ ../../parrot perl6.pbc <br />
+<div class="message-stanza-depth-1">
+&gt; eval &#39;my $x = 2; $x = $x / 0; say $x;&#39;; say &#39;eval exception &#39;, $!;<br />
+</div>
+eval exception Divide by zero<br />
+<br />
+Is it what you want?<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-422092" href="/rt3/Ticket/Display.html?id=55304#txn-422092">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;07&nbsp;08:03:11&nbsp;2008</td>
+    <td class="description">
+      allbery <!-- x --> at cmu.edu -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Brandon S. Allbery KF8NH&#34; &lt;allbery <!-- x --> at cmu.edu&gt;, jerry gay &lt;jerry.gay <!-- x --> at gmail.com&gt;, Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;, perl6-bugs-followup <!-- x --> at perl.org, Perl 6 Internals &lt;perl6-internals <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #55304] [PATCH] eval_&#40;dies|lives&#41;_ok methods for rakudo&#39;s Test.pm, and more tests</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 7 Jun 2008 11:02:45 -0400</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Brandon S. Allbery KF8NH&#34; &lt;allbery <!-- x --> at cmu.edu&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/422092/192228/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 873b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+On 2008 Jun 6, at 23:53, Vasily Chekalkin wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; jerry gay wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; would you reformat this in universal diff format please? my patch<br />
+&gt;&gt; program doesn&#39;t speak git.<br />
+</div>
+&gt;<br />
+&gt; Strange... It is &#39;universal diff&#39; format. Can be applied with<br />
+&gt; &#39;patch -p1 &lt; eval.diff&#39; in top-level parrot directory. Or with<br />
+&gt; &#39;patch -p3 &lt; eval.diff&#39; in languages/perl6.<br />
+&gt;<br />
+&gt; Anyway, attached patch can be applied within &#39;patch -p0&#39; in  <br />
+&gt; languages/perl6 directory.<br />
+&gt; --- Test.pm &#40;orig&#41;<br />
+&gt; +++ Test.pm &#40;modified&#41;<br />
+&gt; @@ -123,14 +123,16 @@ multi sub lives_ok&#40;$closure&#41; {<br />
+</div>
+<br />
+Your mail program is mangling line endings &#40;note last line of above  <br />
+quote&#41;.  Try it as an attachment.<br />
+<br />
+-- <br />
+brandon s. allbery [solaris,freebsd,perl,pugs,haskell] allbery <!-- x --> at kf8nh.com<br />
+system administrator [openafs,heimdal,too many hats] allbery <!-- x --> at cmu.edu<br />
+electrical and computer engineering, carnegie mellon university    KF8NH<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437778" href="/rt3/Ticket/Display.html?id=55304#txn-437778">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;01&nbsp;15:47:15&nbsp;2008</td>
+    <td class="description">
+      moritz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/437778/200380/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 238b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;m resolving this ticket, because now &#40;aka r28926&#41; eval_lives_ok and<br />
+eval_dies_ok are implemented &#40;and implemented in a consistent way&#41;.<br />
+<br />
+If eval&#40;&#41; still throws an exception in some cases that should be a<br />
+separate ticket.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437780" href="/rt3/Ticket/Display.html?id=55304#txn-437780">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jul&nbsp;01&nbsp;15:47:15&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.184115</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1519 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59398: [PATCH] Moving methods from Str.pir to any-str.pir</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59398">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59398: [PATCH] Moving methods from Str.pir to any-str.pir</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59398">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59398</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59398">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59398">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+str_moving_methods.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/476976/221904/str_moving_methods.patch">
+Sat Sep 27 05:44:43 2008 (8.6k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59398">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476976" href="/rt3/Ticket/Display.html?id=59398#txn-476976">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;05:44:42&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Moving methods from Str.pir to any-str.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 27 Sep 2008 22:42:37 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476976/221902/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 81b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+For consistency sake &#40;and removing many dummy proxy methods&#41;<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476976/221904/str_moving_methods.patch">Download str_moving_methods.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 8.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit be069166b765ed48e5e21df11498d32ece41b13d<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Sat Sep 27 22:37:34 2008 +1000<br />
+<br />
+    Move many methods from Str.pir to any-str.pir<br />
+<br />
+diff --git a/languages/perl6/src/builtins/any-str.pir b/languages/perl6/src/builtins/any-str.pir<br />
+index 5e20b48..2772cc4 100644<br />
+--- a/languages/perl6/src/builtins/any-str.pir<br />
++++ b/languages/perl6/src/builtins/any-str.pir<br />
+@@ -21,7 +21,7 @@ the size of that file down and to emphasize their generic,<br />
+ .namespace []<br />
+ .sub &#39;onload&#39; :anon :init :load<br />
+     $P0 = get_hll_namespace [&#39;Any&#39;]<br />
+-    &#39;!EXPORT&#39;&#40;&#39;chars ord index rindex substr&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
++    &#39;!EXPORT&#39;&#40;&#39;capitalize chop chars index lc lcfirst rindex ord substr uc ucfirst&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -30,12 +30,89 @@ the size of that file down and to emphasize their generic,<br />
+ =cut<br />
+ <br />
+ .namespace [&#39;Any&#39;]<br />
++<br />
++=item capitalize<br />
++<br />
++ our Str multi Str::capitalize &#40; Str $string &#41;<br />
++<br />
++Has the effect of first doing an C&lt;lc&gt; on the entire string, then performing a<br />
++C&lt;s:g/&#40;\w+&#41;/{ucfirst $1}/&gt; on it.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;capitalize&#39; :method<br />
++    .local string tmps<br />
++    .local string fchr<br />
++    .local pmc retv<br />
++    .local int len<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    tmps = self<br />
++<br />
++    len = length tmps<br />
++    if len == 0 goto done<br />
++<br />
++    downcase tmps<br />
++<br />
++    .local int pos, is_ws, is_lc<br />
++    pos = 0<br />
++    goto first_char<br />
++  next_grapheme:<br />
++    if pos == len goto done<br />
++    is_ws = is_cclass .CCLASS_WHITESPACE, tmps, pos<br />
++    if is_ws goto ws<br />
++  advance:<br />
++    pos += 1<br />
++    goto next_grapheme<br />
++  ws:<br />
++    pos += 1<br />
++  first_char:<br />
++    is_lc = is_cclass .CCLASS_LOWERCASE, tmps, pos<br />
++    unless is_lc goto advance<br />
++    $S1 = substr tmps, pos, 1<br />
++    upcase $S1<br />
++    substr tmps, pos, 1, $S1<br />
++    ## the length may have changed after replacement, so measure it again<br />
++    len = length tmps<br />
++    goto advance<br />
++  done:<br />
++    retv = tmps<br />
++    .return &#40;retv&#41;<br />
++.end<br />
++<br />
+ .sub &#39;chars&#39; :method :multi&#40;_&#41;<br />
+     $S0 = self<br />
+     $I0 = length $S0<br />
+     .return &#40;$I0&#41;<br />
+ .end<br />
+ <br />
++<br />
++=item chop<br />
++<br />
++ our Str method Str::chop &#40; Str  $string: &#41;<br />
++<br />
++Returns string with one Char removed from the end.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;chop&#39; :method<br />
++    .local string tmps<br />
++    .local pmc retv<br />
++    .local int len<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    tmps = self<br />
++<br />
++    len = length tmps<br />
++    if len == 0 goto done<br />
++    dec len<br />
++    substr tmps,tmps, 0, len<br />
++  done:<br />
++    retv = tmps<br />
++    .return&#40;retv&#41;<br />
++.end<br />
++<br />
++<br />
+ =item comb&#40;&#41;<br />
+ <br />
+ Partial implementation for now, returns a list of strings<br />
+@@ -110,6 +187,62 @@ Partial implementation for now, returns a list of strings<br />
+     .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
++<br />
++=item lc<br />
++<br />
++ our Str multi Str::lc &#40; Str $string &#41;<br />
++<br />
++Returns the input string after converting each character to its lowercase<br />
++form, if uppercase.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;lc&#39; :method <br />
++    .local string tmps<br />
++    .local pmc retv<br />
++<br />
++    tmps = self<br />
++    downcase tmps<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    retv = tmps<br />
++<br />
++    .return&#40;retv&#41;<br />
++.end<br />
++<br />
++=item lcfirst<br />
++<br />
++ our Str multi Str::lcfirst &#40; Str $string &#41;<br />
++<br />
++Like C&lt;lc&gt;, but only affects the first character.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;lcfirst&#39; :method<br />
++    .local string tmps<br />
++    .local string fchr<br />
++    .local pmc retv<br />
++    .local int len<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    tmps = self<br />
++<br />
++    len = length tmps<br />
++    if len == 0 goto done<br />
++<br />
++    substr fchr, tmps, 0, 1<br />
++    downcase fchr<br />
++<br />
++    concat retv, fchr<br />
++    substr tmps, tmps, 1<br />
++    concat retv, tmps<br />
++<br />
++  done:<br />
++    .return&#40;retv&#41;<br />
++.end<br />
++<br />
++<br />
++<br />
+ =item match&#40;&#41;<br />
+ <br />
+ =cut<br />
+@@ -643,6 +776,62 @@ Partial implementation. The :g modifier on regexps doesn&#39;t work, for example.<br />
+     .return &#40;$I0&#41;<br />
+ .end<br />
+ <br />
++<br />
++=item uc<br />
++<br />
++ our Str multi Str::uc &#40; Str $string &#41;<br />
++<br />
++Returns the input string after converting each character to its uppercase<br />
++form, if lowercase. This is not a Unicode &#34;titlecase&#34; operation, but a<br />
++full &#34;uppercase&#34;.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;uc&#39; :method :multi&#40;_&#41;<br />
++    .local string tmps<br />
++    .local pmc retv<br />
++<br />
++    tmps = self<br />
++    upcase tmps<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    retv = tmps<br />
++<br />
++    .return&#40;retv&#41;<br />
++.end<br />
++<br />
++=item ucfirst<br />
++<br />
++ our Str multi Str::ucfirst &#40; Str $string &#41;<br />
++<br />
++Performs a Unicode &#34;titlecase&#34; operation on the first character of the string.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;ucfirst&#39; :method<br />
++    .local string tmps<br />
++    .local string fchr<br />
++    .local pmc retv<br />
++    .local int len<br />
++<br />
++    retv = new &#39;Perl6Str&#39;<br />
++    tmps = self<br />
++<br />
++    len = length tmps<br />
++    if len == 0 goto done<br />
++<br />
++    substr fchr, tmps, 0, 1<br />
++    upcase fchr<br />
++<br />
++    concat retv, fchr<br />
++    substr tmps, tmps, 1<br />
++    concat retv, tmps<br />
++<br />
++  done:<br />
++    .return&#40;retv&#41;<br />
++.end<br />
++<br />
++<br />
+<div class="message-stanza-depth-1">
+ # Local Variables:<br />
+ #   mode: pir<br />
+ #   fill-column: 100<br />
+</div>
+diff --git a/languages/perl6/src/classes/Str.pir b/languages/perl6/src/classes/Str.pir<br />
+index 65d8d98..3d4a8aa 100644<br />
+--- a/languages/perl6/src/classes/Str.pir<br />
++++ b/languages/perl6/src/classes/Str.pir<br />
+@@ -46,134 +46,6 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+ <br />
+-.sub lc :method<br />
+-    .local string tmps<br />
+-    .local pmc retv<br />
+-<br />
+-    tmps = self<br />
+-    downcase tmps<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    retv = tmps<br />
+-<br />
+-    .return&#40;retv&#41;<br />
+-.end<br />
+-<br />
+-.sub uc :method<br />
+-    .local string tmps<br />
+-    .local pmc retv<br />
+-<br />
+-    tmps = self<br />
+-    upcase tmps<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    retv = tmps<br />
+-<br />
+-    .return&#40;retv&#41;<br />
+-.end<br />
+-<br />
+-.sub lcfirst :method<br />
+-    .local string tmps<br />
+-    .local string fchr<br />
+-    .local pmc retv<br />
+-    .local int len<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-<br />
+-    len = length tmps<br />
+-    if len == 0 goto done<br />
+-<br />
+-    substr fchr, tmps, 0, 1<br />
+-    downcase fchr<br />
+-<br />
+-    concat retv, fchr<br />
+-    substr tmps, tmps, 1<br />
+-    concat retv, tmps<br />
+-<br />
+-  done:<br />
+-    .return&#40;retv&#41;<br />
+-.end<br />
+-<br />
+-.sub ucfirst :method<br />
+-    .local string tmps<br />
+-    .local string fchr<br />
+-    .local pmc retv<br />
+-    .local int len<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-<br />
+-    len = length tmps<br />
+-    if len == 0 goto done<br />
+-<br />
+-    substr fchr, tmps, 0, 1<br />
+-    upcase fchr<br />
+-<br />
+-    concat retv, fchr<br />
+-    substr tmps, tmps, 1<br />
+-    concat retv, tmps<br />
+-<br />
+-  done:<br />
+-    .return&#40;retv&#41;<br />
+-.end<br />
+-<br />
+-.sub capitalize :method<br />
+-    .local string tmps<br />
+-    .local string fchr<br />
+-    .local pmc retv<br />
+-    .local int len<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-<br />
+-    len = length tmps<br />
+-    if len == 0 goto done<br />
+-<br />
+-    downcase tmps<br />
+-<br />
+-    .local int pos, is_ws, is_lc<br />
+-    pos = 0<br />
+-    goto first_char<br />
+-  next_grapheme:<br />
+-    if pos == len goto done<br />
+-    is_ws = is_cclass .CCLASS_WHITESPACE, tmps, pos<br />
+-    if is_ws goto ws<br />
+-  advance:<br />
+-    pos += 1<br />
+-    goto next_grapheme<br />
+-  ws:<br />
+-    pos += 1<br />
+-  first_char:<br />
+-    is_lc = is_cclass .CCLASS_LOWERCASE, tmps, pos<br />
+-    unless is_lc goto advance<br />
+-    $S1 = substr tmps, pos, 1<br />
+-    upcase $S1<br />
+-    substr tmps, pos, 1, $S1<br />
+-    ## the length may have changed after replacement, so measure it again<br />
+-    len = length tmps<br />
+-    goto advance<br />
+-  done:<br />
+-    retv = tmps<br />
+-    .return &#40;retv&#41;<br />
+-.end<br />
+-<br />
+-.sub &#39;chop&#39; :method<br />
+-    .local string tmps<br />
+-    .local pmc retv<br />
+-    .local int len<br />
+-<br />
+-    retv = new &#39;Perl6Str&#39;<br />
+-    tmps = self<br />
+-<br />
+-    len = length tmps<br />
+-    if len == 0 goto done<br />
+-    dec len<br />
+-    substr tmps,tmps, 0, len<br />
+-  done:<br />
+-    retv = tmps<br />
+-    .return&#40;retv&#41;<br />
+-.end<br />
+ <br />
+ <br />
+ =item perl&#40;&#41;<br />
+@@ -254,111 +126,6 @@ Returns the identify value.<br />
+ .include &#39;cclass.pasm&#39;<br />
+ <br />
+ <br />
+-=item lc<br />
+-<br />
+- our Str multi Str::lc &#40; Str $string &#41;<br />
+-<br />
+-Returns the input string after converting each character to its lowercase<br />
+-form, if uppercase.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;lc&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;lc&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-<br />
+-=item lcfirst<br />
+-<br />
+- our Str multi Str::lcfirst &#40; Str $string &#41;<br />
+-<br />
+-Like C&lt;lc&gt;, but only affects the first character.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;lcfirst&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;lcfirst&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-<br />
+-=item uc<br />
+-<br />
+- our Str multi Str::uc &#40; Str $string &#41;<br />
+-<br />
+-Returns the input string after converting each character to its uppercase<br />
+-form, if lowercase. This is not a Unicode &#34;titlecase&#34; operation, but a<br />
+-full &#34;uppercase&#34;.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;uc&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;uc&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-<br />
+-=item ucfirst<br />
+-<br />
+- our Str multi Str::ucfirst &#40; Str $string &#41;<br />
+-<br />
+-Performs a Unicode &#34;titlecase&#34; operation on the first character of the string.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;ucfirst&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;ucfirst&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-<br />
+-=item capitalize<br />
+-<br />
+- our Str multi Str::capitalize &#40; Str $string &#41;<br />
+-<br />
+-Has the effect of first doing an C&lt;lc&gt; on the entire string, then performing a<br />
+-C&lt;s:g/&#40;\w+&#41;/{ucfirst $1}/&gt; on it.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;capitalize&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;capitalize&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-=item chop<br />
+-<br />
+- our Str method Str::chop &#40; Str  $string: &#41;<br />
+-<br />
+-Returns string with one Char removed from the end.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;chop&#39;<br />
+-    .param string a<br />
+-    .local pmc s<br />
+-    s = new &#39;Perl6Str&#39;<br />
+-    s = a<br />
+-    .return s.&#39;chop&#39;&#40;&#41;<br />
+-.end<br />
+-<br />
+-<br />
+ =item infix:===<br />
+ <br />
+ Overridden for Str.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476982" href="/rt3/Ticket/Display.html?id=59398#txn-476982">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;05:44:45&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477002" href="/rt3/Ticket/Display.html?id=59398#txn-477002">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;05:48:11&nbsp;2008</td>
+    <td class="description">
+      bacek -  Dependency by ticket #59400 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477004" href="/rt3/Ticket/Display.html?id=59398#txn-477004">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;06:03:11&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477004/221920/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 26b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Thanks, applied as r31456.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477008" href="/rt3/Ticket/Display.html?id=59398#txn-477008">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;06:03:13&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477010" href="/rt3/Ticket/Display.html?id=59398#txn-477010">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Sep&nbsp;27&nbsp;06:03:14&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477288" href="/rt3/Ticket/Display.html?id=59398#txn-477288">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;28&nbsp;07:52:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59398] [PATCH] Moving methods from Str.pir to any-str.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 28 Sep 2008 09:51:50 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477288/222064/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 982b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Sep 27, 2008 at 05:44:43AM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; --- a/languages/perl6/src/builtins/any-str.pir<br />
+&gt; +++ b/languages/perl6/src/builtins/any-str.pir<br />
+&gt; +<br />
+&gt; +=item capitalize<br />
+&gt; + [...]<br />
+&gt; +=cut<br />
+&gt; +<br />
+&gt; +    .local int pos, is_ws, is_lc<br />
+&gt; +    pos = 0<br />
+&gt; +    goto first_char<br />
+&gt; +  next_grapheme:<br />
+&gt; +    if pos == len goto done<br />
+&gt; +    is_ws = is_cclass .CCLASS_WHITESPACE, tmps, pos<br />
+&gt; +    if is_ws goto ws<br />
+&gt; +  advance:<br />
+&gt; +    pos += 1<br />
+&gt; +    goto next_grapheme<br />
+&gt; +  ws:<br />
+&gt; +    pos += 1<br />
+&gt; +  first_char:<br />
+&gt; +    is_lc = is_cclass .CCLASS_LOWERCASE, tmps, pos<br />
+&gt; +    unless is_lc goto advance<br />
+&gt; ...<br />
+</div>
+<br />
+This section of code would be much simpler &#40;and more efficient&#41;<br />
+by using the C&lt;find_cclass&gt; and C&lt;find_not_cclass opcodes&gt; instead of<br />
+individually examining each character one-at-a-time.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; +.sub &#39;chop&#39; :method<br />
+&gt; +    len = length tmps<br />
+&gt; +    if len == 0 goto done<br />
+&gt; +    dec len<br />
+&gt; +    substr tmps,tmps, 0, len<br />
+&gt; ...<br />
+</div>
+<br />
+PIR has a C&lt;chop&gt; opcode, perhaps we should use it?<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477296" href="/rt3/Ticket/Display.html?id=59398#txn-477296">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;28&nbsp;07:55:35&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477358" href="/rt3/Ticket/Display.html?id=59398#txn-477358">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;28&nbsp;19:13:56&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59398] [PATCH] Moving methods from Str.pir toany-str.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 29 Sep 2008 01:53:44 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, &#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477358/222088/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 533b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; ...<br />
+</div>
+&gt; <br />
+&gt; This section of code would be much simpler &#40;and more efficient&#41;<br />
+&gt; by using the C&lt;find_cclass&gt; and C&lt;find_not_cclass opcodes&gt; instead of<br />
+&gt; individually examining each character one-at-a-time.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; +.sub &#39;chop&#39; :method<br />
+&gt;&gt; +    len = length tmps<br />
+&gt;&gt; +    if len == 0 goto done<br />
+&gt;&gt; +    dec len<br />
+&gt;&gt; +    substr tmps,tmps, 0, len<br />
+&gt;&gt; ...<br />
+</div>
+&gt; <br />
+&gt; PIR has a C&lt;chop&gt; opcode, perhaps we should use it?<br />
+</div>
+<br />
+Definitely. But I just moved code around. Should I add TODO ticket for <br />
+cleaning up this code?<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-477364" href="/rt3/Ticket/Display.html?id=59398#txn-477364">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Sep&nbsp;28&nbsp;19:24:50&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59398] [PATCH] Moving methods from Str.pir toany-str.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 28 Sep 2008 21:24:29 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/477364/222094/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 753b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Sep 29, 2008 at 01:53:44AM +1000, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; This section of code would be much simpler &#40;and more efficient&#41;<br />
+&gt;&gt; by using the C&lt;find_cclass&gt; and C&lt;find_not_cclass opcodes&gt; instead of<br />
+&gt;&gt; individually examining each character one-at-a-time.<br />
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; +.sub &#39;chop&#39; :method<br />
+&gt;&gt;&gt; +    len = length tmps<br />
+&gt;&gt;&gt; +    if len == 0 goto done<br />
+&gt;&gt;&gt; +    dec len<br />
+&gt;&gt;&gt; +    substr tmps,tmps, 0, len<br />
+&gt;&gt;&gt; ...<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; PIR has a C&lt;chop&gt; opcode, perhaps we should use it?<br />
+</div>
+&gt;<br />
+&gt; Definitely. But I just moved code around. Should I add TODO ticket for  <br />
+&gt; cleaning up this code?<br />
+</div>
+<br />
+Yes, please.  And these are cleanups that someone should be able<br />
+to do with only a modest knowledge of PIR &#40;and perhaps a good<br />
+chance to learn PIR :-&#41;.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478228" href="/rt3/Ticket/Display.html?id=59398#txn-478228">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Sep&nbsp;30&nbsp;16:30:57&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59398] [PATCH] Moving methods from Str.pir toany-str.pir</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 30 Sep 2008 22:04:13 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478228/222606/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 221b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Yes, please.  And these are cleanups that someone should be able<br />
+&gt; to do with only a modest knowledge of PIR &#40;and perhaps a good<br />
+&gt; chance to learn PIR :-&#41;.<br />
+</div>
+<br />
+Done. #59486 and #59490<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478492" href="/rt3/Ticket/Display.html?id=59398#txn-478492">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;11:13:52&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/478492/222710/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 351b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue Sep 30 16:30:57 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Yes, please.  And these are cleanups that someone should be able<br />
+&gt; &gt; to do with only a modest knowledge of PIR &#40;and perhaps a good<br />
+&gt; &gt; chance to learn PIR :-&#41;.<br />
+</div>
+&gt; <br />
+&gt; Done. #59486 and #59490<br />
+</div>
+<br />
+Since that was the last thing to do in this ticket I&#39;m closing it now.<br />
+Thanks bacek++.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-478496" href="/rt3/Ticket/Display.html?id=59398#txn-478496">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Oct&nbsp;01&nbsp;11:13:54&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.336635</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

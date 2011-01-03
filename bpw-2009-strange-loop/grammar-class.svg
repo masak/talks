@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg7286">
+  <defs
+     id="defs7288">
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter8086">
+      <feGaussianBlur
+         id="feGaussianBlur8088"
+         stdDeviation="9.0349258" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter8103">
+      <feGaussianBlur
+         id="feGaussianBlur8105"
+         stdDeviation="9.0349258" />
+    </filter>
+  </defs>
+    <g
+       id="g11762">
+      <rect
+         width="408.96799"
+         height="313.82608"
+         rx="35.433071"
+         ry="35.433071"
+         x="87.90226"
+         y="229.1342"
+         id="rect8049"
+         style="opacity:0.98999999;fill:#000000;fill-opacity:0.50196078;stroke:none;filter:url(#filter8086)" />
+      <rect
+         width="408.96799"
+         height="313.82608"
+         rx="35.433071"
+         ry="35.433071"
+         x="73.90226"
+         y="215.1342"
+         id="rect7401"
+         style="fill:#a2b6ce;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         x="127.50783"
+         y="262.32159"
+         id="text7297"
+         xml:space="preserve"
+         style="font-size:23.18593979px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="127.50783"
+           y="262.32159"
+           id="tspan7299">grammar G {</tspan><tspan
+           x="127.50783"
+           y="291.30402"
+           id="tspan7301" /><tspan
+           x="127.50783"
+           y="320.28644"
+           id="tspan7303">  token a { &lt;b&gt; }</tspan><tspan
+           x="127.50783"
+           y="349.26886"
+           id="tspan7305" /><tspan
+           x="127.50783"
+           y="378.25128"
+           id="tspan7307">  token b { &lt;c&gt; }</tspan><tspan
+           x="127.50783"
+           y="407.2337"
+           id="tspan7309" /><tspan
+           x="127.50783"
+           y="436.21616"
+           id="tspan7311">  token c { 'OH HAI' }</tspan><tspan
+           x="127.50783"
+           y="465.19858"
+           id="tspan7313" /><tspan
+           x="127.50783"
+           y="494.181"
+           id="tspan7315">}</tspan></text>
+    </g>
+    <g
+       id="g11776">
+      <rect
+         width="408.96799"
+         height="313.82608"
+         rx="35.433071"
+         ry="35.433071"
+         x="581.49194"
+         y="227.1342"
+         id="rect8101"
+         style="fill:#000000;fill-opacity:0.50196078;stroke:none;filter:url(#filter8103)" />
+      <rect
+         width="408.96799"
+         height="313.82608"
+         rx="35.433071"
+         ry="35.433071"
+         x="569.49194"
+         y="215.1342"
+         id="rect7928"
+         style="fill:#a2b6ce;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         x="588.34125"
+         y="262.32156"
+         id="text7317"
+         xml:space="preserve"
+         style="font-size:23.18593979px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="588.34125"
+           y="262.32156"
+           id="tspan7319">class C {</tspan><tspan
+           x="588.34125"
+           y="291.30399"
+           id="tspan7321" /><tspan
+           x="588.34125"
+           y="320.28641"
+           id="tspan7323">  method a { self.b }</tspan><tspan
+           x="588.34125"
+           y="349.26883"
+           id="tspan7325" /><tspan
+           x="588.34125"
+           y="378.25125"
+           id="tspan7327">  method b { seld.c }</tspan><tspan
+           x="588.34125"
+           y="407.23367"
+           id="tspan7329" /><tspan
+           x="588.34125"
+           y="436.21613"
+           id="tspan7331">  method c { say 'OH HAI' }</tspan><tspan
+           x="588.34125"
+           y="465.19855"
+           id="tspan7333" /><tspan
+           x="588.34125"
+           y="494.18097"
+           id="tspan7335">}</tspan></text>
+    </g>
+</svg>

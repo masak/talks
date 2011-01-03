@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg3020">
+  <defs
+     id="defs3022" />
+  <g
+     id="layer1">
+    <rect
+       width="806.66663"
+       height="611.66663"
+       x="-3.1789145e-07"
+       y="-5"
+       id="rect3030"
+       style="text-align:center;text-anchor:middle;fill:#dddddd;fill-opacity:1;stroke:none" />
+    <text
+       x="398.61475"
+       y="248"
+       id="text3032"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Utopia;-inkscape-font-specification:Utopia"><tspan
+         x="398.61475"
+         y="248"
+         id="tspan3034">When someone says</tspan><tspan
+         x="398.61475"
+         y="288"
+         id="tspan3036">&quot;I want a programming language in which</tspan><tspan
+         x="398.61475"
+         y="328"
+         id="tspan3038">I need only say what I wish done,&quot;</tspan><tspan
+         x="398.61475"
+         y="368"
+         id="tspan3042">give him a lollipop.</tspan></text>
+  </g>
+</svg>

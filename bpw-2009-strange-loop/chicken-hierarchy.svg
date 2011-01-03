@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg3591">
+  <g
+     id="g4642">
+    <path
+       d="m 525.14633,307.71039 0,123.467"
+       id="path4390"
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 540.99713,432.8236 a 14.816041,14.816041 0 1 1 -29.63208,0 14.816041,14.816041 0 1 1 29.63208,0 z"
+       id="path4376"
+       style="fill:#661166;fill-opacity:1;stroke:none" />
+    <path
+       d="m 540.99713,308.5335 a 14.816041,14.816041 0 1 1 -29.63208,0 14.816041,14.816041 0 1 1 29.63208,0 z"
+       id="path4378"
+       style="fill:#661166;fill-opacity:1;stroke:none" />
+  </g>
+  <text
+     x="563.00952"
+     y="447.63968"
+     id="text4405"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="563.00952"
+       y="447.63968"
+       id="tspan4407">chicken</tspan></text>
+  <text
+     x="559.7171"
+     y="325.81891"
+     id="text4409"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="559.7171"
+       y="325.81891"
+       id="tspan4411">egg</tspan></text>
+  <path
+     d="m 525.14633,307.71039 c 0,0 -70.71351,-42.87614 -113.58965,0 -42.87614,42.87614 -33.36825,93.24063 0,124.37538 33.36825,31.13475 82.41652,31.14359 111.94342,0"
+     id="path4413"
+     style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+</svg>

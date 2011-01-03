@@ -1,0 +1,634 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\title{A Perl 6 trek for Perl 5 pilgrims}
+\author{Carl Mäsak}
+\date{\today}
+
+\frame{\titlepage}
+
+\frame{\frametitle{Table of contents}\tableofcontents}
+
+\section{A crash course in Perl 6}
+
+\begin{frame}[fragile]
+\frametitle{Perl 6 is still Perl, but different}
+\begin{verbatim}
+say 'Hello, Perl 5 people!';
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{New operators}
+\begin{verbatim}
+# bitwise operators
+5   +| 3;       # 7        # ternary op
+6   +^ 3        # 6        $a == $b ?? 2 * $a !! $b - $a
+5   +& 3;       # 1
+"b" ~| "d"      # 'f'
+
+# string concatenation
+'a' ~ 'b'       # 'ab'
+
+# file tests
+if '/etc/passwd' ~~ :e { say "exists" }
+
+# repetition
+'a' x 3         # 'aaa'
+'a' xx 3        # 'a', 'a', 'a'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Equality operators}
+\begin{verbatim}
+"ab"    eq      "ab"    # True
+"1.0"   eq      "1"     # False
+"a"     ==      "b"     # True
+"1"     ==      1.0     # True
+1       ===     1       # True
+[1, 2]  ===     [1, 2]  # False
+$x = [1, 2];
+$x      ===     $x      # True
+$x      eqv     $x      # True
+[1, 2]  eqv     [1, 2]  # True
+1.0     eqv     1       # False
+
+'abc'   ~~      m/a/    # True
+1       ~~      0..4    # True
+-3      ~~      0..4    # False
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Deref arrow is a dot nowadays}
+\begin{verbatim}
+# $obj->method()  # Perl 5
+
+  $obj.method()   # Perl 6
+
+  for @parcels {
+      .address;
+      .weigh;
+      .ship;
+      while .shipping {
+          .fold;
+          .spindle;
+          .mutilate;
+      }
+      .deliver;
+  }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Product and zipping operators}
+\begin{verbatim}
+<a b> X 1..3   # ('a', 1), ('a', 2), ('a', 3),
+               # ('b', 1), ('b', 2), ('b', 3)
+
+<a b c> Z 1..3 # 'a', 1, 'b', 2, 'c', 3
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Two dots and three dots}
+\begin{verbatim}
+my $range = 1..1000;
+say $range.max;      # 1000
+$range = 1..*;
+say $range.max;      # Whatever()<0xcba660>
+
+@fib = 1,1 ... &[+]  # The entire Fibonacci sequence
+
+sub foo() { ... }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Foreach loops rolled into operators}
+\begin{verbatim}
+say [+] 1..5;       # sum
+say [*] 1..5;       # product
+say [<] @list;      # is @list in strict ascending order?
+say [!=] @list;     # are no two consecutive items equal?
+say [eq] @list;     # are all items string-equal?
+say [max] @list;    # largest element
+
+say @a >>+<< @b;      # element-wise sum
+say [+] @a >>*<< @b;  # dot product from linear algebra
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{No parentheses}
+\begin{verbatim}
+if $percent > 100  {
+    say "weird mathematics";
+}
+
+for 1..3 {
+    # using $_ as loop variable
+    say 2 * $_;
+}
+
+while $stuff.is_wrong {
+    $stuff.try_to_make_right;
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Powerful looping constructs}
+\begin{verbatim}
+    for 1..10 -> $x {
+        say $x;
+    }
+
+    for 0..5 -> $even, $odd {
+        say "Even: $even \t Odd: $odd";
+    }
+
+    my %h = a => 1, b => 2, c => 3;
+    for %h.kv -> $key, $value {
+        say "$key: $value";
+    }
+
+    for (1..1000).pick(50).kv -> $index, $value {
+        say "Number $index is $value";
+    }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Gradual typing}
+\begin{verbatim}
+my Int $x = 3;
+$x = "foo";         # error
+say $x.WHAT;        # 'Int'
+
+# check for a type:
+if $x ~~ Int {
+    say '$x contains an Int'
+}
+
+'a string'      # Str
+2               # Int
+3.14            # Num
+(1, 2, 3)       # List
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Sigil invariance}
+\begin{verbatim}
+my $five = 5;
+print "an interpolating string, just as in perl $five\n";
+
+my @array = 1, 2, 3, 'foo';
+my $sum = @array[0] + @array[1];
+if $sum > @array[2] {
+    say "not executed";
+}
+my $number_of_elems = @array.elems;     # or +@array
+my $last_item = @array[*-1];
+
+my %hash = foo => 1, bar => 2, baz => 3;
+say %hash{'bar'};          # 2
+say %hash<bar>;            # this is auto-quoting
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{More no parens, \texttt{.perl}, and \texttt{.invert}}
+\begin{verbatim}
+my %comments =
+    perl6 => <Amazing Revolutionary>,
+    perl5 => <Essential Amazing>,
+    perl4 => <Classic>,
+    perl1 => <Classic>;
+
+my %epithets;
+%epithets.push(%comments.invert);
+
+say %comments.perl;
+# {"perl6" => ["Amazing", "Revolutionary"],
+#"perl5" => ["Essential", "Amazing"], "perl4" =>
+# "Classic", "perl1" => "Classic"}
+say %epithets.perl;
+# {"Amazing" => ["perl6", "perl5"], "Revolutionary"
+# => "perl6", "Essential" => "perl5", "Classic" =>
+# ["perl4", "perl1"]}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Junctions}
+\begin{verbatim}
+if $dice_sum == 7 | 11 {
+    say 'Natural!'
+}
+elsif $dice_sum == 2 | 3 | 12 {
+    say 'Craps!'
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Chained comparisons}
+\begin{verbatim}
+if 20 < $bob.age < 30 {
+    say 'Bob is a twenty-something.';
+}
+
+if 0 <= $angle < 2 * pi { ... }
+
+if 0 < all(@coefficients) <= 1 {
+    say 'Coefficients are already normalized.';
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Signatures}
+\begin{verbatim}
+# sub without a signature - perl 5 like
+sub print_arguments {
+    say "Arguments:";
+    for @_ {
+        say "\t$_";
+    }
+}
+
+# Signature with fixed arity and type:
+sub distance(Num $x1, Num $y1, Num $x2, Num $y2) {
+    return sqrt ($x2-$x1)**2 + ($y2-$y1)**2;
+}
+say distance(3, 5, 0, 1); 
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Signatures}
+\begin{verbatim}
+# Default arguments
+sub logarithm($num, $base = 2.7183) {
+    return log($num) / log($base)
+}
+say logarithm(4);       # uses default second argument
+say logarithm(4, 2);    # explicit second argument
+
+# named arguments
+
+sub doit(:$when, :$what) {
+    say "doing $what at $when";
+}
+doit(what => 'stuff', when => 'once');
+doit(:when<noon>, :what('more stuff'));
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Multisubs}
+\begin{verbatim}
+multi sub fib (Int $n where 0|1) { return $n }
+multi sub fib (Int $n) { return fib($n-1) + fib($n-2) }
+
+# or simply...
+
+multi sub fib (0) { return 0 }
+multi sub fib (1) { return 1 }
+multi sub fib (Int $n) { return fib($n-1) + fib($n-2) }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operator overloading}
+\begin{verbatim}
+sub postfix:<!>(Int $x) {
+    [*] 1..$x
+}
+
+say 5!;         # 120
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Unicode!}
+\begin{verbatim}
+\end{verbatim}
+\end{frame}
+
+\section{Object orientation}
+
+\begin{frame}[fragile]
+\frametitle{Classes}
+\begin{verbatim}
+class Foo {
+}
+
+class Bar is Foo { 
+    # class Bar inherits from class Foo
+    ...
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Methods}
+\begin{verbatim}
+class SomeClass {
+    # these two methods do nothing but return
+    # the invocant (self)
+    method foo {
+        return self;
+    }
+    method bar($s: ) {
+        return $s;
+    }
+}
+
+my SomeClass $x .= new;
+$x.foo.bar                      # same as $x
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Submethods}
+\begin{verbatim}
+class BaseClass {
+    method foo { ... }
+    submethod bar { ... }
+    sub baz { ... }
+}
+
+class DerivingClass is BaseClass {
+}
+
+my DerivingClass $d .= new;
+$d.foo();     # works
+$d.bar();     # nope, submethod
+$d.baz();     # nope, sub
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Attributes}
+\begin{verbatim}
+class SomeClass {
+    has $!a;
+    has $.b;
+    has $.c is rw;
+
+    method do_stuff {
+        return $!a + $!b + $!c;
+    }
+}
+my $x = SomeClass.new;
+say $x.a;       # ERROR!
+say $x.b;       # ok
+$x.b = 2;       # ERROR!
+$x.c = 3;       # ok
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Roles}
+\begin{verbatim}
+role Paintable {
+    has $.colour is rw;
+    method paint { ... }
+}
+class Shape {
+    method area { ... }
+}
+
+class Rectangle is Shape does Paintable {
+    has $.width;
+    has $.height;
+    method area {
+        $!width * $!height;
+    }
+}
+\end{verbatim}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Enums}
+\begin{verbatim}
+enum Day <Mon Tue Wed Thu Fri Sat Sun>;
+if custom_get_date().Day == Day::Sat | Day::Sun {
+    say "Weekend";
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Subset types}
+\begin{verbatim}
+subset Even of Int where { $_ % 2 == 0 }
+# Even can now be used like every other type name
+
+my Even $x = 2;
+my Even $y = 3; # type missmatch error
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Subset types}
+\begin{verbatim}
+sub foo (Int where { ... } $x) { ... }
+# or with the variable at the front:
+sub foo ($x of Int where { ... } ) { ... }
+\end{verbatim}
+\end{frame}
+
+\section{Regular expressions and grammars}
+
+\begin{frame}[fragile]
+\frametitle{New regex syntax}
+\begin{verbatim}
+# These things work the same:
+# * Capturing (...)
+# * Repetition quantifiers: *, +, and ?
+# * Alternatives: |
+# * Backslash escape: \
+# * Minimal matching suffix: ??, *?, +? 
+
+# You have to quote all non-alphanumerics.
+
+# A dot . matches _any_ character.
+# ^ and $ match start/end of string.
+# Use ^^ and $$ for start/end of line. (/s is gone)
+# \n now matches a logical newline.
+# \N matches anything except a newline. (/m is gone)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Bracket rationalization}
+\begin{verbatim}
+# (...) delimits capturing groups
+# [...] delimits non-capturing groups
+# {...} delimits code blocks
+
+# <...> is used for extensible metasyntax:
+#   * subrule:
+#      / <sign>? <mantissa> <exponent>? /
+#   * code assertion:
+#      / (\d**1..3) <?{ $0 < 256 }> /
+#   * character classes:
+#      / <[ a..z _ ]>* /
+#      / <-[a..z_]> <-alpha> /
+#   * zero-width assertions:
+#      <?alpha>    # match null before a letter, don't capture
+#      / <?before pattern> /    # lookahead
+#      / <?after pattern> /     # lookbehind
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Repetition}
+\begin{verbatim}
+. ** 42                  # match exactly 42 times
+<item> ** 3..*           # match 3 or more times
+
+<alt> ** '|'            # separator is character
+<addend> ** <addop>     # separator is subrule
+<item> ** [ \!?'==' ]   # separator is operator
+<file>**\h+             # separator is whitespace
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Backtracking}
+\begin{verbatim}
+# :        make preceeding atom not backtrack
+# ::       fail surrounding group instead of backtracking
+# :::      fail current regex     instead of backtracking
+# commit   fail entire match      instead of backtracking
+# cut      continue, but delete everything up to here
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Regex, token, rule}
+\begin{verbatim}
+regex { pattern }    # always {...} as delimiters
+rx    / pattern /    # (almost) any chars as delimiters
+
+token ident { [ <alpha> | _ ] \w* }     # same as...
+regex ident { [ <alpha>: | _: ]: \w*: } # ...this
+
+rule quux { next cmd '='   <condition> }    # same as...
+token quux { <.ws> next <.ws> cmd <.ws> '=' # ...this
+             <.ws> <condition> }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Grammars}
+\begin{verbatim}
+grammar XML {
+    token TOP   { ^ <xml> $ };
+    token xml   { <text> [ <tag> <text> ]* };
+    token text {  <-[<>&]>* };
+    rule tag   {
+        '<'(\w+) <attributes>*
+        [
+            | '/>'                 # a single tag
+            | '>'<xml>'</' $0 '>'  # an opening
+                                   # and a closing tag
+        ]
+    };
+    token attributes { \w+ '="' <-["<>]>* '"' };
+};
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Grammar inheritance}
+\begin{verbatim}
+grammar Letter {
+    rule text  { <greet> <body> <close> }
+    rule greet { [Hi|Hey|Yo] $<to>=(\S+?) , $$}
+    rule body  { <line>+? }
+    rule close { Later dude, $<from>=(.+) }
+    # etc.
+}
+
+grammar FormalLetter is Letter {
+    rule greet { Dear $<to>=(\S+?) , $$}
+    rule close { Yours sincerely, $<from>=(.+) }
+}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Actions}
+\begin{verbatim}
+grammar Integer {
+    token TOP {
+        | 0b<[01]>+ {*}  #= binary
+        | \d+       {*}  #= decimal
+    }
+}
+class Twice {
+    multi method TOP($match, $tag) {
+        my $text = ~$match;
+        $text = :2($text) if $tag eq 'binary'
+        make $text;
+    }
+    multi method TOP($match) {
+        make 2 * $match.ast;
+    }
+}
+Integer.parse('21', :action(Twice.new)).ast      # 42
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{And more...}
+\begin{verbatim}
+given $source_code {
+    $parsetree = m:keepall/<Perl::prog>/;
+}
+
+grammar LolPerl is STD { ... }
+
+$~MAIN = LolPerl;
+
+# LOL!
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Bibliography}
+\begin{verbatim}
+The material in this talk has been nicked^Wadapted from
+a number of sources.
+\end{verbatim}
+\begin{thebibliography}{10} 
+\bibitem{moritz}
+Moritz Lentz' "Perl 5 to Perl 6" tutorial.
+\bibitem{conway}
+An email from Damian Conway to perl6-language.
+\bibitem{wall}
+The synopses.
+\end{thebibliography} 
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{KTHXBAI}
+\begin{verbatim}
+# Questions?
+
+# ("When will Perl 6 be released?")
+\end{verbatim}
+\end{frame}
+
+\end{document}
+

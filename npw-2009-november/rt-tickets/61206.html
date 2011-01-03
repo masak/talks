@@ -1,0 +1,1648 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#61206: :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D61206">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#61206: :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61206">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">61206</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=61206">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=61206">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+61206-2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511244/240930/61206-2.patch">
+Mon Dec 22 16:41:54 2008 (4.9k) by zev
+</a>
+</font></li>
+</ul>
+
+
+61206.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511202/240878/61206.patch">
+Mon Dec 22 15:11:47 2008 (3.8k) by zev
+</a>
+</font></li>
+</ul>
+
+
+61206-3.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/511276/240966/61206-3.patch">
+Tue Dec 23 00:52:34 2008 (4.3k) by zev
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=61206">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-505748" href="/rt3/Ticket/Display.html?id=61206#txn-505748">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;09&nbsp;02:05:57&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">:x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 9 Dec 2008 11:04:23 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/505748/237844/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 466b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo r33613 doesn&#39;t seem to recognize ranges in :x&#40;&#41; pairs as such.<br />
+The specced semantics are that :x&#40;$a..$b&#41; should mean &#34;match between<br />
+$a and $b times &#40;neither more nor less&#41;&#34;.<br />
+<br />
+$ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;1..2&#41;&#41;&#39; # right<br />
+barbarfoo<br />
+<br />
+$ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;5..6&#41;&#41;&#39; $ wrong<br />
+barbarfoo<br />
+<br />
+By the second example, it seems to me that what&#39;s happening is that<br />
+the range is evaluated as a scalar representing its length.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511202" href="/rt3/Ticket/Display.html?id=61206#txn-511202">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;15:11:47&nbsp;2008</td>
+    <td class="description">
+      zev -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511202/240872/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 650b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The attached patch seems to fix this behavior, but I didn&#39;t see any spec<br />
+tests that covered it to make sure.<br />
+<br />
+<br />
+Zev<br />
+<br />
+On Tue Dec 09 02:05:57 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo r33613 doesn&#39;t seem to recognize ranges in :x&#40;&#41; pairs as such.<br />
+&gt; The specced semantics are that :x&#40;$a..$b&#41; should mean &#34;match between<br />
+&gt; $a and $b times &#40;neither more nor less&#41;&#34;.<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;1..2&#41;&#41;&#39; # right<br />
+&gt; barbarfoo<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;5..6&#41;&#41;&#39; $ wrong<br />
+&gt; barbarfoo<br />
+&gt; <br />
+&gt; By the second example, it seems to me that what&#39;s happening is that<br />
+&gt; the range is evaluated as a scalar representing its length.<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511202/240878/61206.patch">Download 61206.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 3.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 34238&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -910,17 +910,28 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-    .local int times                    # how many times to substitute<br />
+-    times = 1                           # the default is to substitute once<br />
++    .local int times_min                # minimum number of times to substitute<br />
++    .local int times_max                # maximum number of times to substitute  <br />
++    times_min = 1                       # the default is to substitute once<br />
++    times_max = 1<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times_max = -1                      # a negative number means all of them &#40;:global&#41;<br />
++    times_min = 0<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
+-    times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
++    $I0 = isa x_opt, &#39;Range&#39;<br />
++    unless $I0 goto check_x_int<br />
++    times_min = x_opt.&#39;from&#39;&#40;&#41;<br />
++    times_max = x_opt.&#39;to&#39;&#40;&#41;<br />
++    goto check_nth<br />
++  check_x_int:<br />
++    times_min = x_opt<br />
++    times_max = x_opt<br />
++    if times_max &lt; 0 goto x_fail<br />
++<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+@@ -934,7 +945,8 @@<br />
+     result = self<br />
+     result = clone result<br />
+ <br />
+-    if times == 0 goto subst_done<br />
++    if times_min &gt; times_max goto subst_done<br />
++    if times_max == 0 goto subst_done<br />
+ <br />
+     .local int startpos, pos, substringlen, replacelen<br />
+     startpos = 0<br />
+@@ -953,15 +965,19 @@<br />
+     $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+     unless $P0 goto subst_loop<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
++    if times_max &lt; 0 goto skip_times<br />
+ <br />
+     x_cnt += 1<br />
+-    if x_cnt &gt; times goto subst_done<br />
++    if x_cnt &lt; times_min goto reset_result<br />
++    if x_cnt &gt; times_max goto subst_done<br />
+   skip_times:<br />
+ <br />
+     substr result, pos, substringlen, replacement<br />
+     startpos = pos + replacelen<br />
+     goto subst_loop<br />
++  reset_result:<br />
++    result = self               # we didn&#39;t get the required number of matches<br />
++    result = clone result<br />
+   subst_done:<br />
+     .return &#40;result&#41;<br />
+ <br />
+@@ -986,18 +1002,28 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-<br />
+-    .local int times                    # how many times to substitute<br />
+-    times = 1                           # the default is to substitute once<br />
++    .local int times_min                # minimum number of times to substitute<br />
++    .local int times_max                # maximum number of times to substitute  <br />
++    times_min = 1                       # the default is to substitute once<br />
++    times_max = 1<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times_max = -1                      # a negative number means all of them &#40;:global&#41;<br />
++    times_min = 0<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
+-    times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
++    $I0 = isa x_opt, &#39;Range&#39;<br />
++    unless $I0 goto check_x_int<br />
++    times_min = x_opt.&#39;from&#39;&#40;&#41;<br />
++    times_max = x_opt.&#39;to&#39;&#40;&#41;<br />
++    goto check_nth<br />
++  check_x_int:<br />
++    times_min = x_opt<br />
++    times_max = x_opt<br />
++    if times_max &lt; 0 goto x_fail<br />
++<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+@@ -1010,7 +1036,8 @@<br />
+     result = self<br />
+     result = clone result<br />
+ <br />
+-    if times == 0 goto subst_done<br />
++    if times_min &gt; times_max goto subst_done<br />
++    if times_max == 0 goto subst_done<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # build a list of matches<br />
+</div>
+     .local pmc matchlist, match<br />
+@@ -1026,10 +1053,11 @@<br />
+     $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+     unless $P0 goto skip_push<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
++    if times_max &lt; 0 goto skip_times<br />
+ <br />
+     x_cnt += 1<br />
+-    if x_cnt &gt; times goto matchlist_done<br />
++    if x_cnt &lt; times_min goto subst_done<br />
++    if x_cnt &gt; times_max goto matchlist_done<br />
+   skip_times:<br />
+ <br />
+     push matchlist, match<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511206" href="/rt3/Ticket/Display.html?id=61206#txn-511206">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;15:11:50&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511244" href="/rt3/Ticket/Display.html?id=61206#txn-511244">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;16:41:53&nbsp;2008</td>
+    <td class="description">
+      zev -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511244/240924/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 714b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Oops.  The last patch wasn&#39;t quite right.  This one passes the tests<br />
+&#40;which I found&#41;.  I also added spectests that are marked TODO &#40;but which<br />
+pass with this patch applied&#41;.<br />
+<br />
+<br />
+Zev<br />
+<br />
+On Tue Dec 09 02:05:57 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo r33613 doesn&#39;t seem to recognize ranges in :x&#40;&#41; pairs as such.<br />
+&gt; The specced semantics are that :x&#40;$a..$b&#41; should mean &#34;match between<br />
+&gt; $a and $b times &#40;neither more nor less&#41;&#34;.<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;1..2&#41;&#41;&#39; # right<br />
+&gt; barbarfoo<br />
+&gt; <br />
+&gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;5..6&#41;&#41;&#39; $ wrong<br />
+&gt; barbarfoo<br />
+&gt; <br />
+&gt; By the second example, it seems to me that what&#39;s happening is that<br />
+&gt; the range is evaluated as a scalar representing its length.<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511244/240930/61206-2.patch">Download 61206-2.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 4.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 34238&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -902,6 +902,10 @@<br />
+     .param string replacement<br />
+     .param pmc options         :slurpy :named<br />
+ <br />
++    .local string result<br />
++    result = self<br />
++    result = clone result<br />
++    <br />
+     .local pmc global_flag<br />
+     global_flag = options[&#39;global&#39;]<br />
+     unless null global_flag goto have_global<br />
+@@ -910,17 +914,29 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-    .local int times                    # how many times to substitute<br />
+-    times = 1                           # the default is to substitute once<br />
++    .local int times_min                # minimum number of times to substitute<br />
++    .local int times_max                # maximum number of times to substitute  <br />
++    times_min = 1                       # the default is to substitute once<br />
++    times_max = 1<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times_max = -1                      # a negative number means all of them &#40;:global&#41;<br />
++    times_min = 0<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
+-    times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
++    $I0 = isa x_opt, &#39;Range&#39;<br />
++    unless $I0 goto check_x_int<br />
++    times_min = x_opt.&#39;from&#39;&#40;&#41;<br />
++    times_max = x_opt.&#39;to&#39;&#40;&#41;<br />
++    if times_min &gt; times_max goto subst_done<br />
++    goto check_nth<br />
++  check_x_int:<br />
++    times_min = x_opt<br />
++    times_max = x_opt<br />
++    if times_max &lt; 0 goto x_fail<br />
++<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+@@ -929,13 +945,8 @@<br />
+     nth_opt = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+   check_global:<br />
+ <br />
++    if times_max == 0 goto subst_done<br />
+ <br />
+-    .local string result<br />
+-    result = self<br />
+-    result = clone result<br />
+-<br />
+-    if times == 0 goto subst_done<br />
+-<br />
+     .local int startpos, pos, substringlen, replacelen<br />
+     startpos = 0<br />
+     pos = 0<br />
+@@ -953,16 +964,20 @@<br />
+     $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+     unless $P0 goto subst_loop<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
++    if times_max &lt; 0 goto skip_times<br />
+ <br />
+     x_cnt += 1<br />
+-    if x_cnt &gt; times goto subst_done<br />
++    if x_cnt &gt; times_max goto subst_done<br />
+   skip_times:<br />
+ <br />
+     substr result, pos, substringlen, replacement<br />
+     startpos = pos + replacelen<br />
+     goto subst_loop<br />
+   subst_done:<br />
++     unless x_cnt &lt; times_min goto do_return<br />
++     result = self<br />
++     result = clone result<br />
++  do_return:<br />
+     .return &#40;result&#41;<br />
+ <br />
+   nth_fail:<br />
+@@ -978,6 +993,10 @@<br />
+     .param pmc replacement<br />
+     .param pmc options         :slurpy :named<br />
+ <br />
++    .local string result<br />
++    result = self<br />
++    result = clone result<br />
++<br />
+     .local pmc global_flag<br />
+     global_flag = options[&#39;global&#39;]<br />
+     unless null global_flag goto have_global<br />
+@@ -986,18 +1005,29 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-<br />
+-    .local int times                    # how many times to substitute<br />
+-    times = 1                           # the default is to substitute once<br />
++    .local int times_min                # minimum number of times to substitute<br />
++    .local int times_max                # maximum number of times to substitute  <br />
++    times_min = 1                       # the default is to substitute once<br />
++    times_max = 1<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times_max = -1                      # a negative number means all of them &#40;:global&#41;<br />
++    times_min = 0<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
+-    times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
++    $I0 = isa x_opt, &#39;Range&#39;<br />
++    unless $I0 goto check_x_int<br />
++    times_min = x_opt.&#39;from&#39;&#40;&#41;<br />
++    times_max = x_opt.&#39;to&#39;&#40;&#41;<br />
++    if times_min &gt; times_max goto subst_done<br />
++    goto check_nth<br />
++  check_x_int:<br />
++    times_min = x_opt<br />
++    times_max = x_opt<br />
++    if times_max &lt; 0 goto x_fail<br />
++<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+@@ -1006,11 +1036,8 @@<br />
+     nth_opt = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+ <br />
+   build_matches:<br />
+-    .local string result<br />
+-    result = self<br />
+-    result = clone result<br />
+ <br />
+-    if times == 0 goto subst_done<br />
++    if times_max == 0 goto subst_done<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # build a list of matches<br />
+</div>
+     .local pmc matchlist, match<br />
+@@ -1026,10 +1053,10 @@<br />
+     $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+     unless $P0 goto skip_push<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
++    if times_max &lt; 0 goto skip_times<br />
+ <br />
+     x_cnt += 1<br />
+-    if x_cnt &gt; times goto matchlist_done<br />
++    if x_cnt &gt; times_max goto matchlist_done<br />
+   skip_times:<br />
+ <br />
+     push matchlist, match<br />
+@@ -1040,7 +1067,8 @@<br />
+     unless match goto matchlist_done<br />
+     goto matchlist_loop<br />
+   matchlist_done:<br />
+-<br />
++    if x_cnt &lt; times_min goto reset_result<br />
++    <br />
+<div class="message-stanza-depth-1">
+     # get caller&#39;s lexpad<br />
+</div>
+     .local pmc lexpad<br />
+     $P0 = getinterp<br />
+@@ -1073,6 +1101,9 @@<br />
+     $I3 -= $I2<br />
+     offset += $I3<br />
+     goto subst_loop<br />
++  reset_result:<br />
++     result = self<br />
++     result = clone result<br />
+   subst_done:<br />
+     .return &#40;result&#41;<br />
+ <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511248" href="/rt3/Ticket/Display.html?id=61206#txn-511248">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;16:44:43&nbsp;2008</td>
+    <td class="description">
+      zev -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511248/240934/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 932b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I was confused about the &#34;Toggle Cc&#34; Javascript link.  See RT for the<br />
+patch &#40;should these normally be CC&#39;d to p6-compiler?&#41;.<br />
+<br />
+<br />
+Zev<br />
+<br />
+On Mon Dec 22 16:41:53 2008, zev wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Oops.  The last patch wasn&#39;t quite right.  This one passes the tests<br />
+&gt; &#40;which I found&#41;.  I also added spectests that are marked TODO &#40;but which<br />
+&gt; pass with this patch applied&#41;.<br />
+&gt; <br />
+&gt; <br />
+&gt; Zev<br />
+&gt; <br />
+&gt; On Tue Dec 09 02:05:57 2008, masak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Rakudo r33613 doesn&#39;t seem to recognize ranges in :x&#40;&#41; pairs as such.<br />
+&gt; &gt; The specced semantics are that :x&#40;$a..$b&#41; should mean &#34;match between<br />
+&gt; &gt; $a and $b times &#40;neither more nor less&#41;&#34;.<br />
+&gt; &gt; <br />
+&gt; &gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;1..2&#41;&#41;&#39; # right<br />
+&gt; &gt; barbarfoo<br />
+&gt; &gt; <br />
+&gt; &gt; $ perl6 -e &#39;say &#34;foofoofoo&#34;.subst&#40;&#34;foo&#34;, &#34;bar&#34;, :x&#40;5..6&#41;&#41;&#39; $ wrong<br />
+&gt; &gt; barbarfoo<br />
+&gt; &gt; <br />
+&gt; &gt; By the second example, it seems to me that what&#39;s happening is that<br />
+&gt; &gt; the range is evaluated as a scalar representing its length.<br />
+</div>
+&gt; <br />
+&gt; <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511262" href="/rt3/Ticket/Display.html?id=61206#txn-511262">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;19:55:20&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511262/240946/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 476b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Dec 22 16:41:53 2008, zev wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Oops.  The last patch wasn&#39;t quite right.  This one passes the tests<br />
+&gt; &#40;which I found&#41;.  I also added spectests that are marked TODO &#40;but which<br />
+&gt; pass with this patch applied&#41;.<br />
+</div>
+<br />
+I would prefer to see this done by using a smart match on the :x&#40;&#41;<br />
+argument instead of explicitly checking it for a Range and grabbing<br />
+min/max from there.  Using a smart match would allow things like<br />
+:x&#40;1|5|7&#41; and :x&#40;{ .is_prime }&#41;  to work properly.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511274" href="/rt3/Ticket/Display.html?id=61206#txn-511274">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;22&nbsp;21:51:05&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61206] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Dec 2008 06:50:33 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511274/240956/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 473b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; I would prefer to see this done by using a smart match on the :x&#40;&#41;<br />
+&gt; argument instead of explicitly checking it for a Range and grabbing<br />
+&gt; min/max from there.  Using a smart match would allow things like<br />
+&gt; :x&#40;1|5|7&#41; and :x&#40;{ .is_prime }&#41;  to work properly.<br />
+</div>
+<br />
+We might as well add spectests for that before closing this bug. &#40;I<br />
+made an attempt, but it turned out I wasn&#39;t awake enough to write<br />
+junction and closure tests yet. Someone else is welcome to try.&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511276" href="/rt3/Ticket/Display.html?id=61206#txn-511276">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;23&nbsp;00:52:34&nbsp;2008</td>
+    <td class="description">
+      zev -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511276/240960/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 634b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Dec 22 21:51:05 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; I would prefer to see this done by using a smart match on the :x&#40;&#41;<br />
+&gt; &gt; argument instead of explicitly checking it for a Range and grabbing<br />
+&gt; &gt; min/max from there.  Using a smart match would allow things like<br />
+&gt; &gt; :x&#40;1|5|7&#41; and :x&#40;{ .is_prime }&#41;  to work properly.<br />
+</div>
+&gt; <br />
+&gt; We might as well add spectests for that before closing this bug. &#40;I<br />
+&gt; made an attempt, but it turned out I wasn&#39;t awake enough to write<br />
+&gt; junction and closure tests yet. Someone else is welcome to try.&#41;<br />
+&gt; <br />
+</div>
+<br />
+Ok.  This version uses smart match.  The non-regex version could<br />
+probably be more efficient.<br />
+<br />
+<br />
+Zev<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511276/240966/61206-3.patch">Download 61206-3.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 4.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/builtins/any-str.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/builtins/any-str.pir    &#40;revision 34267&#41;<br />
++++ src/builtins/any-str.pir    &#40;working copy&#41;<br />
+@@ -910,32 +910,33 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-    .local int times                    # how many times to substitute<br />
++    .local pmc times                    # how many times to substitute<br />
++    times = new &#39;Integer&#39;<br />
+     times = 1                           # the default is to substitute once<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times = new &#39;Whatever&#39;<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
++    if global_flag goto fail_x_global<br />
+     times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+     nth_opt = options[&#39;nth&#39;]<br />
+-    unless null nth_opt goto check_global<br />
++    unless null nth_opt goto subst_init<br />
+     nth_opt = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-  check_global:<br />
++  subst_init:<br />
+ <br />
+-<br />
++    .local pmc results<br />
++    results = new &#39;ResizableStringArray&#39;<br />
+     .local string result<br />
+     result = self<br />
+     result = clone result<br />
++    push results, result<br />
+ <br />
+-    if times == 0 goto subst_done<br />
+-<br />
+     .local int startpos, pos, substringlen, replacelen<br />
+     startpos = 0<br />
+     pos = 0<br />
+@@ -950,26 +951,31 @@<br />
+     if pos &lt; 0 goto subst_done<br />
+ <br />
+     n_cnt += 1<br />
+-    $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+-    unless $P0 goto subst_loop<br />
++    $I0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
++    unless $I0 goto subst_loop<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
+-<br />
+-    x_cnt += 1<br />
+-    if x_cnt &gt; times goto subst_done<br />
+-  skip_times:<br />
+-<br />
++    result = clone result<br />
+     substr result, pos, substringlen, replacement<br />
++    push results, result<br />
+     startpos = pos + replacelen<br />
+     goto subst_loop<br />
+   subst_done:<br />
++    .local int idx<br />
++    idx = results<br />
++  find_result:<br />
++    idx -= 1<br />
++    if idx &lt; 0 goto subst_failed<br />
++    $I0 = times.&#39;ACCEPTS&#39;&#40;idx&#41;<br />
++    unless $I0 goto find_result<br />
++    result = results[idx]<br />
++    goto do_return<br />
++  subst_failed:<br />
++    result = results[0]<br />
++  do_return:<br />
+     .return &#40;result&#41;<br />
+ <br />
+-  nth_fail:<br />
+-    die &#34;Must pass a non-negative integer to :nth&#40;&#41;&#34;<br />
+-<br />
+-  x_fail:<br />
+-    die &#34;Must pass a non-negative integer to :x&#40;&#41;&#34;<br />
++  fail_x_global:<br />
++    die &#34;Cannot specify both :g and :x&#40;&#41;&#34;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -986,18 +992,18 @@<br />
+     global_flag = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+   have_global:<br />
+ <br />
+-<br />
+-    .local int times                    # how many times to substitute<br />
++    .local pmc times                    # how many times to substitute<br />
++    times = new &#39;Integer&#39;<br />
+     times = 1                           # the default is to substitute once<br />
+     unless global_flag goto check_x<br />
+-    times = -1                          # a negative number means all of them &#40;:global&#41;<br />
++    times = new &#39;Whatever&#39;<br />
+   check_x:<br />
+ <br />
+     .local pmc x_opt<br />
+     x_opt = options[&#39;x&#39;]<br />
+     if null x_opt goto check_nth<br />
++    if global_flag goto fail_x_global<br />
+     times = x_opt<br />
+-    if times &lt; 0 goto x_fail<br />
+   check_nth:<br />
+ <br />
+     .local pmc nth_opt<br />
+@@ -1010,8 +1016,6 @@<br />
+     result = self<br />
+     result = clone result<br />
+ <br />
+-    if times == 0 goto subst_done<br />
+-<br />
+<div class="message-stanza-depth-1">
+     # build a list of matches<br />
+</div>
+     .local pmc matchlist, match<br />
+     .local int n_cnt, x_cnt<br />
+@@ -1026,12 +1030,6 @@<br />
+     $P0 = nth_opt.&#39;ACCEPTS&#39;&#40;n_cnt&#41;<br />
+     unless $P0 goto skip_push<br />
+ <br />
+-    if times &lt; 0 goto skip_times<br />
+-<br />
+-    x_cnt += 1<br />
+-    if x_cnt &gt; times goto matchlist_done<br />
+-  skip_times:<br />
+-<br />
+     push matchlist, match<br />
+   skip_push:<br />
+ <br />
+@@ -1046,6 +1044,25 @@<br />
+     $P0 = getinterp<br />
+     lexpad = $P0[&#39;lexpad&#39;;1]<br />
+ <br />
++    # first figure out how many substitutions to actually perform<br />
++    $I0 = matchlist<br />
++    $I0 += 1<br />
++  reduce_matches:<br />
++    $I0 -= 1<br />
++    if $I0 == 0 goto subst_done<br />
++    $I1 = times.&#39;ACCEPTS&#39;&#40;$I0&#41;<br />
++    unless $I1 goto reduce_matches<br />
++<br />
++    # pop substitutions off the list<br />
++    $I2 = matchlist<br />
++    $I0 = $I2 - $I0<br />
++  reduce_matches_loop:<br />
++    if $I0 == 0 goto do_subst<br />
++    $P0 = pop matchlist<br />
++    $I0 -= 1<br />
++    goto reduce_matches_loop<br />
++<br />
++  do_subst:<br />
+<div class="message-stanza-depth-1">
+     # now, perform substitutions on matchlist until done<br />
+</div>
+     .local int offset<br />
+     offset = 0<br />
+@@ -1076,11 +1093,8 @@<br />
+   subst_done:<br />
+     .return &#40;result&#41;<br />
+ <br />
+-  nth_fail:<br />
+-    die &#34;Must pass a non-negative integer to :nth&#40;&#41;&#34;<br />
+-<br />
+-  x_fail:<br />
+-    die &#34;Must pass a non-negative integer to :x&#40;&#41;&#34;<br />
++  fail_x_global:<br />
++    die &#34;Cannot specify both :g and :x&#40;&#41;&#34;<br />
+ .end<br />
+ <br />
+ <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511308" href="/rt3/Ticket/Display.html?id=61206#txn-511308">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;23&nbsp;01:36:45&nbsp;2008</td>
+    <td class="description">
+      zev <!-- x --> at strangersgate.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61206] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Dec 2008 01:00:46 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Zev Benjamin &lt;zev <!-- x --> at strangersgate.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511308/240976/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon Dec 22 16:41:53 2008, zev wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Oops.  The last patch wasn&#39;t quite right.  This one passes the tests<br />
+&gt;&gt; &#40;which I found&#41;.  I also added spectests that are marked TODO &#40;but which<br />
+&gt;&gt; pass with this patch applied&#41;.<br />
+</div>
+&gt; <br />
+&gt; I would prefer to see this done by using a smart match on the :x&#40;&#41;<br />
+&gt; argument instead of explicitly checking it for a Range and grabbing<br />
+&gt; min/max from there.  Using a smart match would allow things like<br />
+&gt; :x&#40;1|5|7&#41; and :x&#40;{ .is_prime }&#41;  to work properly.<br />
+&gt; <br />
+&gt; Pm<br />
+&gt; <br />
+&gt; <br />
+</div>
+<br />
+I just tried working this out &#40;I&#39;m still learning PIR&#41;.  With the simple<br />
+implementation &#40;which is analogous to the way it currently works&#41;, subst<br />
+does substitutions until it&#39;s internal counter ACCEPTS the argument to<br />
+:x&#40;&#41;.  However, this means that it terminates as soon as it has<br />
+substituted enough to be within the range.  The semantics we want, I<br />
+believe, is for subst to do as many substitutions as it can while still<br />
+fitting the :x&#40;&#41; constraint.  This leads to some sort of backtracking<br />
+solution, which isn&#39;t going to be very efficient.  Can we punt to the<br />
+regex engine for taking care of the :x&#40;&#41; argument?<br />
+<br />
+<br />
+Zev<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511312" href="/rt3/Ticket/Display.html?id=61206#txn-511312">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Dec&nbsp;23&nbsp;02:00:25&nbsp;2008</td>
+    <td class="description">
+      zev -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #61206] :x&#40;$n&#41; where $n ~~ Range doesn&#39;t work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 23 Dec 2008 01:08:38 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Zev Benjamin &lt;zev-perl6 <!-- x --> at strangersgate.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511312/240980/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon Dec 22 16:41:53 2008, zev wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Oops.  The last patch wasn&#39;t quite right.  This one passes the tests<br />
+&gt;&gt; &#40;which I found&#41;.  I also added spectests that are marked TODO &#40;but which<br />
+&gt;&gt; pass with this patch applied&#41;.<br />
+</div>
+&gt; <br />
+&gt; I would prefer to see this done by using a smart match on the :x&#40;&#41;<br />
+&gt; argument instead of explicitly checking it for a Range and grabbing<br />
+&gt; min/max from there.  Using a smart match would allow things like<br />
+&gt; :x&#40;1|5|7&#41; and :x&#40;{ .is_prime }&#41;  to work properly.<br />
+&gt; <br />
+&gt; Pm<br />
+&gt; <br />
+&gt; <br />
+</div>
+<br />
+I just tried working this out &#40;I&#39;m still learning PIR&#41;.  With the simple<br />
+implementation &#40;which is analogous to the way it currently works&#41;, subst<br />
+does substitutions until it&#39;s internal counter ACCEPTS the argument to<br />
+:x&#40;&#41;.  However, this means that it terminates as soon as it has<br />
+substituted enough to be within the range.  The semantics we want, I<br />
+believe, is for subst to do as many substitutions as it can while still<br />
+fitting the :x&#40;&#41; constraint.  This leads to some sort of backtracking<br />
+solution, which isn&#39;t going to be very efficient.  Can we punt to the<br />
+regex engine for taking care of the :x&#40;&#41; argument?<br />
+<br />
+<br />
+Zev<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.210764</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

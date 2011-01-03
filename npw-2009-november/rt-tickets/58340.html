@@ -1,0 +1,976 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58340: [BUG] fibonacci gen ties state vars together in 2nd loop iteration</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58340">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58340: [BUG] fibonacci gen ties state vars together in 2nd loop iteration</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58340">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58340</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58340">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+stifynsemons
+&lt;stifynsemons [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58340">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+fibonacci.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463216/214354/fibonacci.p6">
+Sun Aug 24 18:53:34 2008 (170b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+swap_str.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463372/214428/swap_str.p6">
+Mon Aug 25 05:50:47 2008 (217b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+swap_raw.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463372/214422/swap_raw.p6">
+Mon Aug 25 05:50:47 2008 (127b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+swap_sub.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463372/214434/swap_sub.p6">
+Mon Aug 25 05:50:47 2008 (209b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+
+swap.p6<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/463372/214440/swap.p6">
+Mon Aug 25 05:50:47 2008 (269b) by stifynsemons
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58340">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463216" href="/rt3/Ticket/Display.html?id=58340#txn-463216">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;18:53:34&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] fibonacci gen ties state vars together in 2nd loop iteration</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 24 Aug 2008 19:53:12 -0600</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stephen Simmons&#34; &lt;stifynsemons <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463216/214354/fibonacci.p6">Download fibonacci.p6</a>
+<span class="downloadcontenttype">
+[application/octet-stream 170b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463216/214350/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 982b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The attached fibonacci program seems to have some strange behavior in the<br />
+loop.  There are two variables, $i, and $j, which contain the state, and $t<br />
+which saves $i temporarily.<br />
+In the first iteration of the loop, the output is<br />
+0 1 1<br />
+<br />
+which is correct.<br />
+<br />
+But the second iteration produces<br />
+2 2 2<br />
+instead of<br />
+1 1 2<br />
+<br />
+And the rest are:<br />
+4 4 4<br />
+8 8 8<br />
+16 16 16<br />
+32 32 32<br />
+64 64 64<br />
+128 128 128<br />
+256 256 256<br />
+512 512 512<br />
+1024 1024 1024<br />
+<br />
+which all show the same incorrect behavior as the second iteration.  It is<br />
+almost as if the assignment statements, the second time through start<br />
+binding variables together.<br />
+<br />
+Stephen Simmons<br />
+<br />
+System Information:<br />
+<br />
+sully:experiment stephensimmons$ perl6 -v<br />
+This is Rakudo Perl 6, revision 30524 built on parrot 0.7.0-devel<br />
+for darwin-thread-multi-2level.<br />
+<br />
+Copyright 2006-2008, The Perl Foundation.<br />
+<br />
+sully:experiment stephensimmons$ uname -a<br />
+Darwin sully.local 9.4.0 Darwin Kernel Version 9.4.0: Mon Jun  9 19:30:53<br />
+PDT 2008; root:xnu-1228.5.20~1/RELEASE_I386 i386<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463216/214352/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463222" href="/rt3/Ticket/Display.html?id=58340#txn-463222">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Aug&nbsp;24&nbsp;18:53:36&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463372" href="/rt3/Ticket/Display.html?id=58340#txn-463372">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;05:50:47&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463372/214416/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Here is a pair of related examples of variables being tied/bound together inappropriately.  <br />
+First, swap.p6, which exhibits a similar problem.<br />
+<br />
+sully:experiment stephensimmons$ perl6 swap.p6 <br />
+ghi dhi lia qfw ast vzc ens lpf<br />
+  ghi dhi<br />
+  ghi dhi &#40;ghi&#41;<br />
+  dhi dhi &#40;dhi&#41;     # should be &#34;dhi dhi &#40;ghi&#41;&#34;<br />
+  dhi dhi &#40;dhi&#41;     # should be &#34;dhi ghi &#40;ghi&#41;&#34;<br />
+dhi dhi lia qfw ast vzc ens lpf<br />
+<br />
+This has the advantage of not involving loops.  However, the second program, swap_raw.p6 <br />
+works correctly:<br />
+<br />
+sully:experiment stephensimmons$ perl6 swap_raw.p6 <br />
+  1 2<br />
+  1 2 &#40;1&#41;<br />
+  2 2 &#40;1&#41;<br />
+  2 1 &#40;1&#41;<br />
+<br />
+Putting the working code back into a subroutine we get &#40;swap_sub.p6&#41;:<br />
+sully:experiment stephensimmons$ perl6 swap_sub.p6 <br />
+1 2<br />
+  1 2<br />
+  1 2 &#40;1&#41;<br />
+  2 2 &#40;1&#41;<br />
+  2 1 &#40;1&#41;<br />
+2 1<br />
+<br />
+This is almost identical to the swap.p6 program, except for the type of the arguments being <br />
+passed in.  Switching back to strings in swap_str.p6, we get:<br />
+<br />
+sully:experiment stephensimmons$ perl6 swap_str.p6 <br />
+dhi ghi<br />
+  dhi ghi<br />
+  dhi ghi &#40;dhi&#41;<br />
+  ghi ghi &#40;dhi&#41;<br />
+  ghi dhi &#40;dhi&#41;<br />
+ghi dhi<br />
+<br />
+which again works correctly.<br />
+<br />
+Not sure if this is the exact same problem as seen in the original fibonacci.p6, but it is at <br />
+least similar.<br />
+<br />
+Stephen Simmons<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463372/214422/swap_raw.p6">Download swap_raw.p6</a>
+<span class="downloadcontenttype">
+[text/plain 127b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+my $a = 1;<br />
+my $b = 2;<br />
+say &#34;  $a $b&#34;;<br />
+my $t = $a;<br />
+say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+$a = $b;<br />
+say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+$b = $t;<br />
+say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463372/214428/swap_str.p6">Download swap_str.p6</a>
+<span class="downloadcontenttype">
+[text/plain 217b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+my $d = &#34;dhi&#34;;<br />
+my $e = &#34;ghi&#34;;<br />
+sub swap &#40;$a is rw, $b is rw&#41; {<br />
+        say &#34;  $a $b&#34;;<br />
+        my $t = $a;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $a = $b;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $b = $t;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+}<br />
+<br />
+say &#34;$d $e&#34;;<br />
+swap&#40;$d, $e&#41;;<br />
+say &#34;$d $e&#34;;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463372/214434/swap_sub.p6">Download swap_sub.p6</a>
+<span class="downloadcontenttype">
+[text/plain 209b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+my $d = 1;<br />
+my $e = 2;<br />
+sub swap &#40;$a is rw, $b is rw&#41; {<br />
+        say &#34;  $a $b&#34;;<br />
+        my $t = $a;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $a = $b;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $b = $t;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+}<br />
+<br />
+say &#34;$d $e&#34;;<br />
+swap&#40;$d, $e&#41;;<br />
+say &#34;$d $e&#34;;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/463372/214440/swap.p6">Download swap.p6</a>
+<span class="downloadcontenttype">
+[text/plain 269b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+my @list = &lt;ghi dhi lia qfw ast vzc ens lpf&gt;;<br />
+<br />
+sub swap &#40;$a is rw, $b is rw&#41; {<br />
+        say &#34;  $a $b&#34;;<br />
+        my $t = $a;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $a = $b;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+        $b = $t;<br />
+        say &#34;  $a $b &#40;$t&#41;&#34;;<br />
+}<br />
+<br />
+say join&#40; &#34; &#34;, @list&#41;;<br />
+<br />
+swap&#40;@list[0], @list[1]&#41;;<br />
+<br />
+say join&#40; &#34; &#34;, @list&#41;;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-463374" href="/rt3/Ticket/Display.html?id=58340#txn-463374">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;25&nbsp;05:50:47&nbsp;2008</td>
+    <td class="description">
+      stifynsemons -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492278" href="/rt3/Ticket/Display.html?id=58340#txn-492278">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:18:05&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492278/230106/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 689b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+As of r32441 the fibonacci.p6 program appears to be working properly:<br />
+<br />
+$ cat fibonacci.p6<br />
+sub fibonacci&#40;$limit&#41; {<br />
+        my Int $i=0;<br />
+        my Int $j=1;<br />
+        say $i;<br />
+        say $j;<br />
+        while $j &lt;= $limit {<br />
+                my $t = $i;<br />
+                $i = $j;<br />
+                $j += $t;<br />
+                say &#34;$t $i $j&#34;;<br />
+        }<br />
+}<br />
+<br />
+fibonacci&#40;1000&#41;;<br />
+$ ./parrot perl6.pbc fibonacci.p6<br />
+0<br />
+1<br />
+0 1 1<br />
+1 1 2<br />
+1 2 3<br />
+2 3 5<br />
+3 5 8<br />
+5 8 13<br />
+8 13 21<br />
+13 21 34<br />
+21 34 55<br />
+34 55 89<br />
+55 89 144<br />
+89 144 233<br />
+144 233 377<br />
+233 377 610<br />
+377 610 987<br />
+610 987 1597<br />
+$<br />
+<br />
+I didn&#39;t check the other scripts in this thread -- if they&#39;re still<br />
+having issues feel free to open a new ticket &#40;or re-open this one&#41;.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492280" href="/rt3/Ticket/Display.html?id=58340#txn-492280">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:18:07&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492284" href="/rt3/Ticket/Display.html?id=58340#txn-492284">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;14:18:11&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.058064</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

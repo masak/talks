@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg2816">
+  <defs
+     id="defs2818" />
+    <g
+       id="g4388"
+       style="font-size:48px">
+      <text
+         x="378.27039"
+         y="91.321121"
+         id="text2827"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="378.27039"
+           y="91.321121"
+           id="tspan2829">term</tspan></text>
+      <text
+         x="620.19324"
+         y="91.321121"
+         id="text3694"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="620.19324"
+           y="91.321121"
+           id="tspan3696"
+           style="font-size:48px;fill:#4422ff;fill-opacity:1">a</tspan></text>
+    </g>
+    <path
+       d="m 90.856062,173.80705 870.650058,0"
+       id="path4431"
+       style="font-size:48px;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <g
+       transform="translate(0,80.095764)"
+       id="g4394"
+       style="font-size:48px">
+      <text
+         x="350.26776"
+         y="207.94333"
+         id="text2831"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="350.26776"
+           y="207.94333"
+           id="tspan2833">infix</tspan></text>
+      <text
+         x="620.19324"
+         y="207.94333"
+         id="text4208"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="620.19324"
+           y="207.94333"
+           id="tspan4210">a <tspan
+   id="tspan4216"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">*</tspan> b</tspan></text>
+    </g>
+    <g
+       transform="translate(0,47.886139)"
+       id="g4401"
+       style="font-size:48px">
+      <text
+         x="321.19992"
+         y="333.3616"
+         id="text2835"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="321.19992"
+           y="333.3616"
+           id="tspan2837">prefix</tspan></text>
+      <text
+         x="618.0155"
+         y="333.3616"
+         id="text4220"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="618.0155"
+           y="333.3616"
+           id="tspan4222"><tspan
+   id="tspan4224"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">--</tspan>a</tspan></text>
+    </g>
+    <g
+       transform="translate(0,37.780273)"
+       id="g4408"
+       style="font-size:48px">
+      <text
+         x="292.13211"
+         y="441.18781"
+         id="text2839"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="292.13211"
+           y="441.18781"
+           id="tspan2841">postfix</tspan></text>
+      <text
+         x="620.19324"
+         y="441.18781"
+         id="text4226"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="620.19324"
+           y="441.18781"
+           id="tspan4228">a<tspan
+   id="tspan4230"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">++</tspan></tspan></text>
+    </g>
+    <g
+       transform="translate(0,20.249512)"
+       id="g4415"
+       style="font-size:48px">
+      <text
+         x="233.99646"
+         y="557.81"
+         id="text2843"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="233.99646"
+           y="557.81"
+           id="tspan2845">circumfix</tspan></text>
+      <text
+         x="614.86725"
+         y="557.81"
+         id="text4232"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="614.86725"
+           y="557.81"
+           id="tspan4234"><tspan
+   id="tspan4236"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">(</tspan> a+b <tspan
+   id="tspan4238"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">)</tspan> * c</tspan></text>
+    </g>
+    <g
+       id="g4423"
+       style="font-size:48px">
+      <text
+         x="117.72516"
+         y="674.43219"
+         id="text2847"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="117.72516"
+           y="674.43219"
+           id="tspan2849">postcircumfix</tspan></text>
+      <text
+         x="620.19324"
+         y="674.43219"
+         id="text4240"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="620.19324"
+           y="674.43219"
+           id="tspan4242">a<tspan
+   id="tspan4244"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">[</tspan>42<tspan
+   id="tspan4246"
+   style="font-size:48px;fill:#4422ff;fill-opacity:1">]</tspan></tspan></text>
+    </g>
+</svg>

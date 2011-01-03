@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg5737">
+  <defs
+     id="defs5739" />
+  <g
+     id="layer1">
+    <path
+       d="m 925.09042,349.25516 a 278.86783,203.11768 0 1 1 -557.73565,0 278.86783,203.11768 0 1 1 557.73565,0 z"
+       transform="translate(25.885734,-82.904928)"
+       id="path5822"
+       style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none" />
+    <path
+       d="m 237.30581,215.85443 a 41.562035,41.562035 0 1 1 -83.12407,0 41.562035,41.562035 0 1 1 83.12407,0 z"
+       transform="translate(206.88169,214.73287)"
+       id="path6396"
+       style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none" />
+    <path
+       d="m 143.45605,295.62674 a 27.484571,27.484571 0 1 1 -54.96914,0 27.484571,27.484571 0 1 1 54.96914,0 z"
+       transform="translate(214.92595,191.94078)"
+       id="path6398"
+       style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none" />
+    <path
+       d="m 105.91615,382.10257 a 16.08853,16.08853 0 1 1 -32.177058,0 16.08853,16.08853 0 1 1 32.177058,0 z"
+       transform="translate(193.47458,140.99377)"
+       id="path6400"
+       style="fill:#5e80aa;fill-opacity:0.48760334;stroke:none" />
+    <text
+       x="685.06659"
+       y="255.03992"
+       id="text6402"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="685.06659"
+         y="255.03992"
+         id="tspan6404">I've got to do a code</tspan><tspan
+         x="685.06659"
+         y="315.03992"
+         id="tspan3585">review of that!</tspan></text>
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/masak.png"
+       x="101.38602"
+       y="461.86194"
+       width="152"
+       height="219"
+       id="image6476" />
+  </g>
+</svg>

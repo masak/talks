@@ -1,0 +1,980 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#58544: [BUG] Parse errors for combinations of &#39;loop&#39; and &#39;if&#39;.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D58544">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#58544: [BUG] Parse errors for combinations of &#39;loop&#39; and &#39;if&#39;.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58544">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">58544</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=58544">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+pim.mouss [at] free.fr
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=58544">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=58544">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465834" href="/rt3/Ticket/Display.html?id=58544#txn-465834">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;03:38:29&nbsp;2008</td>
+    <td class="description">
+      pim.mouss <!-- x --> at free.fr -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] IMPORTANT probaly.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 3 Sep 2008 12:49:23 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Pim &lt;pim.mouss <!-- x --> at free.fr&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465834/215794/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+Hi,<br />
+<br />
+playing with pugs and parrot compiled perl6 i found this bug:<br />
+<br />
+1st script :<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+#!/usr/local/bin/pugs -w<br />
+</div>
+<br />
+loop &#40;my $i=0;$i&lt;2;$i++&#41; {<br />
+say $i;<br />
+}<br />
+-------------------<br />
+works well.<br />
+<br />
+2nd script :<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+#!/usr/local/bin/pugs -w<br />
+</div>
+<br />
+<br />
+my $n=7;<br />
+if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+------------------<br />
+works well.<br />
+<br />
+3rd script &#40;is the concatenation of both 1st and 2nd&#41;:<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+#!/usr/local/bin/pugs -w<br />
+</div>
+<br />
+loop &#40;my $i=0;$i&lt;2;$i++&#41; {<br />
+say $i;<br />
+}<br />
+<br />
+<br />
+my $n=7;<br />
+if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+------------------<br />
+crashes with this error: <br />
+pugs t3.pl<br />
+ *** <br />
+     Unexpected &#34;2&#34;<br />
+     expecting operator or &#34;;&#34;<br />
+     at ./t3.pl line 9, column 10<br />
+<br />
+Here&#39;s my pugs version :  Version: 6.2.13.11 according pugs -v.<br />
+-----------------<br />
+and per6 parrot compiled &#40;THIS VERSION&#41;:<br />
+This is Rakudo Perl 6, revision 30402 built on parrot 0.7.0-devel<br />
+11:57 &lt; pim&gt; for i486-linux-gnu-thread-multi.<br />
+complains like this:<br />
+Statement not terminated properly at line 9, near &#34;2&#41; { say \&#34;&#34;<br />
+<br />
+current instr.: &#39;parrot;PGE::Util;die&#39; pc 119 &#40;runtime/parrot/library/PGE/Util.pir:82&#41;<br />
+called from Sub &#39;parrot;Perl6::Grammar;eat_terminator&#39; pc 23817<br />
+&#40;src/gen_grammar.pir:2840&#41;  called from Sub &#39;parrot;Perl6::Grammar;statementlist&#39; pc 22866<br />
+&#40;src/gen_grammar.pir:2473&#41;  called from Sub &#39;parrot;Perl6::Grammar;circumfix&#39; pc 77039<br />
+&#40;src/gen_grammar.pir:23163&#41; called from Sub &#39;parrot;Perl6::Grammar;noun&#39; pc 64913<br />
+&#40;src/gen_grammar.pir:18584&#41; called from Sub &#39;parrot;Perl6::Grammar;expect_term&#39; pc 60176<br />
+&#40;src/gen_grammar.pir:16796&#41; called from Sub &#39;parrot;PGE::OPTable;parse&#39; pc 1959<br />
+&#40;compilers/pge/PGE/OPTable.pir:554&#41;called from Sub &#39;parrot;Perl6::Grammar;arglist&#39; pc 92058<br />
+&#40;src/gen_grammar.pir:29009&#41; called from Sub &#39;parrot;Perl6::Grammar;term&#39; pc 67012<br />
+&#40;src/gen_grammar.pir:19356&#41; called from Sub &#39;parrot;Perl6::Grammar;noun&#39; pc 65511<br />
+&#40;src/gen_grammar.pir:18786&#41; called from Sub &#39;parrot;Perl6::Grammar;expect_term&#39; pc 60176<br />
+&#40;src/gen_grammar.pir:16796&#41; called from Sub &#39;parrot;PGE::OPTable;parse&#39; pc 1959<br />
+&#40;compilers/pge/PGE/OPTable.pir:554&#41; called from Sub &#39;parrot;Perl6::Grammar;statement&#39; pc 24619<br />
+&#40;src/gen_grammar.pir:3146&#41; called from Sub &#39;parrot;Perl6::Grammar;statementlist&#39; pc 22764<br />
+&#40;src/gen_grammar.pir:2437&#41; called from Sub &#39;parrot;Perl6::Grammar;statement_block&#39; pc 20803<br />
+&#40;src/gen_grammar.pir:1665&#41;called from Sub &#39;parrot;Perl6::Grammar;TOP&#39; pc 17136 &#40;src/gen_grammar.pir:225&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;parse&#39; pc 585 <br />
+&#40;src/PCT/HLLCompiler.pir:371&#41; called from Sub &#39;parrot;PCT::HLLCompiler;compile&#39; pc 438<br />
+&#40;src/PCT/HLLCompiler.pir:303&#41; called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 776<br />
+&#40;src/PCT/HLLCompiler.pir:473&#41; called from Sub &#39;parrot;PCT::HLLCompiler;evalfiles&#39; pc 1078<br />
+&#40;src/PCT/HLLCompiler.pir:610&#41; called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1257<br />
+&#40;src/PCT/HLLCompiler.pir:699&#41; called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 15352 &#40;perl6.pir:172&#41;<br />
+<br />
+Hope this paste is not too long.<br />
+<br />
+Notice : i talked about this error on irc #perl6 and they proposed me to post<br />
+the bug here.<br />
+<br />
+Kind regards.<br />
+Jean-Yves.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465840" href="/rt3/Ticket/Display.html?id=58544#txn-465840">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;03:38:31&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465858" href="/rt3/Ticket/Display.html?id=58544#txn-465858">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;03:45:52&nbsp;2008</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;[BUG] IMPORTANT probaly.&#39; to &#39;[BUG] Parse errors for combinations of &#39;loop&#39; and &#39;if&#39;.&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465902" href="/rt3/Ticket/Display.html?id=58544#txn-465902">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;06:13:45&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58544] [BUG] IMPORTANT probaly.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 3 Sep 2008 08:13:16 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465902/215824/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Sep 03, 2008 at 03:38:29AM -0700, Pim wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; #!/usr/local/bin/pugs -w<br />
+</div>
+&gt; <br />
+&gt; loop &#40;my $i=0;$i&lt;2;$i++&#41; {<br />
+&gt; say $i;<br />
+&gt; }<br />
+&gt; <br />
+&gt; my $n=7;<br />
+&gt; if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+&gt; ------------------<br />
+&gt; crashes with this error: <br />
+&gt;      Unexpected &#34;2&#34;<br />
+&gt;      expecting operator or &#34;;&#34;<br />
+&gt;      at ./t3.pl line 9, column 10<br />
+&gt; [...]<br />
+&gt; and per6 parrot compiled &#40;THIS VERSION&#41;:<br />
+&gt; Statement not terminated properly at line 9, near &#34;2&#41; { say \&#34;&#34;<br />
+</div>
+<br />
+If both pugs and rakudo agree on an error, I&#39;d bet that the<br />
+problem is in the program and not the compiler&#40;s&#41;.  :-&#41;<br />
+<br />
+In this case, the problem is the lack of a space before the<br />
+angle bracket in the loop statement:<br />
+<br />
+    loop &#40;my $i=0;$i&lt;2;$i++&#41; {<br />
+    ...<br />
+    if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+<br />
+Perl 6 sees the angle bracket following the &#34;$i&#34; as being a <br />
+subscript using the &lt;...&gt; notation, which ends at the angle<br />
+bracket in the &#34;if&#34; statement.  It then complains about not<br />
+understanding the &#34;2&#34; that follows the closing angle bracket.<br />
+<br />
+S03:2793 notes this explicitly:<br />
+<br />
+    Note: any operator beginning with C&lt;&lt; &lt; &gt;&gt; must have whitespace<br />
+    in front of it, or it will be interpreted as a hash subscript instead.<br />
+<br />
+So, add a whitespace character in front of the opening angle bracket,<br />
+and all works &#40;at least in rakudo&#41;:<br />
+<br />
+    $ cat x<br />
+<div class="message-stanza-depth-1">
+    #!/usr/local/bin/pugs -w<br />
+</div>
+    <br />
+    loop &#40;my $i = 0; $i &lt; 2; $i++&#41; {<br />
+    say $i;<br />
+    }<br />
+    <br />
+    my $n = 7;<br />
+    if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+    <br />
+    $ ./parrot perl6.pbc x<br />
+    0<br />
+    1<br />
+    7 is bigger than 2<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465904" href="/rt3/Ticket/Display.html?id=58544#txn-465904">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;06:13:46&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465906" href="/rt3/Ticket/Display.html?id=58544#txn-465906">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;06:26:53&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58544] [BUG] IMPORTANT probaly.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 3 Sep 2008 15:26:03 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465906/215826/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; If both pugs and rakudo agree on an error, I&#39;d bet that the<br />
+&gt; problem is in the program and not the compiler&#40;s&#41;.  :-&#41;<br />
+&gt;<br />
+&gt; In this case, the problem is the lack of a space before the<br />
+&gt; angle bracket in the loop statement:<br />
+&gt;<br />
+&gt;    loop &#40;my $i=0;$i&lt;2;$i++&#41; {<br />
+&gt;    ...<br />
+&gt;    if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+&gt;<br />
+&gt; Perl 6 sees the angle bracket following the &#34;$i&#34; as being a<br />
+&gt; subscript using the &lt;...&gt; notation, which ends at the angle<br />
+&gt; bracket in the &#34;if&#34; statement.  It then complains about not<br />
+&gt; understanding the &#34;2&#34; that follows the closing angle bracket.<br />
+&gt;<br />
+&gt; S03:2793 notes this explicitly:<br />
+&gt;<br />
+&gt;    Note: any operator beginning with C&lt;&lt; &lt; &gt;&gt; must have whitespace<br />
+&gt;    in front of it, or it will be interpreted as a hash subscript instead.<br />
+&gt;<br />
+&gt; So, add a whitespace character in front of the opening angle bracket,<br />
+&gt; and all works &#40;at least in rakudo&#41;:<br />
+&gt;<br />
+&gt;    $ cat x<br />
+<div class="message-stanza-depth-2">
+&gt;    #!/usr/local/bin/pugs -w<br />
+</div>
+&gt;<br />
+&gt;    loop &#40;my $i = 0; $i &lt; 2; $i++&#41; {<br />
+&gt;    say $i;<br />
+&gt;    }<br />
+&gt;<br />
+&gt;    my $n = 7;<br />
+&gt;    if &#40;$n &gt; 2&#41; { say &#34;$n is bigger than 2&#34;;}<br />
+&gt;<br />
+&gt;    $ ./parrot perl6.pbc x<br />
+&gt;    0<br />
+&gt;    1<br />
+&gt;    7 is bigger than 2<br />
+</div>
+<br />
+There&#39;s a related problem when using empty parens after the &#39;loop&#39;<br />
+keyword, however:<br />
+<br />
+$ cat test.p6<br />
+loop &#40;&#41; {<br />
+}<br />
+my $n<br />
+<br />
+$ ./perl6 test.p6<br />
+Statement not terminated properly at line 1, near &#34;{\n}\nmy $n\n&#34;<br />
+[...]<br />
+<br />
+That can&#39;t be related to the &lt;...&gt; notation. Are empty parens allowed here?<br />
+<br />
+// Carl<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-465908" href="/rt3/Ticket/Display.html?id=58544#txn-465908">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Sep&nbsp;03&nbsp;06:34:57&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #58544] [BUG] IMPORTANT probaly.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 3 Sep 2008 08:34:16 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/465908/215828/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 981b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Sep 03, 2008 at 03:26:03PM +0200, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; If both pugs and rakudo agree on an error, I&#39;d bet that the<br />
+&gt; &gt; problem is in the program and not the compiler&#40;s&#41;.  :-&#41;<br />
+&gt; &gt;<br />
+&gt; &gt; In this case, the problem is the lack of a space before the<br />
+&gt; &gt; angle bracket in the loop statement:<br />
+</div>
+&gt; <br />
+&gt; There&#39;s a related problem when using empty parens after the &#39;loop&#39;<br />
+&gt; keyword, however:<br />
+&gt; <br />
+&gt; $ cat test.p6<br />
+&gt; loop &#40;&#41; {<br />
+&gt; }<br />
+&gt; my $n<br />
+&gt; <br />
+&gt; $ ./perl6 test.p6<br />
+&gt; Statement not terminated properly at line 1, near &#34;{\n}\nmy $n\n&#34;<br />
+&gt; [...]<br />
+&gt; <br />
+&gt; That can&#39;t be related to the &lt;...&gt; notation. Are empty parens allowed here?<br />
+</div>
+<br />
+According to STD.pm, empty parens aren&#39;t allowed -- the semicolons<br />
+are required.  One can write an infinite loop as either<br />
+<br />
+    loop { ... }<br />
+<br />
+or<br />
+<br />
+    loop &#40;;;&#41; { ... }<br />
+<br />
+At present Rakudo understands the first form but not the second<br />
+&#40;patches welcome -- mainly the grammar just needs to treat the<br />
+expressions as optional instead of required&#41;.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-528476" href="/rt3/Ticket/Display.html?id=58544#txn-528476">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Feb&nbsp;03&nbsp;19:29:05&nbsp;2009</td>
+    <td class="description">
+      s1n -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/528476/250096/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 775b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt;<br />
+&gt; &gt; That can&#39;t be related to the &lt;...&gt; notation. Are empty parens<br />
+</div>
+&gt; allowed here?<br />
+&gt; <br />
+&gt; According to STD.pm, empty parens aren&#39;t allowed -- the semicolons<br />
+&gt; are required.  One can write an infinite loop as either<br />
+&gt; <br />
+&gt;     loop { ... }<br />
+&gt; <br />
+&gt; or<br />
+&gt; <br />
+&gt;     loop &#40;;;&#41; { ... }<br />
+&gt; <br />
+&gt; At present Rakudo understands the first form but not the second<br />
+&gt; &#40;patches welcome -- mainly the grammar just needs to treat the<br />
+&gt; expressions as optional instead of required&#41;.<br />
+</div>
+<br />
+As of index 78b38ad..61c292d, both forms of the infinite loop function<br />
+as described. According to the grammer, expressions e1, e2, and e3 are<br />
+all optional, making that second form valid.<br />
+<br />
+I&#39;m closing this ticket since the original source was missing the<br />
+disambiguating space before C&lt;&lt; &lt; &gt;&gt; and the infinite loops work.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-528478" href="/rt3/Ticket/Display.html?id=58544#txn-528478">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Feb&nbsp;03&nbsp;19:29:06&nbsp;2009</td>
+    <td class="description">
+      s1n -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.31591</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

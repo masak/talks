@@ -1,0 +1,487 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#63592: repeated 0.substr&#40;-10&#41; leads to segfault</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D63592">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#63592: repeated 0.substr&#40;-10&#41; leads to segfault</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63592">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">63592</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=63592">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+mlenz [at] physik.uni-wuerzburg.de
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63592">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=63592">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537526" href="/rt3/Ticket/Display.html?id=63592#txn-537526">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Mar&nbsp;02&nbsp;01:03:59&nbsp;2009</td>
+    <td class="description">
+      mlenz <!-- x --> at physik.uni-wuerzburg.de -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">repeated 0.substr&#40;-10&#41; leads to segfault</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 02 Mar 2009 10:03:41 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;mlenz <!-- x --> at physik.uni-wuerzburg.de&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/537526/254948/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo 08b789048:<br />
+$ time perl6 -e &#39;while 1 { 0.substr&#40;-10&#41; }&#39;<br />
+Segmentation fault<br />
+<br />
+real    0m3.535s<br />
+<br />
+0x00007fb33aebab14 in Parrot_FixedIntegerArray_get_integer<br />
+&#40;interp=Cannot access<br />
+ memory at address 0x7fff42d83ff8<br />
+&#41;<br />
+    at ./src/pmc/fixedintegerarray.c:127<br />
+127     Parrot_FixedIntegerArray_get_integer&#40;PARROT_INTERP, PMC *pmc&#41;<br />
+&#40;gdb&#41; bt<br />
+#0  0x00007fb33aebab14 in Parrot_FixedIntegerArray_get_integer<br />
+&#40;interp=Cannot ac<br />
+cess memory at address 0x7fff42d83ff8<br />
+&#41;<br />
+    at ./src/pmc/fixedintegerarray.c:127<br />
+#1  0x00007fb33aebaac9 in Parrot_FixedIntegerArray_elements<br />
+&#40;interp=0x16f4010,<br />
+    pmc=0x2ba3f60&#41; at ./src/pmc/fixedintegerarray.pmc:225<br />
+#2  0x00007fb33aebcc14 in Parrot_FixedIntegerArray_get_integer_keyed_int &#40;<br />
+    interp=0x16f4010, pmc=0x2ba3f60, key=0&#41;<br />
+    at ./src/pmc/fixedintegerarray.pmc:256<br />
+#3  0x00007fb33ad29486 in next_arg_sig &#40;interp=0x16f4010,<br />
+sti=0x7fff42d841c8&#41;<br />
+    at src/call/pcc.c:717<br />
+#4  0x00007fb33ad2d9b1 in Parrot_process_args &#40;interp=0x16f4010,<br />
+    st=0x7fff42d84170, param_or_result=PARROT_PASS_PARAMS&#41;<br />
+    at src/call/pcc.c:1638<br />
+#5  0x00007fb33ad2e0eb in parrot_pass_args &#40;interp=0x16f4010,<br />
+    src_ctx=0x1c08ab0, dest_ctx=0x1bae960, src_indexes=0x7fff42d86440,<br />
+    dest_indexes=0x7fff42d84290, param_or_result=PARROT_PASS_PARAMS&#41;<br />
+    at src/call/pcc.c:1882<br />
+#6  0x00007fb33aec15c8 in Parrot_Iterator_nci_set_key &#40;interp=0x16f4010,<br />
+    pmc=0x1794510&#41;<br />
+    at<br />
+/home/moritz/rakudo/parrot/tools/build/../../lib/Parrot/Pmc2c/PCCMETHOD.p<br />
+m:442<br />
+#7  0x00007fb33ae6b367 in Parrot_NCI_invoke &#40;interp=0x16f4010,<br />
+pmc=0x1794510,<br />
+    next=0x0&#41; at ./src/pmc/nci.pmc:330<br />
+#8  0x00007fb33ad2c78e in Parrot_PCCINVOKE &#40;interp=0x16f4010,<br />
+pmc=0x2ba45f0,<br />
+    method_name=0x170d650, signature=0x7fb33b01430c &#34;P-&gt;&#34;&#41;<br />
+    at src/call/pcc.c:2846<br />
+#9  0x00007fb33af066c4 in Parrot_FixedPMCArray_get_iter &#40;interp=0x16f4010,<br />
+    pmc=0x2ba4740&#41; at ./src/pmc/fixedpmcarray.pmc:664<br />
+#10 0x00007fb33ad83f88 in Parrot_cx_find_handler_local &#40;interp=0x16f4010,<br />
+    task=0x2ba4650&#41; at src/scheduler.c:881<br />
+#11 0x00007fb33ad126a3 in Parrot_ex_throw_from_c &#40;interp=0x16f4010,<br />
+    exception=0x2ba4650&#41; at src/exceptions.c:304<br />
+#12 0x00007fb33ad12a64 in Parrot_ex_throw_from_c_args &#40;interp=0x16f4010,<br />
+    ret_addr_unused=0x0, exitcode=7,<br />
+    format=0x7fb33afacb28 &#34;Cannot take substr outside string&#34;&#41;<br />
+    at src/exceptions.c:409<br />
+#13 0x00007fb33ac924b8 in Parrot_str_substr &#40;interp=0x16f4010,<br />
+    src=0x7fb336a46368, offset=-10, length=1, d=0x397ef28, replace_dest=0&#41;<br />
+    at src/string/api.c:1155<br />
+#14 0x00007fb33acb1059 in Parrot_substr_s_s_i_i &#40;cur_opcode=0x7fb33b3cb858,<br />
+    interp=0x16f4010&#41; at src/ops/string.ops:266<br />
+#15 0x00007fb33ad83795 in runops_slow_core &#40;interp=0x16f4010,<br />
+    pc=0x7fb33b3cb858&#41; at src/runops_cores.c:459<br />
+#16 0x00007fb33ad332e5 in runops_int &#40;interp=0x16f4010, offset=13078&#41;<br />
+    at src/interpreter.c:978<br />
+#17 0x00007fb33ad33dea in runops &#40;interp=0x16f4010, offs=13078&#41;<br />
+    at src/call/ops.c:106<br />
+#18 0x00007fb33ad341c2 in runops_args &#40;interp=0x16f4010, sub=0x2ba6060,<br />
+    obj=0x1780790, meth_unused=0x0, sig=0x7fb33afbdc2c &#34;vP&#34;,<br />
+ap=0x7fff42d889f0&#41;<br />
+    at src/call/ops.c:253<br />
+#19 0x00007fb33ad3557c in Parrot_runops_fromc_args &#40;interp=0x16f4010,<br />
+    sub=0x2ba6060, sig=0x7fb33afbdc2c &#34;vP&#34;&#41; at src/call/ops.c:320<br />
+#20 0x00007fb33ad1288d in Parrot_ex_throw_from_c &#40;interp=0x16f4010,<br />
+    exception=0x2ba6000&#41; at src/exceptions.c:340<br />
+#21 0x00007fb33ad12a64 in Parrot_ex_throw_from_c_args &#40;interp=0x16f4010,<br />
+    ret_addr_unused=0x0, exitcode=7,<br />
+    format=0x7fb33afacb28 &#34;Cannot take substr outside string&#34;&#41;<br />
+    at src/exceptions.c:409<br />
+#22 0x00007fb33ac924b8 in Parrot_str_substr &#40;interp=0x16f4010,<br />
+    src=0x7fb336a48e70, offset=-10, length=1, d=0x3976628, replace_dest=0&#41;<br />
+    at src/string/api.c:1155<br />
+#23 0x00007fb33acb1059 in Parrot_substr_s_s_i_i &#40;cur_opcode=0x7fb33b3cb858,<br />
+    interp=0x16f4010&#41; at src/ops/string.ops:266<br />
+#24 0x00007fb33ad83795 in runops_slow_core &#40;interp=0x16f4010,<br />
+    pc=0x7fb33b3cb858&#41; at src/runops_cores.c:459<br />
+#25 0x00007fb33ad332e5 in runops_int &#40;interp=0x16f4010, offset=13078&#41;<br />
+    at src/interpreter.c:978<br />
+#26 0x00007fb33ad33dea in runops &#40;interp=0x16f4010, offs=13078&#41;<br />
+    at src/call/ops.c:106<br />
+...<br />
+<br />
+<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.446946</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

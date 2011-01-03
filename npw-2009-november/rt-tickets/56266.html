@@ -1,0 +1,1035 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#56266: rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D56266">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#56266: rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56266">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">56266</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=56266">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+Andy_Bach [at] wiwb.uscourts.gov
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56266">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=56266">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433514" href="/rt3/Ticket/Display.html?id=56266#txn-433514">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;23&nbsp;13:32:47&nbsp;2008</td>
+    <td class="description">
+      Andy_Bach <!-- x --> at uscourts.gov -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 23 Jun 2008 15:32:22 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6 bugs &lt;perl6-bugs <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Andy_Bach <!-- x --> at uscourts.gov</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/433514/198102/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 971b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+This was working:<br />
+$ ./perl6 -e &#39;say rand&#40;3&#41;&#39;<br />
+invoke&#40;&#41; not implemented in class &#39;Float&#39;<br />
+current instr.: &#39;_block11&#39; pc 41 &#40;EVAL_13:18&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1305<br />
+&#40;src/PCT/HLLCompiler.pir:708&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 12318 &#40;perl6.pir:174&#41;<br />
+<br />
+However,<br />
+$ ./perl6 -e &#39;say rand&#40;&#41;&#39;<br />
+0.944425<br />
+<br />
+works. This fail  the same way on at least 2 linux boxes<br />
+This is perl, v5.8.3 built for i586-linux-thread-multi<br />
+&#40;with 1 registered patch, see perl -V for more detail&#41;<br />
+<br />
+for revision: 28671<br />
+<br />
+ uname -a<br />
+Linux DCLOES3A 2.6.5-7.286-smp #1 SMP Thu May 31 10:12:58 UTC 2007 i686<br />
+i686 i386 GNU/Linux<br />
+<br />
+a<br />
+-------------------<br />
+Andy Bach<br />
+Systems Mangler<br />
+Internet: andy_bach <!-- x --> at uscourts.gov<br />
+Voice: &#40;608&#41; 261-5738 Fax: 264-5932<br />
+<br />
+The name &#34;grep&#34; is from the common &#34;ed&#34; &#40;pre-visual &#34;vi&#34;&#41; command:<br />
+ g/re/p i.e. g&#40;lobal-search&#41;/r&#40;egular&#41; e&#40;xpression&#41;/p&#40;rint&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433862" href="/rt3/Ticket/Display.html?id=56266#txn-433862">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;24&nbsp;08:41:09&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433886" href="/rt3/Ticket/Display.html?id=56266#txn-433886">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;24&nbsp;08:47:10&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/433886/198248/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 772b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jun 23 13:32:47 2008, Andy_Bach <!-- x --> at uscourts.gov wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; This was working:<br />
+&gt; $ ./perl6 -e &#39;say rand&#40;3&#41;&#39;<br />
+&gt; invoke&#40;&#41; not implemented in class &#39;Float&#39;<br />
+&gt; current instr.: &#39;_block11&#39; pc 41 &#40;EVAL_13:18&#41;<br />
+</div>
+<br />
+According to S29:295, the rand&#40;&#41; function no longer takes any arguments:<br />
+<br />
+<div class="message-stanza-depth-1">
+: =item rand<br />
+: <br />
+:  our Num method rand &#40; Num $x: &#41;<br />
+:  our Num term:&lt;rand&gt;<br />
+: <br />
+: Pseudo random number in range C&lt;&lt; 0 ..^ $x &gt;&gt;.  That is, C&lt;0&gt; is<br />
+: theoretically possible, while C&lt;$x&gt; is not.  The C&lt;rand&gt; function<br />
+: is 0-ary and always produces a number from C&lt;0..^1&gt;.  In any case,<br />
+: for picking a random integer you probably want to use something like<br />
+: C&lt;&#40;1..6&#41;.pick&gt; instead.<br />
+</div>
+<br />
+I agree that Rakudo needs to give a better error message in this case,<br />
+and will fix that shortly.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433890" href="/rt3/Ticket/Display.html?id=56266#txn-433890">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;24&nbsp;08:47:16&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433892" href="/rt3/Ticket/Display.html?id=56266#txn-433892">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;24&nbsp;08:47:58&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/433892/198252/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 817b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+[re-sending to cc: perl6-compiler <!-- x --> at perl.org]<br />
+<br />
+On Mon Jun 23 13:32:47 2008, Andy_Bach <!-- x --> at uscourts.gov wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; This was working:<br />
+&gt; $ ./perl6 -e &#39;say rand&#40;3&#41;&#39;<br />
+&gt; invoke&#40;&#41; not implemented in class &#39;Float&#39;<br />
+&gt; current instr.: &#39;_block11&#39; pc 41 &#40;EVAL_13:18&#41;<br />
+</div>
+<br />
+According to S29:295, the rand&#40;&#41; function no longer takes any arguments:<br />
+<br />
+<div class="message-stanza-depth-1">
+: =item rand<br />
+: <br />
+:  our Num method rand &#40; Num $x: &#41;<br />
+:  our Num term:&lt;rand&gt;<br />
+: <br />
+: Pseudo random number in range C&lt;&lt; 0 ..^ $x &gt;&gt;.  That is, C&lt;0&gt; is<br />
+: theoretically possible, while C&lt;$x&gt; is not.  The C&lt;rand&gt; function<br />
+: is 0-ary and always produces a number from C&lt;0..^1&gt;.  In any case,<br />
+: for picking a random integer you probably want to use something like<br />
+: C&lt;&#40;1..6&#41;.pick&gt; instead.<br />
+</div>
+<br />
+I agree that Rakudo needs to give a better error message in this case,<br />
+and will fix that shortly.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-434162" href="/rt3/Ticket/Display.html?id=56266#txn-434162">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;25&nbsp;00:39:30&nbsp;2008</td>
+    <td class="description">
+      Andy_Bach <!-- x --> at uscourts.gov -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56266] rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 24 Jun 2008 14:27:04 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Andy_Bach <!-- x --> at uscourts.gov</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/434162/198398/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi<br />
+<br />
+Thanks for the replies:<br />
+<br />
+<div class="message-stanza-depth-1">
+: =item rand<br />
+:<br />
+:  our Num method rand &#40; Num $x: &#41;<br />
+:  our Num term:&lt;rand&gt;<br />
+:<br />
+: Pseudo random number in range C&lt;&lt; 0 ..^ $x &gt;&gt;.  That is, C&lt;0&gt; is<br />
+: theoretically possible, while C&lt;$x&gt; is not.  The C&lt;rand&gt; function<br />
+: is 0-ary and always produces a number from C&lt;0..^1&gt;.<br />
+</div>
+<br />
+Hmm, I&#39;d&#39;ve thought that meant that &#39;rand&#39; takes no params and returns<br />
+0..^1 but rand&#40; Num $x: &#41; returns 0 .. ^$x  but<br />
+<br />
+<div class="message-stanza-depth-1">
+:  In any case, for picking a random integer you probably want to use<br />
+</div>
+something like<br />
+<div class="message-stanza-depth-1">
+: C&lt;&#40;1..6&#41;.pick&gt; instead.<br />
+</div>
+<br />
+There&#39;s some missing methods s not yet, I guess:<br />
+<br />
+./perl6 -e &#39;say &#40;1 .. 6&#41;.pick&#39;<br />
+Method &#39;pick&#39; not found for invocant of class &#39;Range&#39;<br />
+current instr.: &#39;_block11&#39; pc 49 &#40;EVAL_13:20&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1305<br />
+&#40;src/PCT/HLLCompiler.pir:708&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 12318 &#40;perl6.pir:174&#41;<br />
+<br />
+No &#39;pick&#39;  for Junction or any yet<br />
+ ./perl6 -e &#39;my $i = one&#40;1 .. 6&#41;.any + 0; say $i&#39;<br />
+Method &#39;any&#39; not found for invocant of class &#39;Junction&#39;<br />
+<br />
+I tried a number whacks using prefix:<br />
+./perl6 -e &#39;my $i = any&#40;1 .. 6&#41; ; say $i&#39;<br />
+./perl6 -e &#39;my $i = any&#40;1 .. 6&#41; + 0; say $i&#39;<br />
+./perl6 -e &#39;my @arr = &#40;1 .. 6&#41;; my $i = any&#40;1..6&#41;; say @arr[$i]&#39;<br />
+<br />
+but no get_string or get_integer for Junction makes them a little hard to<br />
+use. Not complaining, just a note.<br />
+<br />
+Thanks.<br />
+<br />
+a<br />
+<br />
+-------------------<br />
+Andy Bach<br />
+Systems Mangler<br />
+Internet: andy_bach <!-- x --> at uscourts.gov<br />
+Voice: &#40;608&#41; 261-5738 Fax: 264-5932<br />
+<br />
+The name &#34;grep&#34; is from the common &#34;ed&#34; &#40;pre-visual &#34;vi&#34;&#41; command:<br />
+ g/re/p i.e. g&#40;lobal-search&#41;/r&#40;egular&#41; e&#40;xpression&#41;/p&#40;rint&#41;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-434640" href="/rt3/Ticket/Display.html?id=56266#txn-434640">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;25&nbsp;10:50:00&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56266] rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 25 Jun 2008 12:49:35 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Andy_Bach <!-- x --> at uscourts.gov</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/434640/198654/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Jun 24, 2008 at 02:27:04PM -0500, Andy_Bach <!-- x --> at uscourts.gov wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; : =item rand<br />
+&gt; :<br />
+&gt; :  our Num method rand &#40; Num $x: &#41;<br />
+&gt; :  our Num term:&lt;rand&gt;<br />
+&gt; :<br />
+&gt; : Pseudo random number in range C&lt;&lt; 0 ..^ $x &gt;&gt;.  That is, C&lt;0&gt; is<br />
+&gt; : theoretically possible, while C&lt;$x&gt; is not.  The C&lt;rand&gt; function<br />
+&gt; : is 0-ary and always produces a number from C&lt;0..^1&gt;.<br />
+</div>
+&gt; <br />
+&gt; Hmm, I&#39;d&#39;ve thought that meant that &#39;rand&#39; takes no params and returns<br />
+&gt; 0..^1 but rand&#40; Num $x: &#41; returns 0 .. ^$x  but<br />
+</div>
+<br />
+The first rand is a method on the Num type.  Since it&#39;s not specified<br />
+as &#34;is export&#34;, it remains strictly a method and doesn&#39;t supply a <br />
+multisub form.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; :  In any case, for picking a random integer you probably want to use<br />
+</div>
+&gt; something like<br />
+<div class="message-stanza-depth-2">
+&gt; : C&lt;&#40;1..6&#41;.pick&gt; instead.<br />
+</div>
+&gt; <br />
+&gt; There&#39;s some missing methods s not yet, I guess:<br />
+&gt; <br />
+&gt; ./perl6 -e &#39;say &#40;1 .. 6&#41;.pick&#39;<br />
+&gt; Method &#39;pick&#39; not found for invocant of class &#39;Range&#39;<br />
+</div>
+<br />
+Correct, we haven&#39;t implemented .pick on Range objects yet.  I&#39;m not<br />
+sure if we should have a separate .pick method for Range, or if List<br />
+actually needs to be a role, or if there&#39;s some other role common to<br />
+List and Range that should be providing .pick and other similar<br />
+methods.<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; No &#39;pick&#39;  for Junction or any yet<br />
+&gt;  ./perl6 -e &#39;my $i = one&#40;1 .. 6&#41;.any + 0; say $i&#39;<br />
+&gt; Method &#39;any&#39; not found for invocant of class &#39;Junction&#39;<br />
+&gt; <br />
+&gt; I tried a number whacks using prefix:<br />
+&gt; ./perl6 -e &#39;my $i = any&#40;1 .. 6&#41; ; say $i&#39;<br />
+&gt; ./perl6 -e &#39;my $i = any&#40;1 .. 6&#41; + 0; say $i&#39;<br />
+&gt; ./perl6 -e &#39;my @arr = &#40;1 .. 6&#41;; my $i = any&#40;1..6&#41;; say @arr[$i]&#39;<br />
+&gt; <br />
+&gt; but no get_string or get_integer for Junction makes them a little hard to<br />
+&gt; use. Not complaining, just a note.<br />
+</div>
+<br />
+get_string and get_integer on junction should autothread to their<br />
+underlying components.  We may have junction autothreading<br />
+disabled at the moment in Rakudo.<br />
+<br />
+In particular, C&lt; say any&#40;1..6&#41; &gt;  should result in six invocations of<br />
+C&lt;say&gt;, one for each element in the Junction, each of those would then<br />
+invoke get_string on the elements.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-434648" href="/rt3/Ticket/Display.html?id=56266#txn-434648">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;25&nbsp;11:26:15&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #56266] rand gets &#34;invoke&#40;&#41; not implemented in class &#39;Float&#39; &#34; - Revision: 28671</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 25 Jun 2008 13:25:47 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Andy_Bach <!-- x --> at uscourts.gov</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/434648/198660/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, Jun 25, 2008 at 12:49:35PM -0500, Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Tue, Jun 24, 2008 at 02:27:04PM -0500, Andy_Bach <!-- x --> at uscourts.gov wrote:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; &gt; : =item rand<br />
+&gt; &gt; :<br />
+&gt; &gt; :  our Num method rand &#40; Num $x: &#41;<br />
+&gt; &gt; :  our Num term:&lt;rand&gt;<br />
+&gt; &gt; :<br />
+&gt; &gt; : Pseudo random number in range C&lt;&lt; 0 ..^ $x &gt;&gt;.  That is, C&lt;0&gt; is<br />
+&gt; &gt; : theoretically possible, while C&lt;$x&gt; is not.  The C&lt;rand&gt; function<br />
+&gt; &gt; : is 0-ary and always produces a number from C&lt;0..^1&gt;.<br />
+</div>
+&gt; &gt; <br />
+&gt; &gt; Hmm, I&#39;d&#39;ve thought that meant that &#39;rand&#39; takes no params and returns<br />
+&gt; &gt; 0..^1 but rand&#40; Num $x: &#41; returns 0 .. ^$x  but<br />
+</div>
+&gt; <br />
+&gt; The first rand is a method on the Num type.  Since it&#39;s not specified<br />
+&gt; as &#34;is export&#34;, it remains strictly a method and doesn&#39;t supply a <br />
+&gt; multisub form.<br />
+&gt; [...]<br />
+&gt; Correct, we haven&#39;t implemented .pick on Range objects yet.  I&#39;m not<br />
+&gt; sure if we should have a separate .pick method for Range, or if List<br />
+&gt; actually needs to be a role, or if there&#39;s some other role common to<br />
+&gt; List and Range that should be providing .pick and other similar<br />
+&gt; methods.<br />
+</div>
+<br />
+Larry++ just reminded me on #perl6 that .pick &#40;and .rand&#41; are now<br />
+methods on Any &#40;see the bottom paragraph of [1]&#41;, so once Rakudo<br />
+moves its methods over to Any then things will work quite a bit<br />
+better.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+<br />
+[1] http://groups.google.com/group/perl.perl6.compiler/msg/acf1cfbb16b998cf<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-434890" href="/rt3/Ticket/Display.html?id=56266#txn-434890">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;25&nbsp;23:01:48&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/434890/198788/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 210b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The issue with error messages from arguments to rand&#40;&#41; is fixed in<br />
+r28699; the .pick method has been added as of r28703.  If there are<br />
+other unaddressed issues in this ticket, please open new ones.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-434894" href="/rt3/Ticket/Display.html?id=56266#txn-434894">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jun&nbsp;25&nbsp;23:01:54&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.786218</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

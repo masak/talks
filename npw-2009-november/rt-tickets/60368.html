@@ -1,0 +1,1296 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60368: [BUG] eval &#39;class C is D {}&#39; causes assertion failure</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60368">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60368: [BUG] eval &#39;class C is D {}&#39; causes assertion failure</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60368">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60368</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60368">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60368">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60368">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-447918" href="/rt3/Ticket/Display.html?id=60368#txn-447918">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;23&nbsp;01:51:32&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org - Ticket 57214:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] eval &#39;class C is D {}&#39; causes assertion failure</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 23 Jul 2008 10:51:00 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/447918/205964/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+t/spec/S12-class/declaration-order.t by Carl Mäsak revealed a parrot bug<br />
+which can be reproduced with this small sample:<br />
+$ cat eval-bug.t<br />
+eval  &#39; class D is C {}&#39;;<br />
+$ ../../parrot perl6.pbc eval-bug.t<br />
+[oops; continuation 0x8c4a228 of type 21 is trying to jump from runloop<br />
+549 to r<br />
+unloop 110]<br />
+src/inter_call.c:301: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+Backtrace - Obtained 19 stack frames &#40;max trace depth is 32&#41;.<br />
+  &#40;unknown&#41;<br />
+    Parrot_confess<br />
+      Parrot_init_arg_op<br />
+        Parrot_init_ret_nci<br />
+          &#40;unknown&#41;<br />
+            &#40;unknown&#41;<br />
+              Parrot_NCI_invoke<br />
+                Parrot_invokecc_p<br />
+                  &#40;unknown&#41;<br />
+                    &#40;unknown&#41;<br />
+                      &#40;unknown&#41;<br />
+                        &#40;unknown&#41;<br />
+                          Parrot_runops_fromc_args<br />
+                            Parrot_runcode<br />
+                              &#40;unknown&#41;<br />
+                                imcc_run<br />
+                                  &#40;unknown&#41;<br />
+                                    __libc_start_main<br />
+                                      &#40;unknown&#41;<br />
+Aborted<br />
+<br />
+Adding<br />
+load_bytecode &#39;perl6.pbc&#39;<br />
+to the PIR coded generated with --target=PIR doesn&#39;t reproduce the problem.<br />
+<br />
+This is parrot r29695 &#40;from a fresh make realclean + rebuild&#41; on Debian<br />
+Etch, i386 32bit dual core.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-447924" href="/rt3/Ticket/Display.html?id=60368#txn-447924">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jul&nbsp;23&nbsp;01:51:35&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 57214:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-449396" href="/rt3/Ticket/Display.html?id=60368#txn-449396">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;26&nbsp;06:45:21&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 57214:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/449396/206852/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 679b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Jul 23 01:51:32 2008, moritz <!-- x --> at verplant.org wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; t/spec/S12-class/declaration-order.t by Carl Mäsak revealed a parrot bug<br />
+&gt; which can be reproduced with this small sample:<br />
+&gt; $ cat eval-bug.t<br />
+&gt; eval  &#39; class D is C {}&#39;;<br />
+&gt; $ ../../parrot perl6.pbc eval-bug.t<br />
+&gt; [oops; continuation 0x8c4a228 of type 21 is trying to jump from<br />
+</div>
+runloop 549 to runloop 110]<br />
+<div class="message-stanza-depth-1">
+&gt; src/inter_call.c:301: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+&gt; <br />
+</div>
+I got &#34;class D is C {}&#34; &#40;not in an eval&#41; to give a nicer message saying<br />
+you can&#39;t inherit from a non-existent parent class. But for some reason,<br />
+we don&#39;t get that with the eval. This may clear up once pdd25cx is<br />
+merged, however.<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-449400" href="/rt3/Ticket/Display.html?id=60368#txn-449400">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;26&nbsp;06:45:23&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 57214:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-449402" href="/rt3/Ticket/Display.html?id=60368#txn-449402">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jul&nbsp;26&nbsp;06:45:25&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 57214:  Given to jnthn <!-- x --> at jnthn.net
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491644" href="/rt3/Ticket/Display.html?id=60368#txn-491644">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;05&nbsp;23:54:07&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] backtrace in t/spec/S12-class/declaration-order.t</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 06 Nov 2008 09:54:36 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491644/229710/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+<br />
+since 2008-11-04 I&#39;m getting this error from<br />
+t/spec/S12-class/declaration-order.t:<br />
+<br />
+$ ../../parrot perl6.pbc t/spec/S12-class/declaration-order.t<br />
+1..2<br />
+ok 1 - base before derived: lives<br />
+ok 2 - derived before base: dies<br />
+src/inter_call.c:390: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+Backtrace - Obtained 32 stack frames &#40;max trace depth is 32&#41;.<br />
+  &#40;unknown&#41;<br />
+    Parrot_confess<br />
+      Parrot_init_arg_op<br />
+        Parrot_init_ret_nci<br />
+          &#40;unknown&#41;<br />
+            &#40;unknown&#41;<br />
+              Parrot_NCI_invoke<br />
+                Parrot_invokecc_p<br />
+                  &#40;unknown&#41;<br />
+                    &#40;unknown&#41;<br />
+                      &#40;unknown&#41;<br />
+                        &#40;unknown&#41;<br />
+                          Parrot_runops_fromc_args<br />
+                            Parrot_ex_throw_from_c<br />
+                              &#40;unknown&#41;<br />
+                                &#40;unknown&#41;<br />
+                                  &#40;unknown&#41;<br />
+                                    &#40;unknown&#41;<br />
+                                      Parrot_Class_init_pmc<br />
+                                        pmc_new_init<br />
+                                          Parrot_newclass_p_p<br />
+                                            &#40;unknown&#41;<br />
+                                              &#40;unknown&#41;<br />
+                                                &#40;unknown&#41;<br />
+                                                  &#40;unknown&#41;<br />
+                                                    Parrot_runops_fromc_args<br />
+                                                      Parrot_ex_throw_from_c<br />
+                                                        &#40;unknown&#41;<br />
+                                                          &#40;unknown&#41;<br />
+                                                            &#40;unknown&#41;<br />
+                                                              &#40;unknown&#41;<br />
+<br />
+Parrot_Class_init_pmc<br />
+Aborted<br />
+<br />
+Moritz<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491650" href="/rt3/Ticket/Display.html?id=60368#txn-491650">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;05&nbsp;23:54:10&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492804" href="/rt3/Ticket/Display.html?id=60368#txn-492804">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;12:35:26&nbsp;2008</td>
+    <td class="description">
+      masak - Ticket 60418:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39; when running t/spec/S12-class/declaration-order.t</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 8 Nov 2008 21:34:58 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492804/230444/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 14k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493048" href="/rt3/Ticket/Display.html?id=60368#txn-493048">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;08:46:28&nbsp;2008</td>
+    <td class="description">
+      masak - Ticket 60418:  Merged into ticket #60368
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493050" href="/rt3/Ticket/Display.html?id=60368#txn-493050">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;08:46:29&nbsp;2008</td>
+    <td class="description">
+      masak -  Merged into ticket #60368
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508898" href="/rt3/Ticket/Display.html?id=60368#txn-508898">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;08:42:57&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 57214:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/508898/239596/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 950b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jul 26 06:45:21 2008, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed Jul 23 01:51:32 2008, moritz <!-- x --> at verplant.org wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; t/spec/S12-class/declaration-order.t by Carl Mäsak revealed a parrot bug<br />
+&gt; &gt; which can be reproduced with this small sample:<br />
+&gt; &gt; $ cat eval-bug.t<br />
+&gt; &gt; eval  &#39; class D is C {}&#39;;<br />
+&gt; &gt; $ ../../parrot perl6.pbc eval-bug.t<br />
+&gt; &gt; [oops; continuation 0x8c4a228 of type 21 is trying to jump from<br />
+</div>
+&gt; runloop 549 to runloop 110]<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; src/inter_call.c:301: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+&gt; &gt; <br />
+</div>
+&gt; I got &#34;class D is C {}&#34; &#40;not in an eval&#41; to give a nicer message saying<br />
+&gt; you can&#39;t inherit from a non-existent parent class. But for some reason,<br />
+&gt; we don&#39;t get that with the eval. This may clear up once pdd25cx is<br />
+&gt; merged, however.<br />
+&gt; <br />
+</div>
+I just tried this in today&#39;s Rakudo. I suspect pdd25cx did indeed help.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; eval &#39;class D is C {}&#39;; say $!;<br />
+</div>
+Attempt to inherit from non-existent parent class<br />
+<br />
+So resolving ticket.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508904" href="/rt3/Ticket/Display.html?id=60368#txn-508904">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;08:43:04&nbsp;2008</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net - Ticket 57214:  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508926" href="/rt3/Ticket/Display.html?id=60368#txn-508926">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:36:38&nbsp;2008</td>
+    <td class="description">
+      moritz - Ticket 57214:  Merged into ticket #60368
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508928" href="/rt3/Ticket/Display.html?id=60368#txn-508928">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:36:38&nbsp;2008</td>
+    <td class="description">
+      moritz -  Merged into ticket #60368
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508930" href="/rt3/Ticket/Display.html?id=60368#txn-508930">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:36:38&nbsp;2008</td>
+    <td class="description">
+      moritz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] eval &#39;class C is D {}&#39; causes assertion failure</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/508930/239616/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 96b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+merging into 60368 because it&#39;s the same backtrace, and likely the same<br />
+underlying parrot issue.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508932" href="/rt3/Ticket/Display.html?id=60368#txn-508932">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:36:39&nbsp;2008</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;[BUG] backtrace in t/spec/S12-class/declaration-order.t&#39; to &#39;[BUG] eval &#39;class C is D {}&#39; causes assertion failure&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508934" href="/rt3/Ticket/Display.html?id=60368#txn-508934">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:48:03&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #57214] [BUG] eval &#39;class C is D {}&#39; causes assertion failure</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 17 Dec 2008 18:33:27 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/508934/239618/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+jnthn <!-- x --> at jnthn.net via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jul 26 06:45:21 2008, jnthn <!-- x --> at jnthn.net wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; On Wed Jul 23 01:51:32 2008, moritz <!-- x --> at verplant.org wrote:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; t/spec/S12-class/declaration-order.t by Carl Mäsak revealed a parrot bug<br />
+&gt;&gt; &gt; which can be reproduced with this small sample:<br />
+&gt;&gt; &gt; $ cat eval-bug.t<br />
+&gt;&gt; &gt; eval  &#39; class D is C {}&#39;;<br />
+&gt;&gt; &gt; $ ../../parrot perl6.pbc eval-bug.t<br />
+&gt;&gt; &gt; [oops; continuation 0x8c4a228 of type 21 is trying to jump from<br />
+</div>
+&gt;&gt; runloop 549 to runloop 110]<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; &gt; src/inter_call.c:301: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+&gt;&gt; &gt; <br />
+</div>
+&gt;&gt; I got &#34;class D is C {}&#34; &#40;not in an eval&#41; to give a nicer message saying<br />
+&gt;&gt; you can&#39;t inherit from a non-existent parent class. But for some reason,<br />
+&gt;&gt; we don&#39;t get that with the eval. This may clear up once pdd25cx is<br />
+&gt;&gt; merged, however.<br />
+&gt;&gt; <br />
+</div>
+&gt; I just tried this in today&#39;s Rakudo. I suspect pdd25cx did indeed help.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; eval &#39;class D is C {}&#39;; say $!;<br />
+</div>
+</div>
+<br />
+Still fails here.<br />
+<br />
+Another detail: if i do this in the REPL, it works fine, until I close<br />
+the REPL - then I get the same backtrace as before.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-508938" href="/rt3/Ticket/Display.html?id=60368#txn-508938">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;17&nbsp;09:48:07&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-509504" href="/rt3/Ticket/Display.html?id=60368#txn-509504">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Dec&nbsp;18&nbsp;14:08:50&nbsp;2008</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/509504/239888/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Another way to cause the crash.<br />
+<br />
+$ ./perl6<br />
+<div class="message-stanza-depth-1">
+&gt; class A {};<br />
+&gt; class A {};<br />
+</div>
+Class A already registered!<br />
+<div class="message-stanza-depth-1">
+&gt; src/inter_call.c:390: failed assertion &#39;PObj_is_PMC_TEST&#40;sig_pmc&#41;&#39;<br />
+</div>
+Backtrace - Obtained 32 stack frames &#40;max trace depth is 32&#41;.<br />
+  &#40;unknown&#41;<br />
+    Parrot_confess<br />
+      Parrot_init_arg_op<br />
+        Parrot_init_ret_nci<br />
+          &#40;unknown&#41;<br />
+            &#40;unknown&#41;<br />
+              Parrot_NCI_invoke<br />
+                Parrot_invokecc_p<br />
+                  &#40;unknown&#41;<br />
+                    &#40;unknown&#41;<br />
+                      &#40;unknown&#41;<br />
+                        &#40;unknown&#41;<br />
+                          Parrot_runops_fromc_args<br />
+                            Parrot_ex_throw_from_c<br />
+                              &#40;unknown&#41;<br />
+                                &#40;unknown&#41;<br />
+                                  &#40;unknown&#41;<br />
+                                    &#40;unknown&#41;<br />
+                                      Parrot_Class_init_pmc<br />
+                                        pmc_new_init<br />
+                                          Parrot_newclass_p_p<br />
+                                            &#40;unknown&#41;<br />
+                                              &#40;unknown&#41;<br />
+                                                &#40;unknown&#41;<br />
+                                                  &#40;unknown&#41;<br />
+                                                    Parrot_runops_fromc_args<br />
+                                                      Parrot_ex_throw_from_c<br />
+                                                        &#40;unknown&#41;<br />
+                                                          &#40;unknown&#41;<br />
+                                                            &#40;unknown&#41;<br />
+                                                              &#40;unknown&#41;<br />
+                                                               <br />
+Parrot_Class_init_pmc<br />
+Aborted<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536700" href="/rt3/Ticket/Display.html?id=60368#txn-536700">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;27&nbsp;02:59:38&nbsp;2009</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536700/254540/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 33b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Cannot reproduce this; resolving.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536702" href="/rt3/Ticket/Display.html?id=60368#txn-536702">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;27&nbsp;02:59:39&nbsp;2009</td>
+    <td class="description">
+      masak -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 4.018579</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

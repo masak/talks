@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg8299">
+  <defs
+     id="defs8301" />
+  <g
+     id="layer1">
+    <text
+       x="92.831253"
+       y="40.689999"
+       id="text8310"
+       xml:space="preserve"
+       style="font-size:20.69972038px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="92.831253"
+         y="40.689999"
+         id="tspan8312">    ===============&gt; Trying &lt;grammar&gt; from position 0</tspan><tspan
+         x="92.831253"
+         y="66.564651"
+         id="tspan8314">    &gt; cp file1 file2 |...Trying &lt;cmd&gt;   </tspan><tspan
+         x="92.831253"
+         y="92.439301"
+         id="tspan8316">                     |   |...Trying &lt;cmd=(cp)&gt;  </tspan><tspan
+         x="92.831253"
+         y="118.31395"
+         id="tspan8318">                     |   |    \FAIL &lt;cmd=(cp)&gt;</tspan><tspan
+         x="92.831253"
+         y="144.1886"
+         id="tspan8320">                     |    \FAIL &lt;cmd&gt;</tspan><tspan
+         x="92.831253"
+         y="170.06325"
+         id="tspan8322">                      \FAIL &lt;grammar&gt;</tspan><tspan
+         x="92.831253"
+         y="195.9379"
+         id="tspan8324">    ===============&gt; Trying &lt;grammar&gt; from position 1</tspan><tspan
+         x="92.831253"
+         y="221.81255"
+         id="tspan8326">     cp file1 file2  |...Trying &lt;cmd&gt;   </tspan><tspan
+         x="92.831253"
+         y="247.68719"
+         id="tspan8328">                     |   |...Trying &lt;cmd=(cp)&gt;  </tspan><tspan
+         x="92.831253"
+         y="273.56186"
+         id="tspan8330">     file1 file2     |   |    \_____&lt;cmd=(cp)&gt; matched 'cp' </tspan><tspan
+         x="92.831253"
+         y="299.43649"
+         id="tspan8332">    file1 file2      |   |...Trying &lt;[file]&gt;+   </tspan><tspan
+         x="92.831253"
+         y="325.31116"
+         id="tspan8334">     file2           |   |    \_____&lt;[file]&gt;+ matched 'file1'   </tspan><tspan
+         x="92.831253"
+         y="351.18579"
+         id="tspan8336">                     |   |...Trying &lt;[file]&gt;+   </tspan><tspan
+         x="92.831253"
+         y="377.06046"
+         id="tspan8338">    [eos]            |   |    \_____&lt;[file]&gt;+ matched ' file2'  </tspan><tspan
+         x="92.831253"
+         y="402.93512"
+         id="tspan8340">                     |   |...Trying &lt;[file]&gt;+   </tspan><tspan
+         x="92.831253"
+         y="428.80975"
+         id="tspan8342">                     |   |    \FAIL &lt;[file]&gt;+</tspan><tspan
+         x="92.831253"
+         y="454.68442"
+         id="tspan8344">                     |   |...Trying &lt;target&gt;    </tspan><tspan
+         x="92.831253"
+         y="480.55905"
+         id="tspan8346">                     |   |   |...Trying &lt;file&gt;</tspan><tspan
+         x="92.831253"
+         y="506.43372"
+         id="tspan8348">                     |   |   |    \FAIL &lt;file&gt;</tspan><tspan
+         x="92.831253"
+         y="532.30835"
+         id="tspan8350">                     |   |    \FAIL &lt;target&gt;</tspan><tspan
+         x="92.831253"
+         y="558.18298"
+         id="tspan8352">     &lt;~~~~~~~~~~~~~~ |   |...Backtracking 5 chars and trying new match</tspan><tspan
+         x="92.831253"
+         y="584.05768"
+         id="tspan8354">    file2            |   |...Trying &lt;target&gt;    </tspan><tspan
+         x="92.831253"
+         y="609.93231"
+         id="tspan8356">                     |   |   |...Trying &lt;file&gt;</tspan><tspan
+         x="92.831253"
+         y="635.80695"
+         id="tspan8358">                     |   |   |    \____ &lt;file&gt; matched 'file2'</tspan><tspan
+         x="92.831253"
+         y="661.68164"
+         id="tspan8360">    [eos]            |   |    \_____&lt;target&gt; matched 'file2'    </tspan><tspan
+         x="92.831253"
+         y="687.55627"
+         id="tspan8362">                     |    \_____&lt;cmd&gt; matched ' cp file1 file2' </tspan><tspan
+         x="92.831253"
+         y="713.43091"
+         id="tspan8364">                      \_____&lt;grammar&gt; matched ' cp file1 file2' </tspan></text>
+  </g>
+</svg>

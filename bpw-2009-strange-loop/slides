@@ -1,0 +1,250 @@
+---
+- slide:
+    file: title
+- slide:
+    file: hofstadter
+    gradual: yes
+- slide:
+    file: strange-loop
+    gradual: yes
+- slide:
+    file: infinite-mirror
+- slide:
+    file: mirror-hierarchy
+    gradual: yes
+- slide:
+    file: chicken-and-egg
+- slide:
+    file: chicken-hierarchy
+    gradual: yes
+- slide:
+    file: grandfather
+- slide:
+    file: grandfather-hierarchy
+    gradual: yes
+- Perl 6 regexes
+- S05
+- many things are the same as in Perl 5
+- \w, \s, \d, \W, \S, \D
+- slide:
+    file: quants-1
+    gradual: yes
+- slide:
+    file: quants-2
+- '(capturing)'
+- 'a | b'
+- '(?:non-capturing)'
+- '[non-capturing]'
+- "'non-capturing'"
+- "moose*, 'moose'*"
+- alnums can go unquoted
+- everything else needs either 'quotes' or \\
+- '[aeiou]'
+- '<[aeiou]>'
+- '[a-z]'
+- '<[a..z]>'
+- '^ and $'
+- '^^ and $$'
+- . matches anything
+- slide:
+    file: dollar-underscore
+- slide:
+    file: dollar-underscore-indexing
+    gradual: yes
+- slide:
+    file: grammar-class
+    gradual: yes
+- '"Any grammar regex...'
+- '...is really just a kind of method" - S05'
+- slide:
+    file: rakudo-1
+- slide:
+    file: rakudo-2
+- slide:
+    file: rakudo-3
+- slide:
+    file: rakudo-4
+- PGE always sort of fascinated me
+- slide:
+    file: double-duty
+    gradual: yes
+- code reviews
+- like a book review
+- comment
+- contribute
+- grok
+- increase bus number
+- rewrite of the community
+- might as well get good habits
+- slide:
+    file: april-oslo-npw-pct
+    gradual: yes
+- slide:
+    file: pmichaud-quote
+- slide:
+    file: masak-thought
+- slide:
+    file: masak-thought-2
+- PIR
+- looks like punchline
+- 'Perl 5 &amp; asm'
+- slide:
+    file: august-lisbon-yapceu-rxg
+    gradual: yes
+- He had reinvented Perl 6 grammars!
+- In Perl 5!
+- Not only that...
+- slide:
+    file: regexp-grammars-debugger
+- So jealous!
+- Perl 6 is supposed to have the coolest tech!
+- slide:
+    file: masak-pmichaud-conspiring
+- started looking at PGE
+- slide:
+    file: twitter-comment
+- realized I didn't understand it
+- not much parser experience
+- slide:
+    file: feynman-quote
+- maybe the problem was
+- that I hadn't created PGE
+- decided to write PGE
+- ...in Perl 6
+- deranged
+- maniacal
+- insane
+- had to try it
+- slide:
+    file: gge-hierarchy
+    gradual: yes
+- slide:
+    file: ice
+- also
+- try out the debugger idea
+- web application debugger
+- parse Perl 6 with Perl 6
+- static Perl 6 analyzer
+- macro preprocessor
+- Perl 6 can't parse Perl 6! (yet)
+- PGE and STD.pm
+- piggybacking Rakudo/PGE
+- no can do
+- parsing 'say "hello world"' works
+- class def doesn't work
+- tangled
+- leveraging STD
+- fails on technicality
+- STD outputs YAML
+- no YAML parser
+- Exp, Match, OPTable (?), Perl6Regex
+- started out simple
+- soon pretty hairy
+- turns out
+- there are two parsers
+- slide:
+    file: regex-parse-ast
+    gradual: yes
+- slide:
+    file: operator-types
+    gradual: yes
+- slide:
+    file: operator-extras
+    gradual: yes
+- slide:
+    file: op-parse-a1
+- slide:
+    file: op-parse-a2
+- slide:
+    file: op-parse-a3
+- slide:
+    file: op-parse-a4
+- slide:
+    file: op-parse-a5
+- slide:
+    file: op-parse-b1
+- slide:
+    file: op-parse-b2
+- slide:
+    file: op-parse-b3
+- slide:
+    file: op-parse-b4
+- slide:
+    file: op-parse-b5
+- slide:
+    file: op-parse-b6
+- slide:
+    file: op-parse-b7
+- slide:
+    file: op-parse-b8
+- slide:
+    file: op-parse-b9
+- slide:
+    file: op-parse-c9
+- slide:
+    file: op-parse-d1
+- slide:
+    file: op-parse-d2
+- slide:
+    file: op-parse-d3
+- slide:
+    file: op-parse-d4
+- slide:
+    file: op-parse-d5
+- slide:
+    file: op-parse-d6
+- slide:
+    file: op-parse-d7
+- slide:
+    file: op-parse-d8
+- slide:
+    file: op-parse-d9
+- slide:
+    file: optable
+- translating PIR to Perl 6
+- dijkstrifying
+- turning gotos into ifs and whiles
+- everything expressible as ifs and whiles
+- ...doesn't mean you should!
+- continuations
+- Parrot has'em
+- PGE uses them
+- slide:
+    file: TimToady-masak-discussion-1
+- slide:
+    file: TimToady-masak-discussion-2
+- slide:
+    file: TimToady-quote
+- no dice
+- no continuations
+- workaround?
+- yes!
+- slide:
+    file: hierarchy-1
+    gradual: yes
+- slide:
+    file: hierarchy-2
+- slide:
+    file: hierarchy-3
+- slide:
+    file: hierarchy-4
+- slide:
+    file: hierarchy-5
+- slide:
+    file: hierarchy-6
+- large app
+- Hitting limits again
+- slide:
+    file: parrot-stacktrace
+- segfaults
+- sudden halts
+- slide:
+    file: status
+- slide:
+    file: live-demo
+- slide:
+    file: attribution
+- slide:
+    file: thank-you
+- slide:
+    file: questions

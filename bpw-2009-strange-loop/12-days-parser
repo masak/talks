@@ -1,0 +1,55 @@
+grammar Song::Christmas::TwelveDays {
+    token TOP { <verse> ** [\n\n] }
+
+    token verse { <introline> \s+ <items> '.' }
+
+    token introline {
+        'On the ' <nth> ' day of Christmas, my true love sent to me'
+    }
+
+    rule items {
+        | <item> ',' 'and' <item>
+        | <item>
+    }
+
+    token nth {
+        first | second
+    }
+
+    rule item {
+        <n> <things> {*}
+    }
+
+    token n {
+        a | two
+    }
+
+    token things {
+        \w+ ** \s+
+    }
+}
+
+class CountItems {
+    has %!numbers =
+        'a'   => 1,
+        'two' => 2;
+
+    has %!items;
+
+    method item($/) {
+        say %!numbers{ $<n> }, ' ', $<things>;
+        %!items{ ~$<things> } += %!numbers{ $<n> };
+    }
+
+    method report() {
+        for %!items.keys.sort( +%!items{$_} ) -> $name {
+            say sprintf '%5d %s', %!items{$name}, $name;
+        }
+    }
+}
+
+my $text = slurp '12-days';
+my $counter = CountItems.new;
+Song::Christmas::TwelveDays.parse($text, :action($counter))
+    or die 'Could not parse the Christmas song';
+$counter.report();

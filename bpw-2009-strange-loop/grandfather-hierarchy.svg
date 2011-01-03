@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg3591">
+    <g
+       id="g4394">
+      <path
+         d="m 525.14633,372.04724 0,121.82078"
+         id="path4392"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 502.09915,472.46707 a 14.816041,14.816041 0 1 1 -29.63208,0 14.816041,14.816041 0 1 1 29.63208,0 z"
+         transform="translate(38.89798,23.87029)"
+         id="path3602"
+         style="fill:#661166;fill-opacity:1;stroke:none" />
+      <path
+         d="m 525.14633,246.93401 0,123.467"
+         id="path4390"
+         style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 502.09915,472.46707 a 14.816041,14.816041 0 1 1 -29.63208,0 14.816041,14.816041 0 1 1 29.63208,0 z"
+         transform="translate(38.89798,-100.41985)"
+         id="path4376"
+         style="fill:#661166;fill-opacity:1;stroke:none" />
+      <path
+         d="m 502.09915,472.46707 a 14.816041,14.816041 0 1 1 -29.63208,0 14.816041,14.816041 0 1 1 29.63208,0 z"
+         transform="translate(38.89798,-224.70995)"
+         id="path4378"
+         style="fill:#661166;fill-opacity:1;stroke:none" />
+    </g>
+    <text
+       x="564.65576"
+       y="510.33029"
+       id="text4401"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="564.65576"
+         y="510.33029"
+         id="tspan4403">gramps</tspan></text>
+    <text
+       x="563.00952"
+       y="386.86328"
+       id="text4405"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="563.00952"
+         y="386.86328"
+         id="tspan4407">dad</tspan></text>
+    <text
+       x="559.7171"
+       y="265.04251"
+       id="text4409"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="559.7171"
+         y="265.04251"
+         id="tspan4411">me</tspan></text>
+    <path
+       d="m 525.14633,246.93401 c 0,0 -70.71351,-42.87614 -113.58965,0 -42.87614,42.87614 -33.36825,219.09171 0,250.22646 33.36825,31.13475 73.70857,36.77835 111.94342,0"
+       id="path4413"
+       style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+</svg>

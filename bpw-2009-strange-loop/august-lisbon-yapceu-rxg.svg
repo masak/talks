@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.2"
+   width="297mm"
+   height="210mm"
+   id="svg6608">
+  <defs
+     id="defs6610">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         id="path4543"
+         style="fill:#5c48dd;fill-rule:evenodd;stroke:#5c48dd;stroke-width:1pt;marker-start:none" />
+    </marker>
+  </defs>
+  <g
+     transform="translate(17.02285,-16.530999)"
+     id="g8220">
+    <path
+       d="m 343.82646,212.9027 a 132.26898,132.26898 0 0 1 -264.537967,0 132.26898,132.26898 0 1 1 264.537967,0 z"
+       id="path6619"
+       style="opacity:0.98999999;fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 149.60474,320.14508 c -7.14571,16.83686 -7.14571,16.83686 -7.14571,16.83686"
+       id="path7133"
+       style="fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 102.2184,275.42387 c -16.401458,9.17681 -16.401458,9.17681 -16.401458,9.17681"
+       id="path7135"
+       style="fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="M 116.43272,335.58445 C 77.602411,353.77231 72.634974,352.3592 77.476576,388.3433"
+       id="path7137"
+       style="fill:none;stroke:#5c48dd;stroke-width:10.62992096;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Sstart)" />
+    <text
+       x="29.46286"
+       y="421.8591"
+       id="text7513"
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="29.46286"
+         y="421.8591"
+         id="tspan7515">August 4</tspan></text>
+    <text
+       x="175.34654"
+       y="223.79234"
+       id="text7517"
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="175.34654"
+         y="223.79234"
+         id="tspan7519">2009</tspan></text>
+  </g>
+  <g
+     transform="translate(17.02285,10.816888)"
+     id="g8230">
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/europe_e_continental_2.gif"
+       x="540.91327"
+       y="98.926804"
+       width="201.27635"
+       height="257.01688"
+       id="image8056" />
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/europe_e_portugal_4.gif"
+       x="782.00372"
+       y="78.366905"
+       width="206.83232"
+       height="298.13666"
+       id="image8130" />
+    <rect
+       width="31.55171"
+       height="57.844799"
+       x="536.37909"
+       y="274.76282"
+       id="rect8134"
+       style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       width="164.33182"
+       height="318.14639"
+       x="797.9953"
+       y="68.362038"
+       id="rect8136"
+       style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="M 536.39969,274.39149 797.46356,67.942604"
+       id="path8138"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="m 536.39969,332.04456 261.13452,54.8976"
+       id="path8140"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     x="444.83832"
+     y="444.36902"
+     id="text7765"
+     xml:space="preserve"
+     style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+       x="444.83832"
+       y="444.36902"
+       id="tspan7767">YAPC::EU</tspan></text>
+  <image
+     xlink:href="file:///Users/masak/gwork/bpw-2009/dconway.jpg"
+     x="70.120293"
+     y="468.36368"
+     width="268.88367"
+     height="213.39973"
+     id="image8212" />
+  <text
+     x="636.69043"
+     y="582.71881"
+     id="text8216"
+     xml:space="preserve"
+     style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+       x="636.69043"
+       y="582.71881"
+       id="tspan8218">&quot;The Missing Link&quot;</tspan></text>
+</svg>

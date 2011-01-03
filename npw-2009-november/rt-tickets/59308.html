@@ -1,0 +1,892 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#59308: Test failures due to integer overflow</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D59308">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#59308: Test failures due to integer overflow</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59308">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">59308</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=59308">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=59308">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+autopromote_int_to_num_IMCC.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/476258/221590/autopromote_int_to_num_IMCC.patch">
+Thu Sep 25 14:35:36 2008 (2.1k) by chromatic <!-- x --> at wgz.org
+</a>
+</font></li>
+</ul>
+
+
+pct-constants.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/476292/221606/pct-constants.patch">
+Thu Sep 25 15:49:06 2008 (1.8k) by pmichaud
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=59308">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-475976" href="/rt3/Ticket/Display.html?id=59308#txn-475976">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;00:09:36&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Test failures due to integer overflow</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 25 Sep 2008 09:08:33 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/475976/221460/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+As of today &#40;and r31404&#41; Rakudo&#39;s &#39;make spectest_regression&#39; produces<br />
+compile time errors in three files, all of which are related to integer<br />
+overflow.<br />
+<br />
+To reproduce:<br />
+$ cd languages/perl6<br />
+$ make spectest_regression<br />
+$ ../../parrot perl6.pbc t/spec/S03-operators/arith.rakudo<br />
+add_1_const:Integer overflow &#39;2147483648&#39;<br />
+current instr.: &#39;parrot;PCT::HLLCompiler;evalpmc&#39; pc 744<br />
+&#40;src/PCT/HLLCompiler.pir:448&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;compile&#39; pc 438<br />
+&#40;src/PCT/HLLCompiler.pir:303&#41;<br />
+[...]<br />
+<br />
+I suspect it might be this commit:<br />
+<br />
+r31402 | chromatic | 2008-09-25 07:30:31 +0200 &#40;Thu, 25 Sep 2008&#41; | 7 lines<br />
+<br />
+[src] Expanded float precision to 15 digits from 6.  One side effect is that<br />
+float output no longer always has six digits after the dot; this drops<br />
+trailing<br />
+zeroes.  Most of the changes are to tests which expected specific output<br />
+formats.<br />
+<br />
+The sprintf format %.15g should be portable, but watch the smokes.  See RT<br />
+#59006, reported by Patrick Michaud.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476258" href="/rt3/Ticket/Display.html?id=59308#txn-476258">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;14:35:36&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Moritz Lenz &#40;via RT&#41; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59308] Test failures due to integer overflow</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 25 Sep 2008 14:01:22 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476258/221588/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thursday 25 September 2008 00:09:37 Moritz Lenz wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; As of today &#40;and r31404&#41; Rakudo&#39;s &#39;make spectest_regression&#39; produces<br />
+&gt; compile time errors in three files, all of which are related to integer<br />
+&gt; overflow.<br />
+&gt;<br />
+&gt; To reproduce:<br />
+&gt; $ cd languages/perl6<br />
+&gt; $ make spectest_regression<br />
+&gt; $ ../../parrot perl6.pbc t/spec/S03-operators/arith.rakudo<br />
+&gt; add_1_const:Integer overflow &#39;2147483648&#39;<br />
+&gt; current instr.: &#39;parrot;PCT::HLLCompiler;evalpmc&#39; pc 744<br />
+&gt; &#40;src/PCT/HLLCompiler.pir:448&#41;<br />
+&gt; called from Sub &#39;parrot;PCT::HLLCompiler;compile&#39; pc 438<br />
+&gt; &#40;src/PCT/HLLCompiler.pir:303&#41;<br />
+&gt; [...]<br />
+&gt;<br />
+&gt; I suspect it might be this commit:<br />
+&gt;<br />
+&gt; r31402 | chromatic | 2008-09-25 07:30:31 +0200 &#40;Thu, 25 Sep 2008&#41; | 7 lines<br />
+&gt;<br />
+&gt; [src] Expanded float precision to 15 digits from 6.  One side effect is<br />
+&gt; that float output no longer always has six digits after the dot; this drops<br />
+&gt; trailing<br />
+&gt; zeroes.  Most of the changes are to tests which expected specific output<br />
+&gt; formats.<br />
+&gt;<br />
+&gt; The sprintf format %.15g should be portable, but watch the smokes.  See RT<br />
+&gt; #59006, reported by Patrick Michaud.<br />
+</div>
+<br />
+I suspect it is too.  I can&#39;t figure out what in PCT is the culprit &#40;something <br />
+related to printing floats&#41;, but here&#39;s an IMCC patch which avoids overflow <br />
+by autopromoting I regs which would overflow to N regs.<br />
+<br />
+There&#39;s a further refactoring opportunity in here, but I&#39;d like to see if this <br />
+works first.<br />
+<br />
+-- c<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476258/221590/autopromote_int_to_num_IMCC.patch">Download autopromote_int_to_num_IMCC.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 2.1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476260" href="/rt3/Ticket/Display.html?id=59308#txn-476260">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;14:35:39&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476276" href="/rt3/Ticket/Display.html?id=59308#txn-476276">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;15:01:15&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, Moritz Lenz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59308] Test failures due to integer overflow</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 25 Sep 2008 17:00:43 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476276/221594/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 998b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Sep 25, 2008 at 02:01:22PM -0700, chromatic wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Thursday 25 September 2008 00:09:37 Moritz Lenz wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; As of today &#40;and r31404&#41; Rakudo&#39;s &#39;make spectest_regression&#39; produces<br />
+&gt; &gt; compile time errors in three files, all of which are related to integer<br />
+&gt; &gt; overflow.<br />
+</div>
+&gt; <br />
+&gt; I suspect it is too.  I can&#39;t figure out what in PCT is the culprit <br />
+&gt; &#40;something related to printing floats&#41;, <br />
+</div>
+<br />
+Floats that are integer values greater than 2147483647 but less than<br />
+1e+15 don&#39;t have a decimal point or &#39;e&#39; notation when they stringify,<br />
+so when IMCC gets a hold of them it carps about integers being out<br />
+of range.<br />
+<br />
+Oddly, placing an &#39;L&#39; at the end of the value seems to solve things:<br />
+<br />
+    assign $P0, 999999999999999       # IMCC integer overflow<br />
+    assign $P0, 999999999999999L      # works<br />
+<br />
+I was working on having PCT recognize floats in this range and<br />
+then adding the &#39;L&#39; when needed, but autopromoting I constants<br />
+to N constants seems like the right thing to do here.<br />
+<br />
+More in a bit.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476292" href="/rt3/Ticket/Display.html?id=59308#txn-476292">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;15:49:06&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org, Moritz Lenz &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;, bugs-bitbucket <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #59308] Test failures due to integer overflow</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 25 Sep 2008 17:48:41 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476292/221604/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 268b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Here&#39;s a patch that gets PCT to avoid generating the constants<br />
+that IMCC can&#39;t handle, S03-operators/arith.t passes with this<br />
+patch.  &#40;I&#39;m not in a place where I can do a full spectest_regression,<br />
+so I&#39;m leaving the patch here for someone else to apply and test.&#41;<br />
+<br />
+Pm<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476292/221606/pct-constants.patch">Download pct-constants.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-476294" href="/rt3/Ticket/Display.html?id=59308#txn-476294">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Sep&nbsp;25&nbsp;16:24:41&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/476294/221608/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 605b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Sep 25 15:49:06 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s a patch that gets PCT to avoid generating the constants<br />
+&gt; that IMCC can&#39;t handle, S03-operators/arith.t passes with this<br />
+&gt; patch.  &#40;I&#39;m not in a place where I can do a full spectest_regression,<br />
+&gt; so I&#39;m leaving the patch here for someone else to apply and test.&#41;<br />
+</div>
+<br />
+Since chromatic&#39;s r31422 &#39;make spectest_regression&#39; works fine again, so<br />
+I can&#39;t really tell if this patch has any effect.<br />
+<br />
+&#40;with this patch all parrot and PGE tests still pass, except the &#34;no<br />
+trailing ws&#34; one which is easy to fix&#41;.<br />
+<br />
+So I&#39;m leaving it for you to decide what do with it.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-546880" href="/rt3/Ticket/Display.html?id=59308#txn-546880">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;29&nbsp;12:49:33&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546880/260024/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 467b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Sep 25 15:49:06 2008, pmichaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Here&#39;s a patch that gets PCT to avoid generating the constants<br />
+&gt; that IMCC can&#39;t handle, S03-operators/arith.t passes with this<br />
+&gt; patch.  &#40;I&#39;m not in a place where I can do a full spectest_regression,<br />
+&gt; so I&#39;m leaving the patch here for someone else to apply and test.&#41;<br />
+</div>
+<br />
+What&#39;s the status of this ticket? From the Rakudo side everything looks<br />
+fine, if there are no complaints I&#39;d close it in a few days.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.214347</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

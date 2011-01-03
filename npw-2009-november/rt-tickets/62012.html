@@ -1,0 +1,590 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62012: &lt;!regex&gt; parses but always returns true</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62012">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62012: &lt;!regex&gt; parses but always returns true</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62012">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62012</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">rejected</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62012">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+richardh
+&lt;richard [at] rusrating.ru&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62012">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62012">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516038" href="/rt3/Ticket/Display.html?id=62012#txn-516038">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;05:06:46&nbsp;2009</td>
+    <td class="description">
+      richardh -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">&lt;!regex&gt; parses but always returns true</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 06 Jan 2009 16:06:12 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516038/243400/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 681b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+See the following &#40;svn revision 34915&#41;<br />
+$ perl6<br />
+<div class="message-stanza-depth-1">
+ &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;digit&gt;/ and <br />
+</div>
+say &#39;got digit&#39;;$y~~/&lt;!digit&gt;/ and say &#39;not got digit&#39;;<br />
+got digit<br />
+not got digit<br />
+<div class="message-stanza-depth-1">
+ &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;!digit&gt;/ and <br />
+</div>
+say &#39;got digit&#39;;$y~~/&lt;!digit&gt;/ and say &#39;not got digit&#39;;<br />
+got digit<br />
+not got digit<br />
+<div class="message-stanza-depth-1">
+ &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;!digit&gt;/ and <br />
+</div>
+say &#39;got digit&#39;;$y~~/&lt;digit&gt;/ and say &#39;not got digit&#39;;<br />
+got digit<br />
+<div class="message-stanza-depth-1">
+ &gt;<br />
+</div>
+<br />
+The assumption was &lt;!digit&gt; is the logical inverse of &lt;digit&gt;<br />
+<br />
+Either way, /&lt;!digit&gt;/ is returning true with and without a digit &#40; $x <br />
+test in first and third lines both give &#39;got digit&#39;&#41;.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516050" href="/rt3/Ticket/Display.html?id=62012#txn-516050">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;06:51:25&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/516050/243410/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+There seems to be a misunderstanding about what &lt;!digit&gt; does here --<br />
+it&#39;s a zero-width assertion that means &#34;doesn&#39;t match a digit at this<br />
+point&#34;.  Since your regexes are all unanchored, this assertion can be<br />
+true at many points &#40;including the end of the string&#41;.  To look at the<br />
+specific examples you give:<br />
+<br />
+On Tue Jan 06 05:06:46 2009, richardh wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; See the following &#40;svn revision 34915&#41;<br />
+&gt; $ perl6<br />
+<div class="message-stanza-depth-2">
+&gt;  &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;digit&gt;/ and <br />
+</div>
+&gt; say &#39;got digit&#39;;$y~~/&lt;!digit&gt;/ and say &#39;not got digit&#39;;<br />
+&gt; got digit<br />
+&gt; not got digit<br />
+</div>
+<br />
+The $y match &#40;the one calling &lt;!digit&gt;&#41;  succeeds at position 0, as it<br />
+should.  The $x match succeeds at position 3.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;  &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;!digit&gt;/ and <br />
+</div>
+&gt; say &#39;got digit&#39;;$y~~/&lt;!digit&gt;/ and say &#39;not got digit&#39;;<br />
+&gt; got digit<br />
+&gt; not got digit<br />
+</div>
+<br />
+The $x match succeeds at position 0; the $y match succeeds at position 0.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;  &gt; regex digit { [0..9] }; my $x=&#39;abc9&#39;;my $y=&#39;def&#39;;$x~~/&lt;!digit&gt;/ and <br />
+</div>
+&gt; say &#39;got digit&#39;;$y~~/&lt;digit&gt;/ and say &#39;not got digit&#39;;<br />
+&gt; got digit<br />
+<div class="message-stanza-depth-2">
+&gt;  &gt;<br />
+</div>
+</div>
+<br />
+The $x match succeeds at position 0.  &#40;The $y match fails.&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; The assumption was &lt;!digit&gt; is the logical inverse of &lt;digit&gt;<br />
+</div>
+<br />
+This assumption is false -- &lt;!digit&gt; is the inverse of &lt;?digit&gt; .<br />
+<br />
+I suspect what you&#39;re looking for is &lt;-digit&gt;, which means &#34;match any<br />
+character that doesn&#39;t match &lt;digit&gt;&#34;.  You&#39;ll still want to anchor the<br />
+pattern somehow, though, because &#34;&lt;-digit&gt;&#34; would&#39;ve matched each of the<br />
+above cases also.<br />
+<br />
+Finally, note that<br />
+<br />
+    regex digit { [0..9] }<br />
+<br />
+means &#34;match a &#39;0&#39; followed by two characters followed by a &#39;9&#39;&#34;.<br />
+I suspect you meant to write<br />
+<br />
+    regex digit { &lt;[0..9]&gt; }<br />
+<br />
+So we end up with:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; regex digit { &lt;[0..9]&gt; };  say &#40;&#34;abc&#34; ~~ /^ &lt;-digit&gt;* $/&#41; ?? &#39;matched&#39;<br />
+</div>
+<div class="message-stanza-depth-1">
+!! &#39;not matched&#39;<br />
+</div>
+matched<br />
+<div class="message-stanza-depth-1">
+&gt; regex digit { &lt;[0..9]&gt; };  say &#40;&#34;abc9&#34; ~~ /^ &lt;-digit&gt;* $/&#41; ??<br />
+</div>
+&#39;matched&#39; !! &#39;not matched&#39;<br />
+not matched<br />
+<br />
+Closing ticket,<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516054" href="/rt3/Ticket/Display.html?id=62012#txn-516054">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;06:51:27&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-516056" href="/rt3/Ticket/Display.html?id=62012#txn-516056">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;06&nbsp;06:51:28&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;rejected&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.199539</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

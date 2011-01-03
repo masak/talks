@@ -1,0 +1,1622 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62176: wierd segmentation fault with correct code.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62176">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62176: wierd segmentation fault with correct code.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62176">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62176</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62176">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+richardh
+&lt;richard [at] rusrating.ru&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62176">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+skaters.pl<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/517166/243996/skaters.pl">
+Fri Jan 09 01:42:00 2009 (390b) by richardh
+</a>
+</font></li>
+</ul>
+
+
+skaters.txt<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/517860/244316/skaters.txt">
+Sat Jan 10 12:19:38 2009 (3.2k) by richardh
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/517166/243998/skaters.txt">
+Fri Jan 09 01:42:00 2009 (3.2k) by richardh
+</a>
+</font></li>
+</ul>
+
+
+skatersv2.pl<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/517860/244318/skatersv2.pl">
+Sat Jan 10 12:19:38 2009 (545b) by richardh
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62176">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517166" href="/rt3/Ticket/Display.html?id=62176#txn-517166">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jan&nbsp;09&nbsp;01:42:00&nbsp;2009</td>
+    <td class="description">
+      richardh - Ticket 62112:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">sort hash by value</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 09 Jan 2009 12:39:46 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517166/243994/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 614b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Using the idiom in http://www.rakudo.org/2008/12/its-sort-of-like.html <br />
+causes a segmentation error.<br />
+<br />
+The following gets a hash of skaters with the averages. Next is to sort <br />
+hash by average, and print top three<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+#!/usr/local/bin/perl6<br />
+</div>
+</div>
+<br />
+<div class="message-stanza-depth-1">
+# Solution to Advanced Event 2, 2008 scripting games, <br />
+</div>
+http://www.microsoft.com/technet/scriptcenter/funzone/games/games08/aevent2.mspx<br />
+<br />
+use v6;<br />
+my %aves;<br />
+my @list;<br />
+my $scores = open&#40;&#39;./skaters.txt&#39;, :r&#41; or die $!;<br />
+<br />
+for =$scores {<br />
+    @list = split /\,/,$_;<br />
+    @list[1..7].sort;<br />
+    %aves{@list[0]} = &#40;[+] @list[2..6]&#41; / 5;<br />
+};<br />
+<br />
+.say for %aves;<br />
+.say for %aves.sort: {.value};<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517166/243996/skaters.pl">Download skaters.pl</a>
+<span class="downloadcontenttype">
+[application/x-perl 390b]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517166/243998/skaters.txt">Download skaters.txt</a>
+<span class="downloadcontenttype">
+[text/plain 3.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Janko Cajhen,84,80,61,81,71,62,76<br />
+Ryan Calafato,59,93,93,80,67,73,95<br />
+Iulian Calinov,56,70,76,93,79,83,58<br />
+Geert Camelbeke,97,61,55,73,70,92,63<br />
+David Campbell,87,66,62,73,76,91,91<br />
+John III Campbell,93,51,61,55,84,99,91<br />
+Chris Cannon,60,79,73,63,51,60,61<br />
+Jon Cantrell,59,64,99,66,73,52,65<br />
+Jun Cao,64,80,83,65,57,82,97<br />
+Anthony Cappiello-Guy,89,74,56,58,51,79,84<br />
+Cyril Carbonati,97,57,77,90,78,64,58<br />
+Richard Carey,80,78,55,88,54,91,95<br />
+Jason Carlson,93,68,79,73,91,88,60<br />
+Ty  Carlson,60,84,77,73,84,50,65<br />
+Fernando Caro,58,97,56,79,74,52,53<br />
+Rob Caron,85,54,51,59,99,80,89<br />
+Andy Carothers,89,88,93,64,95,51,81<br />
+Chase Carpenter,94,93,58,92,94,86,60<br />
+Matthew Carroll,75,67,52,85,60,80,57<br />
+Adam Carter,62,75,72,55,86,60,60<br />
+Carlos Carvallo,87,95,56,84,52,83,79<br />
+Rob Cason,97,71,97,57,51,69,83<br />
+Gitte Casparij,54,89,99,55,51,62,79<br />
+Joao Casqueiro,93,50,75,84,57,52,80<br />
+Giorgio Cavaglieri,82,63,61,80,88,78,58<br />
+Matt Cavallari,53,54,52,57,66,73,80<br />
+Luisa Cazzaniga,96,71,71,87,77,59,50<br />
+Andrew Cencini,75,52,83,80,63,51,96<br />
+Baris Cetinok,86,77,91,50,84,84,71<br />
+Sean Chai,71,64,73,85,62,81,61<br />
+Gareth Chan,84,51,87,75,72,66,84<br />
+Greg Chapman,81,53,88,78,83,80,91<br />
+Mathew Charles,57,58,79,80,89,86,67<br />
+Sootha Charncherngkha,96,60,92,98,66,66,56<br />
+Neil Charney,87,82,83,81,86,71,64<br />
+Mohammad Chami,95,74,99,86,51,54,57<br />
+Ankur Chavda,99,53,81,60,96,92,80<br />
+Francisco Chaves,99,91,55,68,79,62,61<br />
+Hao Chen,99,86,62,84,63,77,59<br />
+Jacky Chen,76,62,66,92,80,50,95<br />
+John Y. Chen,62,59,82,52,76,82,57<br />
+Yao-Qiang Cheng,69,72,87,57,58,67,77<br />
+Jeff Chia,72,74,89,56,76,95,89<br />
+Lee Theng Chia,79,59,60,60,59,64,99<br />
+Martin Chisholm,93,91,79,92,64,80,83<br />
+Michal Chmiela,86,78,51,66,89,74,56<br />
+Manish Chopra,58,78,55,60,73,84,77<br />
+Ray Chow,90,78,64,91,62,61,88<br />
+Terri Chudzik,88,54,91,95,69,95,55<br />
+Bjarke Rust Christensen,99,91,88,59,81,54,97<br />
+Nicholas Christopoulos,93,54,50,64,85,73,83<br />
+Ranjit Varkey Chudukatil,55,50,79,80,85,54,59<br />
+Guido Chuffart,67,57,88,97,97,96,93<br />
+Petra Chvojková,64,71,78,57,70,69,85<br />
+Alice Ciccu,88,64,56,80,95,88,72<br />
+Ewa Ciesielska,54,57,77,84,89,51,99<br />
+Molly Clark,82,95,69,69,69,77,90<br />
+Leah Clelland,66,85,65,89,55,81,55<br />
+Christian Cletus,84,78,96,80,51,86,96<br />
+Mark-Stuart Cochrane,51,98,59,99,63,70,72<br />
+Pat Coleman,81,53,99,77,58,90,96<br />
+Jean-Charles Colon,64,72,62,93,88,89,87<br />
+Craig M. Combel,92,77,57,64,80,55,55<br />
+Aaron Con,70,61,63,98,72,99,79<br />
+Steve Conn,77,59,99,68,83,74,87<br />
+Peter Connelly,97,81,80,68,68,95,82<br />
+Cathan Cook,95,71,90,70,94,60,72<br />
+Kevin Cook,60,58,52,94,91,62,97<br />
+Patrick M. Cook,57,63,59,70,87,54,75<br />
+Jeroen Cool,77,86,58,91,68,84,65<br />
+Kenneth Cools,71,90,71,60,91,87,87<br />
+Jim Corbin,86,91,76,99,55,85,60<br />
+Michel Cordani,97,62,65,68,60,85,62<br />
+Cecilia Cornejo,65,94,96,85,54,96,87<br />
+Eva Corets,99,59,86,85,73,59,86<br />
+Ryan Cornelsen,57,69,83,65,82,92,96<br />
+Robin Counts,71,59,56,50,68,66,67<br />
+Brian Cox,89,62,67,64,75,78,93<br />
+Oliver Cox,63,64,97,56,51,80,95<br />
+Ovidiu V. Cr?ciun,63,82,50,96,85,83,92<br />
+Jack Creasey,92,91,96,81,74,81,84<br />
+Armin Cremerius-Günther,96,96,60,64,67,59,83<br />
+Ioan Crisiarcu,98,70,54,88,90,59,87<br />
+María Jesús Cuesta,92,54,64,85,98,59,96<br />
+Grant Culbertson,72,94,92,69,51,68,54<br />
+Scott Culp,58,76,51,62,56,74,71<br />
+Gonçalo Cunha,93,64,88,80,99,61,77<br />
+Conor Cunningham,92,62,50,59,82,56,85<br />
+Shiraz Cupala,87,68,88,93,50,91,71<br />
+Douglas Curran,80,80,51,56,79,86,93<br />
+Pawel Czernek,72,84,84,99,70,72,64<br />
+Wojciech Czupta,89,53,96,81,63,65,85<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517860" href="/rt3/Ticket/Display.html?id=62176#txn-517860">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;12:19:38&nbsp;2009</td>
+    <td class="description">
+      richardh -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">wierd segmentation fault with correct code.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 10 Jan 2009 23:18:59 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517860/244314/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 895b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Getting a wierd segmentation fault with the following program &#40;also <br />
+attached&#41;.<br />
+<br />
+I am using rakudo from parrot 35286<br />
+<br />
+When I run the program below, it runs and I get almost the right answer <br />
+&#40;but uninitialised values and<br />
+incorrect output&#41;.<br />
+<br />
+But when I comment out the &#39;say&#39; line and uncomment the line below it, I <br />
+get a segmentation fault.<br />
+<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+#!/usr/local/bin/perl6<br />
+</div>
+</div>
+<br />
+<div class="message-stanza-depth-1">
+# Solution to Advanced Event 2, 2008 scripting games, <br />
+</div>
+http://www.microsoft.com/technet/scriptcenter/funzone/games/games08/aevent2.mspx<br />
+<br />
+use v6;<br />
+my %players;<br />
+my $scores = open&#40;&#39;./skaters.txt&#39;, :r&#41; or die $!;<br />
+my $name;<br />
+my @list;<br />
+<br />
+for =$scores {<br />
+    &#40;$name,@list&#41; = .split&#40;/\,/&#41;;<br />
+    @list .=sort;<br />
+    %players{$name} = &#40;[+] @list[2..6]&#41; / 5;<br />
+};<br />
+<br />
+my @ranking = %players.sort: { .value };<br />
+for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+    given pop @ranking {<br />
+    say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-1">
+#    say &#34;$m Medal: $_&#34;;<br />
+</div>
+    };<br />
+};<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517860/244316/skaters.txt">Download skaters.txt</a>
+<span class="downloadcontenttype">
+[text/plain 3.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Janko Cajhen,84,80,61,81,71,62,76<br />
+Ryan Calafato,59,93,93,80,67,73,95<br />
+Iulian Calinov,56,70,76,93,79,83,58<br />
+Geert Camelbeke,97,61,55,73,70,92,63<br />
+David Campbell,87,66,62,73,76,91,91<br />
+John III Campbell,93,51,61,55,84,99,91<br />
+Chris Cannon,60,79,73,63,51,60,61<br />
+Jon Cantrell,59,64,99,66,73,52,65<br />
+Jun Cao,64,80,83,65,57,82,97<br />
+Anthony Cappiello-Guy,89,74,56,58,51,79,84<br />
+Cyril Carbonati,97,57,77,90,78,64,58<br />
+Richard Carey,80,78,55,88,54,91,95<br />
+Jason Carlson,93,68,79,73,91,88,60<br />
+Ty  Carlson,60,84,77,73,84,50,65<br />
+Fernando Caro,58,97,56,79,74,52,53<br />
+Rob Caron,85,54,51,59,99,80,89<br />
+Andy Carothers,89,88,93,64,95,51,81<br />
+Chase Carpenter,94,93,58,92,94,86,60<br />
+Matthew Carroll,75,67,52,85,60,80,57<br />
+Adam Carter,62,75,72,55,86,60,60<br />
+Carlos Carvallo,87,95,56,84,52,83,79<br />
+Rob Cason,97,71,97,57,51,69,83<br />
+Gitte Casparij,54,89,99,55,51,62,79<br />
+Joao Casqueiro,93,50,75,84,57,52,80<br />
+Giorgio Cavaglieri,82,63,61,80,88,78,58<br />
+Matt Cavallari,53,54,52,57,66,73,80<br />
+Luisa Cazzaniga,96,71,71,87,77,59,50<br />
+Andrew Cencini,75,52,83,80,63,51,96<br />
+Baris Cetinok,86,77,91,50,84,84,71<br />
+Sean Chai,71,64,73,85,62,81,61<br />
+Gareth Chan,84,51,87,75,72,66,84<br />
+Greg Chapman,81,53,88,78,83,80,91<br />
+Mathew Charles,57,58,79,80,89,86,67<br />
+Sootha Charncherngkha,96,60,92,98,66,66,56<br />
+Neil Charney,87,82,83,81,86,71,64<br />
+Mohammad Chami,95,74,99,86,51,54,57<br />
+Ankur Chavda,99,53,81,60,96,92,80<br />
+Francisco Chaves,99,91,55,68,79,62,61<br />
+Hao Chen,99,86,62,84,63,77,59<br />
+Jacky Chen,76,62,66,92,80,50,95<br />
+John Y. Chen,62,59,82,52,76,82,57<br />
+Yao-Qiang Cheng,69,72,87,57,58,67,77<br />
+Jeff Chia,72,74,89,56,76,95,89<br />
+Lee Theng Chia,79,59,60,60,59,64,99<br />
+Martin Chisholm,93,91,79,92,64,80,83<br />
+Michal Chmiela,86,78,51,66,89,74,56<br />
+Manish Chopra,58,78,55,60,73,84,77<br />
+Ray Chow,90,78,64,91,62,61,88<br />
+Terri Chudzik,88,54,91,95,69,95,55<br />
+Bjarke Rust Christensen,99,91,88,59,81,54,97<br />
+Nicholas Christopoulos,93,54,50,64,85,73,83<br />
+Ranjit Varkey Chudukatil,55,50,79,80,85,54,59<br />
+Guido Chuffart,67,57,88,97,97,96,93<br />
+Petra Chvojková,64,71,78,57,70,69,85<br />
+Alice Ciccu,88,64,56,80,95,88,72<br />
+Ewa Ciesielska,54,57,77,84,89,51,99<br />
+Molly Clark,82,95,69,69,69,77,90<br />
+Leah Clelland,66,85,65,89,55,81,55<br />
+Christian Cletus,84,78,96,80,51,86,96<br />
+Mark-Stuart Cochrane,51,98,59,99,63,70,72<br />
+Pat Coleman,81,53,99,77,58,90,96<br />
+Jean-Charles Colon,64,72,62,93,88,89,87<br />
+Craig M. Combel,92,77,57,64,80,55,55<br />
+Aaron Con,70,61,63,98,72,99,79<br />
+Steve Conn,77,59,99,68,83,74,87<br />
+Peter Connelly,97,81,80,68,68,95,82<br />
+Cathan Cook,95,71,90,70,94,60,72<br />
+Kevin Cook,60,58,52,94,91,62,97<br />
+Patrick M. Cook,57,63,59,70,87,54,75<br />
+Jeroen Cool,77,86,58,91,68,84,65<br />
+Kenneth Cools,71,90,71,60,91,87,87<br />
+Jim Corbin,86,91,76,99,55,85,60<br />
+Michel Cordani,97,62,65,68,60,85,62<br />
+Cecilia Cornejo,65,94,96,85,54,96,87<br />
+Eva Corets,99,59,86,85,73,59,86<br />
+Ryan Cornelsen,57,69,83,65,82,92,96<br />
+Robin Counts,71,59,56,50,68,66,67<br />
+Brian Cox,89,62,67,64,75,78,93<br />
+Oliver Cox,63,64,97,56,51,80,95<br />
+Ovidiu V. Cr?ciun,63,82,50,96,85,83,92<br />
+Jack Creasey,92,91,96,81,74,81,84<br />
+Armin Cremerius-Günther,96,96,60,64,67,59,83<br />
+Ioan Crisiarcu,98,70,54,88,90,59,87<br />
+María Jesús Cuesta,92,54,64,85,98,59,96<br />
+Grant Culbertson,72,94,92,69,51,68,54<br />
+Scott Culp,58,76,51,62,56,74,71<br />
+Gonçalo Cunha,93,64,88,80,99,61,77<br />
+Conor Cunningham,92,62,50,59,82,56,85<br />
+Shiraz Cupala,87,68,88,93,50,91,71<br />
+Douglas Curran,80,80,51,56,79,86,93<br />
+Pawel Czernek,72,84,84,99,70,72,64<br />
+Wojciech Czupta,89,53,96,81,63,65,85<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517860/244318/skatersv2.pl">Download skatersv2.pl</a>
+<span class="downloadcontenttype">
+[application/x-perl 545b]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517872" href="/rt3/Ticket/Display.html?id=62176#txn-517872">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;13:58:20&nbsp;2009</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517872/244328/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jan 10 12:19:38 2009, richardh wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Getting a wierd segmentation fault with the following program &#40;also<br />
+&gt; attached&#41;.<br />
+&gt; <br />
+&gt; I am using rakudo from parrot 35286<br />
+&gt; <br />
+&gt; When I run the program below, it runs and I get almost the right<br />
+&gt; answer<br />
+&gt; &#40;but uninitialised values and<br />
+&gt; incorrect output&#41;.<br />
+&gt; <br />
+&gt; But when I comment out the &#39;say&#39; line and uncomment the line below it,<br />
+&gt; I<br />
+&gt; get a segmentation fault.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt; #!/usr/local/bin/perl6<br />
+</div>
+</div>
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; # Solution to Advanced Event 2, 2008 scripting games,<br />
+</div>
+&gt; http://www.microsoft.com/technet/scriptcenter/funzone/games/games08/aevent2.mspx<br />
+&gt; <br />
+&gt; use v6;<br />
+&gt; my %players;<br />
+&gt; my $scores = open&#40;&#39;./skaters.txt&#39;, :r&#41; or die $!;<br />
+&gt; my $name;<br />
+&gt; my @list;<br />
+&gt; <br />
+&gt; for =$scores {<br />
+&gt;     &#40;$name,@list&#41; = .split&#40;/\,/&#41;;<br />
+&gt;     @list .=sort;<br />
+&gt;     %players{$name} = &#40;[+] @list[2..6]&#41; / 5;<br />
+&gt; };<br />
+&gt; <br />
+&gt; my @ranking = %players.sort: { .value };<br />
+&gt; for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+&gt;     given pop @ranking {<br />
+&gt;     say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-2">
+&gt; #    say &#34;$m Medal: $_&#34;;<br />
+</div>
+&gt;     };<br />
+&gt; };<br />
+&gt; <br />
+</div>
+<br />
+I don&#39;t get a segfault; I&#39;m getting:<br />
+<br />
+Unable to open filehandle<br />
+current instr.: &#39;open&#39; pc -7966446 &#40;&#40;unknown file&#41;:-1&#41;<br />
+called from Sub &#39;open&#39; pc 3939 &#40;src/classes/List.pir:188&#41;<br />
+called from Sub &#39;open&#39; pc 18003 &#40;src/builtins/io.pir:78&#41;<br />
+called from Sub &#39;_block14&#39; pc 95 &#40;EVAL_21:52&#41;<br />
+called from Sub &#39;!UNIT_START&#39; pc 16736 &#40;src/builtins/guts.pir:298&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 950 &#40;src/PCT/HLLCompiler.pir:527&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1275 &#40;src/PCT/HLLCompiler.pir:688&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1456 <br />
+&#40;src/PCT/HLLCompiler.pir:778&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 20314 &#40;perl6.pir:158&#41;<br />
+<br />
+this with parrot r35356.<br />
+<br />
+Regards.<br />
+<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517876" href="/rt3/Ticket/Display.html?id=62176#txn-517876">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;13:58:25&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517996" href="/rt3/Ticket/Display.html?id=62176#txn-517996">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;23:44:53&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517996/244418/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.4k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jan 10 12:19:38 2009, richardh wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Getting a wierd segmentation fault with the following program &#40;also<br />
+&gt; attached&#41;.<br />
+&gt; <br />
+&gt; I am using rakudo from parrot 35286<br />
+&gt; [...]<br />
+</div>
+<br />
+Try running the script using parrot directly instead of the &#34;perl6&#34;<br />
+binary, and let us know if you still see the segfault.  &#40;The perl6<br />
+binary is known to have some issues with segfaulting, and is really more<br />
+of a Parrot issue than a Rakudo one.&#41;<br />
+<br />
+For the record, on my system the program works as expected with the<br />
+&#34;say&#34; line uncommented:<br />
+<br />
+  $ ./parrot perl6.pbc skatersv2.pl<br />
+  Use of uninitialized value<br />
+  Gold Medal: , Guido Chuffart    94.2<br />
+  Gold Medal: Guido Chuffart      94.2<br />
+  Use of uninitialized value<br />
+  Silver Medal: , Chase Carpenter 91.8<br />
+  Silver Medal: Chase Carpenter   91.8<br />
+  Use of uninitialized value<br />
+  Bronze Medal: , Cecilia Cornejo 91.6<br />
+  Bronze Medal: Cecilia Cornejo   91.6<br />
+  $<br />
+<br />
+The uninitialized value warnings come from the code:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; my @ranking = %players.sort: { .value };<br />
+&gt; for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+&gt;     given pop @ranking {<br />
+&gt;     say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-2">
+&gt; #    say &#34;$m Medal: $_&#34;;<br />
+</div>
+&gt;     };<br />
+&gt; };<br />
+</div>
+<br />
+After sorting %players by .value, @ranking is left as a list of Pair<br />
+objects.  Thus &#34;pop @ranking&#34; returns a Pair, and the uninitialized<br />
+value comes from using the Pair as a key in %players{$_} .<br />
+<br />
+Let us know if you still see the segmentation fault when run with<br />
+&#34;parrot perl6.pbc&#34; instead of the perl6 binary.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518002" href="/rt3/Ticket/Display.html?id=62176#txn-518002">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;23:44:58&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518004" href="/rt3/Ticket/Display.html?id=62176#txn-518004">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;23:58:11&nbsp;2009</td>
+    <td class="description">
+      pmichaud - Ticket 62112:  Merged into ticket #62176
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518006" href="/rt3/Ticket/Display.html?id=62176#txn-518006">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;23:58:11&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Merged into ticket #62176
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518278" href="/rt3/Ticket/Display.html?id=62176#txn-518278">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;04:54:32&nbsp;2009</td>
+    <td class="description">
+      richardh -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62176] wierd segmentation fault with correct code.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 09:50:48 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518278/244560/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Have you got the second data file in the current directory?<br />
+<br />
+I link perl6 to /usr/local/bin, change to the directory with the text <br />
+file &#40;skaters.txt&#41; and script &#40;skatersv2.pl&#41;, and then run.<br />
+<br />
+Richard<br />
+<br />
+Will Coleda via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jan 10 12:19:38 2009, richardh wrote:<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Getting a wierd segmentation fault with the following program &#40;also<br />
+&gt;&gt; attached&#41;.<br />
+&gt;&gt;<br />
+&gt;&gt; I am using rakudo from parrot 35286<br />
+&gt;&gt;<br />
+&gt;&gt; When I run the program below, it runs and I get almost the right<br />
+&gt;&gt; answer<br />
+&gt;&gt; &#40;but uninitialised values and<br />
+&gt;&gt; incorrect output&#41;.<br />
+&gt;&gt;<br />
+&gt;&gt; But when I comment out the &#39;say&#39; line and uncomment the line below it,<br />
+&gt;&gt; I<br />
+&gt;&gt; get a segmentation fault.<br />
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+<div class="message-stanza-depth-4">
+&gt;&gt; #!/usr/local/bin/perl6<br />
+</div>
+</div>
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; # Solution to Advanced Event 2, 2008 scripting games,<br />
+</div>
+&gt;&gt; http://www.microsoft.com/technet/scriptcenter/funzone/games/games08/aevent2.mspx<br />
+&gt;&gt;<br />
+&gt;&gt; use v6;<br />
+&gt;&gt; my %players;<br />
+&gt;&gt; my $scores = open&#40;&#39;./skaters.txt&#39;, :r&#41; or die $!;<br />
+&gt;&gt; my $name;<br />
+&gt;&gt; my @list;<br />
+&gt;&gt;<br />
+&gt;&gt; for =$scores {<br />
+&gt;&gt;     &#40;$name,@list&#41; = .split&#40;/\,/&#41;;<br />
+&gt;&gt;     @list .=sort;<br />
+&gt;&gt;     %players{$name} = &#40;[+] @list[2..6]&#41; / 5;<br />
+&gt;&gt; };<br />
+&gt;&gt;<br />
+&gt;&gt; my @ranking = %players.sort: { .value };<br />
+&gt;&gt; for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+&gt;&gt;     given pop @ranking {<br />
+&gt;&gt;     say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; #    say &#34;$m Medal: $_&#34;;<br />
+</div>
+&gt;&gt;     };<br />
+&gt;&gt; };<br />
+&gt;&gt;<br />
+&gt;&gt;     <br />
+</div>
+&gt;<br />
+&gt; I don&#39;t get a segfault; I&#39;m getting:<br />
+&gt;<br />
+&gt; Unable to open filehandle<br />
+&gt; current instr.: &#39;open&#39; pc -7966446 &#40;&#40;unknown file&#41;:-1&#41;<br />
+&gt; called from Sub &#39;open&#39; pc 3939 &#40;src/classes/List.pir:188&#41;<br />
+&gt; called from Sub &#39;open&#39; pc 18003 &#40;src/builtins/io.pir:78&#41;<br />
+&gt; called from Sub &#39;_block14&#39; pc 95 &#40;EVAL_21:52&#41;<br />
+&gt; called from Sub &#39;!UNIT_START&#39; pc 16736 &#40;src/builtins/guts.pir:298&#41;<br />
+&gt; called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 950 &#40;src/PCT/HLLCompiler.pir:527&#41;<br />
+&gt; called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1275 &#40;src/PCT/HLLCompiler.pir:688&#41;<br />
+&gt; called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1456 <br />
+&gt; &#40;src/PCT/HLLCompiler.pir:778&#41;<br />
+&gt; called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 20314 &#40;perl6.pir:158&#41;<br />
+&gt;<br />
+&gt; this with parrot r35356.<br />
+&gt;<br />
+&gt; Regards.<br />
+&gt;<br />
+&gt;<br />
+&gt;   <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518386" href="/rt3/Ticket/Display.html?id=62176#txn-518386">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;05:57:04&nbsp;2009</td>
+    <td class="description">
+      richardh -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62176] wierd segmentation fault with correct code.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 15:35:41 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518386/244606/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Thanks for the response.<br />
+<br />
+I downloaded parrot onto my office machine &#40;35397&#41;, and tested as you <br />
+suggested. All worked and in fact I couldnt reproduce the bug!!! :&#40;&#40;<br />
+<br />
+I will try again with parrot at home with version 35286<br />
+<br />
+This happened to me before - I got a segmentation fault working with a <br />
+Hash; inserted a correct line of code and the fault disappeared; updated <br />
+parrot and the initial fault could not be reproduced.<br />
+<br />
+If it happens again, I will try parrot directly and let you know.<br />
+<br />
+What is annoying is that I cant find a way to reproduce the fault with <br />
+more generic code.<br />
+<br />
+By the way, I have asked on the perl6-users list what the %player.sort: <br />
+{.value} means, or rather what the &#39;:&#39; in that code means. I copied the <br />
+idiom from Patrick&#39;s blog, but I cant find a description why it works in <br />
+the Synposes.<br />
+<br />
+Richard<br />
+<br />
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jan 10 12:19:38 2009, richardh wrote:<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Getting a wierd segmentation fault with the following program &#40;also<br />
+&gt;&gt; attached&#41;.<br />
+&gt;&gt;<br />
+&gt;&gt; I am using rakudo from parrot 35286<br />
+&gt;&gt; [...]<br />
+&gt;&gt;     <br />
+</div>
+&gt;<br />
+&gt; Try running the script using parrot directly instead of the &#34;perl6&#34;<br />
+&gt; binary, and let us know if you still see the segfault.  &#40;The perl6<br />
+&gt; binary is known to have some issues with segfaulting, and is really more<br />
+&gt; of a Parrot issue than a Rakudo one.&#41;<br />
+&gt;<br />
+&gt; For the record, on my system the program works as expected with the<br />
+&gt; &#34;say&#34; line uncommented:<br />
+&gt;<br />
+&gt;   $ ./parrot perl6.pbc skatersv2.pl<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Gold Medal: , Guido Chuffart    94.2<br />
+&gt;   Gold Medal: Guido Chuffart      94.2<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Silver Medal: , Chase Carpenter 91.8<br />
+&gt;   Silver Medal: Chase Carpenter   91.8<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Bronze Medal: , Cecilia Cornejo 91.6<br />
+&gt;   Bronze Medal: Cecilia Cornejo   91.6<br />
+&gt;   $<br />
+&gt;<br />
+&gt; The uninitialized value warnings come from the code:<br />
+&gt;<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; my @ranking = %players.sort: { .value };<br />
+&gt;&gt; for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+&gt;&gt;     given pop @ranking {<br />
+&gt;&gt;     say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; #    say &#34;$m Medal: $_&#34;;<br />
+</div>
+&gt;&gt;     };<br />
+&gt;&gt; };<br />
+&gt;&gt;     <br />
+</div>
+&gt;<br />
+&gt; After sorting %players by .value, @ranking is left as a list of Pair<br />
+&gt; objects.  Thus &#34;pop @ranking&#34; returns a Pair, and the uninitialized<br />
+&gt; value comes from using the Pair as a key in %players{$_} .<br />
+&gt;<br />
+&gt; Let us know if you still see the segmentation fault when run with<br />
+&gt; &#34;parrot perl6.pbc&#34; instead of the perl6 binary.<br />
+&gt;<br />
+&gt; Thanks!<br />
+&gt;<br />
+&gt; Pm<br />
+&gt;<br />
+&gt;<br />
+&gt;   <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518724" href="/rt3/Ticket/Display.html?id=62176#txn-518724">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;14:20:32&nbsp;2009</td>
+    <td class="description">
+      richardh -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[perl #62176] wierd seg.. Follow up</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 23:12:36 +0300</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Richard Hainsworth &lt;richard <!-- x --> at rusrating.ru&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518724/244798/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.8k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Following up.<br />
+<br />
+Note that you need to delete the first &#39;say&#39; line and uncomment the <br />
+second. Running the first &#39;say&#39; line clears up the fault with the second <br />
+one. Deleting the first, yields the fault.<br />
+<br />
+Tried the script using parrot and perl6.pbc eliminates the fault.<br />
+<br />
+Richard<br />
+<br />
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat Jan 10 12:19:38 2009, richardh wrote:<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Getting a wierd segmentation fault with the following program &#40;also<br />
+&gt;&gt; attached&#41;.<br />
+&gt;&gt;<br />
+&gt;&gt; I am using rakudo from parrot 35286<br />
+&gt;&gt; [...]<br />
+&gt;&gt;     <br />
+</div>
+&gt;<br />
+&gt; Try running the script using parrot directly instead of the &#34;perl6&#34;<br />
+&gt; binary, and let us know if you still see the segfault.  &#40;The perl6<br />
+&gt; binary is known to have some issues with segfaulting, and is really more<br />
+&gt; of a Parrot issue than a Rakudo one.&#41;<br />
+&gt;<br />
+&gt; For the record, on my system the program works as expected with the<br />
+&gt; &#34;say&#34; line uncommented:<br />
+&gt;<br />
+&gt;   $ ./parrot perl6.pbc skatersv2.pl<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Gold Medal: , Guido Chuffart    94.2<br />
+&gt;   Gold Medal: Guido Chuffart      94.2<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Silver Medal: , Chase Carpenter 91.8<br />
+&gt;   Silver Medal: Chase Carpenter   91.8<br />
+&gt;   Use of uninitialized value<br />
+&gt;   Bronze Medal: , Cecilia Cornejo 91.6<br />
+&gt;   Bronze Medal: Cecilia Cornejo   91.6<br />
+&gt;   $<br />
+&gt;<br />
+&gt; The uninitialized value warnings come from the code:<br />
+&gt;<br />
+&gt;   <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; my @ranking = %players.sort: { .value };<br />
+&gt;&gt; for &lt;Gold Silver Bronze&gt; -&gt; $m {<br />
+&gt;&gt;     given pop @ranking {<br />
+&gt;&gt;     say &#34;$m Medal: &#34; ~ %players{$_} ~ &#39;, &#39; ~ $_;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt; #    say &#34;$m Medal: $_&#34;;<br />
+</div>
+&gt;&gt;     };<br />
+&gt;&gt; };<br />
+&gt;&gt;     <br />
+</div>
+&gt;<br />
+&gt; After sorting %players by .value, @ranking is left as a list of Pair<br />
+&gt; objects.  Thus &#34;pop @ranking&#34; returns a Pair, and the uninitialized<br />
+&gt; value comes from using the Pair as a key in %players{$_} .<br />
+&gt;<br />
+&gt; Let us know if you still see the segmentation fault when run with<br />
+&gt; &#34;parrot perl6.pbc&#34; instead of the perl6 binary.<br />
+&gt;<br />
+&gt; Thanks!<br />
+&gt;<br />
+&gt; Pm<br />
+&gt;<br />
+&gt;<br />
+&gt;   <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537176" href="/rt3/Ticket/Display.html?id=62176#txn-537176">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Feb&nbsp;28&nbsp;20:38:13&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/537176/254770/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 258b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+At this point I&#39;m guessing that the segfault seen here was due to the<br />
+double-free problem in Parrot that was fixed earlier this week; so I&#39;m<br />
+marking this ticket as resolved.  If it arises again, feel free to<br />
+reopen this ticket or open a new one.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537178" href="/rt3/Ticket/Display.html?id=62176#txn-537178">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Feb&nbsp;28&nbsp;20:38:14&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.931559</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

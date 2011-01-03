@@ -1,0 +1,827 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64478: Pairs constructor :pair and :!pair do not work properly in Rakudo</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64478">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64478: Pairs constructor :pair and :!pair do not work properly in Rakudo</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64478">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64478</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64478">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+ihrd
+&lt;forihrd [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64478">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+patch.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/549600/261330/patch.diff">
+Mon Apr 06 14:28:23 2009 (857b) by ihrd
+</a>
+</font></li>
+</ul>
+
+
+colonpair-tests.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/549602/261336/colonpair-tests.diff">
+Mon Apr 06 14:28:32 2009 (748b) by ihrd
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64478">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549274" href="/rt3/Ticket/Display.html?id=64478#txn-549274">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;05&nbsp;05:16:25&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Pairs constructor :pair and :!pair do not work properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 5 Apr 2009 23:16:07 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Илья &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549274/261194/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 325b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Ho there,<br />
+<br />
+Pairs constructor changed:<br />
+<br />
+S02, L2538<br />
+<br />
+    Fat arrow           Adverbial pair  Paren form<br />
+<div class="message-stanza-depth-1">
+    =========           ==============  ==========<br />
+</div>
+    a =&gt; True           :a<br />
+    a =&gt; False          :!a<br />
+<br />
+<br />
+but in Rakudo, now:<br />
+<div class="message-stanza-depth-1">
+&gt; :a.perl.say<br />
+</div>
+&#34;a&#34; =&gt; 1<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; :!a.perl.say<br />
+</div>
+&#34;a&#34; =&gt; 0<br />
+<br />
+I hope this one easy to fix. Thank you!<br />
+<br />
+Ilya<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549488" href="/rt3/Ticket/Display.html?id=64478#txn-549488">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;06&nbsp;04:42:25&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549598" href="/rt3/Ticket/Display.html?id=64478#txn-549598">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;06&nbsp;14:28:07&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64478] Pairs constructor :pair and :!pair do not work  properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 7 Apr 2009 00:30:08 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Илья &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549598/261324/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 865b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Argh, gmail eat one.<br />
+<br />
+2009/4/7 Илья &lt;forihrd <!-- x --> at gmail.com&gt;:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi there,<br />
+&gt; Moritz++ and Jonathan++ help my to make patch for this bug, diffs in attach.<br />
+&gt;<br />
+&gt; Ilya<br />
+&gt;<br />
+&gt; 2009/4/5 Ilya Belikin &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  Ilya Belikin<br />
+&gt;&gt; # Please include the string:  [perl #64478]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=64478 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; Ho there,<br />
+&gt;&gt;<br />
+&gt;&gt; Pairs constructor changed:<br />
+&gt;&gt;<br />
+&gt;&gt; S02, L2538<br />
+&gt;&gt;<br />
+&gt;&gt;    Fat arrow           Adverbial pair  Paren form<br />
+&gt;&gt;    =========           ==============  ==========<br />
+&gt;&gt;    a =&gt; True           :a<br />
+&gt;&gt;    a =&gt; False          :!a<br />
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; but in Rakudo, now:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; :a.perl.say<br />
+</div>
+&gt;&gt; &#34;a&#34; =&gt; 1<br />
+&gt;&gt;<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; :!a.perl.say<br />
+</div>
+&gt;&gt; &#34;a&#34; =&gt; 0<br />
+&gt;&gt;<br />
+&gt;&gt; I hope this one easy to fix. Thank you!<br />
+&gt;&gt;<br />
+&gt;&gt; Ilya<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549600" href="/rt3/Ticket/Display.html?id=64478#txn-549600">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;06&nbsp;14:28:23&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64478] Pairs constructor :pair and :!pair do not work  properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 7 Apr 2009 00:32:26 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Илья &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549600/261328/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 21b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Yet Another Approach<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549600/261330/patch.diff">Download patch.diff</a>
+<span class="downloadcontenttype">
+[text/x-patch 857b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549602" href="/rt3/Ticket/Display.html?id=64478#txn-549602">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;06&nbsp;14:28:32&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64478] Pairs constructor :pair and :!pair do not work  properly in Rakudo</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 7 Apr 2009 00:28:10 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Илья &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549602/261334/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 762b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi there,<br />
+Moritz++ and Jonathan++ help my to make patch for this bug, diffs in attach.<br />
+<br />
+Ilya<br />
+<br />
+2009/4/5 Ilya Belikin &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  Ilya Belikin<br />
+&gt; # Please include the string:  [perl #64478]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=64478 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; Ho there,<br />
+&gt;<br />
+&gt; Pairs constructor changed:<br />
+&gt;<br />
+&gt; S02, L2538<br />
+&gt;<br />
+&gt;    Fat arrow           Adverbial pair  Paren form<br />
+&gt;    =========           ==============  ==========<br />
+&gt;    a =&gt; True           :a<br />
+&gt;    a =&gt; False          :!a<br />
+&gt;<br />
+&gt;<br />
+&gt; but in Rakudo, now:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; :a.perl.say<br />
+</div>
+&gt; &#34;a&#34; =&gt; 1<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; :!a.perl.say<br />
+</div>
+&gt; &#34;a&#34; =&gt; 0<br />
+&gt;<br />
+&gt; I hope this one easy to fix. Thank you!<br />
+&gt;<br />
+&gt; Ilya<br />
+&gt;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549602/261336/colonpair-tests.diff">Download colonpair-tests.diff</a>
+<span class="downloadcontenttype">
+[text/x-patch 748b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549904" href="/rt3/Ticket/Display.html?id=64478#txn-549904">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Apr&nbsp;07&nbsp;14:53:54&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549904/261446/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 168b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Thanks, I&#39;ve added the tests to the test suite &#40;fudged for now&#41;. I can&#39;t<br />
+comment on the code fix itself, I hope that jonathan or pmichaud will<br />
+chime in.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.186692</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62164: Smartmatch dies when comparing a Str and an Array</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62164">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62164: Smartmatch dies when comparing a Str and an Array</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62164">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62164</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62164">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62164">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62164">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-517758" href="/rt3/Ticket/Display.html?id=62164#txn-517758">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jan&nbsp;10&nbsp;08:20:33&nbsp;2009</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Smartmatch dies when comparing a Str and an Array</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 10 Jan 2009 17:19:57 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/517758/244266/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 278b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; perl6: say &#34;foo&#34; ~~ [&#34;foo&#34;, &#34;bar&#34;]<br />
+&lt;p6eval&gt; ..rakudo 35339: OUTPUT«Non-dwimmy hyperoperator cannot be<br />
+used on arrays of different sizes or dimensions [...]<br />
+&lt;pmurias&gt; masak: i guess it&#39;s a bug as ~~ is *not* a hyperop<br />
+&lt;masak&gt; hm, you&#39;re right.<br />
+* masak submits rakudobug<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518268" href="/rt3/Ticket/Display.html?id=62164#txn-518268">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;04:36:44&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62164] Smartmatch dies when comparing a Str and an Array</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 09:21:02 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518268/244552/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 960b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+ah, and this bug broke my code :<br />
+I was using Str ~~ Array, Regex ~~ Array and it works properly before.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; &#34;:&#41;&#34;.say if &#39;a&#39; ~~ &lt;a b c&gt;<br />
+</div>
+Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+or dimensions.<br />
+<div class="message-stanza-depth-1">
+&gt; &#34;:&#41;&#34;.say if /b/ ~~ &lt;a b c&gt;<br />
+</div>
+Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+or dimensions.<br />
+<br />
+I can write some tests if that is necessary<br />
+<br />
+2009/1/11 via RT Carl Mäsak &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; # New Ticket Created by  &#34;Carl Mäsak&#34;<br />
+&gt; # Please include the string:  [perl #62164]<br />
+&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=62164 &gt;<br />
+</div>
+&gt;<br />
+&gt;<br />
+&gt; &lt;masak&gt; perl6: say &#34;foo&#34; ~~ [&#34;foo&#34;, &#34;bar&#34;]<br />
+&gt; &lt;p6eval&gt; ..rakudo 35339: OUTPUT«Non-dwimmy hyperoperator cannot be<br />
+&gt; used on arrays of different sizes or dimensions [...]<br />
+&gt; &lt;pmurias&gt; masak: i guess it&#39;s a bug as ~~ is *not* a hyperop<br />
+&gt; &lt;masak&gt; hm, you&#39;re right.<br />
+&gt; * masak submits rakudobug<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518272" href="/rt3/Ticket/Display.html?id=62164#txn-518272">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;04:37:02&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-518274" href="/rt3/Ticket/Display.html?id=62164#txn-518274">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jan&nbsp;11&nbsp;04:54:29&nbsp;2009</td>
+    <td class="description">
+      ihrd -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62164] Smartmatch dies when comparing a Str and an Array</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 11 Jan 2009 11:21:36 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Илья&#34; &lt;forihrd <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/518274/244556/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi there,<br />
+some additional information about that bug &#40;I trying to found workaround&#41;:<br />
+<br />
+if &lt;a b c&gt; ~~ /&#39;a&#39;/ { say &#34;Yay&#34; } # so Array ~~ Regex works properly &#40;<br />
+Regex ~~ Array still broken&#41;<br />
+<br />
+&#34;:&#41;&#34;.say if &lt;a b c&gt; ~~ &#39;a&#39; # nothing :&#40;<br />
+<br />
+&#34;:&#40;&#34;.say if &lt;a b c&gt; ~~ &#39;a b c&#39; # :&#40; # looks like arrays flattening<br />
+&#40;old bug again&#41; here<br />
+<br />
+ihrd<br />
+<br />
+2009/1/11 Илья &lt;forihrd <!-- x --> at gmail.com&gt;:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi,<br />
+&gt; ah, and this bug broke my code :<br />
+&gt; I was using Str ~~ Array, Regex ~~ Array and it works properly before.<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; &#34;:&#41;&#34;.say if &#39;a&#39; ~~ &lt;a b c&gt;<br />
+</div>
+&gt; Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+&gt; or dimensions.<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; &#34;:&#41;&#34;.say if /b/ ~~ &lt;a b c&gt;<br />
+</div>
+&gt; Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+&gt; or dimensions.<br />
+&gt;<br />
+&gt; I can write some tests if that is necessary<br />
+&gt;<br />
+&gt; 2009/1/11 via RT Carl Mäsak &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;:<br />
+<div class="message-stanza-depth-2">
+<div class="message-stanza-depth-3">
+&gt;&gt; # New Ticket Created by  &#34;Carl Mäsak&#34;<br />
+&gt;&gt; # Please include the string:  [perl #62164]<br />
+&gt;&gt; # in the subject line of all future correspondence about this issue.<br />
+&gt;&gt; # &lt;URL: http://rt.perl.org/rt3/Ticket/Display.html?id=62164 &gt;<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt;<br />
+&gt;&gt; &lt;masak&gt; perl6: say &#34;foo&#34; ~~ [&#34;foo&#34;, &#34;bar&#34;]<br />
+&gt;&gt; &lt;p6eval&gt; ..rakudo 35339: OUTPUT«Non-dwimmy hyperoperator cannot be<br />
+&gt;&gt; used on arrays of different sizes or dimensions [...]<br />
+&gt;&gt; &lt;pmurias&gt; masak: i guess it&#39;s a bug as ~~ is *not* a hyperop<br />
+&gt;&gt; &lt;masak&gt; hm, you&#39;re right.<br />
+&gt;&gt; * masak submits rakudobug<br />
+&gt;&gt;<br />
+</div>
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532126" href="/rt3/Ticket/Display.html?id=62164#txn-532126">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;11:21:22&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532126/252304/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 316b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Jan 10 08:20:33 2009, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;masak&gt; perl6: say &#34;foo&#34; ~~ [&#34;foo&#34;, &#34;bar&#34;]<br />
+&gt; &lt;p6eval&gt; ..rakudo 35339: OUTPUT«Non-dwimmy hyperoperator cannot be<br />
+&gt; used on arrays of different sizes or dimensions [...]<br />
+</div>
+<br />
+This now works &#40;gives 0&#41;.<br />
+<br />
+And will reply to next bit of the ticket separately...<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532132" href="/rt3/Ticket/Display.html?id=62164#txn-532132">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;11:24:19&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/532132/252310/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 731b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jan 11 04:36:44 2009, ihrd wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hi,<br />
+&gt; ah, and this bug broke my code :<br />
+&gt; I was using Str ~~ Array, Regex ~~ Array and it works properly before.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &#34;:&#41;&#34;.say if &#39;a&#39; ~~ &lt;a b c&gt;<br />
+</div>
+</div>
+<br />
+Now gives no output, which is the correct thing. If you were expecting<br />
+different, your code is wrong. :-&#41; Maybe you meant:<br />
+<br />
+&#34;:&#41;&#34;.say if &lt;a b c&gt; ~~ &#39;a&#39;,*<br />
+<br />
+Or something.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+&gt; or dimensions.<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; &#34;:&#41;&#34;.say if /b/ ~~ &lt;a b c&gt;<br />
+</div>
+&gt; Non-dwimmy hyperoperator cannot be used on arrays of different sizes<br />
+&gt; or dimensions.<br />
+&gt; <br />
+</div>
+And this prints nothing too - note array grep would have the /b/ on the<br />
+other side. And that works. :-&#41;<br />
+<br />
+So, think this ticket can be resolved.<br />
+<br />
+Thanks!<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-532138" href="/rt3/Ticket/Display.html?id=62164#txn-532138">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Feb&nbsp;13&nbsp;11:24:22&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.185011</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

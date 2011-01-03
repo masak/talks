@@ -1,0 +1,55 @@
+---
+- "There's some madness to the method after all"
+- Two parts
+- The language
+- (What is Perl 6?)
+- The process
+- (How is Perl 6 formed?)
+- THE LANGUAGE
+- A new Perl
+- '"easy things easy, hard things possible"'
+- disciple - master - guru
+- Operators
+- bronze badge
+- learn all the common ops
+- silver badge
+- meta-operators
+- gold badge
+- roll your own ops
+- subroutines
+- bronze badge
+- signatures
+- type constraints
+- silver badge
+- multi dispatch
+- gold badge
+- roll your own dispatcher
+- OO
+- bronze badge
+- classes, methods, attributes
+- silver badge
+- anon classes, roles, mixins
+- gold badge
+- roll your own MOP
+- Regexes
+- bronze badge
+- new, cleaner syntax and semantics
+- silver badge
+- grammars and inheritance
+- backtracking
+- parsing and responsibility
+- gold badge
+- roll your own Perl 6 syntax
+- Perl 6 is like a Möbius strip
+- "you look on the other side, and there's also Perl 6!"
+- THE PROCESS
+- '"when is Perl 6 going to be released?"'
+- two timelines
+- democracy
+- writable specification
+- anarchy
+- commitbit handed out to everyone
+- meritocracy
+- because that always happens
+- but we try to counteract that a bit
+- kindness towards newcomers

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg6130">
+  <defs
+     id="defs6132" />
+  <rect
+     width="930.53601"
+     height="585.03998"
+     x="60.913086"
+     y="79.527252"
+     id="rect6439"
+     style="opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:none" />
+  <text
+     x="95.17865"
+     y="130.74792"
+     id="text6141"
+     xml:space="preserve"
+     style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="95.17865"
+       y="130.74792"
+       id="tspan6143">   &lt;masak&gt; I increasingly long for first-class continuations in Perl 6, and it</tspan><tspan
+       x="95.17865"
+       y="153.24792"
+       id="tspan6145">           just feels so ironic that Rakudo then is built upon a VM that has'em.</tspan><tspan
+       x="95.17865"
+       y="175.74792"
+       id="tspan6147">   &lt;masak&gt; and still they're not even planned to be reachable, except awkwardly</tspan><tspan
+       x="95.17865"
+       y="198.24792"
+       id="tspan6149">           through gather/take!</tspan><tspan
+       x="95.17865"
+       y="220.74792"
+       id="tspan6151">...</tspan><tspan
+       x="95.17865"
+       y="243.24792"
+       id="tspan6153">   &lt;masak&gt; a follow-up on my continuations rant from yesterday: S04:627</tspan><tspan
+       x="95.17865"
+       y="265.74792"
+       id="tspan6155">           specifies C&lt;gather&gt; as being lazy. how will this be pulled off on a</tspan><tspan
+       x="95.17865"
+       y="288.24792"
+       id="tspan6157">           VM without continuations?</tspan><tspan
+       x="95.17865"
+       y="310.74792"
+       id="tspan6159">...</tspan><tspan
+       x="95.17865"
+       y="333.24792"
+       id="tspan6161">   &lt;masak&gt; I'll settle for 'delimited' continuations, even though I don't know</tspan><tspan
+       x="95.17865"
+       y="355.74792"
+       id="tspan6163">           exactly what they are.</tspan><tspan
+       x="95.17865"
+       y="378.24792"
+       id="tspan6165">...</tspan><tspan
+       x="95.17865"
+       y="400.74792"
+       id="tspan6167">&lt;TimToady&gt; masak: on VMs without continuations, laziness must be emulated with</tspan><tspan
+       x="95.17865"
+       y="423.24792"
+       id="tspan6169">           closures, as STD does on Perl 5.</tspan><tspan
+       x="95.17865"
+       y="445.74792"
+       id="tspan6171">   &lt;masak&gt; TimToady: I'm running up against some situations where first-class</tspan><tspan
+       x="95.17865"
+       y="468.24792"
+       id="tspan6173">           continuations would be very useful. that's why I'm thinking of this</tspan><tspan
+       x="95.17865"
+       y="490.74792"
+       id="tspan6175">           lately.</tspan><tspan
+       x="95.17865"
+       y="513.24792"
+       id="tspan6177">   &lt;masak&gt; or maybe not even first-class, but some mechanism such as Ruby's</tspan><tspan
+       x="95.17865"
+       y="535.74792"
+       id="tspan6179">           'yield'.</tspan><tspan
+       x="95.17865"
+       y="558.24792"
+       id="tspan6181">   &lt;masak&gt; it feels strange that we have gather/take and pipes, but no local way</tspan><tspan
+       x="95.17865"
+       y="580.74792"
+       id="tspan6183">           to make the same kind of control flow.</tspan><tspan
+       x="95.17865"
+       y="603.24792"
+       id="tspan6185">&lt;TimToady&gt; that's because I like to keep my laziness orthogonal to sub calls</tspan><tspan
+       x="95.17865"
+       y="625.74792"
+       id="tspan6225">   &lt;masak&gt; I see.</tspan></text>
+</svg>

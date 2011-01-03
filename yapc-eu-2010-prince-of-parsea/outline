@@ -1,0 +1,22 @@
+* Prince of Persia: saving the princess
+** Obstacles: Spikes, falling blocks, great big saw things, sword-fighting
+   skeletons, guards, opening and closing prison doors, dangerous jumps.
+** This is what it's like to be a regexp.
+** / The quick brown fox(es)? jump[s { !$0 }|ed]? over the lazy dog /
+
+* .kv
+* Sublanguages
+** "...give him a lollipop" -- Alan Perlis(?)
+** Perl 6 hands out lollipops as if they were candy!
+** Different levels of intelligence
+** q[], qq[], qw[], qqw[], qx[], qqx[], tr///, rx[], quasi
+** Let's invent a sublanguage
+** Sublangages
+*** Are declarative
+*** Hides the HOW and highlights the WHAT
+*** Example: backwards matcher
+*** Backwards matcher gives us a fast <?after ...>
+
+* Prince of Persia: saving yourself
+** Turn back time!
+** Why is this a big deal?

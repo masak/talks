@@ -1,0 +1,1406 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#64062: split should return captured delimiters</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D64062">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#64062: split should return captured delimiters</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64062">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">64062</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=64062">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+DrTech
+&lt;clint [at] traveljury.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=64062">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+Any-str.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/550072/261532/Any-str.patch">
+Wed Apr 08 05:56:02 2009 (1.9k) by ronaldxs
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/546406/259738/Any-str.patch">
+Fri Mar 27 08:28:06 2009 (1k) by ronaldxs
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/546190/259602/Any-str.patch">
+Thu Mar 26 18:00:27 2009 (1.2k) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+
+split-simple.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/550072/261526/split-simple.patch">
+Wed Apr 08 05:56:02 2009 (1.7k) by ronaldxs
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/546406/259732/split-simple.patch">
+Fri Mar 27 08:28:06 2009 (1020b) by ronaldxs
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/546190/259596/split-simple.patch">
+Thu Mar 26 18:00:27 2009 (1005b) by ronaldxs
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=64062">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-543664" href="/rt3/Ticket/Display.html?id=64062#txn-543664">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;21&nbsp;12:52:33&nbsp;2009</td>
+    <td class="description">
+      DrTech -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">split should return captured delimiters</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 21 Mar 2009 20:52:28 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Clinton Gormley &lt;clint <!-- x --> at traveljury.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/543664/258084/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 169b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&#39;abc-def--ghi&#39;.split&#40;/&#40;\-+&#41;/&#41; <br />
+     should return [&#39;abc&#39;,&#39;-&#39;,&#39;def,&#39;--&#39;,&#39;ghi&#39;]<br />
+     but it returns ﻿[&#39;abc&#39;,&#39;def,&#39;ghi&#39;]<br />
+<br />
+added tests to t/spec/S32-str/split-simple.t<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-543670" href="/rt3/Ticket/Display.html?id=64062#txn-543670">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;21&nbsp;13:01:25&nbsp;2009</td>
+    <td class="description">
+      DrTech -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/543670/258090/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 851b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; added tests to t/spec/S32-str/split-simple.t<br />
+</div>
+<br />
+or i would have done if i could remember my pugs password!<br />
+<br />
+Index: split-simple.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- split-simple.t      &#40;revision 25961&#41;<br />
++++ split-simple.t      &#40;working copy&#41;<br />
+@@ -2,7 +2,7 @@<br />
+ use Test;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S29/Str/&#34;=item split&#34;&gt;<br />
+</div>
+-plan 32;<br />
++plan 35;<br />
+ <br />
+ =begin description<br />
+ <br />
+@@ -65,4 +65,14 @@<br />
+ ok &#40;&#39;&#39;.split&#40;&#39;&#39;&#41;&#41;.elems == 0, q{&#39;&#39;.split&#40;&#39;&#39;&#41; returns empty list};<br />
+ ok &#40;split&#40;&#39;&#39;, &#39;&#39;&#41;&#41;.elems == 0, q{&#39;&#39;.split&#40;&#39;&#39;&#41; returns empty list};<br />
+ <br />
++# split should return capture<br />
++my @split = &#39;abc def  ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;;<br />
++#?rakudo skip &#34;split_capture&#34;<br />
++#?DOES 3<br />
++{<br />
++    ok @split.elems == 5, q{split returns captured delimiter} ;<br />
++    ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
++    ok @split[3] eq &#39;  &#39;, q{split captured multiple spaces};<br />
++}<br />
++<br />
+<div class="message-stanza-depth-1">
+ # vim: ft=perl6<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-543674" href="/rt3/Ticket/Display.html?id=64062#txn-543674">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;21&nbsp;13:01:26&nbsp;2009</td>
+    <td class="description">
+      DrTech -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-544314" href="/rt3/Ticket/Display.html?id=64062#txn-544314">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;22&nbsp;12:38:41&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/544314/258518/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 255b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Mar 21 13:01:25 2009, DrTech wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt; &gt; added tests to t/spec/S32-str/split-simple.t<br />
+</div>
+&gt; <br />
+&gt; or i would have done if i could remember my pugs password!<br />
+</div>
+<br />
+I&#39;ve added the tests, and re-sent your pugs password.<br />
+<br />
+Thanks for the report and the tests,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-546190" href="/rt3/Ticket/Display.html?id=64062#txn-546190">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Mar&nbsp;26&nbsp;18:00:27&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546190/259590/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 220b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Please find attached a patch to implement requested functionality. <br />
+Passes split-simple.t tests and includes a patch that updates those<br />
+tests and adds one more that verifies correct performance with a return<br />
+limit count.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546190/259596/split-simple.patch">Download split-simple.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1005b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/spec/S32-str/split-simple.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spec/S32-str/split-simple.t       &#40;revision 26002&#41;<br />
++++ t/spec/S32-str/split-simple.t       &#40;working copy&#41;<br />
+@@ -2,7 +2,7 @@<br />
+ use Test;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S29/Str/&#34;=item split&#34;&gt;<br />
+</div>
+-plan 45;<br />
++plan 46;<br />
+ <br />
+ =begin description<br />
+ <br />
+@@ -83,12 +83,13 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # split should return capture<br />
+</div>
+ my @split = &#39;abc def ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;;<br />
+-#?rakudo todo &#34;split should return captures&#34;<br />
+-#?DOES 3<br />
+-{<br />
+-    ok @split.elems == 5, q{split returns captured delimiter} ;<br />
+-    ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
+-    ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
+-}<br />
++ok @split.elems == 5, q{split returns captured delimiter} ;<br />
++ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
++ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
++@split = &#39;abc::def::ghi&#39;.split&#40;/&#40;\:&#41;/, 5&#41;;<br />
++ok  @split.elems == 5   and<br />
++    @split[3] eq &#39;def&#39;  and<br />
++    @split[4] eq &#39;:&#39;,<br />
++    q{split with capture obeyed limit};<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # vim: ft=perl6<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546190/259602/Any-str.patch">Download Any-str.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/src/setting/Any-str.pm b/src/setting/Any-str.pm<br />
+index 27c2080..85e970a 100644<br />
+--- a/src/setting/Any-str.pm<br />
++++ b/src/setting/Any-str.pm<br />
+@@ -54,9 +54,25 @@ class Any is also {<br />
+         my $s = ~self;<br />
+         my $l = $limit ~~ Whatever ?? Inf !! $limit;<br />
+         my $keep = &#39;&#39;;<br />
++<br />
+         return gather {<br />
+             while $l &gt; 1 &#38;&#38; $s ~~ $delimiter {<br />
+                 take $keep ~ $s.substr&#40;0, $/.from&#41;;<br />
++                $l--;<br />
++<br />
++                # match objects too tied to underlying strings so copy ...<br />
++                my @mat_cap = @&#40;&#41;.map: { substr&#40;$_, 0&#41; };<br />
++                my $mat_cap_n = $l min @mat_cap.elems;<br />
++                if &#40;$mat_cap_n&#41; {<br />
++                    if $mat_cap_n == @mat_cap {<br />
++                        take @mat_cap<br />
++                    }<br />
++                    else {<br />
++                        take @mat_cap[ 0 .. &#40;$mat_cap_n -1&#41; ]<br />
++                    }<br />
++                    $l -= $mat_cap_n<br />
++                }<br />
++<br />
+                 if $/.from == $/.to {<br />
+                     $keep = $s.substr&#40;$/.to, 1&#41;;<br />
+                     $s.=substr&#40;$/.to + 1&#41;;<br />
+@@ -64,7 +80,6 @@ class Any is also {<br />
+                     $keep = &#39;&#39;;<br />
+                     $s.=substr&#40;$/.to&#41;<br />
+                 }<br />
+-                $l--;<br />
+             }<br />
+             take $keep ~ $s if $l &gt; 0;<br />
+         }<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-546360" href="/rt3/Ticket/Display.html?id=64062#txn-546360">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Mar&nbsp;27&nbsp;06:35:20&nbsp;2009</td>
+    <td class="description">
+      duff <!-- x --> at tamucc.edu -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #64062] split should return captured delimiters</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 27 Mar 2009 08:31:35 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Ron Schmidt via RT &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Scott Duff &lt;duff <!-- x --> at tamucc.edu&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546360/259694/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Mar 26, 2009 at 06:00:29PM -0700, Ron Schmidt via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Please find attached a patch to implement requested functionality. <br />
+&gt; Passes split-simple.t tests and includes a patch that updates those<br />
+&gt; tests and adds one more that verifies correct performance with a return<br />
+&gt; limit count.<br />
+</div>
+<br />
+<div class="message-stanza-depth-1">
+&gt; Index: t/spec/S32-str/split-simple.t<br />
+<div class="message-stanza-depth-2">
+&gt; ===================================================================<br />
+</div>
+&gt; --- t/spec/S32-str/split-simple.t     &#40;revision 26002&#41;<br />
+&gt; +++ t/spec/S32-str/split-simple.t     &#40;working copy&#41;<br />
+&gt; @@ -2,7 +2,7 @@<br />
+&gt;  use Test;<br />
+&gt;  <br />
+<div class="message-stanza-depth-2">
+&gt;  # L&lt;S29/Str/&#34;=item split&#34;&gt;<br />
+</div>
+&gt; -plan 45;<br />
+&gt; +plan 46;<br />
+&gt;  <br />
+&gt;  =begin description<br />
+&gt;  <br />
+&gt; @@ -83,12 +83,13 @@<br />
+&gt;  <br />
+<div class="message-stanza-depth-2">
+&gt;  # split should return capture<br />
+</div>
+&gt;  my @split = &#39;abc def ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;;<br />
+&gt; -#?rakudo todo &#34;split should return captures&#34;<br />
+&gt; -#?DOES 3<br />
+&gt; -{<br />
+&gt; -    ok @split.elems == 5, q{split returns captured delimiter} ;<br />
+&gt; -    ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
+&gt; -    ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
+&gt; -}<br />
+&gt; +ok @split.elems == 5, q{split returns captured delimiter} ;<br />
+&gt; +ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
+&gt; +ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
+&gt; +@split = &#39;abc::def::ghi&#39;.split&#40;/&#40;\:&#41;/, 5&#41;;<br />
+&gt; +ok  @split.elems == 5   and<br />
+&gt; +    @split[3] eq &#39;def&#39;  and<br />
+&gt; +    @split[4] eq &#39;:&#39;,<br />
+&gt; +    q{split with capture obeyed limit};<br />
+</div>
+<br />
+That&#39;s not right, is it?  Or I don&#39;t understand what perl 6 does with<br />
+the capturing parens that&#39;s different from perl 5.  In perl 5 &#40;and what<br />
+I would expect from perl 6&#41;, @split would contain the following strings<br />
+at the following array indices:<br />
+<br />
+0 &#34;abc&#34;<br />
+1 &#34;:&#34;<br />
+2 &#34;&#34;<br />
+3 &#34;:&#34;<br />
+4 &#34;def&#34;<br />
+5 &#34;:&#34;<br />
+6 &#34;&#34;<br />
+7 &#34;:&#34;<br />
+8 &#34;ghi&#34;<br />
+<br />
+I assume the error is because of the switch in the string from using a<br />
+single delimiter to using two delimiters &#40;or from not using /&#39;::&#39;/ as<br />
+the regex depending on how you look at things&#41;.<br />
+<br />
+Also, setting the limit parameter to 5 seems fairly useless in the<br />
+example because there&#39;s only 5 things to split to begin with. Usually<br />
+the limit comes in to play when your string contains more pieces that<br />
+are potentially splittable on your delimiter than what you want.<br />
+<br />
+For instance, if the string were &#34;abc::def::ghi::jkl&#34;, @split would<br />
+contain &#40;&#34;abc&#34;,&#34;:&#34;,&#34;&#34;,&#34;:&#34;,&#34;def&#34;,&#34;:&#34;,&#34;&#34;,&#34;:&#34;,&#34;ghi::jkl&#34;&#41; <br />
+<br />
+-Scott<br />
+--<br />
+Jonathan Scott Duff <br />
+duff <!-- x --> at tamucc.edu<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-546406" href="/rt3/Ticket/Display.html?id=64062#txn-546406">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Mar&nbsp;27&nbsp;08:28:06&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546406/259726/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 520b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; That&#39;s not right, is it?  Or I don&#39;t understand what perl 6 does with<br />
+&gt; the capturing parens that&#39;s different from perl 5.  In perl 5 &#40;and what<br />
+&gt; I would expect from perl 6&#41;, @split would contain the following strings<br />
+&gt; at the following array indices:<br />
+&gt; <br />
+</div>
+...<br />
+<br />
+Your concern seems to be with the added test and your issues with<br />
+respect to that test are valid.  A small change to the Any-str.pm/parrot<br />
+patch and a revised limit test are included with the updated attachments<br />
+that, I believe, address the noted problem&#40;s&#41;.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546406/259732/split-simple.patch">Download split-simple.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1020b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/spec/S32-str/split-simple.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spec/S32-str/split-simple.t       &#40;revision 26002&#41;<br />
++++ t/spec/S32-str/split-simple.t       &#40;working copy&#41;<br />
+@@ -2,7 +2,7 @@<br />
+ use Test;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S29/Str/&#34;=item split&#34;&gt;<br />
+</div>
+-plan 45;<br />
++plan 46;<br />
+ <br />
+ =begin description<br />
+ <br />
+@@ -83,12 +83,13 @@<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # split should return capture<br />
+</div>
+ my @split = &#39;abc def ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;;<br />
+-#?rakudo todo &#34;split should return captures&#34;<br />
+-#?DOES 3<br />
+-{<br />
+-    ok @split.elems == 5, q{split returns captured delimiter} ;<br />
+-    ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
+-    ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
+-}<br />
++ok @split.elems == 5, q{split returns captured delimiter} ;<br />
++ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
++ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
++@split = &#39;abc::def::ghi&#39;.split&#40;/&#40;\:&#41;/, 3&#41;;<br />
++ok  @split.elems == 5       and<br />
++    @split[3] eq &#39;:&#39;        and<br />
++    @split[4] eq &#39;def::ghi&#39;,<br />
++    q{split with capture obeyed limit};<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # vim: ft=perl6<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/546406/259738/Any-str.patch">Download Any-str.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/src/setting/Any-str.pm b/src/setting/Any-str.pm<br />
+index 27c2080..0346d4e 100644<br />
+--- a/src/setting/Any-str.pm<br />
++++ b/src/setting/Any-str.pm<br />
+@@ -54,9 +54,23 @@ class Any is also {<br />
+         my $s = ~self;<br />
+         my $l = $limit ~~ Whatever ?? Inf !! $limit;<br />
+         my $keep = &#39;&#39;;<br />
++<br />
+         return gather {<br />
+             while $l &gt; 1 &#38;&#38; $s ~~ $delimiter {<br />
+                 take $keep ~ $s.substr&#40;0, $/.from&#41;;<br />
++<br />
++                # match objects too tied to underlying strings so copy ...<br />
++                my @mat_cap = @&#40;&#41;.map: { substr&#40;$_, 0&#41; };<br />
++                my $mat_cap_n = $l min @mat_cap.elems;<br />
++                if &#40;$mat_cap_n&#41; {<br />
++                    if $mat_cap_n == @mat_cap {<br />
++                        take @mat_cap<br />
++                    }<br />
++                    else {<br />
++                        take @mat_cap[ 0 .. &#40;$mat_cap_n -1&#41; ]<br />
++                    }<br />
++                }<br />
++<br />
+                 if $/.from == $/.to {<br />
+                     $keep = $s.substr&#40;$/.to, 1&#41;;<br />
+                     $s.=substr&#40;$/.to + 1&#41;;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-549592" href="/rt3/Ticket/Display.html?id=64062#txn-549592">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Apr&nbsp;06&nbsp;13:58:12&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/549592/261318/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 541b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+An irc discussion &#40;http://irclog.perlgeek.de/perl6/2009-04-<br />
+06#i_1042505&#41; related to this ticket yielded some new insights.  The <br />
+premise of the ticket differs some from the p6 synopsis/spec <br />
+&#40;http://svn.pugscode.org/pugs/docs/Perl6/Spec/S32-setting-<br />
+library/Str.pod&#41;, seeming closer to the p5 behavior. It was also <br />
+decided that the return of capture results from a regex split pattern <br />
+should be explicitly requested with a ‘:all’ flag.  Some other flags <br />
+were proposed.  <br />
+<br />
+Please ignore any of my earlier proposed patches for now…<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-550072" href="/rt3/Ticket/Display.html?id=64062#txn-550072">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;08&nbsp;05:56:02&nbsp;2009</td>
+    <td class="description">
+      ronaldxs -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550072/261520/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 377b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Please find attached new, revised, hopefully more spec conformant, <br />
+patches.<br />
+<br />
+One of the two patches includes new tests with some appropriate <br />
+revisions demonstrating the ability to address Mr. Duff’s concerns.  <br />
+Specifically:<br />
+<br />
+split_test&#40;<br />
+    &#39;abc::def::ghi::&#39;.split&#40;/&#40;\:&#41;/, all =&gt; True, 3&#41;,<br />
+    [&#39;abc&#39;, &#39;:&#39;, &#39;&#39;, &#39;:&#39;, &#39;def::ghi::&#39;],<br />
+    &#39;split with capture obeyed limit&#39;<br />
+&#41;;<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550072/261526/split-simple.patch">Download split-simple.patch</a>
+<span class="downloadcontenttype">
+[text/plain 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/spec/S32-str/split-simple.t<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/spec/S32-str/split-simple.t       &#40;revision 26126&#41;<br />
++++ t/spec/S32-str/split-simple.t       &#40;working copy&#41;<br />
+@@ -2,7 +2,7 @@<br />
+ use Test;<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # L&lt;S29/Str/&#34;=item split&#34;&gt;<br />
+</div>
+-plan 45;<br />
++plan 52;<br />
+ <br />
+ =begin description<br />
+ <br />
+@@ -81,14 +81,37 @@<br />
+ ok &#40;&#39;&#39;.split&#40;&#39;&#39;&#41;&#41;.elems == 0, q{&#39;&#39;.split&#40;&#39;&#39;&#41; returns empty list};<br />
+ ok &#40;split&#40;&#39;&#39;, &#39;&#39;&#41;&#41;.elems == 0, q{&#39;&#39;.split&#40;&#39;&#39;&#41; returns empty list};<br />
+ <br />
+-# split should return capture<br />
+-my @split = &#39;abc def ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;;<br />
+-#?rakudo todo &#34;split should return captures&#34;<br />
+-#?DOES 3<br />
+-{<br />
+-    ok @split.elems == 5, q{split returns captured delimiter} ;<br />
+-    ok @split[1] eq &#39; &#39;, q{split captured single space};<br />
+-    ok @split[3] eq &#39; &#39;, q{split captured multiple spaces};<br />
+-}<br />
++# split should return capture with all flag set<br />
++split_test&#40;<br />
++    &#39;abc def  ghi&#39;.split&#40;/&#40;\s+&#41;/, all =&gt; True&#41;,<br />
++    [&#39;abc&#39;, &#39; &#39;, &#39;def&#39;, &#39;  &#39;, &#39;ghi&#39;],<br />
++    &#39;split returns captured spaces&#39;<br />
++&#41;;<br />
+ <br />
++# split should NOT return capture without all flag<br />
++split_test&#40;<br />
++    &#39;abc def  ghi&#39;.split&#40;/&#40;\s+&#41;/&#41;,<br />
++    [&#39;abc&#39;, &#39;def&#39;, &#39;ghi&#39;],<br />
++    &#39;split ignores captures without all flag&#39;<br />
++&#41;;<br />
++<br />
++ok  &#39;abc def  ghi&#39;.split&#40;/&#40;\s+&#41;/, :all&#40;True&#41;&#41;.[1] ~~ Match,<br />
++    &#39;capture returns match object not string&#39;;<br />
++<br />
++split_test&#40;<br />
++    &#39;abc::def::ghi::&#39;.split&#40;/&#40;\:&#41;/, all =&gt; True, 3&#41;,<br />
++    [&#39;abc&#39;, &#39;:&#39;, &#39;&#39;, &#39;:&#39;, &#39;def::ghi::&#39;],<br />
++    &#39;split with capture obeyed limit&#39;<br />
++&#41;;<br />
++<br />
++split_test&#40;<br />
++    &#39;AZZAZ&#39;.split&#40;/&#40;Z&#41;/, :all&#40;True&#41;, 9&#41;,<br />
++    [&#39;A&#39;, &#39;Z&#39;, &#39;&#39;, &#39;Z&#39;, &#39;A&#39;, &#39;Z&#39;, &#39;&#39;],<br />
++    &#39;end cases with trailing capture and too big limit&#39;<br />
++&#41;;<br />
++<br />
++my Match $mat = &#39;AZYAZ&#39;.split&#40;/&#40;Z&#41;&#40;Y&#41;/, :all&#40;True&#41;&#41;[1];<br />
++ok  $mat eq &#39;ZY&#39; &#38;&#38; $mat[0] eq &#39;Z&#39; &#38;&#38; $mat[1] eq &#39;Y&#39;,<br />
++    &#39;basic test of match with multiple captures&#39;;<br />
++<br />
+<div class="message-stanza-depth-1">
+ # vim: ft=perl6<br />
+</div>
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/550072/261532/Any-str.patch">Download Any-str.patch</a>
+<span class="downloadcontenttype">
+[text/plain 1.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/src/setting/Any-str.pm b/src/setting/Any-str.pm<br />
+index 27c2080..a898064 100644<br />
+--- a/src/setting/Any-str.pm<br />
++++ b/src/setting/Any-str.pm<br />
+@@ -50,13 +50,23 @@ class Any is also {<br />
+         $char<br />
+     }<br />
+ <br />
+-    our List multi method split&#40;Code $delimiter, $limit = *&#41; {<br />
++    our List multi method split&#40;Code $delimiter, $limit = *, :$all = False&#41; {<br />
+         my $s = ~self;<br />
+         my $l = $limit ~~ Whatever ?? Inf !! $limit;<br />
+         my $keep = &#39;&#39;;<br />
++        <br />
+         return gather {<br />
+-            while $l &gt; 1 &#38;&#38; $s ~~ $delimiter {<br />
++            # &lt;ws&gt; still off &#40;rt 60366&#41; and maybe not easy fix just now 3/31/09<br />
++            # second test is hack to prevent &lt;?wb&gt; or &lt;ws&gt; from hanging <br />
++            while $l &gt; 1 and $s ne &#39;&#39; and $s ~~ $delimiter {<br />
+                 take $keep ~ $s.substr&#40;0, $/.from&#41;;<br />
++                if $all and &#40;@&#40;$/&#41; or %&#40;$/&#41;&#41; {<br />
++                    my Match $mat = $/.clone;<br />
++                    # work around too close binding of match to underly string<br />
++                    $mat[ $_ ] = $mat[ $_ ].clone for 0 .. &#40;@&#40;&#41;.elems -1&#41;;<br />
++                    $mat{ $_ } = $mat{ $_ }.clone for %&#40;&#41;.keys;<br />
++                    take $mat;   <br />
++                }<br />
+                 if $/.from == $/.to {<br />
+                     $keep = $s.substr&#40;$/.to, 1&#41;;<br />
+                     $s.=substr&#40;$/.to + 1&#41;;<br />
+@@ -66,12 +76,15 @@ class Any is also {<br />
+                 }<br />
+                 $l--;<br />
+             }<br />
+-            take $keep ~ $s if $l &gt; 0;<br />
++            unless $l &lt;= 0 or &#40;$keep eq &#39;&#39; and $s eq &#39;&#39; and $l == 0&#41; {<br />
++                take $keep ~ $s    <br />
++            }<br />
+         }<br />
+     }<br />
+ <br />
+<div class="message-stanza-depth-1">
+     # TODO: substitute with &#39;$delimiter as Str&#39; once coercion is implemented<br />
+</div>
+-    our List multi method split&#40;$delimiter, $limit = *&#41; {<br />
++    # :$all = False just keeps MMD happy for now ...<br />
++    our List multi method split&#40;$delimiter, $limit = *, :$all = False&#41; {<br />
+         my Int $prev = 0;<br />
+         my $l = $limit ~~ Whatever ?? Inf !! $limit;<br />
+         my $s = ~self;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.583025</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

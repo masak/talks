@@ -1,0 +1,656 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62504: Rakudo segfault on multi type mismatch</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62504">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62504: Rakudo segfault on multi type mismatch</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62504">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62504</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62504">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+isop
+&lt;isop4 [at] yahoo.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62504">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62504">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522180" href="/rt3/Ticket/Display.html?id=62504#txn-522180">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;13:01:38&nbsp;2009</td>
+    <td class="description">
+      isop -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo segfault on multi type mismatch</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 19 Jan 2009 13:00:23 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug &lt;parrotbug <!-- x --> at parrotcode.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">isop &lt;isop4 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522180/246670/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 96b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Following perl6 code segfaults:<br />
+<br />
+multi foo&#40;$x where { $x == 5 }&#41; { say &#39;yum&#39; }<br />
+foo 8;<br />
+<br />
+<br />
+      <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522372" href="/rt3/Ticket/Display.html?id=62504#txn-522372">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;23:11:05&nbsp;2009</td>
+    <td class="description">
+      moritz -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522478" href="/rt3/Ticket/Display.html?id=62504#txn-522478">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jan&nbsp;20&nbsp;07:36:06&nbsp;2009</td>
+    <td class="description">
+      isop -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #62504] AutoReply: Rakudo segfault on multi type mismatch</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 19 Jan 2009 13:02:41 -0800 &#40;PST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug-followup <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">isop &lt;isop4 <!-- x --> at yahoo.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522478/246808/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 3.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Forgot to mention this is with r31857<br />
+<br />
+<br />
+<br />
+<br />
+----- Original Message ----<br />
+From: Parrot via RT &lt;parrotbug-followup <!-- x --> at parrotcode.org&gt;<br />
+To: isop4 <!-- x --> at yahoo.com<br />
+Sent: Monday, January 19, 2009 11:01:42 PM<br />
+Subject: [perl #62504] AutoReply: Rakudo segfault on multi type mismatch <br />
+<br />
+Greetings,<br />
+<br />
+This message has been automatically generated in response to the<br />
+creation of a parrotbug regarding:<br />
+    &#34;Rakudo segfault on multi type mismatch&#34;<br />
+<br />
+There is no need to reply to this message right now.  Your ticket has been<br />
+assigned an ID of [perl #62504].<br />
+<br />
+Please include the string:<br />
+         [perl #62504]<br />
+In the subject line of all future correspondence about this issue. To do so, <br />
+you may reply to this message.<br />
+<br />
+                        Thank you,<br />
+                          parrotbug<br />
+<br />
+http://rt.perl.org/rt3/Ticket/Display.html?id=62504 <br />
+-------------------------------------------------------------------------<br />
+MIME-Version: 1.0<br />
+X-Ymail-Osg: GyjYK0MVM1nthnl7OcUyU_xH3ItJLjqOQE2VZyJKIxWiPPYtfkNoFk4mBm3l4avhmYEX92RgU_oE4qKFboYesobs_L06NYYKSG7mGm1QMKEeeE0V8G7Y_B9jOVTBWUrXIe_PoVSpeMD8Z7BreSelOuurbNM-<br />
+X-Spam-Status: No, hits=0.0 required=8.0 tests=DK_POLICY_TESTING,DK_SIGNED,DK_VERIFIED<br />
+X-Mailer: YahooMailRC/1155.45 YahooMailWebService/0.7.260.1<br />
+X-Yahoo-Newman-ID: 79239.86581.bm <!-- x --> at yahoo.com<br />
+X-Old-Spam-Check-BY: la.mx.develooper.com<br />
+Message-ID: &lt;519046.67736.qm <!-- x --> at yahoo.com&gt;<br />
+content-type: text/plain; charset=&#34;utf-8&#34;<br />
+X-Yahoo-Newman-Property: ymail-3<br />
+Received: &#40;qmail 32347 invoked by alias&#41;; 19 Jan 2009 21:00:52 -0000<br />
+Received: &#40;qmail 32335 invoked from network&#41;; 19 Jan 2009 21:00:52 -0000<br />
+Received: from localhost &#40;HELO la.mx.develooper.com&#41; &#40;127.0.0.1&#41; by localhost with SMTP; 19 Jan 2009 21:00:52 -0000<br />
+Received: &#40;qmail 32332 invoked by alias&#41;; 19 Jan 2009 21:00:52 -0000<br />
+Received: from la.mx.develooper.com &#40;HELO x1.develooper.com&#41; &#40;63.251.223.176&#41; by la.mx.develooper.com &#40;qpsmtpd/0.28&#41; with SMTP; Mon, 19 Jan 2009 13:00:43 -0800<br />
+Received: &#40;qmail 32274 invoked by uid 225&#41;; 19 Jan 2009 21:00:39 -0000<br />
+Received: &#40;qmail 32268 invoked by alias&#41;; 19 Jan 2009 21:00:38 -0000<br />
+Received: from n7a.bullet.mail.ac4.yahoo.com &#40;HELO n7a.bullet.mail.ac4.yahoo.com&#41; &#40;76.13.13.70&#41; by la.mx.develooper.com &#40;qpsmtpd/0.28&#41; with SMTP; Mon, 19 Jan 2009 13:00:30 -0800<br />
+Received: from [76.13.13.26] by n7.bullet.mail.ac4.yahoo.com with NNFMP; 19 Jan 2009 21:00:26 -0000<br />
+Received: from [76.13.10.160] by t3.bullet.mail.ac4.yahoo.com with NNFMP; 19 Jan 2009 21:00:26 -0000<br />
+Received: from [127.0.0.1] by omp101.mail.ac4.yahoo.com with NNFMP; 19 Jan 2009 21:00:26 -0000<br />
+Received: &#40;qmail 68788 invoked by uid 60001&#41;; 19 Jan 2009 21:00:23 -0000<br />
+Received: from [87.69.10.102] by web59905.mail.ac4.yahoo.com via HTTP; Mon, 19 Jan 2009 13:00:23 PST<br />
+Delivered-To: rt-parrot <!-- x --> at develooper.com<br />
+Delivered-To: bugs-parrot <!-- x --> at develooper.com<br />
+Delivered-To: parrotbug <!-- x --> at parrotcode.org<br />
+Subject: Rakudo segfault on multi type mismatch<br />
+Return-Path: &lt;isop4 <!-- x --> at yahoo.com&gt;<br />
+Domainkey-Signature: a=rsa-sha1; q=dns; c=nofws; s=s1024; d=yahoo.com; h=X-YMail-OSG:Received:X-Mailer:Date:From:Subject:To:MIME-Version:Content-Type:Message-ID; b=vaIdVkYcVtKO02cAR7uq9/MbS8ljtxxq4WmpwzjiSfkQ/yvnriLvZu7UMYdyBT6OtaAkSduMdE5XL6c5OPCarz7WeXMpl/xYNxuwtrtM6kXMvb3p7yGabrEnqNB+w2BqgFyv6PDJ6xE29LAlX2zOV6q4TS0mDngf029r3Nkio3E=;<br />
+X-Spam-Check-BY: la.mx.develooper.com<br />
+X-Old-Spam-Status: No, hits=0.0 required=8.0 tests=DK_POLICY_TESTING,DK_SIGNED,DK_VERIFIED<br />
+Date: Mon, 19 Jan 2009 13:00:23 -0800 &#40;PST&#41;<br />
+To: parrotbug &lt;parrotbug <!-- x --> at parrotcode.org&gt;<br />
+From: isop &lt;isop4 <!-- x --> at yahoo.com&gt;<br />
+X-RT-Original-Encoding: us-ascii<br />
+<br />
+Following perl6 code segfaults:<br />
+<br />
+multi foo&#40;$x where { $x == 5 }&#41; { say &#39;yum&#39; }<br />
+foo 8;<br />
+<br />
+<br />
+      <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536178" href="/rt3/Ticket/Display.html?id=62504#txn-536178">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:16:17&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536178/254288/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 431b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Jan 19 13:01:38 2009, isop wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Following perl6 code segfaults:<br />
+&gt; <br />
+&gt; multi foo&#40;$x where { $x == 5 }&#41; { say &#39;yum&#39; }<br />
+&gt; foo 8;<br />
+&gt; <br />
+</div>
+We did a fix today that should deal with double frees on exit, and I<br />
+expect it will have caught the one leading to this segfaulting. If you<br />
+still get the segfault rather than just an error, feel free to re-open.<br />
+<br />
+BTW, you can write that as just:<br />
+<br />
+multi foo&#40;$x where 5&#41; { say &#39;yum&#39; }<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536182" href="/rt3/Ticket/Display.html?id=62504#txn-536182">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:16:19&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536184" href="/rt3/Ticket/Display.html?id=62504#txn-536184">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:16:19&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.111661</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+grep 'http://rt.perl.org/rt3/Ticket/Display.html' rt-bugs-2009-04-13.html | perl6n -e '$_ ~~ /href\=\"(<-["]>+)/ or next; say $0' | perl6n -e 'say "wget -O rt-tickets/", $_.substr(-5), ".html $_"' | perl6n -e 'run($_)'

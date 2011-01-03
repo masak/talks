@@ -1,0 +1,678 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60702: parrot-0.8.1 rakudo crashes glibc-2.7 &#40;repeat from the parrot list&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60702">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60702: parrot-0.8.1 rakudo crashes glibc-2.7 &#40;repeat from the parrot list&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60702">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60702</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60702">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+Ross.Alexander [at] EU.NEC.COM
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60702">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60702">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497760" href="/rt3/Ticket/Display.html?id=60702#txn-497760">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;07:51:27&nbsp;2008</td>
+    <td class="description">
+      Ross.Alexander <!-- x --> at NEC.COM -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">parrot-0.8.1 rakudo crashes glibc-2.7 &#40;repeat from the parrot list&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 15:50:45 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;rakudobug <!-- x --> at perl.org&#34; &lt;rakudobug <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ross Alexander &lt;Ross.Alexander <!-- x --> at NEC.COM&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497760/233462/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 10.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello,<br />
+<br />
+I have already sent this to the parrot list but I noticed a post saying rakodo bugs should be sent to list this&#41;.<br />
+<br />
+Perl6 &#40;rakudo&#41; crashing glibc with a memory error on linux 2.6.27.2 &#40;64-bit kernel with 32-bit development environment&#41;.<br />
+<br />
+Cheers<br />
+Ross<br />
+<br />
+Linux mig27 2.6.27.2 #1 SMP PREEMPT Tue Oct 21 10:37:39 BST 2008 x86_64 GNU/Linux<br />
+<br />
+* glibc-2.7 CC=&#34;i686-linux-gcc-4.2.2 -march=i486&#34; /arch/build/glibc-2.7/configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --with-tls  --with-headers=/usr/src/linux-2.6.23.1-32/include --with-cpu=i686 --host=i686-linux --build=i686-linux --enable-oldest-abi=2.0 --enable-kernel=2.6<br />
+<br />
+<br />
+<br />
+<div class="message-stanza-depth-1">
+#!/opt/parrot/bin/perl6<br />
+</div>
+<div class="message-stanza-depth-1">
+%.keys;<br />
+</div>
+<br />
+<br />
+<br />
+mig27 14:44:46$ perl6 t02.pl<br />
+Lexical &#39;self&#39; not found<br />
+current instr.: &#39;_block11&#39; pc 11 &#40;EVAL_7:13&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 898 &#40;src/PCT/HLLCompiler.pir:510&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1233 &#40;src/PCT/HLLCompiler.pir:676&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1412 &#40;src/PCT/HLLCompiler.pir:765&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 16140 &#40;perl6.pir:168&#41;<br />
+*** glibc detected *** perl6: double free or corruption &#40;!prev&#41;: 0x0932cb50 ***<br />
+<div class="message-stanza-depth-1">
+======= Backtrace: =========<br />
+</div>
+/lib/libc.so.6[0xf765e3f0]<br />
+/lib/libc.so.6&#40;cfree+0x89&#41;[0xf76600b9]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;mem_sys_free+0x23&#41;[0xf7bd0e53]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bd0f7f]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bdbbaf]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_exit+0x70&#41;[0xf7bc7310]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bc672d]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_ex_throw_from_op+0x24&#41;[0xf7bc67d4]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_ex_throw_from_op_args+0x54&#41;[0xf7bc6b94]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_find_lex_p_sc+0xcd&#41;[0xf7b83cfd]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c0c4ac]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bdd959]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde233]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde4d0]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_runops_fromc_args+0x4c&#41;[0xf7bde60c]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_ex_throw_from_c+0x1a7&#41;[0xf7bc6b27]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bc6bed]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bfffaa]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c00014]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7df2759]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_Class_init_pmc+0x226&#41;[0xf7df41e6]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;pmc_new_init+0xb1&#41;[0xf7c0b991]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_newclass_p_p+0x58&#41;[0xf7b714e8]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c0c4ac]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bdd959]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde233]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde4d0]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_runops_fromc_args+0x4c&#41;[0xf7bde60c]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_ex_throw_from_c+0x1a7&#41;[0xf7bc6b27]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bc6bed]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bfffaa]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c00014]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7df2759]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_Class_init_pmc+0x226&#41;[0xf7df41e6]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;pmc_new_init+0xb1&#41;[0xf7c0b991]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_newclass_p_p+0x58&#41;[0xf7b714e8]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c0c4ac]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bdd959]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde233]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde4d0]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_runops_fromc_args+0x4c&#41;[0xf7bde60c]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_ex_throw_from_c+0x1a7&#41;[0xf7bc6b27]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bc6bed]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bfffaa]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c00014]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7df2759]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_Class_init_pmc+0x226&#41;[0xf7df41e6]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;pmc_new_init+0xb1&#41;[0xf7c0b991]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_newclass_p_p+0x58&#41;[0xf7b714e8]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7c0c4ac]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bdd959]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde233]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1[0xf7bde4d0]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_runops_fromc_args+0x4c&#41;[0xf7bde60c]<br />
+/vobs/build/32/parrot-0.8.1/blib/lib/libparrot.so.0.8.1&#40;Parrot_runcode+0x277&#41;[0xf7bc4087]<br />
+perl6[0x8048a48]<br />
+/lib/libc.so.6&#40;__libc_start_main+0xdc&#41;[0xf760d36c]<br />
+perl6[0x8048851]<br />
+<div class="message-stanza-depth-1">
+======= Memory map: ========<br />
+</div>
+08048000-081f5000 r-xp 00000000 fd:00 2229160                            /opt/parrot/bin/perl6<br />
+081f5000-081f6000 rw-p 001ac000 fd:00 2229160                            /opt/parrot/bin/perl6<br />
+08f94000-09004000 rw-p 08f94000 00:00 0<br />
+09004000-09005000 rwxp 09004000 00:00 0<br />
+09005000-09006000 rw-p 09005000 00:00 0<br />
+09006000-09007000 rwxp 09006000 00:00 0<br />
+09007000-09008000 rw-p 09007000 00:00 0<br />
+09008000-09009000 rwxp 09008000 00:00 0<br />
+09009000-0900a000 rw-p 09009000 00:00 0<br />
+0900a000-0900b000 rwxp 0900a000 00:00 0<br />
+0900b000-0900c000 rw-p 0900b000 00:00 0<br />
+0900c000-0900d000 rwxp 0900c000 00:00 0<br />
+0900d000-09014000 rw-p 0900d000 00:00 0<br />
+09014000-09015000 rwxp 09014000 00:00 0<br />
+09015000-09016000 rw-p 09015000 00:00 0<br />
+09016000-09017000 rwxp 09016000 00:00 0<br />
+09017000-09018000 rw-p 09017000 00:00 0<br />
+09018000-09019000 rwxp 09018000 00:00 0<br />
+09019000-0901a000 rw-p 09019000 00:00 0<br />
+0901a000-0901b000 rwxp 0901a000 00:00 0<br />
+0901b000-0901c000 rw-p 0901b000 00:00 0<br />
+0901c000-0901d000 rwxp 0901c000 00:00 0<br />
+0901d000-09025000 rw-p 0901d000 00:00 0<br />
+09025000-09026000 rwxp 09025000 00:00 0<br />
+09026000-09038000 rw-p 09026000 00:00 0<br />
+09038000-09039000 rwxp 09038000 00:00 0<br />
+09039000-09060000 rw-p 09039000 00:00 0<br />
+09060000-09061000 rwxp 09060000 00:00 0<br />
+09061000-093dd000 rw-p 09061000 00:00 0<br />
+f6d7a000-f6d7f000 r--s 00000000 fd:03 2607875                            /vobs/build/32/parrot-0.8.1/runtime/parrot/library/P6object.pbc<br />
+f7200000-f7221000 rw-p f7200000 00:00 0<br />
+f7221000-f7300000 ---p f7221000 00:00 0<br />
+f73a6000-f73a7000 r--s 00000000 fd:03 902823                             /vobs/build/32/parrot-0.8.1/runtime/parrot/library/Parrot/Exception.pbc<br />
+f73a7000-f73ae000 r--s 00000000 fd:03 902826                             /vobs/build/32/parrot-0.8.1/runtime/parrot/library/PCT/HLLCompiler.pbc<br />
+f74bc000-f74c0000 r--s 00000000 fd:03 1394612                            /vobs/build/32/parrot-0.8.1/runtime/parrot/library/Getopt/Obj.pbc<br />
+f74c0000-f74c2000 r--s 00000000 fd:03 2607871                            /vobs/build/32/parrot-0.8.1/runtime/parrot/library/dumper.pbc<br />
+f74c2000-f74e0000 r--s 00000000 fd:03 902824                             /vobs/build/32/parrot-0.8.1/runtime/parrot/library/PCT/PAST.pbc<br />
+f74e0000-f74e2000 r--s 00000000 fd:03 1901615                            /vobs/build/32/parrot-0.8.1/runtime/parrot/library/PGE/Util.pbc<br />
+f74e2000-f74e5000 r--s 00000000 fd:03 902821                             /vobs/build/32/parrot-0.8.1/runtime/parrot/library/Parrot/Capture_PIR.pbc<br />
+f74e5000-f7510000 r--s 00000000 fd:03 2607884                            /vobs/build/32/parrot-0.8.1/runtime/parrot/library/PGE.pbc<br />
+f7510000-f7512000 r--s 00000000 fd:03 902825                             /vobs/build/32/parrot-0.8.1/runtime/parrot/library/PCT/Grammar.pbc<br />
+f75e1000-f75e3000 rw-p f75e1000 00:00 0<br />
+f75e3000-f75f6000 r-xp 00000000 03:01 188382                             /usr/lib/libz.so.1.2.3<br />
+f75f6000-f75f7000 rw-p 00013000 03:01 188382                             /usr/lib/libz.so.1.2.3<br />
+f75f7000-f7726000 r-xp 00000000 03:01 93828                              /lib/libc-2.7.so<br />
+f7726000-f7728000 r--p 0012f000 03:01 93828                              /lib/libc-2.7.so<br />
+f7728000-f7729000 rw-p 00131000 03:01 93828                              /lib/libc-2.7.so<br />
+f7729000-f772c000 rw-p f7729000 00:00 0<br />
+f772c000-f785d000 r-xp 00000000 03:01 1938542                            /usr/lib/libcrypto.so.0.9.8<br />
+f785d000-f7872000 rw-p 00131000 03:01 1938542                            /usr/lib/libcrypto.so.0.9.8<br />
+f7872000-f7875000 rw-p f7872000 00:00 0<br />
+f7875000-f78a1000 r-xp 00000000 03:01 1032163                            /usr/lib/libpcre.so.0.0.1<br />
+f78a1000-f78a2000 rw-p 0002b000 03:01 1032163                            /usr/lib/libpcre.so.0.0.1<br />
+f78a2000-f78a3000 rw-p f78a2000 00:00 0<br />
+f78a3000-f78dc000 r-xp 00000000 03:01 1033283                            /usr/lib/libncurses.so.5.6<br />
+f78dc000-f78e4000 rw-p 00039000 03:01 1Aborted<br />
+<br />
+<br />
+<br />
+Ross Alexander<br />
+SAP Basis<br />
+NEC Europe Ltd<br />
+Corporate IT Centre<br />
+Tel:     +44 20 8752 3394<br />
+<br />
+IMPORTANT: The information contained in this e-mail and attachment &#40;if any&#41; is intended for the person to whom it is addressed and may contain confidential and/or privileged information. The contents of this message may contain personal views which are not the views of NEC Europe Ltd or its subsidiaries, unless specifically stated. You should not copy, retain, forward or disclose its contents to anyone else, or take any action based upon it, if it is not addressed to you personally.  If you have received this e-mail in error please contact the sender immediately. Any legally binding agreement resulting from its content must be made separately in a printed<br />
+<br />
+NEC Europe Limited | Registered Office: NEC House, 1 Victoria Road, London W3 6BL | Registered in England 2832014<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497760/233464/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 23.3k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536158" href="/rt3/Ticket/Display.html?id=60702#txn-536158">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:08:58&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536158/254276/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 520b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Nov 20 07:51:27 2008, Ross.Alexander <!-- x --> at NEC.COM wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hello,<br />
+&gt; <br />
+&gt; I have already sent this to the parrot list but I noticed a post<br />
+&gt;    saying rakodo bugs should be sent to list this&#41;.<br />
+&gt; <br />
+&gt; Perl6 &#40;rakudo&#41; crashing glibc with a memory error on linux 2.6.27.2<br />
+&gt;    &#40;64-bit kernel with 32-bit development environment&#41;.<br />
+&gt; <br />
+</div>
+<br />
+We did a fix today that should deal with double frees on exit like this,<br />
+and I expect it will have caught this one. If you still get the double<br />
+free, feel free to re-open.<br />
+<br />
+Thanks!<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536162" href="/rt3/Ticket/Display.html?id=60702#txn-536162">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:09:02&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536164" href="/rt3/Ticket/Display.html?id=60702#txn-536164">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Feb&nbsp;25&nbsp;11:09:02&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.235286</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

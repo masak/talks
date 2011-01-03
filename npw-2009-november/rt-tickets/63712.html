@@ -1,0 +1,1008 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#63712: [PATCH] Reimplement List.min in Perl6 instead of PIR</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D63712">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#63712: [PATCH] Reimplement List.min in Perl6 instead of PIR</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63712">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">63712</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=63712">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=63712">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+059ec2c89dc266165efcee344f248218be567fe4.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/538896/255620/059ec2c89dc266165efcee344f248218be567fe4.diff">
+Sat Mar 07 21:50:01 2009 (2.1k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=63712">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538896" href="/rt3/Ticket/Display.html?id=63712#txn-538896">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;21:50:00&nbsp;2009</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Reimplement List.min in Perl6 instead of PIR</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun,  8 Mar 2009 16:49:55 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/538896/255618/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 191b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+---<br />
+ src/builtins/any-list.pir |   47 ---------------------------------------------<br />
+ src/setting/Any-list.pm   |   20 ++++++++++++++++++-<br />
+ 2 files changed, 19 insertions&#40;+&#41;, 48 deletions&#40;-&#41;<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/538896/255620/059ec2c89dc266165efcee344f248218be567fe4.diff">Download 059ec2c89dc266165efcee344f248218be567fe4.diff</a>
+<span class="downloadcontenttype">
+[text/x-patch 2.1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-538902" href="/rt3/Ticket/Display.html?id=63712#txn-538902">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Mar&nbsp;07&nbsp;21:50:04&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539022" href="/rt3/Ticket/Display.html?id=63712#txn-539022">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;09:55:10&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/539022/255680/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 314b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat Mar 07 21:50:00 2009, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; ---<br />
+&gt;  src/builtins/any-list.pir |   47<br />
+&gt; ---------------------------------------------<br />
+&gt;  src/setting/Any-list.pm   |   20 ++++++++++++++++++-<br />
+&gt;  2 files changed, 19 insertions&#40;+&#41;, 48 deletions&#40;-&#41;<br />
+&gt; <br />
+</div>
+<br />
+Applied as a7214ac28c5c7c47932f1e76a15c8707524f964d, thanks.<br />
+<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539026" href="/rt3/Ticket/Display.html?id=63712#txn-539026">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;09:55:13&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539028" href="/rt3/Ticket/Display.html?id=63712#txn-539028">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;09:55:13&nbsp;2009</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539046" href="/rt3/Ticket/Display.html?id=63712#txn-539046">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;11:10:33&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539048" href="/rt3/Ticket/Display.html?id=63712#txn-539048">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;11:10:43&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63712] [PATCH] Reimplement List.min in Perl6 instead of PIR</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 8 Mar 2009 13:10:20 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/539048/255696/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Mar 07, 2009 at 09:50:02PM -0800, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; +our List multi min&#40;*@values&#41; {<br />
+&gt; +    my $by = @values[0] ~~ Code ?? shift @values !! sub { $^a cmp $^b };<br />
+&gt; +    @values.min&#40;$by&#41;;<br />
+&gt; +}<br />
+</div>
+<br />
+This doesn&#39;t match the spec -- the $by parameter is required.<br />
+At any rate, the first argument should not be explicitly checked<br />
+for being a Code object -- if we do this it should be via a multi<br />
+signature.  <br />
+<br />
+Yes, the PIR code was &#34;cheating&#34; in this respect, but I don&#39;t<br />
+want to blindly copy our cheats from PIR into the setting without<br />
+subjecting them to another review.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; +    # RT #63700 - parse failed on &#38;infix:&lt;cmp&gt;<br />
+&gt; +    our Array multi method min&#40; $values: Code $by = sub { $^a cmp $^b } &#41; {<br />
+&gt; +        my @list = $values.list;<br />
+&gt; +        return +Inf unless @list.elems;<br />
+&gt; +        my $res = @list.shift;<br />
+&gt; +        for @list -&gt; $x {<br />
+&gt; +            if &#40;&#38;$by&#40;$res, $x&#41; &gt; 0&#41; {<br />
+&gt; +                $res = $x;<br />
+&gt; +            }<br />
+&gt; +        }<br />
+&gt; +        $res;<br />
+&gt; +    };<br />
+&gt;  }<br />
+</div>
+<br />
+Why are C&lt;min&gt; and C&lt;max&gt; specced as returning C&lt;Array&gt; and C&lt;List&gt;?<br />
+Shouldn&#39;t they just return the single element that is the minimum<br />
+or maximum from the list?<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539078" href="/rt3/Ticket/Display.html?id=63712#txn-539078">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Mar&nbsp;08&nbsp;12:08:52&nbsp;2009</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63712] [PATCH] Reimplement List.min in Perl6 instead of PIR</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 08 Mar 2009 20:08:19 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at faui2k3.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/539078/255710/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat, Mar 07, 2009 at 09:50:02PM -0800, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; +our List multi min&#40;*@values&#41; {<br />
+&gt;&gt; +    my $by = @values[0] ~~ Code ?? shift @values !! sub { $^a cmp $^b };<br />
+&gt;&gt; +    @values.min&#40;$by&#41;;<br />
+&gt;&gt; +}<br />
+</div>
+&gt; <br />
+&gt; This doesn&#39;t match the spec -- the $by parameter is required.<br />
+&gt; At any rate, the first argument should not be explicitly checked<br />
+&gt; for being a Code object -- if we do this it should be via a multi<br />
+&gt; signature.  <br />
+</div>
+<br />
+I&#39;ve fixed that, and corrected the spec tests accordingly.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Yes, the PIR code was &#34;cheating&#34; in this respect, but I don&#39;t<br />
+&gt; want to blindly copy our cheats from PIR into the setting without<br />
+&gt; subjecting them to another review.<br />
+&gt; <br />
+<div class="message-stanza-depth-2">
+&gt;&gt; +    # RT #63700 - parse failed on &#38;infix:&lt;cmp&gt;<br />
+&gt;&gt; +    our Array multi method min&#40; $values: Code $by = sub { $^a cmp $^b } &#41; {<br />
+&gt;&gt; +        my @list = $values.list;<br />
+&gt;&gt; +        return +Inf unless @list.elems;<br />
+&gt;&gt; +        my $res = @list.shift;<br />
+&gt;&gt; +        for @list -&gt; $x {<br />
+&gt;&gt; +            if &#40;&#38;$by&#40;$res, $x&#41; &gt; 0&#41; {<br />
+&gt;&gt; +                $res = $x;<br />
+&gt;&gt; +            }<br />
+&gt;&gt; +        }<br />
+&gt;&gt; +        $res;<br />
+&gt;&gt; +    };<br />
+&gt;&gt;  }<br />
+</div>
+&gt; <br />
+&gt; Why are C&lt;min&gt; and C&lt;max&gt; specced as returning C&lt;Array&gt; and C&lt;List&gt;?<br />
+&gt; Shouldn&#39;t they just return the single element that is the minimum<br />
+&gt; or maximum from the list?<br />
+</div>
+<br />
+I agree, so I removed the non-sense return types from the specs.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539204" href="/rt3/Ticket/Display.html?id=63712#txn-539204">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Mar&nbsp;09&nbsp;00:41:24&nbsp;2009</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #63712] [PATCH] Reimplement List.min in Perl6 instead of PIR</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 09 Mar 2009 08:30:27 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/539204/255794/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Sat, Mar 07, 2009 at 09:50:02PM -0800, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; +our List multi min&#40;*@values&#41; {<br />
+&gt;&gt; +    my $by = @values[0] ~~ Code ?? shift @values !! sub { $^a cmp $^b };<br />
+&gt;&gt; +    @values.min&#40;$by&#41;;<br />
+&gt;&gt; +}<br />
+</div>
+&gt; <br />
+&gt; This doesn&#39;t match the spec -- the $by parameter is required.<br />
+&gt; At any rate, the first argument should not be explicitly checked<br />
+&gt; for being a Code object -- if we do this it should be via a multi<br />
+&gt; signature.  <br />
+&gt; <br />
+&gt; Yes, the PIR code was &#34;cheating&#34; in this respect, but I don&#39;t<br />
+&gt; want to blindly copy our cheats from PIR into the setting without<br />
+&gt; subjecting them to another review.<br />
+</div>
+<br />
+This is workaround for this situation:<br />
+<br />
+&lt;bacek&gt; rakudo: multi sub foo&#40;Code &#38;x, *@values&#41; {...}; multi sub <br />
+foo&#40;*@values&#41; {...}; say foo&#40;sub {}, 1,2,3&#41;;<br />
+&lt;p6eval&gt; rakudo 2daf6b: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;. <br />
+Ambiguous candidates had signatures:␤:&#40;Code x, Any @values&#41;␤:&#40;Any <br />
+@values&#41;␤␤current instr.: &#39;_block14&#39; pc 101 &#40;EVAL_18:52&#41;␤»<br />
+<br />
+<br />
+Should I fill bug report for this?<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539670" href="/rt3/Ticket/Display.html?id=63712#txn-539670">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;10&nbsp;09:04:30&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/539670/256010/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 879b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Mar 09 00:41:24 2009, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; At any rate, the first argument should not be explicitly checked<br />
+&gt; &gt; for being a Code object -- if we do this it should be via a multi<br />
+&gt; &gt; signature.  <br />
+&gt; &gt; <br />
+&gt; &gt; Yes, the PIR code was &#34;cheating&#34; in this respect, but I don&#39;t<br />
+&gt; &gt; want to blindly copy our cheats from PIR into the setting without<br />
+&gt; &gt; subjecting them to another review.<br />
+</div>
+&gt; <br />
+&gt; This is workaround for this situation:<br />
+&gt; <br />
+&gt; &lt;bacek&gt; rakudo: multi sub foo&#40;Code &#38;x, *@values&#41; {...}; multi sub <br />
+&gt; foo&#40;*@values&#41; {...}; say foo&#40;sub {}, 1,2,3&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 2daf6b: OUTPUT«Ambiguous dispatch to multi &#39;foo&#39;. <br />
+&gt; Ambiguous candidates had signatures:␤:&#40;Code x, Any @values&#41;␤:&#40;Any <br />
+&gt; @values&#41;␤␤current instr.: &#39;_block14&#39; pc 101 &#40;EVAL_18:52&#41;␤»<br />
+&gt; <br />
+&gt; <br />
+&gt; Should I fill bug report for this?<br />
+</div>
+<br />
+Yes please.  Closing this ticket, thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539674" href="/rt3/Ticket/Display.html?id=63712#txn-539674">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;10&nbsp;09:04:33&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-539678" href="/rt3/Ticket/Display.html?id=63712#txn-539678">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Tue&nbsp;Mar&nbsp;10&nbsp;09:04:38&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.758538</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

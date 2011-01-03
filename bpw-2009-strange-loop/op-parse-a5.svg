@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg5212">
+  <defs
+     id="defs5214" />
+  <text
+     x="236.55423"
+     y="586.64215"
+     id="text5223"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="236.55423"
+       y="586.64215"
+       id="tspan5225">Expression:</tspan></text>
+  <text
+     x="669.30017"
+     y="586.64215"
+     id="text5227"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="669.30017"
+       y="586.64215"
+       id="tspan5229">a + b</tspan></text>
+  <text
+     x="239.57767"
+     y="493.80884"
+     id="text5749"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="239.57767"
+       y="493.80884"
+       id="tspan5751">Op stack:</tspan></text>
+  <path
+     d="m 829.25902,603.62236 22.40051,38.79882 -44.80102,0 22.40051,-38.79882 z"
+     id="path5753"
+     style="opacity:0.98999999;fill:#4422ff;fill-opacity:1;stroke:none" />
+  <g
+     transform="matrix(0.62987779,0,0,0.62987779,194.75131,37.63155)"
+     id="g3263">
+    <g
+       transform="translate(28.951202,26.786019)"
+       id="g5775">
+      <text
+         x="385.61517"
+         y="312.77676"
+         id="text5755"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="385.61517"
+           y="312.77676"
+           id="tspan5757">a</tspan></text>
+      <text
+         x="578.42273"
+         y="312.77676"
+         id="text5759"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="578.42273"
+           y="312.77676"
+           id="tspan5761">b</tspan></text>
+    </g>
+    <g
+       id="g5859">
+      <g
+         transform="translate(35.865491,25.208077)"
+         id="g5771">
+        <path
+           d="M 408.46645,267.07422 490.7571,124.54264"
+           id="path5763"
+           style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           d="M 572.16475,267.07422 489.8741,124.54264"
+           id="path5765"
+           style="fill:none;stroke:#000000;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <text
+         x="423.64203"
+         y="135.32956"
+         id="text5767"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="423.64203"
+           y="135.32956"
+           id="tspan5769">infix:+</tspan></text>
+    </g>
+  </g>
+</svg>

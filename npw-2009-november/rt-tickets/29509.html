@@ -1,0 +1,1065 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#29509: Perl6: /examples/life.p6 is broken</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D29509">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#29509: Perl6: /examples/life.p6 is broken</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=29509">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">29509</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=29509">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+alexg [at] ebi.ac.uk
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=29509">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+life.imc<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/87236/61761/life.imc">
+Tue May 11 08:46:31 2004 (50.6k) by alexg <!-- x --> at ac.uk
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=29509">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-87236" href="/rt3/Ticket/Display.html?id=29509#txn-87236">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;11&nbsp;08:46:31&nbsp;2004</td>
+    <td class="description">
+      alexg <!-- x --> at ac.uk -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Perl6: /examples/life.p6 is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">11 May 2004 16:44:35 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">bugs-perl6 <!-- x --> at develooper.com</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Alex Gutteridge &lt;alexg <!-- x --> at ac.uk&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/87236/61760/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hi,<br />
+<br />
+The example Perl6 &#39;Game of Life&#39; program<br />
+&#40;parrot/languages/perl6/examples/life.p6&#41; is broken. As it stands it<br />
+doesn&#39;t parse correctly but this is easily fixed by adding the correct<br />
+string concatenation operator &#39;~&#39;:<br />
+<br />
+--- ../../parrot_cvs/parrot/languages/perl6/examples/life.p6     Tue<br />
+Oct  8 08:27:32 2002<br />
++++ examples/life.p6    Tue May 11 15:46:46 2004<br />
+@@ -57,21 +57,21 @@<br />
+<br />
+ sub main&#40;&#41; {<br />
+     my  $world =<br />
+-       &#34;                &#34; _<br />
+-       &#34; *              &#34; _<br />
+-       &#34;  *             &#34; _<br />
+-       &#34;***             &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;                &#34; _<br />
+-       &#34;   *            &#34; _<br />
+-       &#34;    *           &#34; _<br />
+-       &#34;  ***           &#34; _<br />
++       &#34;                &#34; ~<br />
++       &#34; *              &#34; ~<br />
++       &#34;  *             &#34; ~<br />
++       &#34;***             &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;                &#34; ~<br />
++       &#34;   *            &#34; ~<br />
++       &#34;    *           &#34; ~<br />
++       &#34;  ***           &#34; ~<br />
+        &#34;                &#34;<br />
+     ;<br />
+<br />
+However, now parrot crashes with a segfault somewhere in the Generate<br />
+subroutine:<br />
+<br />
+Error: &#39;/tmp_mnt/nfs6/vol_vol1_homes/alexg/parrot_cvs/parrot/parrot -r<br />
+languages/perl6/examples/life.imc &#39; failed<br />
+        died with signal 11 &#40;SIGSEGV&#41;<br />
+        and dumped core<br />
+Stopped at languages/perl6/perl6 line 346<br />
+        main::mydie&#40;139,<br />
+&#39;/tmp_mnt/nfs6/vol_vol1_homes/alexg/parrot_cvs/parrot/parrot -r l...&#39;&#41;<br />
+called at languages/perl6/perl6 line 829<br />
+        main::pass4&#40;&#39;languages/perl6/examples/life.imc&#39;,<br />
+&#39;languages/perl6/examples/life.warn&#39;&#41; called at languages/perl6/perl6<br />
+line 751<br />
+        main::pass2&#40;&#39;languages/perl6/examples/life.imc&#39;,<br />
+&#39;languages/perl6/examples/life.warn&#39;&#41; called at languages/perl6/perl6<br />
+line 444<br />
+        main::output_tree&#40;&#39;P6C::prog=ARRAY&#40;0x8e639fc&#41;&#39;,<br />
+&#39;languages/perl6/examples/life.p6&#39;,<br />
+&#39;languages/perl6/examples/life.warn&#39;&#41; called at languages/perl6/perl6<br />
+line 509<br />
+        main::pass1&#40;&#39;Parse::RecDescent=HASH&#40;0x8e9dac4&#41;&#39;,<br />
+&#39;languages/perl6/examples/life.p6&#39;,<br />
+&#39;languages/perl6/examples/life.warn&#39;, undef&#41; called at<br />
+languages/perl6/perl6 line 571<br />
+        main::run&#40;&#41; called at languages/perl6/perl6 line 226<br />
+<br />
+I&#39;ve had a look at the generated &#40;and attached&#41; imc file, and can&#39;t see<br />
+anything obviously crazy. I&#39;m not sure how to go about debugging this<br />
+further.<br />
+<br />
+This is using a fresh cvs checkout: &#40;May 11 2004 15:54 GMT&#41; running on<br />
+Linux 2.4.22 i686<br />
+<br />
+-- <br />
+Alex Gutteridge<br />
+European Bioinformatics Institute<br />
+Cambridge UK<br />
+<br />
+Tel:   01223 492537<br />
+Email: alexg <!-- x --> at ac.uk<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/87236/61761/life.imc">Download life.imc</a>
+<span class="downloadcontenttype">
+[text/plain 50.6k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-88109" href="/rt3/Ticket/Display.html?id=29509#txn-88109">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;25&nbsp;00:53:45&nbsp;2004</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #29509] Perl6: /examples/life.p6 is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 25 May 2004 02:53:29 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/88109/62515/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 4.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Alex Gutteridge wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; The example Perl6 &#39;Game of Life&#39; program<br />
+&gt; &#40;parrot/languages/perl6/examples/life.p6&#41; is broken. As it stands it<br />
+&gt; doesn&#39;t parse correctly but this is easily fixed by adding the correct<br />
+&gt; string concatenation operator &#39;~&#39;:<br />
+</div>
+<br />
+I&#39;ve checked in your update to the concat operator.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; However, now parrot crashes with a segfault somewhere in the Generate<br />
+&gt; subroutine:<br />
+</div>
+[...]<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;ve had a look at the generated &#40;and attached&#41; imc file, and can&#39;t see<br />
+&gt; anything obviously crazy. I&#39;m not sure how to go about debugging this<br />
+&gt; further.<br />
+</div>
+<br />
+&#40;My apologies for being so verbose, I&#39;m hoping to be educational as well<br />
+as solve the problem. Leo, skip to the last 10 lines and scan<br />
+backwards.&#41;<br />
+<br />
+One good rule is to create the simplest code that duplicates the<br />
+problem. For one bug this was:<br />
+<br />
+----<br />
+sub Generate&#40;$input&#41; {<br />
+    my $output = $input;<br />
+    return $output;<br />
+}<br />
+<br />
+sub main&#40;&#41; {<br />
+    my  $world = &#34;string&#34;;<br />
+    $world = Generate&#40;$world&#41;[0];<br />
+    print &#34;returned &#39;$world&#39; from Generate\n&#34;;<br />
+}<br />
+----<br />
+<br />
+This made a much shorter generated .imc file &#40;much easier to scan&#41;, and<br />
+I found an orphaned &#34;.return&#34; directive without the surrounding<br />
+&#34;.pcc_begin_return&#34; and &#34;.pcc_end_return&#34; directives. This bug was<br />
+actually in the original generated output, just difficult to find:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt;       $P305[0] = _SV_output1<br />
+<div class="message-stanza-depth-2">
+&gt; # scalar_in_context&#40;array&#41; from P6C::variable::val_in_context END<br />
+</div>
+&gt;       .return $P305<br />
+&gt;       goto L_1<br />
+</div>
+<br />
+I fixed this in the &#34;prefix_return&#34; method in P6C::IMCC::prefix. This<br />
+fix was enough to get the code running on OSX.<br />
+<br />
+Linux is a bit trickier. It was still segfaulting after the fix. With a<br />
+series of debug prints I managed to track the segfault down to a loop in<br />
+the Generate routine. The annoying thing was the segfault kept moving.<br />
+It would segfault in exactly the same place every time I ran the same<br />
+code &#40;always on a line with a call to &#39;substr&#39;&#41;, but as I added more<br />
+debug prints it would segfault earlier and earlier &#40;still always on a<br />
+line with a call to &#39;substr&#39;&#41;. This is when I started thinking &#34;Oooh,<br />
+memory problems.&#34;<br />
+<br />
+&#40;The code loops 100 times. Each outer loop calls a subroutine that loops<br />
+256 times, and each inner loop calls &#39;substr&#39; 10/11 times on a string<br />
+that&#39;s 256 characters long. That&#39;s a rather large number of string<br />
+allocations.&#41;<br />
+<br />
+This is the smallest bit of code I could get to segfault in my linux<br />
+dev box:<br />
+<br />
+----<br />
+sub main &#40;&#41; {<br />
+  my $string =<br />
+&#34;****************************************************************************************************************************************************************************************************************************************************************&#34;;<br />
+  for 1..11 {<br />
+    print1 &#34;in loop $_\n&#34;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+    substr &#40;$string, $_, 1&#41;;<br />
+  }<br />
+  print &#34;made it past substr\n&#34;;<br />
+}<br />
+----<br />
+<br />
+15 calls to &#39;substr&#39; in each loop segfaults &#40;14 doesn&#39;t&#41;, and it always<br />
+segfaults on the 11th loop.<br />
+<br />
+To confirm my suspicion, I ran gdb on the generated PIR code from the<br />
+original source:<br />
+<br />
+  $ gdb parrot<br />
+<br />
+<div class="message-stanza-depth-1">
+# and from the gdb prompt<br />
+</div>
+  &#40;gdb&#41; run life.imc<br />
+<br />
+<div class="message-stanza-depth-1">
+# and when it segfaulted<br />
+</div>
+  &#40;gdb&#41; back<br />
+<br />
+----<br />
+#0  0x401571b7 in memcpy &#40;&#41; from /lib/libc.so.6<br />
+#1  0x08158c41 in compact_pool &#40;interpreter=0x82ebf90, pool=0x82ec770&#41;<br />
+    at src/resources.c:341<br />
+#2  0x08158923 in mem_allocate &#40;interpreter=0x82ebf90, req_size=0xbffff3e8,<br />
+     pool=0x82ec770, align_1=15&#41; at src/resources.c:154<br />
+#3  0x081591f2 in Parrot_allocate &#40;interpreter=0x82ebf90, buffer=0x4148e0d8,<br />
+     size=64&#41; at src/resources.c:603<br />
+#4  0x0815922e in Parrot_allocate_zeroed &#40;interpreter=0x82ebf90,<br />
+     buffer=0x4148e0d8, size=64&#41; at src/resources.c:625<br />
+#5  0x080d7638 in allocate_chunk &#40;interpreter=0x82ebf90, list=0x8416800,<br />
+     items=16, size=64&#41; at src/list.c:240<br />
+#6  0x080d8013 in alloc_next_size &#40;interpreter=0x82ebf90, list=0x8416800,<br />
+     where=1, idx=1&#41; at src/list.c:667<br />
+...<br />
+----<br />
+<br />
+So, this is where I hand it off to Leo. It may be a known bug in Parrot,<br />
+or maybe not.<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-88110" href="/rt3/Ticket/Display.html?id=29509#txn-88110">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;25&nbsp;00:53:47&nbsp;2004</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-88114" href="/rt3/Ticket/Display.html?id=29509#txn-88114">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;25&nbsp;02:46:19&nbsp;2004</td>
+    <td class="description">
+      leo -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #29509] Perl6: /examples/life.p6 is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 25 May 2004 11:41:54 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">al <!-- x --> at shadowed.net &#40;Allison Randal&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/88114/62517/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 434b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Allison Randal &lt;al <!-- x --> at shadowed.net&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; #0  0x401571b7 in memcpy &#40;&#41; from /lib/libc.so.6<br />
+&gt; #1  0x08158c41 in compact_pool &#40;interpreter=0x82ebf90, pool=0x82ec770&#41;<br />
+&gt;     at src/resources.c:341<br />
+</div>
+<br />
+Fixed.<br />
+<br />
+The code in smallobject.c that allocates new buffer memory did assume<br />
+that it gets zeroed memory, which of course depends on the OS and the<br />
+arena size. Now C&lt;buflen&gt;, which is used during GC, is cleared<br />
+explicitely.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Allison<br />
+</div>
+<br />
+leo<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-88170" href="/rt3/Ticket/Display.html?id=29509#txn-88170">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;25&nbsp;13:37:31&nbsp;2004</td>
+    <td class="description">
+      nickg -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #29509] Perl6: /examples/life.p6 is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 25 May 2004 21:59:45 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Nick Glencross &lt;nickg <!-- x --> at co.uk&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/88170/62559/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Looks very much like my bug 29246, and a very similar example.<br />
+<br />
+Nick<br />
+<br />
+Allison Randal wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; This is the smallest bit of code I could get to segfault in my linux<br />
+&gt;<br />
+&gt;dev box:<br />
+&gt;<br />
+&gt;----<br />
+&gt;sub main &#40;&#41; {<br />
+&gt;  my $string =<br />
+&gt;&#34;****************************************************************************************************************************************************************************************************************************************************************&#34;;<br />
+&gt;  for 1..11 {<br />
+&gt;    print1 &#34;in loop $_\n&#34;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;    substr &#40;$string, $_, 1&#41;;<br />
+&gt;  }<br />
+&gt;  print &#34;made it past substr\n&#34;;<br />
+&gt;}<br />
+&gt;----<br />
+&gt;<br />
+&gt;15 calls to &#39;substr&#39; in each loop segfaults &#40;14 doesn&#39;t&#41;, and it always<br />
+&gt;segfaults on the 11th loop.<br />
+&gt;<br />
+&gt;To confirm my suspicion, I ran gdb on the generated PIR code from the<br />
+&gt;original source:<br />
+&gt;<br />
+&gt;  $ gdb parrot<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;# and from the gdb prompt<br />
+</div>
+&gt;  &#40;gdb&#41; run life.imc<br />
+&gt;<br />
+<div class="message-stanza-depth-2">
+&gt;# and when it segfaulted<br />
+</div>
+&gt;  &#40;gdb&#41; back<br />
+&gt;<br />
+&gt;----<br />
+&gt;#0  0x401571b7 in memcpy &#40;&#41; from /lib/libc.so.6<br />
+&gt;#1  0x08158c41 in compact_pool &#40;interpreter=0x82ebf90, pool=0x82ec770&#41;<br />
+&gt;    at src/resources.c:341<br />
+&gt;#2  0x08158923 in mem_allocate &#40;interpreter=0x82ebf90, req_size=0xbffff3e8,<br />
+&gt;     pool=0x82ec770, align_1=15&#41; at src/resources.c:154<br />
+&gt;#3  0x081591f2 in Parrot_allocate &#40;interpreter=0x82ebf90, buffer=0x4148e0d8,<br />
+&gt;     size=64&#41; at src/resources.c:603<br />
+&gt;#4  0x0815922e in Parrot_allocate_zeroed &#40;interpreter=0x82ebf90,<br />
+&gt;     buffer=0x4148e0d8, size=64&#41; at src/resources.c:625<br />
+&gt;#5  0x080d7638 in allocate_chunk &#40;interpreter=0x82ebf90, list=0x8416800,<br />
+&gt;     items=16, size=64&#41; at src/list.c:240<br />
+&gt;#6  0x080d8013 in alloc_next_size &#40;interpreter=0x82ebf90, list=0x8416800,<br />
+&gt;     where=1, idx=1&#41; at src/list.c:667<br />
+&gt;...<br />
+&gt;----<br />
+&gt;<br />
+&gt;So, this is where I hand it off to Leo. It may be a known bug in Parrot,<br />
+&gt;or maybe not.<br />
+&gt;<br />
+&gt;Allison<br />
+&gt;<br />
+&gt;  <br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-88175" href="/rt3/Ticket/Display.html?id=29509#txn-88175">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;25&nbsp;14:00:14&nbsp;2004</td>
+    <td class="description">
+      allison -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #29509] Perl6: /examples/life.p6 is broken</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 25 May 2004 15:59:48 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Leopold Toetsch &lt;lt <!-- x --> at toetsch.at&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Allison Randal &lt;al <!-- x --> at shadowed.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/88175/62563/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 286b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Leo wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Fixed.<br />
+&gt; <br />
+&gt; The code in smallobject.c that allocates new buffer memory did assume<br />
+&gt; that it gets zeroed memory, which of course depends on the OS and the<br />
+&gt; arena size. Now C&lt;buflen&gt;, which is used during GC, is cleared<br />
+&gt; explicitely.<br />
+</div>
+<br />
+Yup, that fixed it. Thanks!<br />
+<br />
+Allison<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-92931" href="/rt3/Ticket/Display.html?id=29509#txn-92931">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;30&nbsp;15:27:09&nbsp;2004</td>
+    <td class="description">
+      stephane -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.311923</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

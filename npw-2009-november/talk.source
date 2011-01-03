@@ -1,0 +1,352 @@
+.title.
+Beauty and Chaos
+The story of November
+A talk given at NPW 2009
+by Carl Mäsak
+2009-04-17
+
+OH HAI
+
+Carl Mäsak
+
+masak
+
+bioinformatician
+
+working
+
+programmer
+
+half time
+
+languages
+
+我可以有一个汉堡。
+
+Perl ð
+
+Perl 9
+
+Perl ♂
+
+Perl ♀
+
+Perl 6
+
+first
+
+a show of hands
+
+how many...
+
+.double list.
+the Specs:
+- ...have read some of
+- ...have read all of
+- ...have patched
+Rakudo:
+- ...have downloaded
+- ...have written a script in
+- ...have crashed
+- ...have submitted a bug for
+- ...have patched
+Parrot:
+- ...have downloaded
+- ...have crashed
+- ...have patched
+>cl /the Specs/ :green
+>cl /Rakudo/    :pink
+>cl /Parrot/    :blue
+
+.empty.
+
+.fill.
+I ask because I sense
+there's a Perl 6
+community forming
+
+exciting times
+
+we can haz a Perl 6
+
+we can haz a Perl 6 community
+>hl /community/
+
+screenshots
+
+.screenshot.
+number: 1
+
+.screenshot.
+number: 2
+
+◁◁
+
+.title.
+origins
+The .WHENCE of November
+>tw /\.WHENCE/
+
+viklund
+
+email
+
+"I have an idea"
+>hl /idea/
+
+do something
+
+Perl 6
+
+Rakudo
+
+a plan for being productive
+
+and how to win money
+
+Conrad Schneiker
+
+secret project
+
+three months
+
+.code.
+method exists_wiki_page($page) {
+    ($.content_path ~ $page) ~~ :e;
+}
+
+.code.
+method exists_wiki_page($page) {
+    # RAKUDO: use :e
+    my $exists = False;
+    try {
+        my $fh = open( $.content_path ~ $page );
+        $exists = True;
+    }
+    return $exists;
+}
+
+.title.
+Beauty:
+!
+Modules
+
+request→
+
+request→ CGI
+
+request→ CGI → Dispatch
+
+request→ CGI → Dispatch → Storage
+
+request→ CGI → Dispatch → Storage
+→ Markup
+
+request→ CGI → Dispatch → Storage
+→ Markup → Template
+
+request→ CGI → Dispatch → Storage
+→ Markup → Template → CGI
+
+request→ CGI → Dispatch → Storage
+→ Markup → Template → CGI →response
+
+.title.
+Beauty:
+!
+Reinventing the wheel
+
+no CPAN
+
+☹
+
+☺
+
+try new things
+
+Perl 6 grammars
+
+YAPC::EU 2008
+
+.chat.
+pm: "You're submitting a fair amount of bugs there."
+>hl /a fair amount of bugs/
+pm: "What is it you're building?"
+masak: "Er... um..."
+masak: "We're toying with a web framework for Perl 6."
+>hl /a web framework/
+pm: "Oh, ok. Cool."
+
+cat out of bag
+
+early autumn
+
+we got a new developer, Илья
+
+Rakudo got a lot of new features
+
+use.perl.org post
+
+Rakudo:
+the good,
+the cool,
+the awesome,
+the bad,
+the ugly,
+and the weird
+>hl /good|cool|awesome|bad|ugly|weird/
+
+most things are fixed
+
+January
+
+✌ we won the prize! ✌
+
+.title.
+Beauty:
+!
+The month of November
+
+I met jnthn in person in January
+
+.chat.
+jnthn: "What's the name of the talk?"
+masak: "'Chaos and Beauty -- the story of November.'"
+jnthn: "I imagine pm and I represent the chaos, then. :)"
+masak: "No, of course not. :)"
+masak: "Well, yeah. :)"
+
+not the real culprits
+
+.title.
+Chaos:
+!
+Entropy
+
+.perl6 graph.
+number: 0
+
+.perl6 graph.
+number: 1
+
+.perl6 graph.
+number: 2
+
+.perl6 graph.
+number: 3
+
+.perl6 graph.
+number: 4
+
+.perl6 graph.
+number: 5
+
+.perl6 graph.
+number: 6
+
+.perl6 graph.
+number: 7
+
+.perl6 graph.
+number: 8
+
+.perl6 graph.
+number: 9
+
+.perl6 graph.
+number: 10
+
+.title.
+Chaos:
+!
+People
+
+two people in Uppsala
+
+coordinate
+
+a third one in Vladivostok
+
+difficulties
+
+bad start
+
+article tagging
+
+nice
+
+lots of code
+
+lots of data model
+
+masak: uhm.
+
+masak: why tags?
+
+ihrd: it was your idea!
+
+masak: it was?
+
+.title.
+Beauty:
+!
+Projects
+
+scripts
+
+classes
+scripts
+
+modules
+classes
+scripts
+
+projects
+modules
+classes
+scripts
+
+proto
+
+"Well-Thought-Out Practices"
+
+structure
+
+Web.pm
+
+request→ CGI → Dispatch → Storage
+→ Markup → Template → CGI →response
+
+request→ Web.pm → Dispatch → Storage
+→ Markup → Template → Web.pm →response
+
+request→ Web.pm → Storage
+→ Markup → Template → Web.pm →response
+
+request→ Web.pm → Storage
+→ Markup → Web.pm →response
+
+.title.
+Conclusion
+
+Perl 6 rocks!
+
+use Perl 6!
+
+Beauty and Chaos
+
+strive for beauty
+
+embrace chaos
+
+try November
+
+'november' on github
+http://november-wiki.org
+november-wiki @ Google groups
+#november-wiki @ freenode
+
+Have the appropriate
+amount of fun.
+
+kthxbai.

@@ -1,0 +1,687 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60976: [PATCH] rakudo fails to build AST for subset declaration with regex literal</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60976">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60976: [PATCH] rakudo fails to build AST for subset declaration with regex literal</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60976">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60976</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60976">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+rff.rff [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60976">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+patch2<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/502516/236122/patch2">
+Mon Dec 01 13:52:45 2008 (1k) by rff.rff <!-- x --> at gmail.com
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60976">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502516" href="/rt3/Ticket/Display.html?id=60976#txn-502516">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;01&nbsp;13:52:45&nbsp;2008</td>
+    <td class="description">
+      rff.rff <!-- x --> at gmail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] rakudo fails to build AST for subset declaration with regex literal</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 1 Dec 2008 22:52:19 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;gabriele renzi&#34; &lt;rff.rff <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/502516/236120/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+The bug is visibile with the following line<br />
+<br />
+subset GenderStr of Str where /^[m|f]$/ ;<br />
+<br />
+for what I can tell the problem is due to the code to manage<br />
+type_declarator that only checks if a EXPR is a PAST::Block.<br />
+A regex is recognized as a block but it lacks some of the structure so<br />
+I get this error:<br />
+<br />
+.Method &#39;push&#39; not found for invocant of class &#39;Perl6;Grammar&#39;<br />
+current instr.: &#39;parrot;Perl6;Grammar;Actions;_block5542&#39; pc 141736<br />
+&#40;src/gen_actions.pir:15745&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;Actions;_block5532&#39; pc 141655<br />
+&#40;src/gen_actions.pir:15715&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;Actions;type_declarator&#39; pc<br />
+141016 &#40;src/gen_actions.pir:15507&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;type_declarator&#39; pc 56741<br />
+&#40;src/gen_grammar.pir:15033&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;noun&#39; pc 66124 &#40;src/gen_grammar.pir:18653&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;expect_term&#39; pc 60939<br />
+&#40;src/gen_grammar.pir:16680&#41;<br />
+called from Sub &#39;parrot;PGE;OPTable;parse&#39; pc 1979<br />
+&#40;compilers/pge/PGE/OPTable.pir:554&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statement&#39; pc 27186<br />
+&#40;src/gen_grammar.pir:3693&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statementlist&#39; pc 24938<br />
+&#40;src/gen_grammar.pir:2818&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statement_block&#39; pc 22476<br />
+&#40;src/gen_grammar.pir:1847&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;TOP&#39; pc 18370 &#40;src/gen_grammar.pir:229&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;parse&#39; pc 640<br />
+&#40;src/PCT/HLLCompiler.pir:390&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;compile&#39; pc 434<br />
+&#40;src/PCT/HLLCompiler.pir:303&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 868<br />
+&#40;src/PCT/HLLCompiler.pir:502&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1233<br />
+&#40;src/PCT/HLLCompiler.pir:676&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1412<br />
+&#40;src/PCT/HLLCompiler.pir:765&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 16408 &#40;perl6.pir:168&#41;<br />
+<br />
+Wich seem related to line 3025:<br />
+            $past[0].push&#40;$param&#41;;<br />
+<br />
+where possibly $past[0] is empty.<br />
+<br />
+A simple solution is to check that the value passed actually is a<br />
+regex by verifying the .compiler attribute, and then manage it as just<br />
+another literal, constructing a block with smart matching.<br />
+The tests pass but I feel the &#34;right&#34; solution may be fixing the<br />
+Perl6Regex structure, even because similar code to build the subset<br />
+type is used in make_anon_subset.<br />
+Sadly, it&#39;s the first time I dive into the rakudo source and I do not<br />
+feel comfortable doing that.<br />
+<br />
+Attached is the  patch, and my minimal test suite, which should<br />
+probably go into the perl6 spec, which tests the definition of subsets<br />
+but not with a regex literal.<br />
+All tests pass, and spectest behaves the same as the unpatched version.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/502516/236122/patch2">Download patch2</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502522" href="/rt3/Ticket/Display.html?id=60976#txn-502522">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;01&nbsp;13:52:46&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502526" href="/rt3/Ticket/Display.html?id=60976#txn-502526">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;01&nbsp;14:16:37&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/502526/236130/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 674b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Dec 01 13:52:45 2008, rff.rff <!-- x --> at gmail.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Attached is the  patch, and my minimal test suite, which should<br />
+&gt; probably go into the perl6 spec, which tests the definition of subsets<br />
+&gt; but not with a regex literal.<br />
+</div>
+<br />
+I&#39;ve added such a test to t/spec/S12-subset/subtypes.t now in &#40;pugs&#41;<br />
+r24130. &#40;It not only tests the creation, but also that the type actually <br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; All tests pass, and spectest behaves the same as the unpatched<br />
+&gt; version.<br />
+</div>
+<br />
+I can confirm this, and also that it makes the new tests pass. But I&#39;m<br />
+not sufficiently deep in the guts to can confirm that it&#39;s the right<br />
+thing to do.<br />
+If pm, particle or jonathan give thumbs up I can apply it.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-502530" href="/rt3/Ticket/Display.html?id=60976#txn-502530">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Dec&nbsp;01&nbsp;14:16:39&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-503494" href="/rt3/Ticket/Display.html?id=60976#txn-503494">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;03&nbsp;13:05:34&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/503494/236692/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 307b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Applied after review from pmichaud:<br />
+<br />
+21:59 &lt; pmichaud&gt; I looked at the patch for 60976, and while it &#34;feels<br />
+wrong&#34; I <br />
+                  couldn&#39;t come up with a better answer for now.<br />
+21:59 &lt; pmichaud&gt; it&#39;s okay with me if someone applies it.<br />
+<br />
+Tests pass, thanks you very much for your patch.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-503498" href="/rt3/Ticket/Display.html?id=60976#txn-503498">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;03&nbsp;13:05:35&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.012046</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

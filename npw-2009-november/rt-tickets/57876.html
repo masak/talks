@@ -1,0 +1,1371 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#57876: An if statement isn&#39;t parsed correctly if it follows on a sub</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D57876">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#57876: An if statement isn&#39;t parsed correctly if it follows on a sub</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57876">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">57876</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=57876">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+dwhipp [at] nvidia.com
+
+<br />
+
+
+karavelov
+&lt;luben [at] unixsol.org&gt;
+
+<br />
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+
+slavikg [at] gmail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=57876">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=57876">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432974" href="/rt3/Ticket/Display.html?id=57876#txn-432974">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;22&nbsp;13:04:51&nbsp;2008</td>
+    <td class="description">
+      karavelov - Ticket 56228:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">luben <!-- x --> at unixsol.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Perl6 gramar bug</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432974/197786/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 835b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+There is some parse error for this simpe case:<br />
+<div class="message-stanza-depth-1">
+==code<br />
+</div>
+use v6;<br />
+<br />
+sub ok &#40;$num&#41;{<br />
+    $num;<br />
+}<br />
+<br />
+for 1..5000 {<br />
+    ok&#40;$_&#41;;<br />
+}<br />
+<div class="message-stanza-depth-1">
+==cut<br />
+</div>
+<br />
+The error message is : <br />
+<br />
+Statement not terminated properly at line 7, near &#34;{ \n    ok&#40;&#34;<br />
+current instr.: &#39;parrot;PGE::Util;die&#39; pc 120 &#40;runtime/parrot/library/PGE/Util.pir:82&#41;<br />
+called from Sub &#39;parrot;Perl6::Grammar;eat_terminator&#39; pc 20925 &#40;src/gen_grammar.pir:2814&#41;<br />
+called from Sub &#39;parrot;Perl6::Grammar;statementlist&#39; pc 19938 &#40;src/gen_grammar.pir:2451&#41;<br />
+called from Sub &#39;parrot;Perl6::Grammar;statement_block&#39; pc 17795 &#40;src/gen_grammar.pir:1651&#41;<br />
+called from Sub &#39;parrot;Perl6::Grammar;TOP&#39; pc 14067 &#40;src/gen_grammar.pir:225&#41;<br />
+<br />
+<br />
+if we add some statement before the &#34;for&#34; it compiles. For example this is OK:<br />
+<br />
+<div class="message-stanza-depth-1">
+==code<br />
+</div>
+use v6;<br />
+<br />
+sub ok &#40;$num&#41;{<br />
+    $num;<br />
+}<br />
+;<br />
+for 1..5000 {<br />
+    ok&#40;$_&#41;;<br />
+}<br />
+<div class="message-stanza-depth-1">
+==cut<br />
+</div>
+<br />
+Best regards<br />
+luben<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433062" href="/rt3/Ticket/Display.html?id=57876#txn-433062">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Jun&nbsp;22&nbsp;17:35:44&nbsp;2008</td>
+    <td class="description">
+      coke - Ticket 56228:  Subject changed from &#39;Perl6 gramar bug&#39; to &#39;Perl6 grammar bug&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-433868" href="/rt3/Ticket/Display.html?id=57876#txn-433868">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Jun&nbsp;24&nbsp;08:41:18&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 56228:  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-458154" href="/rt3/Ticket/Display.html?id=57876#txn-458154">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;12&nbsp;12:17:38&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">An if statement isn&#39;t parsed correctly if it follows on a sub</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 12 Aug 2008 21:17:18 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/458154/211828/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 401b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+r30183:<br />
+$ ./perl6 -e &#39;<br />
+sub x {<br />
+}<br />
+if 1 {<br />
+}&#39;<br />
+Statement not terminated properly at line 4, near &#34;{\n}&#34;<br />
+[...]<br />
+<br />
+From S04:<br />
+<br />
+=head1 Statement-ending blocks<br />
+<br />
+A line ending with a closing brace &#34;C&lt;}&gt;&#34;, followed by nothing but<br />
+whitespace or comments, will terminate a statement if an end of statement<br />
+can occur there.  That is, these two statements are equivalent:<br />
+<br />
+    my $x = sub { 3 }<br />
+    my $x = sub { 3 };<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-460744" href="/rt3/Ticket/Display.html?id=57876#txn-460744">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;19&nbsp;07:18:06&nbsp;2008</td>
+    <td class="description">
+      masak -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/460744/213118/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 70b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+If not actually a duplicate, then at least a close relative of #56228.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-460746" href="/rt3/Ticket/Display.html?id=57876#txn-460746">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Aug&nbsp;19&nbsp;07:18:06&nbsp;2008</td>
+    <td class="description">
+      masak -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500312" href="/rt3/Ticket/Display.html?id=57876#txn-500312">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;22:45:15&nbsp;2008</td>
+    <td class="description">
+      chrisdolan - Ticket 56228:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/500312/234846/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 392b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I studied the solution employed by STD.pm for this.  STD uses embedded<br />
+code to set flags at the end of rules:<br />
+<br />
+  endstmt = 0 &#40;default&#41; means we have not reached the end of a statement<br />
+  endstmt = 1 means we got a terminator or an EOF<br />
+  endstmt = 2 means a block just ended<br />
+<br />
+Those flags are set in &lt;block&gt;, &lt;regex_block&gt; and &lt;stdstopper&gt;.<br />
+<br />
+Statement modifiers are forbidden when endstmt == 2.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-500318" href="/rt3/Ticket/Display.html?id=57876#txn-500318">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Nov&nbsp;25&nbsp;22:45:35&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 56228:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-501438" href="/rt3/Ticket/Display.html?id=57876#txn-501438">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;28&nbsp;15:02:51&nbsp;2008</td>
+    <td class="description">
+      slavikg <!-- x --> at gmail.com - Ticket 60908:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">semi-colon required in some cases</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 28 Nov 2008 18:02:32 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Slavik Goltser&#34; &lt;slavikg <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/501438/235460/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+if there is a grammar definition followed by an if statement, even if there<br />
+are newlines separating the two. the semi colon is required after the<br />
+grammar definition, otherwise rakudo throws an error that the statement is<br />
+not properly terminated.<br />
+<br />
+grammar A {<br />
+ token TOP { \w+ }<br />
+}<br />
+<br />
+if &#40;&#34;blah&#34; ~~ A&#41; {<br />
+ say $/;<br />
+}<br />
+<br />
+slavik@slavik-desktop:~/code/perl6$ perl6 test.p6<br />
+Statement not terminated properly at line 5, near &#34;{\n say $/;&#34;<br />
+<br />
+current instr.: &#39;parrot;PGE;Util;die&#39; pc 129<br />
+&#40;runtime/parrot/library/PGE/Util.pir:83&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;eat_terminator&#39; pc 26362<br />
+&#40;src/gen_grammar.pir:3387&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statementlist&#39; pc 25018<br />
+&#40;src/gen_grammar.pir:2854&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;statement_block&#39; pc 22454<br />
+&#40;src/gen_grammar.pir:1847&#41;<br />
+called from Sub &#39;parrot;Perl6;Grammar;TOP&#39; pc 18348<br />
+&#40;src/gen_grammar.pir:229&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;parse&#39; pc 640<br />
+&#40;src/PCT/HLLCompiler.pir:390&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;compile&#39; pc 434<br />
+&#40;src/PCT/HLLCompiler.pir:303&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 868<br />
+&#40;src/PCT/HLLCompiler.pir:502&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1233<br />
+&#40;src/PCT/HLLCompiler.pir:676&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1412<br />
+&#40;src/PCT/HLLCompiler.pir:765&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 16386 &#40;perl6.pir:168&#41;<br />
+slavik@slavik-desktop:~/code/perl6$<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/501438/235462/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-501506" href="/rt3/Ticket/Display.html?id=57876#txn-501506">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;29&nbsp;08:04:20&nbsp;2008</td>
+    <td class="description">
+      chrisdolan - Ticket 60908:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/501506/235524/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 271b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is a variation on &#34;#56228: Perl6 grammar bug&#34; which notices that a<br />
+&#34;for&#34; after blocks is misparsed as a statement modifier.<br />
+<br />
+Could someone please mark this as duplicate and fix the subject line of<br />
+56228 to be more descriptive?  I don&#39;t have permission to do that...<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-501510" href="/rt3/Ticket/Display.html?id=57876#txn-501510">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;29&nbsp;08:04:23&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60908:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-511746" href="/rt3/Ticket/Display.html?id=57876#txn-511746">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Dec&nbsp;24&nbsp;07:38:04&nbsp;2008</td>
+    <td class="description">
+      dwhipp <!-- x --> at nvidia.com - Ticket 61656:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">&#34;my&#34; declaration at start of block following sub decl that doesn&#39;t end with semicolon</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 24 Dec 2008 07:37:44 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;&#39;rakudobug <!-- x --> at perl.org&#39;&#34; &lt;rakudobug <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">David Whipp &lt;DWhipp <!-- x --> at nvidia.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511746/241260/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 911b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&#40;rakudo 34337&#41;<br />
+<br />
+Strange parsing error:<br />
+<br />
+sub x {<br />
+}<br />
+while 0 {<br />
+    my $b = 1;<br />
+}<br />
+<br />
+breaks: [[[ Statement not terminated properly at line 6, near &#34;{\n<br />
+my $&#34;   ]]]<br />
+<br />
+If I add a semicolon after to sub decl, then it&#39;s happy:<br />
+<br />
+sub x {<br />
+};  ## &lt;--- semicolon here!<br />
+while 0 {<br />
+    my $b = 1;<br />
+}<br />
+<br />
+The strange thing is that it&#39;s only happening for &#34;my&#34; decls in the<br />
+loop. If I declare the variable earlier, then I can assign it without<br />
+problems.<br />
+<br />
+<br />
+<br />
+-----------------------------------------------------------------------------------<br />
+This email message is for the sole use of the intended recipient&#40;s&#41; and may contain<br />
+confidential information.  Any unauthorized review, use, disclosure or distribution<br />
+is prohibited.  If you are not the intended recipient, please contact the sender by<br />
+reply email and destroy all copies of the original message.<br />
+-----------------------------------------------------------------------------------<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/511746/241262/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512626" href="/rt3/Ticket/Display.html?id=57876#txn-512626">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:38:13&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 61656:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/512626/241682/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 390b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Dec 24 07:38:04 2008, dwhipp <!-- x --> at nvidia.com wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &#40;rakudo 34337&#41;<br />
+&gt; <br />
+&gt; Strange parsing error:<br />
+&gt; <br />
+&gt; sub x {<br />
+&gt; }<br />
+&gt; while 0 {<br />
+&gt;     my $b = 1;<br />
+&gt; }<br />
+</div>
+<br />
+This is the same problem as RT #57876 -- Rakudo currently sees a<br />
+&#34;while&#34;, &#34;for&#34;, or &#34;if&#34; following a block &#40;such as a sub&#41; to be<br />
+a modifier on the block.  I&#39;ll merge the tickets and see if I can<br />
+bump up the priority for fixing that bug.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512630" href="/rt3/Ticket/Display.html?id=57876#txn-512630">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:38:15&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 61656:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512634" href="/rt3/Ticket/Display.html?id=57876#txn-512634">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:38:16&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 61656:  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512636" href="/rt3/Ticket/Display.html?id=57876#txn-512636">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:38:26&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 61656:  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512638" href="/rt3/Ticket/Display.html?id=57876#txn-512638">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:38:26&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512640" href="/rt3/Ticket/Display.html?id=57876#txn-512640">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:39:04&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 56228:  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-512642" href="/rt3/Ticket/Display.html?id=57876#txn-512642">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Dec&nbsp;26&nbsp;09:39:04&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-524950" href="/rt3/Ticket/Display.html?id=57876#txn-524950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;26&nbsp;02:46:48&nbsp;2009</td>
+    <td class="description">
+      masak - Ticket 60908:  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-524952" href="/rt3/Ticket/Display.html?id=57876#txn-524952">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;26&nbsp;02:46:48&nbsp;2009</td>
+    <td class="description">
+      masak -  Merged into ticket #57876
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-536998" href="/rt3/Ticket/Display.html?id=57876#txn-536998">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Feb&nbsp;28&nbsp;15:16:24&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/536998/254666/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 346b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun Jun 22 13:04:51 2008, karavelov wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; There is some parse error for this simpe case:<br />
+<div class="message-stanza-depth-2">
+&gt; ==code<br />
+</div>
+&gt; use v6;<br />
+&gt; <br />
+&gt; sub ok &#40;$num&#41;{<br />
+&gt;     $num;<br />
+&gt; }<br />
+&gt; <br />
+&gt; for 1..5000 {<br />
+&gt;     ok&#40;$_&#41;;<br />
+&gt; }<br />
+</div>
+<br />
+This is now fixed in 1e22a68, as well as the other cases where<br />
+if/while/until/unless/for... were being incorrectly parsed as statement<br />
+modifiers.<br />
+<br />
+Thanks!<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537052" href="/rt3/Ticket/Display.html?id=57876#txn-537052">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Feb&nbsp;28&nbsp;15:22:02&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-537056" href="/rt3/Ticket/Display.html?id=57876#txn-537056">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sat&nbsp;Feb&nbsp;28&nbsp;15:22:04&nbsp;2009</td>
+    <td class="description">
+      pmichaud -  Given to pmichaud
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.481577</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

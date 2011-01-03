@@ -1,0 +1,937 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#56214: [PATCH] Implementation of Str.index.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D56214">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#56214: [PATCH] Implementation of Str.index.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56214">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">56214</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=56214">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56214">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+index2.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/437226/200094/index2.diff">
+Mon Jun 30 18:41:38 2008 (2k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/437220/200082/index2.diff">
+Mon Jun 30 18:26:34 2008 (2k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+index.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/432760/197696/index.diff">
+Sat Jun 21 20:47:31 2008 (1.7k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=56214">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432760" href="/rt3/Ticket/Display.html?id=56214#txn-432760">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;20:47:31&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Implementation of Str.index.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 22 Jun 2008 13:46:48 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432760/197694/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 99b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+Almost trivial implementation of Str.index attached.<br />
+<br />
+S29-str/index.t passing.<br />
+<br />
+-- <br />
+Bacek.<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/432760/197696/index.diff">Download index.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Str.pir b/languages/perl6/src/classes/Str.pir<br />
+index 6195989..828e374 100644<br />
+--- a/languages/perl6/src/classes/Str.pir<br />
++++ b/languages/perl6/src/classes/Str.pir<br />
+@@ -222,6 +222,32 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     .return &#40;retv&#41;<br />
+ .end<br />
+ <br />
++.sub &#39;index&#39; :method<br />
++    .param string x<br />
++    .param int start     :optional<br />
++    .param int has_start :opt_flag<br />
++    .local pmc retv<br />
++    .local string s<br />
++    .local int pos<br />
++    <br />
++    s = self<br />
++    retv = new &#39;Int&#39;<br />
++ <br />
++    $I0 = length x<br />
++    unless $I0 goto check_length<br />
++    pos = index s, x, start<br />
++    goto done<br />
++  check_length:<br />
++    pos = start<br />
++    $I0 = length s<br />
++    if $I0 &gt; pos goto done<br />
++    pos = $I0<br />
++<br />
++  done:<br />
++    retv  = pos<br />
++    .return &#40;retv&#41;<br />
++.end<br />
++<br />
+ =item perl&#40;&#41;<br />
+ <br />
+ Returns a Perl representation of the Str.<br />
+@@ -452,6 +478,26 @@ This function is mostly identical to the C library sprintf function.<br />
+     .return s.&#39;sprintf&#39;&#40;args :flat&#41;<br />
+ .end<br />
+ <br />
++=item index<br />
++<br />
++ our StrPos multi method index&#40; Str $string: Str $substring, StrPos $pos = StrPos&#40;0&#41; &#41; is export<br />
++<br />
++index searches for the first occurrence of $substring in $string, starting at $pos.<br />
++<br />
++The value returned is always a StrPos object. If the substring is found, then the StrPos represents the position of the first character of the substring. If the substring is not found, a bare StrPos containing no position is returned. This prototype StrPos evaluates to false because it&#39;s really a kind of undef. Do not evaluate as a number, because instead of returning -1 it will return 0 and issue a warning.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;index&#39;<br />
++    .param string str<br />
++    .param string subs<br />
++    .param int pos :optional<br />
++    .local pmc s<br />
++    s = new &#39;Perl6Str&#39;<br />
++    s = str<br />
++    .return s.&#39;index&#39;&#40;subs, pos&#41;<br />
++.end<br />
++<br />
+ =back<br />
+ <br />
+ =head2 TODO Functions<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-432766" href="/rt3/Ticket/Display.html?id=56214#txn-432766">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Jun&nbsp;21&nbsp;20:47:34&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437220" href="/rt3/Ticket/Display.html?id=56214#txn-437220">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;30&nbsp;18:26:15&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/437220/200076/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 39b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Revorked patch after Pmichaud&#39;s review.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/437220/200082/index2.diff">Download index2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Str.pir b/languages/perl6/src/classes/Str.pir<br />
+index 275b21a..4973672 100644<br />
+--- a/languages/perl6/src/classes/Str.pir<br />
++++ b/languages/perl6/src/classes/Str.pir<br />
+@@ -27,7 +27,7 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     p6meta.&#39;register&#39;&#40;&#39;String&#39;, &#39;parent&#39;=&gt;strproto, &#39;protoobject&#39;=&gt;strproto&#41;<br />
+ <br />
+     $P0 = get_hll_namespace [&#39;Str&#39;]<br />
+-    &#39;!EXPORT&#39;&#40;&#39;sprintf&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
++    &#39;!EXPORT&#39;&#40;&#39;sprintf index&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -216,6 +216,59 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+ <br />
++=item index<br />
++<br />
++ our StrPos multi method index&#40; Str $string: Str $substring, StrPos $pos = StrPos&#40;0&#41; &#41; is export<br />
++<br />
++C&lt;index&gt; searches for the first occurrence of C&lt;$substring&gt; in C&lt;$string&gt;,<br />
++starting at C&lt;$pos&gt;.<br />
++<br />
++The value returned is always a StrPos object. If the substring is found, then<br />
++the StrPos represents the position of the first character of the substring. If<br />
++the substring is not found, a bare StrPos containing no position is returned.<br />
++This prototype StrPos evaluates to false because it&#39;s really a kind of undef.<br />
++Do not evaluate as a number, because instead of returning -1 it will return 0<br />
++and issue a warning.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;index&#39; :method<br />
++    .param string substring<br />
++    .param int pos     :optional<br />
++    .param int has_pos :opt_flag<br />
++    .local pmc retv<br />
++    .local string s<br />
++    <br />
++    s = self<br />
++<br />
++    # This check is redundant &#40;at least with current parrot&#41;.<br />
++    # &#39;int pos&#39; initialised to 0 if it was omited in invokation.<br />
++    if has_pos goto check_substring<br />
++    pos = 0<br />
++<br />
++  check_substring:<br />
++    unless substring goto check_length<br />
++    pos = index s, substring, pos<br />
++    goto check_res<br />
++  check_length:<br />
++    $I0 = length s<br />
++    if $I0 &gt; pos goto done<br />
++    pos = $I0<br />
++<br />
++  check_res:<br />
++    # According to spec we should return StrPos wich yield false in boolean context.<br />
++    # parrot return&#39;s -1 from index<br />
++    if pos &gt;= 0 goto done<br />
++<br />
++    # It should be bare StrPos.<br />
++    retv = new &#39;Failure&#39;<br />
++    .return &#40;retv&#41;<br />
++<br />
++  done:<br />
++    retv = new &#39;Int&#39;<br />
++    retv  = pos<br />
++    .return &#40;retv&#41;<br />
++.end<br />
+ <br />
+ =item perl&#40;&#41;<br />
+ <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437224" href="/rt3/Ticket/Display.html?id=56214#txn-437224">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;30&nbsp;18:28:03&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-437226" href="/rt3/Ticket/Display.html?id=56214#txn-437226">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jun&nbsp;30&nbsp;18:41:38&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/437226/200088/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 39b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Revorked patch after Pmichaud&#39;s review.<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/437226/200094/index2.diff">Download index2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Str.pir b/languages/perl6/src/classes/Str.pir<br />
+index 275b21a..4973672 100644<br />
+--- a/languages/perl6/src/classes/Str.pir<br />
++++ b/languages/perl6/src/classes/Str.pir<br />
+@@ -27,7 +27,7 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     p6meta.&#39;register&#39;&#40;&#39;String&#39;, &#39;parent&#39;=&gt;strproto, &#39;protoobject&#39;=&gt;strproto&#41;<br />
+ <br />
+     $P0 = get_hll_namespace [&#39;Str&#39;]<br />
+-    &#39;!EXPORT&#39;&#40;&#39;sprintf&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
++    &#39;!EXPORT&#39;&#40;&#39;sprintf index&#39;, &#39;from&#39;=&gt;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -216,6 +216,59 @@ as the Perl 6 C&lt;Str&gt; class.<br />
+     .return&#40;retv&#41;<br />
+ .end<br />
+ <br />
++=item index<br />
++<br />
++ our StrPos multi method index&#40; Str $string: Str $substring, StrPos $pos = StrPos&#40;0&#41; &#41; is export<br />
++<br />
++C&lt;index&gt; searches for the first occurrence of C&lt;$substring&gt; in C&lt;$string&gt;,<br />
++starting at C&lt;$pos&gt;.<br />
++<br />
++The value returned is always a StrPos object. If the substring is found, then<br />
++the StrPos represents the position of the first character of the substring. If<br />
++the substring is not found, a bare StrPos containing no position is returned.<br />
++This prototype StrPos evaluates to false because it&#39;s really a kind of undef.<br />
++Do not evaluate as a number, because instead of returning -1 it will return 0<br />
++and issue a warning.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;index&#39; :method<br />
++    .param string substring<br />
++    .param int pos     :optional<br />
++    .param int has_pos :opt_flag<br />
++    .local pmc retv<br />
++    .local string s<br />
++    <br />
++    s = self<br />
++<br />
++    # This check is redundant &#40;at least with current parrot&#41;.<br />
++    # &#39;int pos&#39; initialised to 0 if it was omited in invokation.<br />
++    if has_pos goto check_substring<br />
++    pos = 0<br />
++<br />
++  check_substring:<br />
++    unless substring goto check_length<br />
++    pos = index s, substring, pos<br />
++    goto check_res<br />
++  check_length:<br />
++    $I0 = length s<br />
++    if $I0 &gt; pos goto done<br />
++    pos = $I0<br />
++<br />
++  check_res:<br />
++    # According to spec we should return StrPos wich yield false in boolean context.<br />
++    # parrot return&#39;s -1 from index<br />
++    if pos &gt;= 0 goto done<br />
++<br />
++    # It should be bare StrPos.<br />
++    retv = new &#39;Failure&#39;<br />
++    .return &#40;retv&#41;<br />
++<br />
++  done:<br />
++    retv = new &#39;Int&#39;<br />
++    retv  = pos<br />
++    .return &#40;retv&#41;<br />
++.end<br />
+ <br />
+ =item perl&#40;&#41;<br />
+ <br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-438384" href="/rt3/Ticket/Display.html?id=56214#txn-438384">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;03&nbsp;05:16:25&nbsp;2008</td>
+    <td class="description">
+      moritz -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/438384/200766/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 196b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patch applied as r29006, thank you very much for your contribution.<br />
+<br />
+Is is not perfect wrt to StrPos as the return value, but I think that&#39;s<br />
+worth working on when we have different Unicode levels.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-438386" href="/rt3/Ticket/Display.html?id=56214#txn-438386">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jul&nbsp;03&nbsp;05:16:26&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.54262</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

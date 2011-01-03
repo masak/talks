@@ -1,0 +1,220 @@
+---
+- Prescience and time travel
+- Привет. Greetings.
+- Nervous
+- Advice from a friend
+- Be careful
+- 'jnthn:'
+- slide:
+    code: |
+        "Don't wear a towel
+         on your head
+         from the airport
+         to the hotel. :-)"
+                -- jnthn
+- slide:
+    file: towel
+- masak
+- Became active in 2008
+- Writing apps, submitting bugs
+- Exploring the frontiers of Perl 6
+- Increasing application size
+- A bit about Perl 6
+- An experiment
+- A fairly controlled experiment
+- A "research project"?
+- A "skunkworks project"?
+- Early on the adopter curve
+- slide:
+    file: you-are-here
+- Sane defaults
+- Theory meeting practice
+- slide:
+    code: |
+        "In theory, there's no difference   
+        between theory and practice.
+        ..."
+- slide:
+    code: |
+        "In theory, there's no difference   
+        between theory and practice.
+        In practice, there is."
+- slide:
+    code: |
+        "In theory, there's no difference
+        between theory and practice,
+        even in practice." -- Scott Aaronson
+- Yapsi
+- Yet Another Perl Six Implementation
+- slide:
+    file: compiler1
+    gradual: yes
+- slide:
+    file: compiler2
+    gradual: yes
+- slide:
+    file: compiler3
+    gradual: yes
+- slide:
+    file: runtime
+- Tardis
+- Time-traveling debugger
+- "Here's the problem:"
+- slide:
+    file: debugging1
+    gradual: yes
+- slide:
+    file: debugging2
+    gradual: yes
+- Jump around in the program
+- Two models on time travel
+- "1. Can't kill grandfather"
+- "2. Can kill grandfather"
+- If you kill a grandfather
+- the future from that point is destroyed
+- Have to re-run from that point
+- slide:
+    file: yapsi-tardis
+    gradual: yes
+- Sigmund
+- Static code analyzer
+- slide:
+    file: yapsi-sigmund
+    gradual: yes
+- So many things blow up at runtime
+- Can be caught at CHECK time
+- slide:
+    code: |
+        my Int $a;
+        $a = 'OH HAI';
+- slide:
+    code: |
+        sub foo(Int $a) {
+            ...
+        }
+        
+        foo('OH HAI');
+- slide:
+    code: |
+        sub foo(Int $a) {
+            $a = 42; # boom
+        }
+        
+        foo(5);
+- slide:
+    code: |
+        sub foo() {
+            ...
+        }
+        
+        foo('OH HAI');
+- slide:
+    code: |
+        sub foo() {
+            ...
+        }
+        
+        # &foo is never called (or exported)
+- slide:
+    code: |
+        my $a;
+        say $a; # probably a mistake
+        $a = 42;
+- slide:
+    code: |
+        my $a = 42;
+        
+        # $a is never used
+- slide:
+    code: |
+        if $a = 42 {
+            ...
+        }
+- slide:
+    code: |
+        multi sub foo(Int $a) { ... }
+        multi sub foo(Int $b) { ... }
+        
+        foo(42);    # boom
+- slide:
+    code: |
+        multi sub foo(Int $a?) { ... }
+        multi sub foo(Str $a?) { ... }
+        
+        foo();      # boom
+- slide:
+    code: |
+        multi sub foo(Int $a, Int $b) { ... }
+        multi sub foo(Str $a, Str $b) { ... }
+        
+        foo(42, 'OH HAI'); # boom
+- slide:
+    code: |
+        enum Weekday <mon tue wed thu fri sat sun>;
+        enum Month <jan feb mar apr may jun jul aug sep oct nov dec>;
+
+        if tue < apr { # works, but makes no sense!
+            ...
+        }
+- slide:
+    code: |
+        my ($a, $b) = 1, 2, 3;
+        # the 3 is lost!
+- slide:
+    code: |
+        our Int sub foo() {
+            return 'OH HAI';
+        }
+- Halting problem
+- slide:
+    code: |
+        say 'OH HAI';
+- slide:
+    code: |
+        loop {
+        }
+- slide:
+    code: |
+        for 1..1337 {
+            say 'OH HAI';
+        }
+- slide:
+    code: |
+        for 1..Inf {
+            say 'OH HAI';
+        }
+- slide:
+    code: |
+        sub foo {
+            foo;
+        }
+        foo;
+- The limits of analysis
+- Tell me whether it halts!
+- slide:
+    file: halting1
+    gradual: yes
+- slide:
+    file: halting2
+- slide:
+    file: halting3
+    gradual: yes
+- slide:
+    file: halting4
+    gradual: yes
+- slide:
+    file: halting5
+- paradox
+- 'same as "I am lying"'
+- 'same as "this statement is false"'
+- '"Scooping the Loop Snooper"'
+- by Geoffrey K. Pullum
+- So, no StuckFinder™
+- Still, good analysis possible
+- Would help find errors early
+- 'Sigmund: finding errors ahead of time'
+- 'Tardis: finding errors backwards in time'
+- Tools are made of theory + practice
+- "Let's build tools we really like"
+- Спасибо.
+- Есть вопросы? Questions?

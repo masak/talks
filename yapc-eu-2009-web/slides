@@ -1,0 +1,114 @@
+---
+- slide:
+    file: title-page
+- OH HAI
+- slide:
+    file: masak
+- I like Perl 6
+- Perl 6 application developer
+- Rakudo has made me more productive...
+- ...at submitting bugs.
+- In fact,
+- "it's not OCD (?)"
+- I like to destroy things
+- I like to see things break
+- 'Job title: destroyer'
+- 'Job title: stress tester'
+- 'Job title: general complainer'
+- Show of hands
+- How many have...
+- ...heard about Perl 6?
+- ...seen a feature in Perl 6 that you liked?
+- ...seen a feature in Perl 6 that you disliked?
+- ...written a script in Rakudo?
+- ...reported a bug for Rakudo?
+- At NPW, I said Perl 6 is growing
+- I was right
+- We need to do something!
+- April
+- April!?
+- slide:
+    file: roadmap
+    gradual: yes
+- slide:
+    file: spider-web
+- TimBL 1989
+- CGI.pm
+- slide:
+    file: wright-plane
+- slide:
+    file: bad-landing
+- slide:
+    file: html-css-js
+    gradual: yes
+- This is the 21st century!
+- 'Short story: we need something new!'
+- slide:
+    file: perl-6
+- condensing good things
+- from other languages
+- better defaults
+- routine parameters
+- class/method keywords
+- multisubs
+- all about pushing knowledge down
+- sneakingly encouraging you
+- to do things right
+- '"strangely consistent"'
+- iterative design
+- slide:
+    file: waterfall
+- slide:
+    file: whirlpool
+- slide:
+    file: web-title
+- slide:
+    file: web-dev-team
+    gradual: yes
+- "What's the goal?"
+- Simplicity
+- slide:
+    file: astaire-example
+- slide:
+    file: puzzle-abstractions
+- slide:
+    file: web-components
+- slide:
+    file: web-api
+- slide:
+    file: hello-world
+- Web::Request, Web::Response
+- Web::Handler
+- Web::Lint
+- Web::MockRequest
+- Defaults vs Configuration
+- slide:
+    file: activation-energy
+- slide:
+    file: civilization-advances
+- 'OTOH: over time, you want to fiddle'
+- 80-20 rule
+- slide:
+    file: whip-mani
+    gradual: yes
+- slide:
+    file: hitomi-synopsis
+- slide:
+    file: perl6-web-comparison
+    gradual: yes
+- Self-similarity
+- slide:
+    file: fractal-1
+- slide:
+    file: fractal-2
+- slide:
+    file: fractal-3
+- slide:
+    file: web-dev-team-others
+- slide:
+    file: attribution
+- slide:
+    file: contact-us
+    gradual: yes
+- Thank you
+- Questions?

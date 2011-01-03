@@ -1,0 +1,683 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#62612: [BUG] parrot revision 35872 broke pick</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D62612">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#62612: [BUG] parrot revision 35872 broke pick</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62612">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">62612</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=62612">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+coke
+&lt;will [at] coleda.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+nelo.onyiah [at] googlemail.com
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=62612">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Bug    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=62612">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523190" href="/rt3/Ticket/Display.html?id=62612#txn-523190">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;21&nbsp;15:50:24&nbsp;2009</td>
+    <td class="description">
+      nelo.onyiah <!-- x --> at googlemail.com -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] parrot revision 35872 broke pick</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 21 Jan 2009 23:49:57 +0000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Ifejinelo Onyiah &lt;nelo.onyiah <!-- x --> at googlemail.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523190/247198/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 2.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I have just updated my parrot &#38; rakudo installation. I ran the spectests:<br />
+<br />
+make test # all tests passed<br />
+make spectest<br />
+Failed Test                               Stat Wstat Total Fail  List of<br />
+Failed<br />
+-------------------------------------------------------------------------------<br />
+t/spec/S12-role/namespaced.t                 1   256     3    6  1-3<br />
+t/spec/integration/99problems-21-to-30.ra    1   256    15   16  8-15<br />
+1420 subtests skipped.<br />
+Failed 2/294 test scripts. 11/8239 subtests failed.<br />
+Files=294, Tests=8239, 1313 wallclock secs &#40;1191.23 cusr + 26.65 csys =<br />
+1217.88 CPU&#41;<br />
+<br />
+There appears to be something wrong with the pick&#40;&#41; method. I noticed it<br />
+when I tried to run:<br />
+<br />
+*<br />
+http://github.com/j1n3l0/perl6-examples/blob/5c7f3562e4579b239b04ebe5032b510d8d9e4beb/wsg/beginner-2008/event008-j1n3l0.pl<br />
+<br />
+j1n3l0@nelo-toshiba:~/Workspace/perl6-examples/wsg/beginner-2008$ perl6<br />
+event008-j1n3l0.pl<br />
+too many arguments passed &#40;3&#41; - 1 params expected<br />
+current instr.: &#39;parrot;Range;pick&#39; pc 7640 &#40;src/classes/Range.pir:81&#41;<br />
+called from Sub &#39;_block14&#39; pc 129 &#40;EVAL_22:58&#41;<br />
+called from Sub &#39;!UNIT_START&#39; pc 18178 &#40;src/builtins/guts.pir:321&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 950<br />
+&#40;src/PCT/HLLCompiler.pir:527&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1275<br />
+&#40;src/PCT/HLLCompiler.pir:688&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1456<br />
+&#40;src/PCT/HLLCompiler.pir:778&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 22211 &#40;perl6.pir:158&#41;<br />
+*** glibc detected *** perl6: corrupted double-linked list: 0x0a3ac880 ***<br />
+<br />
+*<br />
+http://github.com/j1n3l0/perl6-examples/blob/5c7f3562e4579b239b04ebe5032b510d8d9e4beb/wsg/beginner-2008/event008-eric256.pl<br />
+<br />
+j1n3l0@nelo-toshiba:~/Workspace/perl6-examples/wsg/beginner-2008$ perl6<br />
+event008-eric256.pl<br />
+elements&#40;&#41; not implemented in class &#39;Integer&#39;<br />
+current instr.: &#39;postcircumfix:[ ]&#39; pc 3353 &#40;src/classes/Positional.pir:108&#41;<br />
+called from Sub &#39;_block14&#39; pc 126 &#40;EVAL_19:54&#41;<br />
+called from Sub &#39;!UNIT_START&#39; pc 18178 &#40;src/builtins/guts.pir:321&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 950<br />
+&#40;src/PCT/HLLCompiler.pir:527&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;evalfiles&#39; pc 1275<br />
+&#40;src/PCT/HLLCompiler.pir:688&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1456<br />
+&#40;src/PCT/HLLCompiler.pir:778&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 22211 &#40;perl6.pir:158&#41;<br />
+*** glibc detected *** perl6: corrupted double-linked list: 0x0a3a53b0 ***<br />
+<br />
+The t/spec was at revision 24993.<br />
+<br />
+I am using perl v5.10 on my ubuntu 8.10 Linux 2.6.27-9-generic #1 SMP Thu<br />
+Nov 20 21:57:00 UTC 2008 i686 GNU/Linux<br />
+<br />
+The example code is available fro github at<br />
+https://github.com/j1n3l0/perl6-examples/tree/master<br />
+<br />
+-- <br />
+Nelo Onyiah<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523190/247200/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/html 3.5k]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523196" href="/rt3/Ticket/Display.html?id=62612#txn-523196">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Jan&nbsp;21&nbsp;15:50:28&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523392" href="/rt3/Ticket/Display.html?id=62612#txn-523392">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;22&nbsp;06:58:15&nbsp;2009</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523392/247336/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 302b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is my fault;<br />
+<br />
+I added a simplistic Range.pick without running the spectest.<br />
+<br />
+The original functionality defaulted to flattening the range into a <br />
+list, which made &#40;1..10000000&#41;.pick.say rather slow.<br />
+<br />
+I added Range.pick&#40;&#41; &#40;no args&#41;, but missed the case for multiple params.<br />
+<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523396" href="/rt3/Ticket/Display.html?id=62612#txn-523396">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;22&nbsp;06:58:17&nbsp;2009</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523398" href="/rt3/Ticket/Display.html?id=62612#txn-523398">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;22&nbsp;06:58:20&nbsp;2009</td>
+    <td class="description">
+      coke -  Given to coke
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523532" href="/rt3/Ticket/Display.html?id=62612#txn-523532">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;22&nbsp;09:47:51&nbsp;2009</td>
+    <td class="description">
+      coke -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/523532/247396/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 383b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu Jan 22 06:58:15 2009, coke wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; This is my fault;<br />
+&gt; <br />
+&gt; I added a simplistic Range.pick without running the spectest.<br />
+&gt; <br />
+&gt; The original functionality defaulted to flattening the range into a <br />
+&gt; list, which made &#40;1..10000000&#41;.pick.say rather slow.<br />
+&gt; <br />
+&gt; I added Range.pick&#40;&#41; &#40;no args&#41;, but missed the case for multiple <br />
+</div>
+params.<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+</div>
+<br />
+Reverted in r35893.<br />
+<br />
+-- <br />
+Will &#34;Coke&#34; Coleda<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-523538" href="/rt3/Ticket/Display.html?id=62612#txn-523538">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jan&nbsp;22&nbsp;09:47:53&nbsp;2009</td>
+    <td class="description">
+      coke -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 0.847245</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

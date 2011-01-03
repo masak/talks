@@ -1,0 +1,737 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#56604: Not all error messages should include a stack trace</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D56604">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#56604: Not all error messages should include a stack trace</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56604">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">56604</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">new</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=56604">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+
+pgerd
+&lt;gp [at] zimt.uni-siegen.de&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=56604">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=56604">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-438926" href="/rt3/Ticket/Display.html?id=56604#txn-438926">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;04&nbsp;01:39:12&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Not all error messages should include a stack trace</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 04 Jul 2008 10:57:11 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/438926/201064/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Error messages caused by programmer&#39;s mistakes shouldn&#39;t include stack<br />
+traces.<br />
+<br />
+Rakudo r29047:<br />
+../../parrot perl6.pbc -e &#39;my Int $x; $x = &#34;str&#34;&#39;<br />
+Type check failed<br />
+current instr.: &#39;parrot;Perl6Object;infix:=&#39; pc 59 &#40;src/gen_builtins.pir:52&#41;<br />
+called from Sub &#39;_block11&#39; pc 93 &#40;EVAL_12:42&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;eval&#39; pc 806<br />
+&#40;src/PCT/HLLCompiler.pir:481&#41;<br />
+called from Sub &#39;parrot;PCT::HLLCompiler;command_line&#39; pc 1305<br />
+&#40;src/PCT/HLLCompiler.pir:708&#41;<br />
+called from Sub &#39;parrot;Perl6::Compiler;main&#39; pc 13152 &#40;perl6.pir:174&#41;<br />
+<br />
+IMHO the stack trace is mostly unnecessary line noise, and shouldn&#39;t be<br />
+visible to the programmer, since it obscures the real error message<br />
+&#40;which could be improved ;-&#41;<br />
+<br />
+Typical examples of error messages are &#34;Type check failed&#34;, parse<br />
+errors, &#39;Could not find non-existent sub&#39; and &#39;Method &#39;foo&#39; not found<br />
+for invocant of class &#39;Int&#39;&#39;.<br />
+<br />
+It might be a bit too early for this change because atm most users are<br />
+compiler writers at the same time, but when others start to use it on a<br />
+regular basis we should do our best not to confuse them.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486228" href="/rt3/Ticket/Display.html?id=56604#txn-486228">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;05:18:38&nbsp;2008</td>
+    <td class="description">
+      pgerd - Ticket 60006:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[BUG] there is a problem with the function &#34;die&#34;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 20 Oct 2008 14:18:12 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Gerd Pokorra &lt;gp <!-- x --> at zimt.uni-siegen.de&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486228/226690/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1019b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello! <br />
+<br />
+There is a problem with the function &#34;die&#34; in Rakudo.<br />
+<br />
+I tried the function &#34;die&#34; under Windows and Linux. Under both OS it<br />
+don&#39;t work.<br />
+<br />
+Gerd Pokorra<br />
+<br />
+[gz016@pgerd parrot]$ ./parrot languages/perl6/perl6.pbc -e die<br />
+Died<br />
+<br />
+current instr.: &#39;die&#39; pc 13123 &#40;src/gen_builtins.pir:8122&#41;<br />
+called from Sub &#39;_block11&#39; pc 17 &#40;EVAL_12:11&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;eval&#39; pc 851<br />
+&#40;src/PCT/HLLCompiler.pir:494&#41;<br />
+called from Sub &#39;parrot;PCT;HLLCompiler;command_line&#39; pc 1342<br />
+&#40;src/PCT/HLLCompiler.pir:721&#41;<br />
+called from Sub &#39;parrot;Perl6;Compiler;main&#39; pc 17106 &#40;perl6.pir:179&#41;<br />
+[gz016@pgerd parrot]$ <br />
+[gz016@pgerd parrot]$ <br />
+[gz016@pgerd parrot]$ svn info<br />
+Pfad: .<br />
+URL: http://svn.perl.org/parrot/trunk<br />
+Basis des Projektarchivs: http://svn.perl.org/parrot<br />
+UUID des Projektarchivs: d31e2699-5ff4-0310-a27c-f18f2fbe73fe<br />
+Revision: 31923<br />
+Knotentyp: Verzeichnis<br />
+Plan: normal<br />
+Letzter Autor: bernhard<br />
+Letzte geänderte Rev: 31923<br />
+Letztes Änderungsdatum: 2008-10-13 12:45:09 +0200 &#40;Mo, 13 Okt 2008&#41;<br />
+<br />
+[gz016@pgerd parrot]$ <br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486234" href="/rt3/Ticket/Display.html?id=56604#txn-486234">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;05:18:44&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60006:  Tag Bug added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486266" href="/rt3/Ticket/Display.html?id=56604#txn-486266">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;08:18:54&nbsp;2008</td>
+    <td class="description">
+      masak - Ticket 60006:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486266/226710/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 347b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+pgerd &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; There is a problem with the function &#34;die&#34; in Rakudo.<br />
+&gt; <br />
+&gt; [...]<br />
+&gt;<br />
+&gt; [gz016@pgerd parrot]$ ./parrot languages/perl6/perl6.pbc -e die<br />
+&gt; Died<br />
+&gt; <br />
+&gt; current instr.: &#39;die&#39; pc 13123 &#40;src/gen_builtins.pir:8122&#41;<br />
+&gt; [...]<br />
+</div>
+<br />
+Looks perfectly normal to me. Are you concerned because you got a<br />
+stacktrace, and aren&#39;t used to getting one with Perl 5?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486270" href="/rt3/Ticket/Display.html?id=56604#txn-486270">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;20&nbsp;08:18:58&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 60006:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-486706" href="/rt3/Ticket/Display.html?id=56604#txn-486706">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;21&nbsp;06:06:48&nbsp;2008</td>
+    <td class="description">
+      pgerd - Ticket 60006:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60006] [BUG] there is a problem with the function &#34;die&#34;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 21 Oct 2008 13:18:07 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;perl6-bugs-followup <!-- x --> at perl.org&#34; &lt;perl6-bugs-followup <!-- x --> at perl.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Gerd Pokorra &lt;gp <!-- x --> at zimt.uni-siegen.de&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/486706/226986/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 266b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; Looks perfectly normal to me. Are you concerned because you got a<br />
+&gt; stacktrace, and aren&#39;t used to getting one with Perl 5?<br />
+</div>
+<br />
+Yes, that is the reason why I am concerned. To see a stacktrace is not<br />
+what I am expecting by using the &#34;die&#34; function.<br />
+<br />
+Gerd Pokorra<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-487680" href="/rt3/Ticket/Display.html?id=56604#txn-487680">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Oct&nbsp;24&nbsp;03:38:00&nbsp;2008</td>
+    <td class="description">
+      masak - Ticket 60006:  Merged into ticket #56604
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-487682" href="/rt3/Ticket/Display.html?id=56604#txn-487682">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Fri&nbsp;Oct&nbsp;24&nbsp;03:38:00&nbsp;2008</td>
+    <td class="description">
+      masak -  Merged into ticket #56604
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.320871</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

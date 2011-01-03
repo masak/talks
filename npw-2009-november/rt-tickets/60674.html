@@ -1,0 +1,1437 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60674: sign&#40;$x&#41; always returns 1 when $x ~~ Complex</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60674">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60674: sign&#40;$x&#41; always returns 1 when $x ~~ Complex</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60674">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60674</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60674">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+masak
+&lt;cmasak [at] gmail.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60674">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60674">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497302" href="/rt3/Ticket/Display.html?id=60674#txn-497302">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;19&nbsp;07:35:48&nbsp;2008</td>
+    <td class="description">
+      masak -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 19 Nov 2008 16:35:28 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497302/233198/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 893b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+&lt;masak&gt; what should the behaviour of sign&#40;$x&#41; be when $x is complex?<br />
+&lt;masak&gt; rakudo: say sign&#40;$_&#41; for 42, -42, 0+42i<br />
+&lt;p6eval&gt; rakudo 32877: OUTPUT[1␤-1␤1␤]<br />
+&lt;masak&gt; somehow, that last one doesn&#39;t feel right to me.<br />
+&lt;masak&gt; I vote for either an error or $x/abs&#40;$x&#41;<br />
+&lt;PerlJam&gt; why would it be an error?<br />
+&lt;masak&gt; because &#39;sign&#39; could be argued to only be applicable to real numbers.<br />
+&lt;masak&gt; i.e. positive numbers, negative numbers, and zero.<br />
+&lt;PerlJam&gt; but what is it specced to do?  :-&#41;<br />
+&lt;masak&gt; ah.<br />
+&lt;masak&gt; it&#39;s supposed to return the &#39;sign&#39; of a number.<br />
+&lt;masak&gt; i.e. +1, -1 or 0 for the above three groups.<br />
+&lt;masak&gt; in that way, it&#39;s a bit like &lt;=&gt;, except it always compares to 0<br />
+&lt;PerlJam&gt; oh, it&#39;s wrong anyway I think.<br />
+&lt;PerlJam&gt; rakudo: say sign&#40;-5+3i&#41;;<br />
+&lt;p6eval&gt; rakudo 32877: OUTPUT[1␤]<br />
+&lt;PerlJam&gt; that can&#39;t be right.<br />
+&lt;masak&gt; it always returns 1 on complex numbers.<br />
+* masak reports a bug<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497416" href="/rt3/Ticket/Display.html?id=60674#txn-497416">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;19&nbsp;13:12:57&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-language <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497416/233256/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed Nov 19 07:35:48 2008, masak wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;masak&gt; what should the behaviour of sign&#40;$x&#41; be when $x is complex?<br />
+</div>
+<br />
+I&#39;d argue that it&#39;s a Failure.<br />
+If you care about complex numbers, you usually want an angle instead,<br />
+which you can get with Complex.polar. &#40;And it&#39;s easier to give it a<br />
+another meaning later that way&#41;<br />
+<br />
+&#40;If you wanted a complex number with magnitude one, then you should call<br />
+that method &#34;phase&#34; or so, but that would confuse most people when<br />
+talking about real numbers.&#41;<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; &lt;masak&gt; rakudo: say sign&#40;$_&#41; for 42, -42, 0+42i<br />
+&gt; &lt;p6eval&gt; rakudo 32877: OUTPUT[1␤-1␤1␤]<br />
+&gt; &lt;masak&gt; somehow, that last one doesn&#39;t feel right to me.<br />
+&gt; &lt;masak&gt; I vote for either an error or $x/abs&#40;$x&#41;<br />
+&gt; &lt;PerlJam&gt; why would it be an error?<br />
+&gt; &lt;masak&gt; because &#39;sign&#39; could be argued to only be applicable to real<br />
+&gt; numbers.<br />
+&gt; &lt;masak&gt; i.e. positive numbers, negative numbers, and zero.<br />
+&gt; &lt;PerlJam&gt; but what is it specced to do?  :-&#41;<br />
+&gt; &lt;masak&gt; ah.<br />
+&gt; &lt;masak&gt; it&#39;s supposed to return the &#39;sign&#39; of a number.<br />
+&gt; &lt;masak&gt; i.e. +1, -1 or 0 for the above three groups.<br />
+&gt; &lt;masak&gt; in that way, it&#39;s a bit like &lt;=&gt;, except it always compares to<br />
+&gt; 0<br />
+&gt; &lt;PerlJam&gt; oh, it&#39;s wrong anyway I think.<br />
+&gt; &lt;PerlJam&gt; rakudo: say sign&#40;-5+3i&#41;;<br />
+&gt; &lt;p6eval&gt; rakudo 32877: OUTPUT[1␤]<br />
+&gt; &lt;PerlJam&gt; that can&#39;t be right.<br />
+&gt; &lt;masak&gt; it always returns 1 on complex numbers.<br />
+&gt; * masak reports a bug<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497420" href="/rt3/Ticket/Display.html?id=60674#txn-497420">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;19&nbsp;13:13:01&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497440" href="/rt3/Ticket/Display.html?id=60674#txn-497440">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;19&nbsp;13:24:11&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 19 Nov 2008 22:23:51 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497440/233276/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 146b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Moritz &#40;&gt;&#41;, Carl &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; &lt;masak&gt; what should the behaviour of sign&#40;$x&#41; be when $x is complex?<br />
+</div>
+&gt;<br />
+&gt; I&#39;d argue that it&#39;s a Failure.<br />
+</div>
+<br />
+Aye.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; [...]<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497630" href="/rt3/Ticket/Display.html?id=60674#txn-497630">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;05:13:46&nbsp;2008</td>
+    <td class="description">
+      wolfgang.laun <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">RE: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 07:44:57 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">cmasak <!-- x --> at gmail.com, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497630/233388/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 571b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+There is a definition for the signum function for a complex argument.<br />
+<br />
+sign&#40; z &#41; = z / |z| for all z != 0<br />
+sign&#40; 0 &#41; = 0<br />
+<br />
+See e.g. http://en.wikipedia.org/wiki/Sign_function<br />
+<br />
+Shouldn&#39;t be too difficult to implement.<br />
+<br />
+<br />
+<br />
+-----Original Message-----<br />
+From: Carl Mäsak [mailto:cmasak <!-- x --> at gmail.com]<br />
+Sent: Mittwoch, 19. November 2008 22:24<br />
+To: perl6-bugs-followup <!-- x --> at perl.org<br />
+Subject: Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex<br />
+<br />
+Moritz &#40;&gt;&#41;, Carl &#40;&gt;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; &lt;masak&gt; what should the behaviour of sign&#40;$x&#41; be when $x is complex?<br />
+</div>
+&gt;<br />
+&gt; I&#39;d argue that it&#39;s a Failure.<br />
+</div>
+<br />
+Aye.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497644" href="/rt3/Ticket/Display.html?id=60674#txn-497644">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;05:41:52&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 14:34:08 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497644/233396/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 509b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Wolfgang &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; There is a definition for the signum function for a complex argument.<br />
+&gt;<br />
+&gt; sign&#40; z &#41; = z / |z| for all z != 0<br />
+&gt; sign&#40; 0 &#41; = 0<br />
+&gt;<br />
+&gt; See e.g. http://en.wikipedia.org/wiki/Sign_function<br />
+&gt;<br />
+&gt; Shouldn&#39;t be too difficult to implement.<br />
+</div>
+<br />
+It isn&#39;t, and note that I also proposed it in my first email.<br />
+<br />
+I guess the question is more about the programmer&#39;s expectations. Is<br />
+this a case where we serve the programmer better by returning Failure,<br />
+or by generalizing the C&lt;sign&gt; function to the complex plane?<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497672" href="/rt3/Ticket/Display.html?id=60674#txn-497672">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;06:32:27&nbsp;2008</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 09:32:05 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497672/233416/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Nov 20, 2008 at 8:34 AM, Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I guess the question is more about the programmer&#39;s expectations. Is<br />
+&gt; this a case where we serve the programmer better by returning Failure,<br />
+&gt; or by generalizing the C&lt;sign&gt; function to the complex plane?<br />
+</div>
+<br />
+This is parallel to the case for sqrt&#40;$x&#41; for $x&lt;0.  Which does not by<br />
+default return Failure, but neither does it return a complex result -<br />
+it returns NaN.  Is that the spec&#39;ed behavior?<br />
+<br />
+On the one hand, as long as sqrt&#40;&#41; *doesn&#39;t* uncomplainingly return<br />
+complex numbers for negative inputs, it would seem that one is rather<br />
+less likely to have a complex number when expecting a real than to<br />
+have a negative when expecting a positive.  So having sgn&#40;&#41; return<br />
+complex results for complex inputs is somewhat safer than having<br />
+sqrt&#40;&#41; return complex results for negative inputs.<br />
+<br />
+On the other hand, a lot of code will be expecting the return value of<br />
+sign&#40;&#41; to always be one&#40;-1,0,1&#41;, and might break horribly if that&#39;s<br />
+not the case.<br />
+<br />
+I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+numbers.<br />
+<br />
+--<br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497724" href="/rt3/Ticket/Display.html?id=60674#txn-497724">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;07:31:43&nbsp;2008</td>
+    <td class="description">
+      masak -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 16:31:22 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Carl Mäsak&#34; &lt;cmasak <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497724/233446/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 491b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Mark &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-1">
+&gt; I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+&gt; non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+&gt; Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+&gt; returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+&gt; numbers.<br />
+</div>
+<br />
+I like that. Both sign&#40;&#41; and sqrt&#40;&#41; will then behave like they usually<br />
+do, without complex surprises. But for those who want the generalized<br />
+behvaiour, it&#39;s only a pragma away.<br />
+<br />
+// Carl<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497780" href="/rt3/Ticket/Display.html?id=60674#txn-497780">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;08:35:13&nbsp;2008</td>
+    <td class="description">
+      larry -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 08:34:27 -0800</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-all <!-- x --> at perl.org, perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Larry Wall &lt;larry <!-- x --> at wall.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497780/233478/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 635b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Nov 20, 2008 at 04:31:22PM +0100, Carl Mäsak wrote:<br />
+<div class="message-stanza-depth-1">
+: Mark &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+: &gt; I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+: &gt; non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+: &gt; Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+: &gt; returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+: &gt; numbers.<br />
+</div>
+: <br />
+: I like that. Both sign&#40;&#41; and sqrt&#40;&#41; will then behave like they usually<br />
+: do, without complex surprises. But for those who want the generalized<br />
+: behvaiour, it&#39;s only a pragma away.<br />
+</div>
+<br />
+Doesn&#39;t really need a pragma, just import an appropriate multi.<br />
+<br />
+Larry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497796" href="/rt3/Ticket/Display.html?id=60674#txn-497796">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;08:47:57&nbsp;2008</td>
+    <td class="description">
+      chris <!-- x --> at chrisdolan.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 10:47:40 -0600 &#40;CST&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Chris Dolan&#34; &lt;chris <!-- x --> at chrisdolan.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497796/233502/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 883b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+&gt; Mark &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+&gt;&gt; non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+&gt;&gt; Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+&gt;&gt; returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+&gt;&gt; numbers.<br />
+</div>
+&gt;<br />
+&gt; I like that. Both sign&#40;&#41; and sqrt&#40;&#41; will then behave like they usually<br />
+&gt; do, without complex surprises. But for those who want the generalized<br />
+&gt; behvaiour, it&#39;s only a pragma away.<br />
+&gt;<br />
+&gt; // Carl<br />
+</div>
+<br />
+Rather than a pragma, wouldn&#39;t it make more sense to have<br />
+<br />
+multi sub sgn&#40;Num&#41; -&gt; Num<br />
+multi sub sqrt&#40;Num&#41; -&gt; Num<br />
+<br />
+behave appropriately for real numbers and<br />
+<br />
+multi sub sgn&#40;Complex&#41; -&gt; Complex<br />
+multi sub sqrt&#40;Complex&#41; -&gt; Complex<br />
+<br />
+behave appropriately for complex numbers?  So people who want sqrt&#40;-1&#41; be<br />
+return i must pass in Complex.new&#40;-1,0&#41; or whatever the right syntax is.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497812" href="/rt3/Ticket/Display.html?id=60674#txn-497812">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;10:03:21&nbsp;2008</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 13:02:56 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Chris Dolan&#34; &lt;chris <!-- x --> at chrisdolan.net&gt;, perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497812/233512/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.2k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+I&#39;d rather retain the dwimmishness of p5.<br />
+<br />
+$ perl -MMath::Complex -le &#39;print sqrt&#40;-1&#41;&#39;<br />
+i<br />
+<br />
+Note that I didn&#39;t have to pass in Math::Complex-&gt;make&#40;-1,0&#41;.  Just -1.<br />
+<br />
+<br />
+<br />
+On 11/20/08, Chris Dolan &lt;chris <!-- x --> at chrisdolan.net&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; Mark &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-3">
+&gt;&gt;&gt; I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+&gt;&gt;&gt; non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+&gt;&gt;&gt; Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+&gt;&gt;&gt; returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+&gt;&gt;&gt; numbers.<br />
+</div>
+&gt;&gt;<br />
+&gt;&gt; I like that. Both sign&#40;&#41; and sqrt&#40;&#41; will then behave like they usually<br />
+&gt;&gt; do, without complex surprises. But for those who want the generalized<br />
+&gt;&gt; behvaiour, it&#39;s only a pragma away.<br />
+&gt;&gt;<br />
+&gt;&gt; // Carl<br />
+</div>
+&gt;<br />
+&gt; Rather than a pragma, wouldn&#39;t it make more sense to have<br />
+&gt;<br />
+&gt; multi sub sgn&#40;Num&#41; -&gt; Num<br />
+&gt; multi sub sqrt&#40;Num&#41; -&gt; Num<br />
+&gt;<br />
+&gt; behave appropriately for real numbers and<br />
+&gt;<br />
+&gt; multi sub sgn&#40;Complex&#41; -&gt; Complex<br />
+&gt; multi sub sqrt&#40;Complex&#41; -&gt; Complex<br />
+&gt;<br />
+&gt; behave appropriately for complex numbers?  So people who want sqrt&#40;-1&#41; be<br />
+&gt; return i must pass in Complex.new&#40;-1,0&#41; or whatever the right syntax is.<br />
+&gt;<br />
+&gt;<br />
+&gt;<br />
+</div>
+<br />
+-- <br />
+Sent from Gmail for mobile | mobile.google.com<br />
+<br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497868" href="/rt3/Ticket/Display.html?id=60674#txn-497868">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;13:27:15&nbsp;2008</td>
+    <td class="description">
+      Thomas.Sandlass@vts-systems.de -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 17:34:36 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">TSa &lt;Thomas.Sandlass@vts-systems.de&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497868/233550/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 825b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+HaloO,<br />
+<br />
+Moritz Lenz via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Wed Nov 19 07:35:48 2008, masak wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; &lt;masak&gt; what should the behaviour of sign&#40;$x&#41; be when $x is complex?<br />
+</div>
+&gt; <br />
+&gt; I&#39;d argue that it&#39;s a Failure.<br />
+</div>
+<br />
+This is a bit drastic. If one computes in the complex domain<br />
+a complex valued sign function is appropriate.<br />
+<br />
+    multi sub sign&#40;Complex $z --&gt; Complex&#41;<br />
+    {<br />
+        return $z.abs ?? $z / $z.abs !! 0;<br />
+    }<br />
+<br />
+That is, it returns a unit complex number or zero. This nicely<br />
+fits the notion that the set {-1,1} is the zero dimensional unit<br />
+sphere with 0 as center just like the unit circle is the one<br />
+dimensional unit sphere.<br />
+<br />
+<br />
+Regards, TSa.<br />
+-- <br />
+<br />
+&#34;The unavoidable price of reliability is simplicity&#34; -- C.A.R. Hoare<br />
+&#34;Simplicity does not precede complexity, but follows it.&#34; -- A.J. Perlis<br />
+1 + 2 + 3 + 4 + ... = -1/12  -- Srinivasa Ramanujan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-497950" href="/rt3/Ticket/Display.html?id=60674#txn-497950">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Nov&nbsp;20&nbsp;17:31:01&nbsp;2008</td>
+    <td class="description">
+      wolfgang.laun <!-- x --> at gmail.com -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 20 Nov 2008 22:25:07 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/497950/233592/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+If a programmer calls a function with an argument that has a<br />
+well-established type, s/he may very well expect a result according<br />
+to that type, &#40;considering that overloading isn&#39;t just a word for not<br />
+caring about type&#41;.<br />
+<br />
+So, calling sqrt with a real &lt; 0, should not come back with a complex<br />
+number.<br />
+Calling sqrt with a complex z where Re&#40;z&#41; &lt; 0 and Im&#40;z&#41;=0 should return a<br />
+complex number.<br />
+Calling sgn&#40;&#41; with a complex - why not give me what I&#39;m &#40;obviously&#41; asking<br />
+for?<br />
+<br />
+On Thu, Nov 20, 2008 at 4:31 PM, Carl Mäsak &lt;cmasak <!-- x --> at gmail.com&gt; wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Mark &#40;&gt;&#41;:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; I think the most sensible thing is to be consistent.  sgn&#40;&#41; fails for<br />
+&gt; &gt; non-real input as long as sqrt&#40;&#41; returns NaN for negative input.<br />
+&gt; &gt; Change the latter behavior &#40;via a pragma or whatever&#41; so that sqrt&#40;&#41;<br />
+&gt; &gt; returns complex numbers, and then sgn&#40;&#41; should start behaving on such<br />
+&gt; &gt; numbers.<br />
+</div>
+&gt;<br />
+&gt; I like that. Both sign&#40;&#41; and sqrt&#40;&#41; will then behave like they usually<br />
+&gt; do, without complex surprises. But for those who want the generalized<br />
+&gt; behvaiour, it&#39;s only a pragma away.<br />
+&gt;<br />
+&gt; // Carl<br />
+&gt;<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-498106" href="/rt3/Ticket/Display.html?id=60674#txn-498106">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;21&nbsp;06:59:13&nbsp;2008</td>
+    <td class="description">
+      markjreed -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60674] sign&#40;$x&#41; always returns 1 when $x ~~ Complex</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 21 Nov 2008 09:58:43 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Wolfgang Laun&#34; &lt;wolfgang.laun <!-- x --> at gmail.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Mark J. Reed&#34; &lt;markjreed <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/498106/233660/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Thu, Nov 20, 2008 at 4:25 PM, Wolfgang Laun &lt;wolfgang.laun <!-- x --> at gmail.com&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; So, calling sqrt with a real &lt; 0, should not come back with a complex<br />
+&gt; number.<br />
+</div>
+<br />
+Again, I think this should depend on context.  In Perl5, simply<br />
+use&#39;ing &#34;Math::Complex&#34; changes the behavior of sqrt such that<br />
+sqrt&#40;-1&#41; returns i.  That fits with the fact that 1/2 returns 0.5, and<br />
+not zero &#40;unlike certain other languages&#41;; I don&#39;t have to coerce one<br />
+of the operands to a float to get a float result. I want to keep that<br />
+sort of DWIMmishness - if I&#39;m computing with complex numbers, reals<br />
+should be autopromoted without my having to convert them manually.<br />
+<br />
+So simply making sqrt a multi doesn&#39;t quite suffice.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Calling sqrt with a complex z where Re&#40;z&#41; &lt; 0 and Im&#40;z&#41;=0 should return a<br />
+&gt; complex number.<br />
+</div>
+<br />
+Agreed.   &#40;Side topic: what about autodemotion?  Should calling sqrt<br />
+with a complex z where Re&#40;z&#41; &gt;= 0 and Im&#40;z&#41; = 0 return a complex or a<br />
+real?&#41;<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Calling sgn&#40;&#41; with a complex - why not give me what I&#39;m &#40;obviously&#41; asking for?<br />
+</div>
+<br />
+My only objection to that behavior was that I want to avoid surprise<br />
+interactions; a lot of code assumes that sgn&#40;&#41; can only return one of<br />
+three values.  As long as it&#39;s sufficiently unlikely that a Complex<br />
+will show up when the programmer isn&#39;t expecting it, I&#39;m fine with<br />
+just having sgn&#40;&#41; return 0 for 0 and z/abs&#40;z&#41; for everything else.<br />
+<br />
+-- <br />
+Mark J. Reed &lt;markjreed <!-- x --> at gmail.com&gt;<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 3.05798</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

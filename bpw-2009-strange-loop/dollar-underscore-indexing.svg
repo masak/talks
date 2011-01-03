@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="297mm"
+   height="210mm"
+   id="svg3174">
+  <defs
+     id="defs3176" />
+  <g
+     id="layer1">
+    <text
+       x="225.27505"
+       y="193.35188"
+       id="text3185"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="225.27505"
+         y="193.35188"
+         id="tspan3187">$/[0]</tspan></text>
+    <text
+       x="458.01312"
+       y="193.35188"
+       id="text3189"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="458.01312"
+         y="193.35188"
+         id="tspan3191">$/[1]</tspan></text>
+    <text
+       x="690.75116"
+       y="193.35188"
+       id="text3193"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="690.75116"
+         y="193.35188"
+         id="tspan3195">$/[2]</tspan></text>
+    <g
+       transform="translate(15.060028,-0.336052)"
+       id="g3237">
+      <text
+         x="210.21503"
+         y="388.73096"
+         id="text3197"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="210.21503"
+           y="388.73096"
+           id="tspan3199">$0</tspan></text>
+      <text
+         x="442.95309"
+         y="388.73096"
+         id="text3201"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="442.95309"
+           y="388.73096"
+           id="tspan3203">$1</tspan></text>
+      <text
+         x="675.69116"
+         y="388.73096"
+         id="text3205"
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+           x="675.69116"
+           y="388.73096"
+           id="tspan3207">$2</tspan></text>
+    </g>
+    <text
+       x="225.27505"
+       y="580.41449"
+       id="text3209"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="225.27505"
+         y="580.41449"
+         id="tspan3211">$0[1][2]</tspan></text>
+    <text
+       x="575.62616"
+       y="580.41449"
+       id="text3213"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="575.62616"
+         y="580.41449"
+         id="tspan3215">$1['foo']</tspan></text>
+  </g>
+</svg>

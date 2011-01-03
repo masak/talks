@@ -1,0 +1,5 @@
+grep 'http://rt.perl.org/rt3/Ticket/Display.html' rt-bugs-2009-04-13.html |
+    perl6n -e '
+        my $time-ago = ~($_ ~~ /\d+ \s+ \w+ \s+ ago/ or next);
+        $_ ~~ /\<td.*?\<td.*?(\d+)\"\> (<-[<]>+)/;
+        say $time-ago, "\t", $0, "\t", $1'

@@ -1,0 +1,1190 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#53082: [TODO] rakudo should use .annotate to track line/file</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D53082">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#53082: [TODO] rakudo should use .annotate to track line/file</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=53082">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">53082</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">open</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=53082">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+pmichaud
+&lt;pmichaud [at] pobox.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+cognominal
+&lt;cognominal [at] gmail.com&gt;
+
+<br />
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=53082">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=53082">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389144" href="/rt3/Ticket/Display.html?id=53082#txn-389144">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Apr&nbsp;19&nbsp;11:52:03&nbsp;2008</td>
+    <td class="description">
+      cognominal -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sat, 19 Apr 2008 20:51:20 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Stéphane Payrard&#34; &lt;cognominal <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/389144/176466/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 886b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+This is part of an probably recurring serie of &#34;end-user&#34; bugs that<br />
+ask in substance :  making things easier on people... who want<br />
+to use HLLCompiler and Parrot and the languages derived from them<br />
+without wanting to be involved in it.<br />
+<br />
+This means retourning errors on unimplemented features and warning on<br />
+incomplete features<br />
+instead of failing silently &#40;like a parser compiling a construct but<br />
+not generating correct code&#41;.<br />
+This also probably means standard way of intercepting error like &#34;Null<br />
+PMC access in invoke&#40;&#41;&#34;<br />
+to provide error message useful to the end user of a compiler.<br />
+Concretely, it means that parrot must be thought as a service instead<br />
+as a software<br />
+to avoid the classic rant about open source software.<br />
+<br />
+<br />
+Should I create a meta ticket for this?<br />
+One bug already in this category.<br />
+<br />
+[perl #53040] AutoReply: rakdudo : code generated by --target=pir<br />
+<br />
+<br />
+-- <br />
+cognominal stef<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389372" href="/rt3/Ticket/Display.html?id=53082#txn-389372">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;08:00:54&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389374" href="/rt3/Ticket/Display.html?id=53082#txn-389374">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;08:01:15&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #53082] rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 20 Apr 2008 10:00:37 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/389374/176604/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 776b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sat, Apr 19, 2008 at 11:52:04AM -0700, Stephane Payrard wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; This is part of an probably recurring serie of &#34;end-user&#34; bugs that<br />
+&gt; ask in substance :  making things easier on people... who want<br />
+&gt; to use HLLCompiler and Parrot and the languages derived from them<br />
+&gt; without wanting to be involved in it.<br />
+</div>
+<br />
+Rakudo doesn&#39;t use the line numbering feature of imcc because<br />
+the line numbering feature of imcc doesn&#39;t work.<br />
+<br />
+See RT#43269 - &#34;setline is tied to PIR source&#34;.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; This also probably means standard way of intercepting error like &#34;Null<br />
+&gt; PMC access in invoke&#40;&#41;&#34;<br />
+&gt; to provide error message useful to the end user of a compiler.<br />
+</div>
+<br />
+This has been discussed &#40;without resolution&#41; in RT#49972.<br />
+<br />
+I&#39;m going ahead and setting this ticket to depend on the above<br />
+two tickets.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389378" href="/rt3/Ticket/Display.html?id=53082#txn-389378">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;08:01:18&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389380" href="/rt3/Ticket/Display.html?id=53082#txn-389380">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;08:01:36&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Dependency on ticket #43269 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389384" href="/rt3/Ticket/Display.html?id=53082#txn-389384">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;08:01:37&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Dependency on ticket #49972 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-389574" href="/rt3/Ticket/Display.html?id=53082#txn-389574">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sun&nbsp;Apr&nbsp;20&nbsp;12:37:30&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #53082] rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Sun, 20 Apr 2008 21:37:04 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/389574/176696/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 444b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo doesn&#39;t use the line numbering feature of imcc because<br />
+&gt; the line numbering feature of imcc doesn&#39;t work.<br />
+&gt;<br />
+&gt; See RT#43269 - &#34;setline is tied to PIR source&#34;.<br />
+&gt;   <br />
+</div>
+I wouldn&#39;t say it doesn&#39; work per se, it just doesn&#39;t do what you want <br />
+it to do. :-&#41; There&#39;s something spec&#39;d in the bytecode PDD to do what we <br />
+need for Rakudo, it&#39;s just not implemented yet. I will try and get to it <br />
+soon.<br />
+<br />
+Thanks,<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-391332" href="/rt3/Ticket/Display.html?id=53082#txn-391332">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;23&nbsp;18:30:46&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #53082] rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 23 Apr 2008 20:30:26 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Jonathan Worthington via RT &lt;parrotbug-followup <!-- x --> at parrotcode.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/391332/177512/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 869b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Sun, Apr 20, 2008 at 12:37:32PM -0700, Jonathan Worthington via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-2">
+&gt; &gt; Rakudo doesn&#39;t use the line numbering feature of imcc because<br />
+&gt; &gt; the line numbering feature of imcc doesn&#39;t work.<br />
+&gt; &gt;<br />
+&gt; &gt; See RT#43269 - &#34;setline is tied to PIR source&#34;.<br />
+</div>
+&gt;   <br />
+&gt; I wouldn&#39;t say it doesn&#39; work per se, it just doesn&#39;t do what you want <br />
+&gt; it to do. :-&#41; <br />
+</div>
+<br />
+Fair enough.  However, I&#39;m in favor of Chip&#39;s remark in #40806 that<br />
+says we should use setfile/setline &#40;opcodes&#41; for tracking HLL lines<br />
+and the #line &lt;num&gt; &#34;&lt;file&gt;&#34; directive for tracking lines of PIR<br />
+source.  <br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; There&#39;s something spec&#39;d in the bytecode PDD to do what we <br />
+&gt; need for Rakudo, it&#39;s just not implemented yet. I will try and get to it <br />
+&gt; soon.<br />
+</div>
+<br />
+That would be great.  As you can tell, this is a source of great<br />
+confusion for people who are writing in and developing Rakudo.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-391336" href="/rt3/Ticket/Display.html?id=53082#txn-391336">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Apr&nbsp;23&nbsp;18:40:13&nbsp;2008</td>
+    <td class="description">
+      chromatic <!-- x --> at wgz.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;, Jonathan Worthington via RT &lt;parrotbug-followup <!-- x --> at parrotcode.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #53082] rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 23 Apr 2008 18:39:20 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrot-porters <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">chromatic &lt;chromatic <!-- x --> at wgz.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/391336/177516/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 313b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wednesday 23 April 2008 18:30:26 Patrick R. Michaud wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; Fair enough.  However, I&#39;m in favor of Chip&#39;s remark in #40806 that<br />
+&gt; says we should use setfile/setline &#40;opcodes&#41; for tracking HLL lines<br />
+&gt; and the #line &lt;num&gt; &#34;&lt;file&gt;&#34; directive for tracking lines of PIR<br />
+&gt; source.<br />
+</div>
+<br />
++1, as if you needed it.<br />
+<br />
+-- c<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420570" href="/rt3/Ticket/Display.html?id=53082#txn-420570">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;20:27:55&nbsp;2008</td>
+    <td class="description">
+      coke -  Reference to ticket #40806 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420590" href="/rt3/Ticket/Display.html?id=53082#txn-420590">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;20:29:20&nbsp;2008</td>
+    <td class="description">
+      coke -  Subject changed from &#39;rakudo does not use the line numbering feature of imcc. may be hllcompiler does not support it.&#39; to &#39;[TODO] rakudo should use setline/setfile opcodes&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-420592" href="/rt3/Ticket/Display.html?id=53082#txn-420592">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;Jun&nbsp;05&nbsp;20:29:20&nbsp;2008</td>
+    <td class="description">
+      coke -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-449252" href="/rt3/Ticket/Display.html?id=53082#txn-449252">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Jul&nbsp;25&nbsp;20:50:47&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Dependency by ticket #57268 added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-454284" href="/rt3/Ticket/Display.html?id=53082#txn-454284">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;04&nbsp;00:57:02&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org - Ticket 57574:  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Rakudo should report file name when reporting syntax errors</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 04 Aug 2008 09:56:31 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/454284/209708/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 397b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Rakudo as of r29919 doesn&#39;t report the file name in which a syntax error<br />
+occurs, even it is in a use&#39;ed module.<br />
+<br />
+I had some *very* weird failures in tests that accidentially included<br />
+pugs&#39; Test.pm &#40;because my PERL6LIB pointed there&#41;, and having no<br />
+information in which file the parse error occurred made it very hard to<br />
+figure out.<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-454414" href="/rt3/Ticket/Display.html?id=53082#txn-454414">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;04&nbsp;09:05:01&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 57574:  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/454414/209782/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 234b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon Aug 04 00:57:02 2008, moritz <!-- x --> at verplant.org wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Rakudo as of r29919 doesn&#39;t report the file name in which a syntax error<br />
+&gt; occurs, even it is in a use&#39;ed module.<br />
+</div>
+<br />
+Marking this ticket as a duplicate of RT #53082.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-454418" href="/rt3/Ticket/Display.html?id=53082#txn-454418">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;04&nbsp;09:05:03&nbsp;2008</td>
+    <td class="description">
+      RT_System - Ticket 57574:  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-454422" href="/rt3/Ticket/Display.html?id=53082#txn-454422">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;04&nbsp;09:05:19&nbsp;2008</td>
+    <td class="description">
+      pmichaud - Ticket 57574:  Merged into ticket #53082
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction links even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-454424" href="/rt3/Ticket/Display.html?id=53082#txn-454424">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Aug&nbsp;04&nbsp;09:05:19&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Merged into ticket #53082
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522046" href="/rt3/Ticket/Display.html?id=53082#txn-522046">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;04:58:15&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/522046/246606/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 64b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Updating ticket subject to reflect that we want to use .annotate<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-522048" href="/rt3/Ticket/Display.html?id=53082#txn-522048">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Mon&nbsp;Jan&nbsp;19&nbsp;04:58:15&nbsp;2009</td>
+    <td class="description">
+      jnthn <!-- x --> at jnthn.net -  Subject changed from &#39;[TODO] rakudo should use setline/setfile opcodes&#39; to &#39;[TODO] rakudo should use .annotate to track line/file&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.581818</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

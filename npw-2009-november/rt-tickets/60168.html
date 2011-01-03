@@ -1,0 +1,4588 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#60168: [TODO] handle Junction threading in dispatch code</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D60168">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#60168: [TODO] handle Junction threading in dispatch code</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60168">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">60168</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=60168">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=60168">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+junction2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/491456/229584/junction2.patch">
+Wed Nov 05 05:40:56 2008 (12.7k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/491446/229574/junction2.patch">
+Wed Nov 05 02:56:21 2008 (12.7k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+junction.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/488782/228114/junction.patch">
+Mon Oct 27 03:47:50 2008 (10.7k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+junction3.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492672/230370/junction3.patch">
+Sat Nov 08 05:18:27 2008 (12.9k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492670/230364/junction3.patch">
+Sat Nov 08 05:18:19 2008 (12.9k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/492386/230188/junction3.patch">
+Fri Nov 07 18:35:05 2008 (13k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=60168">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-488782" href="/rt3/Ticket/Display.html?id=60168#txn-488782">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;27&nbsp;03:47:50&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 27 Oct 2008 21:43:22 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/488782/228112/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 258b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+I&#39;ve &#40;slightly&#41; refactor Junction.pir.<br />
+<br />
+1. Get rid of &#34;junction_comparision_helper&#34;. Use &#34;infix_junction_helper&#34; <br />
+instead.<br />
+2. In &#34;infix&#34; and &#34;unary&#34; junction helpers store original value in <br />
+ResultHash to avoid stringification of results.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/488782/228114/junction.patch">Download junction.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 10.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 9e5baca..bdbf01d 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -153,6 +153,10 @@ Clone v-table method.<br />
+     .return&#40;junc&#41;<br />
+ .end<br />
+ <br />
++.sub &#39;VTABLE_get_string&#39; :method :vtable&#40;&#39;get_string&#39;&#41;<br />
++    $S0 = self.&#39;perl&#39;&#40;&#41;<br />
++    .return &#40;$S0&#41;<br />
++.end<br />
+ <br />
+ =item perl&#40;&#41;<br />
+ <br />
+@@ -1080,21 +1084,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1108,21 +1112,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1136,21 +1140,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1164,21 +1168,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1192,21 +1196,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1220,21 +1224,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1248,21 +1252,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1276,21 +1280,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1304,21 +1308,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1332,21 +1336,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1360,21 +1364,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1388,21 +1392,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1436,7 +1440,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1456,6 +1460,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1464,65 +1469,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+ <br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+@@ -1548,7 +1494,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1568,6 +1514,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-488788" href="/rt3/Ticket/Display.html?id=60168#txn-488788">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;27&nbsp;03:47:53&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-488892" href="/rt3/Ticket/Display.html?id=60168#txn-488892">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;27&nbsp;11:42:42&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Mon, 27 Oct 2008 13:42:23 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/488892/228178/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 803b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Mon, Oct 27, 2008 at 03:47:50AM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; I&#39;ve &#40;slightly&#41; refactor Junction.pir.<br />
+&gt; <br />
+&gt; 1. Get rid of &#34;junction_comparision_helper&#34;. Use &#34;infix_junction_helper&#34; <br />
+&gt; instead.<br />
+&gt; 2. In &#34;infix&#34; and &#34;unary&#34; junction helpers store original value in <br />
+&gt; ResultHash to avoid stringification of results.<br />
+</div>
+<br />
+Okay to apply patch as long as spectest_regression still passes.<br />
+<br />
+I would prefer to eliminate the &#39;ResultHash&#39; altogether --<br />
+elimination of any duplicate values should be done in the<br />
+Junction constructor itself, not in the helper.  Please don&#39;t<br />
+close this ticket until that has been done.<br />
+<br />
+Note that all of this effectively disappears when we have<br />
+the dispatcher handling Junctions properly -- i.e., the<br />
+specialized operator functions defined in Junction really<br />
+should not exist.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-488896" href="/rt3/Ticket/Display.html?id=60168#txn-488896">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Mon&nbsp;Oct&nbsp;27&nbsp;11:42:44&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489132" href="/rt3/Ticket/Display.html?id=60168#txn-489132">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;02:33:37&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 28 Oct 2008 19:10:15 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/489132/228320/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 1.1k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon, Oct 27, 2008 at 03:47:50AM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; I&#39;ve &#40;slightly&#41; refactor Junction.pir.<br />
+&gt;&gt;<br />
+&gt;&gt; 1. Get rid of &#34;junction_comparision_helper&#34;. Use &#34;infix_junction_helper&#34; <br />
+&gt;&gt; instead.<br />
+&gt;&gt; 2. In &#34;infix&#34; and &#34;unary&#34; junction helpers store original value in <br />
+&gt;&gt; ResultHash to avoid stringification of results.<br />
+</div>
+&gt; <br />
+&gt; Okay to apply patch as long as spectest_regression still passes.<br />
+</div>
+<br />
+Yes, it still passing.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; I would prefer to eliminate the &#39;ResultHash&#39; altogether --<br />
+&gt; elimination of any duplicate values should be done in the<br />
+&gt; Junction constructor itself, not in the helper.  Please don&#39;t<br />
+</div>
+<br />
+I tried this varian before submitting patch, but hit some parrot&#39;s bug <br />
+that I didn&#39;t manage to fix.<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; close this ticket until that has been done.<br />
+&gt; <br />
+&gt; Note that all of this effectively disappears when we have<br />
+&gt; the dispatcher handling Junctions properly -- i.e., the<br />
+&gt; specialized operator functions defined in Junction really<br />
+&gt; should not exist.<br />
+</div>
+<br />
+Indeed. But current state of MMD doesn&#39;t allow to implement <br />
+auto-threading. For example Parrot_ex_throw_from_c doesn&#39;t specify <br />
+continuation, etc.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489214" href="/rt3/Ticket/Display.html?id=60168#txn-489214">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;08:33:47&nbsp;2008</td>
+    <td class="description">
+      pmichaud -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 28 Oct 2008 10:33:20 -0500</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/489214/228374/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 677b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue, Oct 28, 2008 at 07:10:15PM +1100, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+<div class="message-stanza-depth-2">
+&gt;&gt; Note that all of this effectively disappears when we have<br />
+&gt;&gt; the dispatcher handling Junctions properly -- i.e., the<br />
+&gt;&gt; specialized operator functions defined in Junction really<br />
+&gt;&gt; should not exist.<br />
+</div>
+&gt;<br />
+&gt; Indeed. But current state of MMD doesn&#39;t allow to implement  <br />
+&gt; auto-threading. For example Parrot_ex_throw_from_c doesn&#39;t specify  <br />
+&gt; continuation, etc.<br />
+</div>
+<br />
+I&#39;m not too worried about throw_from_c right now, because it&#39;s <br />
+very unlikely we&#39;ll be throwing Junctions as exceptions anytime<br />
+soon.  I&#39;m just referring to the common use of junctions in<br />
+comparisons and other function calls from within Rakudo.<br />
+<br />
+Pm<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489244" href="/rt3/Ticket/Display.html?id=60168#txn-489244">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;10:20:18&nbsp;2008</td>
+    <td class="description">
+      jonathan <!-- x --> at jnthn.net -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 28 Oct 2008 18:19:56 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Jonathan Worthington &lt;jonathan <!-- x --> at jnthn.net&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/489244/228386/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 633b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Note that all of this effectively disappears when we have<br />
+&gt; the dispatcher handling Junctions properly -- i.e., the<br />
+&gt; specialized operator functions defined in Junction really<br />
+&gt; should not exist.<br />
+&gt;   <br />
+</div>
+Yup, and I don&#39;t plan to spend any more time on those functions inside <br />
+Junction myself, but rather move onto the dispatcher. Though fine with <br />
+this patch being applied if things keep working.<br />
+<br />
+Meta: Back into Rakudo stuff proper within the next week...being <br />
+hindered by a broken net connection &#40;which takes time to fix thanks to <br />
+non-commodity hardware and slow-ass cable company... *sigh*&#41;<br />
+<br />
+Jonathan<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489254" href="/rt3/Ticket/Display.html?id=60168#txn-489254">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;10:36:18&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 28 Oct 2008 19:36:42 +0100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Patrick R. Michaud&#34; &lt;pmichaud <!-- x --> at pobox.com&gt;,  perl6-bug-followup <!-- x --> at perl.org, Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/489254/228390/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 623b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Patrick R. Michaud wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; On Mon, Oct 27, 2008 at 03:47:50AM -0700, Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; I&#39;ve &#40;slightly&#41; refactor Junction.pir.<br />
+&gt;&gt; <br />
+&gt;&gt; 1. Get rid of &#34;junction_comparision_helper&#34;. Use &#34;infix_junction_helper&#34; <br />
+&gt;&gt; instead.<br />
+&gt;&gt; 2. In &#34;infix&#34; and &#34;unary&#34; junction helpers store original value in <br />
+&gt;&gt; ResultHash to avoid stringification of results.<br />
+</div>
+&gt; <br />
+&gt; Okay to apply patch as long as spectest_regression still passes.<br />
+</div>
+<br />
+It does, even with a few passing TODO tests. So applied yesterday, but<br />
+forgot which revision it was, sorry.<br />
+<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://perlgeek.de/ |  http://perl-6.de/ | http://sudokugarden.de/<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489258" href="/rt3/Ticket/Display.html?id=60168#txn-489258">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;10:44:05&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489300" href="/rt3/Ticket/Display.html?id=60168#txn-489300">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;14:07:08&nbsp;2008</td>
+    <td class="description">
+      moritz -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/489300/228420/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 78b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Opening again, shouldn&#39;t have closed in the first place as per Patrick&#39;s<br />
+wish.<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489304" href="/rt3/Ticket/Display.html?id=60168#txn-489304">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;14:07:12&nbsp;2008</td>
+    <td class="description">
+      moritz -  Status changed from &#39;resolved&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-489306" href="/rt3/Ticket/Display.html?id=60168#txn-489306">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;Oct&nbsp;28&nbsp;14:08:05&nbsp;2008</td>
+    <td class="description">
+      moritz -  Subject changed from &#39;[PATCH] Refactor Junction.&#39; to &#39;[TODO] handle Junction threading in dispatch code&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491446" href="/rt3/Ticket/Display.html?id=60168#txn-491446">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;05&nbsp;02:56:21&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491446/229568/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 478b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+After some breakages and discussions on #perl6 and #parrot I&#39;ve remade<br />
+this patch to proper handling boolean contexts.<br />
+<br />
+1. Refactor &#39;junction_comparision_helper&#39; to &#39;get_bool&#39; vtable.<br />
+2. Remove &#39;prefix:?&#39; and &#39;prefix:!&#39; overrides. Parrot DTRT without them.<br />
+3. Replace &#39;junction_comparision_helper&#39; with &#39;infix_junction_helper&#39;.<br />
+<br />
+It now passed 6 of 8 recently added tests in<br />
+S03-junctions/boolen-context.t. And there is some problem with<br />
+true&#40;Junction&#41; calls.<br />
+<br />
+-- <br />
+Bacek <br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491446/229574/junction2.patch">Download junction2.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 12.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit f15089f62abd7478573ad4145589153b5465ae92<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Wed Nov 5 05:23:47 2008 +1100<br />
+<br />
+    Refactor junctions<br />
+<br />
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 9e5baca..9e1b09d 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -208,6 +208,60 @@ Returns a Perl representation of a junction.<br />
+     .return &#40;res&#41;<br />
+ .end<br />
+ <br />
++=item <br />
++<br />
++Override get_bool for Junction<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;get_bool&#39; :method :vtable<br />
++    # We need to find how many values are equal.<br />
++    .local pmc values<br />
++    .local int num_equal<br />
++    .local int count<br />
++    .local int i<br />
++<br />
++    values = self.&#39;values&#39;&#40;&#41;<br />
++    count = elements values<br />
++    i = 0<br />
++    num_equal = 0<br />
++  loop:<br />
++    if i &gt;= count goto end_loop<br />
++    $P0 = values[i]<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    num_equal += $I0<br />
++    inc i<br />
++    goto loop<br />
++  end_loop:<br />
++<br />
++    # Now go by juction type.<br />
++    .local int type<br />
++    type = self.&#39;!type&#39;&#40;&#41;<br />
++    if type == JUNCTION_TYPE_ALL goto all<br />
++    if type == JUNCTION_TYPE_ANY goto any<br />
++    if type == JUNCTION_TYPE_ONE goto one<br />
++    if type == JUNCTION_TYPE_NONE goto none<br />
++<br />
++  all:<br />
++    if num_equal == count goto ret_true<br />
++    goto ret_false<br />
++  any:<br />
++    if num_equal &gt; 0 goto ret_true<br />
++    goto ret_false<br />
++  one:<br />
++    if num_equal == 1 goto ret_true<br />
++    goto ret_false<br />
++  none:<br />
++    if num_equal == 0 goto ret_true<br />
++    goto ret_false<br />
++<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_false:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+@@ -449,18 +503,6 @@ Override prefix decrement for junctions.<br />
+ .end<br />
+ <br />
+ <br />
+-=item C&lt;prefix:!&#40;...&#41;&gt;<br />
+-<br />
+-Override not for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:!&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:!&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+ <br />
+ =item C&lt;prefix:+&#40;...&#41;&gt;<br />
+ <br />
+@@ -500,20 +542,6 @@ Override stringification for junctions.<br />
+     .return unary_junction_helper&#40;$P0, j&#41;<br />
+ .end<br />
+ <br />
+-<br />
+-=item C&lt;prefix:?&#40;...&#41;&gt;<br />
+-<br />
+-Override boolification for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:?&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:?&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+-<br />
+ =item C&lt;prefix:=&#40;...&#41;&gt;<br />
+ <br />
+ Override iteration for junctions.<br />
+@@ -1080,21 +1108,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1108,21 +1136,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1136,21 +1164,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1164,21 +1192,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1192,21 +1220,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1220,21 +1248,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1248,21 +1276,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1276,21 +1304,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1304,21 +1332,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1332,21 +1360,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1360,21 +1388,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1388,21 +1416,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1436,7 +1464,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1456,6 +1484,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1464,66 +1493,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+-<br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+     .param pmc op_sub<br />
+@@ -1548,7 +1517,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1568,6 +1537,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1576,7 +1546,7 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-<br />
++ <br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-491456" href="/rt3/Ticket/Display.html?id=60168#txn-491456">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;Nov&nbsp;05&nbsp;05:40:56&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] AutoReply: [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 05 Nov 2008 07:27:40 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491456/229582/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 348b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+After some breakages and discussions on #perl6 and #parrot I&#39;ve remade <br />
+this patch to proper handling boolean contexts.<br />
+<br />
+1. Refactor &#39;junction_comparision_helper&#39; to &#39;get_bool&#39; vtable.<br />
+2. Remove &#39;prefix:?&#39; and &#39;prefix:!&#39; overrides. Parrot DTRT without them.<br />
+3. Replace &#39;junction_comparision_helper&#39; with &#39;infix_junction_helper&#39;.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/491456/229584/junction2.patch">Download junction2.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 12.7k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit f15089f62abd7478573ad4145589153b5465ae92<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Wed Nov 5 05:23:47 2008 +1100<br />
+<br />
+    Refactor junctions<br />
+<br />
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 9e5baca..9e1b09d 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -208,6 +208,60 @@ Returns a Perl representation of a junction.<br />
+     .return &#40;res&#41;<br />
+ .end<br />
+ <br />
++=item <br />
++<br />
++Override get_bool for Junction<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;get_bool&#39; :method :vtable<br />
++    # We need to find how many values are equal.<br />
++    .local pmc values<br />
++    .local int num_equal<br />
++    .local int count<br />
++    .local int i<br />
++<br />
++    values = self.&#39;values&#39;&#40;&#41;<br />
++    count = elements values<br />
++    i = 0<br />
++    num_equal = 0<br />
++  loop:<br />
++    if i &gt;= count goto end_loop<br />
++    $P0 = values[i]<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    num_equal += $I0<br />
++    inc i<br />
++    goto loop<br />
++  end_loop:<br />
++<br />
++    # Now go by juction type.<br />
++    .local int type<br />
++    type = self.&#39;!type&#39;&#40;&#41;<br />
++    if type == JUNCTION_TYPE_ALL goto all<br />
++    if type == JUNCTION_TYPE_ANY goto any<br />
++    if type == JUNCTION_TYPE_ONE goto one<br />
++    if type == JUNCTION_TYPE_NONE goto none<br />
++<br />
++  all:<br />
++    if num_equal == count goto ret_true<br />
++    goto ret_false<br />
++  any:<br />
++    if num_equal &gt; 0 goto ret_true<br />
++    goto ret_false<br />
++  one:<br />
++    if num_equal == 1 goto ret_true<br />
++    goto ret_false<br />
++  none:<br />
++    if num_equal == 0 goto ret_true<br />
++    goto ret_false<br />
++<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_false:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+@@ -449,18 +503,6 @@ Override prefix decrement for junctions.<br />
+ .end<br />
+ <br />
+ <br />
+-=item C&lt;prefix:!&#40;...&#41;&gt;<br />
+-<br />
+-Override not for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:!&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:!&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+ <br />
+ =item C&lt;prefix:+&#40;...&#41;&gt;<br />
+ <br />
+@@ -500,20 +542,6 @@ Override stringification for junctions.<br />
+     .return unary_junction_helper&#40;$P0, j&#41;<br />
+ .end<br />
+ <br />
+-<br />
+-=item C&lt;prefix:?&#40;...&#41;&gt;<br />
+-<br />
+-Override boolification for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:?&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:?&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+-<br />
+ =item C&lt;prefix:=&#40;...&#41;&gt;<br />
+ <br />
+ Override iteration for junctions.<br />
+@@ -1080,21 +1108,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1108,21 +1136,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1136,21 +1164,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1164,21 +1192,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1192,21 +1220,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1220,21 +1248,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1248,21 +1276,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1276,21 +1304,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1304,21 +1332,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1332,21 +1360,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1360,21 +1388,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1388,21 +1416,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1436,7 +1464,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1456,6 +1484,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1464,66 +1493,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+-<br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+     .param pmc op_sub<br />
+@@ -1548,7 +1517,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1568,6 +1537,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1576,7 +1546,7 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-<br />
++ <br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492386" href="/rt3/Ticket/Display.html?id=60168#txn-492386">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Fri&nbsp;Nov&nbsp;07&nbsp;18:35:05&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492386/230182/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 71b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Another attempt. Now with short-circuit version of get_bool.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492386/230188/junction3.patch">Download junction3.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 13k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+commit e6661598b0f481003a46a54bf49287f252b2a32f<br />
+Author: Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;<br />
+Date:   Wed Nov 5 05:23:47 2008 +1100<br />
+<br />
+    Refactor junctions<br />
+<br />
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 0b5379a..af36be1 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -219,6 +219,77 @@ Returns a Perl representation of a junction.<br />
+     .return &#40;res&#41;<br />
+ .end<br />
+ <br />
++=item <br />
++<br />
++Override get_bool for Junction<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;get_bool&#39; :method :vtable<br />
++    # We need to find how many values are equal.<br />
++    .local pmc values<br />
++    .local pmc it<br />
++<br />
++    values = self.&#39;values&#39;&#40;&#41;<br />
++    it = iter values<br />
++<br />
++    # Now go by juction type.<br />
++    .local int type<br />
++    type = self.&#39;!type&#39;&#40;&#41;<br />
++    if type == JUNCTION_TYPE_ALL goto all<br />
++    if type == JUNCTION_TYPE_ANY goto any<br />
++    if type == JUNCTION_TYPE_ONE goto one<br />
++    if type == JUNCTION_TYPE_NONE goto none<br />
++<br />
++  all:<br />
++    # check values while True.<br />
++  all_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    unless $I0 goto ret_false<br />
++    goto all_loop<br />
++    <br />
++  any:<br />
++    # check values while False.<br />
++  any_loop:<br />
++    unless it goto ret_false<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    if $I0 goto ret_true<br />
++    goto any_loop<br />
++    <br />
++  one:<br />
++    # check values while count &lt; 1.<br />
++    .local int count<br />
++    count = 0<br />
++  one_loop:<br />
++    unless it goto check_count<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    count += $I0<br />
++    if count &gt; 1 goto ret_false<br />
++    goto one_loop<br />
++  check_count:<br />
++    if count == 1 goto ret_true<br />
++    goto ret_false<br />
++    <br />
++  none:<br />
++    # check values while False.<br />
++  none_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    if $I0 goto ret_false<br />
++    goto none_loop<br />
++<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_false:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+@@ -460,18 +531,6 @@ Override prefix decrement for junctions.<br />
+ .end<br />
+ <br />
+ <br />
+-=item C&lt;prefix:!&#40;...&#41;&gt;<br />
+-<br />
+-Override not for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:!&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:!&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+ <br />
+ =item C&lt;prefix:+&#40;...&#41;&gt;<br />
+ <br />
+@@ -511,20 +570,6 @@ Override stringification for junctions.<br />
+     .return unary_junction_helper&#40;$P0, j&#41;<br />
+ .end<br />
+ <br />
+-<br />
+-=item C&lt;prefix:?&#40;...&#41;&gt;<br />
+-<br />
+-Override boolification for junctions.<br />
+-<br />
+-=cut<br />
+-<br />
+-.sub &#39;prefix:?&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+-    .param pmc j<br />
+-    $P0 = find_global &#39;prefix:?&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
+-.end<br />
+-<br />
+-<br />
+ =item C&lt;prefix:=&#40;...&#41;&gt;<br />
+ <br />
+ Override iteration for junctions.<br />
+@@ -1091,21 +1136,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1119,21 +1164,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1147,21 +1192,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1175,21 +1220,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1203,21 +1248,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1231,21 +1276,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1259,21 +1304,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1287,21 +1332,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1315,21 +1360,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1343,21 +1388,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1371,21 +1416,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1399,21 +1444,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1447,7 +1492,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1467,6 +1512,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1475,66 +1521,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+-<br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+     .param pmc op_sub<br />
+@@ -1559,7 +1545,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1579,6 +1565,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1587,7 +1574,7 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-<br />
++ <br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492670" href="/rt3/Ticket/Display.html?id=60168#txn-492670">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;05:18:19&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] AutoReply: [PATCH] Refactor Junction.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 07 Nov 2008 13:40:07 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-compiler <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492670/230362/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 378b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Vasily Chekalkin wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; <br />
+&gt; 1. Refactor &#39;junction_comparision_helper&#39; to &#39;get_bool&#39; vtable.<br />
+&gt; 2. Remove &#39;prefix:?&#39; and &#39;prefix:!&#39; overrides. Parrot DTRT without them.<br />
+&gt; 3. Replace &#39;junction_comparision_helper&#39; with &#39;infix_junction_helper&#39;.<br />
+</div>
+<br />
+And again. After comments from Pm I remade &#39;get_bool&#39; to short-circuit <br />
+version. Noting else changed from previous version.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492670/230364/junction3.patch">Download junction3.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 12.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 9e5baca..d18b14e 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -154,6 +154,10 @@ Clone v-table method.<br />
+ .end<br />
+ <br />
+ <br />
++.sub &#39;get_string&#39; :method :vtable<br />
++    .return self.&#39;perl&#39;&#40;&#41;<br />
++.end<br />
++<br />
+ =item perl&#40;&#41;<br />
+ <br />
+ Returns a Perl representation of a junction.<br />
+@@ -208,6 +212,80 @@ Returns a Perl representation of a junction.<br />
+     .return &#40;res&#41;<br />
+ .end<br />
+ <br />
++=item <br />
++<br />
++Override get_bool for Junction<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;get_bool&#39; :method :vtable<br />
++    # We need to find how many values are equal.<br />
++    .local pmc values<br />
++    .local pmc it<br />
++<br />
++    # get values<br />
++    values = self.&#39;values&#39;&#40;&#41;<br />
++    it = iter values<br />
++    <br />
++    # Now go by juction type to short-circuited version.<br />
++    .local int type<br />
++    type = self.&#39;!type&#39;&#40;&#41;<br />
++    if type == JUNCTION_TYPE_ALL goto all<br />
++    if type == JUNCTION_TYPE_ANY goto any<br />
++    if type == JUNCTION_TYPE_ONE goto one<br />
++    if type == JUNCTION_TYPE_NONE goto none<br />
++<br />
++  all:<br />
++    # Check iter while prefix:? is True.<br />
++  all_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    if $I0 goto all_loop<br />
++    goto ret_false<br />
++<br />
++  any:<br />
++    # Check iter while prefix:? is False.<br />
++  any_loop:<br />
++    unless it goto ret_false<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    unless $I0 goto any_loop<br />
++    goto ret_true<br />
++<br />
++  one:<br />
++    # Check iter while count of True less than one.<br />
++    .local int count<br />
++    count = 0<br />
++  one_loop:<br />
++    unless it goto check_count<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    count += $I0<br />
++    if count &gt; 1 goto ret_false<br />
++    goto one_loop<br />
++<br />
++  check_count:<br />
++    if count == 1 goto ret_true<br />
++    goto ret_false<br />
++<br />
++  none:<br />
++    # Check iter while prefix:? is False.<br />
++  none_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    unless $I0 goto none_loop<br />
++    goto ret_true<br />
++<br />
++<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_false:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+@@ -457,8 +535,8 @@ Override not for junctions.<br />
+ <br />
+ .sub &#39;prefix:!&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+     .param pmc j<br />
+-    $P0 = find_global &#39;prefix:!&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
++    $P0 = j.&#39;get_bool&#39;&#40;&#41;<br />
++    .return &#39;prefix:!&#39;&#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -509,8 +587,8 @@ Override boolification for junctions.<br />
+ <br />
+ .sub &#39;prefix:?&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+     .param pmc j<br />
+-    $P0 = find_global &#39;prefix:?&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
++    $P0 = j.&#39;get_bool&#39;&#40;&#41;<br />
++    .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1080,21 +1158,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1108,21 +1186,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1136,21 +1214,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1164,21 +1242,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1192,21 +1270,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1220,21 +1298,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1248,21 +1326,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1276,21 +1354,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1304,21 +1382,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1332,21 +1410,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1360,21 +1438,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1388,21 +1466,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1436,7 +1514,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1456,6 +1534,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1464,66 +1543,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+-<br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+     .param pmc op_sub<br />
+@@ -1548,7 +1567,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1568,6 +1587,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1576,7 +1596,7 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-<br />
++ <br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-492672" href="/rt3/Ticket/Display.html?id=60168#txn-492672">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;Nov&nbsp;08&nbsp;05:18:27&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #60168] [TODO] handle Junction threading in dispatch code</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Fri, 07 Nov 2008 17:07:38 +1100</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492672/230368/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 488b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Vasily Chekalkin via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hello.<br />
+&gt; <br />
+&gt; After some breakages and discussions on #perl6 and #parrot I&#39;ve remade<br />
+&gt; this patch to proper handling boolean contexts.<br />
+&gt; <br />
+&gt; 1. Refactor &#39;junction_comparision_helper&#39; to &#39;get_bool&#39; vtable.<br />
+&gt; 2. Remove &#39;prefix:?&#39; and &#39;prefix:!&#39; overrides. Parrot DTRT without them.<br />
+&gt; 3. Replace &#39;junction_comparision_helper&#39; with &#39;infix_junction_helper&#39;.<br />
+</div>
+<br />
+And refactored version once again. Now with short-circuit version of <br />
+collapsing to boolean.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/492672/230370/junction3.patch">Download junction3.patch</a>
+<span class="downloadcontenttype">
+[text/x-patch 12.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+diff --git a/languages/perl6/src/classes/Junction.pir b/languages/perl6/src/classes/Junction.pir<br />
+index 9e5baca..d18b14e 100644<br />
+--- a/languages/perl6/src/classes/Junction.pir<br />
++++ b/languages/perl6/src/classes/Junction.pir<br />
+@@ -154,6 +154,10 @@ Clone v-table method.<br />
+ .end<br />
+ <br />
+ <br />
++.sub &#39;get_string&#39; :method :vtable<br />
++    .return self.&#39;perl&#39;&#40;&#41;<br />
++.end<br />
++<br />
+ =item perl&#40;&#41;<br />
+ <br />
+ Returns a Perl representation of a junction.<br />
+@@ -208,6 +212,80 @@ Returns a Perl representation of a junction.<br />
+     .return &#40;res&#41;<br />
+ .end<br />
+ <br />
++=item <br />
++<br />
++Override get_bool for Junction<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;get_bool&#39; :method :vtable<br />
++    # We need to find how many values are equal.<br />
++    .local pmc values<br />
++    .local pmc it<br />
++<br />
++    # get values<br />
++    values = self.&#39;values&#39;&#40;&#41;<br />
++    it = iter values<br />
++    <br />
++    # Now go by juction type to short-circuited version.<br />
++    .local int type<br />
++    type = self.&#39;!type&#39;&#40;&#41;<br />
++    if type == JUNCTION_TYPE_ALL goto all<br />
++    if type == JUNCTION_TYPE_ANY goto any<br />
++    if type == JUNCTION_TYPE_ONE goto one<br />
++    if type == JUNCTION_TYPE_NONE goto none<br />
++<br />
++  all:<br />
++    # Check iter while prefix:? is True.<br />
++  all_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    if $I0 goto all_loop<br />
++    goto ret_false<br />
++<br />
++  any:<br />
++    # Check iter while prefix:? is False.<br />
++  any_loop:<br />
++    unless it goto ret_false<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    unless $I0 goto any_loop<br />
++    goto ret_true<br />
++<br />
++  one:<br />
++    # Check iter while count of True less than one.<br />
++    .local int count<br />
++    count = 0<br />
++  one_loop:<br />
++    unless it goto check_count<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    count += $I0<br />
++    if count &gt; 1 goto ret_false<br />
++    goto one_loop<br />
++<br />
++  check_count:<br />
++    if count == 1 goto ret_true<br />
++    goto ret_false<br />
++<br />
++  none:<br />
++    # Check iter while prefix:? is False.<br />
++  none_loop:<br />
++    unless it goto ret_true<br />
++    $P0 = shift it<br />
++    $I0 = &#39;prefix:?&#39;&#40;$P0&#41;<br />
++    unless $I0 goto none_loop<br />
++    goto ret_true<br />
++<br />
++<br />
++  ret_true:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
++    .return&#40;$P0&#41;<br />
++  ret_false:<br />
++    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
++    .return&#40;$P0&#41;<br />
++.end<br />
+ <br />
+ =back<br />
+ <br />
+@@ -457,8 +535,8 @@ Override not for junctions.<br />
+ <br />
+ .sub &#39;prefix:!&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+     .param pmc j<br />
+-    $P0 = find_global &#39;prefix:!&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
++    $P0 = j.&#39;get_bool&#39;&#40;&#41;<br />
++    .return &#39;prefix:!&#39;&#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -509,8 +587,8 @@ Override boolification for junctions.<br />
+ <br />
+ .sub &#39;prefix:?&#39; :multi&#40;&#39;Junction&#39;&#41;<br />
+     .param pmc j<br />
+-    $P0 = find_global &#39;prefix:?&#39;<br />
+-    .return unary_junction_helper&#40;$P0, j&#41;<br />
++    $P0 = j.&#39;get_bool&#39;&#40;&#41;<br />
++    .return &#40;$P0&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1080,21 +1158,21 @@ Override numerical equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:==&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:==&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1108,21 +1186,21 @@ Override numerical inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:!=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:!=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1136,21 +1214,21 @@ Override numerical greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1164,21 +1242,21 @@ Override numerical less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1192,21 +1270,21 @@ Override numerical greater than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&gt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&gt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1220,21 +1298,21 @@ Override numerical less than or equal to for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:&lt;=&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:&lt;=&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1248,21 +1326,21 @@ Override string equality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:eq&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:eq&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1276,21 +1354,21 @@ Override string inequality for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ne&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ne&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1304,21 +1382,21 @@ Override string less than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:lt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:lt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1332,21 +1410,21 @@ Override string greater than for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:gt&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:gt&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1360,21 +1438,21 @@ Override string less than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:le&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:le&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1388,21 +1466,21 @@ Override string greater than or equal for junctions.<br />
+     .param pmc j1<br />
+     .param pmc j2<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j1, j2, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j1, j2, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;&#39;Junction&#39;,_&#41;<br />
+     .param pmc j<br />
+     .param pmc x<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 0&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 0&#41;<br />
+ .end<br />
+ <br />
+ .sub &#39;infix:ge&#39; :multi&#40;_,&#39;Junction&#39;&#41;<br />
+     .param pmc x<br />
+     .param pmc j<br />
+     $P0 = find_global &#34;infix:ge&#34;<br />
+-    .return junction_comparrison_helper&#40;$P0, j, x, 1&#41;<br />
++    .return infix_junction_helper&#40;$P0, j, x, 1&#41;<br />
+ .end<br />
+ <br />
+ <br />
+@@ -1436,7 +1514,7 @@ loop:<br />
+ sa:<br />
+     $P0 = op_sub&#40;x, cur_elem&#41;<br />
+ nsa:<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1456,6 +1534,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1464,66 +1543,6 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-# Helper sub for junction comparrisons.<br />
+-.sub junction_comparrison_helper :anon<br />
+-    .param pmc op_func<br />
+-    .param pmc j<br />
+-    .param pmc x<br />
+-    .param int second_arg<br />
+-<br />
+-    # We need to find how many values are equal.<br />
+-    .local pmc values<br />
+-    .local int num_equal<br />
+-    .local int count<br />
+-    .local int i<br />
+-    values = j.&#39;values&#39;&#40;&#41;<br />
+-    count = elements values<br />
+-    i = 0<br />
+-    num_equal = 0<br />
+-loop:<br />
+-    if i &gt;= count goto end_loop<br />
+-    $P0 = values[i]<br />
+-    if second_arg goto sa<br />
+-    $I0 = op_func&#40;$P0, x&#41;<br />
+-    goto not_sa<br />
+-sa:<br />
+-    $I0 = op_func&#40;x, $P0&#41;<br />
+-not_sa:<br />
+-    num_equal += $I0<br />
+-    inc i<br />
+-    goto loop<br />
+-end_loop:<br />
+-<br />
+-    # Now go by juction type.<br />
+-    .local int type<br />
+-    type = j.&#39;!type&#39;&#40;&#41;<br />
+-    if type == JUNCTION_TYPE_ALL goto all<br />
+-    if type == JUNCTION_TYPE_ANY goto any<br />
+-    if type == JUNCTION_TYPE_ONE goto one<br />
+-    if type == JUNCTION_TYPE_NONE goto none<br />
+-<br />
+-all:<br />
+-    if num_equal == count goto ret_true<br />
+-    goto ret_false<br />
+-any:<br />
+-    if num_equal &gt; 0 goto ret_true<br />
+-    goto ret_false<br />
+-one:<br />
+-    if num_equal == 1 goto ret_true<br />
+-    goto ret_false<br />
+-none:<br />
+-    if num_equal == 0 goto ret_true<br />
+-    goto ret_false<br />
+-<br />
+-ret_true:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;True&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-ret_false:<br />
+-    $P0 = get_hll_global [&#39;Bool&#39;], &#39;False&#39;<br />
+-    .return&#40;$P0&#41;<br />
+-.end<br />
+-<br />
+-<br />
+<div class="message-stanza-depth-1">
+ # Helper sub for implementing unary operators.<br />
+</div>
+ .sub unary_junction_helper :anon<br />
+     .param pmc op_sub<br />
+@@ -1548,7 +1567,7 @@ loop:<br />
+     if i &gt;= count goto loop_end<br />
+     cur_elem = values[i]<br />
+     $P0 = op_sub&#40;cur_elem&#41;<br />
+-    ResultHash[$P0] = 1<br />
++    ResultHash[$P0] = $P0<br />
+     inc i<br />
+     goto loop<br />
+ loop_end:<br />
+@@ -1568,6 +1587,7 @@ loop_end:<br />
+ nv_loop:<br />
+     unless iterator goto nv_loop_end<br />
+     $P0 = shift iterator<br />
++    $P0 = ResultHash[$P0]<br />
+     push new_values, $P0<br />
+     goto nv_loop<br />
+ nv_loop_end:<br />
+@@ -1576,7 +1596,7 @@ nv_loop_end:<br />
+     .return&#40;new_junc&#41;<br />
+ .end<br />
+ <br />
+-<br />
++ <br />
+ =back<br />
+ <br />
+ =cut<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-493174" href="/rt3/Ticket/Display.html?id=60168#txn-493174">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sun&nbsp;Nov&nbsp;09&nbsp;18:33:55&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 4.800735</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

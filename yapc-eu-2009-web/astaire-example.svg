@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="297mm"
+   height="210mm"
+   id="svg3211">
+  <defs
+     id="defs3213" />
+  <image
+     xlink:href="3583523428-dancingshiva.jpg"
+     x="-6.3408203"
+     y="-27.864227"
+     width="1065.0438"
+     height="799.82294"
+     id="image4849" />
+  <path
+     d="M 328.70863,196.78525 L 328.70863,456.21549 C 328.72546,506.24639 369.14377,546.90391 419.08363,547.30924 L 723.65356,547.30924 L 723.65356,287.879 C 723.63666,237.8481 683.18716,197.19057 633.24736,196.78525 L 328.70863,196.78525 z"
+     id="rect3222"
+     style="fill:#31445b;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <text
+     x="393.14984"
+     y="281.31287"
+     id="text2511"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans Mono;-inkscape-font-specification:Bitstream Vera Sans Mono"><tspan
+       x="393.14984"
+       y="281.31287"
+       id="tspan2515"><tspan
+   id="tspan3836"
+   style="fill:#e3ba35;fill-opacity:1">use</tspan> v6;</tspan><tspan
+       x="393.14984"
+       y="321.31287"
+       id="tspan2527"><tspan
+   id="tspan3838"
+   style="fill:#e3ba35;fill-opacity:1">use</tspan> Astaire;</tspan><tspan
+       x="393.14984"
+       y="361.31287"
+       id="tspan2529" /><tspan
+       x="393.14984"
+       y="401.31287"
+       id="tspan2517">get <tspan
+   id="tspan3832"
+   style="fill:#459036;fill-opacity:1">'/hi'</tspan> =&gt; {</tspan><tspan
+       x="393.14984"
+       y="441.31287"
+       id="tspan2519"
+       style="fill:#459036;fill-opacity:1">    &quot;OH HAI&quot;</tspan><tspan
+       x="393.14984"
+       y="481.31287"
+       id="tspan2521">}</tspan><tspan
+       x="393.14984"
+       y="521.31287"
+       id="tspan2523" /></text>
+</svg>

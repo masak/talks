@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.2"
+   width="297mm"
+   height="210mm"
+   id="svg6608">
+  <defs
+     id="defs6610">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         id="path4543"
+         style="fill:#5c48dd;fill-rule:evenodd;stroke:#5c48dd;stroke-width:1pt;marker-start:none" />
+    </marker>
+  </defs>
+  <g
+     transform="translate(-28.872347,-10.586272)"
+     id="layer1">
+    <path
+       d="m 372.69881,223.48897 a 132.26898,132.26898 0 1 1 -264.53797,0 132.26898,132.26898 0 1 1 264.53797,0 z"
+       id="path6619"
+       style="opacity:0.98999999;fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 364.87996,222.8374 c 18.24399,-1.30314 18.24399,-1.30314 18.24399,-1.30314"
+       id="path7133"
+       style="fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 346.63596,285.38825 c 15.63771,10.42514 15.63771,10.42514 15.63771,10.42514"
+       id="path7135"
+       style="fill:none;stroke:#5c48dd;stroke-width:3.54330707;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 389.63967,255.41597 c 38.83031,-18.18786 50.37102,-3.6282 54.732,19.54715"
+       id="path7137"
+       style="fill:none;stroke:#5c48dd;stroke-width:10.62992096;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Sstart)" />
+    <text
+       x="390.94281"
+       y="306.23853"
+       id="text7513"
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="390.94281"
+         y="306.23853"
+         id="tspan7515">April 16</tspan></text>
+    <text
+       x="204.21889"
+       y="234.37862"
+       id="text7517"
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+         x="204.21889"
+         y="234.37862"
+         id="tspan7519">2009</tspan></text>
+  </g>
+  <g
+     transform="translate(-24.928383,-24.234661)"
+     id="g7859">
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/europe_e_continental_2.gif"
+       x="545.02527"
+       y="110.40588"
+       width="200.06071"
+       height="255.46461"
+       id="image7671" />
+    <image
+       xlink:href="file:///Users/masak/gwork/bpw-2009/europe_e_narway_4.gif"
+       x="795.95703"
+       y="109.28699"
+       width="203.8167"
+       height="255.76997"
+       id="image7745" />
+    <rect
+       width="43.003708"
+       height="87.310562"
+       x="625.50848"
+       y="136.82999"
+       id="rect7749"
+       style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       width="129.01112"
+       height="254.11282"
+       x="792.31079"
+       y="109.46399"
+       id="rect7751"
+       style="opacity:0.98999999;fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="M 624.79213,136.02978 791.61434,108.90422"
+       id="path7753"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       d="M 624.79213,223.28367 791.61434,362.52823"
+       id="path7755"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <text
+     x="363.15277"
+     y="412.56888"
+     id="text7765"
+     xml:space="preserve"
+     style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+       x="363.15277"
+       y="412.56888"
+       id="tspan7767">Nordic Perl Workshop</tspan></text>
+  <image
+     xlink:href="file:///Users/masak/gwork/bpw-2009/pmichaud.jpg"
+     x="203.63643"
+     y="465.23242"
+     width="150"
+     height="200"
+     id="image7839" />
+  <text
+     x="748.04236"
+     y="527.88776"
+     id="text7851"
+     xml:space="preserve"
+     style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Baskerville;-inkscape-font-specification:Baskerville"><tspan
+       x="748.04236"
+       y="527.88776"
+       id="tspan7853">&quot;Building compilers</tspan><tspan
+       x="748.04236"
+       y="572.88776"
+       id="tspan7855">with the</tspan><tspan
+       x="748.04236"
+       y="617.88776"
+       id="tspan7857">Parrot Compiler Toolkit&quot;</tspan></text>
+</svg>

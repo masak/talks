@@ -1,0 +1,1085 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#54988: [PATCH] enhance t/harness &#40;again&#41;</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D54988">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#54988: [PATCH] enhance t/harness &#40;again&#41;</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54988">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">54988</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time worked">Worked:</td>
+    <td class="value time worked">10 min
+</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=54988">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+particle
+&lt;jerry.gay [at] gmail.com&gt;
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+moritz [at] casella.verplant.org
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54988">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+Patch    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+localtest-configfudge.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/415404/188860/localtest-configfudge.patch">
+Wed May 28 14:56:38 2008 (2.9k) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+
+signature.asc<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/415162/188760/signature.asc">
+Wed May 28 11:02:11 2008 (252b) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+
+configfudge.data<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/415162/188758/configfudge.data">
+Wed May 28 11:02:11 2008 (322b) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+
+harnes_refactor2.patch<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/415162/188756/harnes_refactor2.patch">
+Wed May 28 11:02:11 2008 (2.6k) by moritz <!-- x --> at verplant.org
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=54988">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415162" href="/rt3/Ticket/Display.html?id=54988#txn-415162">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;11:02:11&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] enhance t/harness &#40;again&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 28 May 2008 20:12:39 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">rakudobug <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415162/188760/signature.asc">Download signature.asc</a>
+<span class="downloadcontenttype">
+[application/pgp-signature 252b]
+</span> 
+</div>
+<div class="messagebody">
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415162/188754/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 806b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Attached patch enhances t/harness, this time it offers the possibility<br />
+to call fudge on a per-file base &#40;as requested on IRC by particle and<br />
+pmichaud, iirc&#41;.<br />
+<br />
+The patch adds a --configfudge option, which &#40;in conjunction with<br />
+--tests-from-file &#41; only fudges those tests which are marked with<br />
+&#39;#fudge&#39; at the end.<br />
+<br />
+Copy the attaced configfudge.data to languages/perl6/t, cd to<br />
+languages/perl6 and then run<br />
+<br />
+perl t/harness --configfudge --tests-from-file=t/configfudge.data<br />
+--keep-exit-code<br />
+<br />
+for a small demonstration.<br />
+<br />
+Without --configfudge the behaviour is unchanged.<br />
+Please test this on Windows and MacOS, I have no access to such systems.<br />
+<br />
+If you think the implemented behaviour makes sense I&#39;ll add a bit of<br />
+documentation.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415162/188756/harnes_refactor2.patch">Download harnes_refactor2.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 2.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: languages/perl6/t/harness<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- languages/perl6/t/harness   &#40;revision 27887&#41;<br />
++++ languages/perl6/t/harness   &#40;working copy&#41;<br />
+@@ -22,6 +22,7 @@<br />
+ GetOptions&#40;<br />
+         &#39;tests-from-file=s&#39; =&gt; \my $list_file,<br />
+         &#39;fudge&#39;             =&gt; \my $do_fudge,<br />
++        &#39;configfudge&#39;         =&gt; \my $configfudge,<br />
+     &#41;;<br />
+ <br />
+ <br />
+@@ -29,7 +30,7 @@<br />
+ my @files = grep m/^[^-]/, @ARGV;<br />
+ <br />
+ my %accepted_tests;<br />
+-if &#40;$list_file&#41; {<br />
++if &#40;$list_file || $configfudge&#41; {<br />
+     open&#40;my $f, &#39;&lt;&#39;, $list_file&#41; <br />
+         or die &#34;Can&#39;t ope file &#39;$list_file&#39; for reading: $!&#34;;<br />
+     my $slash = $^O eq &#39;MSWin32&#39; ? &#39;\\&#39; : &#39;/&#39;;<br />
+@@ -37,33 +38,58 @@<br />
+         next if m/^\s*#/;<br />
+         next unless m/\S/;<br />
+         chomp;<br />
+-        $_ =~ s/\//$slash/g;<br />
+-        $accepted_tests{&#34;t${slash}spec${slash}$_&#34;} = 1;<br />
++        my &#40;$fn, $fudgespec&#41; = split m/\s+#/;<br />
++        $fn = &#34;t/spec/$fn&#34;;<br />
++        $fn =~ s/\//$slash/g;<br />
++        $accepted_tests{$fn} = $fudgespec;<br />
+     }<br />
+     close $f;<br />
+ }<br />
+ <br />
+-if &#40;defined&#40;$do_fudge&#41; || $list_file &#41;{<br />
+-    my $impl   = &#39;rakudo&#39;;<br />
+-    my @tfiles = sort map { -d $_ ? all_in&#40;$_&#41; : $_ } map glob, @files;<br />
+-    if &#40;$list_file&#41;{<br />
+-        @tfiles = grep { $accepted_tests{$_} } @tfiles;<br />
+-        die &#34;No tests to run!&#34; unless @tfiles;<br />
+-    }<br />
++# first prepare our list of files<br />
++my @tfiles;<br />
++if &#40;$list_file&#41;{<br />
++    @tfiles = map { all_in&#40;$_&#41; } sort keys %accepted_tests;<br />
++} else {<br />
++    @tfiles = map { all_in&#40;$_&#41; } sort @files;<br />
++}<br />
++<br />
++# then decide if and what to fudge<br />
++if &#40;defined&#40;$do_fudge&#41; || defined&#40;$configfudge&#41;&#41;{<br />
+     if &#40;$do_fudge&#41;{<br />
+-        my $cmd = join &#39; &#39;, $^X, &#39;t/spec/fudgeall&#39;, @pass_through_options, $impl, @tfiles;<br />
+-        print &#34;$cmd\n&#34;;<br />
+-        $harness_args{arguments} = [ split &#39; &#39;, `$cmd` ];<br />
++        @tfiles = fudge&#40;@tfiles&#41;;<br />
+     } else {<br />
+-        $harness_args{arguments} = \@tfiles;<br />
++        my &#40;@fudge, @nofudge&#41;;<br />
++        for &#40;@tfiles&#41;{<br />
++            if &#40;$accepted_tests{$_} eq &#39;fudge&#39;&#41;{<br />
++                push @fudge, $_;<br />
++            } else {<br />
++                push @nofudge, $_;<br />
++            }<br />
++        }<br />
++        if &#40;@fudge&#41; {<br />
++            @tfiles = sort @nofudge, fudge&#40;@fudge&#41;;<br />
++        }<br />
+     }<br />
+ }<br />
+ <br />
++$harness_args{arguments} = \@tfiles;<br />
++<br />
++sub fudge {<br />
++    my $impl   = &#39;rakudo&#39;;<br />
++    my $cmd = join &#39; &#39;, $^X, &#39;t/spec/fudgeall&#39;, <br />
++                        @pass_through_options, $impl, @_;<br />
++    print &#34;$cmd\n&#34;;<br />
++    return split &#39; &#39;, `$cmd`;<br />
++}<br />
++<br />
+<div class="message-stanza-depth-1">
+ # Stolen directly from &#39;prove&#39;<br />
+ # adapted to return only files ending in &#39;.t&#39;<br />
+</div>
+ sub all_in {<br />
+     my $start = shift;<br />
+ <br />
++    return $start unless -d $start;<br />
++<br />
+     my @hits = &#40;&#41;;<br />
+ <br />
+     local *DH;<br />
+@@ -94,4 +120,3 @@<br />
+ <br />
+ eval &#39;use Parrot::Test::Harness %harness_args&#39;;<br />
+ <br />
+-<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415162/188758/configfudge.data">Download configfudge.data</a>
+<span class="downloadcontenttype">
+[text/plain 322b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+<div class="message-stanza-depth-1">
+# this is a list of all spec tests that are supposed to pass<br />
+# on current rakudo.<br />
+# empty lines and those beginning with a # are ignored<br />
+</div>
+<br />
+S02-builtin_data_types/type.t #fudge<br />
+S02-literals/autoref.t        #fudge<br />
+S03-operators/not.t<br />
+S03-operators/autoincrement.t<br />
+S04-statements/until.t<br />
+S04-statements/while.t        #fudge<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415168" href="/rt3/Ticket/Display.html?id=54988#txn-415168">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;11:02:15&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415404" href="/rt3/Ticket/Display.html?id=54988#txn-415404">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;14:56:38&nbsp;2008</td>
+    <td class="description">
+      moritz <!-- x --> at verplant.org -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54988] AutoReply: [PATCH] enhance t/harness &#40;again&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Thu, 29 May 2008 00:14:18 +0200</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Moritz Lenz &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415404/188858/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 701b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+perl6 via RT wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Attached patch enhances t/harness, this time it offers the possibility<br />
+&gt; to call fudge on a per-file base &#40;as requested on IRC by particle and<br />
+&gt; pmichaud, iirc&#41;.<br />
+&gt; <br />
+&gt; The patch adds a --configfudge option, which &#40;in conjunction with<br />
+&gt; --tests-from-file &#41; only fudges those tests which are marked with<br />
+&gt; &#39;#fudge&#39; at the end.<br />
+</div>
+<br />
+The attached patch is a revised version which assumes fudging to be the<br />
+default &#40;as discussed with patrick and particle on #parrot&#41;. Fudging can<br />
+now be disabled with a #pure comment at the end of the line.<br />
+<br />
+The patch also enables that for the new &#39;localtest&#39; make target.<br />
+<br />
+Cheers,<br />
+Moritz<br />
+<br />
+<br />
+-- <br />
+Moritz Lenz<br />
+http://moritz.faui2k3.org/ |  http://perl-6.de/<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415404/188860/localtest-configfudge.patch">Download localtest-configfudge.patch</a>
+<span class="downloadcontenttype">
+[text/x-diff 2.9k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: t/harness<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- t/harness   &#40;revision 27895&#41;<br />
++++ t/harness   &#40;working copy&#41;<br />
+@@ -22,6 +22,7 @@<br />
+ GetOptions&#40;<br />
+         &#39;tests-from-file=s&#39; =&gt; \my $list_file,<br />
+         &#39;fudge&#39;             =&gt; \my $do_fudge,<br />
++        &#39;configfudge&#39;         =&gt; \my $configfudge,<br />
+     &#41;;<br />
+ <br />
+ <br />
+@@ -29,7 +30,7 @@<br />
+ my @files = grep m/^[^-]/, @ARGV;<br />
+ <br />
+ my %accepted_tests;<br />
+-if &#40;$list_file&#41; {<br />
++if &#40;$list_file || $configfudge&#41; {<br />
+     open&#40;my $f, &#39;&lt;&#39;, $list_file&#41; <br />
+         or die &#34;Can&#39;t ope file &#39;$list_file&#39; for reading: $!&#34;;<br />
+     my $slash = $^O eq &#39;MSWin32&#39; ? &#39;\\&#39; : &#39;/&#39;;<br />
+@@ -37,33 +38,58 @@<br />
+         next if m/^\s*#/;<br />
+         next unless m/\S/;<br />
+         chomp;<br />
+-        $_ =~ s/\//$slash/g;<br />
+-        $accepted_tests{&#34;t${slash}spec${slash}$_&#34;} = 1;<br />
++        my &#40;$fn, $fudgespec&#41; = split m/\s+#/;<br />
++        $fn = &#34;t/spec/$fn&#34;;<br />
++        $fn =~ s/\//$slash/g;<br />
++        $accepted_tests{$fn} = $fudgespec;<br />
+     }<br />
+     close $f;<br />
+ }<br />
+ <br />
+-if &#40;defined&#40;$do_fudge&#41; || $list_file &#41;{<br />
+-    my $impl   = &#39;rakudo&#39;;<br />
+-    my @tfiles = sort map { -d $_ ? all_in&#40;$_&#41; : $_ } map glob, @files;<br />
+-    if &#40;$list_file&#41;{<br />
+-        @tfiles = grep { $accepted_tests{$_} } @tfiles;<br />
+-        die &#34;No tests to run!&#34; unless @tfiles;<br />
+-    }<br />
++# first prepare our list of files<br />
++my @tfiles;<br />
++if &#40;$list_file&#41;{<br />
++    @tfiles = map { all_in&#40;$_&#41; } sort keys %accepted_tests;<br />
++} else {<br />
++    @tfiles = map { all_in&#40;$_&#41; } sort @files;<br />
++}<br />
++<br />
++# then decide if and what to fudge<br />
++if &#40;defined&#40;$do_fudge&#41; || defined&#40;$configfudge&#41;&#41;{<br />
+     if &#40;$do_fudge&#41;{<br />
+-        my $cmd = join &#39; &#39;, $^X, &#39;t/spec/fudgeall&#39;, @pass_through_options, $impl, @tfiles;<br />
+-        print &#34;$cmd\n&#34;;<br />
+-        $harness_args{arguments} = [ split &#39; &#39;, `$cmd` ];<br />
++        @tfiles = fudge&#40;@tfiles&#41;;<br />
+     } else {<br />
+-        $harness_args{arguments} = \@tfiles;<br />
++        my &#40;@fudge, @nofudge&#41;;<br />
++        for &#40;@tfiles&#41;{<br />
++            if &#40;$accepted_tests{$_} =~ m/^&#40;?:pure|raw&#41;$/&#41;{<br />
++                push @nofudge, $_;<br />
++            } else {<br />
++                push @fudge, $_;<br />
++            }<br />
++        }<br />
++        if &#40;@fudge&#41; {<br />
++            @tfiles = sort @nofudge, fudge&#40;@fudge&#41;;<br />
++        }<br />
+     }<br />
+ }<br />
+ <br />
++$harness_args{arguments} = \@tfiles;<br />
++<br />
++sub fudge {<br />
++    my $impl   = &#39;rakudo&#39;;<br />
++    my $cmd = join &#39; &#39;, $^X, &#39;t/spec/fudgeall&#39;, <br />
++                        @pass_through_options, $impl, @_;<br />
++    print &#34;$cmd\n&#34;;<br />
++    return split &#39; &#39;, `$cmd`;<br />
++}<br />
++<br />
+<div class="message-stanza-depth-1">
+ # Stolen directly from &#39;prove&#39;<br />
+ # adapted to return only files ending in &#39;.t&#39;<br />
+</div>
+ sub all_in {<br />
+     my $start = shift;<br />
+ <br />
++    return $start unless -d $start;<br />
++<br />
+     my @hits = &#40;&#41;;<br />
+ <br />
+     local *DH;<br />
+@@ -94,4 +120,3 @@<br />
+ <br />
+ eval &#39;use Parrot::Test::Harness %harness_args&#39;;<br />
+ <br />
+-<br />
+Index: config/makefiles/root.in<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- config/makefiles/root.in    &#40;revision 27895&#41;<br />
++++ config/makefiles/root.in    &#40;working copy&#41;<br />
+@@ -165,7 +165,7 @@<br />
+ <br />
+ localtest: t/localtest.data<br />
+        $&#40;PERL&#41; t/harness \<br />
+-        --fudge \<br />
++        --configfudge \<br />
+         --tests-from-file=t/localtest.data \<br />
+         --keep-exit-code \<br />
+         t/spec/ \<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415418" href="/rt3/Ticket/Display.html?id=54988#txn-415418">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;17:16:24&nbsp;2008</td>
+    <td class="description">
+      particle -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">CC:</td>
+    <td class="message-header-value">perl6-bugs-followup <!-- x --> at perl.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">Re: [perl #54988] AutoReply: [PATCH] enhance t/harness &#40;again&#41;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Wed, 28 May 2008 17:16:03 -0700</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">&#34;Moritz Lenz&#34; &lt;moritz <!-- x --> at verplant.org&gt;</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">&#34;jerry gay&#34; &lt;jerry.gay <!-- x --> at gmail.com&gt;</td>
+  </tr>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/415418/188866/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 781b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Wed, May 28, 2008 at 3:14 PM, Moritz Lenz<br />
+&lt;moritz <!-- x --> at verplant.org&gt; wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; perl6 via RT wrote:<br />
+<div class="message-stanza-depth-2">
+&gt;&gt; Attached patch enhances t/harness, this time it offers the possibility<br />
+&gt;&gt; to call fudge on a per-file base &#40;as requested on IRC by particle and<br />
+&gt;&gt; pmichaud, iirc&#41;.<br />
+&gt;&gt;<br />
+&gt;&gt; The patch adds a --configfudge option, which &#40;in conjunction with<br />
+&gt;&gt; --tests-from-file &#41; only fudges those tests which are marked with<br />
+&gt;&gt; &#39;#fudge&#39; at the end.<br />
+</div>
+&gt;<br />
+&gt; The attached patch is a revised version which assumes fudging to be the<br />
+&gt; default &#40;as discussed with patrick and particle on #parrot&#41;. Fudging can<br />
+&gt; now be disabled with a #pure comment at the end of the line.<br />
+&gt;<br />
+&gt; The patch also enables that for the new &#39;localtest&#39; make target.<br />
+&gt;<br />
+</div>
+thanks, applied with minor modifications as r27897.<br />
+~jerry<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415420" href="/rt3/Ticket/Display.html?id=54988#txn-415420">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;17:16:26&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction people even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415422" href="/rt3/Ticket/Display.html?id=54988#txn-415422">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;17:44:26&nbsp;2008</td>
+    <td class="description">
+      particle -  Taken
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415424" href="/rt3/Ticket/Display.html?id=54988#txn-415424">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;17:44:50&nbsp;2008</td>
+    <td class="description">
+      particle -  Comments added
+    </td>
+    <td class="time-taken">10 min</td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-415426" href="/rt3/Ticket/Display.html?id=54988#txn-415426">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;28&nbsp;17:44:50&nbsp;2008</td>
+    <td class="description">
+      particle -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 1.878544</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

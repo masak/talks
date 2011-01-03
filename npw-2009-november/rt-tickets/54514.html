@@ -1,0 +1,1214 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>#54514: [PATCH] Initial implementation of sort for rakudo&#39;s List.</title>
+    <link rel="shortcut icon" href="/rt3/NoAuth/images//favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/rt.perl.org/main.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/rt3/NoAuth/css/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="/rt3/NoAuth/js/util.js"></script>
+    <script type="text/javascript" src="/rt3/NoAuth/js/titlebox-state.js"></script>
+    <script type="text/javascript"><!--
+        onLoadHook("loadTitleBoxStates()");
+    --></script>
+
+  </head>
+  <body id="comp-Public-Bug-Display">
+
+  <div id="logo">
+    <a href="http://rt.perl.org/rt3/"><img src="/rt3/NoAuth/images//local/pblogo.gif" alt="PerlBug" width="230" height="50"></a>
+  </div>
+
+
+<div id="quickbar">
+  <div id="quick-personal">
+    <span class="hide"><a href="#skipnav">Skip Menu</a> | </span>
+    You are currently an anonymous guest.
+    |
+    <a href="/rt3/NoAuth/Logout.html?URL=/rt3/index.html?goto=%252FPublic%252FBug%252FDisplay.html%253Fid%253D54514">Login</a>
+    |
+    <a href="/rt3/NoAuth/Logout.html">Return to Main</a>
+   | <a href="/rt3/User/Prefs.html">Preferences</a>
+  
+
+  </div>
+
+
+
+  <div id="topactions">
+    <span class="topaction">
+<form action="/rt3/Public/Search/Simple.html">
+  <input size="12" name="q" autocomplete="off" accesskey="0" class="field" />
+  <input type="submit" class="button" value="Search" />
+</form>
+    </span>
+  </div>
+
+</div>
+
+<div id="nav">
+<ul id="system-menu">
+<div><div class="wrapper">
+</div></div>
+</ul>
+
+
+
+</div>
+
+<div id="header">
+  <h1>#54514: [PATCH] Initial implementation of sort for rakudo&#39;s List.</h1>
+
+  <ul id="page-menu">
+    <div><div><div>
+&nbsp;
+    </div></div></div>
+  </ul>
+
+</div>
+
+<div id="body">
+
+
+
+
+
+<a name="skipnav" id="skipnav" accesskey="8"></a>
+
+
+
+
+<div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Report information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Report information</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Report information---0">
+
+
+
+      <table width="100%" class="ticket-summary">
+      <tr>
+	<td valign="top" width="50%" class="boxcontainer">
+	  <div class="ticket-info-basics">
+  <div class="titlebox ticket-info-basics" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54514">The Basics</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-basics----The Basics---0">
+
+
+
+	        <table>
+  <tr>
+    <td class="label id">Id:</td>
+    <td class="value id">54514</td>
+  </tr>
+  <tr>
+    <td class="label status">Status:</td>
+    <td class="value status">resolved</td>
+  </tr>
+  <tr>
+    <td class="label time left">Left:</td>
+    <td class="value time left">0 min
+</td>
+  </tr>
+  <tr>
+    <td class="label priority">Priority:</td>
+    <td class="value priority">0/0</td>
+  </tr>
+  <tr>
+    <td class="label queue">Queue:</td>
+    <td class="value queue">perl6
+</td>
+  </tr>
+
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+	  
+      <div class="ticket-info-people">
+  <div class="titlebox ticket-info-people" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/ModifyPeople.html?id=54514">People</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-people----People---0">
+
+
+
+            <table>
+  <tr>
+    <td class="label">Owner:</td>
+    <td class="value">
+
+Nobody
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Requestors:</td>
+    <td class="value">
+
+
+bacek
+&lt;bacek [at] bacek.com&gt;
+
+<br />
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">Cc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+  <tr>
+    <td class="labeltop">AdminCc:</td>
+    <td class="value">
+
+</td>
+  </tr>
+</table>
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	</td>
+	<td valign="top" width="50%" class="boxcontainer">
+    
+	  <div class="ticket-info-cfs">
+  <div class="titlebox ticket-info-cfs" id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left"><a href="/rt3/Ticket/Modify.html?id=54514">Bug Information</a></span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html--ticket-info-cfs----Bug Information---0">
+
+
+ 
+	        <table>
+  <tr id="CF-18-ShowRow">
+    <td class="label">Severity:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-19-ShowRow">
+    <td class="label">Tag:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-20-ShowRow">
+    <td class="label">Platform:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+  <tr id="CF-21-ShowRow">
+    <td class="label">Patch Status:</td>
+    <td class="value">
+<i>(no value)</i>
+    </td>
+  </tr>
+</table>
+
+
+	      <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+	  <div class="">
+  <div class="titlebox " id="">
+  <div class="titlebox-title inverse">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------Attachments---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">Attachments</span>
+    <span class="right"></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------Attachments---0">
+
+
+
+
+
+sort.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409756/186076/sort.diff">
+Wed May 21 03:34:43 2008 (1.5k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409584/186016/sort.diff">
+Tue May 20 23:20:42 2008 (1.7k) by bacek
+</a>
+</font></li>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409002/185724/sort.diff">
+Tue May 20 05:53:16 2008 (2.6k) by bacek
+</a>
+</font></li>
+</ul>
+
+
+sort2.diff<br />
+<ul>
+
+
+<li><font size="-2">
+<a href="/rt3/Ticket/Attachment/409824/186130/sort2.diff">
+Wed May 21 05:04:01 2008 (1.3k) by bacek
+</a>
+</font></li>
+</ul>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+	</td>
+      </tr>
+    </table>
+
+
+
+
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="titlebox " id="">
+  <div class="titlebox-title">
+    <span class="widget"><a href="#" onclick="return rollup('TitleBox--_Public_Bug_Display.html------History---0');" onfocus="this.blur(); return false;" title="Toggle visibility">X</a></span>
+    <span class="left">History</span>
+    <span class="right"><span style="color: black">Display mode:</span> <span class="selected">Brief headers</span> &mdash; <a href="/rt3/Ticket/Display.html?ShowHeaders=1;id=54514">Full headers</a></span>
+  </div>
+  <div class="titlebox-content " id="TitleBox--_Public_Bug_Display.html------History---0">
+
+
+
+
+<div id="ticket-history">
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409002" href="/rt3/Ticket/Display.html?id=54514#txn-409002">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;05:53:16&nbsp;2008</td>
+    <td class="description">
+      bacek -  Ticket created
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">Subject:</td>
+    <td class="message-header-value">[PATCH] Initial implementation of sort for rakudo&#39;s List.</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">Date:</td>
+    <td class="message-header-value">Tue, 20 May 2008 22:45:44 +1000</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">To:</td>
+    <td class="message-header-value">parrotbug <!-- x --> at parrotcode.org</td>
+  </tr>
+  <tr>
+    <td align="right" class="message-header-key">From:</td>
+    <td class="message-header-value">Vasily Chekalkin &lt;bacek <!-- x --> at bacek.com&gt;</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409002/185722/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 569b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Hello.<br />
+<br />
+There is initial implementation of sort for Lists. Only <br />
+src/classes/List.pir affected.<br />
+<br />
+Example output:<br />
+<br />
+bacek@icebolt:~/src/parrot/languages/perl6$ cat s2.t<br />
+my @l = &#40;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, 1, 2, 3, 4&#41;;<br />
+my @l1 = sort @l;<br />
+say ~@l1;<br />
+<br />
+bacek@icebolt:~/src/parrot/languages/perl6$ ../../parrot perl6.pbc s2.t<br />
+1 2 3 4 a b c d<br />
+<br />
+bacek@icebolt:~/src/parrot/languages/perl6$ cat s3.t<br />
+my @l = &#40;&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, 1, 2, 3, 4&#41;;<br />
+my @l1 = sort { $^b &lt;=&gt; $^a } , @l;<br />
+say ~@l1;<br />
+<br />
+bacek@icebolt:~/src/parrot/languages/perl6$ ../../parrot perl6.pbc s3.t<br />
+4 3 2 1 d c b a<br />
+<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409002/185724/sort.diff">Download sort.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 2.6k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27652&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -1018,6 +1036,148 @@<br />
+     .return list.&#39;uniq&#39;&#40;&#41;<br />
+ .end<br />
+ <br />
++=item $!merge<br />
++<br />
++Subsubroutine for merge-sort<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;$!merge&#39;<br />
++       .param pmc comparer<br />
++       .param pmc left<br />
++       .param pmc right<br />
++    .local pmc result, l, r<br />
++       .local int have_left, have_right<br />
++       .local pmc closure<br />
++       <br />
++       result = new &#39;List&#39;<br />
++       $I0 = elements left<br />
++       $I1 = elements right<br />
++<br />
++       have_left = 0<br />
++       have_right = 0<br />
++<br />
++  loop_start:<br />
++<br />
++  shift_left:<br />
++       if have_left goto shift_right<br />
++       unless left goto finish_right<br />
++       l = shift left<br />
++       have_left = 1<br />
++<br />
++  shift_right:<br />
++       if have_right goto loop_body<br />
++       unless right goto finish_left<br />
++<br />
++       r = shift right<br />
++       have_right = 1<br />
++<br />
++  loop_body:<br />
++       closure = newclosure comparer<br />
++    $I0 = closure&#40;l, r&#41;<br />
++       if $I0 &lt; 0 goto push_left<br />
++<br />
++  push_right:<br />
++    push result, r<br />
++       have_right = 0<br />
++       goto loop_start<br />
++<br />
++  push_left:<br />
++    push result, l<br />
++       have_left = 0<br />
++       goto loop_start<br />
++<br />
++<br />
++  finish_left:<br />
++    unless have_left goto finish_left_tail<br />
++    push result, l<br />
++  finish_left_tail:<br />
++    unless left goto finish_right<br />
++    l = shift left<br />
++       push result, l<br />
++       goto finish_left_tail<br />
++<br />
++  finish_right:<br />
++    unless have_right goto finish_right_tail<br />
++    push result, r<br />
++  finish_right_tail:<br />
++    unless right goto finish<br />
++    r = shift right<br />
++       push result, r<br />
++       goto finish_right_tail<br />
++<br />
++  finish:<br />
++    .return &#40;result&#41;<br />
++<br />
++.end<br />
++<br />
++=item $!merge_sort<br />
++<br />
++Implementation of merge-sort algorithm<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;$!merge_sort&#39;<br />
++       .param pmc comparer<br />
++       .param pmc list <br />
++    .local pmc left, right, result, elem<br />
++       .local int len, half<br />
++<br />
++       len = elements list<br />
++<br />
++    unless len &lt;= 1 goto lets_sort<br />
++        .return &#40;list&#41;<br />
++<br />
++  lets_sort:<br />
++       left = new &#39;List&#39;<br />
++       right = new &#39;List&#39;<br />
++    half = len / 2<br />
++<br />
++  create_left:<br />
++       if half &lt; 1 goto create_right<br />
++       elem = shift list<br />
++       push left, elem<br />
++       dec half<br />
++       goto create_left<br />
++<br />
++  create_right:<br />
++    len = elements list<br />
++       if len &lt; 1 goto do_it<br />
++    <br />
++    elem = shift list<br />
++       push right, elem<br />
++       goto create_right<br />
++<br />
++  do_it:<br />
++       left = &#39;$!merge_sort&#39;&#40;comparer, left&#41;<br />
++       right = &#39;$!merge_sort&#39;&#40;comparer, right&#41;<br />
++    result = &#39;$!merge&#39;&#40;left, right&#41;<br />
++       .return &#40;result&#41;<br />
++.end<br />
++<br />
++<br />
++.sub sort :multi&#40;_, &#39;List&#39;&#41;<br />
++       .param pmc sorter<br />
++       .param pmc list :slurpy<br />
++       .local pmc sorted<br />
++<br />
++    sorted = &#39;$!merge_sort&#39;&#40;sorter, list :flat&#41;<br />
++<br />
++       .return &#40;sorted&#41;<br />
++.end<br />
++<br />
++.sub sort :multi&#40;&#39;List&#39;&#41;<br />
++       .param pmc list :slurpy<br />
++       .local pmc sorted<br />
++<br />
++       get_global $P0, &#34;infix:cmp&#34;<br />
++    sorted = &#39;$!merge_sort&#39;&#40;$P0, list :flat&#41;<br />
++<br />
++    $P0 = &#39;list&#39;&#40;sorted&#41;<br />
++    .return &#40;$P0&#41;<br />
++.end<br />
++<br />
++<br />
+<div class="message-stanza-depth-1">
+ ## TODO: join map reduce sort zip<br />
+</div>
+ <br />
+ =back<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction other even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409008" href="/rt3/Ticket/Display.html?id=54514#txn-409008">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;05:53:18&nbsp;2008</td>
+    <td class="description">
+      RT_System -  Tag Patch added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409584" href="/rt3/Ticket/Display.html?id=54514#txn-409584">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;23:20:41&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409584/186010/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 216b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue May 20 05:53:16 2008, bacek wrote:<br />
+<div class="message-stanza-depth-1">
+&gt; Hello.<br />
+&gt; <br />
+&gt; There is initial implementation of sort for Lists. Only <br />
+&gt; src/classes/List.pir affected.<br />
+</div>
+<br />
+There is another implementation based on FixedPMCArray.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409584/186016/sort.diff">Download sort.diff</a>
+<span class="downloadcontenttype">
+[application/octet-stream 1.7k]
+</span> 
+</div>
+<div class="messagebody">
+Message body not shown because it is too large or is not plain text.</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409588" href="/rt3/Ticket/Display.html?id=54514#txn-409588">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Tue&nbsp;May&nbsp;20&nbsp;23:20:44&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;new&#39; to &#39;open&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409756" href="/rt3/Ticket/Display.html?id=54514#txn-409756">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;21&nbsp;03:34:43&nbsp;2008</td>
+    <td class="description">
+      bacek -  Correspondence added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+  <tr>
+    <td align="right" class="message-header-key">RT-Send-CC:</td>
+    <td class="message-header-value">perl6-internals <!-- x --> at perl.org</td>
+  </tr>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409756/186070/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 172b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+On Tue May 20 23:20:41 2008, bacek wrote:<br />
+<br />
+<div class="message-stanza-depth-1">
+&gt; There is another implementation based on FixedPMCArray.<br />
+</div>
+<br />
+Reworked version of patch after Jonathan review of old one.<br />
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409756/186076/sort.diff">Download sort.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.5k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27698&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -633,6 +633,58 @@<br />
+ <br />
+ =back<br />
+ <br />
++=item !sort&#40;&#41;<br />
++<br />
++Sort list by copying into FPA, sorting and creating new List.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;!sort&#39; :method<br />
++    .param pmc comparer<br />
++    .local pmc elem, arr, comparer<br />
++    .local int len, i<br />
++<br />
++    # Creating FPA<br />
++    arr = new &#39;FixedPMCArray&#39;<br />
++    len = elements self<br />
++    arr = len<br />
++<br />
++    # Copy all elements into it<br />
++    i = 0<br />
++  copy_to:<br />
++    if i == len goto done_to<br />
++    elem = self[i]<br />
++    arr[i] = elem<br />
++    inc i<br />
++    goto copy_to<br />
++<br />
++  done_to:<br />
++<br />
++    # Sort in-place<br />
++    arr.&#39;sort&#39;&#40;comparer&#41;<br />
++<br />
++    # and return new List.<br />
++    .return &#39;list&#39;&#40;arr&#41;<br />
++.end<br />
++<br />
++=head2 sort&#40;&#41; <br />
++<br />
++Sort list in-place<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;sort&#39; :method<br />
++    .local pmc comparer<br />
++    .local pmc res<br />
++    <br />
++    get_hll_global comparer, &#39;infix:leg&#39;<br />
++    res = self.&#39;!sort&#39;&#40;comparer&#41;<br />
++<br />
++    .return &#40;res&#41;<br />
++.end<br />
++<br />
++<br />
++<br />
+ =head1 Functions<br />
+ <br />
+ =over 4<br />
+@@ -668,6 +720,36 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;sort&gt;<br />
++<br />
++Sort arguments.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;sort&#39; :multi&#40;_&#41;<br />
++    .param pmc args :slurpy<br />
++    .local pmc l<br />
++    <br />
++    l = &#39;list&#39;&#40;args :flat&#41;<br />
++    .return l.&#39;sort&#39;&#40;&#41;<br />
++.end<br />
++<br />
++=item C&lt;sort&gt;<br />
++<br />
++Sort arguments using comparition sub.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;sort&#39; :multi&#40;_,_&#41;<br />
++    .param pmc comparer<br />
++    .param pmc args :slurpy<br />
++    .local pmc l<br />
++    <br />
++    l = &#39;list&#39;&#40;args :flat&#41;<br />
++    .return l.&#39;!sort&#39;&#40;comparer&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-409824" href="/rt3/Ticket/Display.html?id=54514#txn-409824">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Wed&nbsp;May&nbsp;21&nbsp;05:04:00&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409824/186124/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 31b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+And another one <br />
+<br />
+<div class="message-stanza-depth-1">
+:&#41;<br />
+</div>
+<br />
+-- <br />
+Bacek<br />
+</div>
+</div>
+</div>
+<table>
+</table>
+<div class="messagebody">
+<table>
+</table>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+
+</div>
+</div>
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/409824/186130/sort2.diff">Download sort2.diff</a>
+<span class="downloadcontenttype">
+[text/x-diff 1.3k]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Index: src/classes/List.pir<br />
+<div class="message-stanza-depth-1">
+===================================================================<br />
+</div>
+--- src/classes/List.pir        &#40;revision 27698&#41;<br />
++++ src/classes/List.pir        &#40;working copy&#41;<br />
+@@ -633,6 +633,48 @@<br />
+ <br />
+ =back<br />
+ <br />
++=item sort&#40;&#41;<br />
++<br />
++Sort list by copying into FPA, sorting and creating new List.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;sort&#39; :method<br />
++    .param pmc comparer :optional<br />
++    .param int have_comparer :opt_flag<br />
++    .local pmc elem, arr, comparer<br />
++    .local int len, i<br />
++<br />
++    # Creating FPA<br />
++    arr = new &#39;FixedPMCArray&#39;<br />
++    len = elements self<br />
++    arr = len<br />
++<br />
++    # Copy all elements into it<br />
++    i = 0<br />
++  copy_to:<br />
++    if i == len goto done_to<br />
++    elem = self[i]<br />
++    arr[i] = elem<br />
++    inc i<br />
++    goto copy_to<br />
++<br />
++  done_to:<br />
++    <br />
++    # Check comparer<br />
++    if have_comparer goto do_sort<br />
++    get_hll_global comparer, &#39;infix:cmp&#39;<br />
++<br />
++  do_sort:<br />
++<br />
++    # Sort in-place<br />
++    arr.&#39;sort&#39;&#40;comparer&#41;<br />
++<br />
++    # and return new List.<br />
++    .return &#39;list&#39;&#40;arr&#41;<br />
++.end<br />
++<br />
++<br />
+ =head1 Functions<br />
+ <br />
+ =over 4<br />
+@@ -668,6 +710,22 @@<br />
+ .end<br />
+ <br />
+ <br />
++=item C&lt;sort&gt;<br />
++<br />
++Sort arguments using &#40;optional&#41; comparition sub.<br />
++<br />
++=cut<br />
++<br />
++.sub &#39;sort&#39;<br />
++    .param pmc comparer :optional<br />
++    .param pmc args :slurpy<br />
++    .local pmc l<br />
++    <br />
++    l = &#39;list&#39;&#40;args :flat&#41;<br />
++    .return l.&#39;sort&#39;&#40;comparer&#41;<br />
++.end<br />
++<br />
++<br />
+ =item C&lt;infix:,&#40;...&#41;&gt;<br />
+ <br />
+ Operator form for building a list from its arguments.<br />
+</div>
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-410608" href="/rt3/Ticket/Display.html?id=54514#txn-410608">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Thu&nbsp;May&nbsp;22&nbsp;06:41:23&nbsp;2008</td>
+    <td class="description">
+      coke -  Queue changed from parrot to perl6
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction message even">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412080" href="/rt3/Ticket/Display.html?id=54514#txn-412080">#</a>
+      &nbsp;
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;01:45:20&nbsp;2008</td>
+    <td class="description">
+      bacek -  Comments added
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+<table>
+</table>
+ 
+<div class="downloadattachment">
+ 
+<a href="/rt3/Ticket/Attachment/412080/187170/">Download &#40;untitled&#41;</a>
+<span class="downloadcontenttype">
+[text/plain 30b]
+</span> 
+</div>
+<div class="messagebody">
+<div class="message-stanza-depth-0">
+Commited by jonathan in r27707<br />
+</div>
+</div>
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+<div class="ticket-transaction basics odd">
+
+<table width="100%" cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td rowspan="2" valign="top" class="type">
+      <a name="txn-412082" href="/rt3/Ticket/Display.html?id=54514#txn-412082">#</a>
+      <a name="lasttrans">&nbsp;</a>
+    </td>
+    <td class="date">Sat&nbsp;May&nbsp;24&nbsp;01:45:20&nbsp;2008</td>
+    <td class="description">
+      bacek -  Status changed from &#39;open&#39; to &#39;resolved&#39;
+    </td>
+    <td class="time-taken"></td>
+    <td class="actions">&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td colspan="4" class="content">
+    </td>
+  </tr>
+
+</table>
+</div>
+
+
+</div>
+    <hr class="clear" />
+  </div>
+</div>
+
+
+
+
+ 
+
+
+</div>
+<hr size=0>
+<div>
+For issues related to this RT instance (aka "perlbug"), please contact <tt>perlbug-admin at perl.org</tt>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-50555-18");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="footer">
+  <p id="time">
+    <span>Time to display: 2.13352</span>
+  </p>
+
+  <p id="bpscredits">
+    <span>
+&#187;&#124;&#171; RT 3.6.HEAD Copyright 1996-2006 <a href="http://www.bestpractical.com?rt=3.6.HEAD">Best Practical Solutions, LLC</a>.
+</span>
+</p>
+
+</div>
+
+  </body>
+</html>

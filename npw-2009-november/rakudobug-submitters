@@ -1,0 +1,8 @@
+grep 'http://rt.perl.org/rt3/Ticket/Display.html' rt-bugs-2009-04-13.html |
+    perl6n -e '$_ ~~ /\<td.*?\<td.*?\d+\"\> (<-[<]>+) .*? \<small\> (<-[<,]>+)/\
+        or next; say $1' |
+    perl6n -e '
+        BEGIN { $*h = {} };
+        ++$*h{$_};
+        END { say .value, "\t", .key for $*h.pairs }' |
+    sort -nr
