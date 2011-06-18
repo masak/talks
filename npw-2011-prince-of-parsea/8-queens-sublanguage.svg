@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2816">
+  <defs
+     id="defs2818" />
+  <g
+     id="layer1">
+    <rect
+       width="821.66663"
+       height="630"
+       x="-10.833313"
+       y="-15"
+       id="rect2826"
+       style="fill:#dddddd;fill-opacity:1;stroke:none" />
+    <text
+       x="41.666668"
+       y="168.78125"
+       id="text3600"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+         x="41.666668"
+         y="168.78125"
+         id="tspan3602">my 1..8 $pos1;</tspan><tspan
+         x="41.666668"
+         y="208.78125"
+         id="tspan3604">my 1..8 $pos2;</tspan><tspan
+         x="41.666668"
+         y="248.78125"
+         id="tspan3606">my 1..8 $pos3;</tspan><tspan
+         x="41.666668"
+         y="288.78125"
+         id="tspan3608">my 1..8 $pos4;</tspan><tspan
+         x="41.666668"
+         y="328.78125"
+         id="tspan3610">my 1..8 $pos5;</tspan><tspan
+         x="41.666668"
+         y="368.78125"
+         id="tspan3612">my 1..8 $pos6;</tspan><tspan
+         x="41.666668"
+         y="408.78125"
+         id="tspan3614">my 1..8 $pos7;</tspan><tspan
+         x="41.666668"
+         y="448.78125"
+         id="tspan3616">my 1..8 $pos8;</tspan></text>
+  </g>
+</svg>

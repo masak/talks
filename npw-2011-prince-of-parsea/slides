@@ -1,0 +1,151 @@
+---
+- Prince of Parsea
+- OH HAI
+- "I'm masak"
+- 'Part I: Saving the princess'
+- "'Prince of Persia' by Brøderbund (1989)"
+- classic platform game
+- complete the levels, get the girl
+- "(princess not in another castle)"
+- evil vizier
+- PoP traps
+- spikes
+- falling blocks
+- those jaw thingies
+- increasingly savvy guards
+- time
+- P6Regex traps
+- literals
+- quantifiers
+- subrules
+- lookarounds
+- charclasses
+- anchors
+- alternations
+- conjunctions
+- concat
+- main analogy
+- 'user input -> levels -> WIN/LOSE'
+- 'user input -> regex  -> MATCH/FAIL'
+- slide:
+    file: example-regex
+- slide:
+    file: example-regex2
+    gradual: yes
+- slide:
+    file: example-regex
+- slide:
+    file: example-regex3
+    gradual: yes
+- a regex is a level in a game
+- a grammar is a game
+- .kv
+- 'Part II: Sublanguages'
+- slide:
+    file: perlis-quote
+- Alan Perlis, 1982
+- generalist langs/specialist langs
+- large langs/small langs
+- '"little languages"'
+- '"DSLs"'
+- many
+- SQL
+- XPath
+- Graphviz
+- "Haskell's 'do' notation"
+- I need only say what I wish done
+- Embrace your inner lollipop
+- Perl helps you do that
+- Perl is full of DSLs already
+- (Perl 6 formalizes them)
+- slide:
+    file: languages-graph
+    gradual: yes
+- slide:
+    file: sublanguages-graph
+- 8-queens
+- vizier
+- slide:
+    file: 8-queens
+    gradual: yes
+- slide:
+    file: 8-queens-code
+    gradual: yes
+- longing for a "meta-for"
+- but it gets worse!
+- slide:
+    file: 8-queens-code2
+- slide:
+    file: 8-queens-code3
+- recursion
+- slide:
+    file: 8-queens-perl5
+- slide:
+    file: 8-queens-perl5-golfed
+- my sublanguage
+- slide:
+    file: 8-queens-sublanguage
+- slide:
+    file: 8-queens-sublanguage2
+- slide:
+    file: 8-queens-sublanguage3
+- slide:
+    file: 8-queens-sublanguage4
+- slide:
+    file: 8-queens-sublanguage5
+- slide:
+    file: 8-queens-sublanguage6
+- I have a module
+- "(it's very slow)"
+- "(but it works!)"
+- slide:
+    file: send-more-money
+- slide:
+    file: send-more-money2
+- "Perl 6's KILLER FEATURE"
+- declarative
+- optimization
+- exotic control flow
+- making exotic control flow feel natural
+- sublanguages
+- slangs
+- lollipops
+- Perl 6 regexes just a *part* of this
+- slide:
+    file: prolog-programmers
+- '"No."'
+- 'Part III: Saving yourself'
+- "'Prince of Persia: The Sands of Time'"
+- "by Ubisoft (2003)"
+- core problem
+- restarting something finished
+- call sub
+- sub returns result
+- '"sub, could you give me more result?"'
+- 'sub goes "huh?"'
+- solutions
+- coroutines
+- "Ruby's 'yield'"
+- "Perl 6's 'gather'"
+- continuations
+- 'call/cc'
+- 'setjmp/longjmp'
+- streams
+- "STD.pm6 does this"
+- cheating
+- other core problem
+- "it's all wrong!"
+- "regexes aren't regular expressions"
+- "regexes are fundamentally corrupt"
+- Thompson engine
+- controversial
+- protothreads
+- except
+- slide:
+    file: example-regex-red
+- STD.pm6 combines decl/proc
+- declarative prefix
+- worlds meet
+- ☺ happy ☺
+- live demo?
+- thank you

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg4369">
+  <defs
+     id="defs4371">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         id="path3638"
+         style="font-size:12px;fill:#dd5511;fill-rule:evenodd;stroke:#dd5511;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <rect
+     width="833.33331"
+     height="631.66669"
+     x="-16.666656"
+     y="-15.833344"
+     id="rect4379"
+     style="fill:#dddddd;fill-opacity:1;stroke:none" />
+  <text
+     x="54.754772"
+     y="293.12558"
+     id="text8787"
+     xml:space="preserve"
+     style="font-size:19.15482903px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+       x="54.754772"
+       y="293.12558"
+       id="tspan8789">sub g{my$l=pop;for$c(1..8){my$d;grep++$d==abs$c-$_|$c==$_,@_</tspan><tspan
+       x="54.754772"
+       y="317.06912"
+       id="tspan8791">or$l&lt;7&amp;!g($c,@_,$l+1)||print &quot;@{[$c,@_]}\\n&quot;}}g</tspan></text>
+</svg>
