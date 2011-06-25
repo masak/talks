@@ -1,0 +1,4 @@
+while (<>) {
+    # auto-chomp
+    say;
+}

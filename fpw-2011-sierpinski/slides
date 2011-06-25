@@ -1,0 +1,23 @@
+---
+- '"The limits of my language mean the limits of my world."'
+- Ludwig Wittgenstein
+- slide:
+    file: nodes
+- slide:
+    file: triangle
+- divide and conquer
+- slide:
+    file: nodes
+- slide:
+    file: nodes-and-triangles
+- new abstraction
+- slide:
+    file: triangle-and-chipped
+- slide:
+    file: nodes-and-chipped
+- slide:
+    file: code-triangle
+- slide:
+    file: code-chipped
+- live demo
+- merci bcp

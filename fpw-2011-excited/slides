@@ -1,0 +1,110 @@
+---
+- Perl 6 in 2011
+- salut o/
+- masak
+- Perl 6 historian
+- Perl 6 in 2011
+- and why
+- you should
+- be
+- excited
+- about it
+- slide:
+    file: long-title
+    gradual: yes
+- In development for a long time
+- 'First fear:'
+- '"Will Perl 6 ever be released?"'
+- now
+- what I did not know
+- In 2003
+- There was a Perl 6 implementation
+- Quite a bit of features
+- slide:
+    file: old-perl6-features
+- they were hacking along
+- but, alas
+- they ran into a problem
+- complexity
+- '"The limits of my language mean the limits of my world."'
+- Ludwig Wittgenstein
+- '\o/ enter pmichaud! \o/'
+- slide:
+    file: pmichaud-embarrassment
+- Perl 6 manager
+- with a vision
+- slide:
+    file: parser-loop
+- time is cyclic
+- start over
+- waterfall
+- analysis ⇒ design ⇒ implementation ⇒ testing
+- whirlpool
+- testdesignplementanalysignplementest...
+- more specifically
+- we learn by implementing
+- we learn by coding
+- 'example: cat'
+- 'Second fear:'
+- '"Will they ever stop changing the spec?"'
+- How stable is Perl 6?
+- slide:
+    file: stability-quote
+- also
+- modules
+- applications
+- slide:
+    file: you-are-here
+- The future is here...
+- "...it's just not very evenly distributed."
+- William Gibson
+- Rakudo
+- slide:
+    file: rakudo-features
+- by all accounts
+- 'Perl 6 is "here"'
+- "it's just... une tortue"
+- slide:
+    file: timeline-rakudo
+- "Rakudo *"
+- slide:
+    file: timeline-rakudo-alpha
+- so
+- unlike in 2003
+- we can build features
+- but what about speed?
+- 'Third fear:'
+- Will Perl 6 ever be performant?
+- Niecza
+- one year old
+- sorear++
+- slide:
+    file: timeline-all
+- nom
+- slide:
+    file: timeline-rakudo-nom
+- MOP
+- slide:
+    file: oo-loop
+- 6model
+- slide:
+    file: parser-oo-loop
+- summary
+- rakudo is shaping up
+- niecza is shaping up
+- slide:
+    file: rakudo-niecza-1
+- slide:
+    file: rakudo-niecza-2
+- "if you haven't tried Perl 6"
+- this is a good time
+- for you to
+- join in
+- downlod rakudo or niecza
+- or both
+- try it out
+- and tell us what you think
+- because
+- things are about to
+- get very interesting
+- merci bcp
