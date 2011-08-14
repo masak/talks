@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="split-services-2.svg">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.77472527"
+     inkscape:cx="98.750103"
+     inkscape:cy="213.0364"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(15.608263,146.9636)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4797"
+       width="829.97162"
+       height="623.44684"
+       x="-14.198582"
+       y="-11.829791"
+       transform="translate(-15.608263,-146.9636)"
+       rx="5.9471784"
+       ry="5.9471784" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="37.305801"
+       y="-3.7897718"
+       id="text2993"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2995"
+         x="37.305801"
+         y="-3.7897718"
+         style="font-weight:bold;-inkscape-font-specification:Monospace Bold;fill:#ffffff;fill-opacity:1">CustomerWriteService</tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="26.210236"
+         id="tspan2997"
+         style="fill:#ffffff;fill-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="56.210236"
+         id="tspan2999"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5307">void</tspan> MakeCustomerPreferred(CustomerId) </tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="86.210236"
+         id="tspan3001"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5323">void</tspan> ChangeCustomerLocale(CustomerId, NewLocale) </tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="116.21024"
+         id="tspan3105"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5339">void</tspan> CreateCustomer(Customer) </tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="146.21024"
+         id="tspan3109"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5355">void</tspan> EditCustomerDetails(CustomerDetails)</tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="176.21024"
+         id="tspan3113"
+         style="fill:#ffffff;fill-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="206.21024"
+         id="tspan3135"
+         style="font-weight:bold;-inkscape-font-specification:Monospace Bold;fill:#ffffff;fill-opacity:1">CustomerReadService</tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="236.21024"
+         id="tspan3117"
+         style="fill:#ffffff;fill-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="266.21024"
+         id="tspan3121"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5371">Customer</tspan> GetCustomer(CustomerId) </tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="296.21024"
+         id="tspan3003"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5387">CustomerSet</tspan> GetCustomersWithName(Name) </tspan><tspan
+         sodipodi:role="line"
+         x="37.305801"
+         y="326.21024"
+         id="tspan3013"
+         style="fill:#ffffff;fill-opacity:1"><tspan
+   style="fill:#8888ff;fill-opacity:1"
+   id="tspan5403">CustomerSet</tspan> GetPreferredCustomers()</tspan></text>
+  </g>
+</svg>

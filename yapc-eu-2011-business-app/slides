@@ -1,0 +1,46 @@
+---
+- airport
+- slide:
+    file: one-model.svg
+- traditionally
+- DDD
+- aggregate
+- bounded context
+- slide:
+    file: stereotypical-architecture.svg
+- slide:
+    file: split-services-1.svg
+- slide:
+    file: split-services-2.svg
+- slide:
+    file: step-1.svg
+- the end
+- slide:
+    file: step-2.svg
+- slide:
+    file: step-3.svg
+- slide:
+    file: cart-events.svg
+- slide:
+    file: step-5.svg
+- slide:
+    file: command-handler.svg
+- "current state isn't always enough"
+- need prediction FAIL
+- slide:
+    file: events-table.svg
+- slide:
+    file: aggregates-table.svg
+- slide:
+    file: sagas.svg
+- testing
+- team independence
+- agile
+- outsourcing
+- summary
+- more than one model
+- aggregates
+- CQRS
+- read side/write side
+- event sourcing
+- thank you

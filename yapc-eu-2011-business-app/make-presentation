@@ -1,0 +1,144 @@
+#!/usr/bin/perl -w
+use YAML qw(LoadFile);
+use List::Util qw(max);
+
+my $gs_dir = 'generated-slides';
+system(qw<rm -rf>, $gs_dir);
+system('mkdir',    $gs_dir);
+
+my @slides = @{LoadFile('slides')};
+my $slide_number = 0;
+my $background = "#000";
+SLIDE:
+for my $text (@slides) {
+    my $current_slide = sprintf("$gs_dir/slide%03d.svg", ++$slide_number);
+    $text ||= '';
+    if (ref $text) {
+        if (my $slide = $text->{'slide'}) {
+            if (my $code = $slide->{'code'}) {
+                open(my $SLIDE, '>:encoding(UTF-8)', $current_slide);
+                print {$SLIDE} <<"SVG";
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="800px"
+   height="600px">
+  <rect
+     style="fill:$background;fill-opacity:1;stroke:none"
+     width="820"
+     height="620"
+     x="-10"
+     y="-10" />
+SVG
+                my @lines = split "\n", $code;
+                my $w = max(map { length $_ } @lines) * 19.3;
+                my $w1 = $w + 19.3 * 5;
+                my $x = 400 - $w / 2;
+                my $x1 = 400 - $w1 / 2;
+                my $h = @lines * 40;
+                my $h1 = (@lines + 1) * 40;
+                my $y1 = 300 - $h1 / 2 - 30;
+                print {$SLIDE} <<"SVG";
+  <rect
+     style="fill:#aaaaaa;fill-opacity:1;stroke:none"
+     x="$x1" y="$y1" width="$w1" height="$h1" rx="20" ry="20" />
+SVG
+                my $i = 0;
+                for my $line (@lines) {
+                    my $y = 300 - $h / 2 + $i++ * 40;
+                    print {$SLIDE} <<"SVG";
+  <text
+     x="$x"
+     y="$y"
+     xml:space="preserve"
+     style="font-size:32px;text-align:center;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Monospace">$line</text>
+SVG
+                }
+                print {$SLIDE} <<"SVG";
+</svg>
+SVG
+                next SLIDE;
+            }
+            my $file = $slide->{'file'} or die 'No code or file specified';
+            if ($file !~ m/\.svg$/) {
+                $file .= '.svg';
+            }
+            die "No such file $file"
+                unless -f $file;
+            if ($slide->{'gradual'}) {
+                use XML::Easy::Text qw( xml10_read_document
+                                        xml10_write_document );
+                use XML::Easy::NodeBasics qw(xml_element);
+                use File::Slurp;
+
+                $element = xml10_read_document(read_file($file));
+                my $objects = $element->content();
+                my @all_objects = @{$objects};
+                my @o;
+                for my $n (0 .. @all_objects-1) {
+                    next if $n % 2 == 0;
+                    push @o, $all_objects[$n];
+                    next if $all_objects[$n]->type_name() eq 'defs';
+                    my $element = xml_element('svg',
+                        { width => "800px", height => "600px",
+                          'xmlns'       => 'http://www.w3.org/2000/svg',
+                          'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
+                          'xmlns:sodipodi'
+                                        => 'http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' },
+                        @o);
+                    open my $SLIDE, '>:encoding(UTF-8)',
+                         sprintf("$gs_dir/slide%03d.svg", $slide_number++)
+                        or die $!;
+                    print {$SLIDE} xml10_write_document($element, "UTF-8");
+                }
+                --$slide_number;
+            }
+            else {
+                system('cp', $file, $current_slide);
+            }
+            next SLIDE;
+        }
+        die 'Unknown thing ', join " ", keys %$text;
+    }
+
+    $text =~ s/</&lt;/g;
+    $text =~ s/>/&gt;/g;
+    my $size = length($text) < 24 ? '48px' : '24px';
+    open(my $SLIDE, '>:encoding(UTF-8)', $current_slide);
+    print {$SLIDE} <<"SVG";
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="800px"
+   height="600px">
+  <rect
+     style="fill:$background;fill-opacity:1;stroke:none"
+     width="820"
+     height="620"
+     x="-10"
+     y="-10" />
+  <text
+     x="400"
+     y="300"
+     xml:space="preserve"
+     style="font-size:$size;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans">$text</text>
+</svg>
+SVG
+}
+
+my $inkscape_executable
+    = '/usr/bin/inkscape';
+
+system
+    "$inkscape_executable "
+    . "--without-gui --file=$gs_dir/slide$_.svg "
+    . "--export-pdf=$gs_dir/slide$_.pdf 2> /dev/null"
+        for map { sprintf '%03d', $_ } 1..$slide_number;
+
+system 'pdfjoin -q -o talk.pdf generated-slides/*.pdf';
