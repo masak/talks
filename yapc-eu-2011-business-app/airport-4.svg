@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9810"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="airport-4.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     id="namedview10391"
+     showgrid="false"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <defs
+     id="defs9812" />
+  <metadata
+     id="metadata9815">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.18900001000000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect9818"
+       width="848.33331"
+       height="646.66669"
+       x="-20"
+       y="-20" />
+    <rect
+       style="fill:#666666;fill-opacity:1;stroke:none"
+       id="rect10358"
+       width="595"
+       height="277.12781"
+       x="275.70428"
+       y="207.84586"
+       transform="matrix(1,0,-0.49999826,0.86602641,0,0)" />
+    <rect
+       style="fill:#b1b1b1;fill-opacity:1;stroke:none"
+       id="rect10360"
+       width="14.701378"
+       height="144.2932"
+       x="560.86047"
+       y="358.61102"
+       transform="matrix(1,0,-0.49999826,0.86602641,0,0)" />
+    <rect
+       transform="matrix(1,0,-0.49999826,0.86602641,0,0)"
+       y="192.03726"
+       x="561.18799"
+       height="144.2932"
+       width="14.701378"
+       id="rect10362"
+       style="fill:#b1b1b1;fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Norasi;-inkscape-font-specification:Norasi"
+       x="116.69219"
+       y="347.32007"
+       id="text10412"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10414"
+         x="116.69219"
+         y="347.32007"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">Check in</tspan></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 10.616059,397.6452 134.150071,0 24.14945,-41.69545"
+       id="path10416"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text10420"
+       y="235.22206"
+       x="342.05319"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Norasi;-inkscape-font-specification:Norasi"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+         y="235.22206"
+         x="342.05319"
+         id="tspan10422"
+         sodipodi:role="line">Drop</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+         y="265.22208"
+         x="342.05319"
+         sodipodi:role="line"
+         id="tspan10424">Luggage</tspan></text>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 187.44257,319.75498 69.14489,-118.52987 103.59631,0 -9.57109,16.30829"
+       id="path10426"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 331.96719,275.38349 -13.13105,23.23826 65.23737,0"
+       id="path10428"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Norasi;-inkscape-font-specification:Norasi"
+       x="487.27536"
+       y="308.72897"
+       id="text10430"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan10434"
+         sodipodi:role="line"
+         x="487.27536"
+         y="308.72897"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans">Passport</tspan><tspan
+         sodipodi:role="line"
+         x="487.27536"
+         y="338.72897"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+         id="tspan10438">control</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="338.66992"
+       y="96.477798"
+       id="text10452"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan10454"
+         x="338.66992"
+         y="96.477798">Airport</tspan></text>
+  </g>
+</svg>

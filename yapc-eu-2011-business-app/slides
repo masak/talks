@@ -1,11 +1,39 @@
 ---
-- airport
+- slide:
+    file: title.svg
+- airports
+- "(hi, I'm masak)"
+- slide:
+    file: airport-1.svg
+- slide:
+    file: airport-2.svg
+- slide:
+    file: airport-3.svg
+- slide:
+    file: airport-4.svg
+- slide:
+    file: airport-5.svg
+- "post-hypnotic suggestion"
 - slide:
     file: one-model.svg
 - traditionally
+- data
+- nouns
+- slide:
+    file: nouns.svg
+- normalized
 - DDD
+- domain model
+- slide:
+    file: verbs.svg
+- focus on the verbs
 - aggregate
+- slide:
+    file: aggregate.svg
 - bounded context
+- slide:
+    file: bounded-context.svg
+- so, traditionally
 - slide:
     file: stereotypical-architecture.svg
 - slide:
@@ -15,25 +43,58 @@
 - slide:
     file: step-1.svg
 - the end
+- the end?
 - slide:
     file: step-2.svg
+- hm...
+- read-side/write-side
+- be normal
+- why?
+- slide:
+    file: denormalization.svg
+- reads are common
+- optimize for reads
 - slide:
     file: step-3.svg
 - slide:
-    file: cart-events.svg
+    file: passenger-events.svg
+- "sum = foldl (+) 0"
+- "state = foldl apply empty"
+- customize your read-side
 - slide:
     file: step-5.svg
-- slide:
-    file: command-handler.svg
 - "current state isn't always enough"
 - need prediction FAIL
+- slide:
+    file: command-handler.svg
 - slide:
     file: events-table.svg
 - slide:
     file: aggregates-table.svg
 - slide:
-    file: sagas.svg
+    file: cross-concerns.svg
+- problem
+- consistency
+- saga
+- slide:
+    file: check-in-saga.svg
 - testing
+- slide:
+    file: given-when-then-1.svg
+- slide:
+    file: given-when-then-2.svg
+- slide:
+    file: given-when-then-3.svg
+- slide:
+    file: given-when-then-4.svg
+- slide:
+    file: given-when-then-5.svg
+- slide:
+    file: given-when-then-6.svg
+- slide:
+    file: given-when-then-7.svg
+- slide:
+    file: given-when-then-8.svg
 - team independence
 - agile
 - outsourcing
