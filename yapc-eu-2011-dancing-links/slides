@@ -1,5 +1,9 @@
 ---
-- "[sudoku]"
+- Dancing Links
+- slide:
+    file: sudoku-unsolved.svg
+- slide:
+    file: sudoku-solved.svg
 - slide:
     file: exact-cover-1.svg
 - slide:
@@ -33,20 +37,25 @@
     file: 2-to-the-rows.svg
 - "NP-complete"
 - slide:
-    file: linked-list-1.svg
+    file: linked-matrix-1.svg
 - slide:
-    file: linked-list-2.svg
+    file: linked-matrix-2.svg
 - slide:
-    file: linked-list-3.svg
-- "[doubly linked matrix]"
-- "[dancing links]"
+    file: linked-matrix-3.svg
+- slide:
+    file: linked-matrix-4.svg
+- slide:
+    file: linked-matrix-5.svg
 - "no memory allocations!"
-- "matrix -> [Solver] -> solutions"
-- "problem -> [Reader] -> matrix -> [Solver] -> solutions -> [Writer] -> solutions"
+- slide:
+    file: solver.svg
+- slide:
+    file: reader-solver-writer.svg
+- the cake is a lie
 - "exact cover is like tiling"
 - "column <-> location"
 - "row <-> tile"
-- "[pentominoes]"
-- "[8-queens?]"
-- "[C implementation]"
+- pentominoes
+- "8-queens"
+- C implementation
 - thank you
