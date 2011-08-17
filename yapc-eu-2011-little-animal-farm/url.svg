@@ -11,12 +11,12 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="800px"
    height="600px"
-   id="svg4177"
+   id="svg4325"
    version="1.1"
    inkscape:version="0.48.1 r9760"
-   sodipodi:docname="winning-condition.svg">
+   sodipodi:docname="New document 20">
   <defs
-     id="defs4179" />
+     id="defs4327" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,8 +24,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0883333"
-     inkscape:cx="400"
+     inkscape:zoom="0.6"
+     inkscape:cx="190.83333"
      inkscape:cy="300"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
@@ -36,14 +36,14 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata4182">
+     id="metadata4330">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,38 +53,14 @@
      inkscape:groupmode="layer">
     <text
        xml:space="preserve"
-       style="font-size:38.94512177px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
-       x="38.749756"
-       y="165.57468"
-       id="text4192"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"
+       x="95.977539"
+       y="309.80859"
+       id="text4333"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4194"
-         x="38.749756"
-         y="165.57468">method someone_won {</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="214.25607"
-         id="tspan4196">    %!p{$!cp}{all &lt;rabbit</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="262.93747"
-         id="tspan4236">                   sheep</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="311.6189"
-         id="tspan4238">                   pig</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="360.30029"
-         id="tspan4240">                   cow</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="408.98169"
-         id="tspan4242">                   horse&gt;}.Bool</tspan><tspan
-         sodipodi:role="line"
-         x="38.749756"
-         y="457.66309"
-         id="tspan4198">}</tspan></text>
+         id="tspan4335"
+         x="95.977539"
+         y="309.80859">http://github.com/masak/farm</tspan></text>
   </g>
 </svg>

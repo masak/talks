@@ -1,15 +1,25 @@
 ---
 - slide:
     file: title.svg
-- Warsaw uprising
+- Not about George Orwell
+- board game
+- story
+- WWII
 - German occupation
-- difficult times
-- need distraction
+- sad times
+- need sth uplifting
+- a mathematician
 - family game
-- mathematician
-- surprisingly well-made
 - surprisingly deep
+- "all @games.DESTROY;"
+- one set remained (!)
+- new ones produced
+- slide:
+    file: game.svg
+- ""
 - the game rules!
+- slide:
+    file: winning-condition.svg
 - breeding
 - slide:
     file: breed-animals.svg
@@ -19,6 +29,9 @@
 - trading
 - slide:
     file: trading.svg
+- strategy is in trading
+- ""
+- we had fun playing this
 - we had fun writing this
 - two implementations
 - one on Niecza
@@ -27,14 +40,23 @@
 - by masak/tadzik
 - slide:
     file: source-code.svg
-- slide:
-    file: winning-condition.svg
+- "~200 lines of code"
+- pluggable
+- ""
 - Now
 - we challenge *you*
 - everyone in this room
 - to write an AI
+- "it's simple:"
+- slide:
+    file: ai-protocol.svg
+- slide:
+    file: command-line.svg
 - then
 - next YAPC
 - we will
 - announce the winner
-- thank you
+- may the best farmer win
+- "-Ofun"
+- slide:
+    file: url.svg
