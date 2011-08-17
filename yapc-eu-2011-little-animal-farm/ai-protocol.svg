@@ -24,8 +24,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.6"
-     inkscape:cx="190.83333"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="284.68606"
      inkscape:cy="300"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,45 +54,45 @@
     <text
        xml:space="preserve"
        style="font-size:37.40552139px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace Bold"
-       x="75.322632"
+       x="41.570004"
        y="125.12736"
        id="text4252"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="125.12736"
          id="tspan4260">class Farm::AI::Rabbinator {</tspan><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="171.88426"
          id="tspan4309" /><tspan
          sodipodi:role="line"
-         x="75.322632"
-         y="218.64117"
+         x="41.570004"
+         y="218.64116"
          id="tspan4311">  has Int $.player_number;</tspan><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="265.39807"
          id="tspan4313" /><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="312.15497"
-         id="tspan4315">  method trade(%)     { ... }</tspan><tspan
+         id="tspan4315">  method trade(%, @)     { ... }</tspan><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="358.91187"
          id="tspan4317" /><tspan
          sodipodi:role="line"
-         x="75.322632"
+         x="41.570004"
          y="405.66876"
-         id="tspan4319">  method accept(%, $) { ... }</tspan><tspan
+         id="tspan4319">  method accept(%, @, $) { ... }</tspan><tspan
          sodipodi:role="line"
-         x="75.322632"
-         y="452.42569"
+         x="41.570004"
+         y="452.42566"
          id="tspan4323" /><tspan
          sodipodi:role="line"
-         x="75.322632"
-         y="499.18259"
+         x="41.570004"
+         y="499.18256"
          id="tspan4321">}</tspan></text>
   </g>
 </svg>
