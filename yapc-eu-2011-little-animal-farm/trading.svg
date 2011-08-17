@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg3062"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="trading.svg">
+  <defs
+     id="defs3064" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="578.5271"
+     inkscape:cy="300"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3067">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       id="g4547"
+       transform="matrix(0.43518179,0,0,0.43518179,382.11439,245.85015)">
+      <image
+         width="101.31799"
+         height="90.995407"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/little-dog.jpg"
+         id="image3458"
+         x="291.87598"
+         y="435.51303" />
+      <rect
+         y="509.70135"
+         x="289.84753"
+         height="11.287333"
+         width="104.23363"
+         id="rect4429"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4433"
+         d="m 292.91324,507.88979 -0.5574,13.23823 6.96749,0 3.81622,-13.31975 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4435"
+         d="m 353.39105,508.58654 3.90179,12.40213 9.75448,0 -5.57399,-12.68083 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4553"
+       transform="matrix(0.3494645,0,0,0.3494645,309.36267,501.29321)">
+      <image
+         width="197.08455"
+         height="185.366"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/big-dog.jpg"
+         id="image3504"
+         x="535.36755"
+         y="20.793262" />
+      <rect
+         y="177.88785"
+         x="531.11755"
+         height="23.561068"
+         width="207.62727"
+         id="rect4427"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4501"
+         d="m 660.56152,176.75237 1.13548,14.47728 12.77407,5.67737 0.28387,5.10963 -27.53523,0.8516 -11.92246,-22.42559 1.98707,-5.67737 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4503"
+         d="m 541.33684,175.90077 c -5.6062,8.85973 -8.94216,10.2421 -4.82576,21.85785 3.25051,-4.68065 6.56532,-9.81131 9.08379,-9.36765 l -0.85161,13.05794 11.92247,0.85161 c -3.70891,-2.64922 2.14976,-23.59178 4.25803,-27.53523 l -2.27096,20.72239 c 4.47019,2.52895 11.51264,3.69087 14.47729,1.70321 l 2.55481,-6.81284 -7.38057,-0.85161 c -1.91536,-4.74259 0.96943,-13.61408 0.56774,-17.59983 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+    </g>
+    <image
+       y="26.051283"
+       x="245.88562"
+       id="image3148"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/rabbit.jpg"
+       height="74.885147"
+       width="74.885147" />
+    <image
+       y="133.04515"
+       x="246.80447"
+       id="image3210"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/sheep.png"
+       height="54.882084"
+       width="74.164986" />
+    <image
+       y="326.05588"
+       x="-321.68964"
+       id="image3334"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/cow.png"
+       height="49.424191"
+       width="74.885139"
+       transform="scale(-1,1)" />
+    <image
+       y="322.51376"
+       x="495.80908"
+       id="image3396"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/horse.png"
+       height="57.886677"
+       width="72.358345" />
+    <g
+       id="g4515"
+       transform="matrix(0.57421224,0,0,0.57421224,215.32641,-6.232067)">
+      <image
+         transform="scale(-1,1)"
+         width="174.11945"
+         height="174.11945"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/pig.jpg"
+         id="image3272"
+         x="-207.88669"
+         y="374.65543" />
+      <rect
+         y="493.0752"
+         x="24.798021"
+         height="48.796108"
+         width="185.58521"
+         id="rect4505"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="490.40875"
+         x="93.859184"
+         height="56.795471"
+         width="64.261543"
+         id="rect4507"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="399.216"
+         x="32.797382"
+         height="74.660713"
+         width="20.531696"
+         id="rect4509"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="401.88248"
+         x="106.12487"
+         height="14.932142"
+         width="102.92513"
+         id="rect4511"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="453.0784"
+         x="186.91843"
+         height="21.864923"
+         width="20.798342"
+         id="rect4513"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="363.54556"
+       y="82.559692"
+       id="text3167"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3169"
+         x="363.54556"
+         y="82.559692">✕ 6    ⟷</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3171"
+       y="164.33611"
+       x="363.54556"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="164.33611"
+         x="363.54556"
+         id="tspan3173"
+         sodipodi:role="line">✕ 2    ⟷</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="363.54556"
+       y="255.30089"
+       id="text3175"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3177"
+         x="363.54556"
+         y="255.30089">✕ 3    ⟷</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3179"
+       y="353.61636"
+       x="363.54556"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="353.61636"
+         x="363.54556"
+         id="tspan3181"
+         sodipodi:role="line">✕ 2    ⟷</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="437.13931"
+       y="462.95786"
+       id="text3183"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3185"
+         x="437.13931"
+         y="462.95786">⟷</tspan></text>
+    <image
+       transform="scale(-1,1)"
+       width="74.885139"
+       height="49.424191"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/cow.png"
+       id="image3187"
+       x="-566.10004"
+       y="229.57808" />
+    <g
+       transform="matrix(0.57421224,0,0,0.57421224,449.62963,-99.03452)"
+       id="g3189">
+      <image
+         y="374.65543"
+         x="-207.88669"
+         id="image3191"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/pig.jpg"
+         height="174.11945"
+         width="174.11945"
+         transform="scale(-1,1)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3193"
+         width="185.58521"
+         height="48.796108"
+         x="24.798021"
+         y="493.0752" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3195"
+         width="64.261543"
+         height="56.795471"
+         x="93.859184"
+         y="490.40875" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3197"
+         width="20.531696"
+         height="74.660713"
+         x="32.797382"
+         y="399.216" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3199"
+         width="102.92513"
+         height="14.932142"
+         x="106.12487"
+         y="401.88248" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="rect3201"
+         width="20.798342"
+         height="21.864923"
+         x="186.91843"
+         y="453.0784" />
+    </g>
+    <image
+       width="74.164986"
+       height="54.882084"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/sheep.png"
+       id="image3203"
+       x="485.7019"
+       y="41.161541" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3205"
+       y="559.43567"
+       x="438.05814"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="559.43567"
+         x="438.05814"
+         id="tspan3207"
+         sodipodi:role="line">⟷</tspan></text>
+    <image
+       width="74.164986"
+       height="54.882084"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/sheep.png"
+       id="image3209"
+       x="246.80447"
+       y="418.80322" />
+    <image
+       transform="scale(-1,1)"
+       width="74.885139"
+       height="49.424191"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/cow.png"
+       id="image3211"
+       x="-322.60846"
+       y="524.52454" />
+  </g>
+</svg>

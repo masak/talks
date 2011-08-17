@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg3062"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="fox-wolf-dogs.svg">
+  <defs
+     id="defs3064" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata3067">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       id="g4351"
+       transform="matrix(0.38034072,0,0,0.38034072,-75.375372,92.818632)">
+      <image
+         width="527.81616"
+         height="429.53702"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/fox.jpg"
+         id="image3566"
+         x="529.09125"
+         y="-46.602764" />
+      <rect
+         y="-43.185299"
+         x="743.6698"
+         height="427.25885"
+         width="313.5419"
+         id="rect3571"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="-53.355"
+         x="521.89893"
+         height="292.52737"
+         width="320.80505"
+         id="rect3573"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4422"
+       transform="matrix(0.39308966,0,0,0.39308966,-82.231935,168.5549)">
+      <image
+         width="234"
+         height="169"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/wolf.jpg"
+         id="image4415"
+         x="506.88977"
+         y="397.88898" />
+      <rect
+         y="546.70752"
+         x="515.4671"
+         height="23.88974"
+         width="230.62787"
+         id="rect4418"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <rect
+         y="397.85605"
+         x="721.28638"
+         height="155.28331"
+         width="20.214411"
+         id="rect4420"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4809"
+       transform="translate(0,-28.48392)">
+      <image
+         width="44.091747"
+         height="39.599545"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/little-dog.jpg"
+         id="image3458"
+         x="477.92456"
+         y="222.02306" />
+      <rect
+         y="254.30846"
+         x="477.04184"
+         height="5.7003856"
+         width="45.360565"
+         id="rect4429"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4433"
+         d="m 478.37597,253.5201 -0.12129,6.54939 3.15341,0 1.41818,-6.58486 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4435"
+         d="m 504.69481,253.88396 2.30441,6.30682 4.06305,-0.18193 -2.8502,-6.30682 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g4553"
+       transform="matrix(0.3494645,0,0,0.3494645,277.2349,321.01687)">
+      <image
+         width="197.08455"
+         height="185.366"
+         xlink:href="file:///home/masak/mine/talks/yapc-eu-2011-little-animal-farm/big-dog.jpg"
+         id="image3504"
+         x="535.36755"
+         y="20.793262" />
+      <rect
+         y="177.88785"
+         x="531.11755"
+         height="23.561068"
+         width="207.62727"
+         id="rect4427"
+         style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4501"
+         d="m 660.56152,176.75237 1.13548,14.47728 12.77407,5.67737 0.28387,5.10963 -27.53523,0.8516 -11.92246,-22.42559 1.98707,-5.67737 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4503"
+         d="m 541.33684,175.90077 c -5.6062,8.85973 -8.94216,10.2421 -4.82576,21.85785 3.25051,-4.68065 6.56532,-9.81131 9.08379,-9.36765 l -0.85161,13.05794 11.92247,0.85161 c -3.70891,-2.64922 2.14976,-23.59178 4.25803,-27.53523 l -2.27096,20.72239 c 4.47019,2.52895 11.51264,3.69087 14.47729,1.70321 l 2.55481,-6.81284 -7.38057,-0.85161 c -1.91536,-4.74259 0.96943,-13.61408 0.56774,-17.59983 z"
+         style="fill:#54341d;fill-opacity:1;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="229.42699"
+       y="204.1187"
+       id="text4719"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4721"
+         x="229.42699"
+         y="204.1187">Fox</tspan><tspan
+         sodipodi:role="line"
+         x="229.42699"
+         y="234.1187"
+         id="tspan4723"
+         style="fill:#4d4d4d">Lis</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4725"
+       y="348.37595"
+       x="229.42699"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="348.37595"
+         x="229.42699"
+         id="tspan4727"
+         sodipodi:role="line">Wolf</tspan><tspan
+         style="fill:#4d4d4d"
+         id="tspan4729"
+         y="378.37595"
+         x="229.42699"
+         sodipodi:role="line">Wilk</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4731"
+       y="204.1187"
+       x="565.72101"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         y="204.1187"
+         x="565.72101"
+         id="tspan4733"
+         sodipodi:role="line">Small dog</tspan><tspan
+         style="fill:#4d4d4d"
+         id="tspan4735"
+         y="234.1187"
+         x="565.72101"
+         sodipodi:role="line">Mały pies</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="565.72101"
+       y="348.37595"
+       id="text4737"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4739"
+         x="565.72101"
+         y="348.37595">Big dog</tspan><tspan
+         sodipodi:role="line"
+         x="565.72101"
+         y="378.37595"
+         id="tspan4741"
+         style="fill:#4d4d4d">Duży pies</tspan></text>
+  </g>
+</svg>

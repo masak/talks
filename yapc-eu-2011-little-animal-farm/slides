@@ -1,0 +1,40 @@
+---
+- slide:
+    file: title.svg
+- Warsaw uprising
+- German occupation
+- difficult times
+- need distraction
+- family game
+- mathematician
+- surprisingly well-made
+- surprisingly deep
+- the game rules!
+- breeding
+- slide:
+    file: breed-animals.svg
+- predators
+- slide:
+    file: fox-wolf-dogs.svg
+- trading
+- slide:
+    file: trading.svg
+- we had fun writing this
+- two implementations
+- one on Niecza
+- "by Stefan O'Rear"
+- one on Rakudo
+- by masak/tadzik
+- slide:
+    file: source-code.svg
+- slide:
+    file: winning-condition.svg
+- Now
+- we challenge *you*
+- everyone in this room
+- to write an AI
+- then
+- next YAPC
+- we will
+- announce the winner
+- thank you
