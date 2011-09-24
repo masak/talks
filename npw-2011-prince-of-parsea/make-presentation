@@ -138,7 +138,7 @@ SVG
 }
 
 my $inkscape_executable
-    = '/Applications/Inkscape.app/Contents/Resources/bin/inkscape';
+    = '/usr/bin/inkscape';
 
 system
     "$inkscape_executable "

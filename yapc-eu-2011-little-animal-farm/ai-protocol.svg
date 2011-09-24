@@ -69,7 +69,7 @@
          sodipodi:role="line"
          x="41.570004"
          y="218.64116"
-         id="tspan4311">  has Int $.player_number;</tspan><tspan
+         id="tspan4311">  has Str $!player;</tspan><tspan
          sodipodi:role="line"
          x="41.570004"
          y="265.39807"
