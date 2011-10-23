@@ -1,0 +1,21 @@
+#!/usr/bin/perl -w
+
+my $gs_dir = 'generated-slides';
+system(qw<rm -rf>, $gs_dir);
+system('mkdir',    $gs_dir);
+
+my $inkscape_executable
+    = '/usr/bin/inkscape';
+
+for my $svg_file (<src/*.svg>) {
+    my $pdf_file = $svg_file;
+    $pdf_file =~ s[^src/][$gs_dir/];
+    $pdf_file =~ s[\.svg$][.pdf];
+
+    system
+        "$inkscape_executable "
+        . "--without-gui --file=$svg_file "
+        . "--export-pdf=$pdf_file 2> /dev/null";
+}
+
+system 'pdfjoin -q -o talk.pdf generated-slides/*.pdf';
