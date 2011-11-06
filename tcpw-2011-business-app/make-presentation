@@ -127,7 +127,7 @@ SVG
      x="400"
      y="300"
      xml:space="preserve"
-     style="font-size:$size;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:'Liberation Sans, Sans'">$text</text>
+     style="font-size:$size;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans">$text</text>
 </svg>
 SVG
 }

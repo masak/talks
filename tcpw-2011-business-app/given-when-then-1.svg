@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="given-when-then-1.svg">
+  <defs
+     id="defs2987">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         id="path11316"
+         style="font-size:12.0;fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;fill:#ffffff"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-120.28637,309.38284)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.18900001000000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect7220"
+       width="821"
+       height="618"
+       x="-12"
+       y="-8"
+       rx="10"
+       ry="10"
+       transform="translate(120.28637,-309.38284)" />
+    <text
+       xml:space="preserve"
+       style="font-size:18.89086151px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="281.23169"
+       y="-209.14264"
+       id="text2993"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="281.23169"
+         y="-209.14264"
+         style="font-size:24px;text-align:center;text-anchor:middle"
+         id="tspan12839">Given</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11786"
+       y="-62.300961"
+       x="281.71216"
+       style="font-size:18.89086151px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan11790"
+         style="font-size:24px;text-align:center;text-anchor:middle"
+         y="-62.300961"
+         x="281.71216"
+         sodipodi:role="line">When</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.89086151px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="277.24731"
+       y="84.540695"
+       id="text12853"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="277.24731"
+         y="84.540695"
+         style="font-size:24px;text-align:center;text-anchor:middle"
+         id="tspan12857">Then</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text13445"
+       y="-138.04797"
+       x="289.55002"
+       style="font-size:18.89086151px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#8888ff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan13447"
+         style="font-size:24px;font-weight:normal;text-align:start;text-anchor:start;fill:#8888ff;fill-opacity:1;-inkscape-font-specification:Sans"
+         y="-138.04797"
+         x="289.55002"
+         sodipodi:role="line">an aggregate in a certain state</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.89086151px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#8888ff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="290.01291"
+       y="8.793704"
+       id="text13449"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="290.01291"
+         y="8.793704"
+         style="font-size:24px;font-weight:normal;text-align:start;text-anchor:start;fill:#8888ff;fill-opacity:1;-inkscape-font-specification:Sans"
+         id="tspan13451">an action performed on the aggregate</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text13453"
+       y="155.63535"
+       x="289.63791"
+       style="font-size:18.89086151px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#8888ff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan13455"
+         style="font-size:24px;font-weight:normal;text-align:start;text-anchor:start;fill:#8888ff;fill-opacity:1;-inkscape-font-specification:Sans"
+         y="155.63535"
+         x="289.63791"
+         sodipodi:role="line">a number of consequences</tspan></text>
+  </g>
+</svg>
