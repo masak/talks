@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg3004"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="p5-p6-code-4.svg">
+  <defs
+     id="defs3006" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="400"
+     inkscape:cy="300"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3009">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#ff6e66;fill-opacity:1;stroke:none"
+       id="rect3161"
+       width="442.87903"
+       height="58.805511"
+       x="105.66616"
+       y="193.87442" />
+    <rect
+       y="282.0827"
+       x="169.98468"
+       height="126.79939"
+       width="509.9541"
+       id="rect3931"
+       style="fill:#ff6e66;fill-opacity:1;stroke:none" />
+    <rect
+       y="253.59877"
+       x="105.66616"
+       height="28.483934"
+       width="635.83459"
+       id="rect3933"
+       style="fill:#66ff66;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:#66ff66;fill-opacity:1;stroke:none"
+       id="rect3935"
+       width="45.941769"
+       height="28.483948"
+       x="105.66616"
+       y="408.88208" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+       x="62.798828"
+       y="126.20508"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="62.798828"
+         y="126.20508">method choose_column {</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="156.20508"
+         id="tspan2991" /><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="186.20508"
+         id="tspan3102">    my $r = self<tspan
+   style="font-weight:bold;-inkscape-font-specification:Liberation Mono Bold"
+   id="tspan3040">.</tspan>linked-matrix;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="216.20508"
+         id="tspan2993">    my $column_with_minimal_ones;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="246.20508"
+         id="tspan2995">    my $minimal_ones = Inf;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="276.20508"
+         id="tspan2997"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">    loop (my $h = $r.R; $h !~~ $r; $h = $h.R) {</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="306.20508"
+         id="tspan2999"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">        if $minimal_ones &gt; $h.S {</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="336.20508"
+         id="tspan3001"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">            $minimal_ones = $h.S;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="366.20508"
+         id="tspan3003"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">            $column_with_minimal_ones = $h;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="396.20508"
+         id="tspan3005"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">        }</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="426.20508"
+         id="tspan3007"
+         style="font-weight:normal;-inkscape-font-specification:Liberation Mono">    }</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="456.20508"
+         id="tspan3009">    return $column_with_minimal_ones;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="486.20508"
+         id="tspan3011">}</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="516.20508"
+         id="tspan3013" /></text>
+  </g>
+</svg>

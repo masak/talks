@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9235"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="json.svg">
+  <metadata
+     id="metadata3003">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3001" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     id="namedview2999"
+     showgrid="false"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="284.68606"
+     inkscape:cy="297.0201"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9235" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     id="rect7863"
+     width="816.78662"
+     height="613.07965"
+     x="-4.8968019"
+     y="-4.2653494" />
+  <text
+     xml:space="preserve"
+     style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+     x="83.31543"
+     y="55.170898"
+     id="text4572"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4574"
+       x="83.31543"
+       y="55.170898">grammar JSON::Tiny::Grammar;</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="80.170898"
+       id="tspan4576" /><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="105.1709"
+       id="tspan4578">rule TOP        { ^[ &lt;object&gt; | &lt;array&gt; ]$ }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="130.1709"
+       id="tspan4580">rule object     { '{' ~ '}' &lt;pairlist&gt;     }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="155.1709"
+       id="tspan4582">rule pairlist   { [ &lt;pair&gt; ** [ \, ]  ]?   }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="180.1709"
+       id="tspan4584">rule pair       { &lt;string&gt; ':' &lt;value&gt;     }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="205.1709"
+       id="tspan4586">rule array      { '[' ~ ']' [ &lt;value&gt; ** [ \, ] ]?  }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="230.1709"
+       id="tspan4588" /><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="255.1709"
+       id="tspan4590">proto token value { &lt;...&gt; };</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="280.1709"
+       id="tspan4592">token value:sym&lt;number&gt; {</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="305.1709"
+       id="tspan4594">    '-'?</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="330.1709"
+       id="tspan4596">    [ 0 | &lt;[1..9]&gt; &lt;[0..9]&gt;* ]</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="355.1709"
+       id="tspan4598">    [ \. &lt;[0..9]&gt;+ ]?</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="380.1709"
+       id="tspan4600">    [ &lt;[eE]&gt; [\+|\-]? &lt;[0..9]&gt;+ ]?</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="405.1709"
+       id="tspan4602">}</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="430.1709"
+       id="tspan4604">token value:sym&lt;true&gt;    { &lt;sym&gt;    }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="455.1709"
+       id="tspan4606">token value:sym&lt;false&gt;   { &lt;sym&gt;    }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="480.1709"
+       id="tspan4608">token value:sym&lt;null&gt;    { &lt;sym&gt;    }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="505.1709"
+       id="tspan4610">token value:sym&lt;object&gt;  { &lt;object&gt; }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="530.1709"
+       id="tspan4612">token value:sym&lt;array&gt;   { &lt;array&gt;  }</tspan><tspan
+       sodipodi:role="line"
+       x="83.31543"
+       y="555.1709"
+       id="tspan4652">token value:sym&lt;string&gt;  { &lt;string&gt; }</tspan></text>
+</svg>

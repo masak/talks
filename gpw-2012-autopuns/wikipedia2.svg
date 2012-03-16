@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2985">
+  <defs
+     id="defs2987" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1" />
+  <g
+     transform="translate(70.044073,57.7901)"
+     id="g3774">
+    <text
+       x="25.727411"
+       y="230.62787"
+       id="text2986"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+         x="25.727411"
+         y="230.62787"
+         id="tspan2988">Wikipedia has been known to contain</tspan><tspan
+         x="25.727411"
+         y="280.62787"
+         id="tspan2990">unsourced claims.<tspan
+   id="tspan3000"
+   style="font-size:65.00091553%;baseline-shift:super">[</tspan><tspan
+   id="tspan2996"
+   style="font-size:65.00091553%;font-style:italic;baseline-shift:super;fill:#0000ff;-inkscape-font-specification:Calibri Italic">citation needed</tspan><tspan
+   id="tspan3002"
+   style="font-size:65.00091553%;baseline-shift:super">]</tspan></tspan></text>
+    <path
+       d="m 329.86217,268.53752 158.03982,0"
+       id="path3004"
+       style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9235"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="little-girl-and-chainsaw.svg">
+  <g
+     id="g7875">
+    <rect
+       y="-4.2653494"
+       x="-4.8968019"
+       height="613.07965"
+       width="816.78662"
+       id="rect7863"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <image
+       width="463.41895"
+       height="617.89191"
+       xlink:href="file:///home/masak/mine/talks/tcpw-2011-small-languages/little-girl-and-chainsaw.jpg"
+       id="image7860"
+       x="168.29053"
+       y="-8.9459534" />
+    <g
+       transform="matrix(0.37613548,-0.92656467,0.92656467,0.37613548,-247.36188,734.79632)"
+       id="g7869">
+      <rect
+         style="fill:#ffffff;fill-opacity:0.50196078;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5733"
+         width="199.78952"
+         height="88.142433"
+         x="577.62836"
+         y="36.434132"
+         rx="10"
+         ry="10" />
+      <text
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+         x="676.73798"
+         y="74.083488"
+         id="text5727"
+         sodipodi:linespacing="125%"><tspan
+           id="tspan7265"
+           sodipodi:role="line"
+           x="676.73798"
+           y="74.083488"
+           style="fill:#ffffff;fill-opacity:1">make sure you</tspan><tspan
+           sodipodi:role="line"
+           x="676.73798"
+           y="104.08349"
+           style="fill:#ffffff;fill-opacity:1"
+           id="tspan7867">understand them!</tspan></text>
+    </g>
+  </g>
+  <path
+     sodipodi:type="arc"
+     style="fill:none;stroke:#ff0000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+     id="path7884"
+     sodipodi:cx="384.39896"
+     sodipodi:cy="347.8147"
+     sodipodi:rx="71.003624"
+     sodipodi:ry="71.003624"
+     d="m 455.40258,347.8147 a 71.003624,71.003624 0 1 1 -142.00725,0 71.003624,71.003624 0 1 1 142.00725,0 z"
+     transform="translate(-25.46337,9.7936037)" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold"
+     x="451.37338"
+     y="321.37784"
+     id="text7886"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="451.37338"
+       y="321.37784"
+       style="font-size:40px;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="tspan3008">NOT</tspan><tspan
+       sodipodi:role="line"
+       x="451.37338"
+       y="371.37784"
+       style="font-size:40px;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="tspan3012">RECOMMENDED</tspan><tspan
+       sodipodi:role="line"
+       x="451.37338"
+       y="421.37784"
+       style="font-size:40px;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="tspan3005">PRACTICE!</tspan><tspan
+       sodipodi:role="line"
+       x="451.37338"
+       y="471.37784"
+       style="font-size:40px;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-opacity:1"
+       id="tspan3002" /></text>
+</svg>

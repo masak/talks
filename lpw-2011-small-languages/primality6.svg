@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9235"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="primality6.svg">
+  <metadata
+     id="metadata3003">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3001" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     id="namedview2999"
+     showgrid="false"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="400"
+     inkscape:cy="371.51748"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9235" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     id="rect7863"
+     width="816.78662"
+     height="613.07965"
+     x="-4.8968019"
+     y="-4.2653494" />
+  <text
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+     x="14.630859"
+     y="97.239258"
+     id="text3033"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3035"
+       x="14.630859"
+       y="97.239258">$ perl6 -e'say &quot;$_ is prime&quot; \</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="132.23926"
+       id="tspan3900">             if <tspan
+   style="fill:#ffff80;fill-opacity:1"
+   id="tspan4431">(1 x $_) !~~ /^ (11+) $0+ $/</tspan> \</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="167.23926"
+       id="tspan3902">             for 2..30'</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="202.23926"
+       id="tspan3878">2 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="237.23926"
+       id="tspan3880">3 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="272.23926"
+       id="tspan3882">5 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="307.23926"
+       id="tspan3884">7 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="342.23926"
+       id="tspan3886">11 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="377.23926"
+       id="tspan3888">13 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="412.23926"
+       id="tspan3890">17 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="447.23926"
+       id="tspan3892">19 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="482.23926"
+       id="tspan3894">23 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="517.23926"
+       id="tspan3896">29 is prime</tspan><tspan
+       sodipodi:role="line"
+       x="14.630859"
+       y="552.23926"
+       id="tspan3898" /></text>
+</svg>

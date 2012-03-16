@@ -1,0 +1,323 @@
+constant SVG_HEADER = q[<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+   width="800"
+   height="600"
+   version="1.1">
+  <defs
+     id="defs3040">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3928"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         id="path3785"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+  </defs>
+];
+constant SVG_BACKGROUND = q[<rect
+       style="fill:#eeeebb;fill-opacity:1;stroke:none"
+       width="800"
+       height="600"
+       x="0"
+       y="0" />
+];
+constant SVG_FOOTER = "</svg>\n";
+
+constant $GS_DIR = "generated-slides";
+constant $INKSCAPE_EXECUTABLE = '/usr/bin/inkscape';
+
+sub line($x1, $y1, $x2, $y2) {
+    return qq[
+    <path
+        style="stroke: black; stroke-width: 1px;"
+        d="M $x1,$y1 $x2,$y2" />];
+}
+
+sub grid {
+    return join "\n", gather {
+        for 0, 50 ... 800 -> $x { take line($x, 0, $x, 600) }
+        for 0, 50 ... 600 -> $y { take line(0, $y, 800, $y) }
+    }
+}
+
+class Viewport {
+    has $.x is rw = 0;
+    has $.y is rw = 0;
+    has $.size is rw = 8;
+
+    method zoom(&c) {
+        my $scale = 800 / $.size;
+        my $tx = -$.x;
+        my $ty = $.y;
+        qq[<g transform="translate(400,300) scale($scale) translate($tx,$ty)">]
+            ~ &c() ~ "</g>";
+    }
+}
+
+class O {
+    has $.x is rw = 0;
+    has $.y is rw = 0;
+    has $.size is rw = 8;
+
+    method transform {
+        my $scale = $.size / 16;
+        my $tx = $.x;
+        my $ty = -$.y; # minus; we want +y to be upwards
+        qq[transform="translate($tx,$ty) scale($scale)"]
+    }
+}
+
+class O::Text is O {
+    has $.text;
+
+    method svg {
+        return qq[
+    <text
+        xml:space="preserve"
+        style="font-size:1.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri"
+       x="0"
+       y="0"
+       $.transform>$.text\</text>];
+    }
+}
+
+class O::Frame is O {
+    method svg {
+        return qq[
+    <rect
+       style="fill:none;stroke:#660000;stroke-width:.2;stroke-linecap:round;stroke-linejoin:round"
+       width="16"
+       height="12"
+       x="-8"
+       y="-6"
+       $.transform />];
+    }
+}
+
+class O::Import is O {
+    has $.content;
+
+    method svg {
+        return qq[
+    <g $.transform>
+    <g transform="translate(-8,-6) scale(0.02)">]
+            ~ $.content ~ "</g></g>";
+    }
+}
+
+class O::Code is O {
+    has @.lines;
+
+    method svg {
+        return qq[
+    <rect
+       style="fill:#dddddd;stroke:#000000;stroke-width:.2;stroke-linecap:round;stroke-linejoin:round"
+       width="14"
+       height="10"
+       x="-7"
+       y="-5"
+       $.transform />
+    $.texts];
+    }
+
+    method texts {
+        join "\n", do for @.lines.kv -> $i, $line {
+            qq[
+    <text
+        xml:space="preserve"
+        style="font-size:.6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas"
+       x="-6.5"
+       y="{-4 + .8 * $i}"
+       $.transform>$line\</text>];
+        }
+    }
+}
+
+sub MAIN( $slidefile = 'slides' ) {
+    my $input = slurp($slidefile);
+
+    grammar Slide::Format {
+        regex TOP { ^ <scene>* $ }
+
+        regex scene {
+            \n*
+            <scene_header>
+            <scene_directive>*
+            <scene_end>
+        }
+
+        regex scene_header { '[scene]' \n }
+        regex scene_directive {
+            | <directive_at>
+            | <directive_text>
+            | <directive_import>
+            | <directive_code>
+#            | (\N*) { say "Did not understand directive: '$0'"; die }
+        }
+
+        regex scene_end { <empty_line> | <end_of_file> }
+        regex empty_line { \h* \n }
+        regex end_of_file { $ }
+
+        regex directive_at {
+            'at' \h+
+            '(' \h* $<x>=<number> \h* ',' \h* $<y>=<number> \h* ')' \h*
+            ['size' \h+ $<size>=<number> \h*]?
+            \n
+        }
+
+        regex number { '-'? \d+ [\. \d+]? }
+
+        regex directive_text {
+            'text' \h+
+            '"' (<-["]>*) '"' \h*
+            \n
+        }
+
+        regex directive_import {
+            'import' \h+ $<filename>=[\N+] \n
+        }
+
+        regex directive_code {
+            'code:' \h* \n (.*?) \n '---' \n
+        }
+    }
+
+    Slide::Format.parse($input)
+        or die "Could not parse";
+    my @scenes = $<scene>.list;
+    say "Scenes: 1 .. @scenes.elems()";
+
+    shell "rm -rf $GS_DIR";
+    mkdir $GS_DIR;
+
+    my $dots_remaining;
+    sub commence(*@args) { $dots_remaining = 70; emit |@args }
+    sub emit(*@args) { print @args; $dots_remaining -= [+] @args>>.chars }
+    sub finish() { say '.' x $dots_remaining, ' [DONE]' }
+    sub recommence(*@args) { finish; commence |@args }
+
+    my $slidenum = "000";
+    my $viewport = Viewport.new;
+    my @objects_on_canvas;
+    for @scenes.kv -> $i, $scene {
+        my $scenenum = ($i + 1).fmt("%02d");
+        commence "Scene $scenenum ";
+        my @objects_on_scene;
+        my $y_offset = 0;
+        for $scene<scene_directive>.list {
+            when so .<directive_at> {
+                if .<directive_at><size> {
+                    emit "[S@] ";
+                    $viewport.size = .<directive_at><size>[0];
+                }
+                else {
+                    emit "[@] ";
+                }
+                ($viewport.x, $viewport.y) = .<directive_at><x y>;
+            }
+
+            when so .<directive_text> {
+                emit "[T] ";
+                push @objects_on_scene,
+                    O::Text.new(:text(.<directive_text>[0]),
+                                :x($viewport.x), :y($viewport.y + $y_offset),
+                                :size($viewport.size));
+                $y_offset -= $viewport.size * .25;
+            }
+
+            when so .<directive_import> {
+                sub extract_important_stuff($svg_file) {
+                    my $content = slurp $svg_file;
+                    die "$svg_file is an Inkscape file"
+                        if $content ~~ /sodipodi/;
+                    $content\
+                        .subst(/^ [<!before '<g'» > .]+/, '')\
+                        .subst('</svg>', '');
+                }
+
+                emit "[I] ";
+                my $filename = ~.<directive_import><filename>;
+                die "File $filename does not exist for importing"
+                    unless $filename.IO ~~ :e;
+                push @objects_on_scene,
+                    O::Import.new(:content(extract_important_stuff($filename)),
+                                  :x($viewport.x), :y($viewport.y + $y_offset),
+                                  :size($viewport.size));
+                $y_offset -= $viewport.size * .25;
+            }
+
+            when so .<directive_code> {
+                sub de-indent { $^s.subst: /^ '    '/, '' }
+
+                emit "[C] ";
+                my @lines = map { de-indent $_ }, .<directive_code>[0].Str.lines;
+                push @objects_on_scene,
+                    O::Code.new(:@lines,
+                                :x($viewport.x), :y($viewport.y + $y_offset),
+                                :size($viewport.size));
+                $y_offset -= $viewport.size * .25;
+            }
+
+            default { say ""; die "Unknown directive: $_" }
+        }
+        $y_offset += $viewport.size * .25;
+        .y -= $y_offset / 2 for @objects_on_scene;
+        # push @objects_on_scene,
+        #     O::Frame.new(:x($viewport.x), :y($viewport.y),
+        #                  :size($viewport.size));
+        if $viewport.size == 12 { # XXX hack
+            @objects_on_scene.unshift(@objects_on_canvas);
+            for 12/256, 12/128, 12/64 ... 12/2, 9, 12 -> $size {
+                $viewport.size = $size;
+                $slidenum++;
+                given open("$GS_DIR/slide$slidenum.svg", :w) {
+                    .print: SVG_HEADER, SVG_BACKGROUND; #, grid;
+                    .print: $viewport.zoom: { join '', @objects_on_scene>>.svg }
+                    .print: SVG_FOOTER;
+                    .close;
+                }
+                recommence "zooming       ";
+            }
+        }
+        $slidenum++;
+        given open("$GS_DIR/slide$slidenum.svg", :w) {
+            .print: SVG_HEADER, SVG_BACKGROUND; #, grid;
+            .print: $viewport.zoom: { join '', @objects_on_scene>>.svg }
+            .print: SVG_FOOTER;
+            .close;
+        }
+        push @objects_on_canvas, @objects_on_scene;
+        finish;
+    }
+
+    for "001" ... $slidenum {
+        commence "Converting slide$_.svg -> .pdf ";
+        shell
+            "$INKSCAPE_EXECUTABLE "
+            ~ "--without-gui --file=$GS_DIR/slide$_.svg "
+            ~ "--export-pdf=$GS_DIR/slide$_.pdf"; # 2> /dev/null"
+        finish;
+    }
+
+    commence "Joining PDFs ";
+    shell "pdfjoin -q -o talk.pdf $GS_DIR/*.pdf";
+    finish;
+}

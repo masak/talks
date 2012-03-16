@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg3004"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="p5-p6-code-8.svg">
+  <defs
+     id="defs3006" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0883333"
+     inkscape:cx="284.68606"
+     inkscape:cy="300"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3009">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       y="264.62482"
+       x="452.06738"
+       height="39.509949"
+       width="158.95859"
+       id="rect3931"
+       style="fill:#ff6e66;fill-opacity:1;stroke:none" />
+    <rect
+       y="266.46246"
+       x="176.41655"
+       height="36.753464"
+       width="274.73203"
+       id="rect3933"
+       style="fill:#66ff66;fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+       x="62.798828"
+       y="81.205078"
+       id="text2985"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="62.798828"
+         y="81.205078">method choose_column {</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="111.20508"
+         id="tspan3102">    my $r = self<tspan
+   style="font-weight:bold;-inkscape-font-specification:Liberation Mono Bold"
+   id="tspan3040">.</tspan>linked-matrix;</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="141.20508"
+         id="tspan3962">    </tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="171.20508"
+         id="tspan4118" /><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="201.20508"
+         id="tspan4120" /><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="231.20508"
+         id="tspan4122" /><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="261.20508"
+         id="tspan2993">    return</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="291.20508"
+         id="tspan3985">        ($r.R, *.R ...^ $r).min( *.S );</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="321.20508"
+         id="tspan3011">}</tspan><tspan
+         sodipodi:role="line"
+         x="62.798828"
+         y="351.20508"
+         id="tspan3013" /></text>
+  </g>
+</svg>

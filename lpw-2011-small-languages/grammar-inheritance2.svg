@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9235"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="grammar-inheritance2.svg">
+  <defs
+     id="defs9237">
+    <linearGradient
+       id="linearGradient4571">
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0"
+         id="stop4573" />
+      <stop
+         style="stop-color:#0080ff;stop-opacity:0;"
+         offset="1"
+         id="stop4575" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4571"
+       id="linearGradient4577"
+       x1="432.87726"
+       y1="612.28357"
+       x2="432.87726"
+       y2="196.99323"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.380102,0,0,1.380102,-184.798,81.546567)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0210746"
+     inkscape:cx="365.53491"
+     inkscape:cy="292.51626"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata9240">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.18900001000000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect9243"
+       width="830"
+       height="638.33331"
+       x="-10"
+       y="-13.333333" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+       x="55.955078"
+       y="216.20508"
+       id="text3040"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="216.20508"
+         id="tspan3062"><tspan
+   style="font-weight:bold;-inkscape-font-specification:Liberation Mono Bold"
+   id="tspan4010">grammar</tspan><tspan
+   style="fill:#ffff80;fill-opacity:1"
+   id="tspan4016"> FormalLetter</tspan> is <tspan
+   style="fill:#ffff80;fill-opacity:1"
+   id="tspan4018">Letter</tspan> {</tspan><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="246.20508"
+         id="tspan3994" /><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="276.20508"
+         id="tspan3996"><tspan
+   style="font-weight:bold;-inkscape-font-specification:Liberation Mono Bold"
+   id="tspan4012">    rule</tspan> greet { Dear $&lt;to&gt;=(\S+?) , $$}</tspan><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="306.20508"
+         id="tspan3998" /><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="336.20508"
+         id="tspan4000"><tspan
+   style="font-weight:bold;-inkscape-font-specification:Liberation Mono Bold"
+   id="tspan4014">    rule</tspan> close { Yours sincerely, $&lt;from&gt;=(.+) }</tspan><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="366.20508"
+         id="tspan4002" /><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="396.20508"
+         id="tspan4004">}</tspan><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="426.20508"
+         id="tspan4006" /><tspan
+         sodipodi:role="line"
+         x="55.955078"
+         y="456.20508"
+         id="tspan3064" /></text>
+  </g>
+</svg>

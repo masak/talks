@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800px"
+   height="600px"
+   id="svg9235"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="anemic-set-var.svg">
+  <defs
+     id="defs9237">
+    <linearGradient
+       id="linearGradient4571">
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0"
+         id="stop4573" />
+      <stop
+         style="stop-color:#0080ff;stop-opacity:0;"
+         offset="1"
+         id="stop4575" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4571"
+       id="linearGradient4577"
+       x1="432.87726"
+       y1="612.28357"
+       x2="432.87726"
+       y2="196.99323"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.380102,0,0,1.380102,-184.798,81.546567)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="457.54098"
+     inkscape:cy="294.16667"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata9240">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.18900001000000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect9243"
+       width="830"
+       height="638.33331"
+       x="-10"
+       y="-13.333333" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4146"
+       y="303.39948"
+       x="468.3764"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+       xml:space="preserve"><tspan
+         y="303.39948"
+         x="468.3764"
+         id="tspan4148"
+         sodipodi:role="line" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Mono;-inkscape-font-specification:Liberation Mono"
+       x="134.58594"
+       y="108.98438"
+       id="text4493"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="108.98438"
+         id="tspan4505"
+         style="font-weight:bold;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono Bold">&lt;!--SET<tspan
+   style="font-weight:normal;-inkscape-font-specification:Liberation Mono"
+   id="tspan4834"><tspan
+   style="fill:#8080ff;fill-opacity:1"
+   id="tspan4836"> row</tspan> = 0 </tspan>--&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="148.98438"
+         style="fill:#ffff80;fill-opacity:1"
+         id="tspan4846" /><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="188.98438"
+         style="font-weight:bold;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono Bold"
+         id="tspan4781">&lt;!--QUERY<tspan
+   id="tspan4854"
+   style="font-weight:normal;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono"> DO_TABLE </tspan><tspan
+   style="font-weight:normal;-inkscape-font-specification:Liberation Mono"
+   id="tspan4857">...</tspan>--&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="228.98438"
+         style="fill:#ffff80;fill-opacity:1"
+         id="tspan4791" /><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="268.98438"
+         style="font-weight:normal;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4637">  &lt;!--QUERY INC_ROW</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="308.98438"
+         style="font-weight:normal;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4861">      SELECT %<tspan
+   style="fill:#8080ff;fill-opacity:1"
+   id="tspan4875">row</tspan>% + 1 [<tspan
+   style="fill:#8080ff;fill-opacity:1"
+   id="tspan4881">row</tspan>]</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="348.98438"
+         style="font-weight:normal;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4863">      FROM Dual--&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="388.98438"
+         style="font-weight:normal;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4865">  &lt;!--END INC_ROW--&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="428.98438"
+         style="font-weight:normal;fill:#ffffff;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4867" /><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="468.98438"
+         style="font-weight:normal;fill:#ffffff;fill-opacity:1;-inkscape-font-specification:Liberation Mono"
+         id="tspan4869">  &lt;p&gt;This is row <tspan
+   style="fill:#ffff80;fill-opacity:1"
+   id="tspan4873">%<tspan
+   style="fill:#8080ff;fill-opacity:1"
+   id="tspan4887">row</tspan>%</tspan>.&lt;/p&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="508.98438"
+         style="font-weight:bold;fill:#ffff80;fill-opacity:1;-inkscape-font-specification:Liberation Mono Bold"
+         id="tspan4640">&lt;!--END <tspan
+   style="font-weight:normal;-inkscape-font-specification:Liberation Mono"
+   id="tspan4859">DO_TABLE</tspan>--&gt;</tspan><tspan
+         sodipodi:role="line"
+         x="134.58594"
+         y="548.98438"
+         id="tspan4523" /></text>
+  </g>
+</svg>

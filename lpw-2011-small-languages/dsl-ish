@@ -1,0 +1,25 @@
+my @lengths = (
+  qw(s 2 S 2 i -4 I -4 l 4 L 4 n 2 N 4 v 2 V 4 n! 2 N! 4 v! 2 V! 4),
+  's!'  => $Config{shortsize}, 'S!'  => $Config{shortsize},
+  'i!'  => $Config{intsize},   'I!'  => $Config{intsize},
+  'l!'  => $Config{longsize},  'L!'  => $Config{longsize},
+);
+
+while (my ($base, $expect) = splice @lengths, 0, 2) {
+  my @formats = ($base);
+  $base =~ /^[nv]/i or push @formats, "$base>", "$base<";
+  for my $format (@formats) {
+  SKIP: {
+      skip $no_endianness, 1 if $no_endianness && $format =~ m/[<>]/;
+      skip $no_signedness, 1 if $no_signedness && $format =~ /[nNvV]!/;
+      my $len = length(pack($format, 0));
+      if ($expect > 0) {
+        is($expect, $len, "format '$format'");
+      } else {
+        $expect = -$expect;
+        ok ($len >= $expect, "format '$format'") ||
+          print "# format '$format' has length $len, expected >= $expect\n";
+      }
+    }
+  }
+}

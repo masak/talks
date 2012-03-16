@@ -1,0 +1,132 @@
+---
+- slide:
+    file: title.svg
+- how I used to think about programming
+- stringing statements together
+- how I think about programming now
+- slide:
+    file: iceberg0.svg
+- slide:
+    file: iceberg1.svg
+- slide:
+    file: iceberg2.svg
+- slide:
+    file: iceberg3.svg
+- slide:
+    file: iceberg4.svg
+- slide:
+    file: iceberg5.svg
+- regexes
+- slide:
+    file: regexes-p5-p6-1.svg
+- slide:
+    file: regexes-p5-p6-2.svg
+- slide:
+    file: regexes-p5-p6-4.svg
+- slide:
+    file: regexes-p5-p6-5.svg
+- slide:
+    file: regexes-p5-p6-7.svg
+- slide:
+    file: regexes-p5-p6-8.svg
+- slide:
+    file: regexes-p5-p6.svg
+- regexes are great
+- regexes are powerful
+- primality testing
+- slide:
+    file: primality1.svg
+- slide:
+    file: primality2.svg
+- slide:
+    file: primality3.svg
+- slide:
+    file: primality4.svg
+- slide:
+    file: primality5.svg
+- slide:
+    file: primality6.svg
+- regexes are chainsaws
+- slide:
+    file: chainsaw-closeup.svg
+- slide:
+    file: angry-chainsaw-guy.svg
+- slide:
+    file: little-girl-and-chainsaw.svg
+    gradual: yes
+- accidents
+- slide:
+    file: zawinski-quote.svg
+    gradual: yes
+- slide:
+    file: clbuttic.svg
+    gradual: yes
+- Reuters, 2005
+- slide:
+    file: queen1.svg
+- slide:
+    file: queen2.svg
+- slide:
+    file: queen3.svg
+- slide:
+    file: queen4.svg
+- slide:
+    file: queen5.svg
+- '$var = $var + 1;'
+- test your regexes
+- or even better
+- "Don't regex; parse!"
+- WPLM parser example
+- accident
+- accidental complexity
+- slide:
+    file: essential-accidental.svg
+- slide:
+    file: local-minimum.svg
+- slide:
+    file: lots-of-regex.svg
+- slide:
+    file: nice-ast.svg
+- grammars
+- slide:
+    file: json1.svg
+- slide:
+    file: json2.svg
+- grammars are OO
+- inheritance
+- slide:
+    file: grammar-inheritance1.svg
+- slide:
+    file: grammar-inheritance2.svg
+- roles
+- parametric roles
+- anemic templates
+- slide:
+    file: anemic-intro.svg
+- SELECT N + 1
+- slide:
+    file: anemic-nested.svg
+- if statements
+- slide:
+    file: anemic-if.svg
+- primitive primitives
+- increment a variable
+- slide:
+    file: anemic-set-var.svg
+- includes
+- slide:
+    file: anemic-include.svg
+- slide:
+    file: anemic-include-problems.svg
+- this is fixable
+- compilers
+- steal insights
+- terminology and wisdom
+- strictness
+- symbol tables
+- lexical scoping
+- compilation units
+- slide:
+    file: summary.svg
+    gradual: yes
+- thank you

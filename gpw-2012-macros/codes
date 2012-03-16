@@ -1,0 +1,62 @@
+constant LOGGING = False;
+
+sub LOG($message) {
+    if LOGGING {
+        $*ERR.say: $message;
+    }
+}
+
+LOG "The hard-to-compute value is: ", hard-to-compute();
+
+---
+
+constant LOGGING = False;
+
+macro LOG($message) {
+    if LOGGING {
+        quasi { $*ERR.say: {{{$message}}}; }
+    }
+}
+
+LOG "The hard-to-compute value is: ", hard-to-compute();
+
+---
+
+Macros grant timeline
+
+D1: Macro definitions, quasi-quoting blocks
+
+D2: Quasi-quote placeholders
+
+D3: Hygienic macros, COMPILING::
+
+D4: Delayed declarations
+
+           D1           D2          D3          D4
+           ||           ||          ||          ||
+           ||           ||          ||          ||
+  workworkworkworkworkworkworkworkworkworkworkwork====>>
+
+---
+
+class Rectangle {
+    has $.width;
+    has $.height;
+
+    method area { $.width * $.height }
+
+    method circumference {
+        $.width + $.height + $.width + $.height
+    }
+}
+
+---
+
+sub make-rectangle($width, $height) {
+    return sub($_) {
+        when 'area' { $width * $height }
+        when 'circumference' {
+            $width + $height + $width + $height
+        }
+    }
+}

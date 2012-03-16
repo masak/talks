@@ -1,0 +1,83 @@
+---
+- Dancing Links
+- slide:
+    file: sudoku-unsolved.svg
+- slide:
+    file: sudoku-solved.svg
+- slide:
+    file: exact-cover-1.svg
+- slide:
+    file: exact-cover-2.svg
+- slide:
+    file: exact-cover-3.svg
+- slide:
+    file: exact-cover-4.svg
+- slide:
+    file: exact-cover-5.svg
+- slide:
+    file: exact-cover-6.svg
+- slide:
+    file: exact-cover-7.svg
+- slide:
+    file: exact-cover-8.svg
+- slide:
+    file: exact-cover-9.svg
+- slide:
+    file: exact-cover-10.svg
+- slide:
+    file: exact-cover-11.svg
+- slide:
+    file: exact-cover-12.svg
+- slide:
+    file: exact-cover-13.svg
+- slide:
+    file: exact-cover-14.svg
+- backtracking
+- slide:
+    file: 2-to-the-rows.svg
+- "NP-complete"
+- slide:
+    file: linked-list-1.svg
+- slide:
+    file: linked-list-2.svg
+- slide:
+    file: linked-list-3.svg
+- slide:
+    file: linked-matrix-1.svg
+- slide:
+    file: linked-matrix-2.svg
+- slide:
+    file: linked-matrix-3.svg
+- slide:
+    file: linked-matrix-4.svg
+- slide:
+    file: linked-matrix-5.svg
+- "no memory allocations!"
+- slide:
+    file: solver.svg
+- slide:
+    file: reader-solver-writer.svg
+- "exact cover is like tiling"
+- "column <-> location"
+- "row <-> tile"
+- pentominoes
+- "8-queens"
+- C implementation
+- Perl 6 implementation
+- slide:
+    file: p5-p6-code-1.svg
+- slide:
+    file: p5-p6-code-2.svg
+- slide:
+    file: p5-p6-code-3.svg
+- slide:
+    file: p5-p6-code-4.svg
+- slide:
+    file: p5-p6-code-5.svg
+- slide:
+    file: p5-p6-code-6.svg
+- slide:
+    file: p5-p6-code-7.svg
+- slide:
+    file: p5-p6-code-8.svg
+- thank you
