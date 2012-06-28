@@ -1,4 +1,18 @@
-#! /usr/local/bin/nom
+#! /usr/bin/env PERL6LIB=lib /usr/local/bin/nom
+use Paths;
+
+class SVG::Glyph {
+    has $.x = 0;
+    has $.y = 0;
+    has $.char;
+
+    method svg {
+        sub escape($text) { $text.trans( ['<', '&'] => ['&lt;', '&amp;'] ) }
+
+        my $style = 'font-size:40px;fill:#000000;stroke:none;font-family:Calibri';
+        qq[<text x="$.x" y="$.y" style="$style">{escape $.char}</text>]
+    }
+}
 
 constant $GS_DIR = 'generated-slides';
 
@@ -7,7 +21,17 @@ if $GS_DIR.IO ~~ :e {
 }
 mkdir $GS_DIR;
 
-rm-rf($GS_DIR);
+my $*maxslide = 0;
+my $x = 0;
+my @objects = gather for '01234abcdefghijklmnopqrstuvwxyz56789'.comb {
+    take SVG::Glyph.new(:$^char, :$x);
+    $x += Paths::width($char);
+}
+emit-slide(@objects);
+
+#pdfize();
+
+#rm-rf($GS_DIR);
 
 sub rm-rf($dir) {
     die "Tried to remove '$dir' but it's not a directory"
@@ -22,4 +46,76 @@ sub rm-rf($dir) {
         }
     }
     rmdir $dir;
+}
+
+sub pad($n, :$digits = 3) { $n.fmt: '%0' ~ $digits ~ "d" }
+
+sub emit-slide(*@objects where { all @objects».can('svg') }) {
+    constant WIDTH = 800;
+    constant HEIGHT = 600;
+    constant BACKGROUND_COLOR = '#ffffdd';
+
+    sub chop-leading($text) { $text.substr(1) }
+    sub heredoc($text) { (chop-leading $text).indent(*).chomp }
+
+    # Indent 2 for the file, 8 for the heredoc
+    my $actual-contents
+        = @objects».svg.join("\n").indent(8).indent(2).trim-leading;
+    my $file-contents = heredoc qq[
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <svg
+           xmlns:svg="http://www.w3.org/2000/svg"
+           xmlns="http://www.w3.org/2000/svg"
+           version="1.1"
+           width="{WIDTH}"
+           height="{HEIGHT}">
+          <rect
+             width="{WIDTH}"
+             height="{HEIGHT}"
+             x="0"
+             y="0"
+             style="fill:{BACKGROUND_COLOR};stroke:none" />
+          {$actual-contents}
+        </svg>
+        ];
+
+    sub write-to-file($file, &block) {
+        given open $file, :w -> $fh {
+            &block($fh);
+            $fh.close;
+        }
+    }
+
+    $*maxslide = $*maxslide; # RAKUDO: Need to track down this bug
+    ++$*maxslide;
+    write-to-file "$GS_DIR/{pad $*maxslide}.svg", {
+        .say($file-contents);
+    }
+}
+
+sub pdfize() {
+    sub convert($infile, $outfile,
+                :$executable = 'inkscape',
+                # RAKUDO: Texas quotes don't interpolate
+                :@args = qq[--without-gui --file=$infile --export-pdf=$outfile].words,
+                :$visibility = '2> /dev/null') {
+
+        my $error-code = shell join ' ', $executable, @args, $visibility;
+        die "Tried to PDFize $infile but something went wrong"
+            if $error-code;
+    }
+
+    sub pdfjoin($pdfs,
+                :$executable = 'pdfjoin',
+                :$outfile = 'talk.pdf',
+                # RAKUDO: Texas quotes don't interpolate
+                :@args = qq[-q -o $outfile $pdfs].words) {
+
+        my $error-code = shell join ' ', $executable, @args;
+        die "Tried to join PDFs but failed"
+            if $error-code;
+    }
+
+    convert "$GS_DIR/{pad $_}.svg", "$GS_DIR/{pad $_}.pdf" for 1 .. $*maxslide;
+    pdfjoin "$GS_DIR/*.pdf";
 }

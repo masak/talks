@@ -1,0 +1,2 @@
+#! /bin/sh
+nom --target=pir lib/Paths.pm > lib/Paths.pir
