@@ -1,0 +1,25 @@
+#! /usr/local/bin/nom
+
+constant $GS_DIR = 'generated-slides';
+
+if $GS_DIR.IO ~~ :e {
+    rm-rf($GS_DIR);
+}
+mkdir $GS_DIR;
+
+rm-rf($GS_DIR);
+
+sub rm-rf($dir) {
+    die "Tried to remove '$dir' but it's not a directory"
+        unless $dir.IO ~~ :d;
+
+    for dir($dir) -> $file {
+        if $file ~~ :d {
+            rm-rf(~$file);
+        }
+        else {
+            unlink(~$file);
+        }
+    }
+    rmdir $dir;
+}
