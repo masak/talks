@@ -13,7 +13,7 @@ sub linebreaks_to_brs($t) {
 }
 
 sub convert_icons($t) {
-    $t.subst(/'[' (\w+) ']'/, -> $/ { "<i class='icon-$0'></i>" }, :g);
+    $t.subst(/'[' (\S+) ']'/, -> $/ { "<i class='icon-$0'></i>" }, :g);
 }
 
 my $BODY = $content.trim.split(/\n+ '--' \n+/).map({
