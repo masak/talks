@@ -1,8 +1,7 @@
 #! /usr/local/bin/nom
 
-my $HEADER = slurp('header');
-my $FOOTER = slurp('footer');
-my $content = slurp('slides');
+my $template = slurp('template');
+my $slides = slurp('slides');
 
 sub put_in_div($t) {
     "<div>\n$t\n</div>"
@@ -16,17 +15,15 @@ sub convert_icons($t) {
     $t.subst(/'[' (\S+) ']'/, -> $/ { "<i class='icon-$0'></i>" }, :g);
 }
 
-my $BODY = $content.trim.split(/\n+ '--' \n+/).map({
+sub handle_slide($slide) {
     put_in_div
     linebreaks_to_brs
     convert_icons
-    $_
-}).join("\n\n");
-
-given open('talk.html', :w) {
-    .print($HEADER);
-    .print($BODY);
-    .print($FOOTER);
-
-    .close();
+    $slide
 }
+
+my $divider = /\n+ '--' \n+/;
+my $content = $slides.trim.split($divider).map(&handle_slide).join("\n\n");
+my $document = $template.subst('{{{content}}}', $content);
+
+spurt('talk.html', $document);
