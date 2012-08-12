@@ -1,0 +1,66 @@
+Macros
+in
+Rakudo
+
+--
+
+[copy]
+
+macros are
+code templates
+
+--
+
+lexical scoping
+
+--
+
+the shape of routines
+
+--
+
+closures
+
+--
+
+counter example
+
+--
+
+heap; not stack
+
+--
+
+equal in power
+
+--
+
+koan
+
+--
+
+ASTs are closures
+
+--
+
+five stages of macro
+
+--
+
+hygienic macros
+
+--
+
+closures cause hygiene
+
+--
+
+other approaches
+
+--
+
+some about D2
+
+--
+
+conclusion
