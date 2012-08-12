@@ -3,78 +3,94 @@
 my $HEADER = slurp('header');
 my $FOOTER = slurp('footer');
 
-my $BODY = '
-<div>
-Macros<br />
-in<br />
+my $content = '
+
+Macros
+in
 Rakudo
-</div>
 
-<div>
-<i class="icon-copy"></i><br /><br />
+--
 
-macros are<br />
+[copy]
 
+macros are
 code templates
-</div>
 
-<div>
+--
+
 lexical scoping
-</div>
 
-<div>
+--
+
 the shape of routines
-</div>
 
-<div>
+--
+
 closures
-</div>
 
-<div>
+--
+
 counter example
-</div>
 
-<div>
+--
+
 heap; not stack
-</div>
 
-<div>
+--
+
 equal in power
-</div>
 
-<div>
+--
+
 koan
-</div>
 
-<div>
+--
+
 ASTs are closures
-</div>
 
-<div>
+--
+
 five stages of macro
-</div>
 
-<div>
+--
+
 hygienic macros
-</div>
 
-<div>
+--
+
 closures cause hygiene
-</div>
 
-<div>
+--
+
 other approaches
-</div>
 
-<div>
+--
+
 some about D2
-</div>
 
-<div>
+--
+
 conclusion
-</div>
-
 ';
+
+sub put_in_div($t) {
+    "<div>\n$t\n</div>"
+}
+
+sub linebreaks_to_brs($t) {
+    $t.lines.join("<br />\n");
+}
+
+sub convert_icons($t) {
+    $t.subst(/'[' (\w+) ']'/, -> $/ { "<i class='icon-$0'></i>" }, :g);
+}
+
+my $BODY = $content.trim.split(/\n+ '--' \n+/).map({
+    put_in_div
+    linebreaks_to_brs
+    convert_icons
+    $_
+}).join("\n\n");
 
 given open('talk.html', :w) {
     .print($HEADER);
