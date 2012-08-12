@@ -1,4 +1,8 @@
+#! /usr/local/bin/nom
 
+my $fh = open('talk.html', :w);
+
+$fh.print('
 <!doctype html>
 <html lang=en>
 <head>
@@ -162,3 +166,6 @@ conclusion
 
 </body>
 </html>
+');
+
+$fh.close();
