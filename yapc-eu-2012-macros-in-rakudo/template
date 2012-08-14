@@ -31,8 +31,10 @@ body, html {
 </style>
 <script src="jquery-1.8.0.min.js"></script>
 <script>
+    "use strict";
     $(document).ready(function() {
         var currentSlide = 0;
+        var is_blanked = false;
         var last_slide = $(".slides div").length - 1;
 
         var hide_current_slide = function() {
@@ -45,6 +47,7 @@ body, html {
             hide_current_slide();
             currentSlide = slide;
             show_current_slide();
+            is_blanked = false;
         };
         var go_one_slide_forward = function() {
             if (currentSlide < last_slide) {
@@ -62,11 +65,21 @@ body, html {
         var go_to_last_slide = function() {
             change_slide_to(last_slide);
         };
+        var toggle_blank_slide = function() {
+            is_blanked = !is_blanked;
+            if (is_blanked) {
+                hide_current_slide();
+            }
+            else {
+                show_current_slide();
+            }
+        };
         var key = {
-            up:   38,
-            down: 40,
-            home: 36,
-            end:  35
+            PgUp: 34,
+            PgDn: 33,
+            Home: 36,
+            End:  35,
+            b:    66
         };
 
         $(".slides div").hide();
@@ -74,10 +87,11 @@ body, html {
 
         $(document).keydown(function(e) {
             switch (e.keyCode) {
-                case key.down: go_one_slide_forward(); break;
-                case key.up:   go_one_slide_back();    break;
-                case key.home: go_to_first_slide();    break;
-                case key.end:  go_to_last_slide();     break;
+                case key.PgUp: go_one_slide_forward(); break;
+                case key.PgDn: go_one_slide_back();    break;
+                case key.Home: go_to_first_slide();    break;
+                case key.End:  go_to_last_slide();     break;
+                case key.b:    toggle_blank_slide();   break;
             }
         });
     });
