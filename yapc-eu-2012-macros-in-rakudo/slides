@@ -1,0 +1,94 @@
+Macros
+in
+Rakudo
+
+--
+
+[copy]
+
+macros are
+code templates
+
+--
+
+[star-empty]
+
+lexical scoping
+
+--
+
+[heart-empty]
+
+the shape of routines
+
+--
+
+[magic]
+
+closures
+
+--
+
+[bullhorn]
+
+counter example
+
+--
+
+[cloud]
+
+heap; not stack
+
+--
+
+[legal]
+
+equal in power
+
+--
+
+[flag]
+
+koan
+
+--
+
+[share]
+
+ASTs are closures
+
+--
+
+[list-ol]
+
+five stages of macro
+
+--
+
+[thumbs-up]
+
+hygienic macros
+
+--
+
+[hand-right]
+
+closures cause hygiene
+
+--
+
+[beaker]
+
+other approaches
+
+--
+
+[wrench]
+
+some about D2
+
+--
+
+[off]
+
+conclusion

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Macros in Rakudo</title>
+<link href="im-fell-dw-pica-sc.css" rel="stylesheet" type="text/css">
+<link href="font-awesome.css" rel="stylesheet" type="text/css">
+<style>
+body {
+    font-family: "IM Fell DW Pica SC", arial, serif;
+    font-size: 500%;
+}
+
+body, html {
+    height: 95%;
+    margin: none;
+    padding: none;
+}
+
+.slides {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.slides div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+</style>
+<script src="jquery-1.8.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var currentSlide = 0;
+        var last_slide = $(".slides div").length - 1;
+
+        var hide_current_slide = function() {
+            $(".slides div").slice(currentSlide, currentSlide+1).hide();
+        };
+        var show_current_slide = function() {
+            $(".slides div").slice(currentSlide, currentSlide+1).show();
+        };
+        var change_slide_to = function(slide) {
+            hide_current_slide();
+            currentSlide = slide;
+            show_current_slide();
+        };
+        var go_one_slide_forward = function() {
+            if (currentSlide < last_slide) {
+                change_slide_to(currentSlide + 1);
+            }
+        };
+        var go_one_slide_back = function() {
+            if (currentSlide > 0) {
+                change_slide_to(currentSlide - 1);
+            }
+        };
+        var go_to_first_slide = function() {
+            change_slide_to(0);
+        };
+        var go_to_last_slide = function() {
+            change_slide_to(last_slide);
+        };
+        var key = {
+            up:   38,
+            down: 40,
+            home: 36,
+            end:  35
+        };
+
+        $(".slides div").hide();
+        go_to_first_slide();
+
+        $(document).keydown(function(e) {
+            switch (e.keyCode) {
+                case key.down: go_one_slide_forward(); break;
+                case key.up:   go_one_slide_back();    break;
+                case key.home: go_to_first_slide();    break;
+                case key.end:  go_to_last_slide();     break;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+
+<div class="slides">
+
+{{{content}}}
+
+</div>
+
+</body>
+</html>

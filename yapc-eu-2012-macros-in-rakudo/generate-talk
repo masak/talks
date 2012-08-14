@@ -1,0 +1,25 @@
+#! /usr/local/bin/nom
+
+sub handle_slide($slide) {
+    sub put_in_div($t) { "<div>\n$t\n</div>" }
+    sub linebreaks_to_brs($t) { $t.lines.join("<br />\n") }
+
+    sub convert_icons($t) {
+        my $brackets = /'[' (\S+) ']'/;
+        my $icons = -> $/ { "<i class='icon-$0'></i>" };
+        $t.subst($brackets, $icons, :g);
+    }
+
+    put_in_div
+    linebreaks_to_brs
+    convert_icons
+    $slide;
+}
+
+my $template = slurp('template');
+my $slides = slurp('slides');
+my $divider = /\n+ '--' \n+/;
+my $content = $slides.trim.split($divider).map(&handle_slide).join("\n\n");
+my $document = $template.subst('{{{content}}}', $content);
+
+spurt('talk.html', $document);
