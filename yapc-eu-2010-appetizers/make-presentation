@@ -90,7 +90,7 @@ class Slide {
         $height *= $scale-factor;
         $height.=Int;
         my $content = qq[    <image
-       xlink:href="file:///Users/masak/gwork/appetizers/images/$image"
+       xlink:href="file:///home/masak/mine/talks/yapc-eu-2010-appetizers/images/$image"
        x="-10"
        y="-10"
        width="$width"
@@ -137,7 +137,7 @@ class Slide {
                     when /^ '='(Hi|Err) \h+ \' (.*?) \' $/ {
                         my $color = $0 eq 'Hi' ?? '#007777' !! '#ff7777';
                         my $sought = ~$1;
-                        for @.code.lines {
+                        for $.code.lines {
                             if defined (my $from = .index($sought)) {
                                 my $to = $from + $sought.chars;
                                 $_ = .substr(0, $from)
@@ -152,7 +152,7 @@ class Slide {
                     when /^ '=Hi' \h+ ('/' .*? '/') $/ {
                         my $color = '#007777';
                         my $regex = eval ~$0;
-                        for @.code.lines {
+                        for $.code.lines {
                             if $_ ~~ Any && $_ ~~ $regex {
                                 $_ = .substr(0, $/.from)
                                      ~ "<tspan style='fill: $color'>"
@@ -167,7 +167,7 @@ class Slide {
                 }
                 my $size    = $.code.lines > 9 ?? '12px' !! '24px';
                 my $spacing = $.code.lines > 9 ??     20 !!     40;
-                for @.code.lines.kv -> $i, $line {
+                for $.code.lines.kv -> $i, $line {
                     my $y = 200 + $spacing * ($i + 1);
                     $content ~= qq[    <text
      x="45"
@@ -229,9 +229,8 @@ for @pod {
 }
 
 my $gs-dir = 'generated-slides';
-run("rm -rf $gs-dir");
-# RAKUDO: 0o777 should be the default [perl #76978]
-mkdir $gs-dir, 0o777;
+shell "rm -rf $gs-dir";
+mkdir $gs-dir;
 
 for @slides.kv -> $i, $slide {
     my $slide-filename = sprintf("$gs-dir/slide%03d.svg", $i + 1);
@@ -240,10 +239,11 @@ for @slides.kv -> $i, $slide {
     $fh.close;
 }
 
-my $inkscape_executable
-    = '/Applications/Inkscape.app/Contents/Resources/bin/inkscape';
+my $inkscape_executable = 'inkscape';
 
-run "$inkscape_executable "
+shell "$inkscape_executable "
     ~ "--without-gui --file=$gs-dir/slide$_.svg "
-    ~ "--export-eps=$gs-dir/slide$_.eps 2>&1 | perl -ne 'print unless /WARNING|RANDR|locale|Language/ || /^\\s*\$/'"
+    ~ "--export-pdf=$gs-dir/slide$_.pdf"
         for map { sprintf '%03d', $_ + 1 }, ^+@slides;
+
+shell "pdfjoin -q -o talk.pdf $gs-dir/*.pdf";
