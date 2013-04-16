@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2985">
+  <g id="layer1">
+  <text
+     x="191.21327"
+     y="263.74457"
+     id="text2993"
+     xml:space="preserve"
+     style="font-size:137.49043274px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri Bold"><tspan
+       x="191.21327"
+       y="263.74457"
+       id="tspan2995">macros</tspan></text>
+  <text
+     x="718.93237"
+     y="450.22971"
+     id="text3003"
+     xml:space="preserve"
+     style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+       x="718.93237"
+       y="490.22971"
+       id="tspan3007"
+       style="font-size:32px">YAPC::Europe 2012</tspan><tspan
+       x="718.93237"
+       y="530.22974"
+       id="tspan3009"
+       style="font-size:32px">2012-08-22</tspan></text>
+  <text
+     x="258.33789"
+     y="374.16122"
+     id="text2994"
+     xml:space="preserve"
+     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri Bold"><tspan
+       x="258.33789"
+       y="374.16122"
+       id="tspan2996"
+       style="font-size:72px;font-weight:bold;-inkscape-font-specification:Calibri Bold">in rakudo</tspan></text>
+  </g>
+</svg>

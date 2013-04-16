@@ -1,0 +1,227 @@
+[scene]
+at (0, 0) size 4
+import title-slide.svg
+
+[scene]
+at (0, 0) size 4
+import masak-transition.svg
+
+[scene]
+at (2, 2) size 2
+text "What are macros?"
+
+[scene]
+at (3, 2.8) size 1
+text "Dive-through example"
+
+[scene]
+at (4, 3.0)
+code:
+    constant LOGGING = False;
+
+    sub LOG($message) {
+        if LOGGING {
+            $*ERR.say: $message;
+        }
+    }
+
+    LOG "The value is: {hard-to-compute()}";
+---
+
+[scene]
+at (5, 3.1)
+code:
+    constant LOGGING = False;
+
+    macro LOG($message) {
+        if LOGGING {
+            quasi {
+                $*ERR.say: {{{$message}}};
+            }
+        }
+    }
+
+    LOG "The value is: {hard-to-compute()}";
+---
+
+[scene]
+at (3, 0) size 2
+text "What are macros?"
+
+[scene]
+at (4, 0) size 1
+text "Macros are templates"
+
+[scene]
+at (5, 0.7) size 1
+text "Subroutines map values"
+text "Macros map code"
+
+[scene]
+at (5, 0) size 1
+import pipeline.svg
+
+[scene]
+at (5, -0.7) size 1
+import normal-meta-code.svg
+
+[scene]
+at (3, -2) size 2
+import green-bot-yellow-bot1.svg
+
+[scene]
+at (3, -2.8) size 1
+import green-bot-yellow-bot2.svg
+
+[scene]
+at (4, -3.0) size 1
+import green-bot-yellow-bot3.svg
+
+[scene]
+at (5, -3.1) size 1
+import green-bot-yellow-bot4.svg
+
+[scene]
+at (4, -4) size 1
+code:
+    Compile time:
+    BEGIN -- CHECK
+
+    Run time:
+    INIT -- START -- END
+
+    Blocks:
+    ENTER -- LEAVE
+    PRE -- POST
+
+    Loops:
+    FIRST -- NEXT -- LAST
+---
+
+[scene]
+at (-2, -2.2) size 1
+text "YAPC::EU 2011"
+text "Nice mood, nice people"
+
+[scene]
+at (-2, -3.2) size 1
+text "I somehow decided"
+text "to start thinking"
+text "about macros"
+
+[scene]
+at (-2, -3.8) size 1
+import timeline.svg
+
+[scene]
+at (-3, -1.5) size 2
+text "The shape of a routine"
+
+[scene]
+at (-3, -2.8) size 1
+code:
+    sub make-counter($init) {
+        my $count = $init;
+        return { $count++ };
+    }
+
+    my $c1 = make-counter(5);
+    my $c2 = make-counter(42);
+---
+
+[scene]
+at (-4, -3.0) size 1
+import make-counter-boxes.svg
+
+[scene]
+at (-5, -3.1) size 1
+code:
+    class Rectangle {
+        has $.width;
+        has $.height;
+
+        method area { $.width * $.height }
+
+        method circumference {
+            $.width + $.height
+            + $.width + $.height
+        }
+    }
+---
+
+[scene]
+at (-5.6, -2.5) size 0.5
+code:
+    sub make-rectangle($width, $height) {
+        return sub($_) {
+            when 'area' { $width * $height }
+            when 'circumference' {
+                $width + $height
+                + $width + $height
+            }
+        }
+    }
+---
+
+[scene]
+at (-2.5, 0) size 2
+text "Macros, bullet time"
+
+[scene]
+at (-4.0, 0.75) size 1
+import bullet-time1.svg
+
+[scene]
+at (-4.5, 0) size 1
+import bullet-time2.svg
+
+[scene]
+at (-5.0, -0.75) size 1
+import bullet-time3.svg
+
+[scene]
+at (-5.5, -1.5) size 1
+import bullet-time4.svg
+
+[scene]
+at (-2, 2) size 2
+text "There is no spoon"
+
+[scene]
+at (-3, 3) size 1
+code:
+    my $x;
+
+    role R {
+        method foo { $x }
+    }
+
+    class C does R {
+    }
+---
+
+[scene]
+at (-4, 4) size 1
+import jnthn-quote.svg
+
+[scene]
+at (0, 2.2) size 2
+text "Conclusion"
+
+[scene]
+at (0, 3.0) size 1
+text "Macros rock"
+
+[scene]
+at (0.75, 3.4) size 1
+text "Implementing macros"
+text "is interesting"
+
+[scene]
+at (1.5, 3.8) size 1
+text "Stand by"
+text "for macros"
+text "in Rakudo"
+
+[scene]
+at (0, 0) size 12

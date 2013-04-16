@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2985">
+  <defs
+     id="defs2987">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3843"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <text
+       x="206.2218"
+       y="305.05359"
+       id="text3003"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+         x="206.2218"
+         y="305.05359"
+         id="tspan3009"
+         style="font-size:32px">D1</tspan></text>
+    <path
+       d="m 55.895863,432.77183 688.208277,0"
+       id="path3049"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 187.44257,326.18683 0,83.61409"
+       id="path4268"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       x="328.427"
+       y="305.05359"
+       id="text4270"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+         x="328.427"
+         y="305.05359"
+         id="tspan4272"
+         style="font-size:32px">D2</tspan></text>
+    <path
+       d="m 309.64778,326.18683 0,83.61409"
+       id="path4274"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       x="450.6322"
+       y="304.13477"
+       id="text4282"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+         x="450.6322"
+         y="304.13477"
+         id="tspan4284"
+         style="font-size:32px">D3</tspan></text>
+    <path
+       d="m 431.85299,325.26799 0,83.61409"
+       id="path4286"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       x="572.8374"
+       y="304.13477"
+       id="text4294"
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+         x="572.8374"
+         y="304.13477"
+         id="tspan4296"
+         style="font-size:32px">D4</tspan></text>
+    <path
+       d="m 554.0582,325.26799 0,83.61409"
+       id="path4298"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       x="-95.267822"
+       y="308.44992"
+       transform="matrix(0.58123442,-0.81373616,0.81373616,0.58123442,0,0)"
+       id="text4300"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+         x="-95.267822"
+         y="308.44992"
+         id="tspan4302">macro definitions</tspan><tspan
+         x="-95.267822"
+         y="338.44992"
+         id="tspan4304">quasi-quoting</tspan></text>
+    <text
+       x="-23.703896"
+       y="408.64041"
+       transform="matrix(0.58123442,-0.81373616,0.81373616,0.58123442,0,0)"
+       id="text4306"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+         x="-23.703896"
+         y="408.64041"
+         id="tspan4310">quasi-quote</tspan><tspan
+         x="-23.703896"
+         y="438.64041"
+         id="tspan4326">placeholders</tspan></text>
+    <text
+       x="44.121624"
+       y="503.59708"
+       transform="matrix(0.58123442,-0.81373616,0.81373616,0.58123442,0,0)"
+       id="text4312"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+         x="44.121624"
+         y="503.59708"
+         id="tspan4316">hygienic macros</tspan><tspan
+         x="44.121624"
+         y="534.19342"
+         id="tspan4330"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">COMPILING::</tspan></text>
+    <text
+       x="119.95802"
+       y="609.76904"
+       transform="matrix(0.58123442,-0.81373616,0.81373616,0.58123442,0,0)"
+       id="text4318"
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+         x="119.95802"
+         y="609.76904"
+         id="tspan4322">delayed</tspan><tspan
+         x="119.95802"
+         y="639.76904"
+         id="tspan4334">declarations</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,368 @@
+The joy of
+breaking stuff
+<div class="footer">YAPC::Europe 2012
+2012-08-21</div>
+
+--
+
+hi
+i'm masak
+
+--
+
+[key]
+
+exploits
+
+--
+
+{source-of-exploits}
+
+--
+
+{not-malicious}
+
+--
+
+[cog]
+
+features
+
+--
+
+{proportional-growth}
+
+--
+
+{unification}
+
+--
+
+{hoare-quote}
+
+--
+
+{hoare-quote-2}
+
+--
+
+[sitemap]
+
+bounded contexts
+
+--
+
+{combination-of-features}
+
+--
+
+{exponential-growth}
+
+--
+
+<img src="podcasts-tweet.png" />
+
+--
+
+{layered-system}
+
+--
+
+{bounded-contexts}
+
+--
+
+[thumbs-up]
+
+positive bias
+
+--
+
+{forget-eliminate-hypotheses}
+
+--
+
+[magic]
+
+Harry Potter
+and The Methods
+of Rationality
+
+--
+
+{hpmor-game-1}
+
+--
+
+{hpmor-game-2}
+
+--
+
+{hpmor-game-3}
+
+--
+
+{hpmor-game-4}
+
+--
+
+{hpmor-game-5}
+
+--
+
+{hpmor-game-6}
+
+--
+
+{hpmor-game-7}
+
+--
+
+{hpmor-game-8}
+
+--
+
+{hpmor-game-9}
+
+--
+
+{hpmor-game-10}
+
+--
+
+{hpmor-game-11}
+
+--
+
+{need-to-train-ourselves}
+
+--
+
+[star-empty]
+
+power features
+
+--
+
+{soap-lite-method-dispatch}
+
+--
+
+{soap-lite-extract}
+
+--
+
+{simple-script-1}
+
+--
+
+{simple-script-2}
+
+--
+
+{running-simple-script}
+
+--
+
+{package-parameter}
+
+--
+
+{http-daemon-clientconn}
+
+--
+
+{two-arg-open}
+
+--
+
+{chills-down-spine}
+
+--
+
+[unlock]
+
+exploiting
+as art
+
+--
+
+[trophy]
+
+script kiddies
+and bug reports
+
+--
+
+{three-parts}
+
+--
+
+{three-parts-script-kiddie}
+
+--
+
+[bar-chart]
+
+rakudobugs
+
+--
+
+金
+
+King
+Midas
+
+--
+
+{more-rakudobug-explanation}
+
+--
+
+bug
+golfing
+
+--
+
+bug 1
+
+rock, paper, scissors
+
+--
+
+{scissors-1}
+
+--
+
+{scissors-2}
+
+--
+
+{scissors-golf-1}
+
+--
+
+{scissors-golf-2}
+
+--
+
+{scissors-golf-3}
+
+--
+
+{scissors-golf-4}
+
+--
+
+{scissors-golf-5}
+
+--
+
+bug 2
+
+catcher in the bind
+
+--
+
+{catch-1}
+
+--
+
+{catch-2}
+
+--
+
+{catch-3}
+
+--
+
+{catch-4}
+
+--
+
+{catch-5}
+
+--
+
+bug 3
+
+I am, I am!
+
+--
+
+{method-module}
+
+--
+
+bug 4
+
+anonymous WHAT?
+
+--
+
+{anonymous-named-parameter}
+
+--
+
+bug 5
+
+snowman, comet
+
+--
+
+{snowman-comet}
+
+--
+
+conclusion
+
+--
+
+software
+is hard
+
+--
+
+isolate
+features
+
+--
+
+positive
+bias
+
+--
+
+power features
+have two edges
+
+--
+
+do NOT use
+2-arg <code>open</code>
+
+--
+
+interacting features
+⇒ combinatorics of
+corner cases
+
+--
+
+it's not just a
+theoretical concern
+
+--
+
+it happens
+all the time
+
+--
+
+keep it simple
+
+--
+
+[heart]
+
+thank you

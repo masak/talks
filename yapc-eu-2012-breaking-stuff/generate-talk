@@ -1,21 +1,34 @@
 #! /usr/local/bin/nom
 
+my $n = 0;
 sub handle_slide($slide) {
     sub put_in_div($t) { "<div>\n$t\n</div>" }
     sub linebreaks_to_brs($t) { $t.lines.join("<br />\n") }
 
     sub convert_icons($t) {
         my $brackets = /'[' (\S+) ']'/;
-        my $icons = -> $/ { "<i class='icon-$0'></i>" };
-        $t.subst($brackets, $icons, :g);
+        my &icons = -> $/ { "<i class='icon-$0'></i>" };
+        $t.subst($brackets, &icons, :g);
     }
 
+    sub inline_svg($t) {
+        my $braces = /'{' (\S+) '}'/;
+        my &load_svg_file = -> $/ { slurp("svg/$0.svg") };
+        my &remove_first_two_lines = -> $t { $t.subst(/^\N+\n\N+\n/, "") };
+        my &svg = { remove_first_two_lines load_svg_file $^name };
+        $t.subst($braces, &svg, :g);
+    }
+
+    $n++;
+
     put_in_div
+    inline_svg
     linebreaks_to_brs
     convert_icons
     $slide;
 }
 
+my $t1 = now;
 my $template = slurp('template');
 my $slides = slurp('slides');
 my $divider = /\n+ '--' \n+/;
@@ -23,3 +36,4 @@ my $content = $slides.trim.split($divider).map(&handle_slide).join("\n\n");
 my $document = $template.subst('{{{content}}}', $content);
 
 spurt('talk.html', $document);
+say "Built $n slides in {(now - $t1).Num.fmt("%.2f")} seconds.";

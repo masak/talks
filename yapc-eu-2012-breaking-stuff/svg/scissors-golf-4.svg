@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="568.97302"
+   height="361.09039"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     width="568.97302"
+     height="361.09039"
+     x="0"
+     y="0"
+     id="rect2989"
+     style="fill:#000000;fill-opacity:1;stroke:none" />
+  <text
+     x="19.191977"
+     y="101.75418"
+     id="text2993"
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+       x="19.191977"
+       y="101.75418"
+       id="tspan2995">multi w(::T, T) { 0 }</tspan><tspan
+       x="19.191977"
+       y="136.75418"
+       id="tspan2997">multi w($, $) { -1 }</tspan><tspan
+       x="19.191977"
+       y="171.75418"
+       id="tspan2999">say w(|[1, 1]);</tspan><tspan
+       x="19.191977"
+       y="206.75418"
+       id="tspan3001">say w(1, 1)</tspan><tspan
+       x="19.191977"
+       y="241.75418"
+       id="tspan3003" /><tspan
+       x="19.191977"
+       y="276.75418"
+       id="tspan3005">OUTPUT: -1\n0\n</tspan></text>
+  <rect
+     width="262.03015"
+     height="59.576263"
+     rx="10"
+     ry="10"
+     x="277"
+     y="257"
+     id="rect3955"
+     style="fill:#000040;fill-opacity:1;stroke:none" />
+  <text
+     x="291"
+     y="295"
+     id="text3957"
+     xml:space="preserve"
+     style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="291"
+       y="295"
+       id="tspan3959">So, it's containers!</tspan></text>
+</svg>

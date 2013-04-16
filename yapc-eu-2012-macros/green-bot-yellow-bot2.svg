@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg3038">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3040">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         id="path3814"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path6340"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <linearGradient
+       id="linearGradient4469">
+      <stop
+         id="stop4471"
+         style="stop-color:#ffffcc;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop4473"
+         style="stop-color:#ffffcc;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="marker4068"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3832"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3928"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <g>
+  <text
+     x="150.9193"
+     y="87.103455"
+     id="text4443"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="150.9193"
+       y="87.103455"
+       id="tspan4445">compile</tspan></text>
+  <text
+     x="570.63934"
+     y="87.103455"
+     id="text4447"
+     xml:space="preserve"
+     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+       x="570.63934"
+       y="87.103455"
+       id="tspan4449"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">run</tspan></text>
+  <g
+     transform="matrix(0.5,0,0,0.5,91.897317,362.10988)"
+     id="g4603">
+    <path
+       d="m 351.91423,488.82083 a 16.539051,16.539051 0 1 1 -33.0781,0 16.539051,16.539051 0 1 1 33.0781,0 z"
+       transform="matrix(3,0,0,3,-759.19487,-1214.3082)"
+       id="path4451"
+       style="fill:#ffffaa;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 333.85973,486.43933 a 3.4379764,3.4379764 0 1 1 -6.87595,0"
+       transform="matrix(3,0,0,-3,-763.51204,1709.1625)"
+       id="path4455"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 333.85973,486.43933 a 3.4379764,3.4379764 0 1 1 -6.87595,0"
+       transform="matrix(3,0,0,-3,-725.15712,1709.1625)"
+       id="path4457"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 339.98362,497.20987 a 4.0557375,2.4979048 0 1 1 -8.11147,0"
+       transform="matrix(3,0,0,3,-760.85298,-1214.3082)"
+       id="path4461"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <g
+       id="g4593">
+      <path
+         d="m 287.58499,224.65084 0,-47"
+         id="path4575"
+         style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 247,75.5 a 4.5,4.5 0 1 1 -9,0 4.5,4.5 0 1 1 9,0 z"
+         transform="translate(45.084993,100.65084)"
+         id="path4579"
+         style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+  </g>
+  <text
+     x="45.833355"
+     y="166.66667"
+     id="text5758"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="45.833355"
+       y="166.66667"
+       id="tspan5760"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">my @values = $*IN.lines();</tspan><tspan
+       x="45.833355"
+       y="196.66667"
+       id="tspan5762"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas" /><tspan
+       x="45.833355"
+       y="226.66667"
+       id="tspan5766"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">my $sum = 0;</tspan><tspan
+       x="45.833355"
+       y="256.66669"
+       id="tspan5768"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">for @values -&gt; $value {</tspan><tspan
+       x="45.833355"
+       y="286.66669"
+       id="tspan5772"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">    $sum += $value;</tspan><tspan
+       x="45.833355"
+       y="316.66669"
+       id="tspan5774"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">}</tspan><tspan
+       x="45.833355"
+       y="346.66669"
+       id="tspan5776"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas" /><tspan
+       x="45.833355"
+       y="376.66669"
+       id="tspan5778"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">say $sum;</tspan></text>
+  <text
+     x="429.16669"
+     y="166.66667"
+     id="text5798"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="429.16669"
+       y="166.66667"
+       id="tspan5800"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">my @values = $*IN.lines();</tspan><tspan
+       x="429.16669"
+       y="196.66667"
+       id="tspan5802"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas" /><tspan
+       x="429.16669"
+       y="226.66667"
+       id="tspan5804"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">my $sum = 0;</tspan><tspan
+       x="429.16669"
+       y="256.66669"
+       id="tspan5806"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">for @values -&gt; $value {</tspan><tspan
+       x="429.16669"
+       y="286.66669"
+       id="tspan5808"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">    $sum += $value;</tspan><tspan
+       x="429.16669"
+       y="316.66669"
+       id="tspan5810"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">}</tspan><tspan
+       x="429.16669"
+       y="346.66669"
+       id="tspan5812"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas" /><tspan
+       x="429.16669"
+       y="376.66669"
+       id="tspan5814"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas">say $sum;</tspan></text>
+  <path
+     d="m 204.16667,112.5 c -19.83955,104.31073 -28.27386,208.98937 -8.33334,314.58333"
+     id="path5816"
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)" />
+  <path
+     d="m 601,105 42,124 c 0,0 46,125 -8,123 -54,-2 -122,-32 -101,-74 21,-42 28,-56 63,-53 35,3 77,8 73,73 -4,65 -7,72 -58,63 -51,-9 -73,-20 -69,-61 4,-41 44,-76 66,-81 22,-5 59,20 71,72 12,52 -18,86 -63,75 -45,-11 -90,-56 -72,-94 18,-38 70,-75 102,-48 32,27 12,138 4,155 -8,17 -37,59 -37,59"
+     id="path6528"
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Lend)" />
+  <g
+     transform="matrix(-0.16869864,0.47068117,-0.47068117,-0.16869864,807.98279,134.18325)"
+     id="g4618">
+    <path
+       d="m 351.91423,488.82083 a 16.539051,16.539051 0 1 1 -33.0781,0 16.539051,16.539051 0 1 1 33.0781,0 z"
+       transform="matrix(3,0,0,3,-445.1949,-1214.3081)"
+       id="path4485"
+       style="fill:#aaffaa;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 333.85973,486.43933 a 3.4379764,3.4379764 0 1 1 -6.87595,0"
+       transform="matrix(3,0,0,-3,-449.51208,1709.1625)"
+       id="path4487"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 333.85973,486.43933 a 3.4379764,3.4379764 0 1 1 -6.87595,0"
+       transform="matrix(3,0,0,-3,-411.15714,1709.1625)"
+       id="path4489"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 339.98362,497.20987 a 4.0557375,2.4979048 0 1 1 -8.11147,0"
+       transform="matrix(3,0,0,3,-446.853,-1214.3081)"
+       id="path4491"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <path
+       d="m 601.50076,224.65084 0,-47"
+       id="path4599"
+       style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 247,75.5 a 4.5,4.5 0 1 1 -9,0 4.5,4.5 0 1 1 9,0 z"
+       transform="translate(359.00076,100.65084)"
+       id="path4601"
+       style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  </g>
+  <text
+     x="79.907677"
+     y="706.38416"
+     transform="matrix(0.69329972,-0.72064936,0.72064936,0.69329972,0,0)"
+     id="text6908"
+     xml:space="preserve"
+     style="font-size:17.08864403px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="79.907677"
+       y="706.38416"
+       id="tspan6910"
+       style="font-weight:bold;-inkscape-font-specification:Calibri Bold">whee!</tspan></text>
+  </g>
+</svg>

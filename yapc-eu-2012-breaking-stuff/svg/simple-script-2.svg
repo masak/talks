@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="784.2417"
+   height="255.81303"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     width="784.2417"
+     height="255.81303"
+     x="0"
+     y="0"
+     id="rect2989"
+     style="fill:#000000;fill-opacity:1;stroke:none" />
+  <text
+     x="21.998253"
+     y="31.902191"
+     id="text2997"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="21.998253"
+       y="31.902191"
+       id="tspan3019"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas">package main;</tspan><tspan
+       x="21.998253"
+       y="61.902191"
+       id="tspan3162"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas"></tspan><tspan
+       x="21.998253"
+       y="91.902191"
+       id="tspan3164"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas">my $method_name = shift @ARGV</tspan><tspan
+       x="21.998253"
+       y="121.90219"
+       id="tspan3166"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan style="fill:none;stroke:none">....</tspan>or die &quot;Usage: $0 &lt;method name&gt; &lt;method argument&gt;*&quot;;</tspan><tspan
+       x="21.998253"
+       y="151.90219"
+       id="tspan3168"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas">my @arguments = @ARGV;</tspan><tspan
+       x="21.998253"
+       y="181.90219"
+       id="tspan3170"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas"></tspan><tspan
+       x="21.998253"
+       y="211.90219"
+       id="tspan3172"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Consolas;-inkscape-font-specification:Consolas">C-&gt;$method_name(@arguments);</tspan></text>
+</svg>

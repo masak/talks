@@ -2,11 +2,13 @@
 <html lang=en>
 <head>
 <meta charset=utf-8>
-<title>Macros in Rakudo</title>
+<title>The joy of breaking stuff</title>
 <link href="im-fell-dw-pica-sc.css" rel="stylesheet" type="text/css">
 <link href="font-awesome.css" rel="stylesheet" type="text/css">
 <style>
 body {
+    background: black;
+    color: white;
     font-family: "IM Fell DW Pica SC", arial, serif;
     font-size: 500%;
 }
@@ -23,10 +25,17 @@ body, html {
     display: table;
 }
 
-.slides div {
+.slides > div {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+}
+
+.footer {
+    position: absolute;
+    top: 600px;
+    left: 750px;
+    font-size: 20pt;
 }
 </style>
 <script src="jquery-1.8.0.min.js"></script>
@@ -35,13 +44,14 @@ body, html {
     $(document).ready(function() {
         var currentSlide = 0;
         var is_blanked = false;
-        var last_slide = $(".slides div").length - 1;
+        var all_slides = $(".slides > div");
+        var last_slide = all_slides.length - 1;
 
         var hide_current_slide = function() {
-            $(".slides div").slice(currentSlide, currentSlide+1).hide();
+            all_slides.eq(currentSlide).hide();
         };
         var show_current_slide = function() {
-            $(".slides div").slice(currentSlide, currentSlide+1).show();
+            all_slides.eq(currentSlide).show();
         };
         var change_slide_to = function(slide) {
             hide_current_slide();
@@ -82,7 +92,7 @@ body, html {
             b:    66
         };
 
-        $(".slides div").hide();
+        all_slides.hide();
         go_to_first_slide();
 
         $(document).keydown(function(e) {

@@ -1,0 +1,165 @@
+[scene]
+at (0, 0) size 4
+text "Autopuns"
+
+[scene]
+at (2, 2) size 2
+text "Autopuns: the meta-"
+text "programming of jokes"
+
+[scene]
+at (2.5, 0) size 2
+text "use = mention"
+text "⇓"
+text "funny"
+
+[scene]
+at (2, -2) size 1
+import multithreading1.svg
+
+[scene]
+at (3, -2) size 1
+import multithreading2.svg
+
+[scene]
+at (4, -2) size 1
+import multithreading3.svg
+
+[scene]
+at (5, -2) size 1
+import multithreading4.svg
+
+[scene]
+at (0, -2.5) size 2
+import repairshop1.svg
+
+[scene]
+at (2, -2.5) size 1
+import repairshop2.svg
+
+[scene]
+at (2, -3) size 1
+import wikipedia1.svg
+
+[scene]
+at (3, -3.5) size 1
+import wikipedia2.svg
+
+[scene]
+at (4, 2) size 1
+import authority1.svg
+
+[scene]
+at (4, 1) size 1
+import authority2.svg
+
+[scene]
+at (4, 0) size 1
+import confirmation-bias1.svg
+
+[scene]
+at (4, -1) size 1
+import confirmation-bias2.svg
+
+[scene]
+at (5, 0) size 1
+import relativism1.svg
+
+[scene]
+at (5, -1) size 1
+import relativism2.svg
+
+[scene]
+at (-2, -2) size 2
+import two-types1.svg
+
+[scene]
+at (-3, -2) size 1
+import two-types2.svg
+
+[scene]
+at (-4, -2) size 1
+import two-types3.svg
+
+[scene]
+at (-5, -2) size 1
+import two-types4.svg
+
+[scene]
+at (-5, -1) size 1
+import two-types5.svg
+
+[scene]
+at (-5, 0) size 1
+import two-types6.svg
+
+[scene]
+at (-5, 1) size 1
+import two-types7.svg
+
+[scene]
+at (-5, 2) size 1
+import two-types8.svg
+
+[scene]
+at (-2, -2.5) size 2
+import haiku1.svg
+
+[scene]
+at (-3, -3) size 2
+import haiku2.svg
+
+[scene]
+at (-4, -3.5) size 2
+import haiku3.svg
+
+[scene]
+at (-2.5, 0) size 2
+import circular1.svg
+
+[scene]
+at (-2.5, -1) size 1
+import circular2.svg
+
+[scene]
+at (-2.5, 1) size 2
+import je-ne-sais-quoi.svg
+
+[scene]
+at (-2, 2) size 2
+import mr-kinnock1.svg
+
+[scene]
+at (-3, 3) size 1
+import mr-kinnock2.svg
+
+[scene]
+at (-4, 3) size 1
+text "kerning"
+
+[scene]
+at (-4, 4) size 1
+text "keming"
+
+[scene]
+at (-2, 3) size 1
+import predetermined1.svg
+
+[scene]
+at (-2, 4) size 1
+import predetermined2.svg
+
+[scene]
+at (0, 2.5) size 2
+import incomplete1.svg
+
+[scene]
+at (0, 3.5) size 1
+import incomplete2.svg
+
+[scene]
+at (0, 0) size 0.0234375
+text "Dankeschön"
+
+[scene]
+at (0, 0) size 12

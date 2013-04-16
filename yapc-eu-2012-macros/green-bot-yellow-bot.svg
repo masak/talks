@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg3038">
+  <defs
+     id="defs3040">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3928"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <g>
+  <rect
+     width="446.55435"
+     height="238.89738"
+     rx="10"
+     ry="10"
+     x="114.44929"
+     y="58.433769"
+     id="rect3046"
+     style="fill:#cccc55;fill-opacity:1;stroke:#660000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  <rect
+     width="446.55435"
+     height="245.32925"
+     rx="10"
+     ry="10"
+     x="114.44929"
+     y="296.41232"
+     id="rect3048"
+     style="fill:#55cc55;fill-opacity:1;stroke:#660000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+  <text
+     x="253.28214"
+     y="177.10654"
+     id="text3820"
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="253.28214"
+       y="177.10654"
+       id="tspan3822"
+       style="font-weight:bold;-inkscape-font-specification:Calibri Bold">Compile mode</tspan></text>
+  <text
+     x="277.74112"
+     y="437.12347"
+     id="text3824"
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="277.74112"
+       y="437.12347"
+       id="tspan3826"
+       style="font-weight:bold;-inkscape-font-specification:Calibri Bold">Run mode</tspan></text>
+  <path
+     d="m 81.208861,56.758417 0,485.145483"
+     id="path3902"
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+  <text
+     x="-317.19794"
+     y="60.192402"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text4348"
+     xml:space="preserve"
+     style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"><tspan
+       x="-317.19794"
+       y="60.192402"
+       id="tspan4350">time</tspan></text>
+  </g>
+</svg>

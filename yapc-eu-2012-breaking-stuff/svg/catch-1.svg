@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="568.97302"
+   height="361.09039"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     width="568.97302"
+     height="361.09039"
+     x="0"
+     y="0"
+     id="rect2989"
+     style="fill:#000000;fill-opacity:1;stroke:none" />
+  <text
+     x="22.283234"
+     y="56.924343"
+     id="text2992"
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
+       x="22.283234"
+       y="56.924343"
+       id="tspan2994">use Test;</tspan><tspan
+       x="22.283234"
+       y="91.924347"
+       id="tspan2996">class A {}</tspan><tspan
+       x="22.283234"
+       y="126.92435"
+       id="tspan2998">(-&gt; &amp;c, $m {</tspan><tspan
+       x="22.283234"
+       y="161.92435"
+       id="tspan3004"><tspan style="fill:none;stroke:none">..</tspan>A.new()();</tspan><tspan
+       x="22.283234"
+       y="196.92435"
+       id="tspan3006"><tspan style="fill:none;stroke:none">..</tspan>CATCH { default { ok 1, $m } }</tspan><tspan
+       x="22.283234"
+       y="231.92435"
+       id="tspan3008">})(A, &quot;&quot;)</tspan><tspan
+       x="22.283234"
+       y="266.92435"
+       id="tspan3000" /><tspan
+       x="22.283234"
+       y="301.92435"
+       id="tspan3002">OUTPUT: (signal SEGV)</tspan></text>
+</svg>
