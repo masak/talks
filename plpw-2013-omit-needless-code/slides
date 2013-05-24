@@ -1,0 +1,38 @@
+# Omit needless code
+
+### Short, shorter, beautiful
+
+<small>by masak, for PLPW 2013</small>
+
+----
+
+a quick overview of psyde, the blogging engine
+
+----
+
+it has four pipelines:
+
+* individual posts
+* the archive page
+* the index page (last 3 posts)
+* the atom feed (last 10 posts)
+
+----
+
+a lot of repeated code. 256 lines.
+
+----
+
+most of it is plumbing. code spent describing how data should flow
+
+----
+
+also, it tries not to generate too much
+
+----
+
+takes 4 minutes to do the whole blog. 79 seconds to just do one post
+
+----
+
+before/after stats, even if they're not encouraging

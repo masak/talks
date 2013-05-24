@@ -1,0 +1,21 @@
+my $template = slurp('template.html');
+
+my $divider = /\n+ '----' \n+/;
+
+sub put_in_section($TEXT) {
+    return qq[
+    <section data-markdown>
+        <script type="text/template">
+$TEXT
+        </script>
+    </section>
+];
+}
+
+my $body = slurp('slides').split($divider).map(&put_in_section).join;
+
+my $mark = '<!-- insert body here -->';
+spurt 'index.html', $template.subst($mark, $body);
+
+my $duration = now.Num - BEGIN { now.Num };
+say "ok. it took $duration.fmt('%.2f') seconds";
