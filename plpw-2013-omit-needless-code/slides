@@ -6,33 +6,141 @@
 
 ----
 
-a quick overview of psyde, the blogging engine
+Three years ago, I wrote a blogging engine in Perl 6.
 
 ----
 
-it has four pipelines:
+I was proud the I could get it to be "just" 256 LoC.
 
-* individual posts
-* the archive page
-* the index page (last 3 posts)
-* the atom feed (last 10 posts)
+Not anymore.
 
 ----
 
-a lot of repeated code. 256 lines.
+![four use cases](four-use-cases.png)
 
 ----
 
-most of it is plumbing. code spent describing how data should flow
+![as prose](as-prose.png)
 
 ----
 
-also, it tries not to generate too much
+Where does all the repetition come from?
 
 ----
 
-takes 4 minutes to do the whole blog. 79 seconds to just do one post
+Most of it is *plumbing*.
+
+Code spent describing how data should flow.
 
 ----
 
-before/after stats, even if they're not encouraging
+Some code is spent trying to do less work.
+
+    sub nonexistent-or-older($target, :than(@sources)!) {
+        return $target.IO !~~ :e
+               || $target.IO.changed before any(@sources).IO.changed;
+    }
+
+----
+
+Takes 4 minutes to generate the whole site from scratch.
+
+79 seconds to just generate one post.
+
+----
+
+Need a nice abstraction here.
+
+How can we capture data flow?
+
+----
+
+## Introducing Pipes
+
+A `Pipe` is an object that can apply a function.
+
+Take some input; return some output.
+
+    @input
+      ==> fn
+      ==> @output
+
+----
+
+The nice thing? Composability.
+
+You just chain two pipes together!
+
+    @input
+      ==> fn1
+      ==> fn2
+      ==> @output
+
+----
+
+The result:
+
+    @posts
+      ==> publish from_template('post.html', :!titlelink, :&humandate)
+      ==> into '${url}.html';
+     
+    @posts
+      ==> publish from_template('postitem.html')
+      ==> aggregate from_template('postlist.html')
+      ==> into 'list-of-posts.html';
+     
+    @posts
+      ==> take 3
+      ==> publish from_template('post.html', :titlelink)
+      ==> aggregate from_template('index.html')
+      ==> into 'index.html';
+     
+    @posts
+      ==> take 10
+      ==> publish from_template('entry.atom')
+      ==> aggregate from_template('feed.atom')
+      ==> into 'feed.atom';
+
+----
+
+Some helper code:
+
+    # (before everything)
+    feed('posts/')
+      ==> set 'root', 'http://strangelyconsistent.org/blog/'
+      ==> convert 'body', &markdown_to_html
+      ==> my @posts;
+
+    # (utility subroutine)
+    my @monthnames = <Jan Feb Mar Apr
+                      May Jun Jul Aug
+                      Sep Oct Nov Dec>;
+     
+    sub humandate(%params) {
+        %params<created> ~~ /(\d\d\d\d) '-' (\d\d) '-' (\d\d)/;
+        given Date.new("$0-$1-$2") {
+            die "Won't publish $markdown_filename which claims it was created $_"
+                when * after Date.today;
+             return sprintf "%d %s, %d", .day, @monthnames[.month-1], .year;
+        }
+    }
+
+----
+
+Check statically, run more safely
+
+----
+
+Pipes rock.
+
+----
+
+I plan to release pipes as a standalone module Real Soon.
+
+And a small web framework that uses them.
+
+Stay tuned!
+
+----
+
+dziękuję!
