@@ -6,48 +6,331 @@
 
 ----
 
-tweet: at some point, I will build a robot
+![](build-a-bot.png)
 
 ----
 
-images of cool robots
+![](robots-1.jpg)
 
 ----
 
-i'm building an irc utility bot
+![](robots-2.jpg)
 
 ----
 
-general reminder function
+I'm building an irc utility bot
 
 ----
 
-remind about people's birthdays
+A kind of online secretary
 
 ----
 
-keep stuff at hand (links, todo lists, notes)
+General reminder function:
+
+    <masak> remind(5, "time to have dinner!")
+    <mishu> ok, reminder added.
+    ... meanwhile, 5 minutes later ...
+    <mishu> reminder: "time to have dinner!"
 
 ----
 
-optimize my life (work, travel, budgeting)
+Remind about people's birthdays
+
+    <masak> add_birthday("Emma", 1984-04-10)
+    <mishu> ok, birthday added.
+    ... on April 10 2013 ...
+    <mishu> today Emma turns 29.
 
 ----
 
-for a long time, i thought events would do this for me
+Keep stuff within link's reach (links, todo lists, notes)
+
+    <masak> find_gist("TV series")
+    <mishu> "TV series I'd like to watch with Kathy"
+    <mishu> http://gist.github.com/masak/a403d49026
 
 ----
 
-but no, it's **reactive programming**
+Optimize my life (work, travel, budgeting)
+
+    <masak> schedule()
+    <mishu> (showing this week and next week)
+    <mishu>  Mon   Tue   Wed   Thu   Fri   Sat   Sun
+    <mishu> [   ] [   ] [ C ] [ C ] [ C ] | T | | T |
+    <mishu> [ C ] [ C ] [   ] [   ] [   ] | T | | T |
+    <mishu> course: JSP, travel: PLPW, course: JavaScript, travel: YAPC::NA
 
 ----
 
-lazy <-> reactive
+To build what I wanted, I needed some underlying model.
 
 ----
 
-show people code
+I like the **KISS** programming principle.
 
 ----
 
-poe, what does poe already do for me, and what are its limits?
+("KISS" stands for "Keep It Simple, Szczebrzeszynie")
+
+----
+
+For a long time, I thought I should use events as my model...
+
+----
+
+What's an event? It's an object saying "something happened".
+
+----
+
+(You've probably heard about "events" in GUI programming. These are similar,
+but have nothing to do with the GUI.)
+
+----
+
+## Event-based programming
+
+There is no state. There is only sequences of events.
+
+----
+
+Program logic either produces events (ex nihilo or from signals outside the
+system)...
+
+...or consumes events and maybe produces new ones.
+
+----
+
+But I had trouble seeing how that'd work.
+
+----
+
+Particularly, building large state machines by hand kinda sucks.
+
+----
+
+So events probably weren't for me.
+
+----
+
+What I really needed: **reactive programming**.
+
+----
+
+This talk is really about reactive programming.
+
+----
+
+## Reactive programming
+
+But no, not yet. Hold on.
+
+----
+
+In order to talk about that, let's start with Perl 6.
+
+And lazy lists.
+
+----
+
+Lazy lists are awesome. They are in Perl 6.
+
+----
+
+Laziness means never having to say you're busy.
+
+    my @lazy := gather {    # PRODUCER
+        say "zero";
+        take 0;
+        say "one";
+        take 1;
+    };
+
+    say @lazy[0];           # CONSUMER
+    say "paused";
+    say @lazy[1];
+
+    # output: zero, 0, paused, one, 1
+
+----
+
+The best thing? They work so well with constructs we know and love from Perl 5:
+
+* `map` (list conversion)
+* `grep` (list filering)
+* `infix:<xx>` (list repetition)
+* `infix:<..>` (successor sequence)
+* `lines()` (reading a file/stream)
+* `postcircumfix:<[ ]>` (slicing an array)
+
+----
+
+And we also add a few of our own, for good measure:
+
+* `@x X @y` (cross product)
+* `@x Z @y` (zip; pairwise combine)
+* `infix:<...>` (general sequence)
+
+----
+
+Lazy is nice because the *producer* doesn't block.
+
+(It just does a little work each time you call `.next`)
+
+----
+
+Perl 6 is nice because you still write normal code.
+
+(The `take` keyword makes it easy for the code to pause.)
+
+----
+
+## Same-fringe problem
+
+        .                          .
+       / \                        / \
+      .   C                      A   .
+     / \     <= same fringe =>      / \
+    A   B                          B   C
+
+Lazy makes it easy:
+
+* Iterate through the two trees (lazily)
+* Compare two lists (using `infix:<Z>`)
+* Just join these two routines together: `samefringe = compare(iterate(T1), iterate(T2))`
+
+----
+
+Which brings us to reactive.
+
+----
+
+## Reactive programming
+
+----
+
+So, a **lazy list** is a sequence of values, and the *producer* can relax and
+not block so much.
+
+----
+
+In comparison, an **observable** is a sequence of values, and the *consumer* can
+relax and not block so much.
+
+----
+
+Why is this nice?
+
+Because often enough, *your code is the consumer*. And you care about not blocking.
+
+----
+
+Remember this use case?
+
+    <masak> remind(5, "time to have dinner!")
+    <mishu> ok, reminder added.
+    ... meanwhile, 5 minutes later ...
+    <mishu> reminder: "time to have dinner!"
+
+We're the consumer. We go do other things, and just trust that we get notified.
+
+----
+
+## Example
+
+Listening to mouse events to draw a line.
+
+----
+
+We build up the stream of events that we care about:
+
+    $button_press   = Observable->from_mouse_press($canvas)
+                                ->map(1);
+    $button_release = Observable->from_mouse_release($canvas)
+                                ->map(0);
+
+    $button_stream = $button_press->merge($button_release)
+                                  ->unshift(0);
+
+    $motion_stream = Observable->from_mouse_motion($canvas)
+                               ->map(sub{ [$_->x, $_->y] })
+                               ->unshift( [$window->get_pointer] );
+
+    # PRODUCER
+    $sketch = $button_stream->combine_latest($motion_stream)
+                            ->buffer(2, 1)
+                            ->grep(sub{ $_->[1]->[0] })
+                            ->map(sub{ [map { @{$_->[1]} } @$_]});
+
+----
+
+## And finally
+
+Now `$sketch` is exactly what we want. We just subscribe to this stream of
+values, and add logic to it.
+
+    # CONSUMER
+    $sketch->subscribe(sub{
+        my ($x0, $y0, $x1, $y1) = @{$_[0]};
+        draw_line($x0, $y0, $x1, $y1);
+    });
+
+----
+
+Comparing lazy and reactive:
+
+    LAZY                        REACTIVE
+
+    return the next value       on_next
+    die with error              on_error
+    end of stream of values     on_completed
+    
+    (producer-orienter)         (consumer-oriented)
+
+----
+
+The big problem with laziness is still *blocking*. Producer does something
+heavy, and the whole program comes to a halt.
+
+What's the big problem with reactive?
+
+----
+
+The big problem with reactive, I'd say, is that you can say "come back to me
+when `<interesting thing>` happens", the observer says "OK"...
+
+...and then nothing happens.
+
+----
+
+Solution: timeouts.
+
+Basically, the clock is an observable too
+
+----
+
+## Workflows
+
+The goal is (just like with gather) to write all the code *in one place*,
+without scattering it.
+
+The "meanwhile, later" thing with lazy programming is the `take`.
+
+The same thing with reactive is subscribing to an observable.
+
+----
+
+## Testability
+
+The *scheduler* that instruments the observable and calls the appropriate
+methods on it, can be replaced by anything you like.
+
+Result: you can control time and the environment. Very testable.
+
+----
+
+## Live demo?
+
+----
+
+## Thank you
