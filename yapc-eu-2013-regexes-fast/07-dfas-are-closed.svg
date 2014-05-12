@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="800"
+   height="600"
+   id="svg2985">
+  <defs
+     id="defs2987">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         id="path3806"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     x="275.45184"
+     y="311.54297"
+     id="text5194"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="275.45184"
+       y="311.54297"
+       id="tspan5196">NFA ~ NFA</tspan></text>
+  <text
+     x="595.03644"
+     y="311.54297"
+     id="text5206"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="595.03644"
+       y="311.54297"
+       id="tspan5208">NFA</tspan></text>
+  <text
+     x="275.45184"
+     y="438.84265"
+     id="text5198"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="275.45184"
+       y="438.84265"
+       id="tspan5200">NFA | NFA</tspan></text>
+  <text
+     x="595.03644"
+     y="438.84265"
+     id="text5210"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="595.03644"
+       y="438.84265"
+       id="tspan5212">NFA</tspan></text>
+  <text
+     x="275.45184"
+     y="184.24327"
+     id="text5202"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="275.45184"
+       y="184.24327"
+       id="tspan5204">[NFA]*</tspan></text>
+  <text
+     x="595.03644"
+     y="184.24327"
+     id="text5214"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="595.03644"
+       y="184.24327"
+       id="tspan5216">NFA</tspan></text>
+  <text
+     x="469.93924"
+     y="210.0981"
+     id="text5733"
+     xml:space="preserve"
+     style="font-size:134.38627625px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="469.93924"
+       y="210.0981"
+       id="tspan5735">⇒</tspan></text>
+  <text
+     x="469.93924"
+     y="332.05655"
+     id="text5737"
+     xml:space="preserve"
+     style="font-size:134.38627625px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="469.93924"
+       y="332.05655"
+       id="tspan5739">⇒</tspan></text>
+  <text
+     x="469.93924"
+     y="457.57584"
+     id="text5741"
+     xml:space="preserve"
+     style="font-size:134.38627625px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Sans Bold"><tspan
+       x="469.93924"
+       y="457.57584"
+       id="tspan5743">⇒</tspan></text>
+</svg>

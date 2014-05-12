@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="862.85712"
+   height="1211.4286"
+   id="svg2">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(85.714287,76.209244)"
+     id="layer1">
+    <text
+       x="51.428574"
+       y="66.647903"
+       id="text2985"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Monospace;-inkscape-font-specification:Monospace"><tspan
+         x="51.428574"
+         y="66.647903"
+         id="tspan3029"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">With all posts</tspan><tspan
+         x="51.428574"
+         y="116.6479"
+         id="tspan3078"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    render each as a blog post</tspan><tspan
+         x="51.428574"
+         y="166.6479"
+         id="tspan3080"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    each into &lt;url&gt;.html</tspan><tspan
+         x="51.428574"
+         y="216.6479"
+         id="tspan3082"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique" /><tspan
+         x="51.428574"
+         y="266.64789"
+         id="tspan3084"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">With all posts</tspan><tspan
+         x="51.428574"
+         y="316.64789"
+         id="tspan3031"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    render each as a post item</tspan><tspan
+         x="51.428574"
+         y="366.64789"
+         id="tspan3035"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    aggregate them together</tspan><tspan
+         x="51.428574"
+         y="416.64789"
+         id="tspan3037"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    into list-of-posts.html</tspan><tspan
+         x="51.428574"
+         y="466.64789"
+         id="tspan3039"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique" /><tspan
+         x="51.428574"
+         y="516.64789"
+         id="tspan3003"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">With all posts</tspan><tspan
+         x="51.428574"
+         y="566.64789"
+         id="tspan3102"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    just take the last 3</tspan><tspan
+         x="51.428574"
+         y="616.64789"
+         id="tspan3104"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    render each as a blog post</tspan><tspan
+         x="51.428574"
+         y="666.64789"
+         id="tspan3106"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    aggregate them together</tspan><tspan
+         x="51.428574"
+         y="716.64789"
+         id="tspan3108"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    into index.html</tspan><tspan
+         x="51.428574"
+         y="766.64789"
+         id="tspan3015"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique" /><tspan
+         x="51.428574"
+         y="816.64789"
+         id="tspan3130"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">With all posts</tspan><tspan
+         x="51.428574"
+         y="866.64789"
+         id="tspan3132"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    just take the last 10</tspan><tspan
+         x="51.428574"
+         y="916.64789"
+         id="tspan3134"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    render each as an atom entry</tspan><tspan
+         x="51.428574"
+         y="966.64789"
+         id="tspan3136"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    aggregate them together</tspan><tspan
+         x="51.428574"
+         y="1016.6479"
+         id="tspan3027"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;font-family:Garuda;-inkscape-font-specification:Garuda Bold Oblique">    into feed.atom</tspan></text>
+    <path
+       d="m -31.428574,-49.066387 a 27.142857,27.142857 0 1 1 -54.285713,0 27.142857,27.142857 0 1 1 54.285713,0 z"
+       id="path3939"
+       style="fill:#7e7e7e;fill-opacity:1;stroke:none" />
+    <path
+       d="m -31.428574,-49.066387 a 27.142857,27.142857 0 1 1 -54.285713,0 27.142857,27.142857 0 1 1 54.285713,0 z"
+       transform="translate(808.57143,1157.1429)"
+       id="path3941"
+       style="fill:#7e7e7e;fill-opacity:1;stroke:none" />
+  </g>
+</svg>

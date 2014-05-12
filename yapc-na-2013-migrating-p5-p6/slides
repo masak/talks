@@ -1,0 +1,715 @@
+# Migrating Your Code
+
+## ...from Perl 5 to Perl 6
+
+masak &mdash; YAPC::NA 2013 &mdash; 2013-06-03
+
+----
+
+Hi, I'm masak.
+
+&nbsp;
+
+I use Perl 5. I use Perl 6.
+
+----
+
+Premise: you can mechanically translate most Perl 5 to Perl 6.
+
+* Change the sigils in array/hash indexing
+* Change the spelling of some of the operators (`!!` -> `?`, `&` -> `+&`, etc)
+* Ease into the nicer regex syntax
+* Use `.comb` instead of `split` and `m//g` in many cases
+* Take advantage of lazy lists where applicable
+* Do line-by-line reading with a `for` loop instead of a `while` loop
+* Uphold the difference between `Str` and `Buf` a bit better
+
+----
+
+But to really get the advantages of Perl 6, you need to step back and look at
+your program.
+
+&nbsp;
+
+It really helps if you know Perl 6's strengths, and exploit them.
+
+* Prefer immutability
+* Grammars are your friend
+* Small subroutines for the win
+* Metaoperators are sometimes a useful shorthand
+* Freely use the method form of things
+* Exploit that you can write things in shorthand or longhand
+* Take advantage of `given`, smartmatching, and `Whatever`
+* Use FP solutions where it makes sense
+* Enjoy new methods like `.trans`, and `.classify`
+
+----
+
+Eventual conclusion:
+
+&nbsp;
+
+Perl 6 is insane. We hope you'll like it too.
+
+----
+
+Let's begin.
+
+----
+
+## Balanced brackets
+
+*For a string containing `[` and `]` characters, find out whether they all
+balance; that is, all the `[` and `]` characters match up pairwise, and in that
+order.*
+
+----
+
+Let's start with this Perl 5 code:
+
+    use 5.10.0;  # for given ... when construct
+    sub balanced {
+        my $depth = 0;
+        for (split //, shift) {
+            when('[') { ++$depth }
+            when(']') { return if --$depth < 0 }
+        }
+        return !$depth
+    }
+
+----
+
+A slightly more imperative solution is to "cast out `[]`s" and see if by doing so
+we get an empty string.
+
+    sub balanced {
+        $_ = shift;
+        1 while s/\[\]//g;  # om nom nom
+        return $_ eq '';
+    }
+
+----
+
+Or we can just go the whole hog and try to fit all the nesting behavior into a
+single regular expression.
+
+    use 5.10.0;  # for '++' non-backtrack behavior 
+    sub balanced {
+        my $_ = shift;
+        s/(\[(?:[^\[\]]++|(?1))*\])//g;
+        return ! /[\[\]]/;
+    }
+
+----
+
+The first Perl 6 version looks almost like the first Perl 5 version.
+We use a signature, and we prefer `comb` to `split`.
+
+    sub balanced($s) {
+        my $depth = 0;
+        for $s.comb {
+            when "[" { ++$depth }
+            when "]" { return False if --$depth < 0 }
+        }
+        return !$depth;
+    }
+
+----
+
+If we want to test the string by eating it, we have to take a copy first with
+`is copy`.
+
+    sub balanced($_ is copy) {
+        1 while s:g/'[]'//;
+        return $_ eq '';
+    }
+
+----
+
+We can get the whole nesting thing to fit in a single regex, too... almost.
+
+    sub balanced($s) {
+        my $r = / '[' <$r>? ']' <$r>? /;
+        return ?($s ~~ / ^ <$r> $ /);
+    }
+
+Rakudo's regex engine doesn't implement it yet, but we should eventually be
+able to get away with this, even:
+
+    sub balanced($s) {
+        return ?($s ~~ / ^ ('[' <~~0>? ']')* <~~0>? $ /);
+    }
+
+----
+
+Of course, the immediate solution that jumps out to a sixer would be to use a
+grammar. It's a nested structure, so why not?
+
+    grammar Brackets::Balanced {
+
+        token TOP { ^ <balanced>? $ }
+
+        token balanced { '[' <balanced>? ']' <balanced>? }
+
+    }
+
+Writing a grammar for this kind of thing (or JSON, or XML) could almost be
+considered a rite of passage for new Perl 6 programmers.
+
+    say ?Brackets::Balanced.parse("[][]");  # True
+
+    say ?Brackets::Balanced.parse("][");    # False
+
+----
+
+## Caesar cipher
+
+*Translate each letter by rotating it `k` steps forward in the alphabet. For `k
+= 1`, 'a' goes to 'b', 'b' goes to 'c' ... 'z' goes to 'a'.*
+
+*ROT13 is the `k = 13` special case of this.*
+
+----
+
+The Perl 5 solution is unceremonious. Pull out the letters, transform them,
+join them back together.
+
+    sub encrypt {
+        my ($_, $k) = @_;
+        join('', map(
+            chr(((ord(uc $_) - 65 + $k) % 26) + 65),
+            /([a-z])/gi)
+        );
+    }
+
+----
+
+Perl 6 doesn't actually have the expression form of map. Frankly, to me as a
+sixer, it looks *wrong*. So I would probably start by doing a simple
+transformation of the Perl 5.
+
+    sub encrypt {
+        my ($_, $k) = @_;
+        join('', map {
+            chr(((ord(uc $_) - 65 + $k) % 26) + 65)
+        } /([a-z])/gi);
+    }
+
+----
+
+This can be readily transformed to perl 6. (Need the comma after the block, and
+prefer `comb` to global match.
+
+    sub encrypt($_, $k) {
+        join('', map {
+            chr(((ord(uc $_) - 65 + $k) % 26) + 65)
+        }, .comb(rx:i/<[a..z]>/));
+    }
+
+----
+
+But that block there is quite a mouthful. I might pull it out into its own
+local routine for clarity/separation.
+
+    sub encrypt($_, $k) {
+        sub rotate-letter($letter) {
+            chr(((ord(uc $letter) - 65 + $k) % 26) + 65)
+        }
+        join('', map &rotate-letter, .comb(rx:i/<[a..z]>/));
+    }
+
+----
+
+But I basically don't like the calculation with numbers there. I know what the
+numbers do, and I could put names to them...
+
+    constant ORD_A = ord('A');
+    constant ALPHABET_LENGTH = ('A'..'Z').elems;
+
+    sub encrypt($string, $key) {
+        sub rotate-letter($letter) {
+            chr(((ord(uc $letter) - ORD_A + $key) % ALPHABET_LENGTH)
+                + ORD_A)
+        }
+        join('', map &rotate-letter, $string.comb(rx:i/<[a..z]>/));
+    }
+
+----
+
+...but I would prefer it if I could just abstract away the whole modular
+arithmetic bit of it all. It's not significant.
+
+    my @alpha = 'A'..'Z';
+    my %indices = hash @alpha Z=> 0..*;
+
+    sub encrypt($string, $key) {
+        sub rotate-letter($letter) {
+            my $index = %indices{$letter};
+            @alpha.rotate($key)[$index];
+        }
+        join('', map &rotate-letter, $string.comb(rx:i/<[a..z]>/));
+    }
+
+Note that `Z=>` helps us get rid of a `map` here. It's a quick-and-easy way to
+say "combine these keys and values".
+
+----
+
+At this point, we might look at the `comb` and the `join`, and decide they're
+not essential either. All we're doing is a bunch of substitutions.
+
+    my @alpha = 'A'..'Z';
+    my %indices = hash @alpha Z=> 0..*;
+
+    sub encrypt($string, $key) {
+        sub rotate-letter($letter) {
+            my $index = %indices{$letter};
+            @alpha.rotate($key)[$index];
+        }
+        $string.subst( rx:i/<[a-z]>/, &rotate-letter, :g );
+    }
+
+----
+
+Or we could use the assignment form of substitution:
+
+    my @alpha = 'A'..'Z';
+    my %indices = hash @alpha Z=> 0..*;
+
+    sub encrypt($string is copy, $key) {
+        sub rotate-letter($letter) {
+            my $index = %indices{$letter};
+            @alpha.rotate($key)[$index];
+        }
+        $string ~~ s:i:g[<[a..z]>] = rotate-letter($/);
+        $string;
+    }
+
+Since we're actually clobbering `$string` now, we need to take a copy of it
+with `is copy`.
+
+----
+
+But wait! Even `subst` or smartmatching is doing way too much work here.
+There's a nice method `.trans` which does parallel substitutions on strings:
+
+    my @alpha = 'A'..'Z';
+
+    sub encrypt($string, $key) {
+        $string.trans(
+            @alpha Z=> @alpha.rotate($key)
+        );
+    }
+
+Ah, yes. We've arrived.
+
+----
+
+## Command-line arguments
+
+*Take the arguments passed in from the command line, and put them into
+variables.*
+
+----
+
+Perl 5:
+
+    my $USAGE = "$0 <source> <destination>";
+    die $USAGE
+        unless @ARGV == 2;
+
+    my $source      = $ARGV[0];
+    my $destination = $ARGV[1];
+
+    # ...
+
+----
+
+In Perl 6, `@ARGV` has been moved off to a dynamic variable `@*ARGS`. So we can
+do it the same way if we want:
+
+    my $USAGE = "$*PROGRAM_NAME <source> <destination>";
+    die $USAGE
+        unless @*ARGS == 2;
+
+    my $source      = @*ARGS[0];
+    my $destination = @*ARGS[1];
+
+    # ...
+
+----
+
+But most people tend to use `MAIN`, a kind of love-child of routine signatures
+and the `GetOpt` modules:
+
+    sub MAIN($source, $destination) {
+        # ...
+    }
+
+And yes, it auto-generates the usage for you:
+
+    $ perl6 mycopy
+    Usage:
+      mycopy <source> <destination> 
+
+----
+
+In fact, the more elaborate you get in the signature, the more falls out of the
+usage line:
+
+    sub MAIN(Str :$source!, Str :$destination!) {
+    }
+
+    $ perl6 mycopy
+    Usage:
+      mycopy --source=<Str> --destination=<Str>
+
+----
+
+...and `MAIN` could be divided into several `multi` declarations, and we'd get
+nice usage lines for all of them:
+
+    multi MAIN($commit?, *@paths, Bool :$q) { ... }
+    multi MAIN($commit?, *@paths, Bool :$patch!) { ... }
+    multi MAIN($commit?, Bool :$q, Bool :$soft! ) { ... }
+    multi MAIN($commit?, Bool :$q, Bool :$mixed!) { ... }
+    multi MAIN($commit?, Bool :$q, Bool :$hard! ) { ... }
+
+    $ perl6 git-reset --help
+    Usage:
+      git-reset [-q] [<commit>] [<paths> ...] 
+      git-reset --patch [<commit>] [<paths> ...] 
+      git-reset --soft [-q] [<commit>] 
+      git-reset --mixed [-q] [<commit>] 
+      git-reset --hard [-q] [<commit>] 
+
+----
+
+## Dot product
+
+*Two lists of numbers, A and B. Calculate `A_1 * B_1 + ... + A_n * B_n`.*
+
+----
+
+Perl 5:
+
+    sub dotprod {
+        my ($vec_a, $vec_b) = @_;
+        die "the vectors must have the same length"
+            unless @$vec_a == @$vec_b;
+
+        my $sum = 0;
+        $sum += $vec_a->[$_] * $vec_b->[$_] for 0..$#$vec_a;
+        return $sum;
+    }
+
+----
+
+In Perl 6, we can certainly do the same:
+
+    sub dotprod(@vec_a, @vec_b) {
+        die "the vectors must have the same length"
+            unless @vec_a == @vec_b;
+
+        my $sum = 0;
+        $sum += @vec_a[$_] * @vec_b[$_] for 0..@vec_a.end;
+        return $sum;
+    }
+
+----
+
+But that multiplication there is screaming for a zippy for loop:
+
+    sub dotprod(@vec_a, @vec_b) {
+        die "the vectors must have the same length"
+            unless @vec_a == @vec_b;
+
+        my $sum = 0;
+        for @vec_a Z @vec_b -> $a, $b {
+            $sum += $a * $b;
+        }
+        return $sum;
+    }
+
+----
+
+Or just multiply while zipping, and then loop:
+
+    sub dotprod(@vec_a, @vec_b) {
+        die "the vectors must have the same length"
+            unless @vec_a == @vec_b;
+
+        my $sum = 0;
+        for @vec_a Z* @vec_b {
+            $sum += $_;
+        }
+        return $sum;
+    }
+
+----
+
+A simpler way to check that the lengths match up is to use a (strict) hyper
+operator instead of the zip operator:
+
+    sub dotprod(@vec_a, @vec_b) {
+        my $sum = 0;
+        for @vec_a »*« @vec_b {
+            $sum += $_;
+        }
+        return $sum;
+    }
+
+----
+
+Or, shorter, take that list of multiples, and just *reduce* it:
+
+    my $sum = reduce( &infix:<+>, @vec_a »*« @vec_b );
+    return $sum;
+
+----
+
+Or, even better, use the reduction metaoperator:
+
+    return [+] @vec_a »*« @vec_b;
+
+Nice!
+
+----
+
+## Last Friday of each month
+
+*For a given year, print out the last Friday of each month.*
+
+----
+
+The Perl 5 solution.
+
+    use strict;
+    use DateTime;
+    use feature qw<say>;
+     
+    for my $month (1..12) {
+        my $dt = DateTime->last_day_of_month(
+            year => $ARGV[ 0 ],
+            month => $month
+        );
+        while ( $dt->day_of_week != 5 ) {
+            $dt->subtract( days => 1 );
+        }
+        say $dt->ymd;
+    }
+
+`DateTime` is nice.
+
+----
+
+A Perl 6 solution:
+
+    sub MAIN (Int $year = Date.today.year) {
+        my @fri;
+        for Date.new("$year-01-01") .. Date.new("$year-12-31") {
+            @fri[.month] = .Str if .day-of-week == 5;
+        }
+        .say for @fri[1..12];
+    }
+
+I seem to recall having to fix ranges of dates in Rakudo before that one
+worked.
+
+----
+
+A solution without a result array to store things in:
+
+    sub MAIN (Int $year = Date.today.year) {
+        say ~.value.reverse.first: *.day-of-week == 5
+            for classify *.month,
+                Date.new("$year-01-01") .. Date.new("$year-12-31");
+    }
+
+----
+
+## Brainf\*\*\* interpreter
+
+*The name of the language has been bleeped because I understand that's
+fashionable in these parts.*
+
+&nbsp;
+
+Example "Hello world!" program:
+
+    ++++++++++
+    [>+++++++>++++++++++>+++>+<<<<-]
+    >++.>+.+++++++..+++.>++.<<+++++++++++++++.>.
+    +++.------.--------.>+.>.
+
+----
+
+Here's a Perl 5 variant:
+
+    our @code; # The program's code split into characters.
+    our @mem;  # The program's memory tape.
+    our @loop_stack; # The code index of each "["-loop we're
+                     # currently inside.
+    our $m;    # The index of the current command in @code.
+    our $c;    # The index of the current cell in @mem.
+     
+    our %commands = (
+        '>' => sub { ++$c },
+        '<' => sub { --$c },
+        '+' => sub { ++$mem[$c] },
+        '-' => sub { --$mem[$c] },
+        '.' => sub { print chr $mem[$c] },
+        ',' => sub { $mem[$c] = get_input() },
+        '[' => sub { $mem[$c] ? push(@loop_stack, $c) : jump() },
+        ']' => sub { $c = pop(@loop_stack) - 1 }
+    );
+
+----
+
+Need two helper subroutines:
+
+    {
+        my $input_buffer = '';
+        sub get_input {
+            $input_buffer or $input_buffer = <STDIN>;
+            return defined($input_buffer)
+                ? ord substr($input_buffer, 0, 1, '')
+                : my $EOF = -1;
+        }
+    }
+     
+    sub jump {
+        my $depth = 0;
+        until ($depth < 0) {
+            ++$cmd;
+            $cmd < @code or die "unbalanced code";
+            $code[$cmd] eq '[' and ++$depth;
+            $code[$cmd] eq ']' and --$depth;
+        }
+    }
+
+----
+
+And then, finally, the main runloop:
+
+    while ($c < @code) {
+        if (exists $commands{$code[$cmd]}) {
+            $commands{$code[$cmd]}->();
+        }
+        ++$cmd;
+    }
+
+----
+
+Now, the Perl 6 solution. First off, everything is off in a class, nicely
+encapsulated:
+
+    class BFInterpreter {
+        has @!code;
+        has @!mem;
+        has @!loop_stack;
+        has @!input_buffer;
+        has $!m;
+        has $!c;
+     
+        method new (Str $code) {
+            BFInterpreter.bless(*,code => $code.lines.comb);
+        }
+
+        # private method jump, on next slide
+
+        # method run, on slide after that
+    }
+
+----
+
+Private helper method `!jump`:
+
+    method !jump {
+        my $depth = 1;
+        while $depth {
+            $!c++;
+            die "unbalanced code" if $!c >= @!code.elems;
+            $depth++ if @!code[$!c] eq '[';
+            $depth-- if @!code[$!c] eq ']';
+        }
+    }
+
+This is actually just the "Balanced brackets" algorithm from before. Not so
+strange, because we're looking for the matching closing bracket.
+
+----
+
+And finally, the runloop:
+
+    method run {
+        $!c = 0;
+        $!m = 0;
+        while $!c < @!code {
+            given @!code[$!c] {
+                when '>' { $!m++ }
+                when '<' { $!m-- }
+                when '+' { @!mem[$!m]++ }
+                when '-' { @!mem[$!m]-- }
+                when '.' { @!mem[$!m].chr.print }
+                when ',' {
+                    @!input_buffer = $*IN.get.comb unless @!input_buffer.elems > 0;
+                    @!mem[$!m] = @!input_buffer.shift;
+                }
+                when '[' {
+                    @!mem[$!m] == 0 ?? self!jump !! @!loop_stack.push($!c);
+                }
+                when ']' {
+                    my $b = @!loop_stack.pop - 1;
+                    $!c = $b if @!mem[$!m] > 0;
+                }
+            }
+        $!c++;
+        }
+    }
+
+----
+
+Of course, all this is just a branch structure in a while loop, so we could
+write things much more compactly if we wanted:
+
+    ( -> $c, @a? {
+        my ($ptr, $pc, $l, @p) = 0, 0, 0, $c.comb;
+        while @p[$pc++] {
+            {
+                '[' => { @a[$ptr]
+                            ?? ($l = $pc - 1)
+                            !! (1 until @p[$pc++] eq ']') },
+                ']' => { $pc = $l },
+                '>' => { $ptr++ },
+                '<' => { $ptr-- },
+                '+' => { @a[$ptr]++ },
+                '-' => { @a[$ptr]-- },
+                '.' => { print(chr(@a[$ptr])) }
+            }{$^i}()
+        }
+    })($program);
+
+Sure, it's missing the input operation; but with all the whitespace removed it
+does fit (along with a bf program literal) in one single IRC line that can be
+sent to `p6eval` to show `"Hello world!"`.
+
+----
+
+## In conclusion
+
+* Perl 6 is nice and weird
+* With great pasta comes great responsibility
+* By all means, use the power features
+* But do it sparingly, I guess
+
+----
+
+## Remember...
+
+Always code as if the next person to read your code has an axe, an anger
+management problem, and knows where you live.
+
+----
+
+kthx

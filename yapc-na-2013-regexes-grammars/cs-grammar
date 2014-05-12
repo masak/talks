@@ -1,0 +1,83 @@
+# s/(?<=(?:new) )([A-Z]\w+)/\\Hcn{$1}/g;
+# s/(?<=(?:class) )([A-Z]\w+)/\\Hcn{$1}/g;
+# s/(?<=(?:public) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+# s/(?<=(?:private) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+# s/(?<=(?:protected) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+# s/(?<=(?:interface) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+# s/(^\s*)([A-Z]\w+\b\??)(?!\s*=)/$1\\Hcn{$2}/gm;
+# s/(?<=<)([A-Z]\w+\??)/\\Hcn{$1}/g;
+# s/(?<=\()([A-Z]\w+\b\??)(?!,)(?!\))/\\Hcn{$1}/g;
+# s/(?<=\( )([A-Z]\w+\b\??)(?!,)(?!\))/\\Hcn{$1}/g;
+# s/(?<=,)([A-Z]\w+\b\??)(?!,)(?!\))(?!\s*=)/\\Hcn{$1}/g;
+# s/(?<=, )([A-Z]\w+\b\??)(?!,)(?!\))(?!\s*=)/\\Hcn{$1}/g;
+# s/(?<=:)([A-Z]\w+)/\\Hcn{$1}/g;
+# s/(?<=: )([A-Z]\w+)/\\Hcn{$1}/g;
+# s/\b(?<!\.)([A-Z]\w+)(?=\.)/\\Hcn{$1}/g;
+# s/\b([A-Z]\w+)(?=<\w+>(?!\())/\\Hcn{$1}/g;
+
+use Test;
+
+my @keywords = <
+    as ascending break catch class descending else false for foreach from
+    get if in interface internal let new null orderby override
+    private protected public return select set static this throw
+    true try using var virtual void where
+>;
+my @types = <bool int long string>;
+my @keywords_types = @keywords, @types;
+
+grammar CS::Syntax {
+    regex TOP { ^ <thing>+ $ }
+
+    regex thing {
+        <comment> || <string> || <number> || <keyword> || .
+    }
+
+    regex comment {
+        | '/*' [ <!before '*/'> . ]* '*/'
+        | '//' \N* \n
+    }
+
+    regex string {
+        '"' <-["]>* '"'
+    }
+
+    regex number {
+        \d+ [\. \d*]?
+    }
+
+    regex keyword {
+        «(\w+)» <?{ $0 eq any(@keywords_types) }>
+    }
+}
+
+sub color($text) {
+    my $actions = class {
+        method TOP($/) { make $<thing>».ast.join }
+        method thing($/) {
+            make $<comment> ?? $<comment>.ast
+                !! $<string> ?? $<string>.ast
+                !! $<number> ?? $<number>.ast
+                !! $<keyword> ?? $<keyword>.ast !! ~$/
+        }
+        method comment($/) { make "\\comment\{$/\}" }
+        method string($/) { make "\\value\{$/\}" }
+        method number($/) { make "\\value\{$/\}" }
+        method keyword($/) { make "\\keyword\{$/\}" }
+    };
+
+    my $result = CS::Syntax.parse($text, :$actions).ast;
+    die "Didn't match"
+        unless $result;
+
+    return $result;
+}
+
+is color('/* bla bla bla */'), '\comment{/* bla bla bla */}', 'C comment';
+is color("// lorem ipsum\nabc()"), "\\comment\{// lorem ipsum\n\}abc()", 'C++ comment';
+is color('print("OH HAI")'), 'print(\value{"OH HAI"})', 'string';
+is color('print(42)'), 'print(\value{42})', 'number without decimals';
+is color('print(1.23)'), 'print(\value{1.23})', 'number with decimals';
+is color('return 42;'), '\keyword{return} \value{42};', 'keywords';
+
+done;

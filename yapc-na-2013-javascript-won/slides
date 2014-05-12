@@ -1,0 +1,369 @@
+# JavaScript
+
+## has already won
+
+masak &mdash; YAPC::NA 2013 &mdash; 2013-06-05
+
+----
+
+It doesn't matter what we do at this point.
+
+----
+
+JavaScript has already won.
+
+----
+
+Most people just haven't realized it yet.
+
+----
+
+It's fine. They will.
+
+----
+
+hi.
+
+&nbsp;
+
+I'm masak.
+
+----
+
+Pretend that what I'm going to tell you now is absolutely true.
+
+----
+
+15 years ago...
+
+----
+
+...I was visited by my future self.
+
+                      +-------------------------+
+                      |                         |
+                      v                         |
+                ------X-------------------------------
+
+                    1998         2013         2028
+
+----
+
+What do you talk about with your future self?
+
+&nbsp;
+
+* Flying cars?
+* *Aliens?*
+* Computing technology?
+
+----
+
+In 2028, the web browser has been refined and reduced to its essence.
+
+----
+
+<img src="kitten1.jpg">
+
+----
+
+<img src="kitten2.jpg">
+
+----
+
+<img src="kitten3.jpg">
+
+----
+
+<img src="kitten4.jpg">
+
+----
+
+<img src="kitten5.jpg">
+
+----
+
+And JavaScript will power it all.
+
+&nbsp;
+
+The most used language in the *world*.
+
+----
+
+What, no!
+
+&nbsp;
+
+JavaScript is
+
+* ugly
+* slow
+* useless
+* not even a real language
+* just... *wrong*
+
+----
+
+Well, the slow part has been taken care of.
+
+&nbsp;
+
+* 2008: v8, Chrome
+* JIT, inlining, caching
+* they take a slow language and make it fast
+* Firefox and IE soon thereafter
+
+----
+
+Pretend you were an evil overlord. You want everyone to use your evil language.
+
+&nbsp;
+
+First problem: get them to download and install it.
+
+----
+
+Every single web browser currently deployed on a computing device (except Lynx)
+contains a JavaScript engine.
+
+----
+
+There's lots of computing devices.
+
+&nbsp;
+
+* desktop computers
+* smartphones
+* notebooks, tablets
+* some TVs
+
+----
+
+JavaScript is winning by ubiquity
+
+----
+
+JavaScript minification
+
+&nbsp;
+
+Golfing for profit!
+
+----
+
+JavaScript is the assembly language of the web
+
+----
+
+substrate
+
+&nbsp;
+
+targeting JavaScript
+
+----
+
+> *"JavaScript is an assembly language. The JavaScript + HTML generate is like a
+> .NET assembly. The browser can execute it, but no human should really care
+> what’s there."* &mdash; Erik Meijer
+
+&nbsp;
+
+Assembly language, or bytecode. Like the P-Code Pascal compilers use, or JVM
+bytecode.
+
+----
+
+> *"I think it is a little closer to the mark to say that JavaScript is the VM of
+> the web. We had always thought that Java's JVM would be the VM of the web,
+> but it turns out that it's JavaScript."* &mdash; Douglas Crockford
+
+----
+
+## Google Web Toolkit
+
+*Toolkit that compiles Java to JavaScript*
+
+----
+
+## CoffeeScript
+
+*A programming language... that transcompiles to JavaScript*
+
+----
+
+## asm.js
+
+*an extraordinarily optimizable, low-level subset of JavaScript*
+
+----
+
+## OdinMonkey
+
+*An asm.js optimization module for Firefox's JavaScript engine*
+
+----
+
+## Emscripten
+
+*An LLVM-to-JavaScript Compiler*
+
+----
+
+But that's just the web.
+
+&nbsp;
+
+Surely JavaScript won't take over the world just by completely dominating the
+web?
+
+----
+
+well...
+
+----
+
+* Firefox GUI layer
+* OS X Dashboard widgets
+* Vista Gadgets, Yahoo's Widgets, Google's Desktop Gadgets
+* Adobe's AIR
+* scripting Photoshop
+* scripting Illustrator
+* mobile development (jQuery Mobile, PhoneGap, Sencha Touch)
+* Windows 8 app development
+
+----
+
+## Firefox OS
+
+*designed to allow HTML5 applications to communicate directly with the device's
+hardware using JavaScript and bridge open web APIs*
+
+----
+
+## Atwood's Law
+
+any application that *can* be written in JavaScript,
+
+*will* eventually be written in JavaScript
+
+----
+
+Case in point: js-git
+
+&nbsp;
+
+*A JavaScript library that allows browsers and other restricted JS environments
+to have working git clones for real offline development.*
+
+&nbsp;
+
+Kickstarter project
+
+----
+
+Funded in 28 hours!
+
+&nbsp;
+
+Wow!
+
+<img src="js-git.jpg">
+
+----
+
+## Node.js
+
+*v8 + libuv + core library*
+
+&nbsp;
+
+Client/server JS
+
+&nbsp;
+
+(So you can JS while you JS!)
+
+----
+
+But isn't Perl 6 the future?
+
+&nbsp;
+
+Yes, but...
+
+----
+
+Perl 6 will run JavaScript, too!
+
+GSoC project summer 2013, Paweł Murias is building a JavaScript backend for
+Rakudo.
+
+----
+
+They're even fixing the language! Without breaking the web!
+
+&nbsp;
+
+* ES5
+* `"use strict";`
+* ES6 / ES.next / ES Harmony
+
+----
+
+JavaScript has all it takes to survive *anything*.
+
+&nbsp;
+
+* Runs everywhere
+* Fast
+* De facto standard
+* Bad, but improvable
+
+----
+
+<img src="alwaysbetonjs.png">
+
+----
+
+You can't stop JavaScript
+
+----
+
+It's not about whether you *like* it or not. It's about what will survive when
+everything changes.
+
+----
+
+My bet:
+
+----
+
+People will keep looking at kittens
+
+----
+
+JavaScript
+
+----
+
+has already won.
+
+----
+
+### i for one welcome our new javascript overlords
+
+Questions?
+
+&nbsp;
+
+Attribution for kitten pics:
+
+* http://www.flickr.com/photos/clevergrrl/218312595/
+* http://www.flickr.com/photos/yodels/2498309131/
+* http://www.flickr.com/photos/mundobizarro/2605197557/
+* http://www.flickr.com/photos/mathias-erhart/2562106102/
+* http://www.flickr.com/photos/prettyinprint/2599876200/
+
+kthx.

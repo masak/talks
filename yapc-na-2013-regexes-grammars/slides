@@ -1,0 +1,166 @@
+# Regexes in Perl 6
+
+## the wonders of grammar engines
+
+masak &mdash; YAPC::NA 2013 &mdash; 2013-06-05
+
+----
+
+Everything is a string and can be manipulated with a regex
+
+----
+
+Everything is a *string* and can be *manipulated* with a *regex*
+
+----
+
+## lisp
+
+*everything is a list*
+
+----
+
+## smalltalk
+
+*everything is an object*
+
+----
+
+## php
+
+*everything is a security exploit*
+
+----
+
+it's a nice thing to have an overriding abstraction
+
+----
+
+Actually Tcl probably wins on "everything is a string"
+
+----
+
+Perl (5) is more "everything is a string *to be processed*"
+
+----
+
+or "everything is a string *to be handled by a regex*"
+
+----
+
+my thesis today:
+
+&nbsp;
+
+this view is **good**...
+
+...and **bad**.
+
+----
+
+## perl 6 regex intro
+
+----
+
+&nbsp;
+
+    (foo)       --> (foo)               m//i        --> m:i//
+    x? y* z+    --> x? y* z+            m//g        --> m:g//
+    x?? y*? z+? --> x?? y*? z+?                     --> /<regex>/
+    \w \d \s    --> \w \d \s (unicode)                                    
+    x | y       --> x | y               \Q$var\E    --> /$var/
+    \(foo\)     --> \(foo\)             $regex      --> /<$regex>/
+                                        (?{ code }) --> { code }
+    $1 $2 $3    --> $0 $1 $2                        --> <?{ code }>
+    \1 \2 \3    --> $0 $1 $2                        --> <!{ code }>
+    (?:foo)?    --> 'foo'?                                                
+    (?:foo)?    --> [foo]?           s/(\w)/uc $1/e --> s/(\w)/{ uc $0 }/
+    \(foo\)     --> '(' foo ')'      m/.../s        --> m/.../
+    a{7}        --> a ** 7           m/^ foo $/m    --> m/^^ foo $$/
+    a{2,4}      --> a ** 2..4                           s:2nd/tyop/typo/
+    a{5,}       --> a ** 5..*                           s:4x/cat/lolcat/
+                --> a+ % ','
+
+----
+
+Look, regexes *work*, right?
+
+&nbsp;
+
+They're awesome. They bring home the bacon.
+
+----
+
+But they're not nice.
+
+&nbsp;
+
+* The syntax is *yuck*
+* Regex me once, shame on you. Regex me 100 times, shame on me.
+
+----
+
+&nbsp;
+
+    for ($text) {
+
+        # warning: massive s///g action
+
+        # sensitive readers are advised to cover their eyes
+    }
+
+----
+
+&nbsp;
+
+    s/(?<=(?:new) )([A-Z]\w+)/\\Hcn{$1}/g;
+    s/(?<=(?:class) )([A-Z]\w+)/\\Hcn{$1}/g;
+    s/(?<=(?:public) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+    s/(?<=(?:private) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+    s/(?<=(?:protected) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+    s/(?<=(?:interface) )([A-Z]\w+\??)/\\Hcn{$1}/g;
+    s/(^\s*)([A-Z]\w+\b\??)(?!\s*=)/$1\\Hcn{$2}/gm;
+    s/(?<=<)([A-Z]\w+\??)/\\Hcn{$1}/g;
+    s/(?<=\()([A-Z]\w+\b\??)(?!,)(?!\))/\\Hcn{$1}/g;
+    s/(?<=\( )([A-Z]\w+\b\??)(?!,)(?!\))/\\Hcn{$1}/g;
+    s/(?<=,)([A-Z]\w+\b\??)(?!,)(?!\))(?!\s*=)/\\Hcn{$1}/g;
+
+    # Look, it works, OK?
+
+----
+
+&nbsp;
+
+    s/(?<=, )([A-Z]\w+\b\??)(?!,)(?!\))(?!\s*=)/\\Hcn{$1}/g;
+    s/(?<=:)([A-Z]\w+)/\\Hcn{$1}/g;
+    s/(?<=: )([A-Z]\w+)/\\Hcn{$1}/g;
+    s/\b(?<!\.)([A-Z]\w+)(?=\.)/\\Hcn{$1}/g;
+    s/\b([A-Z]\w+)(?=<\w+>(?!\())/\\Hcn{$1}/g;
+    s/\b(\w+)\b/eq_any($1, @keywords_types) ? "\\Hkt{$1}" : $1/ge;
+    s/\b(\d+(?:\.\d*)?)\b/\\Hs{$1}/g;            # numbers
+    s/("[^"]*")/"\\Hs{" . scrub($1) . "}"/ge;    # strings
+    s[(//[^\n]*)]["\\Hc{" . scrub($1) . "}"]ge;  # comments
+    s[(/\*(?:(?!\*/).)*\*/)]["\\Hc{" . scrub($1) . "}"]ge;  # comments
+
+    # * masak weeps quietly
+
+----
+
+## live demo
+
+----
+
+## Remember...
+
+Computers are *awesome*. Programming is tapping directly into that awesome. If
+things feel Less Than Awesome, find a better way.
+
+&nbsp;
+
+Perl 6 grammars are there for you when you need them.
+
+----
+
+## kthx
+
+`masak`, signing off his fourth and last talk

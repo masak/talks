@@ -1,0 +1,509 @@
+# Perl 6 OO
+
+## ...without you going `O_O`
+
+masak &mdash; YAPC::NA 2013 &mdash; 2013-06-03
+
+----
+
+We'll be doing this in four stages.
+
+1. Object as bag of values
+2. Object as bag of encapsulated values
+3. Object as provider of a role
+4. Object as agent, actor, expert or whatever
+
+----
+
+<object data="happiness-graph.svg" width="1051" height="504" type="image/svg+xml">
+
+----
+
+hi, I'm masak
+
+----
+
+hi, I'm masak
+
+&nbsp;
+
+I like objects. Sometimes they like me back.
+
+----
+
+## Object as bag of values
+
+<object data="object1.svg" type="image/svg+xml">
+
+----
+
+It has public values, and they can be modified.
+
+    class Date is rw {
+        has Int $.year;  # public
+        has Int $.month; # public
+        has Int $.day;   # public
+    }
+
+&nbsp;
+
+Note the `is rw` there. We could write it on each attribute too, but this is
+simpler if we want it on all of them.
+
+&nbsp;
+
+If we want to create a fresh `Date` object, we could do `Date.new( :year(2013),
+:month(6), :day(3) )`
+
+----
+
+basically a slightly more structured hash
+
+    my $date = {
+        year  => 2013,
+        month => 6,
+        day   => 3,
+    };
+
+----
+
+somtimes you don't care much about behavior
+
+----
+
+consider whether you want immutable objects
+
+----
+
+&nbsp;
+
+    class Date { # no 'is rw'
+        has Int $.year;   # public
+        has Int $.month;  # public
+        has Int $.day;    # public
+    }
+
+`is readonly` sounds like a weird thing to want, but it can actually simplify
+things. It's so useful that it's the default in Perl 6.
+
+----
+
+## Object as bag of encapsulated values
+
+<object data="object2.svg" type="image/svg+xml">
+
+----
+
+* encapsulation
+* abstraction
+* data hiding
+* information hiding
+
+&nbsp;
+
+There will be people saying "yeah, these are basically the same". And there are
+people saying "those are totally four different things!" And oh boy, there are
+discussions.
+
+&nbsp;
+
+But the *goal* is the same: shield the outside from changes on the inside.
+
+----
+
+Getters and setters.
+
+&nbsp;
+
+This is the level of many OO courses.
+
+&nbsp;
+
+Easy to teach, but... meh.
+
+----
+
+&nbsp;
+
+    class Monster {
+        has $!type;      # private
+        has $!hitpoints; # private
+
+        method get_type { return $!type }
+        method set_type($type) { $!type = $type }
+
+        method get_hitpoints { return $!hitpoints }
+        method set_hitpoints($hp) { $!hitpoints = $hp }
+    }
+
+(not really idiomatic Perl 6)
+
+----
+
+&nbsp;
+
+    class Monster {
+        has $!type;      # private
+        has $!hitpoints; # private
+
+        method type is rw { $!type }
+        method hitpoints is rw { $!hitpoints }
+    }
+
+These methods, because of `is rw` work as both getter and setter.
+Let's call it just an "accessor".
+
+----
+
+&nbsp;
+
+    class Monster {
+        has $.type;      # private with accessor
+        has $.hitpoints; # private with accessor
+    }
+
+So, "public" is a bit of an illusion in Perl 6. There's just accessors.
+
+----
+
+weak
+
+&nbsp;
+
+CRUD
+
+----
+
+watch out!
+
+references leak!
+
+    class Playlist {
+        has @.songs;
+    }
+
+&nbsp;
+
+they leak both through accessors and constructors
+
+    @songs = $playlist.songs;   # this...
+    $playlist.songs = @songs;   # ...or this
+    @songs.push("mwhaha!");     # leaking through accessor
+    
+    my $playlist = Playlist.new( :@songs );
+    @songs.push("mwhaha!");     # leaking through constructor
+
+----
+
+## Object as provider of a role
+
+<object data="object3.svg" type="image/svg+xml">
+
+----
+
+We have a bunch of lightweight roles...
+
+    role Clickable { method on_click { ... } }
+    role Draggable { method on_drag { ... } }
+    role Droppable { method on_drop { ... } }
+
+----
+
+...and a class that provides the roles.
+
+    class UI::Element
+        does Clickable
+        does Draggable
+        does Droppable {
+
+        method on_click($event) { LOG("clicked!") }
+        method on_drag($event) { LOG("dragged!") }
+        method on_drop($event) { LOG("dropped!") }
+    }
+
+----
+
+inheritance used to be cool
+
+&nbsp;
+
+immediately reached for when we wanted re-use
+
+&nbsp;
+
+I blame Plato
+
+----
+
+roles are cooler
+
+&nbsp;
+
+composition > mro
+
+----
+
+roles do "I provide" and "I need"
+
+----
+
+you can also mix in roles at runtime
+
+    role Hugging { method hug { say "hugs for everyone!" } };
+    class Bot {}
+
+    my $bot = Bot.new;
+    my $hugbot = $bot but Hugging;
+
+----
+
+I love it how we took three really common words and mapped them to three
+separately useful ways to provide behavior.
+
+    is      classical
+            inheritance
+    
+    does    interface
+            implementation
+    
+    can     duck typing
+
+Together with a few other short words, like `when`, `but`, `where`, they're a
+joy to use.
+
+----
+
+## Object as agent, actor, expert or whatever
+
+<object data="object4.svg" type="image/svg+xml">
+
+----
+
+&nbsp;
+
+    class Schedule {
+        has %!days;
+        
+        method open_day($day) {
+            %!days{$day} = [];
+            return;
+        }
+
+        method make_appointment($day, $time, $duration) {
+            %!days{$day}.push: { :$time, :$duration };
+            return;
+        }
+    }
+
+(Both these methods will have error handling, too. I left it out for this
+example.)
+
+----
+
+an object of this kind is *never in a wrong state*
+
+----
+
+getters are uncommon
+
+&nbsp;
+
+"Tell, don't ask"
+
+&nbsp;
+
+Unix way; silent, or explain
+
+----
+
+An object owns its data
+
+----
+
+Focus is on lifecycles
+
+----
+
+*behavior* is what matters
+
+&nbsp;
+
+this is why we talk about roles and interfaces
+
+----
+
+> "The primary tenet of behaviorism [...] is that psychology should concern
+> itself with the observable behavior of people and animals, not with
+> unobservable events that take place in their minds."
+
+&mdash; Wikipedia's article on behaviorism
+
+----
+
+if people started with "well, what does it *do* for me?"...
+
+&nbsp;
+
+...we'd have better OO designs
+
+&nbsp;
+
+TDD can help with that
+
+----
+
+## von Neumann bottleneck
+
+*"Can Programming Be Liberated from the von Neumann Style? A Functional Style
+and Its Algebra of Programs"* &mdash; John Backus' Turing Award Lecture, 1977
+
+----
+
+> "Surely there must be a less primitive way of making big changes in the store
+> than by **pushing vast numbers of words back and forth** through the von Neumann
+> bottleneck."
+
+----
+
+> "Not only is this tube a literal bottleneck for the data traffic
+> of a problem, but, more importantly, it is an **intellectual bottleneck** that
+> has kept us tied to word-at-a-time thinking instead of encouraging us to
+> think in terms of the larger conceptual units of the task at hand."
+
+----
+
+> "Thus programming is basically planning and detailing the enormous traffic of
+> words through the von Neumann bottleneck, and much of that traffic concerns
+> not significant data itself, but where to find it."
+
+I believe good encapsulation and a behavioral thinking addresses this.
+
+----
+
+## One more thing
+
+----
+
+good OO also tends to have some FP mixed into it
+
+&nbsp;
+
+they are not in opposition
+
+----
+
+Example:
+
+    class Hex::Board {
+        # ...
+
+        method make_move($coords) { ... }
+        method swap() { ... }
+        method resign() { ... }
+    }
+
+----
+
+The `swap` method:
+
+    method swap() {
+        die "Cannot swap on move $!moves_so_far"
+            unless $!moves_so_far == 2;
+
+        my $N = @!board.elems;
+        for 0 ..^ $N -> $row {
+            for 0 ..^ $N -> $col {
+                if !empty( @!board[$row][$col] ) {
+                    @!board[$row][$col]
+                        = other_color( @!board[$row][$col] );
+                    last;
+                }
+            }
+        }
+    }
+
+----
+
+Better, we store the coordinates of the first move...
+
+    class Hex::Board {
+        # ...
+        has $!swap_row;
+        has $!swap_col;
+
+        method make_move($row, $col) {
+            # ...
+
+            $!moves_so_far++;
+
+            if $!moves_so_far == 1 {
+                $!swap_row = $row;
+                $!swap_col = $col;
+            }
+        }
+
+        # ...
+    }
+
+----
+
+...and we use those coordinates in the `swap` method.
+
+    method swap() {
+        die "Cannot swap on move $!moves_so_far"
+            unless $!moves_so_far == 2;
+
+        @!board[$!swap_row][$!swap_col]
+            = other_color( @!board[$!swap_row][$!swap_col] );
+    }
+
+----
+
+Or we can do it with a small closure, which is nice:
+
+    class Hex::Board {
+        # ...
+        has &!do_swap;
+
+        method make_move($row, $col) {
+            # ...
+
+            $!moves_so_far++;
+
+            if $!moves_so_far == 1 {
+                &!do_swap = {
+                    @!board[$row][$col]
+                        = other_color( @!board[$row][$col] );
+                };
+            }
+        }
+    }
+
+----
+
+...and then simply call it from the `swap` method:
+
+    method swap() {
+        die "Cannot swap on move $!moves_so_far"
+            unless $!moves_so_far == 2;
+
+        &!do_swap.();
+    }
+
+----
+
+## So
+
+----
+
+* **Objects** are kinda useful and cool
+* Not all the time
+* **Encapsulate**!
+* Focus on **behavior**
+* **Mix** OO and FP
+
+----
+
+## Which concludes the talk
+
+kthx

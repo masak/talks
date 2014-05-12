@@ -1,0 +1,351 @@
+# Regular expressions can be simple and fast
+
+## those who don't grok backtracking are doomed to repeat it
+
+masak &mdash; YAPC::EU 2013 &mdash; 2013-08-14
+
+----
+
+During this talk, you will see:
+
+----
+
+action! adventure!
+
+----
+
+state machines!
+
+----
+
+turtles!
+
+----
+
+and a kitten
+
+----
+
+hi, I'm masak
+
+----
+
+I like **Perl 6**
+
+----
+
+I like
+
+the **simplest thing**
+
+that could possibly work
+
+----
+
+<img src="labyrinth.jpg">
+
+----
+
+(the `#masakism` workshop)
+
+----
+
+I like **teaching** things
+
+&nbsp;
+
+----
+
+I like **teaching** things
+
+I like **learning** things
+
+----
+
+imagine
+
+a parallel universe
+
+where regexes were never invented
+
+----
+
+(they do, however, have very long strings)
+
+----
+
+You have been hired to do data mining
+
+&nbsp;
+
+search those strings!
+
+----
+
+fortunately, you are brilliant
+
+----
+
+and you will accidentally invent regexes
+
+----
+
+## day 1 at work
+
+find some very rare character in the string
+
+&nbsp;
+
+`/Y/`
+
+----
+
+<object data="01-single-character.svg" type="image/svg+xml">
+
+----
+
+## day 2
+
+find many characters next to each other
+
+&nbsp;
+
+`/CAT/`
+
+----
+
+<object data="02-catenation.svg" type="image/svg+xml">
+
+----
+
+## day 3
+
+find one of several alternatives
+
+&nbsp;
+
+`/Y|N/`
+
+----
+
+<object data="03-alternation.svg" type="image/svg+xml">
+
+----
+
+# day 4
+
+----
+
+uh-oh
+
+&nbsp;
+
+`/A*/`
+
+----
+
+boss wants you to find
+
+----
+
+empty string
+
+----
+
+or `A`
+
+----
+
+or `AA`
+
+----
+
+or `AAAAAAA`
+
+----
+
+or `AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+
+----
+
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
+
+----
+
+<img src="aaa-1.png">
+
+----
+
+<img src="aaa-2.png">
+
+----
+
+<img src="aaa-3.png">
+
+----
+
+<img src="aaa-4.png">
+
+----
+
+<img src="aaa-5.png">
+
+----
+
+and so you sit down
+
+&nbsp;
+
+and really earn your salary
+
+----
+
+<object data="04-repetition.svg" type="image/svg+xml">
+
+----
+
+## day 5
+
+you look at what you have done
+
+----
+
+and notice something marvellous
+
+----
+
+so you have these three operations
+
+----
+
+<object data="05-three-operations.svg" type="image/svg+xml">
+
+----
+
+and your boss comes to you
+
+and goes
+
+&nbsp;
+
+`/[A|C|G|T]*/`
+
+----
+
+you just say "no problem"
+
+----
+
+<object data="06-repeated-alternation.svg" type="image/svg+xml">
+
+----
+
+your little machines exhibit closure properties
+
+----
+
+<object data="07-dfas-are-closed.svg" type="image/svg+xml">
+
+----
+
+composition! `\o/`
+
+&nbsp;
+
+compose your stuff!
+
+----
+
+it's turtles all the way *up*!
+
+----
+
+<img src="turtles-1.png">
+
+----
+
+<img src="turtles-2.png">
+
+----
+
+<img src="turtles-3.png">
+
+----
+
+now,
+
+----
+
+about backtracking
+
+----
+
+<img src="kitten-and-turtle.jpg">
+
+----
+
+<object data="08-backtracking.svg" type="image/svg+xml">
+
+----
+
+<img src="regexp1.png">
+
+----
+
+live demo
+
+----
+
+how far can you get with just state machines?
+
+basically, up to `()`, but not `\1`
+
+----
+
+a little about Perl 6 regexes
+
+----
+
+grammars build state machines for you
+
+----
+
+best of both worlds
+
+declarative prefixes
+
+still get the gnarly bits
+
+----
+
+grammars are classes
+
+can mix in roles!
+
+probably the nicest way to build flexible state machines
+
+----
+
+## kthx
+
+Дуже дякую
+
+Attribution (prefix `http://www.flickr.com/photos/`)
+
+* `fritzmb/3136825667`
+* `mr_t_in_dc/469028193`
+* `ktenter/3726227575`
+* `davidgardinergarcia/49767641`
+* `clintjcl/2722008496`

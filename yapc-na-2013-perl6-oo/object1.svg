@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="255.35938"
+   height="264.20126"
+   id="svg2">
+  <defs
+     id="defs4">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="EmptyTriangleInL"
+       style="overflow:visible">
+      <path
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         transform="matrix(-0.8,0,0,-0.8,4.8,0)"
+         id="path3922"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="EmptyTriangleOutL"
+       style="overflow:visible">
+      <path
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         id="path3931"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="EmptyTriangleOutL-3"
+       style="overflow:visible">
+      <path
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         transform="matrix(0.8,0,0,0.8,-4.8,0)"
+         id="path3931-3"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1pt" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="matrix(0.5,0,0,0.5,-0.00223014,0.75240104)"
+     id="g3135">
+    <g
+       transform="translate(-123.21429,-253.64022)"
+       id="layer1">
+      <path
+         d="m 631.42859,533.79077 a 252.85715,84.285713 0 1 1 -505.7143,0 252.85715,84.285713 0 1 1 505.7143,0 z"
+         transform="translate(2.8571428e-7,-31.428571)"
+         id="path2985"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 215.77709,244.4375 a 25.888544,16 0 1 1 -51.77708,0 25.888544,16 0 1 1 51.77708,0 z"
+         transform="translate(42.722338,197.91994)"
+         id="path4274"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 215.77709,244.4375 a 25.888544,16 0 1 1 -51.77708,0 25.888544,16 0 1 1 51.77708,0 z"
+         transform="translate(336.22686,197.38487)"
+         id="path4276"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="m 215.77709,244.4375 a 25.888544,16 0 1 1 -51.77708,0 25.888544,16 0 1 1 51.77708,0 z"
+         transform="translate(175.52091,334.6421)"
+         id="path4278"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <path
+       d="m 61.826204,5.34521 38.999996,158"
+       id="path3765"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#EmptyTriangleInL);marker-end:url(#EmptyTriangleOutL)" />
+    <path
+       d="m 460.74463,2.5 -38.99999,158"
+       id="path5427"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#EmptyTriangleInL);marker-end:url(#EmptyTriangleOutL)" />
+    <path
+       d="m 243.31434,360.06332 3.22231,162.71023"
+       id="path5429"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#EmptyTriangleInL);marker-end:url(#EmptyTriangleOutL)" />
+  </g>
+</svg>
