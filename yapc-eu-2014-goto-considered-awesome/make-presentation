@@ -12,10 +12,13 @@ $TEXT
 ];
 }
 
-my $body = slurp('slides').split($divider).map(&put_in_section).join;
+my @slides = slurp('slides').split($divider);
+my $body = @slides.map(&put_in_section).join;
 
 my $mark = '<!-- insert body here -->';
 spurt 'index.html', $template.subst($mark, $body);
 
-my $duration = now.Num - BEGIN { now.Num };
-say "ok. it took $duration.fmt('%.2f') seconds";
+say "@slides.elems() slides";
+
+my $duration = now - BEGIN now;
+say "it took $duration.fmt('%.2f') seconds";

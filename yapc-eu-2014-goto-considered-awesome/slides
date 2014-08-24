@@ -10,28 +10,253 @@
 
 ----
 
+![](dijkstra-pics/fascinated.jpg)
+
+----
+
+![](dijkstra-pics/tired.jpg)
+
+"On Our Inability To Do Much." &mdash; Edsger Dijkstra
+
+----
+
+![](case-against.png)
+
+----
+
+CACM editor
+
+![](wirth.jpg)
+
+Wirth!
+
+----
+
+journalistic cliché
+
+----
+
+![](dijkstra-pics/almost-crying.jpg)
+
+"Thank goodness we don't have only serious problems, but ridiculous ones as
+well." &mdash; Edsger Dijkstra
+
+----
+
+## probably the most misunderstood truth
+
+* A sensible point, argued well...
+* ...given an inflammatory title...
+* ...and then people don't read the article, they just watch the bloody movie.
+
+----
+
+## GOTO considered harmful
+
+the blockbuster movie trailer
+
+----
+
+## dijkstra replied
+
+by writing the essay "On a Somewhat Disappointing Correspondence"
+
+----
+
+## here's what he was really saying
+
+----
+
+## counting on your fingers
+
+you don't want to make following a program a mechanical exercise
+
+----
+
+textual index/coordinate
+
+----
+
+## if statements
+
+                                        |
+                                        +----,
+                                        |    |
+                                        |    |
+                                        |<---'
+                                        v
+
+still only need a textual index
+
+----
+
+## functions
+
+                                        |   |   |
+                                        |   v   |
+                                        |       |
+                                        |       v
+                                        v
+
+need a stack of indices
+
+----
+
+## loops
+
+                                        |
+                                        |<---,
+                                        |    |
+                                        |    |
+                                        +----'
+                                        v
+
+* the stack of indices
+* and a stack of loop/repetition indices
+
+----
+
+## you can build cool things with
+
+* sequence
+* choice
+* repetition
+
+----
+
+## gotos screw up all this
+
+"they don't compose"
+
+----
+
+atoms + composition
+
+category theory! ♥
+
+----
+
+## what we learn
+
+Three things.
+
+----
+
+## 1. GOTO is not the enemy
+
+Low-level thinking is.
+
+----
+
+## 2. People over-simplify.
+
+And miss the point.
+
+News at 11.
+
+&nbsp;
+
+*"The goto statement considered harmful", which in later years would be most
+frequently referenced, regrettably, however, often by authors who had seen no
+more of it than its title, which became a cornerstone of my fame by becoming a
+template* &mdash; Edsger Dijkstra
+
+----
+
+## 3. Composability always wins
+
+Computer Science and programming proceed first by taking the dangerous path,
+and then taking the safely composable one.
+
+* threads/concurrency
+* dynamic/lexical scoping
+* modular programming
+* object orientation
+* functional programming
+
+----
+
 ## hi
 
 I'm `masak`
 
 ----
 
+## Perl 6 contributor
+
+----
+
+## interested in exotic control flow
+
+regexes! coroutines! logic programming! continuations!
+
+----
+
+## ends up finding the same problems everywhere
+
+----
+
+## in this case, need to "pause" programs
+
+----
+
+&nbsp;
+
+    function ex1 {
+        say "This happens in one run of the program";
+        pause;
+        say "This happens in another";
+    }
+
+----
+
 ## purpose
 
+* program stops
 * program restarts
-* execution continues
+* execution continues where it left off
 
 ----
 
-represent state as object
+## represent state as object
+
+Concept of "execution coordinate".
 
 ----
 
-persist it
+## persist it
+
+(to file or whatever)
 
 ----
 
-*demo*
+## simplification
+
+Solve this for one function.
+
+----
+
+![](dijkstra-pics/innocent.jpg)
+
+"Simplicity is prerequisite for reliability." &mdash; cognominal^WEdsger Dijkstra
+
+----
+
+## two-pronged solution
+
+* solve the semantics bit (ugly syntax)
+* solve the syntax bit (pretty)
+
+----
+
+![](dijkstra-pics/cool.jpg)
+
+"Elegance is not a dispensable luxury but a factor that decides between success
+and failure." &mdash; Edsger Dijkstra
+
+----
+
+(demo)
 
 ----
 
@@ -39,11 +264,38 @@ persist it
 
 ----
 
-*demo*
+## control flow
+
+* `if`
+* `given/when`
+* all kinds of loops
 
 ----
 
-parsing
+## routines
+
+gotta corrupt them all!
+
+----
+
+## coroutines
+
+* `gather/take`
+* spaghetti stack
+
+----
+
+## parsing
+
+----
+
+![](dijkstra-pics/regretful.jpg)
+
+"Aim for brevity while avoiding jargon." &mdash; Edsger Dijkstra
+
+----
+
+(demo)
 
 ----
 
@@ -55,26 +307,106 @@ parsing
 
 ----
 
-persistent application state
+## persistent application state
+
+That was the idea from the beginning
 
 ----
 
-slip
+## slip
+
+    for lines() {
+        # do some stuff
+        next if ...;
+
+        # more stuff
+        slip if ...;
+
+        # still here, but in the next iteration!
+    }
 
 ----
 
-macros
+## macros
+
+An API for control flow
 
 ----
 
-two computers, one program
+## two computers, one program
+
+For example, client and server.
+
+Yes, there is prior art.
 
 ----
 
-hotswapping
+## hotswapping
+
+Keep the state, change the function.
+
+----
+
+## in conclusion
+
+----
+
+## we're in a really good place
+
+----
+
+## but we don't stop dreaming
+
+----
+
+## keep looking
+
+for ways to make things simpler
 
 ----
 
 ## Thank you
 
 *you rock*
+
+----
+
+## bonus dijkstra slides
+
+That I couldn't fit in the talk itself
+
+----
+
+![](dijkstra-pics/smiling.jpg)
+
+"The question of whether Machines Can Think... is about as relevant as the
+question of whether Submarines Can Swim." &mdash; Edsger Dijkstra
+
+----
+
+![](dijkstra-pics/unsure.jpg)
+
+"The use of COBOL cripples the mind; its teaching should, therefore, be
+regarded as a criminal offense." &mdash; Edsger Dijkstra
+
+----
+
+![](dijkstra-pics/industrious.jpg)
+
+"Testing shows the presence, not the absence of bugs" &mdash; Edsger Dijkstra
+
+----
+
+![](dijkstra-pics/young-and-happy.jpg)
+
+"Several people have told me that my inability to suffer fools gladly is one of
+my main weaknesses." &mdash; Edsger Dijkstra
+
+----
+
+![](dijkstra-pics/stern.jpg)
+
+'I mean, if 10 years from now, when you are doing something quick and dirty,
+you suddenly visualize that I am looking over your shoulders and say to
+yourself "Dijkstra would not have liked this", well, that would be enough
+immortality for me.' &mdash; Edsger Dijkstra
