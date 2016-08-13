@@ -1,0 +1,36 @@
+## Intro
+
+* What is production
+* Cool features and production code
+
+## today
+
+* Description
+* << >>
+* What if perl6 is not installed (or rebuilding)?
+
+## month
+
+* Tricky stuff with newlines (no phaser will help here)
+* MAIN
+* The unexpected success: dates and date handling
+
+## mishu
+
+* a DSL instead of language hackery
+* hexagonal architecture
+
+## course-abstracts
+
+* check-integrity
+* the power of TAP
+
+## psyde
+
+* does a surprisingly good job
+* not as general as hakyll
+* plans to expand it
+
+## markdown
+
+* data-driven TDD

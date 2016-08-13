@@ -1,0 +1,24 @@
+* Interpreters are easy. You can run things off the AST if you want.
+* That's how 007 got started. Just an AST that ran.
+* I had just finished Ipso. And was left with a surprising emptiness.
+    * Metacircularity -- so what?
+    * Homoiconicity -- OK...
+* But 007 is easy. Just program -[parse]-> AST ->[interpret]
+* Places where it's made less easy
+    * BEGIN and constants
+    * Custom operators
+* Macros are quite easy compared to custom operators!
+    * Just recognize when we're building a call to a macro
+    * And run it right away
+* The trouble with scoping
+    * Closures, for comparison
+    * Hygiene
+    * Solution: allow identifiers to carry context
+* Testing
+    * 007 is well-tested
+    * I learned to write some new tests:
+        * Pull request damage prevention
+        * Consistency
+* So, coming back to the macros of Perl 6...
+    * Syntax macros
+    * Visitor macros

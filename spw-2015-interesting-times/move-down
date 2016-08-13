@@ -1,0 +1,15 @@
+#!/usr/local/bin/perl6
+
+sub MAIN(Int $from, $to = Inf, Int $steps = 1) {
+    for dir().sort(*.basename).reverse».basename -> $name {
+        next unless $name ~~ /^(\d\d)/;
+
+        my $n = +$0;
+        last if $n < $from;
+
+        my $to_n = $n + $steps;
+        my $rest = $name.substr(2);
+
+        shell "mv $name {$to_n.fmt("%02d")}$rest";
+    }
+}
